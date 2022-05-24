@@ -1050,7 +1050,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 function appInitializer(authService) {
     return () => {
         return new Promise((resolve) => {
@@ -1113,7 +1112,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
         _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_19__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
         ngx_highlightjs__WEBPACK_IMPORTED_MODULE_14__["HighlightModule"],
-        ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__["ClipboardModule"], angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_4__["HttpClientInMemoryWebApiModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"]] }); })();
+        ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__["ClipboardModule"],
+        _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
@@ -2252,8 +2252,8 @@ const environment = {
     production: false,
     appVersion: 'v710demo1',
     USERDATA_KEY: 'authf649fc9a5f55',
-    isMockEnabled: true,
-    apiUrl: 'http://ec2-54-172-141-212.compute-1.amazonaws.com/api/'
+    isMockEnabled: false,
+    apiUrl: 'http://ec2-54-172-141-212.compute-1.amazonaws.com/api'
 };
 /*
  * For easier debugging in development mode, you can import the following file
