@@ -3083,7 +3083,7 @@
         appVersion: 'v710demo1',
         USERDATA_KEY: 'authf649fc9a5f55',
         isMockEnabled: true,
-        apiUrl: 'http://localhost:5000'
+        apiUrl: 'http://ec2-54-172-141-212.compute-1.amazonaws.com/api/'
       };
       /*
        * For easier debugging in development mode, you can import the following file
