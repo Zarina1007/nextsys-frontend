@@ -1599,7 +1599,7 @@
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppModule, {
           declarations: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"], _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_21__["CompanyManagementComponent"], _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_22__["AdminReportingComponent"]],
-          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_19__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ngx_highlightjs__WEBPACK_IMPORTED_MODULE_14__["HighlightModule"], ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__["ClipboardModule"], angular_in_memory_web_api__WEBPACK_IMPORTED_MODULE_4__["HttpClientInMemoryWebApiModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"]]
+          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_19__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ngx_highlightjs__WEBPACK_IMPORTED_MODULE_14__["HighlightModule"], ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__["ClipboardModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"]]
         });
       })();
       /*@__PURE__*/
@@ -3255,7 +3255,7 @@
         production: false,
         appVersion: 'v710demo1',
         USERDATA_KEY: 'authf649fc9a5f55',
-        isMockEnabled: true,
+        isMockEnabled: false,
         apiUrl: 'http://54.91.220.232/api'
       };
       /*
