@@ -887,6 +887,7 @@ const routes = [
         path: '',
         canActivate: [_modules_auth_services_auth_guard__WEBPACK_IMPORTED_MODULE_2__["AuthGuard"]],
         loadChildren: () => Promise.all(/*! import() | pages-layout-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-layout-module")]).then(__webpack_require__.bind(null, /*! ./pages/layout.module */ "./src/app/pages/layout.module.ts")).then((m) => m.LayoutModule),
+        data: { preload: true },
     },
     { path: '**', redirectTo: 'errors/404', pathMatch: 'full' },
 ];
@@ -1293,32 +1294,54 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AuthGuard", function() { return AuthGuard; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./auth.service */ "./src/app/modules/auth/_services/auth.service.ts");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+/* harmony import */ var _auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth.service */ "./src/app/modules/auth/_services/auth.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+
 
 
 
 class AuthGuard {
-    constructor(authService) {
+    constructor(authService, _router, route) {
         this.authService = authService;
+        this._router = _router;
+        this.route = route;
     }
-    canActivate(route, state) {
+    canActivateInternal(data, state) {
         const currentUser = this.authService.currentUserValue;
-        // console.log("-----------------", currentUser, route.data.roles, location.href)
         if (currentUser) {
             // logged in so return true
-            return true;
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
+        }
+        if (!data || !data['permission']) {
+            this._router.navigate([this.selectBestRoute()]);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
         }
         // not logged in so redirect to login page with the return url
-        this.authService.logout();
-        return false;
+        this._router.navigate([this.selectBestRoute()]);
+        return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
+    }
+    canActivate(route, state) {
+        return this.canActivateInternal(route.data, state);
+    }
+    canActivateChild(route, state) {
+        return this.canActivate(route, state);
+    }
+    selectBestRoute() {
+        if (!this.authService.currentUserValue) {
+            this.authService.logout();
+            return '/auth/login';
+        }
+        return '/dashboard';
     }
 }
-AuthGuard.ɵfac = function AuthGuard_Factory(t) { return new (t || AuthGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"])); };
+AuthGuard.ɵfac = function AuthGuard_Factory(t) { return new (t || AuthGuard)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"])); };
 AuthGuard.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: AuthGuard, factory: AuthGuard.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AuthGuard, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{ providedIn: 'root' }]
-    }], function () { return [{ type: _auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"] }]; }, null); })();
+    }], function () { return [{ type: _auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }]; }, null); })();
 
 
 /***/ }),
