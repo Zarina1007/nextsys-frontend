@@ -90,6 +90,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const API_TAGS_URL = `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/tags`;
+const API_TEMPLATES_URL = `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/templates`;
 class TagsService {
     constructor(http) {
         this.http = http;
@@ -117,6 +118,18 @@ class TagsService {
     }
     updateOneTag(tag) {
         return this.http.post(API_TAGS_URL + `/update/${tag._key}`, tag);
+    }
+    addTemplate(template) {
+        return this.http.post(API_TEMPLATES_URL, template);
+    }
+    getAllTemplates() {
+        return this.http.get(API_TEMPLATES_URL);
+    }
+    deleteTemplate(templateKey) {
+        return this.http.delete(API_TEMPLATES_URL + `/${templateKey}`);
+    }
+    getOneTemplate(template) {
+        return this.http.get(API_TEMPLATES_URL + `/get_template/${template}`);
     }
 }
 TagsService.ɵfac = function TagsService_Factory(t) { return new (t || TagsService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };

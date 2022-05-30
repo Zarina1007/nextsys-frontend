@@ -199,6 +199,7 @@
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 
       var API_TAGS_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/tags");
+      var API_TEMPLATES_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/templates");
 
       var TagsService = /*#__PURE__*/function () {
         function TagsService(http) {
@@ -246,6 +247,26 @@
           key: "updateOneTag",
           value: function updateOneTag(tag) {
             return this.http.post(API_TAGS_URL + "/update/".concat(tag._key), tag);
+          }
+        }, {
+          key: "addTemplate",
+          value: function addTemplate(template) {
+            return this.http.post(API_TEMPLATES_URL, template);
+          }
+        }, {
+          key: "getAllTemplates",
+          value: function getAllTemplates() {
+            return this.http.get(API_TEMPLATES_URL);
+          }
+        }, {
+          key: "deleteTemplate",
+          value: function deleteTemplate(templateKey) {
+            return this.http["delete"](API_TEMPLATES_URL + "/".concat(templateKey));
+          }
+        }, {
+          key: "getOneTemplate",
+          value: function getOneTemplate(template) {
+            return this.http.get(API_TEMPLATES_URL + "/get_template/".concat(template));
           }
         }]);
 
