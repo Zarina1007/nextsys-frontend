@@ -25942,7 +25942,6 @@ class AuthGuard {
     }
     canActivateInternal(data, state) {
         const currentUser = this.authService.currentUserValue;
-        console.log("===========", currentUser);
         if (currentUser) {
             // logged in so return true
             if (data.permission && !currentUser['permission'][0][data.permission]) {
@@ -29081,6 +29080,7 @@ class CompanySelectorComponent {
                 if (this.localStorageCompany) {
                     if (this.userCompanies.length == 1) {
                         this.setCompanyToLocalStorage(this.userCompanies[0]._id);
+                        this.localStorageCompany = this.getSelectedCompanyFromLocalStorage();
                         this.selectedCompany = this.userCompanies[0];
                     }
                     else {

@@ -42449,7 +42449,6 @@
           key: "canActivateInternal",
           value: function canActivateInternal(data, state) {
             var currentUser = this.authService.currentUserValue;
-            console.log("===========", currentUser);
 
             if (currentUser) {
               // logged in so return true
@@ -48697,6 +48696,7 @@
                 if (_this122.userCompanies.length == 1) {
                   _this122.setCompanyToLocalStorage(_this122.userCompanies[0]._id);
 
+                  _this122.localStorageCompany = _this122.getSelectedCompanyFromLocalStorage();
                   _this122.selectedCompany = _this122.userCompanies[0];
                 } else {
                   _this122.userCompanies.forEach(function (element) {
