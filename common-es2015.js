@@ -1,5 +1,35 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["common"],{
 
+/***/ "./src/app/modules/auth/registration/confirm-password.validator.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/modules/auth/registration/confirm-password.validator.ts ***!
+  \*************************************************************************/
+/*! exports provided: ConfirmPasswordValidator */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConfirmPasswordValidator", function() { return ConfirmPasswordValidator; });
+class ConfirmPasswordValidator {
+    /**
+     * Check matching password with confirm password
+     * @param control AbstractControl
+     */
+    static MatchPassword(control) {
+        const password = control.get('password').value;
+        const confirmPassword = control.get('cPassword').value;
+        if (password !== confirmPassword) {
+            control.get('cPassword').setErrors({ ConfirmPassword: true });
+        }
+        else {
+            return null;
+        }
+    }
+}
+
+
+/***/ }),
+
 /***/ "./src/app/modules/i18n/translation.module.ts":
 /*!****************************************************!*\
   !*** ./src/app/modules/i18n/translation.module.ts ***!
