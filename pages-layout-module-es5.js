@@ -30119,21 +30119,28 @@
           submenu: [{
             title: 'Perion Stats',
             page: '/reporting/perion'
-          }, // {
-          //   title: 'Image Advantage Stats',
-          //   page: '/reporting/image-advantage',
-          // },
-          {
+          }, {
             title: 'Apptitude Stats',
             page: '/reporting/apptitude'
           }, {
             title: 'Hopkins Stats',
             page: '/reporting/hopkins'
-          }, // {
-          //   title: 'Media.net Stats',
-          //   page: '/reporting/media-net',
-          // },
-          {
+          }, {
+            title: 'Media.net Stats',
+            page: '/reporting/media-net'
+          }, {
+            title: 'Bing Direct Stats',
+            page: '/reporting/bing-direct'
+          }, {
+            title: 'Lyons Stats',
+            page: '/reporting/lyons'
+          }, {
+            title: 'Rubi Stats',
+            page: '/reporting/rubi'
+          }, {
+            title: 'Verizon Direct Stats',
+            page: '/reporting/verizon-direct'
+          }, {
             title: 'Third Party Sheet',
             page: '/reporting/third-party'
           }]
@@ -42523,6 +42530,102 @@
     },
 
     /***/
+    "./src/app/modules/company-management/company-management.service.ts":
+    /*!**************************************************************************!*\
+      !*** ./src/app/modules/company-management/company-management.service.ts ***!
+      \**************************************************************************/
+
+    /*! exports provided: CompanyManagementService */
+
+    /***/
+    function srcAppModulesCompanyManagementCompanyManagementServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "CompanyManagementService", function () {
+        return CompanyManagementService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_shared_service_companies_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/shared/service/companies.service */
+      "./src/app/shared/service/companies.service.ts");
+
+      var CompanyManagementService = /*#__PURE__*/function () {
+        function CompanyManagementService(companyService) {
+          _classCallCheck(this, CompanyManagementService);
+
+          this.companyService = companyService;
+        }
+
+        _createClass(CompanyManagementService, [{
+          key: "addCompany",
+          value: function addCompany(company) {
+            return this.companyService.add(company);
+          }
+        }, {
+          key: "getAllCompanies",
+          value: function getAllCompanies() {
+            return this.companyService.getAllCompanies();
+          }
+        }, {
+          key: "getOneCompany",
+          value: function getOneCompany(company) {
+            return this.companyService.getOneCompany(company);
+          }
+        }, {
+          key: "updateOneCompany",
+          value: function updateOneCompany(company) {
+            return this.companyService.updateOneCompany(company);
+          }
+        }, {
+          key: "deleteOneCompany",
+          value: function deleteOneCompany(company) {
+            return this.companyService.deleteOneCompany(company);
+          }
+        }]);
+
+        return CompanyManagementService;
+      }();
+
+      CompanyManagementService.ɵfac = function CompanyManagementService_Factory(t) {
+        return new (t || CompanyManagementService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](src_app_shared_service_companies_service__WEBPACK_IMPORTED_MODULE_1__["CompanyService"]));
+      };
+
+      CompanyManagementService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: CompanyManagementService,
+        factory: CompanyManagementService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CompanyManagementService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: src_app_shared_service_companies_service__WEBPACK_IMPORTED_MODULE_1__["CompanyService"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/pages/_layout/components/aside-dynamic/aside-dynamic.component.ts":
     /*!***********************************************************************************!*\
       !*** ./src/app/pages/_layout/components/aside-dynamic/aside-dynamic.component.ts ***!
@@ -42568,25 +42671,37 @@
       /* harmony import */
 
 
-      var _metronic_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/modules/company-management/company-management.service */
+      "./src/app/modules/company-management/company-management.service.ts");
+      /* harmony import */
+
+
+      var _metronic_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ../../../../_metronic/core */
       "./src/app/_metronic/core/index.ts");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! src/app/shared/service/users.service */
+      "./src/app/shared/service/users.service.ts");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! ng-inline-svg */
       "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
       /* harmony import */
 
 
-      var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @ngx-translate/core */
       "./node_modules/@ngx-translate/core/__ivy_ngcc__/fesm2015/ngx-translate-core.js");
 
@@ -43092,7 +43207,9 @@
         if (rf & 2) {
           var item_r29 = ctx.item;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !item_r29.submenu);
+          var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r6.showSubMenuItem(item_r29));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
@@ -43179,18 +43296,21 @@
       }
 
       var AsideDynamicComponent = /*#__PURE__*/function () {
-        function AsideDynamicComponent(authService, layout, router, menu, cdr) {
+        function AsideDynamicComponent(authService, companyService, layout, router, menu, userService, cdr) {
           _classCallCheck(this, AsideDynamicComponent);
 
           this.authService = authService;
+          this.companyService = companyService;
           this.layout = layout;
           this.router = router;
           this.menu = menu;
+          this.userService = userService;
           this.cdr = cdr;
           this.subscriptions = [];
           this.asideMenuHTMLAttributes = {};
           this.asideMenuScroll = 1;
           this.asideSelfMinimizeToggle = false;
+          this.reportingProviderList = [];
         }
 
         _createClass(AsideDynamicComponent, [{
@@ -43198,7 +43318,9 @@
           value: function ngOnInit() {
             var _this119 = this;
 
-            this.currentUser = this.authService.currentUserValue; // load view settings
+            this.currentUser = this.authService.currentUserValue;
+            this.companySelected = this.getSelectedCompanyFromLocalStorage();
+            this.getReportingProviderList(); // load view settings
 
             this.disableAsideSelfDisplay = this.layout.getProp('aside.self.display') === false;
             this.brandSkin = this.layout.getProp('brand.self.theme');
@@ -43247,6 +43369,21 @@
             return false;
           }
         }, {
+          key: "showSubMenuItem",
+          value: function showSubMenuItem(item) {
+            if (item.page.includes("reporting")) {
+              var itemPath = item.page.split("/")[2];
+
+              if (this.reportingProviderList.includes(itemPath)) {
+                return true;
+              } else {
+                return false;
+              }
+            }
+
+            return true;
+          }
+        }, {
           key: "isMenuItemActive",
           value: function isMenuItemActive(path) {
             if (!this.currentUrl || !path) {
@@ -43269,6 +43406,26 @@
             this.subscriptions.forEach(function (sb) {
               return sb.unsubscribe();
             });
+          } //get Report Providers in Current Company
+
+        }, {
+          key: "getReportingProviderList",
+          value: function getReportingProviderList() {
+            var _this120 = this;
+
+            if (this.companySelected) {
+              this.companyService.getOneCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
+                res.reportingProviders.map(function (report) {
+                  _this120.reportingProviderList.push(report.reportingProvider);
+                });
+              });
+            }
+          } //Gets the Selected Company from Local Storage
+
+        }, {
+          key: "getSelectedCompanyFromLocalStorage",
+          value: function getSelectedCompanyFromLocalStorage() {
+            return this.userService.getSelectedCompanyFromLocalStorage();
           }
         }]);
 
@@ -43276,7 +43433,7 @@
       }();
 
       AsideDynamicComponent.ɵfac = function AsideDynamicComponent_Factory(t) {
-        return new (t || AsideDynamicComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_metronic_core__WEBPACK_IMPORTED_MODULE_4__["LayoutService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_metronic_core__WEBPACK_IMPORTED_MODULE_4__["DynamicAsideMenuService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]));
+        return new (t || AsideDynamicComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_4__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_metronic_core__WEBPACK_IMPORTED_MODULE_5__["LayoutService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_metronic_core__WEBPACK_IMPORTED_MODULE_5__["DynamicAsideMenuService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]));
       };
 
       AsideDynamicComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -43338,7 +43495,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.menuConfig && ctx.menuConfig.items);
           }
         },
-        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["NgClass"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgTemplateOutlet"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkActive"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_7__["TranslateDirective"]],
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["NgClass"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_8__["InlineSVGDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgTemplateOutlet"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkActive"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_9__["TranslateDirective"]],
         styles: ["[_nghost-%COMP%]   .aside[_ngcontent-%COMP%] {\n  height: 100%;\n}\n[_nghost-%COMP%]   .aside[_ngcontent-%COMP%]   .aside-menu[_ngcontent-%COMP%] {\n  margin: 0;\n}\n[_nghost-%COMP%]   .menu-text[_ngcontent-%COMP%] {\n  white-space: nowrap;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFnZXMvX2xheW91dC9jb21wb25lbnRzL2FzaWRlLWR5bmFtaWMvYXNpZGUtZHluYW1pYy5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDRTtFQUNFLFlBQUE7QUFBSjtBQUVJO0VBQ0UsU0FBQTtBQUFOO0FBS0U7RUFDRSxtQkFBQTtBQUhKIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvX2xheW91dC9jb21wb25lbnRzL2FzaWRlLWR5bmFtaWMvYXNpZGUtZHluYW1pYy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcclxuICAuYXNpZGUge1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG5cclxuICAgIC5hc2lkZS1tZW51IHtcclxuICAgICAgbWFyZ2luOiAwO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLy8gZml4ZWQgdGV4dCBsaW5lIGJyZWFrIGlzc3VlIG9uIG1pbmltaXplZCBhc2lkZSBob3ZlclxyXG4gIC5tZW51LXRleHQge1xyXG4gICAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcclxuICB9XHJcbn1cclxuIl19 */"]
       });
       /*@__PURE__*/
@@ -43355,11 +43512,15 @@
           return [{
             type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]
           }, {
-            type: _metronic_core__WEBPACK_IMPORTED_MODULE_4__["LayoutService"]
+            type: src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_4__["CompanyManagementService"]
+          }, {
+            type: _metronic_core__WEBPACK_IMPORTED_MODULE_5__["LayoutService"]
           }, {
             type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]
           }, {
-            type: _metronic_core__WEBPACK_IMPORTED_MODULE_4__["DynamicAsideMenuService"]
+            type: _metronic_core__WEBPACK_IMPORTED_MODULE_5__["DynamicAsideMenuService"]
+          }, {
+            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"]
           }, {
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
           }];
@@ -46286,7 +46447,7 @@
         _createClass(HeaderMenuDynamicComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this120 = this;
+            var _this121 = this;
 
             this.ulCSSClasses = this.layout.getStringCSSClasses('header_menu_nav');
             this.rootArrowEnabled = this.layout.getProp('header.menu.self.rootArrow');
@@ -46296,16 +46457,16 @@
             var routerSubscr = this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
               return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"];
             })).subscribe(function (event) {
-              _this120.currentUrl = event.url;
+              _this121.currentUrl = event.url;
 
-              _this120.cdr.detectChanges();
+              _this121.cdr.detectChanges();
             });
             this.subscriptions.push(routerSubscr); // menu load
 
             var menuSubscr = this.menu.menuConfig$.subscribe(function (res) {
-              _this120.menuConfig = res;
+              _this121.menuConfig = res;
 
-              _this120.cdr.detectChanges();
+              _this121.cdr.detectChanges();
             });
             this.subscriptions.push(menuSubscr);
           }
@@ -48306,7 +48467,7 @@
 
       var HeaderComponent = /*#__PURE__*/function () {
         function HeaderComponent(layout, router) {
-          var _this121 = this;
+          var _this122 = this;
 
           _classCallCheck(this, HeaderComponent);
 
@@ -48321,27 +48482,27 @@
           var routerSubscription = this.router.events.subscribe(function (event) {
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"]) {
               // set page progress bar loading to start on NavigationStart event router
-              _this121.loaderSubject.next(10);
+              _this122.loaderSubject.next(10);
             }
 
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouteConfigLoadStart"]) {
-              _this121.loaderSubject.next(65);
+              _this122.loaderSubject.next(65);
             }
 
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouteConfigLoadEnd"]) {
-              _this121.loaderSubject.next(90);
+              _this122.loaderSubject.next(90);
             }
 
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"] || event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationCancel"]) {
               // set page progress bar loading to end on NavigationEnd event router
-              _this121.loaderSubject.next(100);
+              _this122.loaderSubject.next(100);
 
-              if (_this121.routerLoaderTimout) {
-                clearTimeout(_this121.routerLoaderTimout);
+              if (_this122.routerLoaderTimout) {
+                clearTimeout(_this122.routerLoaderTimout);
               }
 
-              _this121.routerLoaderTimout = setTimeout(function () {
-                _this121.loaderSubject.next(0);
+              _this122.routerLoaderTimout = setTimeout(function () {
+                _this122.loaderSubject.next(0);
               }, 300);
             }
           });
@@ -48650,7 +48811,7 @@
 
       var CompanySelectorComponent = /*#__PURE__*/function () {
         function CompanySelectorComponent(translationService, router, auth, companyService, userService) {
-          var _this122 = this;
+          var _this123 = this;
 
           _classCallCheck(this, CompanySelectorComponent);
 
@@ -48686,43 +48847,43 @@
           }];
           var currentUserInfo = this.auth.currentUserValue;
           this.companyService.getUserCompanies(currentUserInfo.companies).subscribe(function (companyResult) {
-            _this122.userCompanies = companyResult; //Gets the company saved to local storage
+            _this123.userCompanies = companyResult; //Gets the company saved to local storage
             //Checks to see if the user is part of at least one company
 
-            if (_this122.userCompanies.length > 0) {
-              _this122.localStorageCompany = _this122.getSelectedCompanyFromLocalStorage(); //If company was stored in local storage, checks to ensure the user has this company stored on their profile in the database. Otherwise, returns null.
+            if (_this123.userCompanies.length > 0) {
+              _this123.localStorageCompany = _this123.getSelectedCompanyFromLocalStorage(); //If company was stored in local storage, checks to ensure the user has this company stored on their profile in the database. Otherwise, returns null.
 
-              if (_this122.localStorageCompany) {
-                if (_this122.userCompanies.length == 1) {
-                  _this122.setCompanyToLocalStorage(_this122.userCompanies[0]._id);
+              if (_this123.localStorageCompany) {
+                if (_this123.userCompanies.length == 1) {
+                  _this123.setCompanyToLocalStorage(_this123.userCompanies[0]._id);
 
-                  _this122.localStorageCompany = _this122.getSelectedCompanyFromLocalStorage();
-                  _this122.selectedCompany = _this122.userCompanies[0];
+                  _this123.localStorageCompany = _this123.getSelectedCompanyFromLocalStorage();
+                  _this123.selectedCompany = _this123.userCompanies[0];
                 } else {
-                  var checkStorageCompany = _this122.userCompanies.filter(function (userCom) {
-                    return userCom._id == _this122.localStorageCompany;
+                  var checkStorageCompany = _this123.userCompanies.filter(function (userCom) {
+                    return userCom._id == _this123.localStorageCompany;
                   });
 
                   if (checkStorageCompany.length > 0) {
-                    _this122.userCompanies.forEach(function (element) {
-                      if (element._id === _this122.localStorageCompany) {
-                        _this122.selectedCompany = element;
+                    _this123.userCompanies.forEach(function (element) {
+                      if (element._id === _this123.localStorageCompany) {
+                        _this123.selectedCompany = element;
 
-                        _this122.setCompanyToLocalStorage(_this122.localStorageCompany);
+                        _this123.setCompanyToLocalStorage(_this123.localStorageCompany);
                       }
                     });
                   } else {
-                    _this122.setCompanyToLocalStorage(_this122.userCompanies[0]._id);
+                    _this123.setCompanyToLocalStorage(_this123.userCompanies[0]._id);
 
-                    _this122.localStorageCompany = _this122.getSelectedCompanyFromLocalStorage();
-                    _this122.selectedCompany = _this122.userCompanies[0];
+                    _this123.localStorageCompany = _this123.getSelectedCompanyFromLocalStorage();
+                    _this123.selectedCompany = _this123.userCompanies[0];
                   }
                 }
               } //User did not have a company saved to local storage
               else {
-                  _this122.setCompanyToLocalStorage(_this122.userCompanies[0]._id);
+                  _this123.setCompanyToLocalStorage(_this123.userCompanies[0]._id);
 
-                  _this122.selectedCompany = _this122.userCompanies[0];
+                  _this123.selectedCompany = _this123.userCompanies[0];
                 }
             }
           });
@@ -48731,13 +48892,13 @@
         _createClass(CompanySelectorComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this123 = this;
+            var _this124 = this;
 
             this.setSelectedCompany();
             this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
               return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"];
             })).subscribe(function (event) {
-              _this123.setSelectedCompany();
+              _this124.setSelectedCompany();
             });
           } //On button click/select sets company to local storage then refreshes
 
@@ -48753,13 +48914,13 @@
         }, {
           key: "setCompanyToLocalStorage",
           value: function setCompanyToLocalStorage(companyId) {
-            var _this124 = this;
+            var _this125 = this;
 
             if (this.userCompanies) {
               this.userCompanies.forEach(function (selectedCompany) {
                 if (selectedCompany._id === companyId) {
                   selectedCompany.active = true;
-                  _this124.selectedCompany = selectedCompany;
+                  _this125.selectedCompany = selectedCompany;
                 } else {
                   selectedCompany.active = false;
                 }
@@ -49034,13 +49195,13 @@
         _createClass(LanguageSelectorComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this125 = this;
+            var _this126 = this;
 
             this.setSelectedLanguage();
             this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
               return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"];
             })).subscribe(function (event) {
-              _this125.setSelectedLanguage();
+              _this126.setSelectedLanguage();
             });
           }
         }, {
@@ -49052,12 +49213,12 @@
         }, {
           key: "setLanguage",
           value: function setLanguage(lang) {
-            var _this126 = this;
+            var _this127 = this;
 
             this.languages.forEach(function (language) {
               if (language.lang === lang) {
                 language.active = true;
-                _this126.language = language;
+                _this127.language = language;
               } else {
                 language.active = false;
               }
@@ -49881,36 +50042,36 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this127 = this;
+            var _this128 = this;
 
             _assets_js_components_util__WEBPACK_IMPORTED_MODULE_8__["KTUtil"].ready(function () {
               // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
               // Add 'implements AfterViewInit' to the class.
-              if (_this127.extraSearchDisplay && _this127.extrasSearchLayout === 'offcanvas') {
+              if (_this128.extraSearchDisplay && _this128.extrasSearchLayout === 'offcanvas') {
                 _assets_js_layout_extended_quick_search__WEBPACK_IMPORTED_MODULE_1__["default"].init('kt_quick_search');
               }
 
-              if (_this127.extrasNotificationsDisplay && _this127.extrasNotificationsLayout === 'offcanvas') {
+              if (_this128.extrasNotificationsDisplay && _this128.extrasNotificationsLayout === 'offcanvas') {
                 // Init Quick Notifications Offcanvas Panel
                 _assets_js_layout_extended_quick_notifications__WEBPACK_IMPORTED_MODULE_2__["default"].init('kt_quick_notifications');
               }
 
-              if (_this127.extrasQuickActionsDisplay && _this127.extrasQuickActionsLayout === 'offcanvas') {
+              if (_this128.extrasQuickActionsDisplay && _this128.extrasQuickActionsLayout === 'offcanvas') {
                 // Init Quick Actions Offcanvas Panel
                 _assets_js_layout_extended_quick_actions__WEBPACK_IMPORTED_MODULE_3__["default"].init('kt_quick_actions');
               }
 
-              if (_this127.extrasCartDisplay && _this127.extrasCartLayout === 'offcanvas') {
+              if (_this128.extrasCartDisplay && _this128.extrasCartLayout === 'offcanvas') {
                 // Init Quick Cart Panel
                 _assets_js_layout_extended_quick_cart__WEBPACK_IMPORTED_MODULE_4__["default"].init('kt_quick_cart');
               }
 
-              if (_this127.extrasQuickPanelDisplay) {
+              if (_this128.extrasQuickPanelDisplay) {
                 // Init Quick Offcanvas Panel
                 _assets_js_layout_extended_quick_panel__WEBPACK_IMPORTED_MODULE_5__["default"].init('kt_quick_panel');
               }
 
-              if (_this127.extrasUserDisplay && _this127.extrasUserLayout === 'offcanvas') {
+              if (_this128.extrasUserDisplay && _this128.extrasUserLayout === 'offcanvas') {
                 // Init Quick User Panel
                 _assets_js_layout_extended_quick_user__WEBPACK_IMPORTED_MODULE_6__["default"].init('kt_quick_user');
               } // Init Header Topbar For Mobile Mode
@@ -50101,7 +50262,7 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this128 = this;
+            var _this129 = this;
 
             _assets_js_components_util__WEBPACK_IMPORTED_MODULE_1__["KTUtil"].ready(function () {
               // Init Brand Panel For Logo
@@ -50113,7 +50274,7 @@
 
               _assets_js_layout_base_aside_menu__WEBPACK_IMPORTED_MODULE_7__["default"].init('kt_aside_menu');
 
-              if (_this128.asideSelfMinimizeToggle) {
+              if (_this129.asideSelfMinimizeToggle) {
                 // Init Aside Menu Toggle
                 _assets_js_layout_base_aside_toggle__WEBPACK_IMPORTED_MODULE_2__["default"].init('kt_aside_toggle');
               } // Init Sticky Card

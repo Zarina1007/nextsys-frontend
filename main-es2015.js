@@ -1309,6 +1309,7 @@ class AuthService {
         // private fields
         this.unsubscribe = []; // Read more: => https://brianflove.com/2016/12/11/anguar-2-unsubscribe-observables/
         this.authLocalStorageToken = `${src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].appVersion}-${src_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].USERDATA_KEY}`;
+        this.LOCALIZATION_LOCAL_STORAGE_KEY = 'company';
         this.isLoadingSubject = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](false);
         this.currentUserSubject = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](undefined);
         this.currentUser$ = this.currentUserSubject.asObservable();
@@ -1331,6 +1332,7 @@ class AuthService {
         }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["finalize"])(() => this.isLoadingSubject.next(false)));
     }
     logout() {
+        localStorage.removeItem(this.LOCALIZATION_LOCAL_STORAGE_KEY);
         localStorage.removeItem(this.authLocalStorageToken);
         this.router.navigate(['/auth/login'], {
             queryParams: {},
