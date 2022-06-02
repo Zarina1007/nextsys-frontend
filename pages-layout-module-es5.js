@@ -51419,6 +51419,7 @@
       "./src/environments/environment.ts");
 
       var API_COMPANY_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl, "/companies");
+      var LOCALIZATION_LOCAL_STORAGE_KEY = "company";
 
       var CompanyService = /*#__PURE__*/function () {
         function CompanyService(http) {
@@ -51459,6 +51460,7 @@
         }, {
           key: "deleteOneCompany",
           value: function deleteOneCompany(company) {
+            localStorage.removeItem(LOCALIZATION_LOCAL_STORAGE_KEY);
             return this.http.post(API_COMPANY_URL + "/delete/".concat(company._key), company);
           }
         }]);

@@ -30514,6 +30514,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const API_COMPANY_URL = `${_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl}/companies`;
+const LOCALIZATION_LOCAL_STORAGE_KEY = "company";
 class CompanyService {
     constructor(http) {
         this.http = http;
@@ -30536,6 +30537,7 @@ class CompanyService {
         return this.http.post(API_COMPANY_URL + `/update/${company._key}`, company);
     }
     deleteOneCompany(company) {
+        localStorage.removeItem(LOCALIZATION_LOCAL_STORAGE_KEY);
         return this.http.post(API_COMPANY_URL + `/delete/${company._key}`, company);
     }
 }
