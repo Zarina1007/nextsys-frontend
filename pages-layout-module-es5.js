@@ -30037,8 +30037,8 @@
           title: 'Tag Management',
           root: true,
           bullet: 'dot',
-          icon: 'flaticon2-user-outline-symbol',
-          svg: './assets/media/svg/icons/General/User.svg',
+          icon: 'flaticon2-mail-1',
+          svg: './assets/media/svg/icons/Shopping/Box1.svg',
           page: '/tag-management',
           permissionName: "tagManage",
           submenu: [{
@@ -30059,7 +30059,7 @@
           root: true,
           bullet: 'dot',
           icon: 'flaticon2-user-outline-symbol',
-          svg: './assets/media/svg/icons/General/User.svg',
+          svg: './assets/media/svg/icons/Layout/Layout-right-panel-2.svg',
           page: '/live-traffic',
           permissionName: "liveTraffic",
           submenu: [{
@@ -30080,7 +30080,7 @@
           root: true,
           bullet: 'dot',
           icon: 'flaticon2-user-outline-symbol',
-          svg: './assets/media/svg/icons/General/User.svg',
+          svg: './assets/media/svg/icons/Media/Airplay.svg',
           page: '/live-traffic',
           permissionName: "protectedMedia",
           submenu: [{
@@ -30095,7 +30095,7 @@
           root: true,
           bullet: 'dot',
           icon: 'flaticon2-user-outline-symbol',
-          svg: './assets/media/svg/icons/General/User.svg',
+          svg: './assets/media/svg/icons/Devices/Diagnostics.svg',
           page: '/company-management',
           permissionName: "companyManage",
           submenu: [{
@@ -30113,7 +30113,7 @@
           root: true,
           bullet: 'dot',
           icon: 'flaticon2-user-outline-symbol',
-          svg: './assets/media/svg/icons/General/User.svg',
+          svg: './assets/media/svg/icons/Files/File.svg',
           page: '/reporting',
           permissionName: "reportManage",
           submenu: [{
@@ -30179,8 +30179,8 @@
           root: true,
           bullet: 'dot',
           icon: 'flaticon2-user-outline-symbol',
-          svg: './assets/media/svg/icons/General/User.svg',
-          page: '/',
+          svg: './assets/media/svg/icons/Communication/Chat2.svg',
+          page: '/notifications',
           permissionName: "notifications",
           submenu: [{
             title: 'Send Publisher Notifications',
@@ -30196,23 +30196,11 @@
           svg: './assets/media/svg/icons/Code/Warning-2.svg',
           page: '/error',
           submenu: [{
-            title: 'Error 1',
-            page: '/error/error-1'
+            title: '404 Error',
+            page: '/error/404'
           }, {
-            title: 'Error 2',
-            page: '/error/error-2'
-          }, {
-            title: 'Error 3',
-            page: '/error/error-3'
-          }, {
-            title: 'Error 4',
-            page: '/error/error-4'
-          }, {
-            title: 'Error 5',
-            page: '/error/error-5'
-          }, {
-            title: 'Error 6',
-            page: '/error/error-6'
+            title: '500 Error',
+            page: '/error/500'
           }]
         }]
       };
@@ -43311,6 +43299,9 @@
           this.asideMenuScroll = 1;
           this.asideSelfMinimizeToggle = false;
           this.reportingProviderList = [];
+          this.currentUser = this.authService.currentUserValue;
+          this.companySelected = this.getSelectedCompanyFromLocalStorage();
+          this.getReportingProviderList();
         }
 
         _createClass(AsideDynamicComponent, [{
@@ -43318,10 +43309,7 @@
           value: function ngOnInit() {
             var _this119 = this;
 
-            this.currentUser = this.authService.currentUserValue;
-            this.companySelected = this.getSelectedCompanyFromLocalStorage();
-            this.getReportingProviderList(); // load view settings
-
+            // load view settings
             this.disableAsideSelfDisplay = this.layout.getProp('aside.self.display') === false;
             this.brandSkin = this.layout.getProp('brand.self.theme');
             this.headerLogo = this.getLogo();
@@ -51587,6 +51575,11 @@
           key: "addUser",
           value: function addUser(user) {
             return this.http.post(API_USERS_URL + "new-user", user);
+          }
+        }, {
+          key: "deleteUser",
+          value: function deleteUser(userKey) {
+            return this.http["delete"](API_USERS_URL + "/".concat(userKey));
           }
         }, {
           key: "getUser",

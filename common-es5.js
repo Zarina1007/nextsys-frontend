@@ -180,6 +180,26 @@
               verticalPosition: 'bottom'
             });
           }
+        }, {
+          key: "notAccess",
+          value: function notAccess(message) {
+            this._snackBar.open(message, null, {
+              duration: 2000,
+              horizontalPosition: 'right',
+              verticalPosition: 'top',
+              panelClass: 'not-allowed-access'
+            });
+          }
+        }, {
+          key: "error",
+          value: function error(message) {
+            this._snackBar.open(message, null, {
+              duration: 2000,
+              horizontalPosition: 'right',
+              verticalPosition: 'top',
+              panelClass: 'not-allowed-access'
+            });
+          }
         }]);
 
         return SnackbarService;

@@ -19296,8 +19296,8 @@ const DynamicAsideMenuConfig = {
             title: 'Tag Management',
             root: true,
             bullet: 'dot',
-            icon: 'flaticon2-user-outline-symbol',
-            svg: './assets/media/svg/icons/General/User.svg',
+            icon: 'flaticon2-mail-1',
+            svg: './assets/media/svg/icons/Shopping/Box1.svg',
             page: '/tag-management',
             permissionName: "tagManage",
             submenu: [
@@ -19322,7 +19322,7 @@ const DynamicAsideMenuConfig = {
             root: true,
             bullet: 'dot',
             icon: 'flaticon2-user-outline-symbol',
-            svg: './assets/media/svg/icons/General/User.svg',
+            svg: './assets/media/svg/icons/Layout/Layout-right-panel-2.svg',
             page: '/live-traffic',
             permissionName: "liveTraffic",
             submenu: [
@@ -19347,7 +19347,7 @@ const DynamicAsideMenuConfig = {
             root: true,
             bullet: 'dot',
             icon: 'flaticon2-user-outline-symbol',
-            svg: './assets/media/svg/icons/General/User.svg',
+            svg: './assets/media/svg/icons/Media/Airplay.svg',
             page: '/live-traffic',
             permissionName: "protectedMedia",
             submenu: [
@@ -19364,7 +19364,7 @@ const DynamicAsideMenuConfig = {
             root: true,
             bullet: 'dot',
             icon: 'flaticon2-user-outline-symbol',
-            svg: './assets/media/svg/icons/General/User.svg',
+            svg: './assets/media/svg/icons/Devices/Diagnostics.svg',
             page: '/company-management',
             permissionName: "companyManage",
             submenu: [
@@ -19385,7 +19385,7 @@ const DynamicAsideMenuConfig = {
             root: true,
             bullet: 'dot',
             icon: 'flaticon2-user-outline-symbol',
-            svg: './assets/media/svg/icons/General/User.svg',
+            svg: './assets/media/svg/icons/Files/File.svg',
             page: '/reporting',
             permissionName: "reportManage",
             submenu: [
@@ -19467,8 +19467,8 @@ const DynamicAsideMenuConfig = {
             root: true,
             bullet: 'dot',
             icon: 'flaticon2-user-outline-symbol',
-            svg: './assets/media/svg/icons/General/User.svg',
-            page: '/',
+            svg: './assets/media/svg/icons/Communication/Chat2.svg',
+            page: '/notifications',
             permissionName: "notifications",
             submenu: [
                 {
@@ -19487,29 +19487,13 @@ const DynamicAsideMenuConfig = {
             page: '/error',
             submenu: [
                 {
-                    title: 'Error 1',
-                    page: '/error/error-1',
+                    title: '404 Error',
+                    page: '/error/404',
                 },
                 {
-                    title: 'Error 2',
-                    page: '/error/error-2',
-                },
-                {
-                    title: 'Error 3',
-                    page: '/error/error-3',
-                },
-                {
-                    title: 'Error 4',
-                    page: '/error/error-4',
-                },
-                {
-                    title: 'Error 5',
-                    page: '/error/error-5',
-                },
-                {
-                    title: 'Error 6',
-                    page: '/error/error-6',
-                },
+                    title: '500 Error',
+                    page: '/error/500',
+                }
             ],
         },
     ],
@@ -26372,11 +26356,11 @@ class AsideDynamicComponent {
         this.asideMenuScroll = 1;
         this.asideSelfMinimizeToggle = false;
         this.reportingProviderList = [];
-    }
-    ngOnInit() {
         this.currentUser = this.authService.currentUserValue;
         this.companySelected = this.getSelectedCompanyFromLocalStorage();
         this.getReportingProviderList();
+    }
+    ngOnInit() {
         // load view settings
         this.disableAsideSelfDisplay =
             this.layout.getProp('aside.self.display') === false;
@@ -30606,6 +30590,9 @@ class UsersService {
     }
     addUser(user) {
         return this.http.post(API_USERS_URL + "new-user", user);
+    }
+    deleteUser(userKey) {
+        return this.http.delete(API_USERS_URL + `/${userKey}`);
     }
     getUser(userId) {
         return this.http.get(`${API_USERS_URL}get_user` + `/${userId}`);

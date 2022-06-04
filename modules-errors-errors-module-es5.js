@@ -637,50 +637,23 @@
       var _error2_error2_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ./error2/error2.component */
       "./src/app/modules/errors/error2/error2.component.ts");
-      /* harmony import */
-
-
-      var _error3_error3_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! ./error3/error3.component */
-      "./src/app/modules/errors/error3/error3.component.ts");
-      /* harmony import */
-
-
-      var _error4_error4_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! ./error4/error4.component */
-      "./src/app/modules/errors/error4/error4.component.ts");
-      /* harmony import */
-
-
-      var _error5_error5_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! ./error5/error5.component */
-      "./src/app/modules/errors/error5/error5.component.ts");
 
       var routes = [{
         path: '',
         component: _errors_component__WEBPACK_IMPORTED_MODULE_2__["ErrorsComponent"],
         children: [{
-          path: 'error-1',
+          path: '404',
           component: _error1_error1_component__WEBPACK_IMPORTED_MODULE_3__["Error1Component"]
         }, {
-          path: 'error-2',
+          path: '500',
           component: _error2_error2_component__WEBPACK_IMPORTED_MODULE_4__["Error2Component"]
         }, {
-          path: 'error-3',
-          component: _error3_error3_component__WEBPACK_IMPORTED_MODULE_5__["Error3Component"]
-        }, {
-          path: 'error-4',
-          component: _error4_error4_component__WEBPACK_IMPORTED_MODULE_6__["Error4Component"]
-        }, {
-          path: 'error-5',
-          component: _error5_error5_component__WEBPACK_IMPORTED_MODULE_7__["Error5Component"]
-        }, {
           path: '',
-          redirectTo: 'error-1',
+          redirectTo: '404',
           pathMatch: 'full'
         }, {
           path: '**',
-          component: _error1_error1_component__WEBPACK_IMPORTED_MODULE_3__["Error1Component"],
+          redirectTo: '404',
           pathMatch: 'full'
         }]
       }];
