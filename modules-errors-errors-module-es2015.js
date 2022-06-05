@@ -277,7 +277,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 /* harmony import */ var _errors_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./errors.component */ "./src/app/modules/errors/errors.component.ts");
-/* harmony import */ var _error1_error1_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./error1/error1.component */ "./src/app/modules/errors/error1/error1.component.ts");
+/* harmony import */ var _error5_error5_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./error5/error5.component */ "./src/app/modules/errors/error5/error5.component.ts");
 /* harmony import */ var _error2_error2_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./error2/error2.component */ "./src/app/modules/errors/error2/error2.component.ts");
 
 
@@ -293,7 +293,7 @@ const routes = [
         children: [
             {
                 path: '404',
-                component: _error1_error1_component__WEBPACK_IMPORTED_MODULE_3__["Error1Component"],
+                component: _error5_error5_component__WEBPACK_IMPORTED_MODULE_3__["Error5Component"],
             },
             {
                 path: '500',

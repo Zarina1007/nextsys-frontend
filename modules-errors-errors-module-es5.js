@@ -628,9 +628,9 @@
       /* harmony import */
 
 
-      var _error1_error1_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! ./error1/error1.component */
-      "./src/app/modules/errors/error1/error1.component.ts");
+      var _error5_error5_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! ./error5/error5.component */
+      "./src/app/modules/errors/error5/error5.component.ts");
       /* harmony import */
 
 
@@ -643,7 +643,7 @@
         component: _errors_component__WEBPACK_IMPORTED_MODULE_2__["ErrorsComponent"],
         children: [{
           path: '404',
-          component: _error1_error1_component__WEBPACK_IMPORTED_MODULE_3__["Error1Component"]
+          component: _error5_error5_component__WEBPACK_IMPORTED_MODULE_3__["Error5Component"]
         }, {
           path: '500',
           component: _error2_error2_component__WEBPACK_IMPORTED_MODULE_4__["Error2Component"]

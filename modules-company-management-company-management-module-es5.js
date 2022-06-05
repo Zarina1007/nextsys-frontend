@@ -52,9 +52,9 @@
       /* harmony import */
 
 
-      var src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! src/app/shared/service/snackbar.service */
-      "./src/app/shared/service/snackbar.service.ts");
+      var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/shared/service/notification.service */
+      "./src/app/shared/service/notification.service.ts");
       /* harmony import */
 
 
@@ -211,14 +211,14 @@
       }
 
       var CompaniesComponent = /*#__PURE__*/function () {
-        function CompaniesComponent(companyService, cdr, router, userService, snackService) {
+        function CompaniesComponent(companyService, cdr, router, userService, notification) {
           _classCallCheck(this, CompaniesComponent);
 
           this.companyService = companyService;
           this.cdr = cdr;
           this.router = router;
           this.userService = userService;
-          this.snackService = snackService;
+          this.notification = notification;
           this.loadingIndicator = true;
           this.hidden = false;
           this.getAllCompanies();
@@ -233,7 +233,7 @@
 
             if (!this.localStorageCompany) {
               this.hidden = true;
-              this.snackService.notAccess("You are not part of any company");
+              this.notification.showError("Please select your Company!", "");
             } else {
               this.hidden = false;
             }
@@ -267,7 +267,7 @@
       }();
 
       CompaniesComponent.ɵfac = function CompaniesComponent_Factory(t) {
-        return new (t || CompaniesComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_company_management_service__WEBPACK_IMPORTED_MODULE_1__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_4__["SnackbarService"]));
+        return new (t || CompaniesComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_company_management_service__WEBPACK_IMPORTED_MODULE_1__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_4__["NotificationService"]));
       };
 
       CompaniesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -314,7 +314,7 @@
           }, {
             type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]
           }, {
-            type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_4__["SnackbarService"]
+            type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_4__["NotificationService"]
           }];
         }, null);
       })();
@@ -639,9 +639,9 @@
       /* harmony import */
 
 
-      var src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! src/app/shared/service/snackbar.service */
-      "./src/app/shared/service/snackbar.service.ts");
+      var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/shared/service/notification.service */
+      "./src/app/shared/service/notification.service.ts");
       /* harmony import */
 
 
@@ -1434,14 +1434,14 @@
       }
 
       var EditCompanyComponent = /*#__PURE__*/function () {
-        function EditCompanyComponent(fb, authService, route, companyManagementService, snackService, userService, router) {
+        function EditCompanyComponent(fb, authService, route, companyManagementService, notification, userService, router) {
           _classCallCheck(this, EditCompanyComponent);
 
           this.fb = fb;
           this.authService = authService;
           this.route = route;
           this.companyManagementService = companyManagementService;
-          this.snackService = snackService;
+          this.notification = notification;
           this.userService = userService;
           this.router = router;
           this.hidden = false;
@@ -1484,7 +1484,7 @@
             //access page part
             if (!this.localStorageCompany) {
               this.hidden = true;
-              this.snackService.notAccess("You are not part of any company");
+              this.notification.showError("Please select your Company!", "");
             } else {
               this.hidden = false;
             }
@@ -1537,9 +1537,9 @@
             if (this.companyFG.valid) {
               this.company = Object.assign(Object.assign({}, this.company), this.companyFG.value);
               this.companyManagementService.updateOneCompany(this.company).subscribe(function (x) {
-                _this3.snackService.info('Successfully updated company.');
+                _this3.notification.showSuccess('Successfully updated company.', "");
               }, function (err) {
-                _this3.snackService.info("Error updating company: ".concat(err.statusText));
+                _this3.notification.showError("Error updating company: ".concat(err.statusText), "");
               });
             }
           }
@@ -1549,13 +1549,13 @@
             var _this4 = this;
 
             this.companyManagementService.deleteOneCompany(this.company).subscribe(function (x) {
-              _this4.snackService.info('Successfully deleted company.');
+              _this4.notification.showSuccess('Successfully deleted company.', "");
 
               _this4.router.navigate(['/company-management/companies']).then(function () {
                 window.location.reload();
               });
             }, function (err) {
-              _this4.snackService.info("Error deleting company: ".concat(err.statusText));
+              _this4.notification.showError("Error deleting company: ".concat(err.statusText), "");
             });
           }
         }, {
@@ -1620,7 +1620,7 @@
       }();
 
       EditCompanyComponent.ɵfac = function EditCompanyComponent_Factory(t) {
-        return new (t || EditCompanyComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_company_management_service__WEBPACK_IMPORTED_MODULE_4__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_5__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]));
+        return new (t || EditCompanyComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_company_management_service__WEBPACK_IMPORTED_MODULE_4__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]));
       };
 
       EditCompanyComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -1668,7 +1668,7 @@
           }, {
             type: _company_management_service__WEBPACK_IMPORTED_MODULE_4__["CompanyManagementService"]
           }, {
-            type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_5__["SnackbarService"]
+            type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__["NotificationService"]
           }, {
             type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"]
           }, {
@@ -1720,9 +1720,9 @@
       /* harmony import */
 
 
-      var src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! src/app/shared/service/snackbar.service */
-      "./src/app/shared/service/snackbar.service.ts");
+      var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/shared/service/notification.service */
+      "./src/app/shared/service/notification.service.ts");
       /* harmony import */
 
 
@@ -2337,11 +2337,11 @@
       }
 
       var NewCompanyComponent = /*#__PURE__*/function () {
-        function NewCompanyComponent(companyManagementService, snackService, fb, userService) {
+        function NewCompanyComponent(companyManagementService, notification, fb, userService) {
           _classCallCheck(this, NewCompanyComponent);
 
           this.companyManagementService = companyManagementService;
-          this.snackService = snackService;
+          this.notification = notification;
           this.fb = fb;
           this.userService = userService;
           this.hidden = false;
@@ -2390,7 +2390,7 @@
             //access page part
             if (!this.localStorageCompany) {
               this.hidden = true;
-              this.snackService.notAccess("You are not part of any company");
+              this.notification.showError("Please select your Company!", "");
             } else {
               this.hidden = false;
             }
@@ -2415,13 +2415,13 @@
 
             if (this.companyFG.valid) {
               this.companyManagementService.addCompany(this.companyFG.value).subscribe(function (x) {
-                _this5.snackService.info('Successfully added a new company.');
+                _this5.notification.showSuccess('Successfully added a new company.', "");
 
                 _this5.companyFG.reset();
 
                 _this5.formGroupDirective.resetForm();
               }, function (err) {
-                _this5.snackService.info(err.error);
+                _this5.notification.showError(err.error, "");
               });
             }
           }
@@ -2488,7 +2488,7 @@
       }();
 
       NewCompanyComponent.ɵfac = function NewCompanyComponent_Factory(t) {
-        return new (t || NewCompanyComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_company_management_service__WEBPACK_IMPORTED_MODULE_2__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]));
+        return new (t || NewCompanyComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_company_management_service__WEBPACK_IMPORTED_MODULE_2__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_3__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]));
       };
 
       NewCompanyComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -2541,7 +2541,7 @@
           return [{
             type: _company_management_service__WEBPACK_IMPORTED_MODULE_2__["CompanyManagementService"]
           }, {
-            type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]
+            type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_3__["NotificationService"]
           }, {
             type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]
           }, {

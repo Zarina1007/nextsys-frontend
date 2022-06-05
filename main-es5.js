@@ -424,7 +424,7 @@
         }
       }, {
         path: '**',
-        redirectTo: 'errors/404',
+        redirectTo: 'error/404',
         pathMatch: 'full'
       }];
 
@@ -805,7 +805,13 @@
 
       var _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
       /*! ./modules/admin-reporting/admin-reporting.component */
-      "./src/app/modules/admin-reporting/admin-reporting.component.ts"); // Highlight JS
+      "./src/app/modules/admin-reporting/admin-reporting.component.ts");
+      /* harmony import */
+
+
+      var ngx_toastr__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+      /*! ngx-toastr */
+      "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js"); // Highlight JS
 
 
       function appInitializer(authService) {
@@ -864,13 +870,13 @@
           useClass: _shared_service_auth_interceptor__WEBPACK_IMPORTED_MODULE_17__["AuthInterceptor"],
           multi: true
         }],
-        imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"].forRoot(), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HighlightModule"], ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"].forRoot(), _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"]]]
+        imports: [[_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"].forRoot(), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HighlightModule"], ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"].forRoot(), ngx_toastr__WEBPACK_IMPORTED_MODULE_20__["ToastrModule"].forRoot(), _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"]]]
       });
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppModule, {
           declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_18__["CompanyManagementComponent"], _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__["AdminReportingComponent"]],
-          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HighlightModule"], ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"]]
+          imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HighlightModule"], ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_20__["ToastrModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"]]
         });
       })();
       /*@__PURE__*/
@@ -881,7 +887,7 @@
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
             declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"], _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_18__["CompanyManagementComponent"], _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__["AdminReportingComponent"]],
-            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"].forRoot(), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HighlightModule"], ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"].forRoot(), _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"]],
+            imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"].forRoot(), _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"], ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HighlightModule"], ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"].forRoot(), ngx_toastr__WEBPACK_IMPORTED_MODULE_20__["ToastrModule"].forRoot(), _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"]],
             providers: [{
               provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"],
               useFactory: appInitializer,

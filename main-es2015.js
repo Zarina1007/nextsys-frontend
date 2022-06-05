@@ -209,7 +209,7 @@ const routes = [
         path: '',
         loadChildren: () => Promise.all(/*! import() | pages-layout-module */[__webpack_require__.e("common"), __webpack_require__.e("pages-layout-module")]).then(__webpack_require__.bind(null, /*! ./pages/layout.module */ "./src/app/pages/layout.module.ts")).then((m) => m.LayoutModule),
     },
-    { path: '**', redirectTo: 'errors/404', pathMatch: 'full' },
+    { path: '**', redirectTo: 'error/404', pathMatch: 'full' },
 ];
 class AppRoutingModule {
 }
@@ -345,6 +345,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_service_auth_interceptor__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./shared/service/auth.interceptor */ "./src/app/shared/service/auth.interceptor.ts");
 /* harmony import */ var _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/company-management/company-management.component */ "./src/app/modules/company-management/company-management.component.ts");
 /* harmony import */ var _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/admin-reporting/admin-reporting.component */ "./src/app/modules/admin-reporting/admin-reporting.component.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
 
 
 
@@ -357,6 +358,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Highlight JS
+
+
 
 
 
@@ -419,6 +422,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector
             ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
             ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"].forRoot(),
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_20__["ToastrModule"].forRoot(),
             _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"],
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
@@ -428,7 +432,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector
         _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
         ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HighlightModule"],
         ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"],
-        _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"]] }); })();
+        _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_20__["ToastrModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
@@ -447,6 +451,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector
                     ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"],
                     _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
                     ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"].forRoot(),
+                    ngx_toastr__WEBPACK_IMPORTED_MODULE_20__["ToastrModule"].forRoot(),
                     _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"],
                 ],
                 providers: [
