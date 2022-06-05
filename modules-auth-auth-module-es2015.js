@@ -637,7 +637,6 @@ class LoginComponent {
                 this.router.navigate([this.returnUrl]);
             }
             else {
-                console.log("-----", user);
                 this.hasError = true;
             }
         });

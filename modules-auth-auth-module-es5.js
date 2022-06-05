@@ -1232,7 +1232,6 @@
               if (user) {
                 _this2.router.navigate([_this2.returnUrl]);
               } else {
-                console.log("-----", user);
                 _this2.hasError = true;
               }
             });
