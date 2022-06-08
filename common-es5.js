@@ -133,6 +133,139 @@
     },
 
     /***/
+    "./src/app/modules/tag-management/tag-management.service.ts":
+    /*!******************************************************************!*\
+      !*** ./src/app/modules/tag-management/tag-management.service.ts ***!
+      \******************************************************************/
+
+    /*! exports provided: TagManagementService */
+
+    /***/
+    function srcAppModulesTagManagementTagManagementServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "TagManagementService", function () {
+        return TagManagementService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _shared_service_tags_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ./../../shared/service/tags.service */
+      "./src/app/shared/service/tags.service.ts");
+
+      var TagManagementService = /*#__PURE__*/function () {
+        function TagManagementService(tagsService) {
+          _classCallCheck(this, TagManagementService);
+
+          this.tagsService = tagsService;
+        } // Get all Chrome objects
+
+
+        _createClass(TagManagementService, [{
+          key: "getChromeBrowserVersion",
+          value: function getChromeBrowserVersion() {
+            return this.tagsService.getChrome();
+          } // Get all Chrome objects
+
+        }, {
+          key: "getFirefoxBrowserVersion",
+          value: function getFirefoxBrowserVersion() {
+            return this.tagsService.getFirefox();
+          }
+        }, {
+          key: "addTag",
+          value: function addTag(tag) {
+            return this.tagsService.add(tag);
+          }
+        }, {
+          key: "getAllTags",
+          value: function getAllTags() {
+            return this.tagsService.getAllTags();
+          }
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(companyKey) {
+            return this.tagsService.getCompanyTags(companyKey);
+          }
+        }, {
+          key: "deleteTag",
+          value: function deleteTag(tagKey) {
+            return this.tagsService.deleteTag(tagKey);
+          }
+        }, {
+          key: "getOneTag",
+          value: function getOneTag(tag) {
+            return this.tagsService.getOneTag(tag);
+          }
+        }, {
+          key: "updateOneTag",
+          value: function updateOneTag(tag) {
+            return this.tagsService.updateOneTag(tag);
+          }
+        }, {
+          key: "addTemplate",
+          value: function addTemplate(template) {
+            return this.tagsService.addTemplate(template);
+          }
+        }, {
+          key: "getAllTemplates",
+          value: function getAllTemplates() {
+            return this.tagsService.getAllTemplates();
+          }
+        }, {
+          key: "deleteTemplate",
+          value: function deleteTemplate(templateKey) {
+            return this.tagsService.deleteTemplate(templateKey);
+          }
+        }, {
+          key: "getOneTemplate",
+          value: function getOneTemplate(template) {
+            return this.tagsService.getOneTemplate(template);
+          }
+        }]);
+
+        return TagManagementService;
+      }();
+
+      TagManagementService.ɵfac = function TagManagementService_Factory(t) {
+        return new (t || TagManagementService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_1__["TagsService"]));
+      };
+
+      TagManagementService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: TagManagementService,
+        factory: TagManagementService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TagManagementService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _shared_service_tags_service__WEBPACK_IMPORTED_MODULE_1__["TagsService"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/shared/service/notification.service.ts":
     /*!********************************************************!*\
       !*** ./src/app/shared/service/notification.service.ts ***!
@@ -400,6 +533,11 @@
           key: "deleteTag",
           value: function deleteTag(tagKey) {
             return this.http["delete"](API_TAGS_URL + "/".concat(tagKey));
+          }
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(companyKey) {
+            return this.http.get(API_TAGS_URL + "/get_tag_company/".concat(companyKey));
           }
         }, {
           key: "getOneTag",
