@@ -3076,7 +3076,6 @@ class SuperadminsComponent {
             this.hidden = false;
         }
         this.subscritions.push(this.userService.getSuperAdminAll().subscribe(data => {
-            console.log(data);
             if (this.localStorageCompany) {
                 this.superadmins.data = data.filter(userData => userData.companies.includes(this.localStorageCompany));
             }

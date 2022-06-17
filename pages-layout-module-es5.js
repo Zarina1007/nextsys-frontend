@@ -30143,6 +30143,9 @@
           }, {
             title: 'Third Party Sheet',
             page: '/reporting/third-party'
+          }, {
+            title: 'Manual Update',
+            page: '/reporting/manual-update'
           }]
         }, //AUTHENTICATION
         {
@@ -42453,6 +42456,12 @@
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
               }
 
+              if (data.permission && state.url.split('/')[2] == "manual-update" && currentUser.role != 1) {
+                this._router.navigate([this.selectBestRoute()]);
+
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
+              }
+
               return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
             } // not logged in so redirect to login page with the return url
 
@@ -43369,6 +43378,10 @@
               if (this.reportingProviderList.includes(itemPath)) {
                 return true;
               } else {
+                if (itemPath == "manual-update" && this.currentUser.role == 1) {
+                  return true;
+                }
+
                 return false;
               }
             } else {
@@ -50843,7 +50856,6 @@
 
             if (this.companySelected) {
               this.companyService.getOneCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
-                console.log(res.reportingProviders);
                 res.reportingProviders.map(function (report) {
                   _this130.companyList.push(report.reportingProvider);
                 });

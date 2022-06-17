@@ -6258,8 +6258,6 @@
             }
 
             this.subscritions.push(this.userService.getSuperAdminAll().subscribe(function (data) {
-              console.log(data);
-
               if (_this18.localStorageCompany) {
                 _this18.superadmins.data = data.filter(function (userData) {
                   return userData.companies.includes(_this18.localStorageCompany);
