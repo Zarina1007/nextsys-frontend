@@ -30144,6 +30144,9 @@
             title: 'Third Party Sheet',
             page: '/reporting/third-party'
           }, {
+            title: 'Publisher Stats',
+            page: '/reporting/publisher-tags'
+          }, {
             title: 'Manual Update',
             page: '/reporting/manual-update'
           }]
@@ -42462,6 +42465,12 @@
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
               }
 
+              if (data.permission && state.url.split('/')[2] == "publisher-tags" && currentUser.role != 3) {
+                this._router.navigate([this.selectBestRoute()]);
+
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
+              }
+
               return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
             } // not logged in so redirect to login page with the return url
 
@@ -43379,6 +43388,8 @@
                 return true;
               } else {
                 if (itemPath == "manual-update" && this.currentUser.role == 1) {
+                  return true;
+                } else if (itemPath == "publisher-tags" && this.currentUser.role == 3) {
                   return true;
                 }
 

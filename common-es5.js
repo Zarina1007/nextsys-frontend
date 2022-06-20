@@ -478,24 +478,24 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! src/environments/environment */
       "./src/environments/environment.ts");
-      /* harmony import */
 
-
-      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! @angular/common/http */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
-
-      var API_TAGS_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/tags");
-      var API_TEMPLATES_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/templates");
+      var API_TAGS_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl, "/tags");
+      var API_TEMPLATES_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl, "/templates");
 
       var TagsService = /*#__PURE__*/function () {
         function TagsService(http) {
@@ -569,16 +569,25 @@
           value: function getOneTemplate(template) {
             return this.http.get(API_TEMPLATES_URL + "/get_template/".concat(template));
           }
+        }, {
+          key: "getUserTags",
+          value: function getUserTags(tags) {
+            var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpParams"]();
+            params = params.append('tags', JSON.stringify(tags));
+            return this.http.get(API_TAGS_URL + "/get_many_tags", {
+              params: params
+            });
+          }
         }]);
 
         return TagsService;
       }();
 
       TagsService.ɵfac = function TagsService_Factory(t) {
-        return new (t || TagsService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+        return new (t || TagsService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]));
       };
 
-      TagsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      TagsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
         token: TagsService,
         factory: TagsService.ɵfac,
         providedIn: 'root'
@@ -586,14 +595,14 @@
       /*@__PURE__*/
 
       (function () {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TagsService, [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](TagsService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
           args: [{
             providedIn: 'root'
           }]
         }], function () {
           return [{
-            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]
           }];
         }, null);
       })();

@@ -6404,7 +6404,7 @@
         if (rf & 2) {
           var value_r23 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r23[0].name, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r23 ? value_r23[0].name : "", " ");
         }
       }
 
@@ -6440,7 +6440,7 @@
         if (rf & 2) {
           var value_r27 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r27, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r27 ? value_r27[0].fullname : "", " ");
         }
       }
 
