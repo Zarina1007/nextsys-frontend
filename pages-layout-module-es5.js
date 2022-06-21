@@ -30144,9 +30144,6 @@
             title: 'Third Party Sheet',
             page: '/reporting/third-party'
           }, {
-            title: 'Publisher Stats',
-            page: '/reporting/publisher-tags'
-          }, {
             title: 'Manual Update',
             page: '/reporting/manual-update'
           }]
@@ -30886,32 +30883,54 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! rxjs */
       "./node_modules/rxjs/_esm2015/index.js");
       /* harmony import */
 
 
-      var _configs_dynamic_aside_menu_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _configs_dynamic_aside_menu_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ../../configs/dynamic-aside-menu.config */
       "./src/app/_metronic/configs/dynamic-aside-menu.config.ts");
+      /* harmony import */
+
+
+      var src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/modules/auth/_services/auth.service */
+      "./src/app/modules/auth/_services/auth.service.ts");
+      /* harmony import */
+
+
+      var src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/shared/service/tags.service */
+      "./src/app/shared/service/tags.service.ts");
 
       var emptyMenuConfig = {
         items: []
       };
 
       var DynamicAsideMenuService = /*#__PURE__*/function () {
-        function DynamicAsideMenuService() {
+        function DynamicAsideMenuService(authService, tagService) {
           _classCallCheck(this, DynamicAsideMenuService);
 
-          this.menuConfigSubject = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](emptyMenuConfig);
+          this.authService = authService;
+          this.tagService = tagService;
+          this.menuConfigSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](emptyMenuConfig);
+          this.tagList = [];
           this.menuConfig$ = this.menuConfigSubject.asObservable();
+          this.currentUser = this.authService.currentUserValue;
           this.loadMenu();
         } // Here you able to load your menu from server/data-base/localStorage
         // Default => from DynamicAsideMenuConfig
@@ -30920,12 +30939,53 @@
         _createClass(DynamicAsideMenuService, [{
           key: "loadMenu",
           value: function loadMenu() {
-            this.setMenu(_configs_dynamic_aside_menu_config__WEBPACK_IMPORTED_MODULE_2__["DynamicAsideMenuConfig"]);
+            this.setMenu(_configs_dynamic_aside_menu_config__WEBPACK_IMPORTED_MODULE_3__["DynamicAsideMenuConfig"]);
           }
         }, {
           key: "setMenu",
           value: function setMenu(menuConfig) {
-            this.menuConfigSubject.next(menuConfig);
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              var submenuList, publisherMenu;
+              return regeneratorRuntime.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      _context.next = 2;
+                      return this.tagService.getUserTags(this.currentUser.tagsId).toPromise();
+
+                    case 2:
+                      this.tagList = _context.sent;
+                      submenuList = [];
+                      this.tagList.map(function (tag) {
+                        submenuList.push({
+                          title: "".concat(tag.name),
+                          page: "/publisher-reporting/".concat(tag._key)
+                        });
+                      });
+                      publisherMenu = {
+                        title: 'Publisher Reporting',
+                        root: true,
+                        icon: 'flaticon2-architecture-and-city',
+                        svg: './assets/media/svg/icons/Design/Layers.svg',
+                        page: '/publisher-reporting',
+                        bullet: 'dot',
+                        permissionName: "dashboard"
+                      };
+                      publisherMenu['submenu'] = submenuList;
+                      menuConfig.items.push( //Publisher REPORTING
+                      {
+                        section: 'Publisher Reporting'
+                      });
+                      menuConfig.items.push(publisherMenu);
+                      this.menuConfigSubject.next(menuConfig);
+
+                    case 10:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee, this);
+            }));
           }
         }, {
           key: "getMenu",
@@ -30938,10 +30998,10 @@
       }();
 
       DynamicAsideMenuService.ɵfac = function DynamicAsideMenuService_Factory(t) {
-        return new (t || DynamicAsideMenuService)();
+        return new (t || DynamicAsideMenuService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__["TagsService"]));
       };
 
-      DynamicAsideMenuService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      DynamicAsideMenuService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
         token: DynamicAsideMenuService,
         factory: DynamicAsideMenuService.ɵfac,
         providedIn: 'root'
@@ -30949,13 +31009,17 @@
       /*@__PURE__*/
 
       (function () {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DynamicAsideMenuService, [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](DynamicAsideMenuService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
           args: [{
             providedIn: 'root'
           }]
         }], function () {
-          return [];
+          return [{
+            type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]
+          }, {
+            type: src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__["TagsService"]
+          }];
         }, null);
       })();
       /***/
@@ -42465,12 +42529,13 @@
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
               }
 
-              if (data.permission && state.url.split('/')[2] == "publisher-tags" && currentUser.role != 3) {
+              if (data.permission && state.url.split('/')[2] == "publisher-reporting" && currentUser.role != 3) {
                 this._router.navigate([this.selectBestRoute()]);
 
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
               }
 
+              console.log("============", data.permission);
               return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
             } // not logged in so redirect to login page with the return url
 
@@ -43389,7 +43454,7 @@
               } else {
                 if (itemPath == "manual-update" && this.currentUser.role == 1) {
                   return true;
-                } else if (itemPath == "publisher-tags" && this.currentUser.role == 3) {
+                } else if (item.page.includes("publisher-reporting") && this.currentUser.role == 3) {
                   return true;
                 }
 
@@ -51290,7 +51355,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-tag-management-tag-management-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~7555cd6c"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~0dba832d"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-tag-~c2890075"), __webpack_require__.e("default~modules-material-material-module~modules-tag-management-tag-management-module~modules-user-m~49b1d748"), __webpack_require__.e("common"), __webpack_require__.e("modules-tag-management-tag-management-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~521641bd"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~7555cd6c"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~modules-material-material-module~modules-tag-management-tag-management-module~modules-user-m~49b1d748"), __webpack_require__.e("common"), __webpack_require__.e("modules-tag-management-tag-management-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/tag-management/tag-management.module */
             "./src/app/modules/tag-management/tag-management.module.ts")).then(function (m) {
               return m.TagManagementModule;
@@ -51320,7 +51385,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-company-management-company-management-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~7555cd6c"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~0dba832d"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("common"), __webpack_require__.e("modules-company-management-company-management-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~521641bd"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~7555cd6c"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("common"), __webpack_require__.e("modules-company-management-company-management-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/company-management/company-management.module */
             "./src/app/modules/company-management/company-management.module.ts")).then(function (m) {
               return m.CompanyManagementModule;
@@ -51335,7 +51400,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-admin-reporting-admin-reporting-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~7555cd6c"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~0dba832d"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-tag-~c2890075"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-user~1cb84dfc"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-admin-reporting-admin-reporting-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~521641bd"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~7555cd6c"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~37a1be1f"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~2fe1a6ce"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-publisher-reporting-publisher-reporting-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-admin-reporting-admin-reporting-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/admin-reporting/admin-reporting.module */
             "./src/app/modules/admin-reporting/admin-reporting.module.ts")).then(function (m) {
               return m.AdminReportingModule;
@@ -51343,6 +51408,21 @@
           },
           data: {
             permission: 'reportManage'
+          }
+        }, {
+          path: 'publisher-reporting',
+          canActivate: [_modules_auth_services_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]],
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | modules-publisher-reporting-publisher-reporting-module */
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~521641bd"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~37a1be1f"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~2fe1a6ce"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-publisher-reporting-publisher-reporting-module"), __webpack_require__.e("modules-publisher-reporting-publisher-reporting-module")]).then(__webpack_require__.bind(null,
+            /*! ../modules/publisher-reporting/publisher-reporting.module */
+            "./src/app/modules/publisher-reporting/publisher-reporting.module.ts")).then(function (m) {
+              return m.PublisherReportingModule;
+            });
+          },
+          data: {
+            permission: 'dashboard'
           }
         }, {
           path: 'live-traffic',
@@ -51365,7 +51445,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-user-management-user-management-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~7555cd6c"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~0dba832d"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-tag-~c2890075"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-user~1cb84dfc"), __webpack_require__.e("default~modules-material-material-module~modules-tag-management-tag-management-module~modules-user-m~49b1d748"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-user-management-user-management-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~521641bd"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~7555cd6c"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~37a1be1f"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~modules-material-material-module~modules-tag-management-tag-management-module~modules-user-m~49b1d748"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-user-management-user-management-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/user-management/user-management.module */
             "./src/app/modules/user-management/user-management.module.ts")).then(function (m) {
               return m.UserManagementModule;
@@ -51395,7 +51475,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-material-material-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~0dba832d"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-tag-~c2890075"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-user~1cb84dfc"), __webpack_require__.e("default~modules-material-material-module~modules-tag-management-tag-management-module~modules-user-m~49b1d748"), __webpack_require__.e("default~builder-builder-module~modules-material-material-module~modules-ngbootstrap-ngbootstrap-module"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("modules-material-material-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~521641bd"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~37a1be1f"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~2fe1a6ce"), __webpack_require__.e("default~modules-material-material-module~modules-tag-management-tag-management-module~modules-user-m~49b1d748"), __webpack_require__.e("default~builder-builder-module~modules-material-material-module~modules-ngbootstrap-ngbootstrap-module"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("modules-material-material-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/material/material.module */
             "./src/app/modules/material/material.module.ts")).then(function (m) {
               return m.MaterialModule;
@@ -51552,6 +51632,160 @@
 
       (function () {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](CompanyService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
+    "./src/app/shared/service/tags.service.ts":
+    /*!************************************************!*\
+      !*** ./src/app/shared/service/tags.service.ts ***!
+      \************************************************/
+
+    /*! exports provided: TagsService */
+
+    /***/
+    function srcAppSharedServiceTagsServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "TagsService", function () {
+        return TagsService;
+      });
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/environments/environment */
+      "./src/environments/environment.ts");
+
+      var API_TAGS_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl, "/tags");
+      var API_TEMPLATES_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl, "/templates");
+
+      var TagsService = /*#__PURE__*/function () {
+        function TagsService(http) {
+          _classCallCheck(this, TagsService);
+
+          this.http = http;
+        }
+
+        _createClass(TagsService, [{
+          key: "getAll",
+          value: function getAll() {
+            return this.http.get(API_TAGS_URL);
+          }
+        }, {
+          key: "add",
+          value: function add(tag) {
+            return this.http.post(API_TAGS_URL, tag);
+          }
+        }, {
+          key: "getChrome",
+          value: function getChrome() {
+            return this.http.get(API_TAGS_URL + "/chrome/browser");
+          }
+        }, {
+          key: "getFirefox",
+          value: function getFirefox() {
+            return this.http.get(API_TAGS_URL + "/firefox/browser");
+          }
+        }, {
+          key: "getAllTags",
+          value: function getAllTags() {
+            return this.http.get(API_TAGS_URL + '/');
+          }
+        }, {
+          key: "deleteTag",
+          value: function deleteTag(tagKey) {
+            return this.http["delete"](API_TAGS_URL + "/".concat(tagKey));
+          }
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(companyKey) {
+            return this.http.get(API_TAGS_URL + "/get_tag_company/".concat(companyKey));
+          }
+        }, {
+          key: "getOneTag",
+          value: function getOneTag(tag) {
+            return this.http.get(API_TAGS_URL + "/get_tag/".concat(tag));
+          }
+        }, {
+          key: "updateOneTag",
+          value: function updateOneTag(tag) {
+            return this.http.post(API_TAGS_URL + "/update/".concat(tag._key), tag);
+          }
+        }, {
+          key: "addTemplate",
+          value: function addTemplate(template) {
+            return this.http.post(API_TEMPLATES_URL, template);
+          }
+        }, {
+          key: "getAllTemplates",
+          value: function getAllTemplates() {
+            return this.http.get(API_TEMPLATES_URL);
+          }
+        }, {
+          key: "deleteTemplate",
+          value: function deleteTemplate(templateKey) {
+            return this.http["delete"](API_TEMPLATES_URL + "/".concat(templateKey));
+          }
+        }, {
+          key: "getOneTemplate",
+          value: function getOneTemplate(template) {
+            return this.http.get(API_TEMPLATES_URL + "/get_template/".concat(template));
+          }
+        }, {
+          key: "getUserTags",
+          value: function getUserTags(tags) {
+            var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpParams"]();
+            params = params.append('tags', JSON.stringify(tags));
+            return this.http.get(API_TAGS_URL + "/get_many_tags", {
+              params: params
+            });
+          }
+        }]);
+
+        return TagsService;
+      }();
+
+      TagsService.ɵfac = function TagsService_Factory(t) {
+        return new (t || TagsService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"]));
+      };
+
+      TagsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
+        token: TagsService,
+        factory: TagsService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](TagsService, [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
           args: [{
             providedIn: 'root'
