@@ -22045,7 +22045,7 @@
               _iterator5.f();
             }
 
-            this.perionCurrentSum = perionCurrent;
+            this.perionCurrentSum = Number.parseFloat(perionCurrent.toFixed(2));
 
             var _iterator6 = _createForOfIteratorHelper(this.perionChartData.revenueBeforePerDay),
                 _step6;
@@ -22061,7 +22061,7 @@
               _iterator6.f();
             }
 
-            this.perionBeforeSum = perionBefore; //lyon revenue
+            this.perionBeforeSum = Number.parseFloat(perionBefore.toFixed(2)); //lyon revenue
 
             var lyonCurrent = 0;
             var lyonBefore = 0;
@@ -22275,7 +22275,7 @@
               },
               xaxis: {
                 type: "datetime",
-                categories: datesOfRevenue,
+                categories: this.allDaysList,
                 labels: {
                   format: 'MM-dd'
                 }
@@ -22319,7 +22319,7 @@
               },
               xaxis: {
                 type: "datetime",
-                categories: lyonChartData[0].datesOfRevenue,
+                categories: this.allDaysList,
                 labels: {
                   format: 'MM-dd'
                 }

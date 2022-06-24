@@ -2540,11 +2540,11 @@ class MixedWidget1Component {
         for (var data of this.perionChartData.revenuePerDay) {
             perionCurrent += data;
         }
-        this.perionCurrentSum = perionCurrent;
+        this.perionCurrentSum = Number.parseFloat(perionCurrent.toFixed(2));
         for (var data of this.perionChartData.revenueBeforePerDay) {
             perionBefore += data;
         }
-        this.perionBeforeSum = perionBefore;
+        this.perionBeforeSum = Number.parseFloat(perionBefore.toFixed(2));
         //lyon revenue
         var lyonCurrent = 0;
         var lyonBefore = 0;
@@ -2735,7 +2735,7 @@ class MixedWidget1Component {
             },
             xaxis: {
                 type: "datetime",
-                categories: datesOfRevenue,
+                categories: this.allDaysList,
                 labels: {
                     format: 'MM-dd'
                 }
@@ -2780,7 +2780,7 @@ class MixedWidget1Component {
             },
             xaxis: {
                 type: "datetime",
-                categories: lyonChartData[0].datesOfRevenue,
+                categories: this.allDaysList,
                 labels: {
                     format: 'MM-dd'
                 }
