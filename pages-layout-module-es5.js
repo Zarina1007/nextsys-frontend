@@ -30966,10 +30966,10 @@
                         title: 'Publisher Reporting',
                         root: true,
                         icon: 'flaticon2-architecture-and-city',
-                        svg: './assets/media/svg/icons/Design/Layers.svg',
+                        svg: './assets/media/svg/icons/Shopping/Box1.svg',
                         page: '/publisher-reporting',
                         bullet: 'dot',
-                        permissionName: "dashboard"
+                        permissionName: "publiserReportingManage"
                       };
                       publisherMenu['submenu'] = submenuList;
                       menuConfig.items.push( //Publisher REPORTING
@@ -42535,7 +42535,6 @@
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
               }
 
-              console.log("============", data.permission);
               return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
             } // not logged in so redirect to login page with the return url
 
