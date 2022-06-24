@@ -3191,51 +3191,53 @@
                 for (_iterator.s(); !(_step = _iterator.n()).done;) {
                   var tagL = _step.value;
 
-                  var _iterator2 = _createForOfIteratorHelper(tagL.tag.subids),
-                      _step2;
+                  if (tagL.tag.advertiser == "lyons") {
+                    var _iterator2 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step2;
 
-                  try {
-                    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-                      var tagSub = _step2.value;
+                    try {
+                      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                        var tagSub = _step2.value;
 
-                      if (tagSub.filterTag == "Contains") {
-                        allLyonStat = allLyonStat.concat(_this.allstat.filter(function (stat) {
-                          return stat.subid.includes(tagSub.subid);
-                        }));
-                        allLyonStat.map(function (stat) {
-                          stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                          stat.tagname = tagL.tag.name;
-                        });
-                      } else if (tagSub.filterTag == "StartsWith") {
-                        allLyonStat = allLyonStat.concat(_this.allstat.filter(function (stat) {
-                          return stat.subid.startsWith(tagSub.subid);
-                        }));
-                        allLyonStat.map(function (stat) {
-                          stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                          stat.tagname = tagL.tag.name;
-                        });
-                      } else if (tagSub.filterTag == "EndsWith") {
-                        allLyonStat = allLyonStat.concat(_this.allstat.filter(function (stat) {
-                          return stat.subid.endsWith(tagSub.subid);
-                        }));
-                        allLyonStat.map(function (stat) {
-                          stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                          stat.tagname = tagL.tag.name;
-                        });
-                      } else if (tagSub.filterTag == "ExactValue") {
-                        allLyonStat = allLyonStat.concat(_this.allstat.filter(function (stat) {
-                          return stat.subid == tagSub.subid;
-                        }));
-                        allLyonStat.map(function (stat) {
-                          stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                          stat.tagname = tagL.tag.name;
-                        });
+                        if (tagSub.filterTag == "Contains") {
+                          allLyonStat = allLyonStat.concat(_this.allstat.filter(function (stat) {
+                            return stat.subid.includes(tagSub.subid);
+                          }));
+                          allLyonStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        } else if (tagSub.filterTag == "StartsWith") {
+                          allLyonStat = allLyonStat.concat(_this.allstat.filter(function (stat) {
+                            return stat.subid.startsWith(tagSub.subid);
+                          }));
+                          allLyonStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        } else if (tagSub.filterTag == "EndsWith") {
+                          allLyonStat = allLyonStat.concat(_this.allstat.filter(function (stat) {
+                            return stat.subid.endsWith(tagSub.subid);
+                          }));
+                          allLyonStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        } else if (tagSub.filterTag == "ExactValue") {
+                          allLyonStat = allLyonStat.concat(_this.allstat.filter(function (stat) {
+                            return stat.subid == tagSub.subid;
+                          }));
+                          allLyonStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        }
                       }
+                    } catch (err) {
+                      _iterator2.e(err);
+                    } finally {
+                      _iterator2.f();
                     }
-                  } catch (err) {
-                    _iterator2.e(err);
-                  } finally {
-                    _iterator2.f();
                   }
                 } //duplicated remove
 

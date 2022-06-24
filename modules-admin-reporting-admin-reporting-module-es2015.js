@@ -1716,34 +1716,36 @@ class LyonsComponent {
             this.allstat = response;
             var allLyonStat = [];
             for (var tagL of this.tagList) {
-                for (var tagSub of tagL.tag.subids) {
-                    if (tagSub.filterTag == "Contains") {
-                        allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid.includes(tagSub.subid)));
-                        allLyonStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "StartsWith") {
-                        allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid.startsWith(tagSub.subid)));
-                        allLyonStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "EndsWith") {
-                        allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid.endsWith(tagSub.subid)));
-                        allLyonStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "ExactValue") {
-                        allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid == tagSub.subid));
-                        allLyonStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
+                if (tagL.tag.advertiser == "lyons") {
+                    for (var tagSub of tagL.tag.subids) {
+                        if (tagSub.filterTag == "Contains") {
+                            allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid.includes(tagSub.subid)));
+                            allLyonStat.map(stat => {
+                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                                stat.tagname = tagL.tag.name;
+                            });
+                        }
+                        else if (tagSub.filterTag == "StartsWith") {
+                            allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid.startsWith(tagSub.subid)));
+                            allLyonStat.map(stat => {
+                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                                stat.tagname = tagL.tag.name;
+                            });
+                        }
+                        else if (tagSub.filterTag == "EndsWith") {
+                            allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid.endsWith(tagSub.subid)));
+                            allLyonStat.map(stat => {
+                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                                stat.tagname = tagL.tag.name;
+                            });
+                        }
+                        else if (tagSub.filterTag == "ExactValue") {
+                            allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid == tagSub.subid));
+                            allLyonStat.map(stat => {
+                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                                stat.tagname = tagL.tag.name;
+                            });
+                        }
                     }
                 }
             }
