@@ -738,7 +738,7 @@ function Dashboard1Component_app_mixed_widget1_2_Template(rf, ctx) { if (rf & 1)
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-mixed-widget1", 10);
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("tagChartData", ctx_r0.tagChartData);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ChartData", ctx_r0.ChartData);
 } }
 class Dashboard1Component {
     constructor(perionService, userService, cdr, lyonService, tagService) {
@@ -759,7 +759,7 @@ class Dashboard1Component {
             this.tagList = yield this.getCompanyTags(this.selectedCompany);
             this.perionChartData = yield this.getPerionChart(this.selectedCompany);
             this.lyonChartData = yield this.getLyonChart(this.selectedCompany);
-            this.tagChartData = this.lyonChartData.concat(this.perionChartData);
+            this.ChartData = this.perionChartData.concat(this.lyonChartData);
             this.cdr.markForCheck();
         });
     }
@@ -792,85 +792,85 @@ class Dashboard1Component {
                             chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid == tagSub['subid']));
                         }
                     }
-                    //duplicated remove
-                    let filter_data = chartAllPerionStat.filter((obj, pos, arr) => {
-                        return arr
-                            .map(mapObj => mapObj._id)
-                            .indexOf(obj._id) == pos;
-                    });
-                    var helperChart = {};
-                    filter_data.map(f => {
-                        f.revenue = parseFloat(f.revenue);
-                        f.ctr = parseFloat(f.ctr);
-                        f.biddedCtr = parseFloat(f.biddedCTR);
-                    });
-                    var resultChart = filter_data.reduce(function (r, o) {
-                        var key = o.date;
-                        if (!helperChart[key]) {
-                            helperChart[key] = Object.assign({}, o); // create a copy of o
-                            r.push(helperChart[key]);
-                        }
-                        else {
-                            helperChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-                            if (o.revenue) {
-                                helperChart[key].revenue += o.revenue;
-                            }
-                        }
-                        return r;
-                    }, []);
-                    //duplicated remove Before Month Data
-                    let filter_before_data = chartAllBeforePerionStat.filter((obj, pos, arr) => {
-                        return arr
-                            .map(mapObj => mapObj._id)
-                            .indexOf(obj._id) == pos;
-                    });
-                    var helperBeforeChart = {};
-                    filter_before_data.map(f => {
-                        f.revenue = parseFloat(f.revenue);
-                        f.ctr = parseFloat(f.ctr);
-                        f.biddedCtr = parseFloat(f.biddedCTR);
-                    });
-                    var resultBeforeChart = filter_before_data.reduce(function (r, o) {
-                        var key = o.date;
-                        if (!helperBeforeChart[key]) {
-                            helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-                            r.push(helperBeforeChart[key]);
-                        }
-                        else {
-                            helperBeforeChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-                            if (o.revenue) {
-                                helperBeforeChart[key].revenue += o.revenue;
-                            }
-                        }
-                        return r;
-                    }, []);
-                    var revenuePerDayVal = [];
-                    var datesOfRevenueVal = [];
-                    var revenuePerDayBeforeVal = [];
-                    var datesOfRevenueBeforeVal = [];
-                    var chartPerionDataValue = {};
-                    var revenueCurrentSum = 0;
-                    var revenueBeforeSum = 0;
-                    for (var resVal of resultChart) {
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
-                    }
-                    for (var resBeforeVal of resultBeforeChart) {
-                        revenueBeforeSum += resBeforeVal.revenue;
-                        revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                        datesOfRevenueBeforeVal.push(resBeforeVal.date);
-                    }
-                    chartPerionDataValue['revenuePerDay'] = revenuePerDayVal;
-                    chartPerionDataValue['datesOfRevenue'] = datesOfRevenueVal;
-                    chartPerionDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-                    chartPerionDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-                    chartPerionDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-                    chartPerionDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-                    chartPerionDataValue['tagName'] = tagL.tag.name;
-                    chartPerionMetric.push(chartPerionDataValue);
                 }
             }
+            //duplicated remove
+            let filter_data = chartAllPerionStat.filter((obj, pos, arr) => {
+                return arr
+                    .map(mapObj => mapObj._id)
+                    .indexOf(obj._id) == pos;
+            });
+            var helperChart = {};
+            filter_data.map(f => {
+                f.revenue = parseFloat(f.revenue);
+                f.ctr = parseFloat(f.ctr);
+                f.biddedCtr = parseFloat(f.biddedCTR);
+            });
+            var resultChart = filter_data.reduce(function (r, o) {
+                var key = o.date;
+                if (!helperChart[key]) {
+                    helperChart[key] = Object.assign({}, o); // create a copy of o
+                    r.push(helperChart[key]);
+                }
+                else {
+                    helperChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
+                    if (o.revenue) {
+                        helperChart[key].revenue += o.revenue;
+                    }
+                }
+                return r;
+            }, []);
+            //duplicated remove Before Month Data
+            let filter_before_data = chartAllBeforePerionStat.filter((obj, pos, arr) => {
+                return arr
+                    .map(mapObj => mapObj._id)
+                    .indexOf(obj._id) == pos;
+            });
+            var helperBeforeChart = {};
+            filter_before_data.map(f => {
+                f.revenue = parseFloat(f.revenue);
+                f.ctr = parseFloat(f.ctr);
+                f.biddedCtr = parseFloat(f.biddedCTR);
+            });
+            var resultBeforeChart = filter_before_data.reduce(function (r, o) {
+                var key = o.date;
+                if (!helperBeforeChart[key]) {
+                    helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
+                    r.push(helperBeforeChart[key]);
+                }
+                else {
+                    helperBeforeChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
+                    if (o.revenue) {
+                        helperBeforeChart[key].revenue += o.revenue;
+                    }
+                }
+                return r;
+            }, []);
+            var revenuePerDayVal = [];
+            var datesOfRevenueVal = [];
+            var revenuePerDayBeforeVal = [];
+            var datesOfRevenueBeforeVal = [];
+            var chartPerionDataValue = {};
+            var revenueCurrentSum = 0;
+            var revenueBeforeSum = 0;
+            for (var resVal of resultChart) {
+                revenueCurrentSum += resVal.revenue;
+                revenuePerDayVal.push(resVal.revenue);
+                datesOfRevenueVal.push(resVal.date);
+            }
+            for (var resBeforeVal of resultBeforeChart) {
+                revenueBeforeSum += resBeforeVal.revenue;
+                revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                datesOfRevenueBeforeVal.push(resBeforeVal.date);
+            }
+            chartPerionDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartPerionDataValue['datesOfRevenue'] = datesOfRevenueVal;
+            chartPerionDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+            chartPerionDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+            chartPerionDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+            chartPerionDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+            chartPerionDataValue['statType'] = "Perion";
+            chartPerionMetric.push(chartPerionDataValue);
             return chartPerionMetric;
         })
             .catch((error) => {
@@ -881,9 +881,9 @@ class Dashboard1Component {
         return this.lyonService.getAllDashboardStats().toPromise().then((response) => {
             this.allLyonChart = response[0];
             var chartLyonMetric = [];
+            var chartAllLyonStat = [];
+            var chartAllBeforeLyonStat = [];
             for (var tagL of this.tagList) {
-                var chartAllLyonStat = [];
-                var chartAllBeforeLyonStat = [];
                 if (tagL.tag.advertiser == 'lyons') {
                     for (var tagSub of tagL.tag.subids) {
                         if (tagSub['filterTag'] == "Contains") {
@@ -903,85 +903,85 @@ class Dashboard1Component {
                             chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid == tagSub['subid']));
                         }
                     }
-                    //duplicated remove
-                    let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
-                        return arr
-                            .map(mapObj => mapObj._id)
-                            .indexOf(obj._id) == pos;
-                    });
-                    var helperChart = {};
-                    filter_data.map(f => {
-                        f.revenue = parseFloat(f.revenue);
-                        f.ctr = parseFloat(f.ctr);
-                        f.biddedCtr = parseFloat(f.biddedCTR);
-                    });
-                    var resultChart = filter_data.reduce(function (r, o) {
-                        var key = o.rptDate;
-                        if (!helperChart[key]) {
-                            helperChart[key] = Object.assign({}, o); // create a copy of o
-                            r.push(helperChart[key]);
-                        }
-                        else {
-                            helperChart[key].searches += parseInt(o.searches);
-                            if (o.revenue) {
-                                helperChart[key].revenue += o.revenue;
-                            }
-                        }
-                        return r;
-                    }, []);
-                    //duplicated remove Before Month Data
-                    let filter_before_data = chartAllBeforeLyonStat.filter((obj, pos, arr) => {
-                        return arr
-                            .map(mapObj => mapObj._id)
-                            .indexOf(obj._id) == pos;
-                    });
-                    var helperBeforeChart = {};
-                    filter_before_data.map(f => {
-                        f.revenue = parseFloat(f.revenue);
-                        f.ctr = parseFloat(f.ctr);
-                        f.biddedCtr = parseFloat(f.biddedCTR);
-                    });
-                    var resultBeforeChart = filter_before_data.reduce(function (r, o) {
-                        var key = o.rptDate;
-                        if (!helperBeforeChart[key]) {
-                            helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-                            r.push(helperBeforeChart[key]);
-                        }
-                        else {
-                            helperBeforeChart[key].searches += parseInt(o.searches);
-                            if (o.revenue) {
-                                helperBeforeChart[key].revenue += o.revenue;
-                            }
-                        }
-                        return r;
-                    }, []);
-                    var revenuePerDayVal = [];
-                    var datesOfRevenueVal = [];
-                    var revenuePerDayBeforeVal = [];
-                    var datesOfRevenueBeforeVal = [];
-                    var chartLyonDataValue = {};
-                    var revenueCurrentSum = 0;
-                    var revenueBeforeSum = 0;
-                    for (var resVal of resultChart) {
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.rptDate);
-                    }
-                    for (var resBeforeVal of resultBeforeChart) {
-                        revenueBeforeSum += resBeforeVal.revenue;
-                        revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                        datesOfRevenueBeforeVal.push(resBeforeVal.rptDate);
-                    }
-                    chartLyonDataValue['revenuePerDay'] = revenuePerDayVal;
-                    chartLyonDataValue['datesOfRevenue'] = datesOfRevenueVal;
-                    chartLyonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-                    chartLyonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-                    chartLyonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-                    chartLyonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-                    chartLyonDataValue['tagName'] = tagL.tag.name;
-                    chartLyonMetric.push(chartLyonDataValue);
                 }
             }
+            //duplicated remove
+            let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
+                return arr
+                    .map(mapObj => mapObj._id)
+                    .indexOf(obj._id) == pos;
+            });
+            var helperChart = {};
+            filter_data.map(f => {
+                f.revenue = parseFloat(f.revenue);
+                f.ctr = parseFloat(f.ctr);
+                f.biddedCtr = parseFloat(f.biddedCTR);
+            });
+            var resultChart = filter_data.reduce(function (r, o) {
+                var key = o.rptDate;
+                if (!helperChart[key]) {
+                    helperChart[key] = Object.assign({}, o); // create a copy of o
+                    r.push(helperChart[key]);
+                }
+                else {
+                    helperChart[key].searches += parseInt(o.searches);
+                    if (o.revenue) {
+                        helperChart[key].revenue += o.revenue;
+                    }
+                }
+                return r;
+            }, []);
+            //duplicated remove Before Month Data
+            let filter_before_data = chartAllBeforeLyonStat.filter((obj, pos, arr) => {
+                return arr
+                    .map(mapObj => mapObj._id)
+                    .indexOf(obj._id) == pos;
+            });
+            var helperBeforeChart = {};
+            filter_before_data.map(f => {
+                f.revenue = parseFloat(f.revenue);
+                f.ctr = parseFloat(f.ctr);
+                f.biddedCtr = parseFloat(f.biddedCTR);
+            });
+            var resultBeforeChart = filter_before_data.reduce(function (r, o) {
+                var key = o.rptDate;
+                if (!helperBeforeChart[key]) {
+                    helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
+                    r.push(helperBeforeChart[key]);
+                }
+                else {
+                    helperBeforeChart[key].searches += parseInt(o.searches);
+                    if (o.revenue) {
+                        helperBeforeChart[key].revenue += o.revenue;
+                    }
+                }
+                return r;
+            }, []);
+            var revenuePerDayVal = [];
+            var datesOfRevenueVal = [];
+            var revenuePerDayBeforeVal = [];
+            var datesOfRevenueBeforeVal = [];
+            var chartLyonDataValue = {};
+            var revenueCurrentSum = 0;
+            var revenueBeforeSum = 0;
+            for (var resVal of resultChart) {
+                revenueCurrentSum += resVal.revenue;
+                revenuePerDayVal.push(resVal.revenue);
+                datesOfRevenueVal.push(resVal.rptDate);
+            }
+            for (var resBeforeVal of resultBeforeChart) {
+                revenueBeforeSum += resBeforeVal.revenue;
+                revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                datesOfRevenueBeforeVal.push(resBeforeVal.rptDate);
+            }
+            chartLyonDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartLyonDataValue['datesOfRevenue'] = datesOfRevenueVal;
+            chartLyonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+            chartLyonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+            chartLyonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+            chartLyonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+            chartLyonDataValue['statType'] = "Lyons";
+            chartLyonMetric.push(chartLyonDataValue);
             return chartLyonMetric;
         })
             .catch((error) => {
@@ -1008,7 +1008,7 @@ class Dashboard1Component {
     }
 }
 Dashboard1Component.ɵfac = function Dashboard1Component_Factory(t) { return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_2__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_4__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_5__["TagManagementService"])); };
-Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: Dashboard1Component, selectors: [["app-dashboard1"]], decls: 24, vars: 1, consts: [[1, "row"], [1, "col-lg-12", "col-xxl-12"], [3, "tagChartData", 4, "ngIf"], [1, "col-lg-6", "col-xxl-4"], [1, "col-lg-6", "col-xxl-4", "order-1", "order-xxl-1"], [1, "col-xxl-8", "order-2", "order-xxl-1"], [1, "col-lg-6", "col-xxl-4", "order-1", "order-xxl-2"], [1, "col-lg-12", "col-xxl-4", "order-1", "order-xxl-2"], [1, "col-lg-4"], [1, "col-lg-8"], [3, "tagChartData"]], template: function Dashboard1Component_Template(rf, ctx) { if (rf & 1) {
+Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: Dashboard1Component, selectors: [["app-dashboard1"]], decls: 24, vars: 1, consts: [[1, "row"], [1, "col-lg-12", "col-xxl-12"], [3, "ChartData", 4, "ngIf"], [1, "col-lg-6", "col-xxl-4"], [1, "col-lg-6", "col-xxl-4", "order-1", "order-xxl-1"], [1, "col-xxl-8", "order-2", "order-xxl-1"], [1, "col-lg-6", "col-xxl-4", "order-1", "order-xxl-2"], [1, "col-lg-12", "col-xxl-4", "order-1", "order-xxl-2"], [1, "col-lg-4"], [1, "col-lg-8"], [3, "ChartData"]], template: function Dashboard1Component_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, Dashboard1Component_app_mixed_widget1_2_Template, 1, 1, "app-mixed-widget1", 2);
@@ -1048,7 +1048,7 @@ Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefi
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.tagChartData);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.ChartData);
     } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_7__["ListsWidget9Component"], _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_8__["StatsWidget11Component"], _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_9__["StatsWidget12Component"], _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_10__["ListsWidget1Component"], _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_11__["AdvanceTablesWidget2Component"], _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_12__["ListsWidget3Component"], _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_13__["ListsWidget4Component"], _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_14__["ListsWidget8Component"], _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_15__["MixedWidget14Component"], _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_16__["AdvanceTablesWidget4Component"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_17__["MixedWidget1Component"]], encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](Dashboard1Component, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
@@ -2640,7 +2640,7 @@ function MixedWidget1Component_div_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const chartTagOption_r1 = ctx.$implicit;
+    const chartSubOption_r1 = ctx.$implicit;
     const index_r2 = ctx.index;
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", index_r2 / 2 == 0 ? "bg-light-danger" : "bg-light-success");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
@@ -2648,17 +2648,17 @@ function MixedWidget1Component_div_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", index_r2 / 2 == 0 ? "text-success" : "text-danger");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", chartTagOption_r1.tagname, " Stats ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", chartSubOption_r1.statType, " Stats ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("$", chartTagOption_r1.revenueCurrentSum, " vs $", chartTagOption_r1.revenueBeforeSum, "");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("$", chartSubOption_r1.revenueCurrentSum, " vs $", chartSubOption_r1.revenueBeforeSum, "");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("series", chartTagOption_r1.series)("chart", chartTagOption_r1.chart)("xaxis", chartTagOption_r1.xaxis)("yaxis", chartTagOption_r1.yaxis)("stroke", chartTagOption_r1.stroke)("tooltip", chartTagOption_r1.tooltip)("dataLabels", chartTagOption_r1.dataLabels);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("series", chartSubOption_r1.series)("chart", chartSubOption_r1.chart)("xaxis", chartSubOption_r1.xaxis)("yaxis", chartSubOption_r1.yaxis)("stroke", chartSubOption_r1.stroke)("tooltip", chartSubOption_r1.tooltip)("dataLabels", chartSubOption_r1.dataLabels);
 } }
 class MixedWidget1Component {
     constructor(layout) {
         this.layout = layout;
         this.chartOptions = {};
-        this.chartTagOptions = [];
+        this.chartSubOptions = [];
         this.chartSeries = [];
         this.fontFamily = '';
         this.colorsGrayGray500 = '';
@@ -2676,16 +2676,16 @@ class MixedWidget1Component {
     }
     ngOnInit() {
         this.allDaysList = this.getCurrentMontDateList();
-        this.tagChartData = this.getTagChartData(this.tagChartData);
-        for (var tagData of this.tagChartData) {
+        this.ChartData = this.getChartData(this.ChartData);
+        for (var chart of this.ChartData) {
             this.chartSeries.push({
-                name: tagData.tagName,
-                data: tagData.revenuePerDay
+                name: chart.statType,
+                data: chart.revenuePerDay
             });
         }
         this.chartOptions = this.getChartOptions(this.chartSeries);
-        for (var tagChart of this.tagChartData) {
-            this.chartTagOptions.push(this.getLyonChartOptions(tagChart));
+        for (var subChart of this.ChartData) {
+            this.chartSubOptions.push(this.getSubChartOptions(subChart));
         }
     }
     getCurrentMontDateList() {
@@ -2824,16 +2824,16 @@ class MixedWidget1Component {
             },
         };
     }
-    getLyonChartOptions(tagChart) {
+    getSubChartOptions(subChart) {
         return {
             series: [
                 {
                     name: "current month",
-                    data: tagChart.revenuePerDay
+                    data: subChart.revenuePerDay
                 },
                 {
                     name: "before month",
-                    data: tagChart.revenueBeforePerDay
+                    data: subChart.revenueBeforePerDay
                 }
             ],
             chart: {
@@ -2873,12 +2873,12 @@ class MixedWidget1Component {
                     }
                 }
             },
-            tagname: tagChart.tagName,
-            revenueBeforeSum: tagChart.revenueBeforeSum,
-            revenueCurrentSum: tagChart.revenueCurrentSum,
+            statType: subChart.statType,
+            revenueBeforeSum: subChart.revenueBeforeSum,
+            revenueCurrentSum: subChart.revenueCurrentSum,
         };
     }
-    getTagChartData(perionChartData) {
+    getChartData(perionChartData) {
         // our logic to group the posts by category
         if (!perionChartData)
             return;
@@ -2887,7 +2887,7 @@ class MixedWidget1Component {
     }
 }
 MixedWidget1Component.ɵfac = function MixedWidget1Component_Factory(t) { return new (t || MixedWidget1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core__WEBPACK_IMPORTED_MODULE_1__["LayoutService"])); };
-MixedWidget1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MixedWidget1Component, selectors: [["app-mixed-widget1"]], inputs: { tagChartData: "tagChartData" }, decls: 25, vars: 18, consts: [[1, "card", "card-custom", "bg-gray-100", "card-stretch", "gutter-b"], [1, "card-header", "border-0", "bg-light-danger", "py-5"], [1, "card-title", "font-weight-bolder", "text-dark"], [1, "card-toolbar"], ["ngbDropdown", "", "placement", "bottom-right", "title", "Quick actions", 1, "dropdown", "dropdown-inline"], ["ngbDropdownToggle", "", 1, "btn", "btn-transparent-primary", "btn-sm", "font-weight-bolder", "dropdown-toggle", "px-5", "dropdown-toggle", "btn", "btn-transparent"], ["ngbDropdownMenu", "", 1, "dropdown-menu", "dropdown-menu-sm", "dropdown-menu-right"], [1, "card-body", "p-0", "position-relative", "overflow-hidden"], ["id", "kt_mixed_widget_1_chart", 1, "card-rounded-bottom", "bg-light-danger"], [3, "series", "chart", "xaxis", "yaxis", "dataLabels", "stroke", "legend", "fill", "states", "tooltip", "colors", "markers", "plotOptions"], [1, "card-spacer"], [1, "row", "m-0"], ["class", "col px-6 py-8 rounded-xl mr-7 mb-7", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "col", "bg-light-primary", "px-6", "py-8", "rounded-xl", "mr-7", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-primary", "d-block", "my-2", 3, "inlineSVG"], ["href", "/user-management/publisher-users", 1, "text-primary", "font-weight-bold", "font-size-h6", "mt-2"], [1, "col", "bg-light-success", "px-6", "py-8", "rounded-xl", "mr-7", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-success", "d-block", "my-2", 3, "inlineSVG"], ["href", "#", 1, "text-success", "font-weight-bold", "font-size-h6", "mt-2"], [1, "col", "px-6", "py-8", "rounded-xl", "mr-7", "mb-7", 3, "ngClass"], [1, "svg-icon", "svg-icon-3x", "svg-icon-danger", "d-block", "my-2", 3, "inlineSVG"], ["href", "javascript:void(0);", 1, "font-weight-bold", "font-size-h6", "mt-2", 3, "ngClass"], [1, "pt-3"], [2, "font-weight", "500"], [3, "series", "chart", "xaxis", "yaxis", "stroke", "tooltip", "dataLabels"]], template: function MixedWidget1Component_Template(rf, ctx) { if (rf & 1) {
+MixedWidget1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MixedWidget1Component, selectors: [["app-mixed-widget1"]], inputs: { ChartData: "ChartData" }, decls: 25, vars: 18, consts: [[1, "card", "card-custom", "bg-gray-100", "card-stretch", "gutter-b"], [1, "card-header", "border-0", "bg-light-danger", "py-5"], [1, "card-title", "font-weight-bolder", "text-dark"], [1, "card-toolbar"], ["ngbDropdown", "", "placement", "bottom-right", "title", "Quick actions", 1, "dropdown", "dropdown-inline"], ["ngbDropdownToggle", "", 1, "btn", "btn-transparent-primary", "btn-sm", "font-weight-bolder", "dropdown-toggle", "px-5", "dropdown-toggle", "btn", "btn-transparent"], ["ngbDropdownMenu", "", 1, "dropdown-menu", "dropdown-menu-sm", "dropdown-menu-right"], [1, "card-body", "p-0", "position-relative", "overflow-hidden"], ["id", "kt_mixed_widget_1_chart", 1, "card-rounded-bottom", "bg-light-danger"], [3, "series", "chart", "xaxis", "yaxis", "dataLabels", "stroke", "legend", "fill", "states", "tooltip", "colors", "markers", "plotOptions"], [1, "card-spacer"], [1, "row", "m-0"], ["class", "col px-6 py-8 rounded-xl mr-7 mb-7", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "col", "bg-light-primary", "px-6", "py-8", "rounded-xl", "mr-7", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-primary", "d-block", "my-2", 3, "inlineSVG"], ["href", "/user-management/publisher-users", 1, "text-primary", "font-weight-bold", "font-size-h6", "mt-2"], [1, "col", "bg-light-success", "px-6", "py-8", "rounded-xl", "mr-7", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-success", "d-block", "my-2", 3, "inlineSVG"], ["href", "#", 1, "text-success", "font-weight-bold", "font-size-h6", "mt-2"], [1, "col", "px-6", "py-8", "rounded-xl", "mr-7", "mb-7", 3, "ngClass"], [1, "svg-icon", "svg-icon-3x", "svg-icon-danger", "d-block", "my-2", 3, "inlineSVG"], ["href", "javascript:void(0);", 1, "font-weight-bold", "font-size-h6", "mt-2", 3, "ngClass"], [1, "pt-3"], [2, "font-weight", "500"], [3, "series", "chart", "xaxis", "yaxis", "stroke", "tooltip", "dataLabels"]], template: function MixedWidget1Component_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h3", 2);
@@ -2935,7 +2935,7 @@ MixedWidget1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("series", ctx.chartOptions.series)("chart", ctx.chartOptions.chart)("xaxis", ctx.chartOptions.xaxis)("yaxis", ctx.chartOptions.yaxis)("dataLabels", ctx.chartOptions.dataLabels)("stroke", ctx.chartOptions.stroke)("legend", ctx.chartOptions.legend)("fill", ctx.chartOptions.fill)("states", ctx.chartOptions.states)("tooltip", ctx.chartOptions.tooltip)("colors", ctx.chartOptions.colors)("markers", ctx.chartOptions.markers)("plotOptions", ctx.chartOptions.plotOptions);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.chartTagOptions);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.chartSubOptions);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/Communication/Add-user.svg");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
@@ -2947,7 +2947,7 @@ MixedWidget1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
                 selector: 'app-mixed-widget1',
                 templateUrl: './mixed-widget1.component.html',
             }]
-    }], function () { return [{ type: _core__WEBPACK_IMPORTED_MODULE_1__["LayoutService"] }]; }, { tagChartData: [{
+    }], function () { return [{ type: _core__WEBPACK_IMPORTED_MODULE_1__["LayoutService"] }]; }, { ChartData: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
         }] }); })();
 
@@ -3908,6 +3908,11 @@ class PerionService {
     }
     getAllPerionStats(company, startDate, endDate) {
         return this.http.get(API_COMPANY_URL + '/', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getPerTagPerionStats(company, startDate, endDate) {
+        return this.http.get(API_COMPANY_URL + '/per-tag-stat', {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }

@@ -251,6 +251,12 @@
       var src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/shared/modules/shared.module */
       "./src/app/shared/modules/shared.module.ts");
+      /* harmony import */
+
+
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @swimlane/ngx-datatable */
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
 
       var PublisherReportingModule = function PublisherReportingModule() {
         _classCallCheck(this, PublisherReportingModule);
@@ -263,13 +269,13 @@
         factory: function PublisherReportingModule_Factory(t) {
           return new (t || PublisherReportingModule)();
         },
-        imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _publisher_reporting_routing_module__WEBPACK_IMPORTED_MODULE_3__["PublisherReportingRoutingModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_6__["SharedModule"]]]
+        imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _publisher_reporting_routing_module__WEBPACK_IMPORTED_MODULE_3__["PublisherReportingRoutingModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_6__["SharedModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["NgxDatatableModule"]]]
       });
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](PublisherReportingModule, {
           declarations: [_publisher_publisher_component__WEBPACK_IMPORTED_MODULE_4__["PublisherComponent"], _publisher_reporting_component__WEBPACK_IMPORTED_MODULE_5__["PublisherReportingComponent"]],
-          imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _publisher_reporting_routing_module__WEBPACK_IMPORTED_MODULE_3__["PublisherReportingRoutingModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_6__["SharedModule"]]
+          imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _publisher_reporting_routing_module__WEBPACK_IMPORTED_MODULE_3__["PublisherReportingRoutingModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_6__["SharedModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["NgxDatatableModule"]]
         });
       })();
       /*@__PURE__*/
@@ -280,7 +286,7 @@
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
             declarations: [_publisher_publisher_component__WEBPACK_IMPORTED_MODULE_4__["PublisherComponent"], _publisher_reporting_component__WEBPACK_IMPORTED_MODULE_5__["PublisherReportingComponent"]],
-            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _publisher_reporting_routing_module__WEBPACK_IMPORTED_MODULE_3__["PublisherReportingRoutingModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_6__["SharedModule"]],
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _publisher_reporting_routing_module__WEBPACK_IMPORTED_MODULE_3__["PublisherReportingRoutingModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_6__["SharedModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["NgxDatatableModule"]],
             entryComponents: []
           }]
         }], null, null);
@@ -365,19 +371,229 @@
       /* harmony import */
 
 
-      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! @swimlane/ngx-datatable */
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
       "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
 
+      var _c0 = ["expandableTable"];
+
       function PublisherComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 16);
         }
 
         if (rf & 2) {
           var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("chartData", ctx_r0.chartData);
+        }
+      }
+
+      function PublisherComponent_ng_template_6_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Address");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Test");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function PublisherComponent_ng_template_8_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r22 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PublisherComponent_ng_template_8_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r22);
+
+            var row_r19 = ctx.row;
+
+            var ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r21.toggleExpandRow(row_r19);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var expanded_r20 = ctx.expanded;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r20)("datatable-icon-down", expanded_r20);
+        }
+      }
+
+      function PublisherComponent_ng_template_10_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
+        }
+      }
+
+      function PublisherComponent_ng_template_11_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r24 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r24));
+        }
+      }
+
+      function PublisherComponent_ng_template_13_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
+        }
+      }
+
+      function PublisherComponent_ng_template_14_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r26 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r26);
+        }
+      }
+
+      function PublisherComponent_ng_template_16_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Tag ");
+        }
+      }
+
+      function PublisherComponent_ng_template_17_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r28 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r28);
+        }
+      }
+
+      function PublisherComponent_ng_template_19_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
+        }
+      }
+
+      function PublisherComponent_ng_template_20_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r30 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r30);
+        }
+      }
+
+      function PublisherComponent_ng_template_22_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Spilt ");
+        }
+      }
+
+      function PublisherComponent_ng_template_23_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r32 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r32) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+        }
+      }
+
+      function PublisherComponent_ng_template_25_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function PublisherComponent_ng_template_26_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r34 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r34, "USD"));
         }
       }
 
@@ -396,6 +612,7 @@
             startDate: '',
             endDate: ''
           };
+          this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
         }
 
         _createClass(PublisherComponent, [{
@@ -414,43 +631,55 @@
                             while (1) {
                               switch (_context.prev = _context.next) {
                                 case 0:
-                                  _context.next = 2;
+                                  //console.log("routeParams===>", routeParams)
+                                  this.statData = [];
+                                  _context.next = 3;
                                   return this.getTagInformation(routeParams.tagId);
 
-                                case 2:
+                                case 3:
                                   this.tagRows = _context.sent;
                                   this.selectedAdvertiser = this.tagRows.advertiser;
                                   this.selectedCompany = this.tagRows.company;
 
                                   if (!(this.selectedAdvertiser == "lyons")) {
-                                    _context.next = 11;
-                                    break;
-                                  }
-
-                                  _context.next = 8;
-                                  return this.getLyonChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
-
-                                case 8:
-                                  this.chartData = _context.sent;
-                                  _context.next = 15;
-                                  break;
-
-                                case 11:
-                                  if (!(this.selectedAdvertiser == "perion")) {
                                     _context.next = 15;
                                     break;
                                   }
 
-                                  _context.next = 14;
-                                  return this.getPerionChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                                  _context.next = 9;
+                                  return this.getLyonChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                                case 14:
+                                case 9:
                                   this.chartData = _context.sent;
+                                  _context.next = 12;
+                                  return this.getAllLyonStats(this.range.startDate, this.range.endDate, this.tagRows);
+
+                                case 12:
+                                  this.statData = _context.sent;
+                                  _context.next = 22;
+                                  break;
 
                                 case 15:
+                                  if (!(this.selectedAdvertiser == "perion")) {
+                                    _context.next = 22;
+                                    break;
+                                  }
+
+                                  _context.next = 18;
+                                  return this.getPerionChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                                case 18:
+                                  this.chartData = _context.sent;
+                                  _context.next = 21;
+                                  return this.getAllPerionStats(this.range.startDate, this.range.endDate, this.tagRows);
+
+                                case 21:
+                                  this.statData = _context.sent;
+
+                                case 22:
                                   this.refreshTable();
 
-                                case 16:
+                                case 23:
                                 case "end":
                                   return _context.stop();
                               }
@@ -466,6 +695,23 @@
                 }
               }, _callee2, this);
             }));
+          } //Gets the Selected Company from Local Storage
+
+        }, {
+          key: "getSelectedCompanyFromLocalStorage",
+          value: function getSelectedCompanyFromLocalStorage() {
+            return this.userService.getSelectedCompanyFromLocalStorage();
+          }
+        }, {
+          key: "toggleExpandRow",
+          value: function toggleExpandRow(row) {
+            console.log('Toggled Expand Row!', row);
+            this.table.rowDetail.toggleExpandRow(row);
+          }
+        }, {
+          key: "onDetailToggle",
+          value: function onDetailToggle(event) {
+            console.log('Detail Toggled', event);
           }
         }, {
           key: "getTagInformation",
@@ -488,7 +734,7 @@
                       this.range = range;
 
                       if (!(this.selectedAdvertiser == "lyons")) {
-                        _context3.next = 7;
+                        _context3.next = 10;
                         break;
                       }
 
@@ -497,25 +743,35 @@
 
                     case 4:
                       this.chartData = _context3.sent;
-                      _context3.next = 11;
-                      break;
+                      _context3.next = 7;
+                      return this.getAllLyonStats(this.range.startDate, this.range.endDate, this.tagRows);
 
                     case 7:
+                      this.statData = _context3.sent;
+                      _context3.next = 17;
+                      break;
+
+                    case 10:
                       if (!(this.selectedAdvertiser == "perion")) {
-                        _context3.next = 11;
+                        _context3.next = 17;
                         break;
                       }
 
-                      _context3.next = 10;
+                      _context3.next = 13;
                       return this.getPerionChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 10:
+                    case 13:
                       this.chartData = _context3.sent;
+                      _context3.next = 16;
+                      return this.getAllPerionStats(this.range.startDate, this.range.endDate, this.tagRows);
 
-                    case 11:
+                    case 16:
+                      this.statData = _context3.sent;
+
+                    case 17:
                       this.refreshTable();
 
-                    case 12:
+                    case 18:
                     case "end":
                       return _context3.stop();
                   }
@@ -635,6 +891,204 @@
               return error;
             });
           }
+        }, {
+          key: "getAllPerionStats",
+          value: function getAllPerionStats(startDate, endDate, tag) {
+            var _this3 = this;
+
+            return this.perionService.getPerTagPerionStats(this.selectedCompany, startDate, endDate).toPromise().then(function (response) {
+              console.log("]]]]]", response);
+              _this3.allPerionStatData = response;
+              var allPerionStat = [];
+
+              var _iterator3 = _createForOfIteratorHelper(tag.subids),
+                  _step3;
+
+              try {
+                for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+                  var tagSub = _step3.value;
+
+                  if (tagSub.filterTag == "Contains") {
+                    allPerionStat = allPerionStat.concat(_this3.allPerionStatData.filter(function (stat) {
+                      return stat.subid.includes(tagSub.subid);
+                    }));
+                    allPerionStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  } else if (tagSub.filterTag == "StartsWith") {
+                    allPerionStat = allPerionStat.concat(_this3.allPerionStatData.filter(function (stat) {
+                      return stat.subid.startsWith(tagSub.subid);
+                    }));
+                    allPerionStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  } else if (tagSub.filterTag == "EndsWith") {
+                    allPerionStat = allPerionStat.concat(_this3.allPerionStatData.filter(function (stat) {
+                      return stat.subid.endsWith(tagSub.subid);
+                    }));
+                    allPerionStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  } else if (tagSub.filterTag == "ExactValue") {
+                    allPerionStat = allPerionStat.concat(_this3.allPerionStatData.filter(function (stat) {
+                      return stat.subid == tagSub.subid;
+                    }));
+                    allPerionStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  }
+                } //duplicated remove
+
+              } catch (err) {
+                _iterator3.e(err);
+              } finally {
+                _iterator3.f();
+              }
+
+              var filtered_data = allPerionStat.filter(function (obj, pos, arr) {
+                return arr.map(function (mapObj) {
+                  return mapObj._id;
+                }).indexOf(obj._id) == pos;
+              });
+              var helper = {};
+              filtered_data.map(function (f) {
+                f.revenue = parseFloat(f.revenue);
+                f.rptDate = f.date;
+              });
+              var resultAll = filtered_data.reduce(function (prev, current) {
+                var key = current.date.toString() + '-' + current.subid;
+
+                if (!helper[key]) {
+                  helper[key] = Object.assign({}, current); // create a copy of o
+
+                  prev.push(helper[key]);
+                } else {
+                  helper[key].clicks += parseInt(current.clicks);
+
+                  if (current.revenue) {
+                    helper[key].revenue += current.revenue;
+                  }
+
+                  helper[key].split += parseInt(current.split);
+                }
+
+                return prev;
+              }, []);
+              return resultAll.slice().sort(function (a, b) {
+                return b.date - a.date;
+              });
+            })["catch"](function (error) {
+              return error;
+            });
+          }
+        }, {
+          key: "getAllLyonStats",
+          value: function getAllLyonStats(startDate, endDate, tag) {
+            var _this4 = this;
+
+            return this.lyonService.getAllStats(startDate, endDate).toPromise().then(function (response) {
+              _this4.allLyonStatData = response;
+              var allLyonStat = [];
+
+              var _iterator4 = _createForOfIteratorHelper(tag.subids),
+                  _step4;
+
+              try {
+                for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+                  var tagSub = _step4.value;
+
+                  if (tagSub.filterTag == "Contains") {
+                    allLyonStat = allLyonStat.concat(_this4.allLyonStatData.filter(function (stat) {
+                      return stat.subid.includes(tagSub.subid);
+                    }));
+                    allLyonStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  } else if (tagSub.filterTag == "StartsWith") {
+                    allLyonStat = allLyonStat.concat(_this4.allLyonStatData.filter(function (stat) {
+                      return stat.subid.startsWith(tagSub.subid);
+                    }));
+                    allLyonStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  } else if (tagSub.filterTag == "EndsWith") {
+                    allLyonStat = allLyonStat.concat(_this4.allLyonStatData.filter(function (stat) {
+                      return stat.subid.endsWith(tagSub.subid);
+                    }));
+                    allLyonStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  } else if (tagSub.filterTag == "ExactValue") {
+                    allLyonStat = allLyonStat.concat(_this4.allLyonStatData.filter(function (stat) {
+                      return stat.subid == tagSub.subid;
+                    }));
+                    allLyonStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  }
+                } //duplicated remove
+
+              } catch (err) {
+                _iterator4.e(err);
+              } finally {
+                _iterator4.f();
+              }
+
+              var filtered_data = allLyonStat.filter(function (obj, pos, arr) {
+                return arr.map(function (mapObj) {
+                  return mapObj._id;
+                }).indexOf(obj._id) == pos;
+              });
+              var helper = {};
+              filtered_data.map(function (f) {
+                f.revenue = parseFloat(f.revenue);
+                f.ctr = parseFloat(f.ctr);
+                f.biddedCtr = parseFloat(f.biddedCTR);
+              });
+              var resultAll = filtered_data.reduce(function (prev, current) {
+                var key = current.rptDate.toString() + '-' + current.subid;
+
+                if (!helper[key]) {
+                  helper[key] = Object.assign({}, current); // create a copy of o
+
+                  prev.push(helper[key]);
+                } else {
+                  helper[key].clicks += parseInt(current.clicks);
+                  helper[key].searches += parseInt(current.searches);
+
+                  if (current.biddedCtr) {
+                    helper[key].biddedCtr += current.biddedCtr;
+                  }
+
+                  if (current.ctr) {
+                    helper[key].ctr += current.ctr;
+                  }
+
+                  if (current.revenue) {
+                    helper[key].revenue += current.revenue;
+                  }
+
+                  helper[key].biddedSearches += parseInt(current.biddedSearches);
+                  helper[key].split += parseInt(current.split);
+                }
+
+                return prev;
+              }, []);
+              return resultAll.slice().sort(function (a, b) {
+                return b.rptDate - a.rptDate;
+              });
+            })["catch"](function (error) {
+              return error;
+            });
+          }
         }]);
 
         return PublisherComponent;
@@ -647,9 +1101,20 @@
       PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
         type: PublisherComponent,
         selectors: [["app-publisher"]],
-        decls: 2,
-        vars: 1,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "chartData"]],
+        viewQuery: function PublisherComponent_Query(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
+          }
+
+          if (rf & 2) {
+            var _t;
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
+          }
+        },
+        decls: 27,
+        vars: 14,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "rptDate"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "tagname"], ["name", "publisher"], ["name", "spilt"], ["name", "revenue"], [3, "chartData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
         template: function PublisherComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -661,15 +1126,96 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PublisherComponent_app_reporting_revenue_chart_1_Template, 1, 1, "app-reporting-revenue-chart", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "ngx-datatable", 2, 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "ngx-datatable-row-detail", 4, 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function PublisherComponent_Template_ngx_datatable_row_detail_toggle_4_listener($event) {
+              return ctx.onDetailToggle($event);
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](6, PublisherComponent_ng_template_6_Template, 6, 0, "ng-template", 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "ngx-datatable-column", 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, PublisherComponent_ng_template_8_Template, 1, 4, "ng-template", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "ngx-datatable-column", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](10, PublisherComponent_ng_template_10_Template, 1, 0, "ng-template", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, PublisherComponent_ng_template_11_Template, 3, 3, "ng-template", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "ngx-datatable-column", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, PublisherComponent_ng_template_13_Template, 1, 0, "ng-template", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, PublisherComponent_ng_template_14_Template, 2, 1, "ng-template", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "ngx-datatable-column", 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, PublisherComponent_ng_template_16_Template, 1, 0, "ng-template", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, PublisherComponent_ng_template_17_Template, 2, 1, "ng-template", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "ngx-datatable-column", 13);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](19, PublisherComponent_ng_template_19_Template, 1, 0, "ng-template", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, PublisherComponent_ng_template_20_Template, 2, 1, "ng-template", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 14);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, PublisherComponent_ng_template_22_Template, 1, 0, "ng-template", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, PublisherComponent_ng_template_23_Template, 4, 6, "ng-template", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](24, "ngx-datatable-column", 15);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, PublisherComponent_ng_template_25_Template, 1, 0, "ng-template", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, PublisherComponent_ng_template_26_Template, 3, 4, "ng-template", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
           }
 
           if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.chartData);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("scrollbarH", true)("rows", ctx.statData);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_7__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_9__["ReportingRevenueChartComponent"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_7__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_10__["ReportingRevenueChartComponent"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["CurrencyPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcHVibGlzaGVyLXJlcG9ydGluZy9wdWJsaXNoZXIvcHVibGlzaGVyLmNvbXBvbmVudC5zY3NzIn0= */"]
       });
       /*@__PURE__*/
@@ -696,7 +1242,12 @@
           }, {
             type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]
           }];
-        }, null);
+        }, {
+          table: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+            args: ['expandableTable']
+          }]
+        });
       })();
       /***/
 
