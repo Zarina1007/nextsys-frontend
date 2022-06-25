@@ -438,7 +438,6 @@ class PublisherComponent {
     }
     getAllPerionStats(startDate, endDate, tag) {
         return this.perionService.getPerTagPerionStats(this.selectedCompany, startDate, endDate).toPromise().then((response) => {
-            console.log("]]]]]", response);
             this.allPerionStatData = response;
             var allPerionStat = [];
             for (var tagSub of tag.subids) {

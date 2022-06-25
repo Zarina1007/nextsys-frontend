@@ -731,7 +731,7 @@ class EditTagComponent {
                     name: x['name'],
                     company: x['company'],
                     advertiser: x['advertiser'],
-                    publisher: x['publisher'],
+                    publisher: x['publisher'][0]['_key'],
                     browserStatus: x['browserStatus'],
                     browser: browserVal,
                     deviceTypeStatus: x['deviceTypeStatus'],

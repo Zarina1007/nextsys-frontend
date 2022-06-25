@@ -897,7 +897,6 @@
             var _this3 = this;
 
             return this.perionService.getPerTagPerionStats(this.selectedCompany, startDate, endDate).toPromise().then(function (response) {
-              console.log("]]]]]", response);
               _this3.allPerionStatData = response;
               var allPerionStat = [];
 
