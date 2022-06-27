@@ -5207,9 +5207,10 @@
 
                     case 12:
                       this.summaryMetrics = _context4.sent;
+                      console.log("dfdfdfdfd", this.summaryMetrics);
                       this.refreshTable();
 
-                    case 14:
+                    case 15:
                     case "end":
                       return _context4.stop();
                   }
@@ -5395,25 +5396,17 @@
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            return this.perionService.getSummaryMetrics(company).toPromise().then(function (response) {
-              console.log('Got summary metrics'); //console.log(response);
-
-              return response; // this.summaryMetrics = response;
-              // console.log(this.summaryMetrics);
-              // this.combineSummaryMetrics(response);
-            })["catch"](function (error) {
-              return error;
-            });
-          }
-        }, {
-          key: "getChartMetrics",
-          value: function getChartMetrics(company, startDate, endDate) {
             var _this8 = this;
 
-            return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise().then(function (response) {
-              console.log('getAllPerionStats() response:');
-              _this8.allChartStat = response.stats;
-              var allChartPerionStat = [];
+            return this.perionService.getSummaryMetrics(company).toPromise().then(function (response) {
+              console.log('Got summary metrics');
+              _this8.currentMonthData = response.summary[0].summaryMetrics;
+              _this8.beforeMonthData = response.summary[0].lastMonthStat;
+              _this8.twoBeforeMonthData = response.summary[0].twoLastMonthStat;
+              var dayInCurrentMonth = response.summary[0].dayInCurrentMonth;
+              var dayInBeforeMonth = response.summary[0].dayInBeforeMonth;
+              var dayInTwoBeforeMonth = response.summary[0].dayInTwoBeforeMonth;
+              var summaryCurrentStat = []; //current data get part
 
               var _iterator17 = _createForOfIteratorHelper(_this8.tagList),
                   _step17;
@@ -5422,16 +5415,376 @@
                 for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
                   var tagL = _step17.value;
 
+                  var _iterator23 = _createForOfIteratorHelper(tagL.tag.subids),
+                      _step23;
+
+                  try {
+                    for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+                      var tagSub = _step23.value;
+
+                      if (tagSub.filterTag == "Contains") {
+                        summaryCurrentStat = summaryCurrentStat.concat(_this8.currentMonthData.filter(function (stat) {
+                          return stat.subid.includes(tagSub.subid);
+                        }));
+                        summaryCurrentStat.map(function (stat) {
+                          stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                          stat.tagname = tagL.tag.name;
+                        });
+                      } else if (tagSub.filterTag == "StartsWith") {
+                        summaryCurrentStat = summaryCurrentStat.concat(_this8.currentMonthData.filter(function (stat) {
+                          return stat.subid.startsWith(tagSub.subid);
+                        }));
+                        summaryCurrentStat.map(function (stat) {
+                          stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                          stat.tagname = tagL.tag.name;
+                        });
+                      } else if (tagSub.filterTag == "EndsWith") {
+                        summaryCurrentStat = summaryCurrentStat.concat(_this8.currentMonthData.filter(function (stat) {
+                          return stat.subid.endsWith(tagSub.subid);
+                        }));
+                        summaryCurrentStat.map(function (stat) {
+                          stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                          stat.tagname = tagL.tag.name;
+                        });
+                      } else if (tagSub.filterTag == "ExactValue") {
+                        summaryCurrentStat = summaryCurrentStat.concat(_this8.currentMonthData.filter(function (stat) {
+                          return stat.subid == tagSub.subid;
+                        }));
+                        summaryCurrentStat.map(function (stat) {
+                          stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                          stat.tagname = tagL.tag.name;
+                        });
+                      }
+                    }
+                  } catch (err) {
+                    _iterator23.e(err);
+                  } finally {
+                    _iterator23.f();
+                  }
+                } // //duplicated remove
+
+              } catch (err) {
+                _iterator17.e(err);
+              } finally {
+                _iterator17.f();
+              }
+
+              var filter_data = summaryCurrentStat.filter(function (obj, pos, arr) {
+                return arr.map(function (mapObj) {
+                  return mapObj._id;
+                }).indexOf(obj._id) == pos;
+              });
+              var helperSummary = {};
+              filter_data.map(function (f) {
+                f.revenue = parseFloat(f.revenue);
+                f.ctr = parseFloat(f.ctr);
+                f.biddedCtr = parseFloat(f.biddedCTR);
+              });
+              var resultSummary = filter_data.reduce(function (r, o) {
+                var key = o.rptDate;
+
+                if (!helperSummary[key]) {
+                  helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                  r.push(helperSummary[key]);
+                } else {
+                  helperSummary[key].searches += parseInt(o.searches);
+
+                  if (o.revenue) {
+                    helperSummary[key].revenue += o.revenue;
+                  }
+                }
+
+                return r;
+              }, []);
+              var monthRevenue = 0;
+              var monthProfit = 0;
+              var monthRevenuePace = 0;
+              var profitPace = 0;
+
+              var _iterator18 = _createForOfIteratorHelper(resultSummary),
+                  _step18;
+
+              try {
+                for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
+                  var sumData = _step18.value;
+                  monthRevenue += sumData.revenue;
+                  monthProfit += sumData.revenue * (100 - sumData.split) * 0.01;
+                  monthRevenuePace += monthRevenue / resultSummary.length * dayInCurrentMonth;
+                  profitPace += monthProfit / resultSummary.length * dayInCurrentMonth;
+                } //before month data get part
+
+              } catch (err) {
+                _iterator18.e(err);
+              } finally {
+                _iterator18.f();
+              }
+
+              var summaryBeforeStat = [];
+
+              var _iterator19 = _createForOfIteratorHelper(_this8.tagList),
+                  _step19;
+
+              try {
+                for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
+                  var tagL = _step19.value;
+
+                  var _iterator24 = _createForOfIteratorHelper(tagL.tag.subids),
+                      _step24;
+
+                  try {
+                    for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+                      var tagSub = _step24.value;
+
+                      if (tagSub.filterTag == "Contains") {
+                        summaryBeforeStat = summaryBeforeStat.concat(_this8.beforeMonthData.filter(function (stat) {
+                          return stat.subid.includes(tagSub.subid);
+                        }));
+                        summaryBeforeStat.map(function (stat) {
+                          stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                          stat.tagname = tagL.tag.name;
+                        });
+                      } else if (tagSub.filterTag == "StartsWith") {
+                        summaryBeforeStat = summaryBeforeStat.concat(_this8.beforeMonthData.filter(function (stat) {
+                          return stat.subid.startsWith(tagSub.subid);
+                        }));
+                      } else if (tagSub.filterTag == "EndsWith") {
+                        summaryBeforeStat = summaryBeforeStat.concat(_this8.beforeMonthData.filter(function (stat) {
+                          return stat.subid.endsWith(tagSub.subid);
+                        }));
+                      } else if (tagSub.filterTag == "ExactValue") {
+                        summaryBeforeStat = summaryBeforeStat.concat(_this8.beforeMonthData.filter(function (stat) {
+                          return stat.subid == tagSub.subid;
+                        }));
+                      }
+                    }
+                  } catch (err) {
+                    _iterator24.e(err);
+                  } finally {
+                    _iterator24.f();
+                  }
+                } // //duplicated remove
+
+              } catch (err) {
+                _iterator19.e(err);
+              } finally {
+                _iterator19.f();
+              }
+
+              var filt_data = summaryBeforeStat.filter(function (obj, pos, arr) {
+                return arr.map(function (mapObj) {
+                  return mapObj._id;
+                }).indexOf(obj._id) == pos;
+              });
+              var helperBeforeSummary = {};
+              filt_data.map(function (f) {
+                f.revenue = parseFloat(f.revenue);
+                f.ctr = parseFloat(f.ctr);
+                f.biddedCtr = parseFloat(f.biddedCTR);
+              });
+              var resultBeforeSummary = filt_data.reduce(function (r, o) {
+                var key = o.rptDate;
+
+                if (!helperBeforeSummary[key]) {
+                  helperBeforeSummary[key] = Object.assign({}, o); // create a copy of o
+
+                  r.push(helperBeforeSummary[key]);
+                } else {
+                  helperBeforeSummary[key].searches += parseInt(o.searches);
+
+                  if (o.revenue) {
+                    helperBeforeSummary[key].revenue += o.revenue;
+                  }
+                }
+
+                return r;
+              }, []);
+              var monthBeforeRevenue = 0;
+              var monthBeforeProfit = 0;
+              var monthBeforeRevenuePace = 0;
+              var profitBeforePace = 0;
+
+              var _iterator20 = _createForOfIteratorHelper(resultBeforeSummary),
+                  _step20;
+
+              try {
+                for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+                  var sumBeforeData = _step20.value;
+                  monthBeforeRevenue += sumBeforeData.revenue;
+                  monthBeforeProfit += sumBeforeData.revenue * (100 - sumBeforeData.split) * 0.01;
+                  monthBeforeRevenuePace += monthBeforeRevenue / resultBeforeSummary.length * dayInBeforeMonth;
+                  profitBeforePace += monthBeforeProfit / resultBeforeSummary.length * dayInBeforeMonth;
+                } //tow before month data get part
+
+              } catch (err) {
+                _iterator20.e(err);
+              } finally {
+                _iterator20.f();
+              }
+
+              var summaryTwoBeforeStat = [];
+
+              var _iterator21 = _createForOfIteratorHelper(_this8.tagList),
+                  _step21;
+
+              try {
+                for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+                  var tagL = _step21.value;
+
+                  var _iterator25 = _createForOfIteratorHelper(tagL.tag.subids),
+                      _step25;
+
+                  try {
+                    for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+                      var tagSub = _step25.value;
+
+                      if (tagSub.filterTag == "Contains") {
+                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(_this8.twoBeforeMonthData.filter(function (stat) {
+                          return stat.subid.includes(tagSub.subid);
+                        }));
+                        summaryTwoBeforeStat.map(function (stat) {
+                          stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                          stat.tagname = tagL.tag.name;
+                        });
+                      } else if (tagSub.filterTag == "StartsWith") {
+                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(_this8.twoBeforeMonthData.filter(function (stat) {
+                          return stat.subid.startsWith(tagSub.subid);
+                        }));
+                      } else if (tagSub.filterTag == "EndsWith") {
+                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(_this8.twoBeforeMonthData.filter(function (stat) {
+                          return stat.subid.endsWith(tagSub.subid);
+                        }));
+                      } else if (tagSub.filterTag == "ExactValue") {
+                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(_this8.twoBeforeMonthData.filter(function (stat) {
+                          return stat.subid == tagSub.subid;
+                        }));
+                      }
+                    }
+                  } catch (err) {
+                    _iterator25.e(err);
+                  } finally {
+                    _iterator25.f();
+                  }
+                } // //duplicated remove
+
+              } catch (err) {
+                _iterator21.e(err);
+              } finally {
+                _iterator21.f();
+              }
+
+              var filter_two_data = summaryTwoBeforeStat.filter(function (obj, pos, arr) {
+                return arr.map(function (mapObj) {
+                  return mapObj._id;
+                }).indexOf(obj._id) == pos;
+              });
+              var helperTwoBeforeSummary = {};
+              filter_two_data.map(function (f) {
+                f.revenue = parseFloat(f.revenue);
+                f.ctr = parseFloat(f.ctr);
+                f.biddedCtr = parseFloat(f.biddedCTR);
+              });
+              var resultTwoBeforeSummary = filter_two_data.reduce(function (r, o) {
+                var key = o.rptDate;
+
+                if (!helperTwoBeforeSummary[key]) {
+                  helperTwoBeforeSummary[key] = Object.assign({}, o); // create a copy of o
+
+                  r.push(helperTwoBeforeSummary[key]);
+                } else {
+                  helperTwoBeforeSummary[key].searches += parseInt(o.searches);
+
+                  if (o.revenue) {
+                    helperTwoBeforeSummary[key].revenue += o.revenue;
+                  }
+                }
+
+                return r;
+              }, []);
+              var monthTwoBeforeRevenue = 0;
+              var monthTwoBeforeProfit = 0;
+              var monthTwoBeforeRevenuePace = 0;
+              var profitTwoBeforePace = 0;
+
+              var _iterator22 = _createForOfIteratorHelper(resultTwoBeforeSummary),
+                  _step22;
+
+              try {
+                for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                  var sumTwoBeforeData = _step22.value;
+                  monthTwoBeforeRevenue += sumTwoBeforeData.revenue;
+                  monthTwoBeforeProfit += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01;
+                  monthTwoBeforeRevenuePace += monthTwoBeforeRevenue / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
+                  profitTwoBeforePace += monthTwoBeforeProfit / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
+                }
+              } catch (err) {
+                _iterator22.e(err);
+              } finally {
+                _iterator22.f();
+              }
+
+              var currentPercentPace = 0;
+              var lastPercentPace = 0;
+
+              if (profitBeforePace != 0) {
+                currentPercentPace = (profitPace - profitBeforePace) / profitBeforePace * 100;
+              }
+
+              if (profitTwoBeforePace != 0) {
+                lastPercentPace = (profitBeforePace - profitTwoBeforePace) / profitTwoBeforePace * 100;
+              }
+
+              var summaryFinalData = [];
+              summaryFinalData.push({
+                summaryMetrics: [{
+                  revenue: monthRevenue,
+                  revenuePace: monthRevenuePace,
+                  profit: monthProfit,
+                  profitPace: profitPace,
+                  percentPace: currentPercentPace
+                }],
+                lastMonthStat: [{
+                  revenue: monthBeforeRevenue,
+                  revenuePace: monthBeforeRevenuePace,
+                  profit: monthBeforeProfit,
+                  profitPace: profitBeforePace,
+                  percentPace: lastPercentPace
+                }]
+              });
+              var allSummary = {};
+              allSummary['summary'] = summaryFinalData;
+              return allSummary;
+            })["catch"](function (error) {
+              return error;
+            });
+          }
+        }, {
+          key: "getChartMetrics",
+          value: function getChartMetrics(company, startDate, endDate) {
+            var _this9 = this;
+
+            return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise().then(function (response) {
+              console.log('getAllPerionStats() response:');
+              _this9.allChartStat = response.stats;
+              var allChartPerionStat = [];
+
+              var _iterator26 = _createForOfIteratorHelper(_this9.tagList),
+                  _step26;
+
+              try {
+                for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+                  var tagL = _step26.value;
+
                   if (tagL.tag.advertiser == "perion") {
-                    var _iterator19 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step19;
+                    var _iterator28 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step28;
 
                     try {
-                      for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
-                        var tagSub = _step19.value;
+                      for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+                        var tagSub = _step28.value;
 
                         if (tagSub.filterTag == "Contains") {
-                          allChartPerionStat = allChartPerionStat.concat(_this8.allChartStat.filter(function (stat) {
+                          allChartPerionStat = allChartPerionStat.concat(_this9.allChartStat.filter(function (stat) {
                             return stat.subid.includes(tagSub.subid);
                           }));
                           allChartPerionStat.map(function (stat) {
@@ -5439,7 +5792,7 @@
                             stat.tagname = tagL.tag.name;
                           });
                         } else if (tagSub.filterTag == "StartsWith") {
-                          allChartPerionStat = allChartPerionStat.concat(_this8.allChartStat.filter(function (stat) {
+                          allChartPerionStat = allChartPerionStat.concat(_this9.allChartStat.filter(function (stat) {
                             return stat.subid.startsWith(tagSub.subid);
                           }));
                           allChartPerionStat.map(function (stat) {
@@ -5447,7 +5800,7 @@
                             stat.tagname = tagL.tag.name;
                           });
                         } else if (tagSub.filterTag == "EndsWith") {
-                          allChartPerionStat = allChartPerionStat.concat(_this8.allChartStat.filter(function (stat) {
+                          allChartPerionStat = allChartPerionStat.concat(_this9.allChartStat.filter(function (stat) {
                             return stat.subid.endsWith(tagSub.subid);
                           }));
                           allChartPerionStat.map(function (stat) {
@@ -5455,7 +5808,7 @@
                             stat.tagname = tagL.tag.name;
                           });
                         } else if (tagSub.filterTag == "ExactValue") {
-                          allChartPerionStat = allChartPerionStat.concat(_this8.allChartStat.filter(function (stat) {
+                          allChartPerionStat = allChartPerionStat.concat(_this9.allChartStat.filter(function (stat) {
                             return stat.subid == tagSub.subid;
                           }));
                           allChartPerionStat.map(function (stat) {
@@ -5465,16 +5818,16 @@
                         }
                       }
                     } catch (err) {
-                      _iterator19.e(err);
+                      _iterator28.e(err);
                     } finally {
-                      _iterator19.f();
+                      _iterator28.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator17.e(err);
+                _iterator26.e(err);
               } finally {
-                _iterator17.f();
+                _iterator26.f();
               }
 
               var helper = new Set(); //duplicated remove
@@ -5509,20 +5862,20 @@
               var searchesPerDayVal = [];
               var chartDataValue = {};
 
-              var _iterator18 = _createForOfIteratorHelper(resultChart),
-                  _step18;
+              var _iterator27 = _createForOfIteratorHelper(resultChart),
+                  _step27;
 
               try {
-                for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
-                  var resVal = _step18.value;
+                for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
+                  var resVal = _step27.value;
                   revenuePerDayVal.push(resVal.revenue);
                   datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.impressions);
                 }
               } catch (err) {
-                _iterator18.e(err);
+                _iterator27.e(err);
               } finally {
-                _iterator18.f();
+                _iterator27.f();
               }
 
               chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -5536,12 +5889,12 @@
         }, {
           key: "combineSummaryMetrics",
           value: function combineSummaryMetrics(metrics) {
-            var _this9 = this;
+            var _this10 = this;
 
             metrics.summary.keys.forEach(function (element) {
               console.log(element.revenue);
-              _this9.summary.revenue += element.revenue;
-              _this9.summary.profit += element.revenue * ((100 - element.split) * 0.01);
+              _this10.summary.revenue += element.revenue;
+              _this10.summary.profit += element.revenue * ((100 - element.split) * 0.01);
             });
           } //get Tags with selected company
 
