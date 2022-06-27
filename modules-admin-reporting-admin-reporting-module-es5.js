@@ -2699,7 +2699,7 @@
 
       function LyonsComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 22);
         }
 
         if (rf & 2) {
@@ -2711,7 +2711,7 @@
 
       function LyonsComponent_app_summary_metrics_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 23);
         }
 
         if (rf & 2) {
@@ -2721,9 +2721,9 @@
         }
       }
 
-      function LyonsComponent_ng_template_13_Template(rf, ctx) {
+      function LyonsComponent_ng_template_7_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 24);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -2745,13 +2745,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_15_Template(rf, ctx) {
+      function LyonsComponent_ng_template_9_Template(rf, ctx) {
         if (rf & 1) {
           var _r33 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 28);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function LyonsComponent_ng_template_15_Template_a_click_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function LyonsComponent_ng_template_9_Template_a_click_0_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r33);
 
             var row_r30 = ctx.row;
@@ -2771,13 +2771,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_17_Template(rf, ctx) {
+      function LyonsComponent_ng_template_11_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function LyonsComponent_ng_template_18_Template(rf, ctx) {
+      function LyonsComponent_ng_template_12_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -2797,13 +2797,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_20_Template(rf, ctx) {
+      function LyonsComponent_ng_template_14_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
         }
       }
 
-      function LyonsComponent_ng_template_21_Template(rf, ctx) {
+      function LyonsComponent_ng_template_15_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -2821,13 +2821,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_23_Template(rf, ctx) {
+      function LyonsComponent_ng_template_17_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Tag ");
         }
       }
 
-      function LyonsComponent_ng_template_24_Template(rf, ctx) {
+      function LyonsComponent_ng_template_18_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -2845,13 +2845,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_26_Template(rf, ctx) {
+      function LyonsComponent_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
-      function LyonsComponent_ng_template_27_Template(rf, ctx) {
+      function LyonsComponent_ng_template_21_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -2869,13 +2869,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_29_Template(rf, ctx) {
+      function LyonsComponent_ng_template_23_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
         }
       }
 
-      function LyonsComponent_ng_template_30_Template(rf, ctx) {
+      function LyonsComponent_ng_template_24_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -2895,13 +2895,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_32_Template(rf, ctx) {
+      function LyonsComponent_ng_template_26_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Bid Searches ");
         }
       }
 
-      function LyonsComponent_ng_template_33_Template(rf, ctx) {
+      function LyonsComponent_ng_template_27_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -2921,13 +2921,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_35_Template(rf, ctx) {
+      function LyonsComponent_ng_template_29_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
         }
       }
 
-      function LyonsComponent_ng_template_36_Template(rf, ctx) {
+      function LyonsComponent_ng_template_30_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -2947,13 +2947,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_38_Template(rf, ctx) {
+      function LyonsComponent_ng_template_32_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " BiddedCTR ");
         }
       }
 
-      function LyonsComponent_ng_template_39_Template(rf, ctx) {
+      function LyonsComponent_ng_template_33_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -2975,13 +2975,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_41_Template(rf, ctx) {
+      function LyonsComponent_ng_template_35_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
         }
       }
 
-      function LyonsComponent_ng_template_42_Template(rf, ctx) {
+      function LyonsComponent_ng_template_36_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -3003,13 +3003,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_44_Template(rf, ctx) {
+      function LyonsComponent_ng_template_38_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Spilt ");
         }
       }
 
-      function LyonsComponent_ng_template_45_Template(rf, ctx) {
+      function LyonsComponent_ng_template_39_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -3031,13 +3031,13 @@
         }
       }
 
-      function LyonsComponent_ng_template_47_Template(rf, ctx) {
+      function LyonsComponent_ng_template_41_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
         }
       }
 
-      function LyonsComponent_ng_template_48_Template(rf, ctx) {
+      function LyonsComponent_ng_template_42_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -3328,10 +3328,9 @@
 
                     case 9:
                       this.summaryMetricsData = _context3.sent;
-                      console.log("=dfd=f=df=d=f=df=", this.summaryMetricsData);
                       this.refreshTable();
 
-                    case 12:
+                    case 11:
                     case "end":
                       return _context3.stop();
                   }
@@ -3859,9 +3858,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 49,
+        decls: 43,
         vars: 15,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "btn", "btn-sm", "btn-dark", 3, "click"], [1, "btn", "btn-sm", "btn-primary", 3, "click"], [1, "btn", "btn-sm", "btn-info", 3, "click"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "rptDate"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "tagname"], ["name", "publisher"], ["name", "searches"], ["name", "biddedSearches"], ["name", "clicks"], ["name", "biddedCtr"], ["name", "ctr"], ["name", "spilt"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "rptDate"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "tagname"], ["name", "publisher"], ["name", "searches"], ["name", "biddedSearches"], ["name", "clicks"], ["name", "biddedCtr"], ["name", "ctr"], ["name", "spilt"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
         template: function LyonsComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -3876,139 +3875,109 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_app_summary_metrics_2_Template, 1, 1, "app-summary-metrics", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "button", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "ngx-datatable", 3, 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function LyonsComponent_Template_button_click_3_listener() {
-              return ctx.updateAllLyonStats(ctx.selectedCompany, ctx.range.startDate, ctx.range.endDate);
-            });
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "ngx-datatable-row-detail", 5, 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, " updateAllLyonStats\n");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "button", 4);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function LyonsComponent_Template_button_click_5_listener() {
-              return ctx.getAllLyonStats(ctx.range.startDate, ctx.range.endDate);
-            });
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6, " getAllLyonStats\n");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "button", 5);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function LyonsComponent_Template_button_click_7_listener() {
-              return ctx.getSummaryMetrics(ctx.selectedCompany);
-            });
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, "getSummaryMetrics");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "ngx-datatable", 6, 7);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "ngx-datatable-row-detail", 8, 9);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function LyonsComponent_Template_ngx_datatable_row_detail_toggle_11_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function LyonsComponent_Template_ngx_datatable_row_detail_toggle_5_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, LyonsComponent_ng_template_13_Template, 6, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](7, LyonsComponent_ng_template_7_Template, 6, 0, "ng-template", 7);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "ngx-datatable-column", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "ngx-datatable-column", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, LyonsComponent_ng_template_15_Template, 1, 4, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](9, LyonsComponent_ng_template_9_Template, 1, 4, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "ngx-datatable-column", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, LyonsComponent_ng_template_11_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](12, LyonsComponent_ng_template_12_Template, 3, 3, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "ngx-datatable-column", 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, LyonsComponent_ng_template_14_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, LyonsComponent_ng_template_15_Template, 2, 1, "ng-template", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "ngx-datatable-column", 13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, LyonsComponent_ng_template_17_Template, 1, 0, "ng-template", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, LyonsComponent_ng_template_17_Template, 1, 0, "ng-template", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](18, LyonsComponent_ng_template_18_Template, 3, 3, "ng-template", 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-column", 15);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, LyonsComponent_ng_template_20_Template, 1, 0, "ng-template", 14);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, LyonsComponent_ng_template_21_Template, 2, 1, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](18, LyonsComponent_ng_template_18_Template, 2, 1, "ng-template", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-column", 14);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, LyonsComponent_ng_template_23_Template, 1, 0, "ng-template", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, LyonsComponent_ng_template_20_Template, 1, 0, "ng-template", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, LyonsComponent_ng_template_24_Template, 2, 1, "ng-template", 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "ngx-datatable-column", 17);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, LyonsComponent_ng_template_26_Template, 1, 0, "ng-template", 14);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, LyonsComponent_ng_template_27_Template, 2, 1, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, LyonsComponent_ng_template_21_Template, 2, 1, "ng-template", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "ngx-datatable-column", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, LyonsComponent_ng_template_29_Template, 1, 0, "ng-template", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, LyonsComponent_ng_template_23_Template, 1, 0, "ng-template", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, LyonsComponent_ng_template_30_Template, 3, 3, "ng-template", 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "ngx-datatable-column", 19);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, LyonsComponent_ng_template_32_Template, 1, 0, "ng-template", 14);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, LyonsComponent_ng_template_33_Template, 3, 3, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, LyonsComponent_ng_template_24_Template, 3, 3, "ng-template", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "ngx-datatable-column", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "ngx-datatable-column", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, LyonsComponent_ng_template_35_Template, 1, 0, "ng-template", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, LyonsComponent_ng_template_26_Template, 1, 0, "ng-template", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, LyonsComponent_ng_template_36_Template, 3, 3, "ng-template", 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "ngx-datatable-column", 21);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, LyonsComponent_ng_template_38_Template, 1, 0, "ng-template", 14);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, LyonsComponent_ng_template_39_Template, 4, 7, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, LyonsComponent_ng_template_27_Template, 3, 3, "ng-template", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "ngx-datatable-column", 22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "ngx-datatable-column", 17);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](41, LyonsComponent_ng_template_41_Template, 1, 0, "ng-template", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, LyonsComponent_ng_template_29_Template, 1, 0, "ng-template", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](42, LyonsComponent_ng_template_42_Template, 4, 7, "ng-template", 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](43, "ngx-datatable-column", 23);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](44, LyonsComponent_ng_template_44_Template, 1, 0, "ng-template", 14);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](45, LyonsComponent_ng_template_45_Template, 4, 6, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, LyonsComponent_ng_template_30_Template, 3, 3, "ng-template", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](46, "ngx-datatable-column", 24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "ngx-datatable-column", 18);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](47, LyonsComponent_ng_template_47_Template, 1, 0, "ng-template", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, LyonsComponent_ng_template_32_Template, 1, 0, "ng-template", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](48, LyonsComponent_ng_template_48_Template, 3, 4, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, LyonsComponent_ng_template_33_Template, 4, 7, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "ngx-datatable-column", 19);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, LyonsComponent_ng_template_35_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, LyonsComponent_ng_template_36_Template, 4, 7, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "ngx-datatable-column", 20);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, LyonsComponent_ng_template_38_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, LyonsComponent_ng_template_39_Template, 4, 6, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "ngx-datatable-column", 21);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](41, LyonsComponent_ng_template_41_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](42, LyonsComponent_ng_template_42_Template, 3, 4, "ng-template", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -4024,7 +3993,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetricsData);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("scrollbarH", true)("rows", ctx.rows);
 
@@ -4801,31 +4770,37 @@
       /* harmony import */
 
 
-      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/modules/tag-management/tag-management.service */
+      "./src/app/modules/tag-management/tag-management.service.ts");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */
       "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
       "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
       /* harmony import */
 
 
-      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
       "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
 
@@ -5170,12 +5145,13 @@
       }
 
       var PerionComponent = /*#__PURE__*/function () {
-        function PerionComponent(perionService, cdr, userService) {
+        function PerionComponent(perionService, cdr, userService, tagService) {
           _classCallCheck(this, PerionComponent);
 
           this.perionService = perionService;
           this.cdr = cdr;
           this.userService = userService;
+          this.tagService = tagService;
           this.range = {
             startDate: '',
             endDate: ''
@@ -5198,6 +5174,7 @@
             name: 'Gender'
           }];
           this.expanded = {};
+          this.tagList = [];
           this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
         }
 
@@ -5209,25 +5186,30 @@
                 while (1) {
                   switch (_context4.prev = _context4.next) {
                     case 0:
+                      _context4.next = 2;
+                      return this.getCompanyTags(this.selectedCompany);
+
+                    case 2:
+                      this.tagList = _context4.sent;
                       this.rows = [];
-                      _context4.next = 3;
+                      _context4.next = 6;
                       return this.getAllPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 3:
+                    case 6:
                       this.rows = _context4.sent;
-                      _context4.next = 6;
+                      _context4.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 6:
+                    case 9:
                       this.chartData = _context4.sent;
-                      _context4.next = 9;
+                      _context4.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
-                    case 9:
+                    case 12:
                       this.summaryMetrics = _context4.sent;
                       this.refreshTable();
 
-                    case 11:
+                    case 14:
                     case "end":
                       return _context4.stop();
                   }
@@ -5322,10 +5304,85 @@
         }, {
           key: "getAllPerionStats",
           value: function getAllPerionStats(company, startDate, endDate) {
+            var _this7 = this;
+
             return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('getAllPerionStats() response:'); //console.log(response.stats);
 
-              return response.stats;
+              _this7.allStat = response.stats;
+              var allPerionStat = [];
+
+              var _iterator15 = _createForOfIteratorHelper(_this7.tagList),
+                  _step15;
+
+              try {
+                for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
+                  var tagL = _step15.value;
+
+                  if (tagL.tag.advertiser == "perion") {
+                    var _iterator16 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step16;
+
+                    try {
+                      for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
+                        var tagSub = _step16.value;
+
+                        if (tagSub.filterTag == "Contains") {
+                          allPerionStat = allPerionStat.concat(_this7.allStat.filter(function (stat) {
+                            return stat.subid.includes(tagSub.subid);
+                          }));
+                          allPerionStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        } else if (tagSub.filterTag == "StartsWith") {
+                          allPerionStat = allPerionStat.concat(_this7.allStat.filter(function (stat) {
+                            return stat.subid.startsWith(tagSub.subid);
+                          }));
+                          allPerionStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        } else if (tagSub.filterTag == "EndsWith") {
+                          allPerionStat = allPerionStat.concat(_this7.allStat.filter(function (stat) {
+                            return stat.subid.endsWith(tagSub.subid);
+                          }));
+                          allPerionStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        } else if (tagSub.filterTag == "ExactValue") {
+                          allPerionStat = allPerionStat.concat(_this7.allStat.filter(function (stat) {
+                            return stat.subid == tagSub.subid;
+                          }));
+                          allPerionStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        }
+                      }
+                    } catch (err) {
+                      _iterator16.e(err);
+                    } finally {
+                      _iterator16.f();
+                    }
+                  }
+                }
+              } catch (err) {
+                _iterator15.e(err);
+              } finally {
+                _iterator15.f();
+              }
+
+              var helper = new Set(); //duplicated remove
+
+              var filtered_data = allPerionStat.filter(function (perionStat) {
+                var key = JSON.stringify([perionStat.date, perionStat.subid]);
+                return !helper.has(key) && helper.add(key);
+              });
+              return filtered_data.slice().sort(function (a, b) {
+                return b.date - a.date;
+              });
             })["catch"](function (error) {
               return error;
             });
@@ -5351,8 +5408,127 @@
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            return this.perionService.getChartMetrics(company, startDate, endDate).toPromise().then(function (response) {
-              return response;
+            var _this8 = this;
+
+            return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise().then(function (response) {
+              console.log('getAllPerionStats() response:');
+              _this8.allChartStat = response.stats;
+              var allChartPerionStat = [];
+
+              var _iterator17 = _createForOfIteratorHelper(_this8.tagList),
+                  _step17;
+
+              try {
+                for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
+                  var tagL = _step17.value;
+
+                  if (tagL.tag.advertiser == "perion") {
+                    var _iterator19 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step19;
+
+                    try {
+                      for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
+                        var tagSub = _step19.value;
+
+                        if (tagSub.filterTag == "Contains") {
+                          allChartPerionStat = allChartPerionStat.concat(_this8.allChartStat.filter(function (stat) {
+                            return stat.subid.includes(tagSub.subid);
+                          }));
+                          allChartPerionStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        } else if (tagSub.filterTag == "StartsWith") {
+                          allChartPerionStat = allChartPerionStat.concat(_this8.allChartStat.filter(function (stat) {
+                            return stat.subid.startsWith(tagSub.subid);
+                          }));
+                          allChartPerionStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        } else if (tagSub.filterTag == "EndsWith") {
+                          allChartPerionStat = allChartPerionStat.concat(_this8.allChartStat.filter(function (stat) {
+                            return stat.subid.endsWith(tagSub.subid);
+                          }));
+                          allChartPerionStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        } else if (tagSub.filterTag == "ExactValue") {
+                          allChartPerionStat = allChartPerionStat.concat(_this8.allChartStat.filter(function (stat) {
+                            return stat.subid == tagSub.subid;
+                          }));
+                          allChartPerionStat.map(function (stat) {
+                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
+                            stat.tagname = tagL.tag.name;
+                          });
+                        }
+                      }
+                    } catch (err) {
+                      _iterator19.e(err);
+                    } finally {
+                      _iterator19.f();
+                    }
+                  }
+                }
+              } catch (err) {
+                _iterator17.e(err);
+              } finally {
+                _iterator17.f();
+              }
+
+              var helper = new Set(); //duplicated remove
+
+              var filtered_data = allChartPerionStat.filter(function (perionStat) {
+                var key = JSON.stringify([perionStat.date, perionStat.subid]);
+                return !helper.has(key) && helper.add(key);
+              });
+              filtered_data = filtered_data.slice().sort(function (a, b) {
+                return a.date - b.date;
+              });
+              var helperChart = {};
+              var resultChart = filtered_data.reduce(function (r, o) {
+                var key = o.date;
+
+                if (!helperChart[key]) {
+                  helperChart[key] = Object.assign({}, o); // create a copy of o
+
+                  r.push(helperChart[key]);
+                } else {
+                  helperChart[key].impressions += parseInt(o.impressions);
+
+                  if (o.revenue) {
+                    helperChart[key].revenue += o.revenue;
+                  }
+                }
+
+                return r;
+              }, []);
+              var revenuePerDayVal = [];
+              var datesOfRevenueVal = [];
+              var searchesPerDayVal = [];
+              var chartDataValue = {};
+
+              var _iterator18 = _createForOfIteratorHelper(resultChart),
+                  _step18;
+
+              try {
+                for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
+                  var resVal = _step18.value;
+                  revenuePerDayVal.push(resVal.revenue);
+                  datesOfRevenueVal.push(resVal.date);
+                  searchesPerDayVal.push(resVal.impressions);
+                }
+              } catch (err) {
+                _iterator18.e(err);
+              } finally {
+                _iterator18.f();
+              }
+
+              chartDataValue['revenuePerDay'] = revenuePerDayVal;
+              chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+              chartDataValue['searchesPerDay'] = searchesPerDayVal;
+              return chartDataValue;
             })["catch"](function (error) {
               return error;
             });
@@ -5360,12 +5536,23 @@
         }, {
           key: "combineSummaryMetrics",
           value: function combineSummaryMetrics(metrics) {
-            var _this7 = this;
+            var _this9 = this;
 
             metrics.summary.keys.forEach(function (element) {
               console.log(element.revenue);
-              _this7.summary.revenue += element.revenue;
-              _this7.summary.profit += element.revenue * ((100 - element.split) * 0.01);
+              _this9.summary.revenue += element.revenue;
+              _this9.summary.profit += element.revenue * ((100 - element.split) * 0.01);
+            });
+          } //get Tags with selected company
+
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(selectedCompany) {
+            var companyId = selectedCompany.split("/")[1];
+            return this.tagService.getCompanyTags(companyId).toPromise().then(function (response) {
+              return response;
+            })["catch"](function (error) {
+              return error;
             });
           }
         }, {
@@ -5377,7 +5564,7 @@
       }();
 
       PerionComponent.ɵfac = function PerionComponent_Factory(t) {
-        return new (t || PerionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_2__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]));
+        return new (t || PerionComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_2__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]));
       };
 
       PerionComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
@@ -5564,8 +5751,8 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_4__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_7__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_8__["SummaryMetricsComponent"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["PercentPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_5__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_8__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_9__["SummaryMetricsComponent"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["PercentPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL3Blcmlvbi9wZXJpb24uY29tcG9uZW50LnNjc3MifQ== */"]
       });
       /*@__PURE__*/
@@ -5585,6 +5772,8 @@
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
           }, {
             type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]
+          }, {
+            type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]
           }];
         }, {
           table: [{

@@ -1,4 +1,12 @@
 (function () {
+  function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+  function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+  function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+  function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
   function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
   function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -18237,97 +18245,107 @@
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! moment */
+      "./node_modules/moment/moment.js");
+      /* harmony import */
+
+
+      var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+      /* harmony import */
+
+
+      var src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/perion.service */
       "./src/app/shared/service/admin-stats/perion.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! src/app/shared/service/users.service */
       "./src/app/shared/service/users.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/lyon.service */
       "./src/app/shared/service/admin-stats/lyon.service.ts");
       /* harmony import */
 
 
-      var src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/modules/tag-management/tag-management.service */
       "./src/app/modules/tag-management/tag-management.service.ts");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! ../../widgets/lists/lists-widget9/lists-widget9.component */
       "./src/app/_metronic/partials/content/widgets/lists/lists-widget9/lists-widget9.component.ts");
       /* harmony import */
 
 
-      var _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! ../../widgets/stats/stats-widget11/stats-widget11.component */
       "./src/app/_metronic/partials/content/widgets/stats/stats-widget11/stats-widget11.component.ts");
       /* harmony import */
 
 
-      var _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! ../../widgets/stats/stats-widget12/stats-widget12.component */
       "./src/app/_metronic/partials/content/widgets/stats/stats-widget12/stats-widget12.component.ts");
       /* harmony import */
 
 
-      var _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! ../../widgets/lists/lists-widget1/lists-widget1.component */
       "./src/app/_metronic/partials/content/widgets/lists/lists-widget1/lists-widget1.component.ts");
       /* harmony import */
 
 
-      var _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! ../../widgets/advance-tables/advance-tables-widget2/advance-tables-widget2.component */
       "./src/app/_metronic/partials/content/widgets/advance-tables/advance-tables-widget2/advance-tables-widget2.component.ts");
       /* harmony import */
 
 
-      var _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ../../widgets/lists/lists-widget3/lists-widget3.component */
       "./src/app/_metronic/partials/content/widgets/lists/lists-widget3/lists-widget3.component.ts");
       /* harmony import */
 
 
-      var _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! ../../widgets/lists/lists-widget4/lists-widget4.component */
       "./src/app/_metronic/partials/content/widgets/lists/lists-widget4/lists-widget4.component.ts");
       /* harmony import */
 
 
-      var _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! ../../widgets/lists/lists-widget8/lists-widget8.component */
       "./src/app/_metronic/partials/content/widgets/lists/lists-widget8/lists-widget8.component.ts");
       /* harmony import */
 
 
-      var _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      var _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! ../../widgets/mixed/mixed-widget14/mixed-widget14.component */
       "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget14/mixed-widget14.component.ts");
       /* harmony import */
 
 
-      var _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+      var _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
       /*! ../../widgets/advance-tables/advance-tables-widget4/advance-tables-widget4.component */
       "./src/app/_metronic/partials/content/widgets/advance-tables/advance-tables-widget4/advance-tables-widget4.component.ts");
       /* harmony import */
 
 
-      var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+      var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
       /*! ../../widgets/mixed/mixed-widget1/mixed-widget1.component */
       "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget1/mixed-widget1.component.ts");
 
@@ -18353,6 +18371,7 @@
           this.lyonService = lyonService;
           this.tagService = tagService;
           this.tagList = [];
+          this.allDaysList = [];
           this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
         } //Gets the Selected Company from Local Storage
 
@@ -18370,25 +18389,26 @@
                 while (1) {
                   switch (_context.prev = _context.next) {
                     case 0:
-                      _context.next = 2;
+                      this.allDaysList = this.getCurrentMontDateList();
+                      _context.next = 3;
                       return this.getCompanyTags(this.selectedCompany);
 
-                    case 2:
+                    case 3:
                       this.tagList = _context.sent;
-                      _context.next = 5;
+                      _context.next = 6;
                       return this.getPerionChart(this.selectedCompany);
 
-                    case 5:
+                    case 6:
                       this.perionChartData = _context.sent;
-                      _context.next = 8;
+                      _context.next = 9;
                       return this.getLyonChart(this.selectedCompany);
 
-                    case 8:
+                    case 9:
                       this.lyonChartData = _context.sent;
                       this.ChartData = this.perionChartData.concat(this.lyonChartData);
                       this.cdr.markForCheck();
 
-                    case 11:
+                    case 12:
                     case "end":
                       return _context.stop();
                   }
@@ -18471,11 +18491,12 @@
                   return mapObj._id;
                 }).indexOf(obj._id) == pos;
               });
+              filter_data = filter_data.slice().sort(function (a, b) {
+                return a.date - b.date;
+              });
               var helperChart = {};
               filter_data.map(function (f) {
                 f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
               });
               var resultChart = filter_data.reduce(function (r, o) {
                 var key = o.date;
@@ -18503,8 +18524,6 @@
               var helperBeforeChart = {};
               filter_before_data.map(function (f) {
                 f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
               });
               var resultBeforeChart = filter_before_data.reduce(function (r, o) {
                 var key = o.date;
@@ -18531,15 +18550,36 @@
               var revenueCurrentSum = 0;
               var revenueBeforeSum = 0;
 
-              var _iterator2 = _createForOfIteratorHelper(resultChart),
+              var _iterator2 = _createForOfIteratorHelper(_this3.allDaysList),
                   _step2;
 
               try {
                 for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-                  var resVal = _step2.value;
-                  revenueCurrentSum += resVal.revenue;
-                  revenuePerDayVal.push(resVal.revenue);
-                  datesOfRevenueVal.push(resVal.date);
+                  var dayData = _step2.value;
+                  var checkExistDay = resultChart.filter(function (result) {
+                    return result.date == dayData;
+                  });
+
+                  if (checkExistDay.length == 0) {
+                    revenuePerDayVal.push(0);
+                    datesOfRevenueVal.push(dayData);
+                  } else {
+                    var _iterator5 = _createForOfIteratorHelper(checkExistDay),
+                        _step5;
+
+                    try {
+                      for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+                        var resVal = _step5.value;
+                        revenueCurrentSum += resVal.revenue;
+                        revenuePerDayVal.push(resVal.revenue);
+                        datesOfRevenueVal.push(resVal.date);
+                      }
+                    } catch (err) {
+                      _iterator5.e(err);
+                    } finally {
+                      _iterator5.f();
+                    }
+                  }
                 }
               } catch (err) {
                 _iterator2.e(err);
@@ -18587,20 +18627,20 @@
               var chartAllLyonStat = [];
               var chartAllBeforeLyonStat = [];
 
-              var _iterator5 = _createForOfIteratorHelper(_this4.tagList),
-                  _step5;
+              var _iterator6 = _createForOfIteratorHelper(_this4.tagList),
+                  _step6;
 
               try {
-                for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-                  var tagL = _step5.value;
+                for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+                  var tagL = _step6.value;
 
                   if (tagL.tag.advertiser == 'lyons') {
-                    var _iterator8 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step8;
+                    var _iterator9 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step9;
 
                     try {
-                      for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
-                        var tagSub = _step8.value;
+                      for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
+                        var tagSub = _step9.value;
 
                         if (tagSub['filterTag'] == "Contains") {
                           chartAllLyonStat = chartAllLyonStat.concat(_this4.allLyonChart.currentStat.filter(function (stat) {
@@ -18633,23 +18673,26 @@
                         }
                       }
                     } catch (err) {
-                      _iterator8.e(err);
+                      _iterator9.e(err);
                     } finally {
-                      _iterator8.f();
+                      _iterator9.f();
                     }
                   }
                 } //duplicated remove
 
               } catch (err) {
-                _iterator5.e(err);
+                _iterator6.e(err);
               } finally {
-                _iterator5.f();
+                _iterator6.f();
               }
 
               var filter_data = chartAllLyonStat.filter(function (obj, pos, arr) {
                 return arr.map(function (mapObj) {
                   return mapObj._id;
                 }).indexOf(obj._id) == pos;
+              });
+              filter_data = filter_data.slice().sort(function (a, b) {
+                return a.date - b.date;
               });
               var helperChart = {};
               filter_data.map(function (f) {
@@ -18711,36 +18754,57 @@
               var revenueCurrentSum = 0;
               var revenueBeforeSum = 0;
 
-              var _iterator6 = _createForOfIteratorHelper(resultChart),
-                  _step6;
-
-              try {
-                for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
-                  var resVal = _step6.value;
-                  revenueCurrentSum += resVal.revenue;
-                  revenuePerDayVal.push(resVal.revenue);
-                  datesOfRevenueVal.push(resVal.rptDate);
-                }
-              } catch (err) {
-                _iterator6.e(err);
-              } finally {
-                _iterator6.f();
-              }
-
-              var _iterator7 = _createForOfIteratorHelper(resultBeforeChart),
+              var _iterator7 = _createForOfIteratorHelper(_this4.allDaysList),
                   _step7;
 
               try {
                 for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
-                  var resBeforeVal = _step7.value;
-                  revenueBeforeSum += resBeforeVal.revenue;
-                  revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                  datesOfRevenueBeforeVal.push(resBeforeVal.rptDate);
+                  var dayData = _step7.value;
+                  var checkExistDay = resultChart.filter(function (result) {
+                    return result.rptDate == dayData;
+                  });
+
+                  if (checkExistDay.length == 0) {
+                    revenuePerDayVal.push(0);
+                    datesOfRevenueVal.push(dayData);
+                  } else {
+                    var _iterator10 = _createForOfIteratorHelper(checkExistDay),
+                        _step10;
+
+                    try {
+                      for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
+                        var resVal = _step10.value;
+                        revenueCurrentSum += resVal.revenue;
+                        revenuePerDayVal.push(resVal.revenue);
+                        datesOfRevenueVal.push(resVal.rptDate);
+                      }
+                    } catch (err) {
+                      _iterator10.e(err);
+                    } finally {
+                      _iterator10.f();
+                    }
+                  }
                 }
               } catch (err) {
                 _iterator7.e(err);
               } finally {
                 _iterator7.f();
+              }
+
+              var _iterator8 = _createForOfIteratorHelper(resultBeforeChart),
+                  _step8;
+
+              try {
+                for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
+                  var resBeforeVal = _step8.value;
+                  revenueBeforeSum += resBeforeVal.revenue;
+                  revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                  datesOfRevenueBeforeVal.push(resBeforeVal.rptDate);
+                }
+              } catch (err) {
+                _iterator8.e(err);
+              } finally {
+                _iterator8.f();
               }
 
               chartLyonDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -18777,13 +18841,22 @@
               return error;
             });
           }
+        }, {
+          key: "getCurrentMontDateList",
+          value: function getCurrentMontDateList() {
+            var lastThirtyDays = _toConsumableArray(new Array(30)).map(function (i, idx) {
+              return moment__WEBPACK_IMPORTED_MODULE_2__().utc().startOf("day").subtract(idx, "days").toDate().getTime();
+            }).reverse();
+
+            return lastThirtyDays;
+          }
         }]);
 
         return Dashboard1Component;
       }();
 
       Dashboard1Component.ɵfac = function Dashboard1Component_Factory(t) {
-        return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_2__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_4__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_5__["TagManagementService"]));
+        return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_6__["TagManagementService"]));
       };
 
       Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
@@ -18875,7 +18948,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.ChartData);
           }
         },
-        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_7__["ListsWidget9Component"], _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_8__["StatsWidget11Component"], _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_9__["StatsWidget12Component"], _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_10__["ListsWidget1Component"], _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_11__["AdvanceTablesWidget2Component"], _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_12__["ListsWidget3Component"], _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_13__["ListsWidget4Component"], _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_14__["ListsWidget8Component"], _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_15__["MixedWidget14Component"], _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_16__["AdvanceTablesWidget4Component"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_17__["MixedWidget1Component"]],
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_8__["ListsWidget9Component"], _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_9__["StatsWidget11Component"], _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_10__["StatsWidget12Component"], _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_11__["ListsWidget1Component"], _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_12__["AdvanceTablesWidget2Component"], _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_13__["ListsWidget3Component"], _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_14__["ListsWidget4Component"], _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_15__["ListsWidget8Component"], _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_16__["MixedWidget14Component"], _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_17__["AdvanceTablesWidget4Component"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_18__["MixedWidget1Component"]],
         encapsulation: 2
       });
       /*@__PURE__*/
@@ -18889,15 +18962,15 @@
           }]
         }], function () {
           return [{
-            type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_2__["PerionService"]
+            type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__["PerionService"]
           }, {
-            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]
+            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]
           }, {
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
           }, {
-            type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_4__["LyonService"]
+            type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"]
           }, {
-            type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_5__["TagManagementService"]
+            type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_6__["TagManagementService"]
           }];
         }, null);
       })();
@@ -22146,37 +22219,47 @@
       /* harmony import */
 
 
-      var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! moment */
+      "./node_modules/moment/moment.js");
+      /* harmony import */
+
+
+      var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+      /* harmony import */
+
+
+      var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ../../../../../core */
       "./src/app/_metronic/core/index.ts");
       /* harmony import */
 
 
-      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
       "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
-      var _dropdown_menus_dropdown_menu2_dropdown_menu2_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _dropdown_menus_dropdown_menu2_dropdown_menu2_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ../../../dropdown-menus/dropdown-menu2/dropdown-menu2.component */
       "./src/app/_metronic/partials/content/dropdown-menus/dropdown-menu2/dropdown-menu2.component.ts");
       /* harmony import */
 
 
-      var ng_apexcharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var ng_apexcharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ng-apexcharts */
       "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! ng-inline-svg */
       "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
 
@@ -22274,54 +22357,47 @@
             this.allDaysList = this.getCurrentMontDateList();
             this.ChartData = this.getChartData(this.ChartData);
 
-            var _iterator9 = _createForOfIteratorHelper(this.ChartData),
-                _step9;
+            var _iterator11 = _createForOfIteratorHelper(this.ChartData),
+                _step11;
 
             try {
-              for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
-                var chart = _step9.value;
+              for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
+                var chart = _step11.value;
                 this.chartSeries.push({
                   name: chart.statType,
                   data: chart.revenuePerDay
                 });
               }
             } catch (err) {
-              _iterator9.e(err);
+              _iterator11.e(err);
             } finally {
-              _iterator9.f();
+              _iterator11.f();
             }
 
             this.chartOptions = this.getChartOptions(this.chartSeries);
 
-            var _iterator10 = _createForOfIteratorHelper(this.ChartData),
-                _step10;
+            var _iterator12 = _createForOfIteratorHelper(this.ChartData),
+                _step12;
 
             try {
-              for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
-                var subChart = _step10.value;
+              for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
+                var subChart = _step12.value;
                 this.chartSubOptions.push(this.getSubChartOptions(subChart));
               }
             } catch (err) {
-              _iterator10.e(err);
+              _iterator12.e(err);
             } finally {
-              _iterator10.f();
+              _iterator12.f();
             }
           }
         }, {
           key: "getCurrentMontDateList",
           value: function getCurrentMontDateList() {
-            var date = new Date();
-            var month = date.getMonth();
-            date.setDate(1);
-            var all_days = [];
+            var lastThirtyDays = _toConsumableArray(new Array(30)).map(function (i, idx) {
+              return moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(idx, "days").format("MM-DD");
+            }).reverse();
 
-            while (date.getMonth() == month) {
-              var d = (date.getMonth() + 1).toString().padStart(2, '0') + '-' + date.getDate().toString().padStart(2, '0');
-              all_days.push(d);
-              date.setDate(date.getDate() + 1);
-            }
-
-            return all_days;
+            return lastThirtyDays;
           }
         }, {
           key: "getChartOptions",
@@ -22478,9 +22554,12 @@
               },
               xaxis: {
                 type: "datetime",
-                categories: this.allDaysList,
+                categories: subChart.datesOfRevenue,
                 labels: {
                   format: 'MM-dd'
+                },
+                axisTicks: {
+                  show: true
                 }
               },
               yaxis: {
@@ -22516,7 +22595,7 @@
       }();
 
       MixedWidget1Component.ɵfac = function MixedWidget1Component_Factory(t) {
-        return new (t || MixedWidget1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core__WEBPACK_IMPORTED_MODULE_1__["LayoutService"]));
+        return new (t || MixedWidget1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core__WEBPACK_IMPORTED_MODULE_2__["LayoutService"]));
       };
 
       MixedWidget1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -22635,7 +22714,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/Communication/Urgent-mail.svg");
           }
         },
-        directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdown"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdownToggle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbDropdownMenu"], _dropdown_menus_dropdown_menu2_dropdown_menu2_component__WEBPACK_IMPORTED_MODULE_3__["DropdownMenu2Component"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_4__["ChartComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgClass"]],
+        directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbDropdown"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbDropdownToggle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbDropdownMenu"], _dropdown_menus_dropdown_menu2_dropdown_menu2_component__WEBPACK_IMPORTED_MODULE_4__["DropdownMenu2Component"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_5__["ChartComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgClass"]],
         encapsulation: 2
       });
       /*@__PURE__*/
@@ -22649,7 +22728,7 @@
           }]
         }], function () {
           return [{
-            type: _core__WEBPACK_IMPORTED_MODULE_1__["LayoutService"]
+            type: _core__WEBPACK_IMPORTED_MODULE_2__["LayoutService"]
           }];
         }, {
           ChartData: [{
