@@ -2924,13 +2924,15 @@ class PerionComponent {
                     }
                 }
             }
-            var helper = new Set();
-            //duplicated remove
-            let filtered_data = this.allStat.filter((perionStat) => {
-                const key = JSON.stringify([perionStat.date, perionStat.subid]);
-                return !helper.has(key) && helper.add(key);
-            });
-            return filtered_data.slice().sort((a, b) => b.date - a.date);
+            // var helper = new Set();
+            // //duplicated remove
+            // let filtered_data = this.allStat.filter((perionStat) => {
+            //   const key = JSON.stringify([perionStat.date, perionStat.subid]);
+            //   return !helper.has(key) && helper.add(key);
+            // });
+            // console.log("=========", filtered_data.length)
+            //return filtered_data.slice().sort((a, b) => b.date - a.date);
+            return this.allStat;
         })
             .catch((error) => {
             return error;
@@ -2942,225 +2944,214 @@ class PerionComponent {
     getSummaryMetrics(company) {
         return this.perionService.getSummaryMetrics(company).toPromise().then((response) => {
             console.log('Got summary metrics');
-            this.currentMonthData = response.summary[0].summaryMetrics;
-            this.beforeMonthData = response.summary[0].lastMonthStat;
-            this.twoBeforeMonthData = response.summary[0].twoLastMonthStat;
-            var dayInCurrentMonth = response.summary[0].dayInCurrentMonth;
-            var dayInBeforeMonth = response.summary[0].dayInBeforeMonth;
-            var dayInTwoBeforeMonth = response.summary[0].dayInTwoBeforeMonth;
-            var summaryCurrentStat = [];
+            // console.log("===============", response)
+            // this.currentMonthData = response.summary[0].summaryMetrics;
+            // this.beforeMonthData = response.summary[0].lastMonthStat;  
+            // this.twoBeforeMonthData = response.summary[0].twoLastMonthStat;  
+            // var dayInCurrentMonth = response.summary[0].dayInCurrentMonth;
+            // var dayInBeforeMonth = response.summary[0].dayInBeforeMonth;
+            // var dayInTwoBeforeMonth = response.summary[0].dayInTwoBeforeMonth;
+            // var summaryCurrentStat = [];
             //current data get part
-            for (var tagL of this.tagList) {
-                for (var tagSub of tagL.tag.subids) {
-                    if (tagSub.filterTag == "Contains") {
-                        summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.includes(tagSub.subid)));
-                        summaryCurrentStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "StartsWith") {
-                        summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)));
-                        summaryCurrentStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "EndsWith") {
-                        summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)));
-                        summaryCurrentStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "ExactValue") {
-                        summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid == tagSub.subid));
-                        summaryCurrentStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                }
-            }
-            // //duplicated remove
-            let filter_data = summaryCurrentStat.filter((obj, pos, arr) => {
-                return arr
-                    .map(mapObj => mapObj._id)
-                    .indexOf(obj._id) == pos;
-            });
-            var helperSummary = {};
-            filter_data.map(f => {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
-            });
-            var resultSummary = filter_data.reduce(function (r, o) {
-                var key = o.rptDate;
-                if (!helperSummary[key]) {
-                    helperSummary[key] = Object.assign({}, o); // create a copy of o
-                    r.push(helperSummary[key]);
-                }
-                else {
-                    helperSummary[key].searches += parseInt(o.searches);
-                    if (o.revenue) {
-                        helperSummary[key].revenue += o.revenue;
-                    }
-                }
-                return r;
-            }, []);
-            var monthRevenue = 0;
-            var monthProfit = 0;
-            var monthRevenuePace = 0;
-            var profitPace = 0;
-            for (var sumData of resultSummary) {
-                monthRevenue += sumData.revenue;
-                monthProfit += sumData.revenue * (100 - sumData.split) * 0.01;
-                monthRevenuePace += (monthRevenue / resultSummary.length) * dayInCurrentMonth;
-                profitPace += (monthProfit / resultSummary.length) * dayInCurrentMonth;
-            }
-            //before month data get part
-            var summaryBeforeStat = [];
-            for (var tagL of this.tagList) {
-                for (var tagSub of tagL.tag.subids) {
-                    if (tagSub.filterTag == "Contains") {
-                        summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)));
-                        summaryBeforeStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "StartsWith") {
-                        summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)));
-                    }
-                    else if (tagSub.filterTag == "EndsWith") {
-                        summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)));
-                    }
-                    else if (tagSub.filterTag == "ExactValue") {
-                        summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid == tagSub.subid));
-                    }
-                }
-            }
-            // //duplicated remove
-            let filt_data = summaryBeforeStat.filter((obj, pos, arr) => {
-                return arr
-                    .map(mapObj => mapObj._id)
-                    .indexOf(obj._id) == pos;
-            });
-            var helperBeforeSummary = {};
-            filt_data.map(f => {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
-            });
-            var resultBeforeSummary = filt_data.reduce(function (r, o) {
-                var key = o.rptDate;
-                if (!helperBeforeSummary[key]) {
-                    helperBeforeSummary[key] = Object.assign({}, o); // create a copy of o
-                    r.push(helperBeforeSummary[key]);
-                }
-                else {
-                    helperBeforeSummary[key].searches += parseInt(o.searches);
-                    if (o.revenue) {
-                        helperBeforeSummary[key].revenue += o.revenue;
-                    }
-                }
-                return r;
-            }, []);
-            var monthBeforeRevenue = 0;
-            var monthBeforeProfit = 0;
-            var monthBeforeRevenuePace = 0;
-            var profitBeforePace = 0;
-            for (var sumBeforeData of resultBeforeSummary) {
-                monthBeforeRevenue += sumBeforeData.revenue;
-                monthBeforeProfit += sumBeforeData.revenue * (100 - sumBeforeData.split) * 0.01;
-                monthBeforeRevenuePace += (monthBeforeRevenue / resultBeforeSummary.length) * dayInBeforeMonth;
-                profitBeforePace += (monthBeforeProfit / resultBeforeSummary.length) * dayInBeforeMonth;
-            }
-            //tow before month data get part
-            var summaryTwoBeforeStat = [];
-            for (var tagL of this.tagList) {
-                for (var tagSub of tagL.tag.subids) {
-                    if (tagSub.filterTag == "Contains") {
-                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)));
-                        summaryTwoBeforeStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "StartsWith") {
-                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)));
-                    }
-                    else if (tagSub.filterTag == "EndsWith") {
-                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)));
-                    }
-                    else if (tagSub.filterTag == "ExactValue") {
-                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid == tagSub.subid));
-                    }
-                }
-            }
-            // //duplicated remove
-            let filter_two_data = summaryTwoBeforeStat.filter((obj, pos, arr) => {
-                return arr
-                    .map(mapObj => mapObj._id)
-                    .indexOf(obj._id) == pos;
-            });
-            var helperTwoBeforeSummary = {};
-            filter_two_data.map(f => {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
-            });
-            var resultTwoBeforeSummary = filter_two_data.reduce(function (r, o) {
-                var key = o.rptDate;
-                if (!helperTwoBeforeSummary[key]) {
-                    helperTwoBeforeSummary[key] = Object.assign({}, o); // create a copy of o
-                    r.push(helperTwoBeforeSummary[key]);
-                }
-                else {
-                    helperTwoBeforeSummary[key].searches += parseInt(o.searches);
-                    if (o.revenue) {
-                        helperTwoBeforeSummary[key].revenue += o.revenue;
-                    }
-                }
-                return r;
-            }, []);
-            var monthTwoBeforeRevenue = 0;
-            var monthTwoBeforeProfit = 0;
-            var monthTwoBeforeRevenuePace = 0;
-            var profitTwoBeforePace = 0;
-            for (var sumTwoBeforeData of resultTwoBeforeSummary) {
-                monthTwoBeforeRevenue += sumTwoBeforeData.revenue;
-                monthTwoBeforeProfit += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01;
-                monthTwoBeforeRevenuePace += (monthTwoBeforeRevenue / resultTwoBeforeSummary.length) * dayInTwoBeforeMonth;
-                profitTwoBeforePace += (monthTwoBeforeProfit / resultTwoBeforeSummary.length) * dayInTwoBeforeMonth;
-            }
-            var currentPercentPace = 0;
-            var lastPercentPace = 0;
-            if (profitBeforePace != 0) {
-                currentPercentPace = ((profitPace - profitBeforePace) / profitBeforePace) * 100;
-            }
-            if (profitTwoBeforePace != 0) {
-                lastPercentPace = ((profitBeforePace - profitTwoBeforePace) / profitTwoBeforePace) * 100;
-            }
-            var summaryFinalData = [];
-            summaryFinalData.push({
-                summaryMetrics: [{
-                        revenue: monthRevenue,
-                        revenuePace: monthRevenuePace,
-                        profit: monthProfit,
-                        profitPace: profitPace,
-                        percentPace: currentPercentPace
-                    }],
-                lastMonthStat: [{
-                        revenue: monthBeforeRevenue,
-                        revenuePace: monthBeforeRevenuePace,
-                        profit: monthBeforeProfit,
-                        profitPace: profitBeforePace,
-                        percentPace: lastPercentPace
-                    }]
-            });
+            // for (var tagL of this.tagList) {
+            //   for (var tagSub of tagL.tag.subids) {
+            //     if(tagSub.filterTag =="Contains") {
+            //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+            //       summaryCurrentStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     } else if (tagSub.filterTag =="StartsWith") {
+            //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+            //       summaryCurrentStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     } else if (tagSub.filterTag =="EndsWith") {
+            //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+            //       summaryCurrentStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     } else if (tagSub.filterTag =="ExactValue") {
+            //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid == tagSub.subid ))
+            //       summaryCurrentStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     }
+            //   }
+            // }
+            // // //duplicated remove
+            // let filter_data = summaryCurrentStat.filter((obj, pos, arr) => {
+            //   return arr
+            //     .map(mapObj => mapObj._id)
+            //     .indexOf(obj._id) == pos;
+            // });
+            // var helperSummary = {};
+            // filter_data.map(f =>{
+            //   f.revenue = parseFloat(f.revenue);
+            //   f.ctr = parseFloat(f.ctr);
+            //   f.biddedCtr = parseFloat(f.biddedCTR);
+            // })
+            // var resultSummary = filter_data.reduce(function(r, o) {
+            //   var key = o.rptDate;
+            //   if(!helperSummary[key]) {
+            //     helperSummary[key] = Object.assign({}, o); // create a copy of o
+            //     r.push(helperSummary[key]);
+            //   } else {
+            //     helperSummary[key].searches += parseInt(o.searches);
+            //     if(o.revenue) {
+            //       helperSummary[key].revenue += o.revenue;
+            //     }
+            //   } 
+            //   return r;
+            // }, []);
+            // var monthRevenue = 0;
+            // var monthProfit = 0;
+            // var monthRevenuePace = 0;
+            // var profitPace = 0;
+            // for(var sumData of resultSummary) {
+            //   monthRevenue += sumData.revenue;
+            //   monthProfit += sumData.revenue *(100 - sumData.split) * 0.01;
+            //   monthRevenuePace += (monthRevenue/resultSummary.length) * dayInCurrentMonth;
+            //   profitPace += (monthProfit/resultSummary.length)*dayInCurrentMonth;
+            // }
+            // //before month data get part
+            // var summaryBeforeStat = [];
+            // for (var tagL of this.tagList) {
+            //   for (var tagSub of tagL.tag.subids) {
+            //     if(tagSub.filterTag =="Contains") {
+            //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+            //       summaryBeforeStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     } else if (tagSub.filterTag =="StartsWith") {
+            //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+            //     } else if (tagSub.filterTag =="EndsWith") {
+            //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+            //     } else if (tagSub.filterTag =="ExactValue") {
+            //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid == tagSub.subid ))
+            //     }
+            //   }
+            // }
+            // // //duplicated remove
+            // let filt_data = summaryBeforeStat.filter((obj, pos, arr) => {
+            //   return arr
+            //     .map(mapObj => mapObj._id)
+            //     .indexOf(obj._id) == pos;
+            // });
+            // var helperBeforeSummary = {};
+            // filt_data.map(f =>{
+            //   f.revenue = parseFloat(f.revenue);
+            //   f.ctr = parseFloat(f.ctr);
+            //   f.biddedCtr = parseFloat(f.biddedCTR);
+            // })
+            // var resultBeforeSummary = filt_data.reduce(function(r, o) {
+            //   var key = o.rptDate;
+            //   if(!helperBeforeSummary[key]) {
+            //     helperBeforeSummary[key] = Object.assign({}, o); // create a copy of o
+            //     r.push(helperBeforeSummary[key]);
+            //   } else {
+            //     helperBeforeSummary[key].searches += parseInt(o.searches);
+            //     if(o.revenue) {
+            //       helperBeforeSummary[key].revenue += o.revenue;
+            //     }
+            //   } 
+            //   return r;
+            // }, []);
+            // var monthBeforeRevenue = 0;
+            // var monthBeforeProfit = 0;
+            // var monthBeforeRevenuePace = 0;
+            // var profitBeforePace = 0;
+            // for(var sumBeforeData of resultBeforeSummary) {
+            //   monthBeforeRevenue += sumBeforeData.revenue;
+            //   monthBeforeProfit += sumBeforeData.revenue *(100 - sumBeforeData.split) * 0.01;
+            //   monthBeforeRevenuePace += (monthBeforeRevenue/resultBeforeSummary.length) * dayInBeforeMonth;
+            //   profitBeforePace += (monthBeforeProfit/resultBeforeSummary.length)*dayInBeforeMonth;
+            // }
+            // //tow before month data get part
+            // var summaryTwoBeforeStat = [];
+            // for (var tagL of this.tagList) {
+            //   for (var tagSub of tagL.tag.subids) {
+            //     if(tagSub.filterTag =="Contains") {
+            //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+            //       summaryTwoBeforeStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     } else if (tagSub.filterTag =="StartsWith") {
+            //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+            //     } else if (tagSub.filterTag =="EndsWith") {
+            //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+            //     } else if (tagSub.filterTag =="ExactValue") {
+            //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid == tagSub.subid ))
+            //     }
+            //   }
+            // }
+            // // //duplicated remove
+            // let filter_two_data = summaryTwoBeforeStat.filter((obj, pos, arr) => {
+            //   return arr
+            //     .map(mapObj => mapObj._id)
+            //     .indexOf(obj._id) == pos;
+            // });
+            // var helperTwoBeforeSummary = {};
+            // filter_two_data.map(f =>{
+            //   f.revenue = parseFloat(f.revenue);
+            //   f.ctr = parseFloat(f.ctr);
+            //   f.biddedCtr = parseFloat(f.biddedCTR);
+            // })
+            // var resultTwoBeforeSummary = filter_two_data.reduce(function(r, o) {
+            //   var key = o.rptDate;
+            //   if(!helperTwoBeforeSummary[key]) {
+            //     helperTwoBeforeSummary[key] = Object.assign({}, o); // create a copy of o
+            //     r.push(helperTwoBeforeSummary[key]);
+            //   } else {
+            //     helperTwoBeforeSummary[key].searches += parseInt(o.searches);
+            //     if(o.revenue) {
+            //       helperTwoBeforeSummary[key].revenue += o.revenue;
+            //     }
+            //   } 
+            //   return r;
+            // }, []);
+            // var monthTwoBeforeRevenue = 0;
+            // var monthTwoBeforeProfit = 0;
+            // var monthTwoBeforeRevenuePace = 0;
+            // var profitTwoBeforePace = 0;
+            // for(var sumTwoBeforeData of resultTwoBeforeSummary) {
+            //   monthTwoBeforeRevenue += sumTwoBeforeData.revenue;
+            //   monthTwoBeforeProfit += sumTwoBeforeData.revenue *(100 - sumTwoBeforeData.split) * 0.01;
+            //   monthTwoBeforeRevenuePace += (monthTwoBeforeRevenue/resultTwoBeforeSummary.length) * dayInTwoBeforeMonth;
+            //   profitTwoBeforePace += (monthTwoBeforeProfit/resultTwoBeforeSummary.length)*dayInTwoBeforeMonth;
+            // }
+            // var currentPercentPace = 0;
+            // var lastPercentPace = 0;
+            // if (profitBeforePace != 0) {
+            //   currentPercentPace = ((profitPace - profitBeforePace) / profitBeforePace) * 100
+            // }
+            // if (profitTwoBeforePace != 0) {
+            //   lastPercentPace = ((profitBeforePace - profitTwoBeforePace) / profitTwoBeforePace) * 100
+            // }
+            // var summaryFinalData = [];
+            // summaryFinalData.push({
+            //   summaryMetrics: [{
+            //     revenue: monthRevenue,
+            //     revenuePace: monthRevenuePace,
+            //     profit: monthProfit,
+            //     profitPace: profitPace,
+            //     percentPace: currentPercentPace
+            //   }],
+            //   lastMonthStat: [{
+            //     revenue: monthBeforeRevenue,
+            //     revenuePace: monthBeforeRevenuePace,
+            //     profit: monthBeforeProfit,
+            //     profitPace: profitBeforePace,
+            //     percentPace: lastPercentPace
+            //   }]
+            // });
             var allSummary = {};
-            allSummary['summary'] = summaryFinalData;
+            allSummary['summary'] = response.summary;
             return allSummary;
         })
             .catch((error) => {
@@ -3172,7 +3163,7 @@ class PerionComponent {
             .getAllPerionStats(company, startDate, endDate)
             .toPromise()
             .then((response) => {
-            console.log('getAllPerionStats() response:');
+            // console.log('getAllPerionStats() response:');
             this.allChartStat = response.stats;
             // var allChartPerionStat = [];
             // for (var tagL of this.tagList) {
@@ -3206,15 +3197,15 @@ class PerionComponent {
             //     }
             //   }
             // }
-            var helper = new Set();
+            // var helper = new Set();
             //duplicated remove
-            let filtered_data = this.allChartStat.filter((perionStat) => {
-                const key = JSON.stringify([perionStat.date, perionStat.subid]);
-                return !helper.has(key) && helper.add(key);
-            });
-            filtered_data = filtered_data.slice().sort((a, b) => a.date - b.date);
+            // let filtered_data = this.allChartStat.filter((perionStat) => {
+            //   const key = JSON.stringify([perionStat.date, perionStat.subid]);
+            //   return !helper.has(key) && helper.add(key);
+            // });
+            this.allChartStat = this.allChartStat.slice().sort((a, b) => a.date - b.date);
             var helperChart = {};
-            var resultChart = filtered_data.reduce(function (r, o) {
+            var resultChart = this.allChartStat.reduce(function (r, o) {
                 var key = o.date;
                 if (!helperChart[key]) {
                     helperChart[key] = Object.assign({}, o); // create a copy of o
