@@ -3151,6 +3151,16 @@ class PerionComponent {
             //   }]
             // });
             var allSummary = {};
+            var currentPercentPace = 0;
+            var lastPercentPace = 0;
+            if (response.summary[0].lastMonthStat[0].profitPace != 0) {
+                currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / (response.summary[0].lastMonthStat[0].profitPace) * 100;
+            }
+            if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
+                lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / (response.summary[0].twoLastMonthStat[0].profitPace) * 100;
+            }
+            response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
+            response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
             allSummary['summary'] = response.summary;
             return allSummary;
         })
