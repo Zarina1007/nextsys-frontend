@@ -1714,43 +1714,51 @@ class LyonsComponent {
     getAllLyonStats(startDate, endDate) {
         return this.lyonService.getAllStats(startDate, endDate).toPromise().then((response) => {
             this.allstat = response;
-            var allLyonStat = [];
+            this.allstat.map(function (resStat) {
+                resStat.publisher = "No Publisher";
+                resStat.tagname = "No Tag";
+            });
+            // var allLyonStat = [];
             for (var tagL of this.tagList) {
                 if (tagL.tag.advertiser == "lyons") {
                     for (var tagSub of tagL.tag.subids) {
                         if (tagSub.filterTag == "Contains") {
-                            allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid.includes(tagSub.subid)));
-                            allLyonStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
+                            this.allstat.map(stat => {
+                                if (stat.subid.includes(tagSub.subid)) {
+                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.tagname = tagL.tag.name;
+                                }
                             });
                         }
                         else if (tagSub.filterTag == "StartsWith") {
-                            allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid.startsWith(tagSub.subid)));
-                            allLyonStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
+                            this.allstat.map(stat => {
+                                if (stat.subid.startsWith(tagSub.subid)) {
+                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.tagname = tagL.tag.name;
+                                }
                             });
                         }
                         else if (tagSub.filterTag == "EndsWith") {
-                            allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid.endsWith(tagSub.subid)));
-                            allLyonStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
+                            this.allstat.map(stat => {
+                                if (stat.subid.endsWith(tagSub.subid)) {
+                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.tagname = tagL.tag.name;
+                                }
                             });
                         }
                         else if (tagSub.filterTag == "ExactValue") {
-                            allLyonStat = allLyonStat.concat(this.allstat.filter(stat => stat.subid == tagSub.subid));
-                            allLyonStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
+                            this.allstat.map(stat => {
+                                if (stat.subid == tagSub.subid) {
+                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.tagname = tagL.tag.name;
+                                }
                             });
                         }
                     }
                 }
             }
             //duplicated remove
-            let filtered_data = allLyonStat.filter((obj, pos, arr) => {
+            let filtered_data = this.allstat.filter((obj, pos, arr) => {
                 return arr
                     .map(mapObj => mapObj._id)
                     .indexOf(obj._id) == pos;
@@ -1823,39 +1831,36 @@ class LyonsComponent {
             var dayInTwoBeforeMonth = response[0].dayInTwoBeforeMonth;
             var summaryCurrentStat = [];
             //current data get part
-            for (var tagL of this.tagList) {
-                for (var tagSub of tagL.tag.subids) {
-                    if (tagSub.filterTag == "Contains") {
-                        summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.includes(tagSub.subid)));
-                        summaryCurrentStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "StartsWith") {
-                        summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)));
-                    }
-                    else if (tagSub.filterTag == "EndsWith") {
-                        summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)));
-                    }
-                    else if (tagSub.filterTag == "ExactValue") {
-                        summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid == tagSub.subid));
-                    }
-                }
-            }
+            // for (var tagL of this.tagList) {
+            //   for (var tagSub of tagL.tag.subids) {
+            //     if(tagSub.filterTag =="Contains") {
+            //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+            //       summaryCurrentStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     } else if (tagSub.filterTag =="StartsWith") {
+            //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+            //     } else if (tagSub.filterTag =="EndsWith") {
+            //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+            //     } else if (tagSub.filterTag =="ExactValue") {
+            //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid == tagSub.subid ))
+            //     }
+            //   }
+            // }
             // //duplicated remove
-            let filter_data = summaryCurrentStat.filter((obj, pos, arr) => {
-                return arr
-                    .map(mapObj => mapObj._id)
-                    .indexOf(obj._id) == pos;
-            });
+            // let filter_data = summaryCurrentStat.filter((obj, pos, arr) => {
+            //   return arr
+            //     .map(mapObj => mapObj._id)
+            //     .indexOf(obj._id) == pos;
+            // });
             var helperSummary = {};
-            filter_data.map(f => {
+            this.currentMonthData.map(f => {
                 f.revenue = parseFloat(f.revenue);
                 f.ctr = parseFloat(f.ctr);
                 f.biddedCtr = parseFloat(f.biddedCTR);
             });
-            var resultSummary = filter_data.reduce(function (r, o) {
+            var resultSummary = this.currentMonthData.reduce(function (r, o) {
                 var key = o.rptDate;
                 if (!helperSummary[key]) {
                     helperSummary[key] = Object.assign({}, o); // create a copy of o
@@ -1880,40 +1885,37 @@ class LyonsComponent {
                 profitPace += (monthProfit / resultSummary.length) * dayInCurrentMonth;
             }
             //before month data get part
-            var summaryBeforeStat = [];
-            for (var tagL of this.tagList) {
-                for (var tagSub of tagL.tag.subids) {
-                    if (tagSub.filterTag == "Contains") {
-                        summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)));
-                        summaryBeforeStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "StartsWith") {
-                        summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)));
-                    }
-                    else if (tagSub.filterTag == "EndsWith") {
-                        summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)));
-                    }
-                    else if (tagSub.filterTag == "ExactValue") {
-                        summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid == tagSub.subid));
-                    }
-                }
-            }
-            // //duplicated remove
-            let filt_data = summaryBeforeStat.filter((obj, pos, arr) => {
-                return arr
-                    .map(mapObj => mapObj._id)
-                    .indexOf(obj._id) == pos;
-            });
+            // var summaryBeforeStat = [];
+            // for (var tagL of this.tagList) {
+            //   for (var tagSub of tagL.tag.subids) {
+            //     if(tagSub.filterTag =="Contains") {
+            //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+            //       summaryBeforeStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     } else if (tagSub.filterTag =="StartsWith") {
+            //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+            //     } else if (tagSub.filterTag =="EndsWith") {
+            //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+            //     } else if (tagSub.filterTag =="ExactValue") {
+            //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid == tagSub.subid ))
+            //     }
+            //   }
+            // }
+            // // //duplicated remove
+            // let filt_data = summaryBeforeStat.filter((obj, pos, arr) => {
+            //   return arr
+            //     .map(mapObj => mapObj._id)
+            //     .indexOf(obj._id) == pos;
+            // });
             var helperBeforeSummary = {};
-            filt_data.map(f => {
+            this.beforeMonthData.map(f => {
                 f.revenue = parseFloat(f.revenue);
                 f.ctr = parseFloat(f.ctr);
                 f.biddedCtr = parseFloat(f.biddedCTR);
             });
-            var resultBeforeSummary = filt_data.reduce(function (r, o) {
+            var resultBeforeSummary = this.beforeMonthData.reduce(function (r, o) {
                 var key = o.rptDate;
                 if (!helperBeforeSummary[key]) {
                     helperBeforeSummary[key] = Object.assign({}, o); // create a copy of o
@@ -1938,40 +1940,37 @@ class LyonsComponent {
                 profitBeforePace += (monthBeforeProfit / resultBeforeSummary.length) * dayInBeforeMonth;
             }
             //tow before month data get part
-            var summaryTwoBeforeStat = [];
-            for (var tagL of this.tagList) {
-                for (var tagSub of tagL.tag.subids) {
-                    if (tagSub.filterTag == "Contains") {
-                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)));
-                        summaryTwoBeforeStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "StartsWith") {
-                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)));
-                    }
-                    else if (tagSub.filterTag == "EndsWith") {
-                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)));
-                    }
-                    else if (tagSub.filterTag == "ExactValue") {
-                        summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid == tagSub.subid));
-                    }
-                }
-            }
-            // //duplicated remove
-            let filter_two_data = summaryTwoBeforeStat.filter((obj, pos, arr) => {
-                return arr
-                    .map(mapObj => mapObj._id)
-                    .indexOf(obj._id) == pos;
-            });
+            // var summaryTwoBeforeStat = [];
+            // for (var tagL of this.tagList) {
+            //   for (var tagSub of tagL.tag.subids) {
+            //     if(tagSub.filterTag =="Contains") {
+            //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+            //       summaryTwoBeforeStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     } else if (tagSub.filterTag =="StartsWith") {
+            //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+            //     } else if (tagSub.filterTag =="EndsWith") {
+            //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+            //     } else if (tagSub.filterTag =="ExactValue") {
+            //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid == tagSub.subid ))
+            //     }
+            //   }
+            // }
+            // // //duplicated remove
+            // let filter_two_data = summaryTwoBeforeStat.filter((obj, pos, arr) => {
+            //   return arr
+            //     .map(mapObj => mapObj._id)
+            //     .indexOf(obj._id) == pos;
+            // });
             var helperTwoBeforeSummary = {};
-            filter_two_data.map(f => {
+            this.twoBeforeMonthData.map(f => {
                 f.revenue = parseFloat(f.revenue);
                 f.ctr = parseFloat(f.ctr);
                 f.biddedCtr = parseFloat(f.biddedCTR);
             });
-            var resultTwoBeforeSummary = filter_two_data.reduce(function (r, o) {
+            var resultTwoBeforeSummary = this.twoBeforeMonthData.reduce(function (r, o) {
                 var key = o.rptDate;
                 if (!helperTwoBeforeSummary[key]) {
                     helperTwoBeforeSummary[key] = Object.assign({}, o); // create a copy of o
@@ -2032,52 +2031,49 @@ class LyonsComponent {
     getChartMetrics(company, startDate, endDate) {
         return this.lyonService.getAllStats(startDate, endDate).toPromise().then((response) => {
             this.allChart = response;
-            var chartAllLyonStat = [];
-            for (var tagL of this.tagList) {
-                for (var tagSub of tagL.tag.subids) {
-                    if (tagSub.filterTag == "Contains") {
-                        chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.includes(tagSub.subid)));
-                        chartAllLyonStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "StartsWith") {
-                        chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.startsWith(tagSub.subid)));
-                        chartAllLyonStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "EndsWith") {
-                        chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.endsWith(tagSub.subid)));
-                        chartAllLyonStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                    else if (tagSub.filterTag == "ExactValue") {
-                        chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid == tagSub.subid));
-                        chartAllLyonStat.map(stat => {
-                            stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                            stat.tagname = tagL.tag.name;
-                        });
-                    }
-                }
-            }
+            // var chartAllLyonStat = [];
+            // for (var tagL of this.tagList) {
+            //   for (var tagSub of tagL.tag.subids) {
+            //     if(tagSub.filterTag =="Contains") {
+            //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.includes(tagSub.subid)))
+            //       chartAllLyonStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     } else if (tagSub.filterTag =="StartsWith") {
+            //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.startsWith(tagSub.subid)))
+            //       chartAllLyonStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     } else if (tagSub.filterTag =="EndsWith") {
+            //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.endsWith(tagSub.subid)))
+            //       chartAllLyonStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     } else if (tagSub.filterTag =="ExactValue") {
+            //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid == tagSub.subid ))
+            //       chartAllLyonStat.map(stat => {
+            //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //         stat.tagname = tagL.tag.name
+            //       })
+            //     }
+            //   }
+            // }
             //duplicated remove
-            let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
-                return arr
-                    .map(mapObj => mapObj._id)
-                    .indexOf(obj._id) == pos;
-            });
+            // let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
+            //   return arr
+            //     .map(mapObj => mapObj._id)
+            //     .indexOf(obj._id) == pos;
+            // });
             var helperChart = {};
-            filter_data.map(f => {
+            this.allChart.map(f => {
                 f.revenue = parseFloat(f.revenue);
                 f.ctr = parseFloat(f.ctr);
                 f.biddedCtr = parseFloat(f.biddedCTR);
             });
-            var resultChart = filter_data.reduce(function (r, o) {
+            var resultChart = this.allChart.reduce(function (r, o) {
                 var key = o.rptDate;
                 if (!helperChart[key]) {
                     helperChart[key] = Object.assign({}, o); // create a copy of o
@@ -2884,38 +2880,45 @@ class PerionComponent {
             .toPromise()
             .then((response) => {
             console.log('getAllPerionStats() response:');
-            //console.log(response.stats);
+            // console.log(response.stats);
             this.allStat = response.stats;
-            var allPerionStat = [];
+            this.allStat.map(function (resStat) {
+                resStat.publisher = "No Publisher";
+                resStat.tagname = "No Tag";
+            });
             for (var tagL of this.tagList) {
                 if (tagL.tag.advertiser == "perion") {
                     for (var tagSub of tagL.tag.subids) {
                         if (tagSub.filterTag == "Contains") {
-                            allPerionStat = allPerionStat.concat(this.allStat.filter(stat => stat.subid.includes(tagSub.subid)));
-                            allPerionStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
+                            this.allStat.map(stat => {
+                                if (stat.subid.includes(tagSub.subid)) {
+                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.tagname = tagL.tag.name;
+                                }
                             });
                         }
                         else if (tagSub.filterTag == "StartsWith") {
-                            allPerionStat = allPerionStat.concat(this.allStat.filter(stat => stat.subid.startsWith(tagSub.subid)));
-                            allPerionStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
+                            this.allStat.map(stat => {
+                                if (stat.subid.startsWith(tagSub.subid)) {
+                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.tagname = tagL.tag.name;
+                                }
                             });
                         }
                         else if (tagSub.filterTag == "EndsWith") {
-                            allPerionStat = allPerionStat.concat(this.allStat.filter(stat => stat.subid.endsWith(tagSub.subid)));
-                            allPerionStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
+                            this.allStat.map(stat => {
+                                if (stat.subid.endsWith(tagSub.subid)) {
+                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.tagname = tagL.tag.name;
+                                }
                             });
                         }
                         else if (tagSub.filterTag == "ExactValue") {
-                            allPerionStat = allPerionStat.concat(this.allStat.filter(stat => stat.subid == tagSub.subid));
-                            allPerionStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
+                            this.allStat.map(stat => {
+                                if (stat.subid == tagSub.subid) {
+                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.tagname = tagL.tag.name;
+                                }
                             });
                         }
                     }
@@ -2923,7 +2926,7 @@ class PerionComponent {
             }
             var helper = new Set();
             //duplicated remove
-            let filtered_data = allPerionStat.filter((perionStat) => {
+            let filtered_data = this.allStat.filter((perionStat) => {
                 const key = JSON.stringify([perionStat.date, perionStat.subid]);
                 return !helper.has(key) && helper.add(key);
             });
@@ -3171,44 +3174,41 @@ class PerionComponent {
             .then((response) => {
             console.log('getAllPerionStats() response:');
             this.allChartStat = response.stats;
-            var allChartPerionStat = [];
-            for (var tagL of this.tagList) {
-                if (tagL.tag.advertiser == "perion") {
-                    for (var tagSub of tagL.tag.subids) {
-                        if (tagSub.filterTag == "Contains") {
-                            allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.includes(tagSub.subid)));
-                            allChartPerionStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
-                            });
-                        }
-                        else if (tagSub.filterTag == "StartsWith") {
-                            allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.startsWith(tagSub.subid)));
-                            allChartPerionStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
-                            });
-                        }
-                        else if (tagSub.filterTag == "EndsWith") {
-                            allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.endsWith(tagSub.subid)));
-                            allChartPerionStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
-                            });
-                        }
-                        else if (tagSub.filterTag == "ExactValue") {
-                            allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid == tagSub.subid));
-                            allChartPerionStat.map(stat => {
-                                stat.publisher = tagL.user ? tagL.user[0].fullname : "";
-                                stat.tagname = tagL.tag.name;
-                            });
-                        }
-                    }
-                }
-            }
+            // var allChartPerionStat = [];
+            // for (var tagL of this.tagList) {
+            //   if(tagL.tag.advertiser == "perion") {
+            //     for (var tagSub of tagL.tag.subids) {
+            //       if(tagSub.filterTag =="Contains") {
+            //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.includes(tagSub.subid)))
+            //         allChartPerionStat.map(stat => {
+            //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //           stat.tagname = tagL.tag.name
+            //         })
+            //       } else if (tagSub.filterTag =="StartsWith") {
+            //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.startsWith(tagSub.subid)))
+            //         allChartPerionStat.map(stat => {
+            //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //           stat.tagname = tagL.tag.name
+            //         })
+            //       } else if (tagSub.filterTag =="EndsWith") {
+            //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.endsWith(tagSub.subid)))
+            //         allChartPerionStat.map(stat => {
+            //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //           stat.tagname = tagL.tag.name
+            //         })
+            //       } else if (tagSub.filterTag =="ExactValue") {
+            //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid == tagSub.subid ))
+            //         allChartPerionStat.map(stat => {
+            //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+            //           stat.tagname = tagL.tag.name
+            //         })
+            //       }
+            //     }
+            //   }
+            // }
             var helper = new Set();
             //duplicated remove
-            let filtered_data = allChartPerionStat.filter((perionStat) => {
+            let filtered_data = this.allChartStat.filter((perionStat) => {
                 const key = JSON.stringify([perionStat.date, perionStat.subid]);
                 return !helper.has(key) && helper.add(key);
             });

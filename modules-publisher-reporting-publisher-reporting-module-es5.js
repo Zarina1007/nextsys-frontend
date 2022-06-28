@@ -912,7 +912,7 @@
                       return stat.subid.includes(tagSub.subid);
                     }));
                     allPerionStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
                       stat.tagname = tag.name;
                     });
                   } else if (tagSub.filterTag == "StartsWith") {
@@ -920,7 +920,7 @@
                       return stat.subid.startsWith(tagSub.subid);
                     }));
                     allPerionStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
                       stat.tagname = tag.name;
                     });
                   } else if (tagSub.filterTag == "EndsWith") {
@@ -928,7 +928,7 @@
                       return stat.subid.endsWith(tagSub.subid);
                     }));
                     allPerionStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
                       stat.tagname = tag.name;
                     });
                   } else if (tagSub.filterTag == "ExactValue") {
@@ -936,7 +936,7 @@
                       return stat.subid == tagSub.subid;
                     }));
                     allPerionStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
                       stat.tagname = tag.name;
                     });
                   }

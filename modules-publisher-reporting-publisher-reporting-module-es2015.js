@@ -444,28 +444,28 @@ class PublisherComponent {
                 if (tagSub.filterTag == "Contains") {
                     allPerionStat = allPerionStat.concat(this.allPerionStatData.filter(stat => stat.subid.includes(tagSub.subid)));
                     allPerionStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
                         stat.tagname = tag.name;
                     });
                 }
                 else if (tagSub.filterTag == "StartsWith") {
                     allPerionStat = allPerionStat.concat(this.allPerionStatData.filter(stat => stat.subid.startsWith(tagSub.subid)));
                     allPerionStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
                         stat.tagname = tag.name;
                     });
                 }
                 else if (tagSub.filterTag == "EndsWith") {
                     allPerionStat = allPerionStat.concat(this.allPerionStatData.filter(stat => stat.subid.endsWith(tagSub.subid)));
                     allPerionStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
                         stat.tagname = tag.name;
                     });
                 }
                 else if (tagSub.filterTag == "ExactValue") {
                     allPerionStat = allPerionStat.concat(this.allPerionStatData.filter(stat => stat.subid == tagSub.subid));
                     allPerionStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
                         stat.tagname = tag.name;
                     });
                 }
