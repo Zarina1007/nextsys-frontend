@@ -805,48 +805,47 @@ class Dashboard1Component {
             //     .indexOf(obj._id) == pos;
             // });
             chartAllPerionStat = chartAllPerionStat.slice().sort((a, b) => a.date - b.date);
-            var helperChart = {};
-            chartAllPerionStat.map(f => {
-                f.revenue = parseFloat(f.revenue);
-            });
-            var resultChart = chartAllPerionStat.reduce(function (r, o) {
-                var key = o.date;
-                if (!helperChart[key]) {
-                    helperChart[key] = Object.assign({}, o); // create a copy of o
-                    r.push(helperChart[key]);
-                }
-                else {
-                    helperChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-                    if (o.revenue) {
-                        helperChart[key].revenue += o.revenue;
-                    }
-                }
-                return r;
-            }, []);
+            chartAllBeforePerionStat = chartAllBeforePerionStat.slice().sort((a, b) => a.date - b.date);
+            // var helperChart = {};
+            // chartAllPerionStat.map(f =>{
+            //   f.revenue = parseFloat(f.revenue);
+            // })
+            // var resultChart = chartAllPerionStat.reduce(function(r, o) {
+            //   var key = o.date;
+            //   if(!helperChart[key]) {
+            //     helperChart[key] = Object.assign({}, o); // create a copy of o
+            //     r.push(helperChart[key]);
+            //   } else {
+            //     helperChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
+            //     if(o.revenue) {
+            //       helperChart[key].revenue += o.revenue;
+            //     }
+            //   } 
+            //   return r;
+            // }, []);
             //duplicated remove Before Month Data
             // let filter_before_data = chartAllBeforePerionStat.filter((obj, pos, arr) => {
             //   return arr
             //     .map(mapObj => mapObj._id)
             //     .indexOf(obj._id) == pos;
             // });
-            var helperBeforeChart = {};
-            chartAllBeforePerionStat.map(f => {
-                f.revenue = parseFloat(f.revenue);
-            });
-            var resultBeforeChart = chartAllBeforePerionStat.reduce(function (r, o) {
-                var key = o.date;
-                if (!helperBeforeChart[key]) {
-                    helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-                    r.push(helperBeforeChart[key]);
-                }
-                else {
-                    helperBeforeChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-                    if (o.revenue) {
-                        helperBeforeChart[key].revenue += o.revenue;
-                    }
-                }
-                return r;
-            }, []);
+            // var helperBeforeChart = {};
+            // chartAllBeforePerionStat.map(f =>{
+            //   f.revenue = parseFloat(f.revenue);
+            // })
+            // var resultBeforeChart = chartAllBeforePerionStat.reduce(function(r, o) {
+            //   var key = o.date;
+            //   if(!helperBeforeChart[key]) {
+            //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
+            //     r.push(helperBeforeChart[key]);
+            //   } else {
+            //     helperBeforeChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
+            //     if(o.revenue) {
+            //       helperBeforeChart[key].revenue += o.revenue;
+            //     }
+            //   } 
+            //   return r;
+            // }, []);
             var revenuePerDayVal = [];
             var datesOfRevenueVal = [];
             var revenuePerDayBeforeVal = [];
@@ -855,7 +854,7 @@ class Dashboard1Component {
             var revenueCurrentSum = 0;
             var revenueBeforeSum = 0;
             for (var dayData of this.allDaysList) {
-                var checkExistDay = resultChart.filter((result) => result.date == dayData);
+                var checkExistDay = chartAllPerionStat.filter((result) => result.date == dayData);
                 if (checkExistDay.length == 0) {
                     revenuePerDayVal.push(0);
                     datesOfRevenueVal.push(dayData);
@@ -868,7 +867,7 @@ class Dashboard1Component {
                     }
                 }
             }
-            for (var resBeforeVal of resultBeforeChart) {
+            for (var resBeforeVal of chartAllBeforePerionStat) {
                 revenueBeforeSum += resBeforeVal.revenue;
                 revenuePerDayBeforeVal.push(resBeforeVal.revenue);
                 datesOfRevenueBeforeVal.push(resBeforeVal.date);
@@ -890,6 +889,7 @@ class Dashboard1Component {
     getLyonChart(company) {
         return this.lyonService.getAllDashboardStats().toPromise().then((response) => {
             this.allLyonChart = response[0];
+            console.log("=======dddd======", this.allLyonChart);
             var chartLyonMetric = [];
             var chartAllLyonStat = this.allLyonChart.currentStat;
             var chartAllBeforeLyonStat = this.allLyonChart.beforeStat;
@@ -919,52 +919,41 @@ class Dashboard1Component {
             //     .indexOf(obj._id) == pos;
             // });
             chartAllLyonStat = chartAllLyonStat.slice().sort((a, b) => a.date - b.date);
-            var helperChart = {};
-            chartAllLyonStat.map(f => {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
-            });
-            var resultChart = chartAllLyonStat.reduce(function (r, o) {
-                var key = o.rptDate;
-                if (!helperChart[key]) {
-                    helperChart[key] = Object.assign({}, o); // create a copy of o
-                    r.push(helperChart[key]);
-                }
-                else {
-                    helperChart[key].searches += parseInt(o.searches);
-                    if (o.revenue) {
-                        helperChart[key].revenue += o.revenue;
-                    }
-                }
-                return r;
-            }, []);
+            chartAllBeforeLyonStat = chartAllBeforeLyonStat.slice().sort((a, b) => a.date - b.date);
+            // var helperChart = {};
+            // var resultChart = chartAllLyonStat.reduce(function(r, o) {
+            //   var key = o.rptDate;
+            //   if(!helperChart[key]) {
+            //     helperChart[key] = Object.assign({}, o); // create a copy of o
+            //     r.push(helperChart[key]);
+            //   } else {
+            //     helperChart[key].searches += parseInt(o.searches);
+            //     if(o.revenue) {
+            //       helperChart[key].revenue += o.revenue;
+            //     }
+            //   } 
+            //   return r;
+            // }, []);
             //duplicated remove Before Month Data
             // let filter_before_data = chartAllBeforeLyonStat.filter((obj, pos, arr) => {
             //   return arr
             //     .map(mapObj => mapObj._id)
             //     .indexOf(obj._id) == pos;
             // });
-            var helperBeforeChart = {};
-            chartAllBeforeLyonStat.map(f => {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
-            });
-            var resultBeforeChart = chartAllBeforeLyonStat.reduce(function (r, o) {
-                var key = o.rptDate;
-                if (!helperBeforeChart[key]) {
-                    helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-                    r.push(helperBeforeChart[key]);
-                }
-                else {
-                    helperBeforeChart[key].searches += parseInt(o.searches);
-                    if (o.revenue) {
-                        helperBeforeChart[key].revenue += o.revenue;
-                    }
-                }
-                return r;
-            }, []);
+            // var helperBeforeChart = {};
+            // var resultBeforeChart = chartAllBeforeLyonStat.reduce(function(r, o) {
+            //   var key = o.rptDate;
+            //   if(!helperBeforeChart[key]) {
+            //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
+            //     r.push(helperBeforeChart[key]);
+            //   } else {
+            //     helperBeforeChart[key].searches += parseInt(o.searches);
+            //     if(o.revenue) {
+            //       helperBeforeChart[key].revenue += o.revenue;
+            //     }
+            //   } 
+            //   return r;
+            // }, []);
             var revenuePerDayVal = [];
             var datesOfRevenueVal = [];
             var revenuePerDayBeforeVal = [];
@@ -973,7 +962,7 @@ class Dashboard1Component {
             var revenueCurrentSum = 0;
             var revenueBeforeSum = 0;
             for (var dayData of this.allDaysList) {
-                var checkExistDay = resultChart.filter((result) => result.rptDate == dayData);
+                var checkExistDay = chartAllLyonStat.filter((result) => result.rptDate == dayData);
                 if (checkExistDay.length == 0) {
                     revenuePerDayVal.push(0);
                     datesOfRevenueVal.push(dayData);
@@ -986,7 +975,7 @@ class Dashboard1Component {
                     }
                 }
             }
-            for (var resBeforeVal of resultBeforeChart) {
+            for (var resBeforeVal of chartAllBeforeLyonStat) {
                 revenueBeforeSum += resBeforeVal.revenue;
                 revenuePerDayBeforeVal.push(resBeforeVal.revenue);
                 datesOfRevenueBeforeVal.push(resBeforeVal.rptDate);

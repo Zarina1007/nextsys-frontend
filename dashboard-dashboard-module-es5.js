@@ -18456,54 +18456,49 @@
               chartAllPerionStat = chartAllPerionStat.slice().sort(function (a, b) {
                 return a.date - b.date;
               });
-              var helperChart = {};
-              chartAllPerionStat.map(function (f) {
-                f.revenue = parseFloat(f.revenue);
-              });
-              var resultChart = chartAllPerionStat.reduce(function (r, o) {
-                var key = o.date;
-
-                if (!helperChart[key]) {
-                  helperChart[key] = Object.assign({}, o); // create a copy of o
-
-                  r.push(helperChart[key]);
-                } else {
-                  helperChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-
-                  if (o.revenue) {
-                    helperChart[key].revenue += o.revenue;
-                  }
-                }
-
-                return r;
-              }, []); //duplicated remove Before Month Data
+              chartAllBeforePerionStat = chartAllBeforePerionStat.slice().sort(function (a, b) {
+                return a.date - b.date;
+              }); // var helperChart = {};
+              // chartAllPerionStat.map(f =>{
+              //   f.revenue = parseFloat(f.revenue);
+              // })
+              // var resultChart = chartAllPerionStat.reduce(function(r, o) {
+              //   var key = o.date;
+              //   if(!helperChart[key]) {
+              //     helperChart[key] = Object.assign({}, o); // create a copy of o
+              //     r.push(helperChart[key]);
+              //   } else {
+              //     helperChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
+              //     if(o.revenue) {
+              //       helperChart[key].revenue += o.revenue;
+              //     }
+              //   } 
+              //   return r;
+              // }, []);
+              //duplicated remove Before Month Data
               // let filter_before_data = chartAllBeforePerionStat.filter((obj, pos, arr) => {
               //   return arr
               //     .map(mapObj => mapObj._id)
               //     .indexOf(obj._id) == pos;
               // });
+              // var helperBeforeChart = {};
+              // chartAllBeforePerionStat.map(f =>{
+              //   f.revenue = parseFloat(f.revenue);
+              // })
+              // var resultBeforeChart = chartAllBeforePerionStat.reduce(function(r, o) {
+              //   var key = o.date;
+              //   if(!helperBeforeChart[key]) {
+              //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
+              //     r.push(helperBeforeChart[key]);
+              //   } else {
+              //     helperBeforeChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
+              //     if(o.revenue) {
+              //       helperBeforeChart[key].revenue += o.revenue;
+              //     }
+              //   } 
+              //   return r;
+              // }, []);
 
-              var helperBeforeChart = {};
-              chartAllBeforePerionStat.map(function (f) {
-                f.revenue = parseFloat(f.revenue);
-              });
-              var resultBeforeChart = chartAllBeforePerionStat.reduce(function (r, o) {
-                var key = o.date;
-
-                if (!helperBeforeChart[key]) {
-                  helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-
-                  r.push(helperBeforeChart[key]);
-                } else {
-                  helperBeforeChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-
-                  if (o.revenue) {
-                    helperBeforeChart[key].revenue += o.revenue;
-                  }
-                }
-
-                return r;
-              }, []);
               var revenuePerDayVal = [];
               var datesOfRevenueVal = [];
               var revenuePerDayBeforeVal = [];
@@ -18518,7 +18513,7 @@
               try {
                 for (_iterator.s(); !(_step = _iterator.n()).done;) {
                   var dayData = _step.value;
-                  var checkExistDay = resultChart.filter(function (result) {
+                  var checkExistDay = chartAllPerionStat.filter(function (result) {
                     return result.date == dayData;
                   });
 
@@ -18549,7 +18544,7 @@
                 _iterator.f();
               }
 
-              var _iterator2 = _createForOfIteratorHelper(resultBeforeChart),
+              var _iterator2 = _createForOfIteratorHelper(chartAllBeforePerionStat),
                   _step2;
 
               try {
@@ -18585,6 +18580,7 @@
 
             return this.lyonService.getAllDashboardStats().toPromise().then(function (response) {
               _this4.allLyonChart = response[0];
+              console.log("=======dddd======", _this4.allLyonChart);
               var chartLyonMetric = [];
               var chartAllLyonStat = _this4.allLyonChart.currentStat;
               var chartAllBeforeLyonStat = _this4.allLyonChart.beforeStat; // for (var tagL of this.tagList) {
@@ -18616,58 +18612,43 @@
               chartAllLyonStat = chartAllLyonStat.slice().sort(function (a, b) {
                 return a.date - b.date;
               });
-              var helperChart = {};
-              chartAllLyonStat.map(function (f) {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
-              });
-              var resultChart = chartAllLyonStat.reduce(function (r, o) {
-                var key = o.rptDate;
-
-                if (!helperChart[key]) {
-                  helperChart[key] = Object.assign({}, o); // create a copy of o
-
-                  r.push(helperChart[key]);
-                } else {
-                  helperChart[key].searches += parseInt(o.searches);
-
-                  if (o.revenue) {
-                    helperChart[key].revenue += o.revenue;
-                  }
-                }
-
-                return r;
-              }, []); //duplicated remove Before Month Data
+              chartAllBeforeLyonStat = chartAllBeforeLyonStat.slice().sort(function (a, b) {
+                return a.date - b.date;
+              }); // var helperChart = {};
+              // var resultChart = chartAllLyonStat.reduce(function(r, o) {
+              //   var key = o.rptDate;
+              //   if(!helperChart[key]) {
+              //     helperChart[key] = Object.assign({}, o); // create a copy of o
+              //     r.push(helperChart[key]);
+              //   } else {
+              //     helperChart[key].searches += parseInt(o.searches);
+              //     if(o.revenue) {
+              //       helperChart[key].revenue += o.revenue;
+              //     }
+              //   } 
+              //   return r;
+              // }, []);
+              //duplicated remove Before Month Data
               // let filter_before_data = chartAllBeforeLyonStat.filter((obj, pos, arr) => {
               //   return arr
               //     .map(mapObj => mapObj._id)
               //     .indexOf(obj._id) == pos;
               // });
+              // var helperBeforeChart = {};
+              // var resultBeforeChart = chartAllBeforeLyonStat.reduce(function(r, o) {
+              //   var key = o.rptDate;
+              //   if(!helperBeforeChart[key]) {
+              //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
+              //     r.push(helperBeforeChart[key]);
+              //   } else {
+              //     helperBeforeChart[key].searches += parseInt(o.searches);
+              //     if(o.revenue) {
+              //       helperBeforeChart[key].revenue += o.revenue;
+              //     }
+              //   } 
+              //   return r;
+              // }, []);
 
-              var helperBeforeChart = {};
-              chartAllBeforeLyonStat.map(function (f) {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
-              });
-              var resultBeforeChart = chartAllBeforeLyonStat.reduce(function (r, o) {
-                var key = o.rptDate;
-
-                if (!helperBeforeChart[key]) {
-                  helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-
-                  r.push(helperBeforeChart[key]);
-                } else {
-                  helperBeforeChart[key].searches += parseInt(o.searches);
-
-                  if (o.revenue) {
-                    helperBeforeChart[key].revenue += o.revenue;
-                  }
-                }
-
-                return r;
-              }, []);
               var revenuePerDayVal = [];
               var datesOfRevenueVal = [];
               var revenuePerDayBeforeVal = [];
@@ -18682,7 +18663,7 @@
               try {
                 for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
                   var dayData = _step4.value;
-                  var checkExistDay = resultChart.filter(function (result) {
+                  var checkExistDay = chartAllLyonStat.filter(function (result) {
                     return result.rptDate == dayData;
                   });
 
@@ -18713,7 +18694,7 @@
                 _iterator4.f();
               }
 
-              var _iterator5 = _createForOfIteratorHelper(resultBeforeChart),
+              var _iterator5 = _createForOfIteratorHelper(chartAllBeforeLyonStat),
                   _step5;
 
               try {
