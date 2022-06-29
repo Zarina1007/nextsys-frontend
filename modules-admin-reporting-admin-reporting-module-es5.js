@@ -3385,9 +3385,8 @@
               var helperSummary = {};
 
               _this2.currentMonthData.map(function (f) {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
+                f.revenue = parseFloat(f.revenue); // f.ctr = parseFloat(f.ctr);
+                // f.biddedCtr = parseFloat(f.biddedCTR);
               });
 
               var resultSummary = _this2.currentMonthData.reduce(function (r, o) {
@@ -3421,8 +3420,8 @@
                   var sumData = _step3.value;
                   monthRevenue += sumData.revenue;
                   monthProfit += sumData.revenue * (100 - sumData.split) * 0.01;
-                  monthRevenuePace += monthRevenue / resultSummary.length * dayInCurrentMonth;
-                  profitPace += monthProfit / resultSummary.length * dayInCurrentMonth;
+                  monthRevenuePace += sumData.revenue / resultSummary.length * dayInCurrentMonth;
+                  profitPace += sumData.revenue * (100 - sumData.split) * 0.01 / resultSummary.length * dayInCurrentMonth;
                 } //before month data get part
                 // var summaryBeforeStat = [];
                 // for (var tagL of this.tagList) {
@@ -3458,9 +3457,8 @@
               var helperBeforeSummary = {};
 
               _this2.beforeMonthData.map(function (f) {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
+                f.revenue = parseFloat(f.revenue); // f.ctr = parseFloat(f.ctr);
+                // f.biddedCtr = parseFloat(f.biddedCTR);
               });
 
               var resultBeforeSummary = _this2.beforeMonthData.reduce(function (r, o) {
@@ -3494,8 +3492,8 @@
                   var sumBeforeData = _step4.value;
                   monthBeforeRevenue += sumBeforeData.revenue;
                   monthBeforeProfit += sumBeforeData.revenue * (100 - sumBeforeData.split) * 0.01;
-                  monthBeforeRevenuePace += monthBeforeRevenue / resultBeforeSummary.length * dayInBeforeMonth;
-                  profitBeforePace += monthBeforeProfit / resultBeforeSummary.length * dayInBeforeMonth;
+                  monthBeforeRevenuePace += sumBeforeData.revenue / resultBeforeSummary.length * dayInBeforeMonth;
+                  profitBeforePace += sumBeforeData.revenue * (100 - sumBeforeData.split) * 0.01 / resultBeforeSummary.length * dayInBeforeMonth;
                 } //tow before month data get part
                 // var summaryTwoBeforeStat = [];
                 // for (var tagL of this.tagList) {
@@ -3531,9 +3529,8 @@
               var helperTwoBeforeSummary = {};
 
               _this2.twoBeforeMonthData.map(function (f) {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
+                f.revenue = parseFloat(f.revenue); // f.ctr = parseFloat(f.ctr);
+                // f.biddedCtr = parseFloat(f.biddedCTR);
               });
 
               var resultTwoBeforeSummary = _this2.twoBeforeMonthData.reduce(function (r, o) {
@@ -3567,8 +3564,8 @@
                   var sumTwoBeforeData = _step5.value;
                   monthTwoBeforeRevenue += sumTwoBeforeData.revenue;
                   monthTwoBeforeProfit += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01;
-                  monthTwoBeforeRevenuePace += monthTwoBeforeRevenue / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
-                  profitTwoBeforePace += monthTwoBeforeProfit / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
+                  monthTwoBeforeRevenuePace += sumTwoBeforeData.revenue / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
+                  profitTwoBeforePace += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01 / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
                 }
               } catch (err) {
                 _iterator5.e(err);
@@ -3746,8 +3743,8 @@
           }
         },
         decls: 43,
-        vars: 15,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "rptDate"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "tagname"], ["name", "publisher"], ["name", "searches"], ["name", "biddedSearches"], ["name", "clicks"], ["name", "biddedCtr"], ["name", "ctr"], ["name", "spilt"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
+        vars: 14,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "rptDate"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "tagname"], ["name", "publisher"], ["name", "searches"], ["name", "biddedSearches"], ["name", "clicks"], ["name", "biddedCtr"], ["name", "ctr"], ["name", "spilt"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
         template: function LyonsComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -3882,7 +3879,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("scrollbarH", false)("rows", ctx.rows);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
