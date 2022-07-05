@@ -802,8 +802,7 @@
             }
 
             this.subscritions.push(this.usersServie.getAdminAll().subscribe(function (data) {
-              console.log(data);
-
+              // console.log(data);
               if (_this2.localStorageCompany) {
                 _this2.admins.data = data.filter(function (userData) {
                   return userData.companies.includes(_this2.localStorageCompany);
@@ -841,8 +840,7 @@
             if (window.confirm('Do you want to go ahead?')) {
               this.usersServie.deleteUser(id).subscribe(function (res) {
                 _this3.usersServie.getAdminAll().subscribe(function (data) {
-                  console.log(data);
-
+                  // console.log(data);
                   if (_this3.localStorageCompany) {
                     _this3.admins.data = data.filter(function (userData) {
                       return userData.companies.includes(_this3.localStorageCompany);
@@ -1351,8 +1349,7 @@
             }
 
             this.subscritions.push(this.usersServie.getAdvertiserAll().subscribe(function (data) {
-              console.log(data);
-
+              // console.log(data);
               if (_this4.localStorageCompany) {
                 _this4.advertisers.data = data.filter(function (userData) {
                   return userData.companies.includes(_this4.localStorageCompany);
@@ -1390,8 +1387,7 @@
             if (window.confirm('Do you want to go ahead?')) {
               this.usersServie.deleteUser(id).subscribe(function (res) {
                 _this5.usersServie.getAdvertiserAll().subscribe(function (data) {
-                  console.log(data);
-
+                  // console.log(data);
                   if (_this5.localStorageCompany) {
                     _this5.advertisers.data = data.filter(function (userData) {
                       return userData.companies.includes(_this5.localStorageCompany);
@@ -7579,8 +7575,7 @@
             }
 
             this.subscritions.push(this.usersServie.getPublisherAll().subscribe(function (data) {
-              console.log(data);
-
+              // console.log(data);
               if (_this19.localStorageCompany) {
                 _this19.users.data = data.filter(function (userData) {
                   return userData.companies.includes(_this19.localStorageCompany);
@@ -7618,8 +7613,7 @@
             if (window.confirm('Do you want to go ahead?')) {
               this.usersServie.deleteUser(id).subscribe(function (res) {
                 _this20.usersServie.getPublisherAll().subscribe(function (data) {
-                  console.log(data);
-
+                  // console.log(data);
                   if (_this20.localStorageCompany) {
                     _this20.users.data = data.filter(function (userData) {
                       return userData.companies.includes(_this20.localStorageCompany);

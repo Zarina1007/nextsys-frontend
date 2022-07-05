@@ -3259,13 +3259,15 @@
                 f.revenue = parseFloat(f.revenue);
                 f.ctr = parseFloat(f.ctr);
                 f.biddedCtr = parseFloat(f.biddedCTR);
-              });
+              }); //Calculate the sums and group data (while tracking count)
+
               var resultAll = filtered_data.reduce(function (prev, current) {
                 var key = current.rptDate.toString() + '-' + current.subid;
 
                 if (!helper[key]) {
                   helper[key] = Object.assign({}, current); // create a copy of o
 
+                  helper[key].count = 1;
                   prev.push(helper[key]);
                 } else {
                   helper[key].clicks += parseInt(current.clicks);
@@ -3283,13 +3285,16 @@
                     helper[key].revenue += current.revenue;
                   }
 
-                  helper[key].biddedSearches += parseInt(current.biddedSearches); //helper[key].split += parseInt(current.split);
-                  // helper[key].split_num = 70;
+                  helper[key].biddedSearches += parseInt(current.biddedSearches);
+                  helper[key].count += 1;
+                  helper[key].split += parseInt(current.split); // helper[key].split_num = 70;
                 }
 
                 return prev;
               }, []);
-              console.log("=============", resultAll);
+              resultAll.map(function (item) {
+                item.split = item.split / item.count;
+              });
               return resultAll.slice().sort(function (a, b) {
                 return b.rptDate - a.rptDate;
               });

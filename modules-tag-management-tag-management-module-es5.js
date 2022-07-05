@@ -1569,8 +1569,7 @@
             var _this2 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              console.log(data);
-
+              // console.log(data);
               if (_this2.companySelected) {
                 _this2.publishertempList = data.filter(function (userData) {
                   return userData.companies.includes(_this2.companySelected);
@@ -4493,8 +4492,7 @@
             var _this11 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              console.log(data);
-
+              // console.log(data);
               if (_this11.companySelected) {
                 _this11.publishertempList = data.filter(function (userData) {
                   return userData.companies.includes(_this11.companySelected);

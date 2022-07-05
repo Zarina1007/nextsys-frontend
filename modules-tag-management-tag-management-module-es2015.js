@@ -753,7 +753,7 @@ class EditTagComponent {
     }
     getPublisherAll() {
         this.userService.getPublisherAll().subscribe(data => {
-            console.log(data);
+            // console.log(data);
             if (this.companySelected) {
                 this.publishertempList = data.filter(userData => userData.companies.includes(this.companySelected));
             }
@@ -2118,7 +2118,7 @@ class NewTagComponent {
     }
     getPublisherAll() {
         this.userService.getPublisherAll().subscribe(data => {
-            console.log(data);
+            // console.log(data);
             if (this.companySelected) {
                 this.publishertempList = data.filter(userData => userData.companies.includes(this.companySelected));
             }

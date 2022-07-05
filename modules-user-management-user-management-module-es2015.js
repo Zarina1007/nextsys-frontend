@@ -402,7 +402,7 @@ class AdminsComponent {
             this.hidden = false;
         }
         this.subscritions.push(this.usersServie.getAdminAll().subscribe(data => {
-            console.log(data);
+            // console.log(data);
             if (this.localStorageCompany) {
                 this.admins.data = data.filter(userData => userData.companies.includes(this.localStorageCompany));
             }
@@ -426,7 +426,7 @@ class AdminsComponent {
         if (window.confirm('Do you want to go ahead?')) {
             this.usersServie.deleteUser(id).subscribe((res) => {
                 this.usersServie.getAdminAll().subscribe(data => {
-                    console.log(data);
+                    // console.log(data);
                     if (this.localStorageCompany) {
                         this.admins.data = data.filter(userData => userData.companies.includes(this.localStorageCompany));
                     }
@@ -666,7 +666,7 @@ class AdvertisersComponent {
             this.hidden = false;
         }
         this.subscritions.push(this.usersServie.getAdvertiserAll().subscribe(data => {
-            console.log(data);
+            // console.log(data);
             if (this.localStorageCompany) {
                 this.advertisers.data = data.filter(userData => userData.companies.includes(this.localStorageCompany));
             }
@@ -690,7 +690,7 @@ class AdvertisersComponent {
         if (window.confirm('Do you want to go ahead?')) {
             this.usersServie.deleteUser(id).subscribe((res) => {
                 this.usersServie.getAdvertiserAll().subscribe(data => {
-                    console.log(data);
+                    // console.log(data);
                     if (this.localStorageCompany) {
                         this.advertisers.data = data.filter(userData => userData.companies.includes(this.localStorageCompany));
                     }
@@ -3805,7 +3805,7 @@ class UsersComponent {
             this.hidden = false;
         }
         this.subscritions.push(this.usersServie.getPublisherAll().subscribe(data => {
-            console.log(data);
+            // console.log(data);
             if (this.localStorageCompany) {
                 this.users.data = data.filter(userData => userData.companies.includes(this.localStorageCompany));
             }
@@ -3829,7 +3829,7 @@ class UsersComponent {
         if (window.confirm('Do you want to go ahead?')) {
             this.usersServie.deleteUser(id).subscribe((res) => {
                 this.usersServie.getPublisherAll().subscribe(data => {
-                    console.log(data);
+                    // console.log(data);
                     if (this.localStorageCompany) {
                         this.users.data = data.filter(userData => userData.companies.includes(this.localStorageCompany));
                     }
