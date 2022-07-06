@@ -2388,6 +2388,10 @@ class ManualUpdateComponent {
         if (this.range.valid) {
             this.selectedRange.startDate = this.range.value.startDate;
             this.selectedRange.endDate = this.range.value.endDate;
+            this.manaulUpFG.patchValue({
+                startDate: moment__WEBPACK_IMPORTED_MODULE_2__(this.range.value.startDate, 'MM-DD-YYYY').toDate(),
+                endDate: moment__WEBPACK_IMPORTED_MODULE_2__(this.range.value.endDate, 'MM-DD-YYYY').toDate(),
+            });
             this.preSelectValue = 'custom';
         }
     }
