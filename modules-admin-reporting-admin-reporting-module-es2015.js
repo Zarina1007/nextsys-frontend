@@ -1768,6 +1768,7 @@ class LyonsComponent {
                 f.revenue = parseFloat(f.revenue);
                 f.ctr = parseFloat(f.ctr);
                 f.biddedCtr = parseFloat(f.biddedCTR);
+                f.split = parseFloat(f.split);
             });
             //Calculate the sums and group data (while tracking count)
             var resultAll = filtered_data.reduce(function (prev, current) {
@@ -1836,7 +1837,7 @@ class LyonsComponent {
             var dayInCurrentMonth = response[0].dayInCurrentMonth;
             var dayInBeforeMonth = response[0].dayInBeforeMonth;
             var dayInTwoBeforeMonth = response[0].dayInTwoBeforeMonth;
-            var summaryCurrentStat = [];
+            // var summaryCurrentStat = [];
             //current data get part
             // for (var tagL of this.tagList) {
             //   for (var tagSub of tagL.tag.subids) {

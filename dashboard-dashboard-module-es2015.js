@@ -889,7 +889,7 @@ class Dashboard1Component {
     getLyonChart(company) {
         return this.lyonService.getAllDashboardStats().toPromise().then((response) => {
             this.allLyonChart = response[0];
-            console.log("=======dddd======", this.allLyonChart);
+            // console.log("=======dddd======", this.allLyonChart)
             var chartLyonMetric = [];
             var chartAllLyonStat = this.allLyonChart.currentStat;
             var chartAllBeforeLyonStat = this.allLyonChart.beforeStat;

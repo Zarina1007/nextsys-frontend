@@ -18579,8 +18579,8 @@
             var _this4 = this;
 
             return this.lyonService.getAllDashboardStats().toPromise().then(function (response) {
-              _this4.allLyonChart = response[0];
-              console.log("=======dddd======", _this4.allLyonChart);
+              _this4.allLyonChart = response[0]; // console.log("=======dddd======", this.allLyonChart)
+
               var chartLyonMetric = [];
               var chartAllLyonStat = _this4.allLyonChart.currentStat;
               var chartAllBeforeLyonStat = _this4.allLyonChart.beforeStat; // for (var tagL of this.tagList) {
