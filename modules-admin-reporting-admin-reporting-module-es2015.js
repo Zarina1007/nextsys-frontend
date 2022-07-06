@@ -1800,7 +1800,7 @@ class LyonsComponent {
             resultAll.map((item) => {
                 item.split = item.split / item.count;
             });
-            return resultAll.slice().sort((a, b) => b.rptDate - a.rptDate);
+            return resultAll;
         })
             .catch((error) => {
             return error;
@@ -2038,7 +2038,8 @@ class LyonsComponent {
     }
     getChartMetrics(company, startDate, endDate) {
         return this.lyonService.getAllStats(startDate, endDate).toPromise().then((response) => {
-            this.allChart = response;
+            var sortResponse = response.slice().sort((a, b) => a.rptDate - b.rptDate);
+            this.allChart = sortResponse;
             // var chartAllLyonStat = [];
             // for (var tagL of this.tagList) {
             //   for (var tagSub of tagL.tag.subids) {
@@ -2082,7 +2083,7 @@ class LyonsComponent {
                 f.biddedCtr = parseFloat(f.biddedCTR);
             });
             var resultChart = this.allChart.reduce(function (r, o) {
-                var key = o.rptDate;
+                var key = (o.rptDate).toString();
                 if (!helperChart[key]) {
                     helperChart[key] = Object.assign({}, o); // create a copy of o
                     r.push(helperChart[key]);

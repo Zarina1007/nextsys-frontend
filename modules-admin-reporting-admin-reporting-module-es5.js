@@ -3296,9 +3296,7 @@
               resultAll.map(function (item) {
                 item.split = item.split / item.count;
               });
-              return resultAll.slice().sort(function (a, b) {
-                return b.rptDate - a.rptDate;
-              });
+              return resultAll;
             })["catch"](function (error) {
               return error;
             });
@@ -3621,7 +3619,10 @@
             var _this3 = this;
 
             return this.lyonService.getAllStats(startDate, endDate).toPromise().then(function (response) {
-              _this3.allChart = response; // var chartAllLyonStat = [];
+              var sortResponse = response.slice().sort(function (a, b) {
+                return a.rptDate - b.rptDate;
+              });
+              _this3.allChart = sortResponse; // var chartAllLyonStat = [];
               // for (var tagL of this.tagList) {
               //   for (var tagSub of tagL.tag.subids) {
               //     if(tagSub.filterTag =="Contains") {
@@ -3667,7 +3668,7 @@
               });
 
               var resultChart = _this3.allChart.reduce(function (r, o) {
-                var key = o.rptDate;
+                var key = o.rptDate.toString();
 
                 if (!helperChart[key]) {
                   helperChart[key] = Object.assign({}, o); // create a copy of o
