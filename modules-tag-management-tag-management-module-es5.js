@@ -1467,7 +1467,8 @@
 
             if (this.route.snapshot.params.id) {
               this.tagManagementService.getOneTag(this.route.snapshot.params.id).subscribe(function (x) {
-                _this.tag = x;
+                _this.tag = x; // console.log(x);
+
                 var browserVal = [];
                 var deviceTypeVal = [];
                 var versionVal = [];
@@ -1542,7 +1543,7 @@
                   name: x['name'],
                   company: x['company'],
                   advertiser: x['advertiser'],
-                  publisher: x['publisher'][0]['_key'],
+                  publisher: x['publisher'].length ? x['publisher'][0]['_key'] : '',
                   browserStatus: x['browserStatus'],
                   browser: browserVal,
                   deviceTypeStatus: x['deviceTypeStatus'],
@@ -6571,7 +6572,7 @@
         if (rf & 2) {
           var value_r27 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r27 ? value_r27[0].fullname : "", " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r27.length ? value_r27[0].fullname : "", " ");
         }
       }
 
@@ -6906,8 +6907,8 @@
             var _this19 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this19.tagList = x;
-              console.log(x);
+              _this19.tagList = x; // console.log(x);
+
               _this19.rows = _this19.tagList.filter(function (tag) {
                 return tag.company[0]['_id'] == _this19.localStorageCompany;
               });

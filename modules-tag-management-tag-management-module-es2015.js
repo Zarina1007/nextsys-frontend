@@ -702,6 +702,7 @@ class EditTagComponent {
         if (this.route.snapshot.params.id) {
             this.tagManagementService.getOneTag(this.route.snapshot.params.id).subscribe(x => {
                 this.tag = x;
+                // console.log(x);
                 var browserVal = [];
                 var deviceTypeVal = [];
                 var versionVal = [];
@@ -731,7 +732,7 @@ class EditTagComponent {
                     name: x['name'],
                     company: x['company'],
                     advertiser: x['advertiser'],
-                    publisher: x['publisher'][0]['_key'],
+                    publisher: x['publisher'].length ? x['publisher'][0]['_key'] : '',
                     browserStatus: x['browserStatus'],
                     browser: browserVal,
                     deviceTypeStatus: x['deviceTypeStatus'],
@@ -3108,7 +3109,7 @@ function TagsComponent_div_0_ng_template_20_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
 } if (rf & 2) {
     const value_r27 = ctx.value;
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r27 ? value_r27[0].fullname : "", " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r27.length ? value_r27[0].fullname : "", " ");
 } }
 function TagsComponent_div_0_ng_template_22_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Browser ");
@@ -3279,7 +3280,7 @@ class TagsComponent {
     getAllTags() {
         this.tagService.getAllTags().subscribe((x) => {
             this.tagList = x;
-            console.log(x);
+            // console.log(x);
             this.rows = this.tagList.filter(tag => tag.company[0]['_id'] == this.localStorageCompany);
             this.loadingIndicator = false;
             this.cdr.detectChanges();
