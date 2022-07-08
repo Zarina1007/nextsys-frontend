@@ -1725,7 +1725,7 @@ class LyonsComponent {
                         if (tagSub.filterTag == "Contains") {
                             this.allstat.map(stat => {
                                 if (stat.subid.includes(tagSub.subid)) {
-                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                                     stat.tagname = tagL.tag.name;
                                 }
                             });
@@ -1733,7 +1733,7 @@ class LyonsComponent {
                         else if (tagSub.filterTag == "StartsWith") {
                             this.allstat.map(stat => {
                                 if (stat.subid.startsWith(tagSub.subid)) {
-                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                                     stat.tagname = tagL.tag.name;
                                 }
                             });
@@ -1741,7 +1741,7 @@ class LyonsComponent {
                         else if (tagSub.filterTag == "EndsWith") {
                             this.allstat.map(stat => {
                                 if (stat.subid.endsWith(tagSub.subid)) {
-                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                                     stat.tagname = tagL.tag.name;
                                 }
                             });
@@ -1749,7 +1749,7 @@ class LyonsComponent {
                         else if (tagSub.filterTag == "ExactValue") {
                             this.allstat.map(stat => {
                                 if (stat.subid == tagSub.subid) {
-                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                                     stat.tagname = tagL.tag.name;
                                 }
                             });
@@ -2936,7 +2936,7 @@ class PerionComponent {
                         if (tagSub.filterTag == "Contains") {
                             this.allStat.map(stat => {
                                 if (stat.subid.includes(tagSub.subid)) {
-                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                                     stat.tagname = tagL.tag.name;
                                 }
                             });
@@ -2944,7 +2944,7 @@ class PerionComponent {
                         else if (tagSub.filterTag == "StartsWith") {
                             this.allStat.map(stat => {
                                 if (stat.subid.startsWith(tagSub.subid)) {
-                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                                     stat.tagname = tagL.tag.name;
                                 }
                             });
@@ -2952,7 +2952,7 @@ class PerionComponent {
                         else if (tagSub.filterTag == "EndsWith") {
                             this.allStat.map(stat => {
                                 if (stat.subid.endsWith(tagSub.subid)) {
-                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                                     stat.tagname = tagL.tag.name;
                                 }
                             });
@@ -2960,7 +2960,7 @@ class PerionComponent {
                         else if (tagSub.filterTag == "ExactValue") {
                             this.allStat.map(stat => {
                                 if (stat.subid == tagSub.subid) {
-                                    stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                                     stat.tagname = tagL.tag.name;
                                 }
                             });

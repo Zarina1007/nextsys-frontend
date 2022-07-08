@@ -3207,28 +3207,28 @@
                         if (tagSub.filterTag == "Contains") {
                           _this.allstat.map(function (stat) {
                             if (stat.subid.includes(tagSub.subid)) {
-                              stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "StartsWith") {
                           _this.allstat.map(function (stat) {
                             if (stat.subid.startsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "EndsWith") {
                           _this.allstat.map(function (stat) {
                             if (stat.subid.endsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "ExactValue") {
                           _this.allstat.map(function (stat) {
                             if (stat.subid == tagSub.subid) {
-                              stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
@@ -5288,28 +5288,28 @@
                         if (tagSub.filterTag == "Contains") {
                           _this7.allStat.map(function (stat) {
                             if (stat.subid.includes(tagSub.subid)) {
-                              stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "StartsWith") {
                           _this7.allStat.map(function (stat) {
                             if (stat.subid.startsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "EndsWith") {
                           _this7.allStat.map(function (stat) {
                             if (stat.subid.endsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "ExactValue") {
                           _this7.allStat.map(function (stat) {
                             if (stat.subid == tagSub.subid) {
-                              stat.publisher = tagL.user ? tagL.user[0].fullname : "No Publisher";
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
