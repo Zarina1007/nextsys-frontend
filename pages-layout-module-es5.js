@@ -30144,8 +30144,11 @@
             title: 'Third Party Sheet',
             page: '/reporting/third-party'
           }, {
-            title: 'Manual Update',
-            page: '/reporting/manual-update'
+            title: 'Manual Stat Update',
+            page: '/reporting/manual-stat-update'
+          }, {
+            title: 'Manual Split Update',
+            page: '/reporting/manual-split-update'
           }]
         }, //AUTHENTICATION
         {
@@ -42523,7 +42526,7 @@
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
               }
 
-              if (data.permission && state.url.split('/')[2] == "manual-update" && currentUser.role != 1) {
+              if (data.permission && (state.url.split('/')[2] == "manual-split-update" || state.url.split('/')[2] == "manual-stat-update") && currentUser.role != 1) {
                 this._router.navigate([this.selectBestRoute()]);
 
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
@@ -43451,7 +43454,7 @@
               if (this.reportingProviderList.includes(itemPath)) {
                 return true;
               } else {
-                if (itemPath == "manual-update" && this.currentUser.role == 1) {
+                if ((itemPath == "manual-stat-update" || itemPath == "manual-split-update") && this.currentUser.role == 1) {
                   return true;
                 } else if (item.page.includes("publisher-reporting") && this.currentUser.role == 3) {
                   return true;
@@ -51312,7 +51315,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | dashboard-dashboard-module */
-            [__webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-material-m~039ec6da"), __webpack_require__.e("dashboard-dashboard-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-material-m~039ec6da"), __webpack_require__.e("common"), __webpack_require__.e("dashboard-dashboard-module")]).then(__webpack_require__.bind(null,
             /*! ./dashboard/dashboard.module */
             "./src/app/pages/dashboard/dashboard.module.ts")).then(function (m) {
               return m.DashboardModule;
