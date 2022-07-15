@@ -18418,10 +18418,9 @@
                     case 12:
                       this.rubiChartData = _context.sent;
                       this.ChartData = this.perionChartData.concat(this.lyonChartData).concat(this.rubiChartData);
-                      console.log("==================", this.ChartData);
                       this.cdr.markForCheck();
 
-                    case 16:
+                    case 15:
                     case "end":
                       return _context.stop();
                   }
@@ -18581,6 +18580,7 @@
               chartPerionDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
               chartPerionDataValue['statType'] = "Perion";
               chartPerionMetric.push(chartPerionDataValue);
+              console.log("========", chartPerionMetric);
               return chartPerionMetric;
             })["catch"](function (error) {
               return error;
@@ -18851,7 +18851,7 @@
           key: "getCurrentMontDateList",
           value: function getCurrentMontDateList() {
             var lastThirtyDays = _toConsumableArray(new Array(30)).map(function (i, idx) {
-              return moment__WEBPACK_IMPORTED_MODULE_2__().utc().startOf("day").subtract(idx, "days").toDate().getTime();
+              return moment__WEBPACK_IMPORTED_MODULE_2__().utc().startOf("day").subtract(idx, "days").toDate().getTime() + moment__WEBPACK_IMPORTED_MODULE_2__["utc"](1000 * 60 * 60 * 10).toDate().getTime();
             }).reverse();
 
             return lastThirtyDays;

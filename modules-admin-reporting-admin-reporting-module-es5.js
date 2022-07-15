@@ -3275,6 +3275,9 @@
                 f.ctr = parseFloat(f.ctr);
                 f.biddedCtr = parseFloat(f.biddedCTR);
                 f.split = parseFloat(f.split);
+                f.searches = parseFloat(f.searches);
+                f.biddedSearches = parseFloat(f.biddedSearches);
+                f.clicks = parseFloat(f.clicks);
               }); //Calculate the sums and group data (while tracking count)
 
               var resultAll = filtered_data.reduce(function (prev, current) {
@@ -3679,6 +3682,7 @@
               _this3.allChart.map(function (f) {
                 f.revenue = parseFloat(f.revenue);
                 f.ctr = parseFloat(f.ctr);
+                f.searches = parseFloat(f.searches);
                 f.biddedCtr = parseFloat(f.biddedCTR);
               });
 

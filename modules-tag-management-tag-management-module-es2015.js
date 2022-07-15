@@ -1348,7 +1348,6 @@ class EditTagComponent {
             if (numericId.includes("-") || numericId.includes("~")) {
                 var startNum = parseInt(numericId.split('-')[0] || numericId.split('~')[0]);
                 var endNum = parseInt(numericId.split('-')[1] || numericId.split('~')[1]);
-                console.log("======", startNum, endNum);
                 if (startNum < endNum) {
                     for (var i = startNum; i <= endNum; i++) {
                         subList.push({
@@ -2207,7 +2206,7 @@ class NewTagComponent {
             statType: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             numFilterTag: ['ExactValue', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             numLimit: ['1000'],
-            numSubid: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
+            numSubid: [''],
             numSplit: ['70', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             subids: this.fb.array([]),
             rotationType: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
@@ -2885,7 +2884,6 @@ class NewTagComponent {
             if (numericId.includes("-") || numericId.includes("~")) {
                 var startNum = parseInt(numericId.split('-')[0] || numericId.split('~')[0]);
                 var endNum = parseInt(numericId.split('-')[1] || numericId.split('~')[1]);
-                console.log("======", startNum, endNum);
                 if (startNum < endNum) {
                     for (var i = startNum; i <= endNum; i++) {
                         subList.push({

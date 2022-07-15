@@ -769,7 +769,6 @@ class Dashboard1Component {
             this.lyonChartData = yield this.getLyonChart(this.selectedCompany);
             this.rubiChartData = yield this.getRubiChart(this.selectedCompany);
             this.ChartData = this.perionChartData.concat(this.lyonChartData).concat(this.rubiChartData);
-            console.log("==================", this.ChartData);
             this.cdr.markForCheck();
         });
     }
@@ -885,6 +884,7 @@ class Dashboard1Component {
             chartPerionDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
             chartPerionDataValue['statType'] = "Perion";
             chartPerionMetric.push(chartPerionDataValue);
+            console.log("========", chartPerionMetric);
             return chartPerionMetric;
         })
             .catch((error) => {
@@ -1066,7 +1066,7 @@ class Dashboard1Component {
         });
     }
     getCurrentMontDateList() {
-        const lastThirtyDays = [...new Array(30)].map((i, idx) => moment__WEBPACK_IMPORTED_MODULE_2__().utc().startOf("day").subtract(idx, "days").toDate().getTime()).reverse();
+        const lastThirtyDays = [...new Array(30)].map((i, idx) => moment__WEBPACK_IMPORTED_MODULE_2__().utc().startOf("day").subtract(idx, "days").toDate().getTime() + moment__WEBPACK_IMPORTED_MODULE_2__["utc"](1000 * 60 * 60 * 10).toDate().getTime()).reverse();
         return lastThirtyDays;
     }
 }
