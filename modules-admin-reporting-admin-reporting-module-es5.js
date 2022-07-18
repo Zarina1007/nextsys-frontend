@@ -3256,6 +3256,51 @@
                     }
                   }
                 } //duplicated remove
+                // let filtered_data = this.allstat.filter((obj, pos, arr) => {
+                //   return arr
+                //     .map(mapObj => mapObj._id)
+                //     .indexOf(obj._id) == pos;
+                // });
+                // var helper = {};
+                // filtered_data.map(f =>{
+                //   f.revenue = parseFloat(f.revenue);
+                //   f.ctr = parseFloat(f.ctr);
+                //   f.biddedCtr = parseFloat(f.biddedCTR);
+                //   f.split = parseFloat(f.split);
+                //   f.searches = parseFloat(f.searches);
+                //   f.biddedSearches = parseFloat(f.biddedSearches);
+                //   f.clicks = parseFloat(f.clicks);
+                // });
+                //Calculate the sums and group data (while tracking count)
+                // var resultAll = filtered_data.reduce(function(prev, current) {
+                //   var key = (current.rptDate).toString() + '-' + current.subid;
+                //   if(!helper[key]) {
+                //     helper[key] = Object.assign({}, current); // create a copy of o
+                //     helper[key].count = 1;
+                //     prev.push(helper[key]);
+                //   } else {
+                //     helper[key].clicks += parseInt(current.clicks);
+                //     helper[key].searches += parseInt(current.searches);
+                //     if(current.biddedCtr) {
+                //       helper[key].biddedCtr += current.biddedCtr;
+                //     }
+                //     if(current.ctr) {
+                //       helper[key].ctr += current.ctr;
+                //     }
+                //     if(current.revenue) {
+                //       helper[key].revenue += current.revenue;
+                //     }
+                //     helper[key].biddedSearches += parseInt(current.biddedSearches);
+                //     helper[key].count += 1;
+                //     helper[key].split += parseInt(current.split);
+                //     // helper[key].split_num = 70;
+                //   }
+                //   return prev;
+                // }, []);
+                // resultAll.map((item) => {
+                //   item.split = item.split/item.count
+                // })
+                // return resultAll;
 
               } catch (err) {
                 _iterator.e(err);
@@ -3263,58 +3308,7 @@
                 _iterator.f();
               }
 
-              var filtered_data = _this.allstat.filter(function (obj, pos, arr) {
-                return arr.map(function (mapObj) {
-                  return mapObj._id;
-                }).indexOf(obj._id) == pos;
-              });
-
-              var helper = {};
-              filtered_data.map(function (f) {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
-                f.split = parseFloat(f.split);
-                f.searches = parseFloat(f.searches);
-                f.biddedSearches = parseFloat(f.biddedSearches);
-                f.clicks = parseFloat(f.clicks);
-              }); //Calculate the sums and group data (while tracking count)
-
-              var resultAll = filtered_data.reduce(function (prev, current) {
-                var key = current.rptDate.toString() + '-' + current.subid;
-
-                if (!helper[key]) {
-                  helper[key] = Object.assign({}, current); // create a copy of o
-
-                  helper[key].count = 1;
-                  prev.push(helper[key]);
-                } else {
-                  helper[key].clicks += parseInt(current.clicks);
-                  helper[key].searches += parseInt(current.searches);
-
-                  if (current.biddedCtr) {
-                    helper[key].biddedCtr += current.biddedCtr;
-                  }
-
-                  if (current.ctr) {
-                    helper[key].ctr += current.ctr;
-                  }
-
-                  if (current.revenue) {
-                    helper[key].revenue += current.revenue;
-                  }
-
-                  helper[key].biddedSearches += parseInt(current.biddedSearches);
-                  helper[key].count += 1;
-                  helper[key].split += parseInt(current.split); // helper[key].split_num = 70;
-                }
-
-                return prev;
-              }, []);
-              resultAll.map(function (item) {
-                item.split = item.split / item.count;
-              });
-              return resultAll;
+              return _this.allstat;
             })["catch"](function (error) {
               return error;
             });
@@ -3638,7 +3632,7 @@
 
             return this.lyonService.getAllStats(startDate, endDate).toPromise().then(function (response) {
               var sortResponse = response.slice().sort(function (a, b) {
-                return a.rptDate - b.rptDate;
+                return a.date - b.date;
               });
               _this3.allChart = sortResponse; // var chartAllLyonStat = [];
               // for (var tagL of this.tagList) {
@@ -3677,17 +3671,15 @@
               //     .indexOf(obj._id) == pos;
               // });
 
-              var helperChart = {};
-
-              _this3.allChart.map(function (f) {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.searches = parseFloat(f.searches);
-                f.biddedCtr = parseFloat(f.biddedCTR);
-              });
+              var helperChart = {}; // this.allChart.map(f =>{
+              //   f.revenue = parseFloat(f.revenue);
+              //   f.ctr = parseFloat(f.ctr);
+              //   f.searches = parseFloat(f.searches);
+              //   f.biddedCtr = parseFloat(f.biddedCTR);
+              // })
 
               var resultChart = _this3.allChart.reduce(function (r, o) {
-                var key = o.rptDate.toString();
+                var key = o.date;
 
                 if (!helperChart[key]) {
                   helperChart[key] = Object.assign({}, o); // create a copy of o
@@ -3716,7 +3708,7 @@
                 for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
                   var resVal = _step6.value;
                   revenuePerDayVal.push(resVal.revenue);
-                  datesOfRevenueVal.push(resVal.rptDate);
+                  datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.searches);
                 }
               } catch (err) {
@@ -3771,7 +3763,7 @@
         },
         decls: 43,
         vars: 14,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "rptDate"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "tagname"], ["name", "publisher"], ["name", "searches"], ["name", "biddedSearches"], ["name", "clicks"], ["name", "biddedCtr"], ["name", "ctr"], ["name", "split"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "tagname"], ["name", "publisher"], ["name", "searches"], ["name", "biddedSearches"], ["name", "clicks"], ["name", "biddedCtr"], ["name", "ctr"], ["name", "split"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
         template: function LyonsComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
