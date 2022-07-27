@@ -2520,7 +2520,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! E:\123\github\nextsys-in\src\main.ts */
+      /*! C:\work\project\github\nextsys-in\src\main.ts */
       "./src/main.ts");
       /***/
     }
