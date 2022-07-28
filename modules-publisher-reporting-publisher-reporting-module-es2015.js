@@ -172,10 +172,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../shared/service/users.service */ "./src/app/shared/service/users.service.ts");
 /* harmony import */ var src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/service/admin-stats/perion.service */ "./src/app/shared/service/admin-stats/perion.service.ts");
 /* harmony import */ var src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/shared/service/admin-stats/lyon.service */ "./src/app/shared/service/admin-stats/lyon.service.ts");
-/* harmony import */ var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */ "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @swimlane/ngx-datatable */ "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
-/* harmony import */ var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */ "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
+/* harmony import */ var src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/shared/service/admin-stats/verizon.service */ "./src/app/shared/service/admin-stats/verizon.service.ts");
+/* harmony import */ var src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/shared/service/admin-stats/rubi.service */ "./src/app/shared/service/admin-stats/rubi.service.ts");
+/* harmony import */ var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */ "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @swimlane/ngx-datatable */ "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
+/* harmony import */ var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */ "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
+
+
 
 
 
@@ -190,13 +194,13 @@ __webpack_require__.r(__webpack_exports__);
 
 const _c0 = ["expandableTable"];
 function PublisherComponent_app_reporting_revenue_chart_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 17);
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("chartData", ctx_r0.chartData);
 } }
 function PublisherComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 18);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "strong");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Address");
@@ -208,13 +212,13 @@ function PublisherComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } }
 function PublisherComponent_ng_template_8_Template(rf, ctx) { if (rf & 1) {
-    const _r22 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PublisherComponent_ng_template_8_Template_a_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r22); const row_r19 = ctx.row; const ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r21.toggleExpandRow(row_r19); });
+    const _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PublisherComponent_ng_template_8_Template_a_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r24); const row_r21 = ctx.row; const ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r23.toggleExpandRow(row_r21); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const expanded_r20 = ctx.expanded;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r20)("datatable-icon-down", expanded_r20);
+    const expanded_r22 = ctx.expanded;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r22)("datatable-icon-down", expanded_r22);
 } }
 function PublisherComponent_ng_template_10_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
@@ -225,9 +229,9 @@ function PublisherComponent_ng_template_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "date");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const value_r24 = ctx.value;
+    const value_r26 = ctx.value;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r24));
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r26));
 } }
 function PublisherComponent_ng_template_13_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
@@ -237,9 +241,9 @@ function PublisherComponent_ng_template_14_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const value_r26 = ctx.value;
+    const value_r28 = ctx.value;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r28);
 } }
 function PublisherComponent_ng_template_16_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Tag ");
@@ -249,9 +253,9 @@ function PublisherComponent_ng_template_17_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const value_r28 = ctx.value;
+    const value_r30 = ctx.value;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r30);
 } }
 function PublisherComponent_ng_template_19_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
@@ -261,12 +265,12 @@ function PublisherComponent_ng_template_20_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const value_r30 = ctx.value;
+    const value_r32 = ctx.value;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r32);
 } }
 function PublisherComponent_ng_template_22_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Spilt ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
 } }
 function PublisherComponent_ng_template_23_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
@@ -275,31 +279,47 @@ function PublisherComponent_ng_template_23_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "number");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const value_r32 = ctx.value;
+    const value_r34 = ctx.value;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r32) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r34) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
 } }
 function PublisherComponent_ng_template_25_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
 } }
 function PublisherComponent_ng_template_26_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "currency");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const value_r34 = ctx.value;
+    const value_r36 = ctx.value;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r34, "USD"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r36, "USD") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "USD"));
+} }
+function PublisherComponent_ng_template_28_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+} }
+function PublisherComponent_ng_template_29_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const value_r38 = ctx.value;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r38, "USD"));
 } }
 class PublisherComponent {
-    constructor(route, tagManagementService, cdr, userService, perionService, lyonService) {
+    constructor(route, tagManagementService, cdr, userService, perionService, lyonService, verizonService, rubiService) {
         this.route = route;
         this.tagManagementService = tagManagementService;
         this.cdr = cdr;
         this.userService = userService;
         this.perionService = perionService;
         this.lyonService = lyonService;
+        this.verizonService = verizonService;
+        this.rubiService = rubiService;
         this.loadingIndicator = true;
         this.range = {
             startDate: '',
@@ -322,6 +342,14 @@ class PublisherComponent {
                 else if (this.selectedAdvertiser == "perion") {
                     this.chartData = yield this.getPerionChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
                     this.statData = yield this.getAllPerionStats(this.range.startDate, this.range.endDate, this.tagRows);
+                }
+                else if (this.selectedAdvertiser == "verizon-direct") {
+                    this.chartData = yield this.getVerizonChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                    this.statData = yield this.getAllVerizonStats(this.range.startDate, this.range.endDate, this.tagRows);
+                }
+                else if (this.selectedAdvertiser == "rubi") {
+                    this.chartData = yield this.getRubiChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                    this.statData = yield this.getRubiAllStats(this.range.startDate, this.range.endDate, this.tagRows);
                 }
                 this.refreshTable();
             }));
@@ -357,6 +385,14 @@ class PublisherComponent {
                 this.chartData = yield this.getPerionChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.statData = yield this.getAllPerionStats(this.range.startDate, this.range.endDate, this.tagRows);
             }
+            else if (this.selectedAdvertiser == "verizon-direct") {
+                this.chartData = yield this.getVerizonChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                this.statData = yield this.getAllVerizonStats(this.range.startDate, this.range.endDate, this.tagRows);
+            }
+            else if (this.selectedAdvertiser == "rubi") {
+                this.chartData = yield this.getRubiChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                this.statData = yield this.getRubiAllStats(this.range.startDate, this.range.endDate, this.tagRows);
+            }
             this.refreshTable();
         });
     }
@@ -379,19 +415,14 @@ class PublisherComponent {
                 }
             }
             //duplicated remove
-            let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
-                return arr
-                    .map(mapObj => mapObj._id)
-                    .indexOf(obj._id) == pos;
-            });
-            var helperChart = {};
+            let filter_data = chartAllLyonStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
             filter_data.map(f => {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
+                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
             });
+            filter_data = filter_data.slice().sort((a, b) => a.date - b.date);
+            var helperChart = {};
             var resultChart = filter_data.reduce(function (r, o) {
-                var key = o.rptDate;
+                var key = o.date;
                 if (!helperChart[key]) {
                     helperChart[key] = Object.assign({}, o); // create a copy of o
                     r.push(helperChart[key]);
@@ -410,7 +441,7 @@ class PublisherComponent {
             var chartDataValue = {};
             for (var resVal of resultChart) {
                 revenuePerDayVal.push(resVal.revenue);
-                datesOfRevenueVal.push(resVal.rptDate);
+                datesOfRevenueVal.push(resVal.date);
                 searchesPerDayVal.push(resVal.searches);
             }
             chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -426,11 +457,54 @@ class PublisherComponent {
         this.cdr.markForCheck();
     }
     getPerionChartMetrics(company, startDate, endDate) {
-        return this.perionService
-            .getChartMetrics(company, startDate, endDate)
-            .toPromise()
-            .then((response) => {
-            return response;
+        return this.perionService.getPerTagPerionStats(this.selectedCompany, startDate, endDate).toPromise().then((response) => {
+            this.allPerionChart = response;
+            var chartAllPerionStat = [];
+            for (var tagSub of this.tagRows.subids) {
+                if (tagSub['filterTag'] == "Contains") {
+                    chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.filter(stat => stat.subid.includes(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "StartsWith") {
+                    chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.filter(stat => stat.subid.startsWith(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "EndsWith") {
+                    chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.filter(stat => stat.subid.endsWith(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "ExactValue") {
+                    chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.filter(stat => stat.subid == tagSub['subid']));
+                }
+            }
+            //duplicated remove
+            let filter_data = chartAllPerionStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
+            filter_data = filter_data.slice().sort((a, b) => a.date - b.date);
+            var helperChart = {};
+            var resultChart = filter_data.reduce(function (r, o) {
+                var key = o.date;
+                if (!helperChart[key]) {
+                    helperChart[key] = Object.assign({}, o); // create a copy of o
+                    r.push(helperChart[key]);
+                }
+                else {
+                    helperChart[key].searches += parseInt(o.impressions);
+                    if (o.revenue) {
+                        helperChart[key].revenue += o.revenue;
+                    }
+                }
+                return r;
+            }, []);
+            var revenuePerDayVal = [];
+            var datesOfRevenueVal = [];
+            var searchesPerDayVal = [];
+            var chartDataValue = {};
+            for (var resVal of resultChart) {
+                revenuePerDayVal.push(resVal.revenue);
+                datesOfRevenueVal.push(resVal.date);
+                searchesPerDayVal.push(resVal.impressions);
+            }
+            chartDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+            chartDataValue['searchesPerDay'] = searchesPerDayVal;
+            return chartDataValue;
         })
             .catch((error) => {
             return error;
@@ -471,32 +545,29 @@ class PublisherComponent {
                 }
             }
             //duplicated remove
-            let filtered_data = allPerionStat.filter((obj, pos, arr) => {
-                return arr
-                    .map(mapObj => mapObj._id)
-                    .indexOf(obj._id) == pos;
-            });
-            var helper = {};
-            filtered_data.map(f => {
-                f.revenue = parseFloat(f.revenue);
-                f.rptDate = f.date;
-            });
-            var resultAll = filtered_data.reduce(function (prev, current) {
-                var key = (current.date).toString() + '-' + current.subid;
-                if (!helper[key]) {
-                    helper[key] = Object.assign({}, current); // create a copy of o
-                    prev.push(helper[key]);
-                }
-                else {
-                    helper[key].clicks += parseInt(current.clicks);
-                    if (current.revenue) {
-                        helper[key].revenue += current.revenue;
-                    }
-                    helper[key].split += parseInt(current.split);
-                }
-                return prev;
-            }, []);
-            return resultAll.slice().sort((a, b) => b.date - a.date);
+            let filter_data = allPerionStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
+            // let filtered_data = allPerionStat.filter((obj, pos, arr) => {
+            //   return arr
+            //     .map(mapObj => mapObj._id)
+            //     .indexOf(obj._id) == pos;
+            // });
+            // var helper = {};
+            // var resultAll = filtered_data.reduce(function(prev, current) {
+            //   var key = (current.date).toString() + '-' + current.subid;
+            //   if(!helper[key]) {
+            //     helper[key] = Object.assign({}, current); // create a copy of o
+            //     prev.push(helper[key]);
+            //   } else {
+            //     helper[key].clicks += parseInt(current.clicks);
+            //     if(current.revenue) {
+            //       helper[key].revenue += current.revenue;
+            //     }
+            //     helper[key].split += parseInt(current.split);
+            //   }
+            //   return prev;
+            // }, []);
+            // return resultAll.slice().sort((a, b) => b.date - a.date);
+            return filter_data.slice().sort((a, b) => b.date - a.date);
         })
             .catch((error) => {
             return error;
@@ -537,54 +608,255 @@ class PublisherComponent {
                 }
             }
             //duplicated remove
-            let filtered_data = allLyonStat.filter((obj, pos, arr) => {
-                return arr
-                    .map(mapObj => mapObj._id)
-                    .indexOf(obj._id) == pos;
-            });
-            var helper = {};
+            let filtered_data = allLyonStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
+            // var helper = {};
             filtered_data.map(f => {
-                f.revenue = parseFloat(f.revenue);
-                f.ctr = parseFloat(f.ctr);
-                f.biddedCtr = parseFloat(f.biddedCTR);
+                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
             });
-            var resultAll = filtered_data.reduce(function (prev, current) {
-                var key = (current.rptDate).toString() + '-' + current.subid;
-                if (!helper[key]) {
-                    helper[key] = Object.assign({}, current); // create a copy of o
-                    prev.push(helper[key]);
+            // var resultAll = filtered_data.reduce(function(prev, current) {
+            //   var key = (current.rptDate).toString() + '-' + current.subid;
+            //   if(!helper[key]) {
+            //     helper[key] = Object.assign({}, current); // create a copy of o
+            //     prev.push(helper[key]);
+            //   } else {
+            //     helper[key].clicks += parseInt(current.clicks);
+            //     helper[key].searches += parseInt(current.searches);
+            //     if(current.biddedCtr) {
+            //       helper[key].biddedCtr += current.biddedCtr;
+            //     }
+            //     if(current.ctr) {
+            //       helper[key].ctr += current.ctr;
+            //     }
+            //     if(current.revenue) {
+            //       helper[key].revenue += current.revenue;
+            //     }
+            //     helper[key].biddedSearches += parseInt(current.biddedSearches);
+            //     helper[key].split += parseInt(current.split);
+            //   }
+            //   return prev;
+            // }, []);
+            //return resultAll.slice().sort((a, b) => b.rptDate - a.rptDate);
+            return filtered_data.slice().sort((a, b) => b.date - a.date);
+        })
+            .catch((error) => {
+            return error;
+        });
+    }
+    getAllVerizonStats(startDate, endDate, tag) {
+        return this.verizonService.getAllVerizonStats(this.selectedCompany, startDate, endDate).toPromise().then((response) => {
+            this.allVerizonStatData = response.stats;
+            var allVerizonStat = [];
+            for (var tagSub of tag.subids) {
+                if (tagSub.filterTag == "Contains") {
+                    allVerizonStat = allVerizonStat.concat(this.allVerizonStatData.filter(stat => stat.subid.includes(tagSub.subid)));
+                    allVerizonStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.tagname = tag.name;
+                    });
+                }
+                else if (tagSub.filterTag == "StartsWith") {
+                    allVerizonStat = allVerizonStat.concat(this.allVerizonStatData.filter(stat => stat.subid.startsWith(tagSub.subid)));
+                    allVerizonStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.tagname = tag.name;
+                    });
+                }
+                else if (tagSub.filterTag == "EndsWith") {
+                    allVerizonStat = allVerizonStat.concat(this.allVerizonStatData.filter(stat => stat.subid.endsWith(tagSub.subid)));
+                    allVerizonStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.tagname = tag.name;
+                    });
+                }
+                else if (tagSub.filterTag == "ExactValue") {
+                    allVerizonStat = allVerizonStat.concat(this.allVerizonStatData.filter(stat => stat.subid == tagSub.subid));
+                    allVerizonStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.tagname = tag.name;
+                    });
+                }
+            }
+            //duplicated remove
+            let filtered_data = allVerizonStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
+            // var helper = {};
+            filtered_data.map(f => {
+                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
+            });
+            return filtered_data.slice().sort((a, b) => b.date - a.date);
+        })
+            .catch((error) => {
+            return error;
+        });
+    }
+    getVerizonChartMetrics(company, startDate, endDate) {
+        return this.verizonService.getAllVerizonStats(this.selectedCompany, startDate, endDate).toPromise().then((response) => {
+            this.allVerizonChart = response.stats;
+            var chartAllVerizonStat = [];
+            for (var tagSub of this.tagRows.subids) {
+                if (tagSub['filterTag'] == "Contains") {
+                    chartAllVerizonStat = chartAllVerizonStat.concat(this.allVerizonChart.filter(stat => stat.subid.includes(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "StartsWith") {
+                    chartAllVerizonStat = chartAllVerizonStat.concat(this.allVerizonChart.filter(stat => stat.subid.startsWith(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "EndsWith") {
+                    chartAllVerizonStat = chartAllVerizonStat.concat(this.allVerizonChart.filter(stat => stat.subid.endsWith(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "ExactValue") {
+                    chartAllVerizonStat = chartAllVerizonStat.concat(this.allVerizonChart.filter(stat => stat.subid == tagSub['subid']));
+                }
+            }
+            //duplicated remove
+            let filter_data = chartAllVerizonStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
+            filter_data.map(f => {
+                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
+            });
+            filter_data = filter_data.slice().sort((a, b) => a.date - b.date);
+            var helperChart = {};
+            var resultChart = filter_data.reduce(function (r, o) {
+                var key = o.date;
+                if (!helperChart[key]) {
+                    helperChart[key] = Object.assign({}, o); // create a copy of o
+                    r.push(helperChart[key]);
                 }
                 else {
-                    helper[key].clicks += parseInt(current.clicks);
-                    helper[key].searches += parseInt(current.searches);
-                    if (current.biddedCtr) {
-                        helper[key].biddedCtr += current.biddedCtr;
+                    helperChart[key].searches += parseInt(o.searches);
+                    if (o.revenue) {
+                        helperChart[key].revenue += o.revenue;
                     }
-                    if (current.ctr) {
-                        helper[key].ctr += current.ctr;
-                    }
-                    if (current.revenue) {
-                        helper[key].revenue += current.revenue;
-                    }
-                    helper[key].biddedSearches += parseInt(current.biddedSearches);
-                    helper[key].split += parseInt(current.split);
                 }
-                return prev;
+                return r;
             }, []);
-            return resultAll.slice().sort((a, b) => b.rptDate - a.rptDate);
+            var revenuePerDayVal = [];
+            var datesOfRevenueVal = [];
+            var searchesPerDayVal = [];
+            var chartDataValue = {};
+            for (var resVal of resultChart) {
+                revenuePerDayVal.push(resVal.revenue);
+                datesOfRevenueVal.push(resVal.date);
+                searchesPerDayVal.push(resVal.searches);
+            }
+            chartDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+            chartDataValue['searchesPerDay'] = searchesPerDayVal;
+            return chartDataValue;
+        })
+            .catch((error) => {
+            return error;
+        });
+    }
+    getRubiAllStats(startDate, endDate, tag) {
+        return this.rubiService.getAllRubiStats(this.selectedCompany, startDate, endDate).toPromise().then((res) => {
+            this.allRubiStatData = res.stats;
+            var allRubiStat = [];
+            for (var tagSub of tag.subids) {
+                if (tagSub.filterTag == "Contains") {
+                    allRubiStat = allRubiStat.concat(this.allRubiStatData.filter(stat => stat.subid.includes(tagSub.subid)));
+                    allRubiStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.tagname = tag.name;
+                    });
+                }
+                else if (tagSub.filterTag == "StartsWith") {
+                    allRubiStat = allRubiStat.concat(this.allRubiStatData.filter(stat => stat.subid.startsWith(tagSub.subid)));
+                    allRubiStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.tagname = tag.name;
+                    });
+                }
+                else if (tagSub.filterTag == "EndsWith") {
+                    allRubiStat = allRubiStat.concat(this.allRubiStatData.filter(stat => stat.subid.endsWith(tagSub.subid)));
+                    allRubiStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.tagname = tag.name;
+                    });
+                }
+                else if (tagSub.filterTag == "ExactValue") {
+                    allRubiStat = allRubiStat.concat(this.allRubiStatData.filter(stat => stat.subid == tagSub.subid));
+                    allRubiStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.tagname = tag.name;
+                    });
+                }
+            }
+            //duplicated remove
+            let filtered_data = allRubiStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
+            // var helper = {};
+            filtered_data.map(f => {
+                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
+                f.cpc = parseFloat(f.revenue) / parseFloat(f.clicks);
+            });
+            return filtered_data.slice().sort((a, b) => b.date - a.date);
+        })
+            .catch((error) => {
+            return error;
+        });
+    }
+    getRubiChartMetrics(company, startDate, endDate) {
+        return this.rubiService.getAllRubiStats(this.selectedCompany, startDate, endDate).toPromise().then((response) => {
+            this.allRubiChart = response.stats;
+            var chartAllRubiStat = [];
+            for (var tagSub of this.tagRows.subids) {
+                if (tagSub['filterTag'] == "Contains") {
+                    chartAllRubiStat = chartAllRubiStat.concat(this.allRubiChart.filter(stat => stat.subid.includes(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "StartsWith") {
+                    chartAllRubiStat = chartAllRubiStat.concat(this.allRubiChart.filter(stat => stat.subid.startsWith(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "EndsWith") {
+                    chartAllRubiStat = chartAllRubiStat.concat(this.allRubiChart.filter(stat => stat.subid.endsWith(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "ExactValue") {
+                    chartAllRubiStat = chartAllRubiStat.concat(this.allRubiChart.filter(stat => stat.subid == tagSub['subid']));
+                }
+            }
+            //duplicated remove
+            let filter_data = chartAllRubiStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
+            filter_data.map(f => {
+                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
+            });
+            filter_data = filter_data.slice().sort((a, b) => a.date - b.date);
+            var helperChart = {};
+            var resultChart = filter_data.reduce(function (r, o) {
+                var key = o.date;
+                if (!helperChart[key]) {
+                    helperChart[key] = Object.assign({}, o); // create a copy of o
+                    r.push(helperChart[key]);
+                }
+                else {
+                    helperChart[key].searches += parseInt(o.searches);
+                    if (o.revenue) {
+                        helperChart[key].revenue += o.revenue;
+                    }
+                }
+                return r;
+            }, []);
+            var revenuePerDayVal = [];
+            var datesOfRevenueVal = [];
+            var searchesPerDayVal = [];
+            var chartDataValue = {};
+            for (var resVal of resultChart) {
+                revenuePerDayVal.push(resVal.revenue);
+                datesOfRevenueVal.push(resVal.date);
+                searchesPerDayVal.push(resVal.searches);
+            }
+            chartDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+            chartDataValue['searchesPerDay'] = searchesPerDayVal;
+            return chartDataValue;
         })
             .catch((error) => {
             return error;
         });
     }
 }
-PublisherComponent.ɵfac = function PublisherComponent_Factory(t) { return new (t || PublisherComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"])); };
+PublisherComponent.ɵfac = function PublisherComponent_Factory(t) { return new (t || PublisherComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"])); };
 PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: PublisherComponent, selectors: [["app-publisher"]], viewQuery: function PublisherComponent_Query(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
     } if (rf & 2) {
         var _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
-    } }, decls: 27, vars: 14, consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "rptDate"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "tagname"], ["name", "publisher"], ["name", "spilt"], ["name", "revenue"], [3, "chartData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]], template: function PublisherComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 30, vars: 14, consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "tagname"], ["name", "publisher"], ["name", "ctr"], ["name", "cpc"], ["name", "revenue"], [3, "chartData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]], template: function PublisherComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("onDatesPicked", function PublisherComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) { return ctx.updateReportingFiltering($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -619,7 +891,11 @@ PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](24, "ngx-datatable-column", 15);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, PublisherComponent_ng_template_25_Template, 1, 0, "ng-template", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, PublisherComponent_ng_template_26_Template, 3, 4, "ng-template", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, PublisherComponent_ng_template_26_Template, 4, 7, "ng-template", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](27, "ngx-datatable-column", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, PublisherComponent_ng_template_28_Template, 1, 0, "ng-template", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, PublisherComponent_ng_template_29_Template, 3, 4, "ng-template", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     } if (rf & 2) {
@@ -631,7 +907,7 @@ PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
-    } }, directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_7__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_9__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_10__["ReportingRevenueChartComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["CurrencyPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcHVibGlzaGVyLXJlcG9ydGluZy9wdWJsaXNoZXIvcHVibGlzaGVyLmNvbXBvbmVudC5zY3NzIn0= */"] });
+    } }, directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_9__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__["ReportingRevenueChartComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["CurrencyPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcHVibGlzaGVyLXJlcG9ydGluZy9wdWJsaXNoZXIvcHVibGlzaGVyLmNvbXBvbmVudC5zY3NzIn0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](PublisherComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{
@@ -639,7 +915,7 @@ PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
                 templateUrl: './publisher.component.html',
                 styleUrls: ['./publisher.component.scss']
             }]
-    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }, { type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"] }, { type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"] }, { type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"] }]; }, { table: [{
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }, { type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"] }, { type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"] }, { type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"] }, { type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"] }, { type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"] }]; }, { table: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
             args: ['expandableTable']
         }] }); })();
