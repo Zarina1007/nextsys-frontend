@@ -48834,17 +48834,17 @@
         };
       };
 
-      function CompanySelectorComponent_ng_container_9_ng_container_6_Template(rf, ctx) {
+      function CompanySelectorComponent_ng_container_9_ng_container_2_Template(rf, ctx) {
         if (rf & 1) {
           var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "li", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "li", 11);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function CompanySelectorComponent_ng_container_9_ng_container_6_Template_a_click_2_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function CompanySelectorComponent_ng_container_9_ng_container_2_Template_a_click_2_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4);
 
             var company_r2 = ctx.$implicit;
@@ -48854,7 +48854,7 @@
             return ctx_r3.setCompanyWithRefresh(company_r2._id);
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "span", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "span", 13);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
 
@@ -48886,35 +48886,11 @@
 
       function CompanySelectorComponent_ng_container_9_Template(rf, ctx) {
         if (rf & 1) {
-          var _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
-
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "ul", 9);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "li", 10);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "a", 11);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function CompanySelectorComponent_ng_container_9_Template_a_click_3_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6);
-
-            var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
-
-            return ctx_r5.setCompanyWithRefresh("");
-          });
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "span", 12);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "No company");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, CompanySelectorComponent_ng_container_9_ng_container_6_Template, 5, 7, "ng-container", 13);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, CompanySelectorComponent_ng_container_9_ng_container_2_Template, 5, 7, "ng-container", 10);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -48924,7 +48900,7 @@
         if (rf & 2) {
           var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.userCompanies);
         }
@@ -48964,9 +48940,15 @@
                 }
               } //User did not have a company saved to local storage
               else {
-                  localStorage.removeItem('company');
-                  _this123.selectedCompany = null;
+                  // localStorage.removeItem('company');
+                  // this.selectedCompany = null;
+                  _this123.setCompanyToLocalStorage(_this123.userCompanies[0]._id);
+
+                  _this123.selectedCompany = _this123.userCompanies[0];
                 }
+            } else {
+              localStorage.removeItem('company');
+              _this123.selectedCompany = null;
             }
 
             _this123.changeDetectorRefs.detectChanges();
@@ -49047,7 +49029,7 @@
         selectors: [["app-company-selector"]],
         decls: 10,
         vars: 3,
-        consts: [["ngbDropdown", "", "placement", "bottom-right", 1, "dropdown", 3, "autoClose"], ["ngbDropdownToggle", "", "data-toggle", "dropdown", "data-offset", "10px,0px", 1, "topbar-item"], [1, "btn", "btn-clean", "btn-dropdown", "btn-lg", "mr-1"], [1, "menu-text"], [1, "caret"], [1, "menu-arrow"], [1, "glyphicon", "glyphicon-triangle-top"], ["ngbDropdownMenu", "", 1, "dropdown-menu", "p-0", "m-0", "dropdown-menu-anim-up", "dropdown-menu-sm", "companies"], [4, "ngIf"], [1, "navi", "navi-hover", "py-4"], [1, "navi-item"], ["href", "javascript:void(0);", 1, "navi-link", 3, "click"], [1, "navi-text"], [4, "ngFor", "ngForOf"], [1, "navi-item", 3, "ngClass"], ["href", "javascript:void(0);", 1, "navi-link", 3, "ngClass", "click"]],
+        consts: [["ngbDropdown", "", "placement", "bottom-right", 1, "dropdown", 3, "autoClose"], ["ngbDropdownToggle", "", "data-toggle", "dropdown", "data-offset", "10px,0px", 1, "topbar-item"], [1, "btn", "btn-clean", "btn-dropdown", "btn-lg", "mr-1"], [1, "menu-text"], [1, "caret"], [1, "menu-arrow"], [1, "glyphicon", "glyphicon-triangle-top"], ["ngbDropdownMenu", "", 1, "dropdown-menu", "p-0", "m-0", "dropdown-menu-anim-up", "dropdown-menu-sm", "companies"], [4, "ngIf"], [1, "navi", "navi-hover", "py-4"], [4, "ngFor", "ngForOf"], [1, "navi-item", 3, "ngClass"], ["href", "javascript:void(0);", 1, "navi-link", 3, "ngClass", "click"], [1, "navi-text"]],
         template: function CompanySelectorComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -49074,7 +49056,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, CompanySelectorComponent_ng_container_9_Template, 7, 1, "ng-container", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, CompanySelectorComponent_ng_container_9_Template, 3, 1, "ng-container", 8);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
