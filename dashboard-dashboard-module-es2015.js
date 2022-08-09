@@ -888,7 +888,6 @@ class Dashboard1Component {
             chartPerionDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
             chartPerionDataValue['statType'] = "Perion";
             chartPerionMetric.push(chartPerionDataValue);
-            console.log("========", chartPerionMetric);
             return chartPerionMetric;
         })
             .catch((error) => {

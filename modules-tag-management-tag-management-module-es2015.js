@@ -2183,7 +2183,7 @@ class NewTagComponent {
     }
     ngOnInit() {
         this.url =
-            'https://us.search.yahoo.com/yhs/search?hspart=brandclick&hsimp=yhs-calm&p=flowers';
+            'https://google.com/search';
         this.initialURL = new URL('https://adserver.com/search');
         this.selectBrowserStatus = "true";
         this.selectDeviceTypeStatus = "true";
@@ -2323,9 +2323,10 @@ class NewTagComponent {
             this.createInitialURL();
         }
         else {
-            // this.params.controls[index]
-            //   .get('initialParam')
-            //   .setValue(this.params.controls[index].get('key').value);
+            this.params.controls[index]
+                .get('initialParam')
+                .setValue("");
+            this.createInitialURL();
         }
     }
     //Checks to see if initialParam mat input field has been touched and updates initial URL
@@ -2340,7 +2341,9 @@ class NewTagComponent {
         this.initialURL = new URL('https://adserver.com/search');
         this.params.controls.forEach((element, index) => {
             if (element.value.paramType === 'dynamic') {
-                this.initialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
+                if (element.value.initialParam) {
+                    this.initialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
+                }
             }
             else if (element.value.paramType === 'static') {
                 // this.initialURL.searchParams.append(

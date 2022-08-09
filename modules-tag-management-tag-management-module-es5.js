@@ -4637,7 +4637,7 @@
           value: function ngOnInit() {
             var _this9 = this;
 
-            this.url = 'https://us.search.yahoo.com/yhs/search?hspart=brandclick&hsimp=yhs-calm&p=flowers';
+            this.url = 'https://google.com/search';
             this.initialURL = new URL('https://adserver.com/search');
             this.selectBrowserStatus = "true";
             this.selectDeviceTypeStatus = "true";
@@ -4812,9 +4812,9 @@
               console.log('static!');
               this.params.controls[index].get('initialParam').setValue(this.params.controls[index].get('value').value);
               this.createInitialURL();
-            } else {// this.params.controls[index]
-              //   .get('initialParam')
-              //   .setValue(this.params.controls[index].get('key').value);
+            } else {
+              this.params.controls[index].get('initialParam').setValue("");
+              this.createInitialURL();
             }
           } //Checks to see if initialParam mat input field has been touched and updates initial URL
 
@@ -4835,7 +4835,9 @@
             this.initialURL = new URL('https://adserver.com/search');
             this.params.controls.forEach(function (element, index) {
               if (element.value.paramType === 'dynamic') {
-                _this13.initialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
+                if (element.value.initialParam) {
+                  _this13.initialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
+                }
               } else if (element.value.paramType === 'static') {// this.initialURL.searchParams.append(
                 //   element.value.key,
                 //   element.value.value
