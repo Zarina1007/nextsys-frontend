@@ -2327,7 +2327,6 @@ class ManualSplitUpdateComponent {
     }
     ngOnInit() {
         this.getAllTags();
-        this.tagData = [{ value: 'all tag', viewValue: 'All Tag' }];
         this.manaulUpFG = this.fb.group({
             tag: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
             preSelectValue: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
@@ -2359,8 +2358,14 @@ class ManualSplitUpdateComponent {
     //get All tags List
     getAllTags() {
         this.tagService.getAllTags().subscribe((response) => {
-            // console.log(response);
-            response.map(res => {
+            var resData = [];
+            if (this.companySelected) {
+                resData = response.filter(res => res.company[0]['_id'] == this.companySelected);
+            }
+            if (resData.length > 0) {
+                this.tagData = [{ value: 'all tag', viewValue: 'All Tag' }];
+            }
+            resData.map(res => {
                 this.tagData.push({
                     value: res._id,
                     viewValue: res.name

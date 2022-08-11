@@ -4159,10 +4159,6 @@
           key: "ngOnInit",
           value: function ngOnInit() {
             this.getAllTags();
-            this.tagData = [{
-              value: 'all tag',
-              viewValue: 'All Tag'
-            }];
             this.manaulUpFG = this.fb.group({
               tag: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
               preSelectValue: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
@@ -4200,8 +4196,22 @@
             var _this5 = this;
 
             this.tagService.getAllTags().subscribe(function (response) {
-              // console.log(response);
-              response.map(function (res) {
+              var resData = [];
+
+              if (_this5.companySelected) {
+                resData = response.filter(function (res) {
+                  return res.company[0]['_id'] == _this5.companySelected;
+                });
+              }
+
+              if (resData.length > 0) {
+                _this5.tagData = [{
+                  value: 'all tag',
+                  viewValue: 'All Tag'
+                }];
+              }
+
+              resData.map(function (res) {
                 _this5.tagData.push({
                   value: res._id,
                   viewValue: res.name
