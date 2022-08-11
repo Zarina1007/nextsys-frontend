@@ -17117,15 +17117,15 @@
     },
 
     /***/
-    "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js":
-    /*!***************************************************************************!*\
-      !*** ./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js ***!
-      \***************************************************************************/
+    "./node_modules/ng-apexcharts/fesm2015/ng-apexcharts.js":
+    /*!**************************************************************!*\
+      !*** ./node_modules/ng-apexcharts/fesm2015/ng-apexcharts.js ***!
+      \**************************************************************/
 
     /*! exports provided: ChartComponent, NgApexchartsModule */
 
     /***/
-    function node_modulesNgApexcharts__ivy_ngcc__Fesm2015NgApexchartsJs(module, __webpack_exports__, __webpack_require__) {
+    function node_modulesNgApexchartsFesm2015NgApexchartsJs(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -17146,7 +17146,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
@@ -18123,7 +18123,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
@@ -18135,7 +18135,7 @@
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      "./node_modules/@angular/common/fesm2015/common.js");
       /* harmony import */
 
 
@@ -18241,7 +18241,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
@@ -18293,7 +18293,7 @@
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      "./node_modules/@angular/common/fesm2015/common.js");
       /* harmony import */
 
 
@@ -19114,13 +19114,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      "./node_modules/@angular/common/fesm2015/common.js");
       /* harmony import */
 
 
@@ -19202,13 +19202,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var ng_inline_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! ng-inline-svg */
-      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+      "./node_modules/ng-inline-svg/lib_esmodule/index.js");
 
       var AdvanceTablesWidget2Component = /*#__PURE__*/function () {
         function AdvanceTablesWidget2Component() {
@@ -20027,13 +20027,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var ng_inline_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! ng-inline-svg */
-      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+      "./node_modules/ng-inline-svg/lib_esmodule/index.js");
 
       var AdvanceTablesWidget4Component = /*#__PURE__*/function () {
         function AdvanceTablesWidget4Component() {
@@ -20659,13 +20659,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
-      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
@@ -20677,7 +20677,7 @@
 
       var ng_inline_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ng-inline-svg */
-      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+      "./node_modules/ng-inline-svg/lib_esmodule/index.js");
 
       var ListsWidget1Component = /*#__PURE__*/function () {
         function ListsWidget1Component() {
@@ -20969,13 +20969,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
-      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
@@ -21257,13 +21257,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
-      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
@@ -21357,13 +21357,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
-      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
@@ -21645,13 +21645,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
-      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
@@ -21745,13 +21745,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
-      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
@@ -21987,13 +21987,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
-      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
@@ -22327,7 +22327,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
@@ -22349,7 +22349,7 @@
 
       var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
-      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
@@ -22361,19 +22361,19 @@
 
       var ng_apexcharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ng-apexcharts */
-      "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
+      "./node_modules/ng-apexcharts/fesm2015/ng-apexcharts.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      "./node_modules/@angular/common/fesm2015/common.js");
       /* harmony import */
 
 
       var ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! ng-inline-svg */
-      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+      "./node_modules/ng-inline-svg/lib_esmodule/index.js");
 
       function MixedWidget1Component_div_15_Template(rf, ctx) {
         if (rf & 1) {
@@ -22876,7 +22876,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
@@ -22888,7 +22888,7 @@
 
       var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
-      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
@@ -22900,7 +22900,7 @@
 
       var ng_apexcharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ng-apexcharts */
-      "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
+      "./node_modules/ng-apexcharts/fesm2015/ng-apexcharts.js");
 
       var MixedWidget14Component = /*#__PURE__*/function () {
         function MixedWidget14Component(layout) {
@@ -23109,7 +23109,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
@@ -23121,13 +23121,13 @@
 
       var ng_inline_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ng-inline-svg */
-      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+      "./node_modules/ng-inline-svg/lib_esmodule/index.js");
       /* harmony import */
 
 
       var ng_apexcharts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ng-apexcharts */
-      "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
+      "./node_modules/ng-apexcharts/fesm2015/ng-apexcharts.js");
 
       var StatsWidget11Component = /*#__PURE__*/function () {
         function StatsWidget11Component(layout) {
@@ -23406,7 +23406,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
@@ -23418,13 +23418,13 @@
 
       var ng_inline_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ng-inline-svg */
-      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+      "./node_modules/ng-inline-svg/lib_esmodule/index.js");
       /* harmony import */
 
 
       var ng_apexcharts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ng-apexcharts */
-      "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
+      "./node_modules/ng-apexcharts/fesm2015/ng-apexcharts.js");
 
       var StatsWidget12Component = /*#__PURE__*/function () {
         function StatsWidget12Component(layout) {
@@ -23704,25 +23704,25 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      "./node_modules/@angular/common/fesm2015/common.js");
       /* harmony import */
 
 
       var ng_apexcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ng-apexcharts */
-      "./node_modules/ng-apexcharts/__ivy_ngcc__/fesm2015/ng-apexcharts.js");
+      "./node_modules/ng-apexcharts/fesm2015/ng-apexcharts.js");
       /* harmony import */
 
 
       var ng_inline_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ng-inline-svg */
-      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+      "./node_modules/ng-inline-svg/lib_esmodule/index.js");
       /* harmony import */
 
 
@@ -23800,7 +23800,7 @@
 
       var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
-      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+      "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
@@ -23876,7 +23876,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
@@ -23956,19 +23956,19 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      "./node_modules/@angular/common/fesm2015/common.js");
       /* harmony import */
 
 
       var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/router */
-      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      "./node_modules/@angular/router/fesm2015/router.js");
       /* harmony import */
 
 

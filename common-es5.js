@@ -82,19 +82,19 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      "./node_modules/@angular/common/fesm2015/common.js");
       /* harmony import */
 
 
       var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @ngx-translate/core */
-      "./node_modules/@ngx-translate/core/__ivy_ngcc__/fesm2015/ngx-translate-core.js");
+      "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
 
       var TranslationModule = function TranslationModule() {
         _classCallCheck(this, TranslationModule);
@@ -156,13 +156,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var ngx_toastr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! ngx-toastr */
-      "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+      "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js");
 
       var NotificationService = /*#__PURE__*/function () {
         function NotificationService(toastr) {
@@ -247,13 +247,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/material/snack-bar */
-      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/snack-bar.js");
+      "./node_modules/@angular/material/fesm2015/snack-bar.js");
 
       var SnackbarService = /*#__PURE__*/function () {
         function SnackbarService(_snackBar) {

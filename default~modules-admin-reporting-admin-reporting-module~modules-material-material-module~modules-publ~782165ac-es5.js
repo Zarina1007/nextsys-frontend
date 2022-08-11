@@ -21,15 +21,15 @@
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"], {
     /***/
-    "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js":
-    /*!************************************************************************!*\
-      !*** ./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js ***!
-      \************************************************************************/
+    "./node_modules/@angular/material/fesm2015/dialog.js":
+    /*!***********************************************************!*\
+      !*** ./node_modules/@angular/material/fesm2015/dialog.js ***!
+      \***********************************************************/
 
     /*! exports provided: MAT_DIALOG_DATA, MAT_DIALOG_DEFAULT_OPTIONS, MAT_DIALOG_SCROLL_STRATEGY, MAT_DIALOG_SCROLL_STRATEGY_FACTORY, MAT_DIALOG_SCROLL_STRATEGY_PROVIDER, MAT_DIALOG_SCROLL_STRATEGY_PROVIDER_FACTORY, MatDialog, MatDialogActions, MatDialogClose, MatDialogConfig, MatDialogContainer, MatDialogContent, MatDialogModule, MatDialogRef, MatDialogTitle, _MatDialogBase, _MatDialogContainerBase, _closeDialogVia, matDialogAnimations, throwMatDialogContentAlreadyAttachedError */
 
     /***/
-    function node_modulesAngularMaterial__ivy_ngcc__Fesm2015DialogJs(module, __webpack_exports__, __webpack_require__) {
+    function node_modulesAngularMaterialFesm2015DialogJs(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -158,37 +158,37 @@
 
       var _angular_cdk_overlay__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/cdk/overlay */
-      "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/overlay.js");
+      "./node_modules/@angular/cdk/fesm2015/overlay.js");
       /* harmony import */
 
 
       var _angular_cdk_portal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/cdk/portal */
-      "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/portal.js");
+      "./node_modules/@angular/cdk/fesm2015/portal.js");
       /* harmony import */
 
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/core/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_material_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/material/core */
-      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+      "./node_modules/@angular/material/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_cdk_bidi__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/cdk/bidi */
-      "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/bidi.js");
+      "./node_modules/@angular/cdk/fesm2015/bidi.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      "./node_modules/@angular/common/fesm2015/common.js");
       /* harmony import */
 
 
@@ -206,19 +206,19 @@
 
       var _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! @angular/cdk/a11y */
-      "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/a11y.js");
+      "./node_modules/@angular/cdk/fesm2015/a11y.js");
       /* harmony import */
 
 
       var _angular_animations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/animations */
-      "./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/animations.js");
+      "./node_modules/@angular/animations/fesm2015/animations.js");
       /* harmony import */
 
 
       var _angular_cdk_keycodes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! @angular/cdk/keycodes */
-      "./node_modules/@angular/cdk/__ivy_ngcc__/fesm2015/keycodes.js");
+      "./node_modules/@angular/cdk/fesm2015/keycodes.js");
       /**
        * @license
        * Copyright Google LLC All Rights Reserved.
