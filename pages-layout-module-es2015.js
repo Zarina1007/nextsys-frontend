@@ -26409,9 +26409,9 @@ class AsideDynamicComponent {
         this.asideSelfMinimizeToggle = false;
         this.reportingProviderList = [];
         this.currentUser = this.authService.currentUserValue;
-        this.companySelected = this.getSelectedCompanyFromLocalStorage();
     }
     ngOnInit() {
+        this.companySelected = this.getSelectedCompanyFromLocalStorage();
         this.reportingProviderList = this.getCompanyList(this.companyList);
         // load view settings
         this.disableAsideSelfDisplay =

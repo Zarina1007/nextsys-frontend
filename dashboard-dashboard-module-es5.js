@@ -18386,16 +18386,9 @@
           this.tagService = tagService;
           this.tagList = [];
           this.allDaysList = [];
-          this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
-        } //Gets the Selected Company from Local Storage
-
+        }
 
         _createClass(Dashboard1Component, [{
-          key: "getSelectedCompanyFromLocalStorage",
-          value: function getSelectedCompanyFromLocalStorage() {
-            return this.userService.getSelectedCompanyFromLocalStorage();
-          }
-        }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
@@ -18403,42 +18396,49 @@
                 while (1) {
                   switch (_context.prev = _context.next) {
                     case 0:
+                      this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
                       this.allDaysList = this.getCurrentMontDateList();
-                      _context.next = 3;
+                      _context.next = 4;
                       return this.getCompanyTags(this.selectedCompany);
 
-                    case 3:
+                    case 4:
                       this.tagList = _context.sent;
-                      _context.next = 6;
+                      _context.next = 7;
                       return this.getPerionChart(this.selectedCompany);
 
-                    case 6:
+                    case 7:
                       this.perionChartData = _context.sent;
-                      _context.next = 9;
+                      _context.next = 10;
                       return this.getLyonChart(this.selectedCompany);
 
-                    case 9:
+                    case 10:
                       this.lyonChartData = _context.sent;
-                      _context.next = 12;
+                      _context.next = 13;
                       return this.getRubiChart(this.selectedCompany);
 
-                    case 12:
+                    case 13:
                       this.rubiChartData = _context.sent;
-                      _context.next = 15;
+                      _context.next = 16;
                       return this.getVerizonChart(this.selectedCompany);
 
-                    case 15:
+                    case 16:
                       this.verizonChartData = _context.sent;
                       this.ChartData = this.perionChartData.concat(this.lyonChartData).concat(this.rubiChartData).concat(this.verizonChartData);
                       this.cdr.markForCheck();
 
-                    case 18:
+                    case 19:
                     case "end":
                       return _context.stop();
                   }
                 }
               }, _callee, this);
             }));
+          } //Gets the Selected Company from Local Storage
+
+        }, {
+          key: "getSelectedCompanyFromLocalStorage",
+          value: function getSelectedCompanyFromLocalStorage() {
+            return this.userService.getSelectedCompanyFromLocalStorage();
           }
         }, {
           key: "getPerionChart",
@@ -22642,10 +22642,10 @@
           value: function getSubChartOptions(subChart) {
             return {
               series: [{
-                name: "current month",
+                name: "Current Month",
                 data: subChart.revenuePerDay
               }, {
-                name: "before month",
+                name: "Previous month",
                 data: subChart.revenueBeforePerDay
               }],
               chart: {
@@ -22727,7 +22727,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h3", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " Month to Date Stats ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " Year to Date Stats ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 

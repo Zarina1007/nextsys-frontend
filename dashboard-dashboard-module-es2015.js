@@ -758,14 +758,10 @@ class Dashboard1Component {
         this.tagService = tagService;
         this.tagList = [];
         this.allDaysList = [];
-        this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
-    }
-    //Gets the Selected Company from Local Storage
-    getSelectedCompanyFromLocalStorage() {
-        return this.userService.getSelectedCompanyFromLocalStorage();
     }
     ngAfterViewInit() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
             this.allDaysList = this.getCurrentMontDateList();
             this.tagList = yield this.getCompanyTags(this.selectedCompany);
             this.perionChartData = yield this.getPerionChart(this.selectedCompany);
@@ -775,6 +771,10 @@ class Dashboard1Component {
             this.ChartData = this.perionChartData.concat(this.lyonChartData).concat(this.rubiChartData).concat(this.verizonChartData);
             this.cdr.markForCheck();
         });
+    }
+    //Gets the Selected Company from Local Storage
+    getSelectedCompanyFromLocalStorage() {
+        return this.userService.getSelectedCompanyFromLocalStorage();
     }
     getPerionChart(company) {
         return this.perionService
@@ -2938,11 +2938,11 @@ class MixedWidget1Component {
         return {
             series: [
                 {
-                    name: "current month",
+                    name: "Current Month",
                     data: subChart.revenuePerDay
                 },
                 {
-                    name: "before month",
+                    name: "Previous month",
                     data: subChart.revenueBeforePerDay
                 }
             ],
@@ -3004,7 +3004,7 @@ MixedWidget1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h3", 2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " Month to Date Stats ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " Year to Date Stats ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 4);
