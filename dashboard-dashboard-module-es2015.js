@@ -2880,7 +2880,7 @@ class MixedWidget1Component {
             },
             yaxis: {
                 min: 0,
-                max: 10000,
+                max: 30000,
                 labels: {
                     show: true,
                     style: {
