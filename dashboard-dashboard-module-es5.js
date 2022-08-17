@@ -22399,13 +22399,17 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](9, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](10, "currency");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "apx-chart", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "apx-chart", 24);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -22432,9 +22436,9 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("$", chartSubOption_r1.revenueCurrentSum, " vs $", chartSubOption_r1.revenueBeforeSum, "");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](9, 14, chartSubOption_r1.revenueCurrentSum, "USD"), " vs ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](10, 17, chartSubOption_r1.revenueBeforeSum, "USD"), "");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("series", chartSubOption_r1.series)("chart", chartSubOption_r1.chart)("xaxis", chartSubOption_r1.xaxis)("yaxis", chartSubOption_r1.yaxis)("stroke", chartSubOption_r1.stroke)("tooltip", chartSubOption_r1.tooltip)("dataLabels", chartSubOption_r1.dataLabels);
         }
@@ -22765,7 +22769,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, MixedWidget1Component_div_15_Template, 11, 14, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, MixedWidget1Component_div_15_Template, 13, 20, "div", 12);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -22827,6 +22831,7 @@
           }
         },
         directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbDropdown"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbDropdownToggle"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_3__["NgbDropdownMenu"], _dropdown_menus_dropdown_menu2_dropdown_menu2_component__WEBPACK_IMPORTED_MODULE_4__["DropdownMenu2Component"], ng_apexcharts__WEBPACK_IMPORTED_MODULE_5__["ChartComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgClass"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["CurrencyPipe"]],
         encapsulation: 2
       });
       /*@__PURE__*/
