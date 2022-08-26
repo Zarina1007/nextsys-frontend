@@ -51300,7 +51300,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | dashboard-dashboard-module */
-            [__webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-material-m~039ec6da"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("dashboard-dashboard-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-material-m~039ec6da"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("common"), __webpack_require__.e("dashboard-dashboard-module")]).then(__webpack_require__.bind(null,
             /*! ./dashboard/dashboard.module */
             "./src/app/pages/dashboard/dashboard.module.ts")).then(function (m) {
               return m.DashboardModule;

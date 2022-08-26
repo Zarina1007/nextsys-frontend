@@ -707,18 +707,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/shared/service/admin-stats/rubi.service */ "./src/app/shared/service/admin-stats/rubi.service.ts");
 /* harmony import */ var src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/shared/service/admin-stats/verizon.service */ "./src/app/shared/service/admin-stats/verizon.service.ts");
 /* harmony import */ var src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/modules/tag-management/tag-management.service */ "./src/app/modules/tag-management/tag-management.service.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
-/* harmony import */ var _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../widgets/lists/lists-widget9/lists-widget9.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget9/lists-widget9.component.ts");
-/* harmony import */ var _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../widgets/stats/stats-widget11/stats-widget11.component */ "./src/app/_metronic/partials/content/widgets/stats/stats-widget11/stats-widget11.component.ts");
-/* harmony import */ var _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../widgets/stats/stats-widget12/stats-widget12.component */ "./src/app/_metronic/partials/content/widgets/stats/stats-widget12/stats-widget12.component.ts");
-/* harmony import */ var _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../widgets/lists/lists-widget1/lists-widget1.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget1/lists-widget1.component.ts");
-/* harmony import */ var _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../widgets/advance-tables/advance-tables-widget2/advance-tables-widget2.component */ "./src/app/_metronic/partials/content/widgets/advance-tables/advance-tables-widget2/advance-tables-widget2.component.ts");
-/* harmony import */ var _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../widgets/lists/lists-widget3/lists-widget3.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget3/lists-widget3.component.ts");
-/* harmony import */ var _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../widgets/lists/lists-widget4/lists-widget4.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget4/lists-widget4.component.ts");
-/* harmony import */ var _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../widgets/lists/lists-widget8/lists-widget8.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget8/lists-widget8.component.ts");
-/* harmony import */ var _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../widgets/mixed/mixed-widget14/mixed-widget14.component */ "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget14/mixed-widget14.component.ts");
-/* harmony import */ var _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../widgets/advance-tables/advance-tables-widget4/advance-tables-widget4.component */ "./src/app/_metronic/partials/content/widgets/advance-tables/advance-tables-widget4/advance-tables-widget4.component.ts");
-/* harmony import */ var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../widgets/mixed/mixed-widget1/mixed-widget1.component */ "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget1/mixed-widget1.component.ts");
+/* harmony import */ var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/shared/service/admin-stats/system1.service */ "./src/app/shared/service/admin-stats/system1.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/fesm2015/common.js");
+/* harmony import */ var _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../widgets/lists/lists-widget9/lists-widget9.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget9/lists-widget9.component.ts");
+/* harmony import */ var _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../widgets/stats/stats-widget11/stats-widget11.component */ "./src/app/_metronic/partials/content/widgets/stats/stats-widget11/stats-widget11.component.ts");
+/* harmony import */ var _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../widgets/stats/stats-widget12/stats-widget12.component */ "./src/app/_metronic/partials/content/widgets/stats/stats-widget12/stats-widget12.component.ts");
+/* harmony import */ var _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../widgets/lists/lists-widget1/lists-widget1.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget1/lists-widget1.component.ts");
+/* harmony import */ var _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../widgets/advance-tables/advance-tables-widget2/advance-tables-widget2.component */ "./src/app/_metronic/partials/content/widgets/advance-tables/advance-tables-widget2/advance-tables-widget2.component.ts");
+/* harmony import */ var _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../widgets/lists/lists-widget3/lists-widget3.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget3/lists-widget3.component.ts");
+/* harmony import */ var _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../widgets/lists/lists-widget4/lists-widget4.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget4/lists-widget4.component.ts");
+/* harmony import */ var _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../widgets/lists/lists-widget8/lists-widget8.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget8/lists-widget8.component.ts");
+/* harmony import */ var _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../widgets/mixed/mixed-widget14/mixed-widget14.component */ "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget14/mixed-widget14.component.ts");
+/* harmony import */ var _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../widgets/advance-tables/advance-tables-widget4/advance-tables-widget4.component */ "./src/app/_metronic/partials/content/widgets/advance-tables/advance-tables-widget4/advance-tables-widget4.component.ts");
+/* harmony import */ var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../widgets/mixed/mixed-widget1/mixed-widget1.component */ "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget1/mixed-widget1.component.ts");
+
 
 
 
@@ -748,7 +750,7 @@ function Dashboard1Component_app_mixed_widget1_2_Template(rf, ctx) { if (rf & 1)
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ChartData", ctx_r0.ChartData);
 } }
 class Dashboard1Component {
-    constructor(perionService, userService, cdr, lyonService, rubiService, verizonService, tagService) {
+    constructor(perionService, userService, cdr, lyonService, rubiService, verizonService, tagService, system1Service) {
         this.perionService = perionService;
         this.userService = userService;
         this.cdr = cdr;
@@ -756,6 +758,7 @@ class Dashboard1Component {
         this.rubiService = rubiService;
         this.verizonService = verizonService;
         this.tagService = tagService;
+        this.system1Service = system1Service;
         this.tagList = [];
         this.allDaysList = [];
     }
@@ -768,7 +771,8 @@ class Dashboard1Component {
             this.lyonChartData = yield this.getLyonChart(this.selectedCompany);
             this.rubiChartData = yield this.getRubiChart(this.selectedCompany);
             this.verizonChartData = yield this.getVerizonChart(this.selectedCompany);
-            this.ChartData = this.perionChartData.concat(this.lyonChartData).concat(this.rubiChartData).concat(this.verizonChartData);
+            this.system1ChartData = yield this.getSystem1Chart(this.selectedCompany);
+            this.ChartData = this.perionChartData.concat(this.lyonChartData).concat(this.rubiChartData).concat(this.verizonChartData).concat(this.system1ChartData);
             this.cdr.markForCheck();
         });
     }
@@ -1050,6 +1054,54 @@ class Dashboard1Component {
             return error;
         });
     }
+    getSystem1Chart(company) {
+        return this.system1Service.getAllDashboardStats().toPromise().then((response) => {
+            this.allSystem1Chart = response[0];
+            var chartSystem1Metric = [];
+            var chartAllSystem1Stat = this.allSystem1Chart.currentStat;
+            var chartAllBeforeSystem1Stat = this.allSystem1Chart.beforeStat;
+            chartAllSystem1Stat = chartAllSystem1Stat.slice().sort((a, b) => a.date - b.date);
+            chartAllBeforeSystem1Stat = chartAllBeforeSystem1Stat.slice().sort((a, b) => a.date - b.date);
+            var revenuePerDayVal = [];
+            var datesOfRevenueVal = [];
+            var revenuePerDayBeforeVal = [];
+            var datesOfRevenueBeforeVal = [];
+            var chartSystem1DataValue = {};
+            var revenueCurrentSum = 0;
+            var revenueBeforeSum = 0;
+            for (var dayData of this.allDaysList) {
+                var checkExistDay = chartAllSystem1Stat.filter((result) => result.date == dayData);
+                if (checkExistDay.length == 0) {
+                    revenuePerDayVal.push(0);
+                    datesOfRevenueVal.push(dayData);
+                }
+                else {
+                    for (var resVal of checkExistDay) {
+                        revenueCurrentSum += resVal.revenue;
+                        revenuePerDayVal.push(resVal.revenue);
+                        datesOfRevenueVal.push(resVal.date);
+                    }
+                }
+            }
+            for (var resBeforeVal of chartAllBeforeSystem1Stat) {
+                revenueBeforeSum += resBeforeVal.revenue;
+                revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                datesOfRevenueBeforeVal.push(resBeforeVal.date);
+            }
+            chartSystem1DataValue['revenuePerDay'] = revenuePerDayVal;
+            chartSystem1DataValue['datesOfRevenue'] = datesOfRevenueVal;
+            chartSystem1DataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+            chartSystem1DataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+            chartSystem1DataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+            chartSystem1DataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+            chartSystem1DataValue['statType'] = "System 1";
+            chartSystem1Metric.push(chartSystem1DataValue);
+            return chartSystem1Metric;
+        })
+            .catch((error) => {
+            return error;
+        });
+    }
     getProviderChart(company) {
     }
     //get Verizon Direct chart
@@ -1122,7 +1174,7 @@ class Dashboard1Component {
         return lastThirtyDays;
     }
 }
-Dashboard1Component.ɵfac = function Dashboard1Component_Factory(t) { return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_6__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"])); };
+Dashboard1Component.ɵfac = function Dashboard1Component_Factory(t) { return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_6__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__["System1Service"])); };
 Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: Dashboard1Component, selectors: [["app-dashboard1"]], decls: 24, vars: 1, consts: [[1, "row"], [1, "col-lg-12", "col-xxl-12"], [3, "ChartData", 4, "ngIf"], [1, "col-lg-6", "col-xxl-4"], [1, "col-lg-6", "col-xxl-4", "order-1", "order-xxl-1"], [1, "col-xxl-8", "order-2", "order-xxl-1"], [1, "col-lg-6", "col-xxl-4", "order-1", "order-xxl-2"], [1, "col-lg-12", "col-xxl-4", "order-1", "order-xxl-2"], [1, "col-lg-4"], [1, "col-lg-8"], [3, "ChartData"]], template: function Dashboard1Component_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
@@ -1164,14 +1216,14 @@ Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefi
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.ChartData);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_10__["ListsWidget9Component"], _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_11__["StatsWidget11Component"], _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_12__["StatsWidget12Component"], _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_13__["ListsWidget1Component"], _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_14__["AdvanceTablesWidget2Component"], _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_15__["ListsWidget3Component"], _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_16__["ListsWidget4Component"], _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_17__["ListsWidget8Component"], _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_18__["MixedWidget14Component"], _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_19__["AdvanceTablesWidget4Component"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_20__["MixedWidget1Component"]], encapsulation: 2 });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_11__["ListsWidget9Component"], _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_12__["StatsWidget11Component"], _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_13__["StatsWidget12Component"], _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_14__["ListsWidget1Component"], _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_15__["AdvanceTablesWidget2Component"], _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_16__["ListsWidget3Component"], _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_17__["ListsWidget4Component"], _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_18__["ListsWidget8Component"], _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_19__["MixedWidget14Component"], _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_20__["AdvanceTablesWidget4Component"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_21__["MixedWidget1Component"]], encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](Dashboard1Component, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{
                 selector: 'app-dashboard1',
                 templateUrl: './dashboard1.component.html',
             }]
-    }], function () { return [{ type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__["PerionService"] }, { type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"] }, { type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_6__["RubiService"] }, { type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"] }, { type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"] }]; }, null); })();
+    }], function () { return [{ type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__["PerionService"] }, { type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"] }, { type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_6__["RubiService"] }, { type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"] }, { type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"] }, { type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__["System1Service"] }]; }, null); })();
 
 
 /***/ }),
