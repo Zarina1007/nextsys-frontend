@@ -714,6 +714,7 @@ class EditCompanyComponent {
             { value: "media-net", viewValue: "Media.net" },
             { value: "perion", viewValue: "Perion" },
             { value: "rubi", viewValue: "Rubi" },
+            { value: "system1", viewValue: "System1" },
             { value: "verizon-direct", viewValue: "Verizon Direct" },
         ];
         this.reportingProviderHandleList = [];
@@ -1168,6 +1169,7 @@ class NewCompanyComponent {
             { value: "media-net", viewValue: "Media.net" },
             { value: "perion", viewValue: "Perion" },
             { value: "rubi", viewValue: "Rubi" },
+            { value: "system1", viewValue: "System1" },
             { value: "verizon-direct", viewValue: "Verizon Direct" },
         ];
         this.reportingProviderHandleList = [];

@@ -19418,6 +19418,10 @@ const DynamicAsideMenuConfig = {
                     page: '/reporting/rubi',
                 },
                 {
+                    title: 'System1 Stats',
+                    page: '/reporting/system1',
+                },
+                {
                     title: 'Verizon Direct Stats',
                     page: '/reporting/verizon-direct',
                 },
