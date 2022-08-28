@@ -911,7 +911,7 @@ class EditTagComponent {
         this.subids.removeAt(i);
     }
     //Detects when URL is pasted into the field
-    //https://us.search.yahoo.com/yhs/search?hspart=brandclick&hsimp=yhs-calm&p=flowers
+    //https://google.com/search?hspart=brandclick&hsimp=yhs-calm&p=flowers
     getUrlParams(finalUrl, tagIndex) {
         //Resets the URL params on every change
         this.deleteValueOfFormControl('param', tagIndex);
@@ -2270,7 +2270,7 @@ class NewTagComponent {
         ];
         this.initTagUrl = [
             {
-                finalUrl: 'https://us.search.yahoo.com/yhs/search',
+                finalUrl: 'https://google.com/search',
                 percentage: '',
                 param: [],
                 initialURL: new URL('https://adserver.com/search')
@@ -2382,7 +2382,7 @@ class NewTagComponent {
         return this.userService.getSelectedCompanyFromLocalStorage();
     }
     //Detects when URL is pasted into the field
-    //https://us.search.yahoo.com/yhs/search?hspart=brandclick&hsimp=yhs-calm&p=flowers
+    //https://google.com/search?hspart=brandclick&hsimp=yhs-calm&p=flowers
     getUrlParams(finalUrl, tagIndex) {
         //Resets the URL params on every change
         this.deleteValueOfFormControl('param', tagIndex);
@@ -2543,7 +2543,7 @@ class NewTagComponent {
                 this._snackBarService.info('Added a new tag');
                 this.newTagFG.reset();
                 this.formGroupDirective.resetForm();
-                this.url = 'https://google.com/yhs/search';
+                this.url = 'https://google.com/search';
                 this.initialURL = new URL('https://adserver.com/search');
                 this.tagUrls.controls.map((tagItem, index) => {
                     this.getUrlParams(this.url, index);
@@ -2604,7 +2604,7 @@ class NewTagComponent {
                         this._snackBarService.info('Added a new template');
                         this.newTagFG.reset();
                         this.formGroupDirective.resetForm();
-                        this.url = 'https://google.com/yhs/search';
+                        this.url = 'https://google.com/search';
                         this.initialURL = new URL('https://adserver.com/search');
                         this.tagUrls.controls.map((tagItem, index) => {
                             this.getUrlParams(this.url, index);

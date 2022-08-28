@@ -1851,7 +1851,7 @@
           value: function removeSubid(i) {
             this.subids.removeAt(i);
           } //Detects when URL is pasted into the field
-          //https://us.search.yahoo.com/yhs/search?hspart=brandclick&hsimp=yhs-calm&p=flowers
+          //https://google.com/search?hspart=brandclick&hsimp=yhs-calm&p=flowers
 
         }, {
           key: "getUrlParams",
@@ -4854,7 +4854,7 @@
             filterTag: "ExactValue"
           }];
           this.initTagUrl = [{
-            finalUrl: 'https://us.search.yahoo.com/yhs/search',
+            finalUrl: 'https://google.com/search',
             percentage: '',
             param: [],
             initialURL: new URL('https://adserver.com/search')
@@ -4979,7 +4979,7 @@
           value: function getSelectedCompanyFromLocalStorage() {
             return this.userService.getSelectedCompanyFromLocalStorage();
           } //Detects when URL is pasted into the field
-          //https://us.search.yahoo.com/yhs/search?hspart=brandclick&hsimp=yhs-calm&p=flowers
+          //https://google.com/search?hspart=brandclick&hsimp=yhs-calm&p=flowers
 
         }, {
           key: "getUrlParams",
@@ -5193,7 +5193,7 @@
 
                 _this14.formGroupDirective.resetForm();
 
-                _this14.url = 'https://google.com/yhs/search';
+                _this14.url = 'https://google.com/search';
                 _this14.initialURL = new URL('https://adserver.com/search');
 
                 _this14.tagUrls.controls.map(function (tagItem, index) {
@@ -5296,7 +5296,7 @@
 
                     _this16.formGroupDirective.resetForm();
 
-                    _this16.url = 'https://google.com/yhs/search';
+                    _this16.url = 'https://google.com/search';
                     _this16.initialURL = new URL('https://adserver.com/search');
 
                     _this16.tagUrls.controls.map(function (tagItem, index) {
