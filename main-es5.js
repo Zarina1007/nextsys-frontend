@@ -60,7 +60,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -181,13 +181,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
@@ -257,13 +257,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/animations */
-      "./node_modules/@angular/animations/fesm2015/animations.js");
+      "./node_modules/@angular/animations/__ivy_ngcc__/fesm2015/animations.js");
 
       var SplashScreenService = /*#__PURE__*/function () {
         /**
@@ -381,13 +381,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/router */
-      "./node_modules/@angular/router/fesm2015/router.js");
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
       var routes = [{
         path: 'auth',
@@ -488,7 +488,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -530,7 +530,7 @@
 
       var _angular_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @angular/router */
-      "./node_modules/@angular/router/fesm2015/router.js");
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
       /* harmony import */
 
 
@@ -675,49 +675,49 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/platform-browser */
-      "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+      "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
       /* harmony import */
 
 
       var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/platform-browser/animations */
-      "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+      "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
       /* harmony import */
 
 
       var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/common/http */
-      "./node_modules/@angular/common/fesm2015/http.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
       /* harmony import */
 
 
       var ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ngx-clipboard */
-      "./node_modules/ngx-clipboard/fesm2015/ngx-clipboard.js");
+      "./node_modules/ngx-clipboard/__ivy_ngcc__/fesm2015/ngx-clipboard.js");
       /* harmony import */
 
 
       var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @ngx-translate/core */
-      "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
+      "./node_modules/@ngx-translate/core/__ivy_ngcc__/fesm2015/ngx-translate-core.js");
       /* harmony import */
 
 
       var ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! ng-inline-svg */
-      "./node_modules/ng-inline-svg/lib_esmodule/index.js");
+      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
       /* harmony import */
 
 
       var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @ng-bootstrap/ng-bootstrap */
-      "./node_modules/@ng-bootstrap/ng-bootstrap/fesm2015/ng-bootstrap.js");
+      "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
       /* harmony import */
 
 
@@ -741,7 +741,7 @@
 
       var ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! ngx-highlightjs */
-      "./node_modules/ngx-highlightjs/fesm2015/ngx-highlightjs.js");
+      "./node_modules/ngx-highlightjs/__ivy_ngcc__/fesm2015/ngx-highlightjs.js");
       /* harmony import */
 
 
@@ -811,7 +811,7 @@
 
       var ngx_toastr__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
       /*! ngx-toastr */
-      "./node_modules/ngx-toastr/fesm2015/ngx-toastr.js"); // Highlight JS
+      "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js"); // Highlight JS
 
 
       function appInitializer(authService) {
@@ -935,13 +935,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/router */
-      "./node_modules/@angular/router/fesm2015/router.js");
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
       var AdminReportingComponent = /*#__PURE__*/function () {
         function AdminReportingComponent() {
@@ -1014,13 +1014,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/common/http */
-      "./node_modules/@angular/common/fesm2015/http.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
       /* harmony import */
 
 
@@ -1157,7 +1157,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -1187,7 +1187,7 @@
 
       var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @angular/router */
-      "./node_modules/@angular/router/fesm2015/router.js");
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
       var AuthService = /*#__PURE__*/function () {
         function AuthService(authHttpService, router) {
@@ -1384,13 +1384,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/router */
-      "./node_modules/@angular/router/fesm2015/router.js");
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
 
       var CompanyManagementComponent = /*#__PURE__*/function () {
         function CompanyManagementComponent() {
@@ -1464,13 +1464,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @ngx-translate/core */
-      "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js"); // Localization is based on '@ngx-translate/core';
+      "./node_modules/@ngx-translate/core/__ivy_ngcc__/fesm2015/ngx-translate-core.js"); // Localization is based on '@ngx-translate/core';
       // Please be familiar with official documentations first => https://github.com/ngx-translate/core
 
 
@@ -2351,13 +2351,13 @@
 
       var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/common/http */
-      "./node_modules/@angular/common/fesm2015/http.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
       /* harmony import */
 
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -2478,7 +2478,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -2496,7 +2496,7 @@
 
       var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/platform-browser */
-      "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+      "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 
       if (_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].production) {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();

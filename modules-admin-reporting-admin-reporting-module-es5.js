@@ -36,13 +36,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/router */
-      "./node_modules/@angular/router/fesm2015/router.js");
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
       /* harmony import */
 
 
@@ -241,13 +241,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
@@ -259,7 +259,7 @@
 
       var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/router */
-      "./node_modules/@angular/router/fesm2015/router.js");
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
       /* harmony import */
 
 
@@ -307,43 +307,43 @@
 
       var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/fesm2015/swimlane-ngx-datatable.js");
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
       var _angular_material_list__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @angular/material/list */
-      "./node_modules/@angular/material/fesm2015/list.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/list.js");
       /* harmony import */
 
 
       var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! @angular/material/datepicker */
-      "./node_modules/@angular/material/fesm2015/datepicker.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/datepicker.js");
       /* harmony import */
 
 
       var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! @angular/material/form-field */
-      "./node_modules/@angular/material/fesm2015/form-field.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
       /* harmony import */
 
 
       var _angular_material_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! @angular/material/core */
-      "./node_modules/@angular/material/fesm2015/core.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_forms__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! @angular/forms */
-      "./node_modules/@angular/forms/fesm2015/forms.js");
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
       /* harmony import */
 
 
       var _angular_material_select__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
       /*! @angular/material/select */
-      "./node_modules/@angular/material/fesm2015/select.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
       /* harmony import */
 
 
@@ -385,19 +385,19 @@
 
       var _angular_material_input__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
       /*! @angular/material/input */
-      "./node_modules/@angular/material/fesm2015/input.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
       /* harmony import */
 
 
       var _angular_material_button__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
       /*! @angular/material/button */
-      "./node_modules/@angular/material/fesm2015/button.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
       /* harmony import */
 
 
       var ng_inline_svg__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
       /*! ng-inline-svg */
-      "./node_modules/ng-inline-svg/lib_esmodule/index.js");
+      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
       /* harmony import */
 
 
@@ -472,7 +472,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
       var AllReportingComponent = /*#__PURE__*/function () {
         function AllReportingComponent() {
@@ -549,7 +549,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -567,25 +567,25 @@
 
       var _angular_material_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/material/list */
-      "./node_modules/@angular/material/fesm2015/list.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/list.js");
       /* harmony import */
 
 
       var _angular_material_divider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/material/divider */
-      "./node_modules/@angular/material/fesm2015/divider.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/divider.js");
       /* harmony import */
 
 
       var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/fesm2015/swimlane-ngx-datatable.js");
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
       var _c0 = ["expandableTable"];
 
@@ -1259,7 +1259,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
       var BingDirectComponent = /*#__PURE__*/function () {
         function BingDirectComponent() {
@@ -1336,7 +1336,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -1354,25 +1354,25 @@
 
       var _angular_material_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/material/list */
-      "./node_modules/@angular/material/fesm2015/list.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/list.js");
       /* harmony import */
 
 
       var _angular_material_divider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/material/divider */
-      "./node_modules/@angular/material/fesm2015/divider.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/divider.js");
       /* harmony import */
 
 
       var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/fesm2015/swimlane-ngx-datatable.js");
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
       var _c0 = ["expandableTable"];
 
@@ -2046,31 +2046,31 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_material_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/material/list */
-      "./node_modules/@angular/material/fesm2015/list.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/list.js");
       /* harmony import */
 
 
       var _angular_material_divider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/material/divider */
-      "./node_modules/@angular/material/fesm2015/divider.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/divider.js");
       /* harmony import */
 
 
       var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/fesm2015/swimlane-ngx-datatable.js");
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
       var _c0 = ["expandableTable"];
 
@@ -2675,7 +2675,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -2705,13 +2705,13 @@
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
       var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/fesm2015/swimlane-ngx-datatable.js");
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
@@ -3985,13 +3985,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/forms */
-      "./node_modules/@angular/forms/fesm2015/forms.js");
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
       /* harmony import */
 
 
@@ -4043,37 +4043,37 @@
 
       var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/material/form-field */
-      "./node_modules/@angular/material/fesm2015/form-field.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
       /* harmony import */
 
 
       var _angular_material_select__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! @angular/material/select */
-      "./node_modules/@angular/material/fesm2015/select.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
       var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @angular/material/datepicker */
-      "./node_modules/@angular/material/fesm2015/datepicker.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/datepicker.js");
       /* harmony import */
 
 
       var _angular_material_button__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! @angular/material/button */
-      "./node_modules/@angular/material/fesm2015/button.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
       /* harmony import */
 
 
       var _angular_material_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! @angular/material/core */
-      "./node_modules/@angular/material/fesm2015/core.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
       function ManualSplitUpdateComponent_mat_option_13_Template(rf, ctx) {
         if (rf & 1) {
@@ -4641,13 +4641,13 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
       var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/forms */
-      "./node_modules/@angular/forms/fesm2015/forms.js");
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
       /* harmony import */
 
 
@@ -4693,37 +4693,37 @@
 
       var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! @angular/material/form-field */
-      "./node_modules/@angular/material/fesm2015/form-field.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
       /* harmony import */
 
 
       var _angular_material_select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/material/select */
-      "./node_modules/@angular/material/fesm2015/select.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
       var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/material/datepicker */
-      "./node_modules/@angular/material/fesm2015/datepicker.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/datepicker.js");
       /* harmony import */
 
 
       var _angular_material_button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @angular/material/button */
-      "./node_modules/@angular/material/fesm2015/button.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
       /* harmony import */
 
 
       var _angular_material_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! @angular/material/core */
-      "./node_modules/@angular/material/fesm2015/core.js");
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
       function ManualUpdateComponent_mat_option_13_Template(rf, ctx) {
         if (rf & 1) {
@@ -5274,7 +5274,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 
       var MediaNetComponent = /*#__PURE__*/function () {
         function MediaNetComponent() {
@@ -5357,7 +5357,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -5387,13 +5387,13 @@
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
       var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/fesm2015/swimlane-ngx-datatable.js");
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
@@ -6689,7 +6689,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -6719,13 +6719,13 @@
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
       var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/fesm2015/swimlane-ngx-datatable.js");
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
@@ -7443,7 +7443,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -7467,13 +7467,13 @@
 
       var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/fesm2015/swimlane-ngx-datatable.js");
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
       var _c0 = ["expandableTable"];
 
@@ -8046,7 +8046,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -8064,13 +8064,13 @@
 
       var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/fesm2015/swimlane-ngx-datatable.js");
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
       var _c0 = ["expandableTable"];
 
@@ -8640,7 +8640,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -8670,13 +8670,13 @@
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
-      "./node_modules/@angular/common/fesm2015/common.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
       var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/fesm2015/swimlane-ngx-datatable.js");
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
@@ -9626,7 +9626,7 @@
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/fesm2015/core.js");
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
@@ -9638,7 +9638,7 @@
 
       var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/common/http */
-      "./node_modules/@angular/common/fesm2015/http.js");
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 
       var API_MANUAL_UPDATE_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/manual-update");
 
