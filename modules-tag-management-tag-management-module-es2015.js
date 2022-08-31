@@ -3661,6 +3661,7 @@ class TagsComponent {
     }
     copyTagId(tagId) {
         this.clipboardService.copyFromContent(tagId);
+        this.notification.showSuccess(`Copied Tag ID ${tagId}`, "");
     }
     editTag(tagID) {
         this.router.navigateByUrl('/tag-management/edit/' + tagID);

@@ -7587,6 +7587,7 @@
           key: "copyTagId",
           value: function copyTagId(tagId) {
             this.clipboardService.copyFromContent(tagId);
+            this.notification.showSuccess("Copied Tag ID ".concat(tagId), "");
           }
         }, {
           key: "editTag",
