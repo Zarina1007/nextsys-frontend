@@ -802,7 +802,7 @@ class EditTagComponent {
                 var deviceTypeVal = [];
                 var versionVal = [];
                 var countryVal = [];
-                this.initialURL = new URL('https://3.227.27.140/search');
+                this.initialURL = new URL('http://3.227.27.140/search');
                 for (var bval of x['browser'].toString().split(",")) {
                     browserVal.push(bval);
                 }
@@ -931,7 +931,7 @@ class EditTagComponent {
             finalUrl: ['https://google.com/search', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             percentage: '',
             param: this.fb.array([]),
-            initialURL: new URL('https://3.227.27.140/search')
+            initialURL: new URL('http://3.227.27.140/search')
         });
     }
     addTagUrl() {
@@ -979,7 +979,7 @@ class EditTagComponent {
     //Builds the initial URL from the paramaters
     createInitialURL(tagIndex) {
         console.log('Updating URL');
-        const subInitialURL = new URL('https://3.227.27.140/search');
+        const subInitialURL = new URL('http://3.227.27.140/search');
         this.tagUrlParams(tagIndex).controls.forEach((element, index) => {
             if (element.value.paramType === 'dynamic') {
                 subInitialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
@@ -2273,7 +2273,7 @@ class NewTagComponent {
                 finalUrl: 'https://google.com/search',
                 percentage: '',
                 param: [],
-                initialURL: new URL('https://3.227.27.140/search')
+                initialURL: new URL('http://3.227.27.140/search')
             },
         ];
         //get Company
@@ -2314,7 +2314,7 @@ class NewTagComponent {
     ngOnInit() {
         this.url =
             'https://google.com/search';
-        this.initialURL = new URL('https://3.227.27.140/search');
+        this.initialURL = new URL('http://3.227.27.140/search');
         this.selectBrowserStatus = "true";
         this.selectDeviceTypeStatus = "true";
         this.selectVersionStatus = "true";
@@ -2449,7 +2449,7 @@ class NewTagComponent {
             finalUrl: ['https://google.com/search', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
             percentage: '',
             param: this.fb.array([]),
-            initialURL: new URL('https://3.227.27.140/search')
+            initialURL: new URL('http://3.227.27.140/search')
         });
     }
     addTagUrl() {
@@ -2492,7 +2492,7 @@ class NewTagComponent {
     //Builds the initial URL from the paramaters
     createInitialURL(tagIndex) {
         console.log('Updating URL');
-        const subInitialURL = new URL('https://3.227.27.140/search');
+        const subInitialURL = new URL('http://3.227.27.140/search');
         this.tagUrlParams(tagIndex).controls.forEach((element, index) => {
             if (element.value.paramType === 'dynamic') {
                 subInitialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
@@ -2544,7 +2544,7 @@ class NewTagComponent {
                 this.newTagFG.reset();
                 this.formGroupDirective.resetForm();
                 this.url = 'https://google.com/search';
-                this.initialURL = new URL('https://3.227.27.140/search');
+                this.initialURL = new URL('http://3.227.27.140/search');
                 this.tagUrls.controls.map((tagItem, index) => {
                     this.getUrlParams(this.url, index);
                     this.tagUrls.at(index).patchValue({ initialURL: this.initialURL });
@@ -2605,7 +2605,7 @@ class NewTagComponent {
                         this.newTagFG.reset();
                         this.formGroupDirective.resetForm();
                         this.url = 'https://google.com/search';
-                        this.initialURL = new URL('https://3.227.27.140/search');
+                        this.initialURL = new URL('http://3.227.27.140/search');
                         this.tagUrls.controls.map((tagItem, index) => {
                             this.getUrlParams(this.url, index);
                             this.tagUrls.at(index).patchValue({ initialURL: this.initialURL });
@@ -2630,7 +2630,7 @@ class NewTagComponent {
                 var countryVal = [];
                 this.subids.controls = [];
                 this.tagUrls.controls = [];
-                this.initialURL = new URL('https://3.227.27.140/search');
+                this.initialURL = new URL('http://3.227.27.140/search');
                 for (var bval of response['browser'].toString().split(",")) {
                     browserVal.push(bval);
                 }

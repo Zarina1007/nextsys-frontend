@@ -1679,7 +1679,7 @@
                 var deviceTypeVal = [];
                 var versionVal = [];
                 var countryVal = [];
-                _this.initialURL = new URL('https://3.227.27.140/search');
+                _this.initialURL = new URL('http://3.227.27.140/search');
 
                 var _iterator = _createForOfIteratorHelper(x['browser'].toString().split(",")),
                     _step;
@@ -1887,7 +1887,7 @@
               finalUrl: ['https://google.com/search', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               percentage: '',
               param: this.fb.array([]),
-              initialURL: new URL('https://3.227.27.140/search')
+              initialURL: new URL('http://3.227.27.140/search')
             });
           }
         }, {
@@ -1944,7 +1944,7 @@
             var _this4 = this;
 
             console.log('Updating URL');
-            var subInitialURL = new URL('https://3.227.27.140/search');
+            var subInitialURL = new URL('http://3.227.27.140/search');
             this.tagUrlParams(tagIndex).controls.forEach(function (element, index) {
               if (element.value.paramType === 'dynamic') {
                 subInitialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
@@ -4857,7 +4857,7 @@
             finalUrl: 'https://google.com/search',
             percentage: '',
             param: [],
-            initialURL: new URL('https://3.227.27.140/search')
+            initialURL: new URL('http://3.227.27.140/search')
           }]; //get Company
 
           this.companySelected = this.getSelectedCompanyFromLocalStorage(); //access page part
@@ -4902,7 +4902,7 @@
             var _this9 = this;
 
             this.url = 'https://google.com/search';
-            this.initialURL = new URL('https://3.227.27.140/search');
+            this.initialURL = new URL('http://3.227.27.140/search');
             this.selectBrowserStatus = "true";
             this.selectDeviceTypeStatus = "true";
             this.selectVersionStatus = "true";
@@ -5073,7 +5073,7 @@
               finalUrl: ['https://google.com/search', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
               percentage: '',
               param: this.fb.array([]),
-              initialURL: new URL('https://3.227.27.140/search')
+              initialURL: new URL('http://3.227.27.140/search')
             });
           }
         }, {
@@ -5128,7 +5128,7 @@
             var _this13 = this;
 
             console.log('Updating URL');
-            var subInitialURL = new URL('https://3.227.27.140/search');
+            var subInitialURL = new URL('http://3.227.27.140/search');
             this.tagUrlParams(tagIndex).controls.forEach(function (element, index) {
               if (element.value.paramType === 'dynamic') {
                 subInitialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
@@ -5194,7 +5194,7 @@
                 _this14.formGroupDirective.resetForm();
 
                 _this14.url = 'https://google.com/search';
-                _this14.initialURL = new URL('https://3.227.27.140/search');
+                _this14.initialURL = new URL('http://3.227.27.140/search');
 
                 _this14.tagUrls.controls.map(function (tagItem, index) {
                   _this14.getUrlParams(_this14.url, index);
@@ -5297,7 +5297,7 @@
                     _this16.formGroupDirective.resetForm();
 
                     _this16.url = 'https://google.com/search';
-                    _this16.initialURL = new URL('https://3.227.27.140/search');
+                    _this16.initialURL = new URL('http://3.227.27.140/search');
 
                     _this16.tagUrls.controls.map(function (tagItem, index) {
                       _this16.getUrlParams(_this16.url, index);
@@ -5330,7 +5330,7 @@
                 var countryVal = [];
                 _this17.subids.controls = [];
                 _this17.tagUrls.controls = [];
-                _this17.initialURL = new URL('https://3.227.27.140/search');
+                _this17.initialURL = new URL('http://3.227.27.140/search');
 
                 var _iterator9 = _createForOfIteratorHelper(response['browser'].toString().split(",")),
                     _step9;
