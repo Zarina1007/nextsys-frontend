@@ -802,7 +802,7 @@ class EditTagComponent {
                 var deviceTypeVal = [];
                 var versionVal = [];
                 var countryVal = [];
-                this.initialURL = new URL('https://adserver.com/search');
+                this.initialURL = new URL('https://3.227.27.140/search');
                 for (var bval of x['browser'].toString().split(",")) {
                     browserVal.push(bval);
                 }
@@ -931,7 +931,7 @@ class EditTagComponent {
             finalUrl: ['https://google.com/search', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
             percentage: '',
             param: this.fb.array([]),
-            initialURL: new URL('https://adserver.com/search')
+            initialURL: new URL('https://3.227.27.140/search')
         });
     }
     addTagUrl() {
@@ -979,7 +979,7 @@ class EditTagComponent {
     //Builds the initial URL from the paramaters
     createInitialURL(tagIndex) {
         console.log('Updating URL');
-        const subInitialURL = new URL('https://adserver.com/search');
+        const subInitialURL = new URL('https://3.227.27.140/search');
         this.tagUrlParams(tagIndex).controls.forEach((element, index) => {
             if (element.value.paramType === 'dynamic') {
                 subInitialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');

@@ -1679,7 +1679,7 @@
                 var deviceTypeVal = [];
                 var versionVal = [];
                 var countryVal = [];
-                _this.initialURL = new URL('https://adserver.com/search');
+                _this.initialURL = new URL('https://3.227.27.140/search');
 
                 var _iterator = _createForOfIteratorHelper(x['browser'].toString().split(",")),
                     _step;
@@ -1887,7 +1887,7 @@
               finalUrl: ['https://google.com/search', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
               percentage: '',
               param: this.fb.array([]),
-              initialURL: new URL('https://adserver.com/search')
+              initialURL: new URL('https://3.227.27.140/search')
             });
           }
         }, {
@@ -1944,7 +1944,7 @@
             var _this4 = this;
 
             console.log('Updating URL');
-            var subInitialURL = new URL('https://adserver.com/search');
+            var subInitialURL = new URL('https://3.227.27.140/search');
             this.tagUrlParams(tagIndex).controls.forEach(function (element, index) {
               if (element.value.paramType === 'dynamic') {
                 subInitialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
