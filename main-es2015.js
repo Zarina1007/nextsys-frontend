@@ -1604,9 +1604,7 @@ const environment = {
     production: false,
     appVersion: 'v710nextsystem',
     USERDATA_KEY: 'authf649fc9a5f55',
-    apiUrl: 
-    // 'http://34.232.43.97/api',
-    'http://localhost:3000',
+    apiUrl: 'http://34.232.43.97/api',
 };
 /*
  * For easier debugging in development mode, you can import the following file
