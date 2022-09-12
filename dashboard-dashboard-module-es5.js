@@ -18297,73 +18297,79 @@
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! src/app/modules/company-management/company-management.service */
+      "./src/app/modules/company-management/company-management.service.ts");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! ../../widgets/lists/lists-widget9/lists-widget9.component */
       "./src/app/_metronic/partials/content/widgets/lists/lists-widget9/lists-widget9.component.ts");
       /* harmony import */
 
 
-      var _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ../../widgets/stats/stats-widget11/stats-widget11.component */
       "./src/app/_metronic/partials/content/widgets/stats/stats-widget11/stats-widget11.component.ts");
       /* harmony import */
 
 
-      var _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! ../../widgets/stats/stats-widget12/stats-widget12.component */
       "./src/app/_metronic/partials/content/widgets/stats/stats-widget12/stats-widget12.component.ts");
       /* harmony import */
 
 
-      var _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! ../../widgets/lists/lists-widget1/lists-widget1.component */
       "./src/app/_metronic/partials/content/widgets/lists/lists-widget1/lists-widget1.component.ts");
       /* harmony import */
 
 
-      var _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      var _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! ../../widgets/advance-tables/advance-tables-widget2/advance-tables-widget2.component */
       "./src/app/_metronic/partials/content/widgets/advance-tables/advance-tables-widget2/advance-tables-widget2.component.ts");
       /* harmony import */
 
 
-      var _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+      var _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
       /*! ../../widgets/lists/lists-widget3/lists-widget3.component */
       "./src/app/_metronic/partials/content/widgets/lists/lists-widget3/lists-widget3.component.ts");
       /* harmony import */
 
 
-      var _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
+      var _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
       /*! ../../widgets/lists/lists-widget4/lists-widget4.component */
       "./src/app/_metronic/partials/content/widgets/lists/lists-widget4/lists-widget4.component.ts");
       /* harmony import */
 
 
-      var _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+      var _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
       /*! ../../widgets/lists/lists-widget8/lists-widget8.component */
       "./src/app/_metronic/partials/content/widgets/lists/lists-widget8/lists-widget8.component.ts");
       /* harmony import */
 
 
-      var _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
+      var _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
       /*! ../../widgets/mixed/mixed-widget14/mixed-widget14.component */
       "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget14/mixed-widget14.component.ts");
       /* harmony import */
 
 
-      var _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+      var _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
       /*! ../../widgets/advance-tables/advance-tables-widget4/advance-tables-widget4.component */
       "./src/app/_metronic/partials/content/widgets/advance-tables/advance-tables-widget4/advance-tables-widget4.component.ts");
       /* harmony import */
 
 
-      var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
+      var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
       /*! ../../widgets/mixed/mixed-widget1/mixed-widget1.component */
       "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget1/mixed-widget1.component.ts");
 
@@ -18380,7 +18386,7 @@
       }
 
       var Dashboard1Component = /*#__PURE__*/function () {
-        function Dashboard1Component(perionService, userService, cdr, lyonService, rubiService, verizonService, tagService, system1Service) {
+        function Dashboard1Component(perionService, userService, cdr, lyonService, rubiService, verizonService, tagService, system1Service, companyService) {
           _classCallCheck(this, Dashboard1Component);
 
           this.perionService = perionService;
@@ -18391,8 +18397,11 @@
           this.verizonService = verizonService;
           this.tagService = tagService;
           this.system1Service = system1Service;
+          this.companyService = companyService;
           this.tagList = [];
+          this.tempChartData = [];
           this.allDaysList = [];
+          this.reportTypeData = [];
         }
 
         _createClass(Dashboard1Component, [{
@@ -18404,47 +18413,91 @@
                   switch (_context.prev = _context.next) {
                     case 0:
                       this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
+                      _context.next = 3;
+                      return this.getReportingProviderList();
+
+                    case 3:
+                      this.reportTypeData = _context.sent;
+                      console.log(this.reportTypeData);
                       this.allDaysList = this.getCurrentMontDateList();
-                      _context.next = 4;
+                      _context.next = 8;
                       return this.getCompanyTags(this.selectedCompany);
 
-                    case 4:
+                    case 8:
                       this.tagList = _context.sent;
-                      _context.next = 7;
+                      _context.next = 11;
                       return this.getPerionChart(this.selectedCompany);
 
-                    case 7:
+                    case 11:
                       this.perionChartData = _context.sent;
-                      _context.next = 10;
+                      _context.next = 14;
                       return this.getLyonChart(this.selectedCompany);
 
-                    case 10:
+                    case 14:
                       this.lyonChartData = _context.sent;
-                      _context.next = 13;
+                      _context.next = 17;
                       return this.getRubiChart(this.selectedCompany);
 
-                    case 13:
+                    case 17:
                       this.rubiChartData = _context.sent;
-                      _context.next = 16;
+                      _context.next = 20;
                       return this.getVerizonChart(this.selectedCompany);
 
-                    case 16:
+                    case 20:
                       this.verizonChartData = _context.sent;
-                      _context.next = 19;
+                      _context.next = 23;
                       return this.getSystem1Chart(this.selectedCompany);
 
-                    case 19:
+                    case 23:
                       this.system1ChartData = _context.sent;
-                      this.ChartData = this.perionChartData.concat(this.lyonChartData).concat(this.rubiChartData).concat(this.verizonChartData).concat(this.system1ChartData);
+
+                      if (this.reportTypeData.includes('perion')) {
+                        this.tempChartData = this.tempChartData.concat(this.perionChartData);
+                      }
+
+                      if (this.reportTypeData.includes('lyons')) {
+                        this.tempChartData = this.tempChartData.concat(this.lyonChartData);
+                      }
+
+                      if (this.reportTypeData.includes('rubi')) {
+                        this.tempChartData = this.tempChartData.concat(this.rubiChartData);
+                      }
+
+                      if (this.reportTypeData.includes('verizon-direct')) {
+                        this.tempChartData = this.tempChartData.concat(this.verizonChartData);
+                      }
+
+                      if (this.reportTypeData.includes('system1')) {
+                        this.tempChartData = this.tempChartData.concat(this.system1ChartData);
+                      }
+
+                      this.ChartData = this.tempChartData;
                       this.cdr.markForCheck();
 
-                    case 22:
+                    case 31:
                     case "end":
                       return _context.stop();
                   }
                 }
               }, _callee, this);
             }));
+          } //get Report Providers in Current Company
+
+        }, {
+          key: "getReportingProviderList",
+          value: function getReportingProviderList() {
+            if (this.selectedCompany) {
+              return this.companyService.getOneCompany(this.selectedCompany.split('/')[1]).toPromise().then(function (res) {
+                var providerList = [];
+                res.reportingProviders.map(function (report) {
+                  providerList.push(report.reportingProvider);
+                });
+                return providerList;
+              })["catch"](function (error) {
+                return error;
+              });
+              ;
+            }
           } //Gets the Selected Company from Local Storage
 
         }, {
@@ -19066,7 +19119,7 @@
       }();
 
       Dashboard1Component.ɵfac = function Dashboard1Component_Factory(t) {
-        return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_6__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__["System1Service"]));
+        return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_6__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_10__["CompanyManagementService"]));
       };
 
       Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
@@ -19158,7 +19211,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.ChartData);
           }
         },
-        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_11__["ListsWidget9Component"], _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_12__["StatsWidget11Component"], _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_13__["StatsWidget12Component"], _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_14__["ListsWidget1Component"], _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_15__["AdvanceTablesWidget2Component"], _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_16__["ListsWidget3Component"], _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_17__["ListsWidget4Component"], _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_18__["ListsWidget8Component"], _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_19__["MixedWidget14Component"], _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_20__["AdvanceTablesWidget4Component"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_21__["MixedWidget1Component"]],
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_12__["ListsWidget9Component"], _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_13__["StatsWidget11Component"], _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_14__["StatsWidget12Component"], _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_15__["ListsWidget1Component"], _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_16__["AdvanceTablesWidget2Component"], _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_17__["ListsWidget3Component"], _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_18__["ListsWidget4Component"], _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_19__["ListsWidget8Component"], _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_20__["MixedWidget14Component"], _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_21__["AdvanceTablesWidget4Component"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_22__["MixedWidget1Component"]],
         encapsulation: 2
       });
       /*@__PURE__*/
@@ -19187,6 +19240,8 @@
             type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"]
           }, {
             type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__["System1Service"]
+          }, {
+            type: src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_10__["CompanyManagementService"]
           }];
         }, null);
       })();
@@ -22803,10 +22858,10 @@
           }
         }, {
           key: "getChartData",
-          value: function getChartData(perionChartData) {
+          value: function getChartData(allChartData) {
             // our logic to group the posts by category
-            if (!perionChartData) return;
-            var result = perionChartData;
+            if (!allChartData) return;
+            var result = allChartData;
             return result;
           }
         }]);
@@ -24021,7 +24076,7 @@
           }
         },
         directives: [_metronic_partials_content_dashboards_dashboard_wrapper_dashboard_wrapper_component__WEBPACK_IMPORTED_MODULE_1__["DashboardWrapperComponent"]],
-        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9zcmMvYXBwL3BhZ2VzL2Rhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LnNjc3MifQ== */"]
+        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Rhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LnNjc3MifQ== */"]
       });
       /*@__PURE__*/
 
