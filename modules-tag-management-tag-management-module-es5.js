@@ -13,6 +13,322 @@
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["modules-tag-management-tag-management-module"], {
     /***/
+    "./src/app/modules/tag-management/copy-adserver/copy-adserver.component.ts":
+    /*!*********************************************************************************!*\
+      !*** ./src/app/modules/tag-management/copy-adserver/copy-adserver.component.ts ***!
+      \*********************************************************************************/
+
+    /*! exports provided: CopyAdserverComponent */
+
+    /***/
+    function srcAppModulesTagManagementCopyAdserverCopyAdserverComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "CopyAdserverComponent", function () {
+        return CopyAdserverComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/material/dialog */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
+      /* harmony import */
+
+
+      var _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ../../tag-management/tag-management.service */
+      "./src/app/modules/tag-management/tag-management.service.ts");
+      /* harmony import */
+
+
+      var ngx_clipboard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! ngx-clipboard */
+      "./node_modules/ngx-clipboard/__ivy_ngcc__/fesm2015/ngx-clipboard.js");
+      /* harmony import */
+
+
+      var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/shared/service/notification.service */
+      "./src/app/shared/service/notification.service.ts");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! @angular/common */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      /* harmony import */
+
+
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @angular/material/button */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
+      /* harmony import */
+
+
+      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! ng-inline-svg */
+      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+
+      function CopyAdserverComponent_div_11_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "a", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function CopyAdserverComponent_div_11_Template_a_click_6_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r3);
+
+            var TagUrl_r1 = ctx.$implicit;
+
+            var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r2.openClipBoardDialog(TagUrl_r1.initialURL, ctx_r2.tagKey);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "span", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var TagUrl_r1 = ctx.$implicit;
+
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"](" ", ctx_r0.decodeURI(TagUrl_r1.initialURL), "&tid=", ctx_r0.tagKey, " ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/General/Clipboard.svg");
+        }
+      }
+
+      var CopyAdserverComponent = /*#__PURE__*/function () {
+        function CopyAdserverComponent(tagManagementService, cdr, clipboardService, dialogRef, notification, data) {
+          _classCallCheck(this, CopyAdserverComponent);
+
+          this.tagManagementService = tagManagementService;
+          this.cdr = cdr;
+          this.clipboardService = clipboardService;
+          this.dialogRef = dialogRef;
+          this.notification = notification;
+          this.data = data; //Variable for loading indicator
+
+          this.loadingIndicator = true;
+        }
+
+        _createClass(CopyAdserverComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            console.log(this.data);
+            this.tagKey = this.data;
+            this.getTagData(this.tagKey);
+          }
+        }, {
+          key: "getTagData",
+          value: function getTagData(tagKey) {
+            var _this = this;
+
+            this.tagManagementService.getOneTag(tagKey).subscribe(function (response) {
+              _this.loadingIndicator = false;
+              var tagUrls = response.tagUrls;
+              _this.allTagUrls = tagUrls;
+
+              _this.cdr.detectChanges();
+            });
+          }
+        }, {
+          key: "decodeURI",
+          value: function (_decodeURI) {
+            function decodeURI(_x) {
+              return _decodeURI.apply(this, arguments);
+            }
+
+            decodeURI.toString = function () {
+              return _decodeURI.toString();
+            };
+
+            return decodeURI;
+          }(function (url) {
+            return decodeURI(url);
+          })
+          /**
+           * close()
+           * * Closes the dialog and does not make any changes.
+           *
+           */
+
+        }, {
+          key: "close",
+          value: function close() {
+            this.dialogRef.close();
+          }
+        }, {
+          key: "openClipBoardDialog",
+          value: function openClipBoardDialog(initialURL, tagKeyVal) {
+            var initialUri = "".concat(decodeURI(initialURL), "&tid=").concat(tagKeyVal, "&subid=10");
+            this.clipboardService.copyFromContent(initialUri);
+            this.notification.showSuccess("Copied Aderser InitialURL ".concat(initialUri), "");
+          }
+        }]);
+
+        return CopyAdserverComponent;
+      }();
+
+      CopyAdserverComponent.ɵfac = function CopyAdserverComponent_Factory(t) {
+        return new (t || CopyAdserverComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_clipboard__WEBPACK_IMPORTED_MODULE_3__["ClipboardService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_4__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]));
+      };
+
+      CopyAdserverComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+        type: CopyAdserverComponent,
+        selectors: [["app-copy-adserver"]],
+        decls: 16,
+        vars: 1,
+        consts: [[1, "mat-typography"], [1, "row"], [1, "col-xl-12"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], [4, "ngFor", "ngForOf"], [1, "row", "buttons"], [1, "col-xl-12", "justify-content-md-center", "d-flex"], ["mat-raised-button", "", "color", "primary", 1, "save-button", 3, "click"], [1, "row", "m-2"], [1, "d-flex", "justify-content-between", "w-100", 2, "align-items", "center"], ["title", "Copy Tag ID", 1, "btn", "btn-icon", "btn-light", "btn-hover-info", "btn-sm", 3, "click"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-info", 3, "inlineSVG"]],
+        template: function CopyAdserverComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-dialog-content", 0);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "h3", 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "Copy Adserver initialURL");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, CopyAdserverComponent_div_11_Template, 8, 3, "div", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "button", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function CopyAdserverComponent_Template_button_click_14_listener() {
+              return ctx.close();
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, " Close ");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.allTagUrls);
+          }
+        },
+        directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogContent"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButton"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGDirective"]],
+        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvdGFnLW1hbmFnZW1lbnQvY29weS1hZHNlcnZlci9jb3B5LWFkc2VydmVyLmNvbXBvbmVudC5zY3NzIn0= */"]
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](CopyAdserverComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+          args: [{
+            selector: 'app-copy-adserver',
+            templateUrl: './copy-adserver.component.html',
+            styleUrls: ['./copy-adserver.component.scss']
+          }]
+        }], function () {
+          return [{
+            type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
+          }, {
+            type: ngx_clipboard__WEBPACK_IMPORTED_MODULE_3__["ClipboardService"]
+          }, {
+            type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]
+          }, {
+            type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_4__["NotificationService"]
+          }, {
+            type: undefined,
+            decorators: [{
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+              args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]]
+            }]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/modules/tag-management/edit-tag/edit-tag.component.ts":
     /*!***********************************************************************!*\
       !*** ./src/app/modules/tag-management/edit-tag/edit-tag.component.ts ***!
@@ -1604,7 +1920,7 @@
         _createClass(EditTagComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this = this;
+            var _this2 = this;
 
             this.updateTagFG = this.fb.group({
               name: ['', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
@@ -1648,21 +1964,21 @@
             var currentUserInfo = this.auth.currentUserValue;
             this.companyService.getUserCompanies(currentUserInfo.companies).subscribe(function (companyResult) {
               companyResult.map(function (company) {
-                _this.companyList.push({
+                _this2.companyList.push({
                   value: company._id,
                   viewValue: company.name
                 });
 
-                if (company._id == _this.companySelected) {
+                if (company._id == _this2.companySelected) {
                   company.adServerUrls.map(function (url) {
-                    _this.adServerUrlList.push({
+                    _this2.adServerUrlList.push({
                       value: url['adServerUrl'],
                       viewValue: url['adServerUrl']
                     });
                   }); //advertiser GET
 
                   company.reportingProviders.map(function (reporting) {
-                    _this.advertiserList.push({
+                    _this2.advertiserList.push({
                       value: reporting.reportingProvider,
                       viewValue: reporting.reportingProvider
                     });
@@ -1673,13 +1989,13 @@
 
             if (this.route.snapshot.params.id) {
               this.tagManagementService.getOneTag(this.route.snapshot.params.id).subscribe(function (x) {
-                _this.tag = x;
+                _this2.tag = x;
                 console.log(x);
                 var browserVal = [];
                 var deviceTypeVal = [];
                 var versionVal = [];
                 var countryVal = [];
-                _this.initialURL = new URL('http://3.227.27.140/search');
+                _this2.initialURL = new URL('http://3.227.27.140/search');
 
                 var _iterator = _createForOfIteratorHelper(x['browser'].toString().split(",")),
                     _step;
@@ -1738,18 +2054,18 @@
                 }
 
                 x['subids'].map(function (item) {
-                  _this.subids.push(_this.fb.group(item));
+                  _this2.subids.push(_this2.fb.group(item));
                 });
                 var tagUrlsList = [];
                 tagUrlsList = x['tagUrls'];
                 tagUrlsList.map(function (itemTag) {
-                  var temp = _this.fb.array([]);
+                  var temp = _this2.fb.array([]);
 
                   itemTag.param.map(function (ip) {
-                    temp.push(_this.fb.group(ip));
+                    temp.push(_this2.fb.group(ip));
                   });
 
-                  _this.tagUrls.push(_this.fb.group({
+                  _this2.tagUrls.push(_this2.fb.group({
                     finalUrl: itemTag.finalUrl,
                     percentage: itemTag.percentage,
                     param: temp,
@@ -1757,7 +2073,7 @@
                   }));
                 }); // this.updateTagFG.patchValue(x);
 
-                _this.updateTagFG.patchValue({
+                _this2.updateTagFG.patchValue({
                   name: x['name'],
                   company: x['company'],
                   advertiser: x['advertiser'],
@@ -1788,20 +2104,20 @@
         }, {
           key: "getPublisherAll",
           value: function getPublisherAll() {
-            var _this2 = this;
+            var _this3 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
               // console.log(data);
-              if (_this2.companySelected) {
-                _this2.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this2.companySelected);
+              if (_this3.companySelected) {
+                _this3.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this3.companySelected);
                 });
               } else {
-                _this2.publishertempList = data;
+                _this3.publishertempList = data;
               }
 
-              _this2.publishertempList.map(function (publisher) {
-                _this2.publisherList.push({
+              _this3.publishertempList.map(function (publisher) {
+                _this3.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -1818,16 +2134,16 @@
         }, {
           key: "updateTag",
           value: function updateTag() {
-            var _this3 = this;
+            var _this4 = this;
 
             this.updateTagFG.markAllAsTouched();
 
             if (this.updateTagFG.valid) {
               this.tag = Object.assign(Object.assign({}, this.tag), this.updateTagFG.value);
               this.tagManagementService.updateOneTag(this.tag).subscribe(function (res) {
-                _this3._snackBarService.info('Updated a tag');
+                _this4._snackBarService.info('Updated a tag');
               }, function (err) {
-                _this3._snackBarService.info(err.error);
+                _this4._snackBarService.info(err.error);
               });
             }
           }
@@ -1941,7 +2257,7 @@
         }, {
           key: "createInitialURL",
           value: function createInitialURL(tagIndex) {
-            var _this4 = this;
+            var _this5 = this;
 
             console.log('Updating URL');
             var subInitialURL = new URL('http://3.227.27.140/search');
@@ -1949,11 +2265,11 @@
               if (element.value.paramType === 'dynamic') {
                 subInitialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
 
-                _this4.tagUrls.at(tagIndex).patchValue({
+                _this5.tagUrls.at(tagIndex).patchValue({
                   initialURL: subInitialURL
                 });
               } else if (element.value.paramType === 'static') {
-                _this4.tagUrls.at(tagIndex).patchValue({
+                _this5.tagUrls.at(tagIndex).patchValue({
                   initialURL: subInitialURL
                 }); // this.initialURL.searchParams.append(
                 //   element.value.key,
@@ -1997,7 +2313,7 @@
         }, {
           key: "getBrowers",
           value: function getBrowers(event) {
-            var _this5 = this;
+            var _this6 = this;
 
             if (event.value.length > 0) {
               var e;
@@ -2006,7 +2322,7 @@
                 var vTemp = [];
 
                 if (event.value.includes('Any')) {
-                  _this5.browserVersions = _this5.versionList;
+                  _this6.browserVersions = _this6.versionList;
                 } else {
                   var _iterator6 = _createForOfIteratorHelper(event.value),
                       _step6;
@@ -2015,7 +2331,7 @@
                     for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
                       e = _step6.value;
 
-                      var filterdata = _this5.versionList.filter(function (version) {
+                      var filterdata = _this6.versionList.filter(function (version) {
                         return version.value.includes(e);
                       });
 
@@ -2029,7 +2345,7 @@
                     _iterator6.f();
                   }
 
-                  _this5.browserVersions = vTemp;
+                  _this6.browserVersions = vTemp;
                 }
               })();
             } else {
@@ -2791,7 +3107,7 @@
         }, {
           key: "getVersions",
           value: function getVersions() {
-            var _this6 = this;
+            var _this7 = this;
 
             this.edgeVersions = [{
               value: "Edge - 102.0.1245.7",
@@ -2939,14 +3255,14 @@
             this.tagManagementService.getChromeBrowserVersion().subscribe(function (res) {
               var versionsChromeData = res.slice(0, 30);
               versionsChromeData.map(function (version) {
-                _this6.versionList.push({
+                _this7.versionList.push({
                   value: "Chrome - " + version.version,
                   viewValue: "Chrome - " + version.version
                 });
               });
             });
             this.edgeVersions.map(function (edge) {
-              _this6.versionList.push(edge);
+              _this7.versionList.push(edge);
             }); //FireFox Version List Get
 
             this.tagManagementService.getFirefoxBrowserVersion().subscribe(function (res) {
@@ -2960,17 +3276,17 @@
               }
 
               firefoxList.slice(firefoxList['length'] - 30, firefoxList['length']).map(function (version) {
-                _this6.versionList.push({
+                _this7.versionList.push({
                   value: version['value'],
                   viewValue: version['viewValue']
                 });
               });
             });
             this.internetExplorers.map(function (internet) {
-              _this6.versionList.push(internet);
+              _this7.versionList.push(internet);
             });
             this.operaVersions.map(function (opera) {
-              _this6.versionList.push(opera);
+              _this7.versionList.push(opera);
             });
             return this.versionList;
           } //Gets different ways a tag can display stats
@@ -3012,7 +3328,7 @@
         }, {
           key: "addRange",
           value: function addRange() {
-            var _this7 = this;
+            var _this8 = this;
 
             var subList = [];
             var numericId = this.updateTagFG.value['numSubid'];
@@ -3051,14 +3367,14 @@
               }
 
               subList.map(function (sub) {
-                var subidsArr = _this7.fb.group({
+                var subidsArr = _this8.fb.group({
                   subid: [sub.subid, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
                   limit: [sub.limit, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
                   split: [sub.split, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required],
                   filterTag: [sub.filterTag, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required]
                 });
 
-                _this7.subids.push(subidsArr);
+                _this8.subids.push(subidsArr);
               });
             } else {
               this.notification.showError("Please fill valid Subid range!", "");
@@ -4824,7 +5140,7 @@
 
       var NewTagComponent = /*#__PURE__*/function () {
         function NewTagComponent(tagManagementService, fb, _snackBarService, companyService, auth, userService, dialog, notification, changeDetectorRefs) {
-          var _this8 = this;
+          var _this9 = this;
 
           _classCallCheck(this, NewTagComponent);
 
@@ -4872,21 +5188,21 @@
           var currentUserInfo = this.auth.currentUserValue;
           this.companyService.getUserCompanies(currentUserInfo.companies).subscribe(function (companyResult) {
             companyResult.map(function (company) {
-              _this8.companyList.push({
+              _this9.companyList.push({
                 value: company._id,
                 viewValue: company.name
               });
 
-              if (company._id == _this8.companySelected) {
+              if (company._id == _this9.companySelected) {
                 company.adServerUrls.map(function (url) {
-                  _this8.adServerUrlList.push({
+                  _this9.adServerUrlList.push({
                     value: url['adServerUrl'],
                     viewValue: url['adServerUrl']
                   });
                 }); //advertiser GET
 
                 company.reportingProviders.map(function (reporting) {
-                  _this8.advertiserList.push({
+                  _this9.advertiserList.push({
                     value: reporting.reportingProvider,
                     viewValue: reporting.reportingProvider
                   });
@@ -4899,7 +5215,7 @@
         _createClass(NewTagComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this9 = this;
+            var _this10 = this;
 
             this.url = 'https://google.com/search';
             this.initialURL = new URL('http://3.227.27.140/search');
@@ -4937,16 +5253,16 @@
             this.getVersions();
             this.browserVersions = [];
             this.initSubid.map(function (item) {
-              _this9.subids.push(_this9.fb.group(item));
+              _this10.subids.push(_this10.fb.group(item));
             });
             this.initTagUrl.map(function (item) {
-              var itemParam = _this9.fb.array([]);
+              var itemParam = _this10.fb.array([]);
 
               item.param.map(function (ip) {
-                itemParam.push(_this9.fb.group(ip));
+                itemParam.push(_this10.fb.group(ip));
               });
 
-              _this9.tagUrls.push(_this9.fb.group({
+              _this10.tagUrls.push(_this10.fb.group({
                 finalUrl: item.finalUrl,
                 percentage: item.percentage,
                 param: itemParam,
@@ -4960,7 +5276,7 @@
         }, {
           key: "openDialog",
           value: function openDialog() {
-            var _this10 = this;
+            var _this11 = this;
 
             var dialogRef = this.dialog.open(_template_name_template_name_component__WEBPACK_IMPORTED_MODULE_1__["TemplateNameComponent"], {
               width: '250px',
@@ -4970,7 +5286,7 @@
             });
             dialogRef.afterClosed().subscribe(function (result) {
               console.log('The dialog was closed');
-              _this10.templateName = result;
+              _this11.templateName = result;
             });
           } //Gets the Selected Company from Local Storage
 
@@ -5011,15 +5327,15 @@
         }, {
           key: "getTemplate",
           value: function getTemplate() {
-            var _this11 = this;
+            var _this12 = this;
 
             this.tagManagementService.getAllTemplates().subscribe(function (response) {
-              _this11.templateList = response.filter(function (template) {
-                return template.company[0]['_id'] == _this11.companySelected;
+              _this12.templateList = response.filter(function (template) {
+                return template.company[0]['_id'] == _this12.companySelected;
               });
 
-              _this11.templateList.map(function (template) {
-                _this11.templateData.push({
+              _this12.templateList.map(function (template) {
+                _this12.templateData.push({
                   value: template._key,
                   viewValue: template.templateName
                 });
@@ -5029,20 +5345,20 @@
         }, {
           key: "getPublisherAll",
           value: function getPublisherAll() {
-            var _this12 = this;
+            var _this13 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
               // console.log(data);
-              if (_this12.companySelected) {
-                _this12.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this12.companySelected);
+              if (_this13.companySelected) {
+                _this13.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this13.companySelected);
                 });
               } else {
-                _this12.publishertempList = data;
+                _this13.publishertempList = data;
               }
 
-              _this12.publishertempList.map(function (publisher) {
-                _this12.publisherList.push({
+              _this13.publishertempList.map(function (publisher) {
+                _this13.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -5125,7 +5441,7 @@
         }, {
           key: "createInitialURL",
           value: function createInitialURL(tagIndex) {
-            var _this13 = this;
+            var _this14 = this;
 
             console.log('Updating URL');
             var subInitialURL = new URL('http://3.227.27.140/search');
@@ -5133,11 +5449,11 @@
               if (element.value.paramType === 'dynamic') {
                 subInitialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
 
-                _this13.tagUrls.at(tagIndex).patchValue({
+                _this14.tagUrls.at(tagIndex).patchValue({
                   initialURL: subInitialURL
                 });
               } else if (element.value.paramType === 'static') {
-                _this13.tagUrls.at(tagIndex).patchValue({
+                _this14.tagUrls.at(tagIndex).patchValue({
                   initialURL: subInitialURL
                 }); // this.initialURL.searchParams.append(
                 //   element.value.key,
@@ -5182,29 +5498,29 @@
         }, {
           key: "saveTag",
           value: function saveTag() {
-            var _this14 = this;
+            var _this15 = this;
 
             //this.newTagFG.markAllAsTouched();
             if (this.newTagFG.valid) {
               this.tagManagementService.addTag(this.newTagFG.value).subscribe(function (res) {
-                _this14._snackBarService.info('Added a new tag');
+                _this15._snackBarService.info('Added a new tag');
 
-                _this14.newTagFG.reset();
+                _this15.newTagFG.reset();
 
-                _this14.formGroupDirective.resetForm();
+                _this15.formGroupDirective.resetForm();
 
-                _this14.url = 'https://google.com/search';
-                _this14.initialURL = new URL('http://3.227.27.140/search');
+                _this15.url = 'https://google.com/search';
+                _this15.initialURL = new URL('http://3.227.27.140/search');
 
-                _this14.tagUrls.controls.map(function (tagItem, index) {
-                  _this14.getUrlParams(_this14.url, index);
+                _this15.tagUrls.controls.map(function (tagItem, index) {
+                  _this15.getUrlParams(_this15.url, index);
 
-                  _this14.tagUrls.at(index).patchValue({
-                    initialURL: _this14.initialURL
+                  _this15.tagUrls.at(index).patchValue({
+                    initialURL: _this15.initialURL
                   });
                 });
               }, function (err) {
-                _this14._snackBarService.info(err.error);
+                _this15._snackBarService.info(err.error);
               });
             }
           }
@@ -5216,7 +5532,7 @@
         }, {
           key: "getBrowers",
           value: function getBrowers(event) {
-            var _this15 = this;
+            var _this16 = this;
 
             if (event.value.length > 0) {
               var e;
@@ -5225,7 +5541,7 @@
                 var vTemp = [];
 
                 if (event.value.includes('Any')) {
-                  _this15.browserVersions = _this15.versionList;
+                  _this16.browserVersions = _this16.versionList;
                 } else {
                   var _iterator8 = _createForOfIteratorHelper(event.value),
                       _step8;
@@ -5234,7 +5550,7 @@
                     for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
                       e = _step8.value;
 
-                      var filterdata = _this15.versionList.filter(function (version) {
+                      var filterdata = _this16.versionList.filter(function (version) {
                         return version.value.includes(e);
                       });
 
@@ -5248,7 +5564,7 @@
                     _iterator8.f();
                   }
 
-                  _this15.browserVersions = vTemp;
+                  _this16.browserVersions = vTemp;
                 }
               })();
             } else {
@@ -5259,7 +5575,7 @@
         }, {
           key: "saveTemplate",
           value: function saveTemplate() {
-            var _this16 = this;
+            var _this17 = this;
 
             this.newTagFG.markAllAsTouched();
 
@@ -5274,42 +5590,42 @@
                 console.log('dialog closed!');
 
                 if (result && result.templateName) {
-                  _this16.templateName = result.templateName;
+                  _this17.templateName = result.templateName;
 
-                  _this16.newTagFG.addControl('templateName', new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required));
+                  _this17.newTagFG.addControl('templateName', new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required));
 
-                  _this16.newTagFG.patchValue({
-                    templateName: _this16.templateName
+                  _this17.newTagFG.patchValue({
+                    templateName: _this17.templateName
                   });
 
-                  _this16.tagManagementService.addTemplate(_this16.newTagFG.value).subscribe(function (res) {
-                    _this16.templateData.push({
+                  _this17.tagManagementService.addTemplate(_this17.newTagFG.value).subscribe(function (res) {
+                    _this17.templateData.push({
                       value: res._key,
                       viewValue: res.templateName
                     });
 
-                    _this16.newTagFG.removeControl('templateName');
+                    _this17.newTagFG.removeControl('templateName');
 
-                    _this16._snackBarService.info('Added a new template');
+                    _this17._snackBarService.info('Added a new template');
 
-                    _this16.newTagFG.reset();
+                    _this17.newTagFG.reset();
 
-                    _this16.formGroupDirective.resetForm();
+                    _this17.formGroupDirective.resetForm();
 
-                    _this16.url = 'https://google.com/search';
-                    _this16.initialURL = new URL('http://3.227.27.140/search');
+                    _this17.url = 'https://google.com/search';
+                    _this17.initialURL = new URL('http://3.227.27.140/search');
 
-                    _this16.tagUrls.controls.map(function (tagItem, index) {
-                      _this16.getUrlParams(_this16.url, index);
+                    _this17.tagUrls.controls.map(function (tagItem, index) {
+                      _this17.getUrlParams(_this17.url, index);
 
-                      _this16.tagUrls.at(index).patchValue({
-                        initialURL: _this16.initialURL
+                      _this17.tagUrls.at(index).patchValue({
+                        initialURL: _this17.initialURL
                       });
                     });
                   }, function (err) {
-                    _this16.newTagFG.markAllAsTouched();
+                    _this17.newTagFG.markAllAsTouched();
 
-                    _this16._snackBarService.info(err.error);
+                    _this17._snackBarService.info(err.error);
                   });
                 }
               });
@@ -5320,7 +5636,7 @@
         }, {
           key: "handleTemplate",
           value: function handleTemplate(event) {
-            var _this17 = this;
+            var _this18 = this;
 
             if (event) {
               this.tagManagementService.getOneTemplate(event).subscribe(function (response) {
@@ -5328,9 +5644,9 @@
                 var deviceTypeVal = [];
                 var versionVal = [];
                 var countryVal = [];
-                _this17.subids.controls = [];
-                _this17.tagUrls.controls = [];
-                _this17.initialURL = new URL('http://3.227.27.140/search');
+                _this18.subids.controls = [];
+                _this18.tagUrls.controls = [];
+                _this18.initialURL = new URL('http://3.227.27.140/search');
 
                 var _iterator9 = _createForOfIteratorHelper(response['browser'].toString().split(",")),
                     _step9;
@@ -5346,7 +5662,7 @@
                   _iterator9.f();
                 }
 
-                _this17.browserVersions = _this17.versionList;
+                _this18.browserVersions = _this18.versionList;
 
                 var _iterator10 = _createForOfIteratorHelper(response['deviceType'].toString().split(",")),
                     _step10;
@@ -5391,18 +5707,18 @@
                 }
 
                 response['subids'].map(function (item) {
-                  _this17.subids.push(_this17.fb.group(item));
+                  _this18.subids.push(_this18.fb.group(item));
                 });
                 var resTagUrls = [];
                 resTagUrls = response['tagUrls'];
                 resTagUrls.map(function (item) {
-                  var itemParam = _this17.fb.array([]);
+                  var itemParam = _this18.fb.array([]);
 
                   item.param.map(function (ip) {
-                    itemParam.push(_this17.fb.group(ip));
+                    itemParam.push(_this18.fb.group(ip));
                   });
 
-                  _this17.tagUrls.push(_this17.fb.group({
+                  _this18.tagUrls.push(_this18.fb.group({
                     finalUrl: item.finalUrl,
                     percentage: item.percentage,
                     param: itemParam,
@@ -5410,11 +5726,11 @@
                   }));
                 });
 
-                _this17.newTagFG.reset();
+                _this18.newTagFG.reset();
 
-                _this17.formGroupDirective.resetForm();
+                _this18.formGroupDirective.resetForm();
 
-                _this17.newTagFG.patchValue({
+                _this18.newTagFG.patchValue({
                   name: response['name'],
                   company: response['company'],
                   advertiser: response['advertiser'],
@@ -6199,7 +6515,7 @@
         }, {
           key: "getVersions",
           value: function getVersions() {
-            var _this18 = this;
+            var _this19 = this;
 
             this.edgeVersions = [{
               value: "Edge - 102.0.1245.7",
@@ -6347,14 +6663,14 @@
             this.tagManagementService.getChromeBrowserVersion().subscribe(function (res) {
               var versionsChromeData = res.slice(0, 30);
               versionsChromeData.map(function (version) {
-                _this18.versionList.push({
+                _this19.versionList.push({
                   value: "Chrome - " + version.version,
                   viewValue: "Chrome - " + version.version
                 });
               });
             });
             this.edgeVersions.map(function (edge) {
-              _this18.versionList.push(edge);
+              _this19.versionList.push(edge);
             }); //FireFox Version List Get
 
             this.tagManagementService.getFirefoxBrowserVersion().subscribe(function (res) {
@@ -6368,17 +6684,17 @@
               }
 
               firefoxList.slice(firefoxList['length'] - 30, firefoxList['length']).map(function (version) {
-                _this18.versionList.push({
+                _this19.versionList.push({
                   value: version['value'],
                   viewValue: version['viewValue']
                 });
               });
             });
             this.internetExplorers.map(function (internet) {
-              _this18.versionList.push(internet);
+              _this19.versionList.push(internet);
             });
             this.operaVersions.map(function (opera) {
-              _this18.versionList.push(opera);
+              _this19.versionList.push(opera);
             });
             return this.versionList;
           } //Gets different ways a tag can display stats
@@ -6408,7 +6724,7 @@
         }, {
           key: "addRange",
           value: function addRange() {
-            var _this19 = this;
+            var _this20 = this;
 
             var subList = [];
             var numericId = this.newTagFG.value['numSubid'];
@@ -6447,14 +6763,14 @@
               }
 
               subList.map(function (sub) {
-                var subidsArr = _this19.fb.group({
+                var subidsArr = _this20.fb.group({
                   subid: [sub.subid, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                   limit: [sub.limit, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                   split: [sub.split, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                   filterTag: [sub.filterTag, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
                 });
 
-                _this19.subids.push(subidsArr);
+                _this20.subids.push(subidsArr);
               });
             } else {
               this.notification.showError("Please fill valid Subid range!", "");
@@ -6906,6 +7222,12 @@
       var ng_inline_svg__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
       /*! ng-inline-svg */
       "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+      /* harmony import */
+
+
+      var _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
+      /*! ./copy-adserver/copy-adserver.component */
+      "./src/app/modules/tag-management/copy-adserver/copy-adserver.component.ts");
 
       var TagManagementModule = function TagManagementModule() {
         _classCallCheck(this, TagManagementModule);
@@ -6924,7 +7246,7 @@
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](TagManagementModule, {
-          declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"]],
+          declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"]],
           imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _tag_management_routing_module__WEBPACK_IMPORTED_MODULE_2__["TagManagementRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_5__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButtonModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelectModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_10__["MatCheckboxModule"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_12__["MatSnackBarModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["NgxDatatableModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialogModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_20__["InlineSVGModule"]]
         });
       })();
@@ -6935,7 +7257,7 @@
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TagManagementModule, [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
-            declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"]],
+            declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"]],
             imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _tag_management_routing_module__WEBPACK_IMPORTED_MODULE_2__["TagManagementRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_5__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButtonModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelectModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_10__["MatCheckboxModule"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_12__["MatSnackBarModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["NgxDatatableModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialogModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_20__["InlineSVGModule"]],
             providers: [src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_11__["SnackbarService"]],
             entryComponents: [_new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"]]
@@ -7107,55 +7429,67 @@
       /* harmony import */
 
 
-      var _tag_management_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ../copy-adserver/copy-adserver.component */
+      "./src/app/modules/tag-management/copy-adserver/copy-adserver.component.ts");
+      /* harmony import */
+
+
+      var _tag_management_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ../tag-management.service */
       "./src/app/modules/tag-management/tag-management.service.ts");
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/router */
       "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
       /* harmony import */
 
 
-      var src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! src/app/shared/service/snackbar.service */
       "./src/app/shared/service/snackbar.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! src/app/shared/service/users.service */
       "./src/app/shared/service/users.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/shared/service/notification.service */
       "./src/app/shared/service/notification.service.ts");
       /* harmony import */
 
 
-      var ngx_clipboard__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var ngx_clipboard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! ngx-clipboard */
       "./node_modules/ngx-clipboard/__ivy_ngcc__/fesm2015/ngx-clipboard.js");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! @angular/material/dialog */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! ng-inline-svg */
       "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
 
@@ -7322,7 +7656,7 @@
 
             var ctx_r37 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-            return ctx_r37.copyTagId(row_r36._key);
+            return ctx_r37.openClipBoardDialog(row_r36._key);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 25);
@@ -7554,7 +7888,7 @@
       }
 
       var TagsComponent = /*#__PURE__*/function () {
-        function TagsComponent(tagService, cdr, router, _snackBarService, userService, notification, clipboardService) {
+        function TagsComponent(tagService, cdr, router, _snackBarService, userService, notification, clipboardService, dialog) {
           _classCallCheck(this, TagsComponent);
 
           this.tagService = tagService;
@@ -7564,6 +7898,7 @@
           this.userService = userService;
           this.notification = notification;
           this.clipboardService = clipboardService;
+          this.dialog = dialog;
           this.loadingIndicator = true;
           this.hidden = false;
           this.tagList = [];
@@ -7582,13 +7917,11 @@
             }
 
             this.getAllTags();
-          }
-        }, {
-          key: "copyTagId",
-          value: function copyTagId(tagId) {
-            this.clipboardService.copyFromContent(tagId);
-            this.notification.showSuccess("Copied Tag ID ".concat(tagId), "");
-          }
+          } // copyTagId(tagId: any) {
+          //   this.clipboardService.copyFromContent(tagId);
+          //   this.notification.showSuccess(`Copied Tag ID ${tagId}`, "");
+          // }
+
         }, {
           key: "editTag",
           value: function editTag(tagID) {
@@ -7597,29 +7930,29 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this20 = this;
+            var _this21 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this20.getAllTags();
+                _this21.getAllTags();
 
-                _this20._snackBarService.info('Deleted a tag');
+                _this21._snackBarService.info('Deleted a tag');
               });
             }
           }
         }, {
           key: "getAllTags",
           value: function getAllTags() {
-            var _this21 = this;
+            var _this22 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this21.tagList = x;
-              _this21.rows = _this21.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this21.localStorageCompany;
+              _this22.tagList = x;
+              _this22.rows = _this22.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this22.localStorageCompany;
               });
-              _this21.loadingIndicator = false;
+              _this22.loadingIndicator = false;
 
-              _this21.cdr.detectChanges();
+              _this22.cdr.detectChanges();
             });
           } //Gets the Selected Company from Local Storage
 
@@ -7633,13 +7966,26 @@
           value: function handleAddTag() {
             this.router.navigateByUrl('/tag-management/new');
           }
+        }, {
+          key: "openClipBoardDialog",
+          value: function openClipBoardDialog(tagKey) {
+            var tagdialog = this.dialog.open(_copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_1__["CopyAdserverComponent"], {
+              height: 'auto',
+              width: '650px',
+              data: tagKey
+            }).afterClosed().subscribe(function (response) {
+              if (response) {
+                console.log(response);
+              }
+            });
+          }
         }]);
 
         return TagsComponent;
       }();
 
       TagsComponent.ɵfac = function TagsComponent_Factory(t) {
-        return new (t || TagsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_service__WEBPACK_IMPORTED_MODULE_1__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_clipboard__WEBPACK_IMPORTED_MODULE_6__["ClipboardService"]));
+        return new (t || TagsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_4__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_clipboard__WEBPACK_IMPORTED_MODULE_7__["ClipboardService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"]));
       };
 
       TagsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -7663,7 +8009,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.hidden);
           }
         },
-        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_8__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_8__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_8__["DataTableColumnHeaderDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_8__["DataTableColumnCellDirective"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_9__["InlineSVGDirective"]],
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_10__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_10__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_10__["DataTableColumnHeaderDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_10__["DataTableColumnCellDirective"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_11__["InlineSVGDirective"]],
         styles: ["[_nghost-%COMP%] {\n  height: 100%;\n}\n\n.tag-btn[_ngcontent-%COMP%] {\n  justify-content: flex-end !important;\n}\n\n@media (max-width: 1200px) {\n  .tag-btn[_ngcontent-%COMP%] {\n    justify-content: flex-start !important;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy90YWctbWFuYWdlbWVudC90YWdzL3RhZ3MuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxZQUFBO0FBQ0o7O0FBRUE7RUFDSSxvQ0FBQTtBQUNKOztBQUVBO0VBQ0k7SUFDSSxzQ0FBQTtFQUNOO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3RhZy1tYW5hZ2VtZW50L3RhZ3MvdGFncy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICB9XHJcblxyXG4udGFnLWJ0biB7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbkBtZWRpYSAobWF4LXdpZHRoOiAxMjAwcHgpIHtcclxuICAgIC50YWctYnRuIHtcclxuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQgIWltcG9ydGFudDtcclxuICAgIH1cclxufVxyXG4iXX0= */"]
       });
       /*@__PURE__*/
@@ -7678,19 +8024,21 @@
           }]
         }], function () {
           return [{
-            type: _tag_management_service__WEBPACK_IMPORTED_MODULE_1__["TagManagementService"]
+            type: _tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]
           }, {
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
           }, {
-            type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+            type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
           }, {
-            type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]
+            type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_4__["SnackbarService"]
           }, {
-            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]
+            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]
           }, {
-            type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__["NotificationService"]
+            type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"]
           }, {
-            type: ngx_clipboard__WEBPACK_IMPORTED_MODULE_6__["ClipboardService"]
+            type: ngx_clipboard__WEBPACK_IMPORTED_MODULE_7__["ClipboardService"]
+          }, {
+            type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"]
           }];
         }, null);
       })();
@@ -8386,30 +8734,30 @@
         }, {
           key: "deleteTemplate",
           value: function deleteTemplate(id) {
-            var _this22 = this;
+            var _this23 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTemplate(id).subscribe(function (res) {
-                _this22.getAllTemplates();
+                _this23.getAllTemplates();
 
-                _this22._snackBarService.info('Deleted a Template');
+                _this23._snackBarService.info('Deleted a Template');
               });
             }
           }
         }, {
           key: "getAllTemplates",
           value: function getAllTemplates() {
-            var _this23 = this;
+            var _this24 = this;
 
             this.tagService.getAllTemplates().subscribe(function (x) {
-              _this23.templateList = x;
+              _this24.templateList = x;
               console.log(x);
-              _this23.rows = _this23.templateList.filter(function (template) {
-                return template.company[0]['_id'] == _this23.localStorageCompany;
+              _this24.rows = _this24.templateList.filter(function (template) {
+                return template.company[0]['_id'] == _this24.localStorageCompany;
               });
-              _this23.loadingIndicator = false;
+              _this24.loadingIndicator = false;
 
-              _this23.cdr.detectChanges();
+              _this24.cdr.detectChanges();
             });
           } //Gets the Selected Company from Local Storage
 

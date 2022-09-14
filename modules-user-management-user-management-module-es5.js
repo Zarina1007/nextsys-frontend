@@ -2186,10 +2186,10 @@
             });
           }
           /**
-           * close()
-           * * Closes the dialog and does not make any changes.
-           *
-           */
+          * close()
+          * * Closes the dialog and does not make any changes.
+          *
+          */
 
         }, {
           key: "close",

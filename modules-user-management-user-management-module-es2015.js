@@ -1087,10 +1087,10 @@ class AddTagComponent {
         this.dialogRef.close({ user: this.user });
     }
     /**
-     * close()
-     * * Closes the dialog and does not make any changes.
-     *
-     */
+   * close()
+   * * Closes the dialog and does not make any changes.
+   *
+   */
     close() {
         this.dialogRef.close();
     }
