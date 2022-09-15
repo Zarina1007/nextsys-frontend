@@ -201,7 +201,7 @@
         }, {
           key: "openClipBoardDialog",
           value: function openClipBoardDialog(initialURL, tagKeyVal) {
-            var initialUri = "".concat(decodeURI(initialURL), "&tid=").concat(tagKeyVal, "&subid=10");
+            var initialUri = "".concat(decodeURI(initialURL), "&tid=").concat(tagKeyVal);
             this.clipboardService.copyFromContent(initialUri);
             this.notification.showSuccess("Copied Aderser InitialURL ".concat(initialUri), "");
           }

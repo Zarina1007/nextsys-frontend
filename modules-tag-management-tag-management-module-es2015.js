@@ -89,7 +89,7 @@ class CopyAdserverComponent {
         this.dialogRef.close();
     }
     openClipBoardDialog(initialURL, tagKeyVal) {
-        var initialUri = `${decodeURI(initialURL)}&tid=${tagKeyVal}&subid=10`;
+        var initialUri = `${decodeURI(initialURL)}&tid=${tagKeyVal}`;
         this.clipboardService.copyFromContent(initialUri);
         this.notification.showSuccess(`Copied Aderser InitialURL ${initialUri}`, "");
     }
