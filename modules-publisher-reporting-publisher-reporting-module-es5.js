@@ -942,10 +942,10 @@
                 return index === self.findIndex(function (t) {
                   return t.date === thing.date && t.subid === thing.subid;
                 });
-              });
-              filter_data.map(function (f) {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-              });
+              }); // filter_data.map(f =>{
+              //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+              // })
+
               filter_data = filter_data.slice().sort(function (a, b) {
                 return a.date - b.date;
               });
@@ -1249,10 +1249,10 @@
                   return t.date === thing.date && t.subid === thing.subid;
                 });
               }); // var helper = {};
-
-              filtered_data.map(function (f) {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-              }); // var resultAll = filtered_data.reduce(function(prev, current) {
+              // filtered_data.map(f =>{
+              //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+              // })
+              // var resultAll = filtered_data.reduce(function(prev, current) {
               //   var key = (current.rptDate).toString() + '-' + current.subid;
               //   if(!helper[key]) {
               //     helper[key] = Object.assign({}, current); // create a copy of o
@@ -1288,7 +1288,7 @@
           value: function getAllVerizonStats(startDate, endDate, tag) {
             var _this6 = this;
 
-            return this.verizonService.getAllVerizonStats(this.selectedCompany, startDate, endDate).toPromise().then(function (response) {
+            return this.verizonService.getAllPublisherVerizonStats(this.selectedCompany, startDate, endDate).toPromise().then(function (response) {
               _this6.allVerizonStatData = response.stats;
               var allVerizonStat = [];
 
@@ -1361,7 +1361,7 @@
           value: function getVerizonChartMetrics(company, startDate, endDate) {
             var _this7 = this;
 
-            return this.verizonService.getAllVerizonStats(this.selectedCompany, startDate, endDate).toPromise().then(function (response) {
+            return this.verizonService.getAllPublisherVerizonStats(this.selectedCompany, startDate, endDate).toPromise().then(function (response) {
               _this7.allVerizonChart = response.stats;
               var chartAllVerizonStat = [];
 
@@ -1401,10 +1401,10 @@
                 return index === self.findIndex(function (t) {
                   return t.date === thing.date && t.subid === thing.subid;
                 });
-              });
-              filter_data.map(function (f) {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-              });
+              }); // filter_data.map(f =>{
+              //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+              // })
+
               filter_data = filter_data.slice().sort(function (a, b) {
                 return a.date - b.date;
               });
@@ -1516,12 +1516,12 @@
                 return index === self.findIndex(function (t) {
                   return t.date === thing.date && t.subid === thing.subid;
                 });
-              }); // var helper = {};
+              }); // // var helper = {};
+              // filtered_data.map(f =>{
+              //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+              //   f.cpc = parseFloat(f.revenue)/parseFloat(f.clicks);
+              // })
 
-              filtered_data.map(function (f) {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-                f.cpc = parseFloat(f.revenue) / parseFloat(f.clicks);
-              });
               return filtered_data.slice().sort(function (a, b) {
                 return b.date - a.date;
               });
@@ -1574,10 +1574,10 @@
                 return index === self.findIndex(function (t) {
                   return t.date === thing.date && t.subid === thing.subid;
                 });
-              });
-              filter_data.map(function (f) {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-              });
+              }); // filter_data.map(f =>{
+              //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+              // })
+
               filter_data = filter_data.slice().sort(function (a, b) {
                 return a.date - b.date;
               });

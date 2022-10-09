@@ -255,7 +255,7 @@ class RubiService {
         });
     }
     getAllRubiStats(company, startDate, endDate) {
-        return this.http.get(API_RUBI_URL + '/', {
+        return this.http.get(API_RUBI_URL + '/all-publishers', {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
@@ -317,6 +317,11 @@ class VerizonService {
     }
     getAllVerizonStats(company, startDate, endDate) {
         return this.http.get(API_VERIZON_URL + '/', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getAllPublisherVerizonStats(company, startDate, endDate) {
+        return this.http.get(API_VERIZON_URL + '/all-publishers', {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }

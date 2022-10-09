@@ -502,7 +502,7 @@
         }, {
           key: "getAllRubiStats",
           value: function getAllRubiStats(company, startDate, endDate) {
-            return this.http.get(API_RUBI_URL + '/', {
+            return this.http.get(API_RUBI_URL + '/all-publishers', {
               params: {
                 company: company,
                 startDate: startDate,
@@ -628,6 +628,17 @@
           key: "getAllVerizonStats",
           value: function getAllVerizonStats(company, startDate, endDate) {
             return this.http.get(API_VERIZON_URL + '/', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getAllPublisherVerizonStats",
+          value: function getAllPublisherVerizonStats(company, startDate, endDate) {
+            return this.http.get(API_VERIZON_URL + '/all-publishers', {
               params: {
                 company: company,
                 startDate: startDate,

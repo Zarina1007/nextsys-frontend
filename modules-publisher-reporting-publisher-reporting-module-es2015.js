@@ -416,9 +416,9 @@ class PublisherComponent {
             }
             //duplicated remove
             let filter_data = chartAllLyonStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
-            filter_data.map(f => {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-            });
+            // filter_data.map(f =>{
+            //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+            // })
             filter_data = filter_data.slice().sort((a, b) => a.date - b.date);
             var helperChart = {};
             var resultChart = filter_data.reduce(function (r, o) {
@@ -610,9 +610,9 @@ class PublisherComponent {
             //duplicated remove
             let filtered_data = allLyonStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
             // var helper = {};
-            filtered_data.map(f => {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-            });
+            // filtered_data.map(f =>{
+            //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+            // })
             // var resultAll = filtered_data.reduce(function(prev, current) {
             //   var key = (current.rptDate).toString() + '-' + current.subid;
             //   if(!helper[key]) {
@@ -643,7 +643,7 @@ class PublisherComponent {
         });
     }
     getAllVerizonStats(startDate, endDate, tag) {
-        return this.verizonService.getAllVerizonStats(this.selectedCompany, startDate, endDate).toPromise().then((response) => {
+        return this.verizonService.getAllPublisherVerizonStats(this.selectedCompany, startDate, endDate).toPromise().then((response) => {
             this.allVerizonStatData = response.stats;
             var allVerizonStat = [];
             for (var tagSub of tag.subids) {
@@ -689,7 +689,7 @@ class PublisherComponent {
         });
     }
     getVerizonChartMetrics(company, startDate, endDate) {
-        return this.verizonService.getAllVerizonStats(this.selectedCompany, startDate, endDate).toPromise().then((response) => {
+        return this.verizonService.getAllPublisherVerizonStats(this.selectedCompany, startDate, endDate).toPromise().then((response) => {
             this.allVerizonChart = response.stats;
             var chartAllVerizonStat = [];
             for (var tagSub of this.tagRows.subids) {
@@ -708,9 +708,9 @@ class PublisherComponent {
             }
             //duplicated remove
             let filter_data = chartAllVerizonStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
-            filter_data.map(f => {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-            });
+            // filter_data.map(f =>{
+            //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+            // })
             filter_data = filter_data.slice().sort((a, b) => a.date - b.date);
             var helperChart = {};
             var resultChart = filter_data.reduce(function (r, o) {
@@ -781,11 +781,11 @@ class PublisherComponent {
             }
             //duplicated remove
             let filtered_data = allRubiStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
-            // var helper = {};
-            filtered_data.map(f => {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-                f.cpc = parseFloat(f.revenue) / parseFloat(f.clicks);
-            });
+            // // var helper = {};
+            // filtered_data.map(f =>{
+            //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+            //   f.cpc = parseFloat(f.revenue)/parseFloat(f.clicks);
+            // })
             return filtered_data.slice().sort((a, b) => b.date - a.date);
         })
             .catch((error) => {
@@ -812,9 +812,9 @@ class PublisherComponent {
             }
             //duplicated remove
             let filter_data = chartAllRubiStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
-            filter_data.map(f => {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-            });
+            // filter_data.map(f =>{
+            //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+            // })
             filter_data = filter_data.slice().sort((a, b) => a.date - b.date);
             var helperChart = {};
             var resultChart = filter_data.reduce(function (r, o) {
