@@ -22689,9 +22689,9 @@
                 zoom: {
                   enabled: false
                 },
-                sparkline: {
-                  enabled: true
-                },
+                // sparkline: {
+                //   enabled: true,
+                // },
                 dropShadow: {
                   enabled: true,
                   enabledOnSeries: undefined,
@@ -22719,6 +22719,7 @@
                 width: 3
               },
               xaxis: {
+                type: "datetime",
                 categories: this.allDaysList,
                 axisBorder: {
                   show: true
@@ -22727,6 +22728,7 @@
                   show: true
                 },
                 labels: {
+                  format: 'MM-dd',
                   show: true,
                   style: {
                     colors: this.colorsGrayGray500,
@@ -22745,14 +22747,17 @@
                 }
               },
               yaxis: {
-                min: 0,
-                max: 30000,
+                // min: 0,
+                // max: 50000,
                 labels: {
                   show: true,
                   style: {
                     //colors: this.colorsGrayGray500,
                     fontSize: '12px',
                     fontFamily: this.fontFamily
+                  },
+                  formatter: function formatter(val) {
+                    return '$' + Number.parseFloat(val).toFixed(0);
                   }
                 }
               },
@@ -22825,7 +22830,9 @@
                 enabled: false
               },
               stroke: {
-                curve: "smooth"
+                width: 3,
+                curve: "smooth",
+                dashArray: [0, 3, 3]
               },
               xaxis: {
                 type: "datetime",
