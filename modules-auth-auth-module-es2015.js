@@ -634,6 +634,12 @@ class LoginComponent {
             .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["first"])())
             .subscribe((user) => {
             if (user) {
+                if (user.companies.length > 0) {
+                    localStorage.setItem('company', user.companies[0]);
+                }
+                else {
+                    localStorage.removeItem('company');
+                }
                 this.router.navigate([this.returnUrl]);
             }
             else {

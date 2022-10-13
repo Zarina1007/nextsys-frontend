@@ -259,6 +259,11 @@ class RubiService {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
+    getRubiStats(company, startDate, endDate) {
+        return this.http.get(API_RUBI_URL + '/', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
     getSummaryMetrics(company) {
         return this.http.get(API_RUBI_URL + '/summary_metrics', {
             params: { company: company },

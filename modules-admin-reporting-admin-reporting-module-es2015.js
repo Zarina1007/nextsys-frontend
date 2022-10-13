@@ -4052,8 +4052,8 @@ class RubiComponent {
         this.cdr.markForCheck();
     }
     getAllRubiStats(company, startDate, endDate) {
-        return this.rubiService.getAllRubiStats(company, startDate, endDate).toPromise().then((response) => {
-            console.log('getAllRubiStats() response:', response);
+        return this.rubiService.getRubiStats(company, startDate, endDate).toPromise().then((response) => {
+            console.log('getRubiStats() response:', response);
             this.loadingIndicator = false;
             this.allStats = response.stats;
             this.allStats.map(function (resStat) {

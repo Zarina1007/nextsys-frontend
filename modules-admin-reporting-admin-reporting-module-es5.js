@@ -7113,8 +7113,8 @@
           value: function getAllRubiStats(company, startDate, endDate) {
             var _this12 = this;
 
-            return this.rubiService.getAllRubiStats(company, startDate, endDate).toPromise().then(function (response) {
-              console.log('getAllRubiStats() response:', response);
+            return this.rubiService.getRubiStats(company, startDate, endDate).toPromise().then(function (response) {
+              console.log('getRubiStats() response:', response);
               _this12.loadingIndicator = false;
               _this12.allStats = response.stats;
 

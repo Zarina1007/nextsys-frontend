@@ -1230,6 +1230,12 @@
             this.hasError = false;
             var loginSubscr = this.authService.login(this.f.email.value, this.f.password.value).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["first"])()).subscribe(function (user) {
               if (user) {
+                if (user.companies.length > 0) {
+                  localStorage.setItem('company', user.companies[0]);
+                } else {
+                  localStorage.removeItem('company');
+                }
+
                 _this2.router.navigate([_this2.returnUrl]);
               } else {
                 _this2.hasError = true;

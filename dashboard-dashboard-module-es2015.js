@@ -710,27 +710,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/shared/service/admin-stats/system1.service */ "./src/app/shared/service/admin-stats/system1.service.ts");
 /* harmony import */ var src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/modules/company-management/company-management.service */ "./src/app/modules/company-management/company-management.service.ts");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../widgets/lists/lists-widget9/lists-widget9.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget9/lists-widget9.component.ts");
-/* harmony import */ var _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../widgets/stats/stats-widget11/stats-widget11.component */ "./src/app/_metronic/partials/content/widgets/stats/stats-widget11/stats-widget11.component.ts");
-/* harmony import */ var _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../widgets/stats/stats-widget12/stats-widget12.component */ "./src/app/_metronic/partials/content/widgets/stats/stats-widget12/stats-widget12.component.ts");
-/* harmony import */ var _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../widgets/lists/lists-widget1/lists-widget1.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget1/lists-widget1.component.ts");
-/* harmony import */ var _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../widgets/advance-tables/advance-tables-widget2/advance-tables-widget2.component */ "./src/app/_metronic/partials/content/widgets/advance-tables/advance-tables-widget2/advance-tables-widget2.component.ts");
-/* harmony import */ var _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../widgets/lists/lists-widget3/lists-widget3.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget3/lists-widget3.component.ts");
-/* harmony import */ var _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../../widgets/lists/lists-widget4/lists-widget4.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget4/lists-widget4.component.ts");
-/* harmony import */ var _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../../widgets/lists/lists-widget8/lists-widget8.component */ "./src/app/_metronic/partials/content/widgets/lists/lists-widget8/lists-widget8.component.ts");
-/* harmony import */ var _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../widgets/mixed/mixed-widget14/mixed-widget14.component */ "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget14/mixed-widget14.component.ts");
-/* harmony import */ var _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../widgets/advance-tables/advance-tables-widget4/advance-tables-widget4.component */ "./src/app/_metronic/partials/content/widgets/advance-tables/advance-tables-widget4/advance-tables-widget4.component.ts");
-/* harmony import */ var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../../widgets/mixed/mixed-widget1/mixed-widget1.component */ "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget1/mixed-widget1.component.ts");
-
-
-
-
-
-
-
-
-
-
+/* harmony import */ var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../widgets/mixed/mixed-widget1/mixed-widget1.component */ "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget1/mixed-widget1.component.ts");
 
 
 
@@ -746,7 +726,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Dashboard1Component_app_mixed_widget1_2_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-mixed-widget1", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-mixed-widget1", 3);
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ChartData", ctx_r0.ChartData);
@@ -771,7 +751,6 @@ class Dashboard1Component {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
             this.reportTypeData = yield this.getReportingProviderList();
-            console.log(this.reportTypeData);
             this.allDaysList = this.getCurrentMontDateList();
             this.tagList = yield this.getCompanyTags(this.selectedCompany);
             this.perionChartData = yield this.getPerionChart(this.selectedCompany);
@@ -1213,48 +1192,16 @@ class Dashboard1Component {
     }
 }
 Dashboard1Component.ɵfac = function Dashboard1Component_Factory(t) { return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_6__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_10__["CompanyManagementService"])); };
-Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: Dashboard1Component, selectors: [["app-dashboard1"]], decls: 24, vars: 1, consts: [[1, "row"], [1, "col-lg-12", "col-xxl-12"], [3, "ChartData", 4, "ngIf"], [1, "col-lg-6", "col-xxl-4"], [1, "col-lg-6", "col-xxl-4", "order-1", "order-xxl-1"], [1, "col-xxl-8", "order-2", "order-xxl-1"], [1, "col-lg-6", "col-xxl-4", "order-1", "order-xxl-2"], [1, "col-lg-12", "col-xxl-4", "order-1", "order-xxl-2"], [1, "col-lg-4"], [1, "col-lg-8"], [3, "ChartData"]], template: function Dashboard1Component_Template(rf, ctx) { if (rf & 1) {
+Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: Dashboard1Component, selectors: [["app-dashboard1"]], decls: 3, vars: 1, consts: [[1, "row"], [1, "col-lg-12", "col-xxl-12"], [3, "ChartData", 4, "ngIf"], [3, "ChartData"]], template: function Dashboard1Component_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, Dashboard1Component_app_mixed_widget1_2_Template, 1, 1, "app-mixed-widget1", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](5, "app-lists-widget9");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 3);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "app-stats-widget11");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](8, "app-stats-widget12");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 4);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](10, "app-lists-widget1");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "div", 5);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](12, "app-advance-tables-widget2");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](14, "app-lists-widget3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "div", 6);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](16, "app-lists-widget4");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "div", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](18, "app-lists-widget8");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "div", 0);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "div", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](21, "app-mixed-widget14");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "div", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](23, "app-advance-tables-widget4");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.ChartData);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _widgets_lists_lists_widget9_lists_widget9_component__WEBPACK_IMPORTED_MODULE_12__["ListsWidget9Component"], _widgets_stats_stats_widget11_stats_widget11_component__WEBPACK_IMPORTED_MODULE_13__["StatsWidget11Component"], _widgets_stats_stats_widget12_stats_widget12_component__WEBPACK_IMPORTED_MODULE_14__["StatsWidget12Component"], _widgets_lists_lists_widget1_lists_widget1_component__WEBPACK_IMPORTED_MODULE_15__["ListsWidget1Component"], _widgets_advance_tables_advance_tables_widget2_advance_tables_widget2_component__WEBPACK_IMPORTED_MODULE_16__["AdvanceTablesWidget2Component"], _widgets_lists_lists_widget3_lists_widget3_component__WEBPACK_IMPORTED_MODULE_17__["ListsWidget3Component"], _widgets_lists_lists_widget4_lists_widget4_component__WEBPACK_IMPORTED_MODULE_18__["ListsWidget4Component"], _widgets_lists_lists_widget8_lists_widget8_component__WEBPACK_IMPORTED_MODULE_19__["ListsWidget8Component"], _widgets_mixed_mixed_widget14_mixed_widget14_component__WEBPACK_IMPORTED_MODULE_20__["MixedWidget14Component"], _widgets_advance_tables_advance_tables_widget4_advance_tables_widget4_component__WEBPACK_IMPORTED_MODULE_21__["AdvanceTablesWidget4Component"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_22__["MixedWidget1Component"]], encapsulation: 2 });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_12__["MixedWidget1Component"]], encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](Dashboard1Component, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{
