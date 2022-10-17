@@ -18595,6 +18595,7 @@
               chartPerionDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
               chartPerionDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
               chartPerionDataValue['statType'] = "Perion";
+              chartPerionDataValue['redirectUri'] = "/reporting/perion";
               chartPerionMetric.push(chartPerionDataValue);
               return chartPerionMetric;
             })["catch"](function (error) {
@@ -18745,6 +18746,7 @@
               chartLyonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
               chartLyonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
               chartLyonDataValue['statType'] = "Lyons";
+              chartLyonDataValue['redirectUri'] = "/reporting/lyons";
               chartLyonMetric.push(chartLyonDataValue);
               return chartLyonMetric;
             })["catch"](function (error) {
@@ -18835,6 +18837,7 @@
               chartRubiDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
               chartRubiDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
               chartRubiDataValue['statType'] = "Rubi";
+              chartRubiDataValue['redirectUri'] = "/reporting/rubi";
               chartRubiMetric.push(chartRubiDataValue);
               return chartRubiMetric;
             })["catch"](function (error) {
@@ -18925,6 +18928,7 @@
               chartSystem1DataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
               chartSystem1DataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
               chartSystem1DataValue['statType'] = "System 1";
+              chartSystem1DataValue['redirectUri'] = "/reporting/system1";
               chartSystem1Metric.push(chartSystem1DataValue);
               return chartSystem1Metric;
             })["catch"](function (error) {
@@ -19019,6 +19023,7 @@
               chartVerizonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
               chartVerizonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
               chartVerizonDataValue['statType'] = "Verizon Direct";
+              chartVerizonDataValue['redirectUri'] = "/reporting/verizon-direct";
               chartVerizonMetric.push(chartVerizonDataValue);
               return chartVerizonMetric;
             })["catch"](function (error) {
@@ -22462,6 +22467,8 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("href", chartSubOption_r1.redirectUri, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", index_r2 % 2 == 0 ? "text-success" : "text-danger");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
@@ -22470,7 +22477,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](9, 14, chartSubOption_r1.revenueCurrentSum, "USD"), " vs ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](10, 17, chartSubOption_r1.revenueBeforeSum, "USD"), "");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](9, 15, chartSubOption_r1.revenueCurrentSum, "USD"), " vs ", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](10, 18, chartSubOption_r1.revenueBeforeSum, "USD"), "");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
@@ -22734,6 +22741,7 @@
                 }
               },
               statType: subChart.statType,
+              redirectUri: subChart.redirectUri,
               revenueBeforeSum: subChart.revenueBeforeSum,
               revenueCurrentSum: subChart.revenueCurrentSum
             };
@@ -22763,7 +22771,7 @@
         },
         decls: 25,
         vars: 18,
-        consts: [[1, "card", "card-custom", "bg-gray-100", "card-stretch", "gutter-b"], [1, "card-header", "border-0", "bg-light-danger", "py-5"], [1, "card-title", "font-weight-bolder", "text-dark"], [1, "card-toolbar"], ["ngbDropdown", "", "placement", "bottom-right", "title", "Quick actions", 1, "dropdown", "dropdown-inline"], ["ngbDropdownToggle", "", 1, "btn", "btn-transparent-primary", "btn-sm", "font-weight-bolder", "dropdown-toggle", "px-5", "dropdown-toggle", "btn", "btn-transparent"], ["ngbDropdownMenu", "", 1, "dropdown-menu", "dropdown-menu-sm", "dropdown-menu-right"], [1, "card-body", "p-0", "position-relative", "overflow-hidden"], ["id", "kt_mixed_widget_1_chart", 1, "card-rounded-bottom", "bg-light-danger"], [3, "series", "chart", "xaxis", "yaxis", "dataLabels", "stroke", "legend", "fill", "states", "tooltip", "colors", "markers", "plotOptions"], [1, "card-spacer"], [1, "row", "m-0"], ["class", "col-xl-5 px-6 py-8 rounded-xl mr-10 mb-7", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "col-xl-5", "bg-light-primary", "px-6", "py-8", "rounded-xl", "mr-10", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-primary", "d-block", "my-2", 3, "inlineSVG"], ["href", "/user-management/publisher-users", 1, "text-primary", "font-weight-bold", "font-size-h6", "mt-2"], [1, "col-xl-5", "bg-light-success", "px-6", "py-8", "rounded-xl", "mr-10", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-success", "d-block", "my-2", 3, "inlineSVG"], ["href", "#", 1, "text-success", "font-weight-bold", "font-size-h6", "mt-2"], [1, "col-xl-5", "px-6", "py-8", "rounded-xl", "mr-10", "mb-7", 3, "ngClass"], [1, "svg-icon", "svg-icon-3x", "d-block", "my-2", 3, "inlineSVG", "ngClass"], ["href", "javascript:void(0);", 1, "font-weight-bold", "font-size-h6", "mt-2", 3, "ngClass"], [1, "pt-3"], [2, "font-weight", "500"], [3, "series", "chart", "xaxis", "yaxis", "stroke", "tooltip", "dataLabels"]],
+        consts: [[1, "card", "card-custom", "bg-gray-100", "card-stretch", "gutter-b"], [1, "card-header", "border-0", "bg-light-danger", "py-5"], [1, "card-title", "font-weight-bolder", "text-dark"], [1, "card-toolbar"], ["ngbDropdown", "", "placement", "bottom-right", "title", "Quick actions", 1, "dropdown", "dropdown-inline"], ["ngbDropdownToggle", "", 1, "btn", "btn-transparent-primary", "btn-sm", "font-weight-bolder", "dropdown-toggle", "px-5", "dropdown-toggle", "btn", "btn-transparent"], ["ngbDropdownMenu", "", 1, "dropdown-menu", "dropdown-menu-sm", "dropdown-menu-right"], [1, "card-body", "p-0", "position-relative", "overflow-hidden"], ["id", "kt_mixed_widget_1_chart", 1, "card-rounded-bottom", "bg-light-danger"], [3, "series", "chart", "xaxis", "yaxis", "dataLabels", "stroke", "legend", "fill", "states", "tooltip", "colors", "markers", "plotOptions"], [1, "card-spacer"], [1, "row", "m-0"], ["class", "col-xl-5 px-6 py-8 rounded-xl mr-10 mb-7", 3, "ngClass", 4, "ngFor", "ngForOf"], [1, "col-xl-5", "bg-light-primary", "px-6", "py-8", "rounded-xl", "mr-10", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-primary", "d-block", "my-2", 3, "inlineSVG"], ["href", "/user-management/publisher-users", 1, "text-primary", "font-weight-bold", "font-size-h6", "mt-2"], [1, "col-xl-5", "bg-light-success", "px-6", "py-8", "rounded-xl", "mr-10", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-success", "d-block", "my-2", 3, "inlineSVG"], ["href", "#", 1, "text-success", "font-weight-bold", "font-size-h6", "mt-2"], [1, "col-xl-5", "px-6", "py-8", "rounded-xl", "mr-10", "mb-7", 3, "ngClass"], [1, "svg-icon", "svg-icon-3x", "d-block", "my-2", 3, "inlineSVG", "ngClass"], [1, "font-weight-bold", "font-size-h6", "mt-2", 3, "href", "ngClass"], [1, "pt-3"], [2, "font-weight", "500"], [3, "series", "chart", "xaxis", "yaxis", "stroke", "tooltip", "dataLabels"]],
         template: function MixedWidget1Component_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -22810,7 +22818,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, MixedWidget1Component_div_15_Template, 13, 20, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, MixedWidget1Component_div_15_Template, 13, 21, "div", 12);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
