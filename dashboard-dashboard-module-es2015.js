@@ -2782,14 +2782,34 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function MixedWidget1Component_div_15_span_16_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "span", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "span", 31);
 } if (rf & 2) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/Navigation/Arrow-up.svg");
 } }
 function MixedWidget1Component_div_15_span_17_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "span", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "span", 32);
 } if (rf & 2) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/Navigation/Arrow-down.svg");
+} }
+function MixedWidget1Component_div_15_span_18_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "percent");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const chartSubOption_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](2, 1, chartSubOption_r1.revenueCurrentSum / chartSubOption_r1.revenueBeforeSum, "1.2"));
+} }
+function MixedWidget1Component_div_15_span_19_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "percent");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const chartSubOption_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](2, 1, 1 - chartSubOption_r1.revenueCurrentSum / chartSubOption_r1.revenueBeforeSum, "1.2"));
 } }
 function MixedWidget1Component_div_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 20);
@@ -2815,15 +2835,13 @@ function MixedWidget1Component_div_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, MixedWidget1Component_div_15_span_16_Template, 1, 1, "span", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, MixedWidget1Component_div_15_span_17_Template, 1, 1, "span", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "span", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](20, "percent");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](18, MixedWidget1Component_div_15_span_18_Template, 3, 4, "span", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, MixedWidget1Component_div_15_span_19_Template, 3, 4, "span", 29);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "apx-chart", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "apx-chart", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
@@ -2845,10 +2863,10 @@ function MixedWidget1Component_div_15_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", chartSubOption_r1.revenueCurrentSum < chartSubOption_r1.revenueBeforeSum);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngClass", chartSubOption_r1.revenueCurrentSum > chartSubOption_r1.revenueBeforeSum ? "text-success" : "text-danger");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", chartSubOption_r1.revenueCurrentSum > chartSubOption_r1.revenueBeforeSum);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](20, 25, chartSubOption_r1.revenueCurrentSum / chartSubOption_r1.revenueBeforeSum, "1.2"));
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", chartSubOption_r1.revenueBeforeSum > chartSubOption_r1.revenueCurrentSum);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("series", chartSubOption_r1.series)("chart", chartSubOption_r1.chart)("xaxis", chartSubOption_r1.xaxis)("yaxis", chartSubOption_r1.yaxis)("stroke", chartSubOption_r1.stroke)("tooltip", chartSubOption_r1.tooltip)("dataLabels", chartSubOption_r1.dataLabels)("colors", chartSubOption_r1.colors);
 } }
 class MixedWidget1Component {
@@ -3088,7 +3106,7 @@ class MixedWidget1Component {
     }
 }
 MixedWidget1Component.ɵfac = function MixedWidget1Component_Factory(t) { return new (t || MixedWidget1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_core__WEBPACK_IMPORTED_MODULE_2__["LayoutService"])); };
-MixedWidget1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MixedWidget1Component, selectors: [["app-mixed-widget1"]], inputs: { ChartData: "ChartData" }, decls: 27, vars: 18, consts: [[1, "card", "card-custom", "bg-gray-100", "card-stretch", "gutter-b"], [1, "card-header", "border-0", "py-5"], [1, "card-title", "font-weight-bolder", "text-dark"], [1, "card-toolbar"], ["ngbDropdown", "", "placement", "bottom-right", "title", "Quick actions", 1, "dropdown", "dropdown-inline"], ["ngbDropdownToggle", "", 1, "btn", "btn-transparent-primary", "btn-sm", "font-weight-bolder", "dropdown-toggle", "px-5", "dropdown-toggle", "btn", "btn-transparent"], ["ngbDropdownMenu", "", 1, "dropdown-menu", "dropdown-menu-sm", "dropdown-menu-right"], [1, "card-body", "p-0", "position-relative", "overflow-hidden"], ["id", "kt_mixed_widget_1_chart", 1, "card-rounded-bottom"], [3, "series", "chart", "xaxis", "yaxis", "dataLabels", "stroke", "legend", "fill", "states", "tooltip", "colors", "markers", "plotOptions"], [1, "card-spacer"], [1, "row", "m-0"], ["class", "col-xl-6 px-6 py-8 rounded-xl mb-7", 4, "ngFor", "ngForOf"], [1, "col-xl-6"], [1, "bg-light-primary", "px-6", "py-8", "rounded-xl", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-primary", "d-block", "my-2", 3, "inlineSVG"], ["href", "/user-management/publisher-users", 1, "text-primary", "font-weight-bold", "font-size-h6", "mt-2"], [1, "bg-light-success", "px-6", "py-8", "rounded-xl", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-success", "d-block", "my-2", 3, "inlineSVG"], ["href", "#", 1, "text-success", "font-weight-bold", "font-size-h6", "mt-2"], [1, "col-xl-6", "px-6", "py-8", "rounded-xl", "mb-7"], [1, "svg-icon", "svg-icon-3x", "d-block", "my-2", 3, "inlineSVG", "ngClass"], [1, "font-weight-bold", "font-size-h6", "mt-2", 3, "href", "ngClass"], [1, "pt-3"], [1, "d-flex", "justify-content-between"], [2, "font-weight", "500"], ["cacheSVG", "false", "style", "font-size: 20px;margin-right: 5px;", "class", "svg-icon svg-icon-md svg-icon-success", 3, "inlineSVG", 4, "ngIf"], ["cacheSVG", "false", "style", "font-size: 20px;margin-right: 5px;", "class", "svg-icon svg-icon-md svg-icon-danger", 3, "inlineSVG", 4, "ngIf"], [2, "font-size", "20px", 3, "ngClass"], [3, "series", "chart", "xaxis", "yaxis", "stroke", "tooltip", "dataLabels", "colors"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-success", 2, "font-size", "20px", "margin-right", "5px", 3, "inlineSVG"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-danger", 2, "font-size", "20px", "margin-right", "5px", 3, "inlineSVG"]], template: function MixedWidget1Component_Template(rf, ctx) { if (rf & 1) {
+MixedWidget1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: MixedWidget1Component, selectors: [["app-mixed-widget1"]], inputs: { ChartData: "ChartData" }, decls: 27, vars: 18, consts: [[1, "card", "card-custom", "bg-gray-100", "card-stretch", "gutter-b"], [1, "card-header", "border-0", "py-5"], [1, "card-title", "font-weight-bolder", "text-dark"], [1, "card-toolbar"], ["ngbDropdown", "", "placement", "bottom-right", "title", "Quick actions", 1, "dropdown", "dropdown-inline"], ["ngbDropdownToggle", "", 1, "btn", "btn-transparent-primary", "btn-sm", "font-weight-bolder", "dropdown-toggle", "px-5", "dropdown-toggle", "btn", "btn-transparent"], ["ngbDropdownMenu", "", 1, "dropdown-menu", "dropdown-menu-sm", "dropdown-menu-right"], [1, "card-body", "p-0", "position-relative", "overflow-hidden"], ["id", "kt_mixed_widget_1_chart", 1, "card-rounded-bottom"], [3, "series", "chart", "xaxis", "yaxis", "dataLabels", "stroke", "legend", "fill", "states", "tooltip", "colors", "markers", "plotOptions"], [1, "card-spacer"], [1, "row", "m-0"], ["class", "col-xl-6 px-6 py-8 rounded-xl mb-7", 4, "ngFor", "ngForOf"], [1, "col-xl-6"], [1, "bg-light-primary", "px-6", "py-8", "rounded-xl", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-primary", "d-block", "my-2", 3, "inlineSVG"], ["href", "/user-management/publisher-users", 1, "text-primary", "font-weight-bold", "font-size-h6", "mt-2"], [1, "bg-light-success", "px-6", "py-8", "rounded-xl", "mb-7"], [1, "svg-icon", "svg-icon-3x", "svg-icon-success", "d-block", "my-2", 3, "inlineSVG"], ["href", "#", 1, "text-success", "font-weight-bold", "font-size-h6", "mt-2"], [1, "col-xl-6", "px-6", "py-8", "rounded-xl", "mb-7"], [1, "svg-icon", "svg-icon-3x", "d-block", "my-2", 3, "inlineSVG", "ngClass"], [1, "font-weight-bold", "font-size-h6", "mt-2", 3, "href", "ngClass"], [1, "pt-3"], [1, "d-flex", "justify-content-between"], [2, "font-weight", "500"], ["cacheSVG", "false", "style", "font-size: 20px;margin-right: 5px;", "class", "svg-icon svg-icon-md svg-icon-success", 3, "inlineSVG", 4, "ngIf"], ["cacheSVG", "false", "style", "font-size: 20px;margin-right: 5px;", "class", "svg-icon svg-icon-md svg-icon-danger", 3, "inlineSVG", 4, "ngIf"], ["style", "font-size: 20px;", "class", "text-success", 4, "ngIf"], ["style", "font-size: 20px;", "class", "text-danger", 4, "ngIf"], [3, "series", "chart", "xaxis", "yaxis", "stroke", "tooltip", "dataLabels", "colors"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-success", 2, "font-size", "20px", "margin-right", "5px", 3, "inlineSVG"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-danger", 2, "font-size", "20px", "margin-right", "5px", 3, "inlineSVG"], [1, "text-success", 2, "font-size", "20px"], [1, "text-danger", 2, "font-size", "20px"]], template: function MixedWidget1Component_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h3", 2);
@@ -3111,7 +3129,7 @@ MixedWidget1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, MixedWidget1Component_div_15_Template, 23, 28, "div", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](15, MixedWidget1Component_div_15_Template, 22, 25, "div", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 11);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 13);
