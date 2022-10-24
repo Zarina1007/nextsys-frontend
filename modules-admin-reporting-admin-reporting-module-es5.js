@@ -127,6 +127,12 @@
       var _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! ./manual-split-update/manual-split-update.component */
       "./src/app/modules/admin-reporting/manual-split-update/manual-split-update.component.ts");
+      /* harmony import */
+
+
+      var _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+      /*! ./solex-bc/solex-bc.component */
+      "./src/app/modules/admin-reporting/solex-bc/solex-bc.component.ts");
 
       var routes = [{
         path: '',
@@ -164,6 +170,9 @@
         }, {
           path: 'third-party',
           component: _third_party_third_party_component__WEBPACK_IMPORTED_MODULE_8__["ThirdPartyComponent"]
+        }, {
+          path: 'solex-bc',
+          component: _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_16__["SolexBcComponent"]
         }, {
           path: 'manual-stat-update',
           component: _manual_update_manual_update_component__WEBPACK_IMPORTED_MODULE_14__["ManualUpdateComponent"]
@@ -410,6 +419,12 @@
       var _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
       /*! ./system1/system1.component */
       "./src/app/modules/admin-reporting/system1/system1.component.ts");
+      /* harmony import */
+
+
+      var _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
+      /*! ./solex-bc/solex-bc.component */
+      "./src/app/modules/admin-reporting/solex-bc/solex-bc.component.ts");
 
       var AdminReportingModule = function AdminReportingModule() {
         _classCallCheck(this, AdminReportingModule);
@@ -427,7 +442,7 @@
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AdminReportingModule, {
-          declarations: [_perion_perion_component__WEBPACK_IMPORTED_MODULE_4__["PerionComponent"], _imgage_advantage_imgage_advantage_component__WEBPACK_IMPORTED_MODULE_5__["ImgageAdvantageComponent"], _hopkins_hopkins_component__WEBPACK_IMPORTED_MODULE_6__["HopkinsComponent"], _apptitude_apptitude_component__WEBPACK_IMPORTED_MODULE_7__["ApptitudeComponent"], _all_reporting_all_reporting_component__WEBPACK_IMPORTED_MODULE_8__["AllReportingComponent"], _media_net_media_net_component__WEBPACK_IMPORTED_MODULE_9__["MediaNetComponent"], _third_party_third_party_component__WEBPACK_IMPORTED_MODULE_10__["ThirdPartyComponent"], _bing_direct_bing_direct_component__WEBPACK_IMPORTED_MODULE_19__["BingDirectComponent"], _lyons_lyons_component__WEBPACK_IMPORTED_MODULE_20__["LyonsComponent"], _rubi_rubi_component__WEBPACK_IMPORTED_MODULE_21__["RubiComponent"], _verizon_direct_verizon_direct_component__WEBPACK_IMPORTED_MODULE_22__["VerizonDirectComponent"], _manual_update_manual_update_component__WEBPACK_IMPORTED_MODULE_23__["ManualUpdateComponent"], _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_27__["ManualSplitUpdateComponent"], _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__["System1Component"]],
+          declarations: [_perion_perion_component__WEBPACK_IMPORTED_MODULE_4__["PerionComponent"], _imgage_advantage_imgage_advantage_component__WEBPACK_IMPORTED_MODULE_5__["ImgageAdvantageComponent"], _hopkins_hopkins_component__WEBPACK_IMPORTED_MODULE_6__["HopkinsComponent"], _apptitude_apptitude_component__WEBPACK_IMPORTED_MODULE_7__["ApptitudeComponent"], _all_reporting_all_reporting_component__WEBPACK_IMPORTED_MODULE_8__["AllReportingComponent"], _media_net_media_net_component__WEBPACK_IMPORTED_MODULE_9__["MediaNetComponent"], _third_party_third_party_component__WEBPACK_IMPORTED_MODULE_10__["ThirdPartyComponent"], _bing_direct_bing_direct_component__WEBPACK_IMPORTED_MODULE_19__["BingDirectComponent"], _lyons_lyons_component__WEBPACK_IMPORTED_MODULE_20__["LyonsComponent"], _rubi_rubi_component__WEBPACK_IMPORTED_MODULE_21__["RubiComponent"], _verizon_direct_verizon_direct_component__WEBPACK_IMPORTED_MODULE_22__["VerizonDirectComponent"], _manual_update_manual_update_component__WEBPACK_IMPORTED_MODULE_23__["ManualUpdateComponent"], _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_27__["ManualSplitUpdateComponent"], _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__["System1Component"], _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_29__["SolexBcComponent"]],
           imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _admin_reporting_routing_module__WEBPACK_IMPORTED_MODULE_2__["AdminReportingRoutingModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["NgxDatatableModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_12__["MatListModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__["MatFormFieldModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_15__["MatNativeDateModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_18__["SharedModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_15__["MatOptionModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_24__["MatInputModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_25__["MatButtonModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_26__["InlineSVGModule"]]
         });
       })();
@@ -438,7 +453,7 @@
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AdminReportingModule, [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
-            declarations: [_perion_perion_component__WEBPACK_IMPORTED_MODULE_4__["PerionComponent"], _imgage_advantage_imgage_advantage_component__WEBPACK_IMPORTED_MODULE_5__["ImgageAdvantageComponent"], _hopkins_hopkins_component__WEBPACK_IMPORTED_MODULE_6__["HopkinsComponent"], _apptitude_apptitude_component__WEBPACK_IMPORTED_MODULE_7__["ApptitudeComponent"], _all_reporting_all_reporting_component__WEBPACK_IMPORTED_MODULE_8__["AllReportingComponent"], _media_net_media_net_component__WEBPACK_IMPORTED_MODULE_9__["MediaNetComponent"], _third_party_third_party_component__WEBPACK_IMPORTED_MODULE_10__["ThirdPartyComponent"], _bing_direct_bing_direct_component__WEBPACK_IMPORTED_MODULE_19__["BingDirectComponent"], _lyons_lyons_component__WEBPACK_IMPORTED_MODULE_20__["LyonsComponent"], _rubi_rubi_component__WEBPACK_IMPORTED_MODULE_21__["RubiComponent"], _verizon_direct_verizon_direct_component__WEBPACK_IMPORTED_MODULE_22__["VerizonDirectComponent"], _manual_update_manual_update_component__WEBPACK_IMPORTED_MODULE_23__["ManualUpdateComponent"], _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_27__["ManualSplitUpdateComponent"], _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__["System1Component"]],
+            declarations: [_perion_perion_component__WEBPACK_IMPORTED_MODULE_4__["PerionComponent"], _imgage_advantage_imgage_advantage_component__WEBPACK_IMPORTED_MODULE_5__["ImgageAdvantageComponent"], _hopkins_hopkins_component__WEBPACK_IMPORTED_MODULE_6__["HopkinsComponent"], _apptitude_apptitude_component__WEBPACK_IMPORTED_MODULE_7__["ApptitudeComponent"], _all_reporting_all_reporting_component__WEBPACK_IMPORTED_MODULE_8__["AllReportingComponent"], _media_net_media_net_component__WEBPACK_IMPORTED_MODULE_9__["MediaNetComponent"], _third_party_third_party_component__WEBPACK_IMPORTED_MODULE_10__["ThirdPartyComponent"], _bing_direct_bing_direct_component__WEBPACK_IMPORTED_MODULE_19__["BingDirectComponent"], _lyons_lyons_component__WEBPACK_IMPORTED_MODULE_20__["LyonsComponent"], _rubi_rubi_component__WEBPACK_IMPORTED_MODULE_21__["RubiComponent"], _verizon_direct_verizon_direct_component__WEBPACK_IMPORTED_MODULE_22__["VerizonDirectComponent"], _manual_update_manual_update_component__WEBPACK_IMPORTED_MODULE_23__["ManualUpdateComponent"], _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_27__["ManualSplitUpdateComponent"], _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__["System1Component"], _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_29__["SolexBcComponent"]],
             imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _admin_reporting_routing_module__WEBPACK_IMPORTED_MODULE_2__["AdminReportingRoutingModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["NgxDatatableModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_12__["MatListModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__["MatFormFieldModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_15__["MatNativeDateModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_18__["SharedModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_15__["MatOptionModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_24__["MatInputModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_25__["MatButtonModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_26__["InlineSVGModule"]],
             entryComponents: []
           }]
@@ -7414,6 +7429,794 @@
     },
 
     /***/
+    "./src/app/modules/admin-reporting/solex-bc/solex-bc.component.ts":
+    /*!************************************************************************!*\
+      !*** ./src/app/modules/admin-reporting/solex-bc/solex-bc.component.ts ***!
+      \************************************************************************/
+
+    /*! exports provided: SolexBcComponent */
+
+    /***/
+    function srcAppModulesAdminReportingSolexBcSolexBcComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "SolexBcComponent", function () {
+        return SolexBcComponent;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ../../../shared/service/users.service */
+      "./src/app/shared/service/users.service.ts");
+      /* harmony import */
+
+
+      var src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/shared/service/admin-stats/solexbc.service */
+      "./src/app/shared/service/admin-stats/solexbc.service.ts");
+      /* harmony import */
+
+
+      var src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/modules/tag-management/tag-management.service */
+      "./src/app/modules/tag-management/tag-management.service.ts");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */
+      "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @angular/common */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      /* harmony import */
+
+
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @swimlane/ngx-datatable */
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
+      "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
+      /* harmony import */
+
+
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
+      "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
+
+      var _c0 = ["expandableTable"];
+
+      function SolexBcComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 19);
+        }
+
+        if (rf & 2) {
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("chartData", ctx_r0.chartData);
+        }
+      }
+
+      function SolexBcComponent_app_summary_metrics_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 20);
+        }
+
+        if (rf & 2) {
+          var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("summaryMetricsData", ctx_r1.summaryMetrics);
+        }
+      }
+
+      function SolexBcComponent_ng_template_7_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Address");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Test");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function SolexBcComponent_ng_template_9_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r27 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 22);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function SolexBcComponent_ng_template_9_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r27);
+
+            var row_r24 = ctx.row;
+
+            var ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r26.toggleExpandRow(row_r24);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var expanded_r25 = ctx.expanded;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r25)("datatable-icon-down", expanded_r25);
+        }
+      }
+
+      function SolexBcComponent_ng_template_11_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
+        }
+      }
+
+      function SolexBcComponent_ng_template_12_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r29 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r29));
+        }
+      }
+
+      function SolexBcComponent_ng_template_14_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
+        }
+      }
+
+      function SolexBcComponent_ng_template_15_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r31 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r31);
+        }
+      }
+
+      function SolexBcComponent_ng_template_17_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
+        }
+      }
+
+      function SolexBcComponent_ng_template_18_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r33 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r33);
+        }
+      }
+
+      function SolexBcComponent_ng_template_20_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+        }
+      }
+
+      function SolexBcComponent_ng_template_21_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r35 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r35));
+        }
+      }
+
+      function SolexBcComponent_ng_template_23_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+        }
+      }
+
+      function SolexBcComponent_ng_template_24_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r37 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r37));
+        }
+      }
+
+      function SolexBcComponent_ng_template_26_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks Paid ");
+        }
+      }
+
+      function SolexBcComponent_ng_template_27_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r39 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r39));
+        }
+      }
+
+      function SolexBcComponent_ng_template_29_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
+        }
+      }
+
+      function SolexBcComponent_ng_template_30_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r41 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r41) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+        }
+      }
+
+      function SolexBcComponent_ng_template_32_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function SolexBcComponent_ng_template_33_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r43 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r43, "USD"));
+        }
+      }
+
+      var SolexBcComponent = /*#__PURE__*/function () {
+        function SolexBcComponent(cdr, userService, solexBCService, tagService) {
+          _classCallCheck(this, SolexBcComponent);
+
+          this.cdr = cdr;
+          this.userService = userService;
+          this.solexBCService = solexBCService;
+          this.tagService = tagService;
+          this.range = {
+            startDate: '',
+            endDate: ''
+          };
+          this.loadingIndicator = true;
+          this.expanded = {};
+          this.tagList = [];
+          this.selectedCompany = this.getSelectedCompanyStored();
+        }
+
+        _createClass(SolexBcComponent, [{
+          key: "ngAfterViewInit",
+          value: function ngAfterViewInit() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
+              return regeneratorRuntime.wrap(function _callee9$(_context9) {
+                while (1) {
+                  switch (_context9.prev = _context9.next) {
+                    case 0:
+                      _context9.next = 2;
+                      return this.getCompanyTags(this.selectedCompany);
+
+                    case 2:
+                      this.tagList = _context9.sent;
+                      this.rows = [];
+                      _context9.next = 6;
+                      return this.getAllSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 6:
+                      this.rows = _context9.sent;
+                      _context9.next = 9;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 9:
+                      this.chartData = _context9.sent;
+                      _context9.next = 12;
+                      return this.getSummaryMetrics(this.selectedCompany);
+
+                    case 12:
+                      this.summaryMetrics = _context9.sent;
+                      this.refreshTable();
+
+                    case 14:
+                    case "end":
+                      return _context9.stop();
+                  }
+                }
+              }, _callee9, this);
+            }));
+          }
+        }, {
+          key: "updateReportingFiltering",
+          value: function updateReportingFiltering(range) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
+              return regeneratorRuntime.wrap(function _callee10$(_context10) {
+                while (1) {
+                  switch (_context10.prev = _context10.next) {
+                    case 0:
+                      this.range = range;
+                      _context10.next = 3;
+                      return this.getAllSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 3:
+                      this.rows = _context10.sent;
+                      _context10.next = 6;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 6:
+                      this.chartData = _context10.sent;
+                      _context10.next = 9;
+                      return this.getSummaryMetrics(this.selectedCompany);
+
+                    case 9:
+                      this.summaryMetrics = _context10.sent;
+                      this.refreshTable();
+
+                    case 11:
+                    case "end":
+                      return _context10.stop();
+                  }
+                }
+              }, _callee10, this);
+            }));
+          } //Gets the Selected Company from Local Storage
+
+        }, {
+          key: "getSelectedCompanyStored",
+          value: function getSelectedCompanyStored() {
+            return this.userService.getSelectedCompanyFromLocalStorage();
+          }
+        }, {
+          key: "toggleExpandRow",
+          value: function toggleExpandRow(row) {
+            console.log('Toggled Expand Row!', row);
+            this.table.rowDetail.toggleExpandRow(row);
+          }
+        }, {
+          key: "onDetailToggle",
+          value: function onDetailToggle(event) {
+            console.log('Detail Toggled', event);
+          }
+        }, {
+          key: "refreshTable",
+          value: function refreshTable() {
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "getAllSolexBCStats",
+          value: function getAllSolexBCStats(company, startDate, endDate) {
+            var _this13 = this;
+
+            return this.solexBCService.getSolexBCStats(company, startDate, endDate).toPromise().then(function (response) {
+              console.log('getSolexBCStats() response:', response);
+              _this13.loadingIndicator = false;
+              _this13.allStats = response.stats;
+
+              _this13.allStats.map(function (resStat) {
+                resStat.publisher = "No Publisher";
+                resStat.tagname = "No Tag";
+              });
+
+              var _iterator12 = _createForOfIteratorHelper(_this13.tagList),
+                  _step12;
+
+              try {
+                for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
+                  var tagL = _step12.value;
+
+                  if (tagL.tag.advertiser == "rubi") {
+                    var _iterator13 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step13;
+
+                    try {
+                      for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
+                        var tagSub = _step13.value;
+
+                        if (tagSub.filterTag == "Contains") {
+                          _this13.allStats.map(function (stat) {
+                            if (stat.subid.includes(tagSub.subid)) {
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                              stat.tagname = tagL.tag.name;
+                            }
+                          });
+                        } else if (tagSub.filterTag == "StartsWith") {
+                          _this13.allStats.map(function (stat) {
+                            if (stat.subid.startsWith(tagSub.subid)) {
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                              stat.tagname = tagL.tag.name;
+                            }
+                          });
+                        } else if (tagSub.filterTag == "EndsWith") {
+                          _this13.allStats.map(function (stat) {
+                            if (stat.subid.endsWith(tagSub.subid)) {
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                              stat.tagname = tagL.tag.name;
+                            }
+                          });
+                        } else if (tagSub.filterTag == "ExactValue") {
+                          _this13.allStats.map(function (stat) {
+                            if (stat.subid == tagSub.subid) {
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                              stat.tagname = tagL.tag.name;
+                            }
+                          });
+                        }
+                      }
+                    } catch (err) {
+                      _iterator13.e(err);
+                    } finally {
+                      _iterator13.f();
+                    }
+                  }
+                }
+              } catch (err) {
+                _iterator12.e(err);
+              } finally {
+                _iterator12.f();
+              }
+
+              return _this13.allStats;
+            });
+          }
+        }, {
+          key: "getChartMetrics",
+          value: function getChartMetrics(company, startDate, endDate) {
+            return this.solexBCService.getChartMetrics(company, startDate, endDate).toPromise().then(function (response) {
+              return response;
+            })["catch"](function (error) {
+              return error;
+            });
+          }
+        }, {
+          key: "getSummaryMetrics",
+          value: function getSummaryMetrics(company) {
+            return this.solexBCService.getSummaryMetrics(company).toPromise().then(function (response) {
+              console.log('Got summary metrics');
+              var allSummary = {};
+              var currentPercentPace = 0;
+              var lastPercentPace = 0;
+
+              if (response.summary[0].lastMonthStat[0].profitPace != 0) {
+                currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
+              }
+
+              if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
+                lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
+              }
+
+              response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
+              response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
+              allSummary['summary'] = response.summary;
+              return allSummary;
+            });
+          } //get Tags with selected company
+
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(selectedCompany) {
+            var companyId = selectedCompany.split("/")[1];
+            return this.tagService.getCompanyTags(companyId).toPromise().then(function (response) {
+              return response;
+            })["catch"](function (error) {
+              return error;
+            });
+          }
+        }]);
+
+        return SolexBcComponent;
+      }();
+
+      SolexBcComponent.ɵfac = function SolexBcComponent_Factory(t) {
+        return new (t || SolexBcComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_3__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]));
+      };
+
+      SolexBcComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+        type: SolexBcComponent,
+        selectors: [["app-solex-bc"]],
+        viewQuery: function SolexBcComponent_Query(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
+          }
+
+          if (rf & 2) {
+            var _t;
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
+          }
+        },
+        decls: 34,
+        vars: 18,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "searches"], ["name", "clicks"], ["name", "clicksPaid"], ["name", "split", 3, "minWidth"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
+        template: function SolexBcComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("onDatesPicked", function SolexBcComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) {
+              return ctx.updateReportingFiltering($event);
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_app_reporting_revenue_chart_1_Template, 1, 1, "app-reporting-revenue-chart", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SolexBcComponent_app_summary_metrics_2_Template, 1, 1, "app-summary-metrics", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "ngx-datatable", 3, 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "ngx-datatable-row-detail", 5, 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function SolexBcComponent_Template_ngx_datatable_row_detail_toggle_5_listener($event) {
+              return ctx.onDetailToggle($event);
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](7, SolexBcComponent_ng_template_7_Template, 6, 0, "ng-template", 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "ngx-datatable-column", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](9, SolexBcComponent_ng_template_9_Template, 1, 4, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "ngx-datatable-column", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, SolexBcComponent_ng_template_11_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](12, SolexBcComponent_ng_template_12_Template, 3, 3, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "ngx-datatable-column", 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, SolexBcComponent_ng_template_14_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, SolexBcComponent_ng_template_15_Template, 2, 1, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "ngx-datatable-column", 13);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, SolexBcComponent_ng_template_17_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](18, SolexBcComponent_ng_template_18_Template, 2, 1, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-column", 14);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, SolexBcComponent_ng_template_20_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, SolexBcComponent_ng_template_21_Template, 3, 3, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 15);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, SolexBcComponent_ng_template_23_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, SolexBcComponent_ng_template_24_Template, 3, 3, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "ngx-datatable-column", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, SolexBcComponent_ng_template_26_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, SolexBcComponent_ng_template_27_Template, 3, 3, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "ngx-datatable-column", 17);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, SolexBcComponent_ng_template_29_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, SolexBcComponent_ng_template_30_Template, 4, 6, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "ngx-datatable-column", 18);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, SolexBcComponent_ng_template_32_Template, 1, 0, "ng-template", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, SolexBcComponent_ng_template_33_Template, 3, 4, "ng-template", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.chartData);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 30)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 35);
+          }
+        },
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_5__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_8__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_9__["SummaryMetricsComponent"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["CurrencyPipe"]],
+        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuLi9zcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL3NvbGV4LWJjL3NvbGV4LWJjLmNvbXBvbmVudC5zY3NzIn0= */"]
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](SolexBcComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+          args: [{
+            selector: 'app-solex-bc',
+            templateUrl: './solex-bc.component.html',
+            styleUrls: ['./solex-bc.component.scss']
+          }]
+        }], function () {
+          return [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+          }, {
+            type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"]
+          }, {
+            type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_3__["SolexBCService"]
+          }, {
+            type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]
+          }];
+        }, {
+          table: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+            args: ['expandableTable']
+          }]
+        });
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/modules/admin-reporting/system1/system1.component.ts":
     /*!**********************************************************************!*\
       !*** ./src/app/modules/admin-reporting/system1/system1.component.ts ***!
@@ -7753,62 +8556,62 @@
         _createClass(System1Component, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
-              return regeneratorRuntime.wrap(function _callee9$(_context9) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
+              return regeneratorRuntime.wrap(function _callee11$(_context11) {
                 while (1) {
-                  switch (_context9.prev = _context9.next) {
+                  switch (_context11.prev = _context11.next) {
                     case 0:
                       this.rows = [];
-                      _context9.next = 3;
+                      _context11.next = 3;
                       return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context9.sent;
+                      this.rows = _context11.sent;
 
                     case 4:
                     case "end":
-                      return _context9.stop();
+                      return _context11.stop();
                   }
                 }
-              }, _callee9, this);
+              }, _callee11, this);
             }));
           }
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
-              return regeneratorRuntime.wrap(function _callee10$(_context10) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
+              return regeneratorRuntime.wrap(function _callee12$(_context12) {
                 while (1) {
-                  switch (_context10.prev = _context10.next) {
+                  switch (_context12.prev = _context12.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context10.next = 3;
+                      _context12.next = 3;
                       return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context10.sent;
+                      this.rows = _context12.sent;
                       this.refreshTable();
 
                     case 5:
                     case "end":
-                      return _context10.stop();
+                      return _context12.stop();
                   }
                 }
-              }, _callee10, this);
+              }, _callee12, this);
             }));
           } //get Stat all
 
         }, {
           key: "getAllSystem1Stats",
           value: function getAllSystem1Stats(company, startDate, endDate) {
-            var _this13 = this;
+            var _this14 = this;
 
             return this.system1Service.getAllSystem1Stats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('getAllSystem1Stats() response:', response);
-              _this13.loadingIndicator = false;
-              _this13.allStats = response.stats;
-              return _this13.allStats;
+              _this14.loadingIndicator = false;
+              _this14.allStats = response.stats;
+              return _this14.allStats;
             });
           }
         }, {
@@ -9148,40 +9951,40 @@
         _createClass(VerizonDirectComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
-              return regeneratorRuntime.wrap(function _callee11$(_context11) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
+              return regeneratorRuntime.wrap(function _callee13$(_context13) {
                 while (1) {
-                  switch (_context11.prev = _context11.next) {
+                  switch (_context13.prev = _context13.next) {
                     case 0:
-                      _context11.next = 2;
+                      _context13.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context11.sent;
+                      this.tagList = _context13.sent;
                       this.rows = [];
-                      _context11.next = 6;
+                      _context13.next = 6;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context11.sent;
-                      _context11.next = 9;
+                      this.rows = _context13.sent;
+                      _context13.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context11.sent;
-                      _context11.next = 12;
+                      this.chartData = _context13.sent;
+                      _context13.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context11.sent;
+                      this.summaryMetrics = _context13.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context11.stop();
+                      return _context13.stop();
                   }
                 }
-              }, _callee11, this);
+              }, _callee13, this);
             }));
           } //get Tags with selected company
 
@@ -9204,36 +10007,36 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
-              return regeneratorRuntime.wrap(function _callee12$(_context12) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
+              return regeneratorRuntime.wrap(function _callee14$(_context14) {
                 while (1) {
-                  switch (_context12.prev = _context12.next) {
+                  switch (_context14.prev = _context14.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context12.next = 3;
+                      _context14.next = 3;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context12.sent;
-                      _context12.next = 6;
+                      this.rows = _context14.sent;
+                      _context14.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context12.sent;
-                      _context12.next = 9;
+                      this.chartData = _context14.sent;
+                      _context14.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context12.sent;
+                      this.summaryMetrics = _context14.sent;
                       this.refreshTable();
 
                     case 11:
                     case "end":
-                      return _context12.stop();
+                      return _context14.stop();
                   }
                 }
-              }, _callee12, this);
+              }, _callee14, this);
             }));
           }
         }, {
@@ -9264,56 +10067,56 @@
         }, {
           key: "getAllVerizonStats",
           value: function getAllVerizonStats(company, startDate, endDate) {
-            var _this14 = this;
+            var _this15 = this;
 
             return this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('getAllVerizonStats() response:', response);
-              _this14.loadingIndicator = false;
-              _this14.allStats = response.stats;
+              _this15.loadingIndicator = false;
+              _this15.allStats = response.stats;
 
-              _this14.allStats.map(function (resStat) {
+              _this15.allStats.map(function (resStat) {
                 resStat.publisher = "No Publisher";
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator12 = _createForOfIteratorHelper(_this14.tagList),
-                  _step12;
+              var _iterator14 = _createForOfIteratorHelper(_this15.tagList),
+                  _step14;
 
               try {
-                for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
-                  var tagL = _step12.value;
+                for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
+                  var tagL = _step14.value;
 
                   if (tagL.tag.advertiser == "verizon-direct") {
-                    var _iterator13 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step13;
+                    var _iterator15 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step15;
 
                     try {
-                      for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
-                        var tagSub = _step13.value;
+                      for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
+                        var tagSub = _step15.value;
 
                         if (tagSub.filterTag == "Contains") {
-                          _this14.allStats.map(function (stat) {
+                          _this15.allStats.map(function (stat) {
                             if (stat.subid.includes(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "StartsWith") {
-                          _this14.allStats.map(function (stat) {
+                          _this15.allStats.map(function (stat) {
                             if (stat.subid.startsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "EndsWith") {
-                          _this14.allStats.map(function (stat) {
+                          _this15.allStats.map(function (stat) {
                             if (stat.subid.endsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "ExactValue") {
-                          _this14.allStats.map(function (stat) {
+                          _this15.allStats.map(function (stat) {
                             if (stat.subid == tagSub.subid) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
@@ -9322,19 +10125,19 @@
                         }
                       }
                     } catch (err) {
-                      _iterator13.e(err);
+                      _iterator15.e(err);
                     } finally {
-                      _iterator13.f();
+                      _iterator15.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator12.e(err);
+                _iterator14.e(err);
               } finally {
-                _iterator12.f();
+                _iterator14.f();
               }
 
-              return _this14.allStats;
+              return _this15.allStats;
             });
           }
         }, {
@@ -9597,6 +10400,132 @@
             args: ['expandableTable']
           }]
         });
+      })();
+      /***/
+
+    },
+
+    /***/
+    "./src/app/shared/service/admin-stats/solexbc.service.ts":
+    /*!***************************************************************!*\
+      !*** ./src/app/shared/service/admin-stats/solexbc.service.ts ***!
+      \***************************************************************/
+
+    /*! exports provided: SolexBCService */
+
+    /***/
+    function srcAppSharedServiceAdminStatsSolexbcServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "SolexBCService", function () {
+        return SolexBCService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ../../../../environments/environment */
+      "./src/environments/environment.ts");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+      var API_SOLEXBC_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/solexbc");
+
+      var SolexBCService = /*#__PURE__*/function () {
+        function SolexBCService(http) {
+          _classCallCheck(this, SolexBCService);
+
+          this.http = http;
+        }
+
+        _createClass(SolexBCService, [{
+          key: "getChartMetrics",
+          value: function getChartMetrics(company, startDate, endDate) {
+            return this.http.get(API_SOLEXBC_URL + '/chart_metrics', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getAllSolexBCStats",
+          value: function getAllSolexBCStats(company, startDate, endDate) {
+            return this.http.get(API_SOLEXBC_URL + '/all-publishers', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getSolexBCStats",
+          value: function getSolexBCStats(company, startDate, endDate) {
+            return this.http.get(API_SOLEXBC_URL + '/', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getSummaryMetrics",
+          value: function getSummaryMetrics(company) {
+            return this.http.get(API_SOLEXBC_URL + '/summary_metrics', {
+              params: {
+                company: company
+              }
+            });
+          }
+        }, {
+          key: "getAllDashboardStats",
+          value: function getAllDashboardStats() {
+            return this.http.get(API_SOLEXBC_URL + '/all-stat');
+          }
+        }]);
+
+        return SolexBCService;
+      }();
+
+      SolexBCService.ɵfac = function SolexBCService_Factory(t) {
+        return new (t || SolexBCService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+      };
+
+      SolexBCService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: SolexBCService,
+        factory: SolexBCService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SolexBCService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+          }];
+        }, null);
       })();
       /***/
 

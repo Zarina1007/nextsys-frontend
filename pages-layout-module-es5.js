@@ -30141,6 +30141,9 @@
             title: 'System1 Stats',
             page: '/reporting/system1'
           }, {
+            title: 'Solex BC Stats',
+            page: '/reporting/solex-bc'
+          }, {
             title: 'Verizon Direct Stats',
             page: '/reporting/verizon-direct'
           }, {

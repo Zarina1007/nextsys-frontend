@@ -1522,7 +1522,15 @@
 
             if (this.route.snapshot.params.id) {
               this.companyManagementService.getOneCompany(this.route.snapshot.params.id).subscribe(function (res) {
-                _this2.company = res;
+                _this2.company = res; // for company BrandClick
+
+                if (_this2.company['name'] == "BrandClick") {
+                  _this2.reportingProviderHandleList.push({
+                    value: "solex-bc",
+                    viewValue: "Solex BC"
+                  });
+                }
+
                 res['adServerUrls'].map(function (item) {
                   _this2.adServerUrls.push(_this2.fb.group(item));
                 });

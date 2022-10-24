@@ -742,6 +742,12 @@ class EditCompanyComponent {
         if (this.route.snapshot.params.id) {
             this.companyManagementService.getOneCompany(this.route.snapshot.params.id).subscribe(res => {
                 this.company = res;
+                // for company BrandClick
+                if (this.company['name'] == "BrandClick") {
+                    this.reportingProviderHandleList.push({
+                        value: "solex-bc", viewValue: "Solex BC",
+                    });
+                }
                 res['adServerUrls'].map((item) => {
                     this.adServerUrls.push(this.fb.group(item));
                 });
