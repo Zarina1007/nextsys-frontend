@@ -133,6 +133,132 @@
     },
 
     /***/
+    "./src/app/shared/service/admin-stats/solexbc.service.ts":
+    /*!***************************************************************!*\
+      !*** ./src/app/shared/service/admin-stats/solexbc.service.ts ***!
+      \***************************************************************/
+
+    /*! exports provided: SolexBCService */
+
+    /***/
+    function srcAppSharedServiceAdminStatsSolexbcServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "SolexBCService", function () {
+        return SolexBCService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ../../../../environments/environment */
+      "./src/environments/environment.ts");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+      var API_SOLEXBC_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/solexbc");
+
+      var SolexBCService = /*#__PURE__*/function () {
+        function SolexBCService(http) {
+          _classCallCheck(this, SolexBCService);
+
+          this.http = http;
+        }
+
+        _createClass(SolexBCService, [{
+          key: "getChartMetrics",
+          value: function getChartMetrics(company, startDate, endDate) {
+            return this.http.get(API_SOLEXBC_URL + '/chart_metrics', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getAllSolexBCStats",
+          value: function getAllSolexBCStats(company, startDate, endDate) {
+            return this.http.get(API_SOLEXBC_URL + '/all-publishers', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getSolexBCStats",
+          value: function getSolexBCStats(company, startDate, endDate) {
+            return this.http.get(API_SOLEXBC_URL + '/', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getSummaryMetrics",
+          value: function getSummaryMetrics(company) {
+            return this.http.get(API_SOLEXBC_URL + '/summary_metrics', {
+              params: {
+                company: company
+              }
+            });
+          }
+        }, {
+          key: "getAllDashboardStats",
+          value: function getAllDashboardStats() {
+            return this.http.get(API_SOLEXBC_URL + '/all-stat');
+          }
+        }]);
+
+        return SolexBCService;
+      }();
+
+      SolexBCService.ɵfac = function SolexBCService_Factory(t) {
+        return new (t || SolexBCService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+      };
+
+      SolexBCService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: SolexBCService,
+        factory: SolexBCService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SolexBCService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/shared/service/admin-stats/system1.service.ts":
     /*!***************************************************************!*\
       !*** ./src/app/shared/service/admin-stats/system1.service.ts ***!
