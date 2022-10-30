@@ -30978,7 +30978,7 @@
                         svg: './assets/media/svg/icons/Shopping/Box1.svg',
                         page: '/publisher-reporting',
                         bullet: 'dot',
-                        permissionName: "publiserReportingManage"
+                        permissionName: "publisherReportingManage"
                       };
                       publisherMenu['submenu'] = submenuList;
                       menuConfig.items.push( //Publisher REPORTING
