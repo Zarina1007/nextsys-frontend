@@ -30964,6 +30964,7 @@
 
                     case 2:
                       this.tagList = _context.sent;
+                      console.log(this.tagList, "dfdfdf");
                       submenuList = [];
                       this.tagList.map(function (tag) {
                         submenuList.push({
@@ -30988,7 +30989,7 @@
                       menuConfig.items.push(publisherMenu);
                       this.menuConfigSubject.next(menuConfig);
 
-                    case 10:
+                    case 11:
                     case "end":
                       return _context.stop();
                   }
@@ -42530,7 +42531,7 @@
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
               }
 
-              if (data.permission && state.url.split('/')[2] == "publisher-reporting" && currentUser.role != 3) {
+              if (data.permission && state.url.split('/')[1] == "publisher-reporting" && currentUser.role !== 3) {
                 this._router.navigate([this.selectBestRoute()]);
 
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
@@ -50906,7 +50907,7 @@
             });
           },
           data: {
-            permission: 'dashboard'
+            permission: 'publisherReportingManage'
           }
         }, {
           path: 'live-traffic',

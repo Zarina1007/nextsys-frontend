@@ -4591,7 +4591,6 @@ class SolexBcComponent {
                     }
                 }
             }
-            console.log(this.allStats, "dddd");
             return this.allStats;
         });
     }

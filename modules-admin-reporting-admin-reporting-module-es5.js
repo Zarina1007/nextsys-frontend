@@ -8133,7 +8133,6 @@
                 _iterator15.f();
               }
 
-              console.log(_this13.allStats, "dddd");
               return _this13.allStats;
             });
           }

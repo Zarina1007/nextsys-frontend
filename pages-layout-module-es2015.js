@@ -20119,6 +20119,7 @@ class DynamicAsideMenuService {
     setMenu(menuConfig) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             this.tagList = yield this.tagService.getUserTags(this.currentUser.tagsId).toPromise();
+            console.log(this.tagList, "dfdfdf");
             let submenuList = [];
             this.tagList.map(tag => {
                 submenuList.push({
@@ -25994,7 +25995,7 @@ class AuthGuard {
                 this._router.navigate([this.selectBestRoute()]);
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
             }
-            if (data.permission && state.url.split('/')[2] == "publisher-reporting" && currentUser.role != 3) {
+            if (data.permission && state.url.split('/')[1] == "publisher-reporting" && currentUser.role !== 3) {
                 this._router.navigate([this.selectBestRoute()]);
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
             }
@@ -30259,7 +30260,7 @@ const routes = [
                 path: 'publisher-reporting',
                 canActivate: [_modules_auth_services_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]],
                 loadChildren: () => Promise.all(/*! import() | modules-publisher-reporting-publisher-reporting-module */[__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~d5b3981f"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~521641bd"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-material-m~039ec6da"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~37a1be1f"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~2fe1a6ce"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-publisher-reporting-publisher-reporting-module"), __webpack_require__.e("modules-publisher-reporting-publisher-reporting-module")]).then(__webpack_require__.bind(null, /*! ../modules/publisher-reporting/publisher-reporting.module */ "./src/app/modules/publisher-reporting/publisher-reporting.module.ts")).then((m) => m.PublisherReportingModule),
-                data: { permission: 'dashboard' },
+                data: { permission: 'publisherReportingManage' },
             },
             {
                 path: 'live-traffic',
