@@ -25995,9 +25995,14 @@ class AuthGuard {
                 this._router.navigate([this.selectBestRoute()]);
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
             }
-            if (data.permission && state.url.split('/')[1] == "publisher-reporting" && currentUser.role !== 3) {
-                this._router.navigate([this.selectBestRoute()]);
-                return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
+            if (data.permission && state.url.split('/')[1] == "publisher-reporting") {
+                if (currentUser.role == 3 || currentUser.role == 1) {
+                    return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
+                }
+                else {
+                    this._router.navigate([this.selectBestRoute()]);
+                    return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
+                }
             }
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
         }
