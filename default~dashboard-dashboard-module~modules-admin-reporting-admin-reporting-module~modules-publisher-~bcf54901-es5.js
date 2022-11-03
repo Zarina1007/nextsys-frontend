@@ -704,6 +704,112 @@
     },
 
     /***/
+    "./src/app/shared/service/admin-stats/system1.service.ts":
+    /*!***************************************************************!*\
+      !*** ./src/app/shared/service/admin-stats/system1.service.ts ***!
+      \***************************************************************/
+
+    /*! exports provided: System1Service */
+
+    /***/
+    function srcAppSharedServiceAdminStatsSystem1ServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "System1Service", function () {
+        return System1Service;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ../../../../environments/environment */
+      "./src/environments/environment.ts");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+      var API_SYSTEM1_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/system1");
+
+      var System1Service = /*#__PURE__*/function () {
+        function System1Service(http) {
+          _classCallCheck(this, System1Service);
+
+          this.http = http;
+        }
+
+        _createClass(System1Service, [{
+          key: "getAllSystem1Stats",
+          value: function getAllSystem1Stats(company, startDate, endDate) {
+            return this.http.get(API_SYSTEM1_URL + '/', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getAllDashboardStats",
+          value: function getAllDashboardStats() {
+            return this.http.get(API_SYSTEM1_URL + '/all-stat');
+          }
+        }, {
+          key: "getSystem1PublisherStats",
+          value: function getSystem1PublisherStats(company, startDate, endDate) {
+            return this.http.get(API_SYSTEM1_URL + '/all-publishers', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }]);
+
+        return System1Service;
+      }();
+
+      System1Service.ɵfac = function System1Service_Factory(t) {
+        return new (t || System1Service)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+      };
+
+      System1Service.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: System1Service,
+        factory: System1Service.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](System1Service, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/shared/service/admin-stats/verizon.service.ts":
     /*!***************************************************************!*\
       !*** ./src/app/shared/service/admin-stats/verizon.service.ts ***!
