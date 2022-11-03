@@ -20119,7 +20119,6 @@ class DynamicAsideMenuService {
     setMenu(menuConfig) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             this.tagList = yield this.tagService.getUserTags(this.currentUser.tagsId).toPromise();
-            console.log(this.tagList, "dfdfdf");
             let submenuList = [];
             this.tagList.map(tag => {
                 submenuList.push({

@@ -30964,7 +30964,6 @@
 
                     case 2:
                       this.tagList = _context.sent;
-                      console.log(this.tagList, "dfdfdf");
                       submenuList = [];
                       this.tagList.map(function (tag) {
                         submenuList.push({
@@ -30989,7 +30988,7 @@
                       menuConfig.items.push(publisherMenu);
                       this.menuConfigSubject.next(menuConfig);
 
-                    case 11:
+                    case 10:
                     case "end":
                       return _context.stop();
                   }

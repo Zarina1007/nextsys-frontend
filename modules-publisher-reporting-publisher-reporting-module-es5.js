@@ -371,25 +371,31 @@
       /* harmony import */
 
 
-      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! src/app/shared/service/admin-stats/solexbc.service */
+      "./src/app/shared/service/admin-stats/solexbc.service.ts");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */
       "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
       "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
 
@@ -638,7 +644,7 @@
       }
 
       var PublisherComponent = /*#__PURE__*/function () {
-        function PublisherComponent(route, tagManagementService, cdr, userService, perionService, lyonService, verizonService, rubiService) {
+        function PublisherComponent(route, tagManagementService, cdr, userService, perionService, lyonService, verizonService, rubiService, solexbcService) {
           _classCallCheck(this, PublisherComponent);
 
           this.route = route;
@@ -649,6 +655,7 @@
           this.lyonService = lyonService;
           this.verizonService = verizonService;
           this.rubiService = rubiService;
+          this.solexbcService = solexbcService;
           this.loadingIndicator = true;
           this.range = {
             startDate: '',
@@ -698,7 +705,7 @@
 
                                 case 12:
                                   this.statData = _context.sent;
-                                  _context.next = 40;
+                                  _context.next = 49;
                                   break;
 
                                 case 15:
@@ -717,7 +724,7 @@
 
                                 case 21:
                                   this.statData = _context.sent;
-                                  _context.next = 40;
+                                  _context.next = 49;
                                   break;
 
                                 case 24:
@@ -736,12 +743,12 @@
 
                                 case 30:
                                   this.statData = _context.sent;
-                                  _context.next = 40;
+                                  _context.next = 49;
                                   break;
 
                                 case 33:
                                   if (!(this.selectedAdvertiser == "rubi")) {
-                                    _context.next = 40;
+                                    _context.next = 42;
                                     break;
                                   }
 
@@ -755,11 +762,30 @@
 
                                 case 39:
                                   this.statData = _context.sent;
+                                  _context.next = 49;
+                                  break;
 
-                                case 40:
+                                case 42:
+                                  if (!(this.selectedAdvertiser == "solex-bc")) {
+                                    _context.next = 49;
+                                    break;
+                                  }
+
+                                  _context.next = 45;
+                                  return this.getSolexBCChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                                case 45:
+                                  this.chartData = _context.sent;
+                                  _context.next = 48;
+                                  return this.getSolexBCAllStats(this.range.startDate, this.range.endDate, this.tagRows);
+
+                                case 48:
+                                  this.statData = _context.sent;
+
+                                case 49:
                                   this.refreshTable();
 
-                                case 41:
+                                case 50:
                                 case "end":
                                   return _context.stop();
                               }
@@ -828,7 +854,7 @@
 
                     case 7:
                       this.statData = _context3.sent;
-                      _context3.next = 35;
+                      _context3.next = 44;
                       break;
 
                     case 10:
@@ -847,7 +873,7 @@
 
                     case 16:
                       this.statData = _context3.sent;
-                      _context3.next = 35;
+                      _context3.next = 44;
                       break;
 
                     case 19:
@@ -866,12 +892,12 @@
 
                     case 25:
                       this.statData = _context3.sent;
-                      _context3.next = 35;
+                      _context3.next = 44;
                       break;
 
                     case 28:
                       if (!(this.selectedAdvertiser == "rubi")) {
-                        _context3.next = 35;
+                        _context3.next = 37;
                         break;
                       }
 
@@ -885,11 +911,30 @@
 
                     case 34:
                       this.statData = _context3.sent;
+                      _context3.next = 44;
+                      break;
 
-                    case 35:
+                    case 37:
+                      if (!(this.selectedAdvertiser == "solex-bc")) {
+                        _context3.next = 44;
+                        break;
+                      }
+
+                      _context3.next = 40;
+                      return this.getSolexBCChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 40:
+                      this.chartData = _context3.sent;
+                      _context3.next = 43;
+                      return this.getSolexBCAllStats(this.range.startDate, this.range.endDate, this.tagRows);
+
+                    case 43:
+                      this.statData = _context3.sent;
+
+                    case 44:
                       this.refreshTable();
 
-                    case 36:
+                    case 45:
                     case "end":
                       return _context3.stop();
                   }
@@ -1628,13 +1673,186 @@
               return error;
             });
           }
+        }, {
+          key: "getSolexBCAllStats",
+          value: function getSolexBCAllStats(startDate, endDate, tag) {
+            var _this10 = this;
+
+            return this.solexbcService.getAllSolexBCStats(this.selectedCompany, startDate, endDate).toPromise().then(function (res) {
+              _this10.allSolexBCStatData = res.stats;
+              var allSolexBCStat = [];
+
+              var _iterator13 = _createForOfIteratorHelper(tag.subids),
+                  _step13;
+
+              try {
+                for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
+                  var tagSub = _step13.value;
+
+                  if (tagSub.filterTag == "Contains") {
+                    allSolexBCStat = allSolexBCStat.concat(_this10.allSolexBCStatData.filter(function (stat) {
+                      return stat.subid.includes(tagSub.subid);
+                    }));
+                    allSolexBCStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  } else if (tagSub.filterTag == "StartsWith") {
+                    allSolexBCStat = allSolexBCStat.concat(_this10.allSolexBCStatData.filter(function (stat) {
+                      return stat.subid.startsWith(tagSub.subid);
+                    }));
+                    allSolexBCStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  } else if (tagSub.filterTag == "EndsWith") {
+                    allSolexBCStat = allSolexBCStat.concat(_this10.allSolexBCStatData.filter(function (stat) {
+                      return stat.subid.endsWith(tagSub.subid);
+                    }));
+                    allSolexBCStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  } else if (tagSub.filterTag == "ExactValue") {
+                    allSolexBCStat = allSolexBCStat.concat(_this10.allSolexBCStatData.filter(function (stat) {
+                      return stat.subid == tagSub.subid;
+                    }));
+                    allSolexBCStat.map(function (stat) {
+                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.tagname = tag.name;
+                    });
+                  }
+                } //duplicated remove
+
+              } catch (err) {
+                _iterator13.e(err);
+              } finally {
+                _iterator13.f();
+              }
+
+              var filtered_data = allSolexBCStat.filter(function (thing, index, self) {
+                return index === self.findIndex(function (t) {
+                  return t.date === thing.date && t.subid === thing.subid;
+                });
+              }); // // var helper = {};
+              // filtered_data.map(f =>{
+              //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+              //   f.cpc = parseFloat(f.revenue)/parseFloat(f.clicks);
+              // })
+
+              return filtered_data.slice().sort(function (a, b) {
+                return b.date - a.date;
+              });
+            })["catch"](function (error) {
+              return error;
+            });
+          }
+        }, {
+          key: "getSolexBCChartMetrics",
+          value: function getSolexBCChartMetrics(company, startDate, endDate) {
+            var _this11 = this;
+
+            return this.solexbcService.getAllSolexBCStats(this.selectedCompany, startDate, endDate).toPromise().then(function (response) {
+              _this11.allSolexBCChart = response.stats;
+              var chartAllSolexbcStat = [];
+
+              var _iterator14 = _createForOfIteratorHelper(_this11.tagRows.subids),
+                  _step14;
+
+              try {
+                for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
+                  var tagSub = _step14.value;
+
+                  if (tagSub['filterTag'] == "Contains") {
+                    chartAllSolexbcStat = chartAllSolexbcStat.concat(_this11.allSolexBCChart.filter(function (stat) {
+                      return stat.subid.includes(tagSub['subid']);
+                    }));
+                  } else if (tagSub['filterTag'] == "StartsWith") {
+                    chartAllSolexbcStat = chartAllSolexbcStat.concat(_this11.allSolexBCChart.filter(function (stat) {
+                      return stat.subid.startsWith(tagSub['subid']);
+                    }));
+                  } else if (tagSub['filterTag'] == "EndsWith") {
+                    chartAllSolexbcStat = chartAllSolexbcStat.concat(_this11.allSolexBCChart.filter(function (stat) {
+                      return stat.subid.endsWith(tagSub['subid']);
+                    }));
+                  } else if (tagSub['filterTag'] == "ExactValue") {
+                    chartAllSolexbcStat = chartAllSolexbcStat.concat(_this11.allSolexBCChart.filter(function (stat) {
+                      return stat.subid == tagSub['subid'];
+                    }));
+                  }
+                } //duplicated remove
+
+              } catch (err) {
+                _iterator14.e(err);
+              } finally {
+                _iterator14.f();
+              }
+
+              var filter_data = chartAllSolexbcStat.filter(function (thing, index, self) {
+                return index === self.findIndex(function (t) {
+                  return t.date === thing.date && t.subid === thing.subid;
+                });
+              }); // filter_data.map(f =>{
+              //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+              // })
+
+              filter_data = filter_data.slice().sort(function (a, b) {
+                return a.date - b.date;
+              });
+              var helperChart = {};
+              var resultChart = filter_data.reduce(function (r, o) {
+                var key = o.date;
+
+                if (!helperChart[key]) {
+                  helperChart[key] = Object.assign({}, o); // create a copy of o
+
+                  r.push(helperChart[key]);
+                } else {
+                  helperChart[key].searches += parseInt(o.searches);
+
+                  if (o.revenue) {
+                    helperChart[key].revenue += o.revenue;
+                  }
+                }
+
+                return r;
+              }, []);
+              var revenuePerDayVal = [];
+              var datesOfRevenueVal = [];
+              var searchesPerDayVal = [];
+              var chartDataValue = {};
+
+              var _iterator15 = _createForOfIteratorHelper(resultChart),
+                  _step15;
+
+              try {
+                for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
+                  var resVal = _step15.value;
+                  revenuePerDayVal.push(resVal.revenue);
+                  datesOfRevenueVal.push(resVal.date);
+                  searchesPerDayVal.push(resVal.searches);
+                }
+              } catch (err) {
+                _iterator15.e(err);
+              } finally {
+                _iterator15.f();
+              }
+
+              chartDataValue['revenuePerDay'] = revenuePerDayVal;
+              chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+              chartDataValue['searchesPerDay'] = searchesPerDayVal;
+              return chartDataValue;
+            })["catch"](function (error) {
+              return error;
+            });
+          }
         }]);
 
         return PublisherComponent;
       }();
 
       PublisherComponent.ɵfac = function PublisherComponent_Factory(t) {
-        return new (t || PublisherComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"]));
+        return new (t || PublisherComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__["SolexBCService"]));
       };
 
       PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
@@ -1761,8 +1979,8 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_9__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__["ReportingRevenueChartComponent"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_10__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__["ReportingRevenueChartComponent"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["CurrencyPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcHVibGlzaGVyLXJlcG9ydGluZy9wdWJsaXNoZXIvcHVibGlzaGVyLmNvbXBvbmVudC5zY3NzIn0= */"]
       });
       /*@__PURE__*/
@@ -1792,6 +2010,8 @@
             type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]
           }, {
             type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"]
+          }, {
+            type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__["SolexBCService"]
           }];
         }, {
           table: [{

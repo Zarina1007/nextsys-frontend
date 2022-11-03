@@ -293,6 +293,64 @@ RubiService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjec
 
 /***/ }),
 
+/***/ "./src/app/shared/service/admin-stats/solexbc.service.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/shared/service/admin-stats/solexbc.service.ts ***!
+  \***************************************************************/
+/*! exports provided: SolexBCService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SolexBCService", function() { return SolexBCService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+
+const API_SOLEXBC_URL = `${_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/stats/admin/solexbc`;
+class SolexBCService {
+    constructor(http) {
+        this.http = http;
+    }
+    getChartMetrics(company, startDate, endDate) {
+        return this.http.get(API_SOLEXBC_URL + '/chart_metrics', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getAllSolexBCStats(company, startDate, endDate) {
+        return this.http.get(API_SOLEXBC_URL + '/all-publishers', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getSolexBCStats(company, startDate, endDate) {
+        return this.http.get(API_SOLEXBC_URL + '/', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getSummaryMetrics(company) {
+        return this.http.get(API_SOLEXBC_URL + '/summary_metrics', {
+            params: { company: company },
+        });
+    }
+    getAllDashboardStats() {
+        return this.http.get(API_SOLEXBC_URL + '/all-stat');
+    }
+}
+SolexBCService.ɵfac = function SolexBCService_Factory(t) { return new (t || SolexBCService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
+SolexBCService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: SolexBCService, factory: SolexBCService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SolexBCService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root',
+            }]
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, null); })();
+
+
+/***/ }),
+
 /***/ "./src/app/shared/service/admin-stats/verizon.service.ts":
 /*!***************************************************************!*\
   !*** ./src/app/shared/service/admin-stats/verizon.service.ts ***!
