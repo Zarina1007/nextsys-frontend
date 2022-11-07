@@ -3281,7 +3281,7 @@
                 // });
                 //Calculate the sums and group data (while tracking count)
                 // var resultAll = filtered_data.reduce(function(prev, current) {
-                //   var key = (current.rptDate).toString() + '-' + current.subid;
+                //   var key = (current.date).toString() + '-' + current.subid;
                 //   if(!helper[key]) {
                 //     helper[key] = Object.assign({}, current); // create a copy of o
                 //     helper[key].count = 1;
@@ -3465,7 +3465,7 @@
               });
 
               var resultSummary = _this2.currentMonthData.reduce(function (r, o) {
-                var key = o.rptDate;
+                var key = o.date;
 
                 if (!helperSummary[key]) {
                   helperSummary[key] = Object.assign({}, o); // create a copy of o
@@ -3537,7 +3537,7 @@
               });
 
               var resultBeforeSummary = _this2.beforeMonthData.reduce(function (r, o) {
-                var key = o.rptDate;
+                var key = o.date;
 
                 if (!helperBeforeSummary[key]) {
                   helperBeforeSummary[key] = Object.assign({}, o); // create a copy of o
@@ -3609,7 +3609,7 @@
               });
 
               var resultTwoBeforeSummary = _this2.twoBeforeMonthData.reduce(function (r, o) {
-                var key = o.rptDate;
+                var key = o.date;
 
                 if (!helperTwoBeforeSummary[key]) {
                   helperTwoBeforeSummary[key] = Object.assign({}, o); // create a copy of o

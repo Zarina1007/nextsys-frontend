@@ -1795,7 +1795,7 @@ class LyonsComponent {
             // });
             //Calculate the sums and group data (while tracking count)
             // var resultAll = filtered_data.reduce(function(prev, current) {
-            //   var key = (current.rptDate).toString() + '-' + current.subid;
+            //   var key = (current.date).toString() + '-' + current.subid;
             //   if(!helper[key]) {
             //     helper[key] = Object.assign({}, current); // create a copy of o
             //     helper[key].count = 1;
@@ -1924,7 +1924,7 @@ class LyonsComponent {
                 // f.biddedCtr = parseFloat(f.biddedCTR);
             });
             var resultSummary = this.currentMonthData.reduce(function (r, o) {
-                var key = o.rptDate;
+                var key = o.date;
                 if (!helperSummary[key]) {
                     helperSummary[key] = Object.assign({}, o); // create a copy of o
                     r.push(helperSummary[key]);
@@ -1979,7 +1979,7 @@ class LyonsComponent {
                 // f.biddedCtr = parseFloat(f.biddedCTR);
             });
             var resultBeforeSummary = this.beforeMonthData.reduce(function (r, o) {
-                var key = o.rptDate;
+                var key = o.date;
                 if (!helperBeforeSummary[key]) {
                     helperBeforeSummary[key] = Object.assign({}, o); // create a copy of o
                     r.push(helperBeforeSummary[key]);
@@ -2034,7 +2034,7 @@ class LyonsComponent {
                 // f.biddedCtr = parseFloat(f.biddedCTR);
             });
             var resultTwoBeforeSummary = this.twoBeforeMonthData.reduce(function (r, o) {
-                var key = o.rptDate;
+                var key = o.date;
                 if (!helperTwoBeforeSummary[key]) {
                     helperTwoBeforeSummary[key] = Object.assign({}, o); // create a copy of o
                     r.push(helperTwoBeforeSummary[key]);
