@@ -18724,7 +18724,7 @@
                 return a.date - b.date;
               }); // var helperChart = {};
               // var resultChart = chartAllLyonStat.reduce(function(r, o) {
-              //   var key = o.rptDate;
+              //   var key = o.date;
               //   if(!helperChart[key]) {
               //     helperChart[key] = Object.assign({}, o); // create a copy of o
               //     r.push(helperChart[key]);
@@ -18744,7 +18744,7 @@
               // });
               // var helperBeforeChart = {};
               // var resultBeforeChart = chartAllBeforeLyonStat.reduce(function(r, o) {
-              //   var key = o.rptDate;
+              //   var key = o.date;
               //   if(!helperBeforeChart[key]) {
               //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
               //     r.push(helperBeforeChart[key]);
@@ -18772,7 +18772,7 @@
                 for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
                   var dayData = _step4.value;
                   var checkExistDay = chartAllLyonStat.filter(function (result) {
-                    return result.rptDate == dayData;
+                    return result.date == dayData;
                   });
 
                   if (checkExistDay.length == 0) {
@@ -18787,7 +18787,7 @@
                         var resVal = _step6.value;
                         revenueCurrentSum += resVal.revenue;
                         revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.rptDate);
+                        datesOfRevenueVal.push(resVal.date);
                       }
                     } catch (err) {
                       _iterator6.e(err);
@@ -18810,7 +18810,7 @@
                   var resBeforeVal = _step5.value;
                   revenueBeforeSum += resBeforeVal.revenue;
                   revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                  datesOfRevenueBeforeVal.push(resBeforeVal.rptDate);
+                  datesOfRevenueBeforeVal.push(resBeforeVal.date);
                 }
               } catch (err) {
                 _iterator5.e(err);

@@ -990,7 +990,7 @@ class Dashboard1Component {
             chartAllBeforeLyonStat = chartAllBeforeLyonStat.slice().sort((a, b) => a.date - b.date);
             // var helperChart = {};
             // var resultChart = chartAllLyonStat.reduce(function(r, o) {
-            //   var key = o.rptDate;
+            //   var key = o.date;
             //   if(!helperChart[key]) {
             //     helperChart[key] = Object.assign({}, o); // create a copy of o
             //     r.push(helperChart[key]);
@@ -1010,7 +1010,7 @@ class Dashboard1Component {
             // });
             // var helperBeforeChart = {};
             // var resultBeforeChart = chartAllBeforeLyonStat.reduce(function(r, o) {
-            //   var key = o.rptDate;
+            //   var key = o.date;
             //   if(!helperBeforeChart[key]) {
             //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
             //     r.push(helperBeforeChart[key]);
@@ -1030,7 +1030,7 @@ class Dashboard1Component {
             var revenueCurrentSum = 0;
             var revenueBeforeSum = 0;
             for (var dayData of this.allDaysList) {
-                var checkExistDay = chartAllLyonStat.filter((result) => result.rptDate == dayData);
+                var checkExistDay = chartAllLyonStat.filter((result) => result.date == dayData);
                 if (checkExistDay.length == 0) {
                     revenuePerDayVal.push(0);
                     datesOfRevenueVal.push(dayData);
@@ -1039,14 +1039,14 @@ class Dashboard1Component {
                     for (var resVal of checkExistDay) {
                         revenueCurrentSum += resVal.revenue;
                         revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.rptDate);
+                        datesOfRevenueVal.push(resVal.date);
                     }
                 }
             }
             for (var resBeforeVal of chartAllBeforeLyonStat) {
                 revenueBeforeSum += resBeforeVal.revenue;
                 revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                datesOfRevenueBeforeVal.push(resBeforeVal.rptDate);
+                datesOfRevenueBeforeVal.push(resBeforeVal.date);
             }
             chartLyonDataValue['revenuePerDay'] = revenuePerDayVal;
             chartLyonDataValue['datesOfRevenue'] = datesOfRevenueVal;
