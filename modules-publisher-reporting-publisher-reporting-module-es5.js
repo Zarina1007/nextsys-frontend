@@ -992,7 +992,7 @@
           value: function getLyonChartMetrics(company, startDate, endDate) {
             var _this2 = this;
 
-            return this.lyonService.getAllStats(startDate, endDate).toPromise().then(function (response) {
+            return this.lyonService.getAllPublisherStats(startDate, endDate).toPromise().then(function (response) {
               _this2.allChart = response;
               var chartAllLyonStat = [];
 
@@ -1282,7 +1282,7 @@
           value: function getAllLyonStats(startDate, endDate, tag) {
             var _this5 = this;
 
-            return this.lyonService.getAllStats(startDate, endDate).toPromise().then(function (response) {
+            return this.lyonService.getAllPublisherStats(startDate, endDate).toPromise().then(function (response) {
               _this5.allLyonStatData = response;
               var allLyonStat = [];
 

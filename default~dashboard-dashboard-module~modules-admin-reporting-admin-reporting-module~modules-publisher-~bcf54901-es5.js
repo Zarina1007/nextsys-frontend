@@ -209,6 +209,16 @@
             });
           }
         }, {
+          key: "getAllPublisherStats",
+          value: function getAllPublisherStats(startDate, endDate) {
+            return this.http.get(API_LYON_URL + '/all-publisher', {
+              params: {
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
           key: "getAllDashboardStats",
           value: function getAllDashboardStats() {
             return this.http.get(API_LYON_URL + '/all-stat');

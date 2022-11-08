@@ -419,7 +419,7 @@ class PublisherComponent {
         });
     }
     getLyonChartMetrics(company, startDate, endDate) {
-        return this.lyonService.getAllStats(startDate, endDate).toPromise().then((response) => {
+        return this.lyonService.getAllPublisherStats(startDate, endDate).toPromise().then((response) => {
             this.allChart = response;
             var chartAllLyonStat = [];
             for (var tagSub of this.tagRows.subids) {
@@ -596,7 +596,7 @@ class PublisherComponent {
         });
     }
     getAllLyonStats(startDate, endDate, tag) {
-        return this.lyonService.getAllStats(startDate, endDate).toPromise().then((response) => {
+        return this.lyonService.getAllPublisherStats(startDate, endDate).toPromise().then((response) => {
             this.allLyonStatData = response;
             var allLyonStat = [];
             for (var tagSub of tag.subids) {
