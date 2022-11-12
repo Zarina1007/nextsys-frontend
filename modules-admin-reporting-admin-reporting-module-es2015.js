@@ -3400,7 +3400,7 @@ class PerionComponent {
             .getAllPerionStats(company, startDate, endDate)
             .toPromise()
             .then((response) => {
-            console.log('response:');
+            console.log('response:', response);
             this.loadingIndicator = false;
             // console.log(response.stats);
             this.allStat = response.stats;

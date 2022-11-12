@@ -321,7 +321,7 @@
       /*! @angular/common/http */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 
-      var API_COMPANY_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/perion");
+      var API_PERION_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/perion");
 
       var PerionService = /*#__PURE__*/function () {
         function PerionService(http) {
@@ -334,13 +334,13 @@
           key: "testingRoute",
           value: function testingRoute() {
             console.log('being tested');
-            console.log(API_COMPANY_URL);
+            console.log(API_PERION_URL);
             return this.http.get("".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/perion/asd"));
           }
         }, {
           key: "getAllPerionStats",
           value: function getAllPerionStats(company, startDate, endDate) {
-            return this.http.get(API_COMPANY_URL + '/', {
+            return this.http.get(API_PERION_URL + '/', {
               params: {
                 company: company,
                 startDate: startDate,
@@ -351,7 +351,7 @@
         }, {
           key: "getPerTagPerionStats",
           value: function getPerTagPerionStats(company, startDate, endDate) {
-            return this.http.get(API_COMPANY_URL + '/per-tag-stat', {
+            return this.http.get(API_PERION_URL + '/per-tag-stat', {
               params: {
                 company: company,
                 startDate: startDate,
@@ -362,7 +362,7 @@
         }, {
           key: "getAllDashboardStats",
           value: function getAllDashboardStats(company) {
-            return this.http.get(API_COMPANY_URL + '/all-stat', {
+            return this.http.get(API_PERION_URL + '/all-stat', {
               params: {
                 company: company
               }
@@ -381,12 +381,12 @@
               'startDate': startDate,
               'endDate': endDate
             };
-            return this.http.put(API_COMPANY_URL + '/', data);
+            return this.http.put(API_PERION_URL + '/', data);
           }
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            return this.http.get(API_COMPANY_URL + '/summary_metrics', {
+            return this.http.get(API_PERION_URL + '/summary_metrics', {
               params: {
                 company: company
               }
@@ -395,7 +395,7 @@
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            return this.http.get(API_COMPANY_URL + '/chart_metrics', {
+            return this.http.get(API_PERION_URL + '/chart_metrics', {
               params: {
                 company: company,
                 startDate: startDate,
@@ -406,7 +406,7 @@
         }, {
           key: "getPerionChart",
           value: function getPerionChart(company) {
-            return this.http.get(API_COMPANY_URL + '/chart_perion_stat', {
+            return this.http.get(API_PERION_URL + '/chart_perion_stat', {
               params: {
                 company: company
               }

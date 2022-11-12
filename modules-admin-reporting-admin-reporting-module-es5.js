@@ -6055,7 +6055,7 @@
             var _this9 = this;
 
             return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise().then(function (response) {
-              console.log('response:');
+              console.log('response:', response);
               _this9.loadingIndicator = false; // console.log(response.stats);
 
               _this9.allStat = response.stats;

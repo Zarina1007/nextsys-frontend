@@ -409,7 +409,7 @@
 
       function PublisherComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 16);
         }
 
         if (rf & 2) {
@@ -421,7 +421,7 @@
 
       function PublisherComponent_ng_template_6_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 18);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -445,27 +445,27 @@
 
       function PublisherComponent_ng_template_8_Template(rf, ctx) {
         if (rf & 1) {
-          var _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          var _r22 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 19);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PublisherComponent_ng_template_8_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r22);
 
-            var row_r21 = ctx.row;
+            var row_r19 = ctx.row;
 
-            var ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+            var ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-            return ctx_r23.toggleExpandRow(row_r21);
+            return ctx_r21.toggleExpandRow(row_r19);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r22 = ctx.expanded;
+          var expanded_r20 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r22)("datatable-icon-down", expanded_r22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r20)("datatable-icon-down", expanded_r20);
         }
       }
 
@@ -487,21 +487,45 @@
         }
 
         if (rf & 2) {
-          var value_r26 = ctx.value;
+          var value_r24 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r26));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r24));
         }
       }
 
       function PublisherComponent_ng_template_13_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
       function PublisherComponent_ng_template_14_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r26 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r26);
+        }
+      }
+
+      function PublisherComponent_ng_template_16_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+        }
+      }
+
+      function PublisherComponent_ng_template_17_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -519,61 +543,13 @@
         }
       }
 
-      function PublisherComponent_ng_template_16_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Tag ");
-        }
-      }
-
-      function PublisherComponent_ng_template_17_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r30 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r30);
-        }
-      }
-
       function PublisherComponent_ng_template_19_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
-        }
-      }
-
-      function PublisherComponent_ng_template_20_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r32 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r32);
-        }
-      }
-
-      function PublisherComponent_ng_template_22_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
         }
       }
 
-      function PublisherComponent_ng_template_23_Template(rf, ctx) {
+      function PublisherComponent_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -587,21 +563,21 @@
         }
 
         if (rf & 2) {
-          var value_r34 = ctx.value;
+          var value_r30 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r34) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r30) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
         }
       }
 
-      function PublisherComponent_ng_template_25_Template(rf, ctx) {
+      function PublisherComponent_ng_template_22_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
         }
       }
 
-      function PublisherComponent_ng_template_26_Template(rf, ctx) {
+      function PublisherComponent_ng_template_23_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -615,21 +591,21 @@
         }
 
         if (rf & 2) {
-          var value_r36 = ctx.value;
+          var value_r32 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r36, "USD") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r32, "USD") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "USD"));
         }
       }
 
-      function PublisherComponent_ng_template_28_Template(rf, ctx) {
+      function PublisherComponent_ng_template_25_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
         }
       }
 
-      function PublisherComponent_ng_template_29_Template(rf, ctx) {
+      function PublisherComponent_ng_template_26_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -641,11 +617,11 @@
         }
 
         if (rf & 2) {
-          var value_r38 = ctx.value;
+          var value_r34 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r38, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r34, "USD"));
         }
       }
 
@@ -1208,32 +1184,28 @@
                       return stat.subid.includes(tagSub.subid);
                     }));
                     allPerionStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : "No Publisher"; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "StartsWith") {
                     allPerionStat = allPerionStat.concat(_this4.allPerionStatData.filter(function (stat) {
                       return stat.subid.startsWith(tagSub.subid);
                     }));
                     allPerionStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : "No Publisher"; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "EndsWith") {
                     allPerionStat = allPerionStat.concat(_this4.allPerionStatData.filter(function (stat) {
                       return stat.subid.endsWith(tagSub.subid);
                     }));
                     allPerionStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : "No Publisher"; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "ExactValue") {
                     allPerionStat = allPerionStat.concat(_this4.allPerionStatData.filter(function (stat) {
                       return stat.subid == tagSub.subid;
                     }));
                     allPerionStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : "No Publisher"; //stat.tagname = tag.name
                     });
                   }
                 } //duplicated remove
@@ -1298,32 +1270,28 @@
                       return stat.subid.includes(tagSub.subid);
                     }));
                     allLyonStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "StartsWith") {
                     allLyonStat = allLyonStat.concat(_this5.allLyonStatData.filter(function (stat) {
                       return stat.subid.startsWith(tagSub.subid);
                     }));
                     allLyonStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "EndsWith") {
                     allLyonStat = allLyonStat.concat(_this5.allLyonStatData.filter(function (stat) {
                       return stat.subid.endsWith(tagSub.subid);
                     }));
                     allLyonStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "ExactValue") {
                     allLyonStat = allLyonStat.concat(_this5.allLyonStatData.filter(function (stat) {
                       return stat.subid == tagSub.subid;
                     }));
                     allLyonStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   }
                 } //duplicated remove
@@ -1394,7 +1362,7 @@
                       return stat.subid.includes(tagSub.subid);
                     }));
                     allVerizonStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : "";
                       stat.tagname = tag.name;
                     });
                   } else if (tagSub.filterTag == "StartsWith") {
@@ -1402,7 +1370,7 @@
                       return stat.subid.startsWith(tagSub.subid);
                     }));
                     allVerizonStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : "";
                       stat.tagname = tag.name;
                     });
                   } else if (tagSub.filterTag == "EndsWith") {
@@ -1410,7 +1378,7 @@
                       return stat.subid.endsWith(tagSub.subid);
                     }));
                     allVerizonStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : "";
                       stat.tagname = tag.name;
                     });
                   } else if (tagSub.filterTag == "ExactValue") {
@@ -1418,7 +1386,7 @@
                       return stat.subid == tagSub.subid;
                     }));
                     allVerizonStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : "";
                       stat.tagname = tag.name;
                     });
                   }
@@ -1566,32 +1534,28 @@
                       return stat.subid.includes(tagSub.subid);
                     }));
                     allRubiStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "StartsWith") {
                     allRubiStat = allRubiStat.concat(_this8.allRubiStatData.filter(function (stat) {
                       return stat.subid.startsWith(tagSub.subid);
                     }));
                     allRubiStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "EndsWith") {
                     allRubiStat = allRubiStat.concat(_this8.allRubiStatData.filter(function (stat) {
                       return stat.subid.endsWith(tagSub.subid);
                     }));
                     allRubiStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "ExactValue") {
                     allRubiStat = allRubiStat.concat(_this8.allRubiStatData.filter(function (stat) {
                       return stat.subid == tagSub.subid;
                     }));
                     allRubiStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   }
                 } //duplicated remove
@@ -1739,32 +1703,28 @@
                       return stat.subid.includes(tagSub.subid);
                     }));
                     allSolexBCStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "StartsWith") {
                     allSolexBCStat = allSolexBCStat.concat(_this10.allSolexBCStatData.filter(function (stat) {
                       return stat.subid.startsWith(tagSub.subid);
                     }));
                     allSolexBCStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "EndsWith") {
                     allSolexBCStat = allSolexBCStat.concat(_this10.allSolexBCStatData.filter(function (stat) {
                       return stat.subid.endsWith(tagSub.subid);
                     }));
                     allSolexBCStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "ExactValue") {
                     allSolexBCStat = allSolexBCStat.concat(_this10.allSolexBCStatData.filter(function (stat) {
                       return stat.subid == tagSub.subid;
                     }));
                     allSolexBCStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   }
                 } //duplicated remove
@@ -1912,32 +1872,28 @@
                       return stat.subid.includes(tagSub.subid);
                     }));
                     allSolexBCStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "StartsWith") {
                     allSolexBCStat = allSolexBCStat.concat(_this12.allSolexBCStatData.filter(function (stat) {
                       return stat.subid.startsWith(tagSub.subid);
                     }));
                     allSolexBCStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "EndsWith") {
                     allSolexBCStat = allSolexBCStat.concat(_this12.allSolexBCStatData.filter(function (stat) {
                       return stat.subid.endsWith(tagSub.subid);
                     }));
                     allSolexBCStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   } else if (tagSub.filterTag == "ExactValue") {
                     allSolexBCStat = allSolexBCStat.concat(_this12.allSolexBCStatData.filter(function (stat) {
                       return stat.subid == tagSub.subid;
                     }));
                     allSolexBCStat.map(function (stat) {
-                      stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                      stat.tagname = tag.name;
+                      stat.publisher = tag.publisher ? tag.publisher.fullname : ""; // stat.tagname = tag.name
                     });
                   }
                 } //duplicated remove
@@ -2087,9 +2043,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 30,
+        decls: 27,
         vars: 14,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "tagname"], ["name", "publisher"], ["name", "ctr"], ["name", "cpc"], ["name", "revenue"], [3, "chartData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date"], ["ngx-datatable-header-template", ""], ["name", "publisher"], ["name", "searches"], ["name", "ctr"], ["name", "cpc"], ["name", "revenue"], [3, "chartData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
         template: function PublisherComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -2148,7 +2104,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](19, PublisherComponent_ng_template_19_Template, 1, 0, "ng-template", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, PublisherComponent_ng_template_20_Template, 2, 1, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, PublisherComponent_ng_template_20_Template, 4, 6, "ng-template", 8);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -2156,7 +2112,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, PublisherComponent_ng_template_22_Template, 1, 0, "ng-template", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, PublisherComponent_ng_template_23_Template, 4, 6, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, PublisherComponent_ng_template_23_Template, 4, 7, "ng-template", 8);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -2164,15 +2120,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, PublisherComponent_ng_template_25_Template, 1, 0, "ng-template", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, PublisherComponent_ng_template_26_Template, 4, 7, "ng-template", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](27, "ngx-datatable-column", 16);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, PublisherComponent_ng_template_28_Template, 1, 0, "ng-template", 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, PublisherComponent_ng_template_29_Template, 3, 4, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, PublisherComponent_ng_template_26_Template, 3, 4, "ng-template", 8);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 

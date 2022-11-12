@@ -163,28 +163,28 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const API_COMPANY_URL = `${_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/stats/admin/perion`;
+const API_PERION_URL = `${_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/stats/admin/perion`;
 class PerionService {
     constructor(http) {
         this.http = http;
     }
     testingRoute() {
         console.log('being tested');
-        console.log(API_COMPANY_URL);
+        console.log(API_PERION_URL);
         return this.http.get(`${_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/stats/admin/perion/asd`);
     }
     getAllPerionStats(company, startDate, endDate) {
-        return this.http.get(API_COMPANY_URL + '/', {
+        return this.http.get(API_PERION_URL + '/', {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
     getPerTagPerionStats(company, startDate, endDate) {
-        return this.http.get(API_COMPANY_URL + '/per-tag-stat', {
+        return this.http.get(API_PERION_URL + '/per-tag-stat', {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
     getAllDashboardStats(company) {
-        return this.http.get(API_COMPANY_URL + '/all-stat', { params: { company: company } });
+        return this.http.get(API_PERION_URL + '/all-stat', { params: { company: company } });
     }
     updateAllPerionStats(company, startDate, endDate) {
         // let params = new HttpParams()
@@ -197,20 +197,20 @@ class PerionService {
             'startDate': startDate,
             'endDate': endDate
         };
-        return this.http.put(API_COMPANY_URL + '/', data);
+        return this.http.put(API_PERION_URL + '/', data);
     }
     getSummaryMetrics(company) {
-        return this.http.get(API_COMPANY_URL + '/summary_metrics', {
+        return this.http.get(API_PERION_URL + '/summary_metrics', {
             params: { company: company },
         });
     }
     getChartMetrics(company, startDate, endDate) {
-        return this.http.get(API_COMPANY_URL + '/chart_metrics', {
+        return this.http.get(API_PERION_URL + '/chart_metrics', {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
     getPerionChart(company) {
-        return this.http.get(API_COMPANY_URL + '/chart_perion_stat', {
+        return this.http.get(API_PERION_URL + '/chart_perion_stat', {
             params: { company: company },
         });
     }

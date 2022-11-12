@@ -198,13 +198,13 @@ __webpack_require__.r(__webpack_exports__);
 
 const _c0 = ["expandableTable"];
 function PublisherComponent_app_reporting_revenue_chart_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 16);
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("chartData", ctx_r0.chartData);
 } }
 function PublisherComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "strong");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Address");
@@ -216,13 +216,13 @@ function PublisherComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } }
 function PublisherComponent_ng_template_8_Template(rf, ctx) { if (rf & 1) {
-    const _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PublisherComponent_ng_template_8_Template_a_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r24); const row_r21 = ctx.row; const ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r23.toggleExpandRow(row_r21); });
+    const _r22 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PublisherComponent_ng_template_8_Template_a_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r22); const row_r19 = ctx.row; const ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r21.toggleExpandRow(row_r19); });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const expanded_r22 = ctx.expanded;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r22)("datatable-icon-down", expanded_r22);
+    const expanded_r20 = ctx.expanded;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r20)("datatable-icon-down", expanded_r20);
 } }
 function PublisherComponent_ng_template_10_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
@@ -233,14 +233,26 @@ function PublisherComponent_ng_template_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "date");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const value_r26 = ctx.value;
+    const value_r24 = ctx.value;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r26));
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r24));
 } }
 function PublisherComponent_ng_template_13_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
 } }
 function PublisherComponent_ng_template_14_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const value_r26 = ctx.value;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r26);
+} }
+function PublisherComponent_ng_template_16_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+} }
+function PublisherComponent_ng_template_17_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -249,70 +261,46 @@ function PublisherComponent_ng_template_14_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r28);
 } }
-function PublisherComponent_ng_template_16_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Tag ");
-} }
-function PublisherComponent_ng_template_17_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const value_r30 = ctx.value;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r30);
-} }
 function PublisherComponent_ng_template_19_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
-} }
-function PublisherComponent_ng_template_20_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    const value_r32 = ctx.value;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r32);
-} }
-function PublisherComponent_ng_template_22_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
 } }
-function PublisherComponent_ng_template_23_Template(rf, ctx) { if (rf & 1) {
+function PublisherComponent_ng_template_20_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "number");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const value_r34 = ctx.value;
+    const value_r30 = ctx.value;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r34) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r30) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
 } }
-function PublisherComponent_ng_template_25_Template(rf, ctx) { if (rf & 1) {
+function PublisherComponent_ng_template_22_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
 } }
-function PublisherComponent_ng_template_26_Template(rf, ctx) { if (rf & 1) {
+function PublisherComponent_ng_template_23_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "currency");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const value_r36 = ctx.value;
+    const value_r32 = ctx.value;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r36, "USD") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "USD"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r32, "USD") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "USD"));
 } }
-function PublisherComponent_ng_template_28_Template(rf, ctx) { if (rf & 1) {
+function PublisherComponent_ng_template_25_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
 } }
-function PublisherComponent_ng_template_29_Template(rf, ctx) { if (rf & 1) {
+function PublisherComponent_ng_template_26_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
-    const value_r38 = ctx.value;
+    const value_r34 = ctx.value;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r38, "USD"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r34, "USD"));
 } }
 class PublisherComponent {
     constructor(route, tagManagementService, cdr, userService, perionService, lyonService, verizonService, rubiService, solexbcService, system1Service) {
@@ -540,29 +528,29 @@ class PublisherComponent {
                 if (tagSub.filterTag == "Contains") {
                     allPerionStat = allPerionStat.concat(this.allPerionStatData.filter(stat => stat.subid.includes(tagSub.subid)));
                     allPerionStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "No Publisher";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "StartsWith") {
                     allPerionStat = allPerionStat.concat(this.allPerionStatData.filter(stat => stat.subid.startsWith(tagSub.subid)));
                     allPerionStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "No Publisher";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "EndsWith") {
                     allPerionStat = allPerionStat.concat(this.allPerionStatData.filter(stat => stat.subid.endsWith(tagSub.subid)));
                     allPerionStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "No Publisher";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "ExactValue") {
                     allPerionStat = allPerionStat.concat(this.allPerionStatData.filter(stat => stat.subid == tagSub.subid));
                     allPerionStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "No Publisher";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "No Publisher";
+                        //stat.tagname = tag.name
                     });
                 }
             }
@@ -603,29 +591,29 @@ class PublisherComponent {
                 if (tagSub.filterTag == "Contains") {
                     allLyonStat = allLyonStat.concat(this.allLyonStatData.filter(stat => stat.subid.includes(tagSub.subid)));
                     allLyonStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "StartsWith") {
                     allLyonStat = allLyonStat.concat(this.allLyonStatData.filter(stat => stat.subid.startsWith(tagSub.subid)));
                     allLyonStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "EndsWith") {
                     allLyonStat = allLyonStat.concat(this.allLyonStatData.filter(stat => stat.subid.endsWith(tagSub.subid)));
                     allLyonStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "ExactValue") {
                     allLyonStat = allLyonStat.concat(this.allLyonStatData.filter(stat => stat.subid == tagSub.subid));
                     allLyonStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
             }
@@ -672,28 +660,28 @@ class PublisherComponent {
                 if (tagSub.filterTag == "Contains") {
                     allVerizonStat = allVerizonStat.concat(this.allVerizonStatData.filter(stat => stat.subid.includes(tagSub.subid)));
                     allVerizonStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
                         stat.tagname = tag.name;
                     });
                 }
                 else if (tagSub.filterTag == "StartsWith") {
                     allVerizonStat = allVerizonStat.concat(this.allVerizonStatData.filter(stat => stat.subid.startsWith(tagSub.subid)));
                     allVerizonStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
                         stat.tagname = tag.name;
                     });
                 }
                 else if (tagSub.filterTag == "EndsWith") {
                     allVerizonStat = allVerizonStat.concat(this.allVerizonStatData.filter(stat => stat.subid.endsWith(tagSub.subid)));
                     allVerizonStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
                         stat.tagname = tag.name;
                     });
                 }
                 else if (tagSub.filterTag == "ExactValue") {
                     allVerizonStat = allVerizonStat.concat(this.allVerizonStatData.filter(stat => stat.subid == tagSub.subid));
                     allVerizonStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
                         stat.tagname = tag.name;
                     });
                 }
@@ -775,29 +763,29 @@ class PublisherComponent {
                 if (tagSub.filterTag == "Contains") {
                     allRubiStat = allRubiStat.concat(this.allRubiStatData.filter(stat => stat.subid.includes(tagSub.subid)));
                     allRubiStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "StartsWith") {
                     allRubiStat = allRubiStat.concat(this.allRubiStatData.filter(stat => stat.subid.startsWith(tagSub.subid)));
                     allRubiStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "EndsWith") {
                     allRubiStat = allRubiStat.concat(this.allRubiStatData.filter(stat => stat.subid.endsWith(tagSub.subid)));
                     allRubiStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "ExactValue") {
                     allRubiStat = allRubiStat.concat(this.allRubiStatData.filter(stat => stat.subid == tagSub.subid));
                     allRubiStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
             }
@@ -879,29 +867,29 @@ class PublisherComponent {
                 if (tagSub.filterTag == "Contains") {
                     allSolexBCStat = allSolexBCStat.concat(this.allSolexBCStatData.filter(stat => stat.subid.includes(tagSub.subid)));
                     allSolexBCStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "StartsWith") {
                     allSolexBCStat = allSolexBCStat.concat(this.allSolexBCStatData.filter(stat => stat.subid.startsWith(tagSub.subid)));
                     allSolexBCStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "EndsWith") {
                     allSolexBCStat = allSolexBCStat.concat(this.allSolexBCStatData.filter(stat => stat.subid.endsWith(tagSub.subid)));
                     allSolexBCStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "ExactValue") {
                     allSolexBCStat = allSolexBCStat.concat(this.allSolexBCStatData.filter(stat => stat.subid == tagSub.subid));
                     allSolexBCStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
             }
@@ -983,29 +971,29 @@ class PublisherComponent {
                 if (tagSub.filterTag == "Contains") {
                     allSolexBCStat = allSolexBCStat.concat(this.allSolexBCStatData.filter(stat => stat.subid.includes(tagSub.subid)));
                     allSolexBCStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "StartsWith") {
                     allSolexBCStat = allSolexBCStat.concat(this.allSolexBCStatData.filter(stat => stat.subid.startsWith(tagSub.subid)));
                     allSolexBCStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "EndsWith") {
                     allSolexBCStat = allSolexBCStat.concat(this.allSolexBCStatData.filter(stat => stat.subid.endsWith(tagSub.subid)));
                     allSolexBCStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
                 else if (tagSub.filterTag == "ExactValue") {
                     allSolexBCStat = allSolexBCStat.concat(this.allSolexBCStatData.filter(stat => stat.subid == tagSub.subid));
                     allSolexBCStat.map(stat => {
-                        stat.publisher = tag.publisher ? tag.publisher[0].fullname : "";
-                        stat.tagname = tag.name;
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
                     });
                 }
             }
@@ -1086,7 +1074,7 @@ PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
     } if (rf & 2) {
         var _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
-    } }, decls: 30, vars: 14, consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date"], ["ngx-datatable-header-template", ""], ["name", "subid"], ["name", "tagname"], ["name", "publisher"], ["name", "ctr"], ["name", "cpc"], ["name", "revenue"], [3, "chartData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]], template: function PublisherComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 27, vars: 14, consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date"], ["ngx-datatable-header-template", ""], ["name", "publisher"], ["name", "searches"], ["name", "ctr"], ["name", "cpc"], ["name", "revenue"], [3, "chartData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]], template: function PublisherComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("onDatesPicked", function PublisherComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) { return ctx.updateReportingFiltering($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -1113,19 +1101,15 @@ PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "ngx-datatable-column", 13);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](19, PublisherComponent_ng_template_19_Template, 1, 0, "ng-template", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, PublisherComponent_ng_template_20_Template, 2, 1, "ng-template", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, PublisherComponent_ng_template_20_Template, 4, 6, "ng-template", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 14);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, PublisherComponent_ng_template_22_Template, 1, 0, "ng-template", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, PublisherComponent_ng_template_23_Template, 4, 6, "ng-template", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, PublisherComponent_ng_template_23_Template, 4, 7, "ng-template", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](24, "ngx-datatable-column", 15);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, PublisherComponent_ng_template_25_Template, 1, 0, "ng-template", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, PublisherComponent_ng_template_26_Template, 4, 7, "ng-template", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](27, "ngx-datatable-column", 16);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, PublisherComponent_ng_template_28_Template, 1, 0, "ng-template", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, PublisherComponent_ng_template_29_Template, 3, 4, "ng-template", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, PublisherComponent_ng_template_26_Template, 3, 4, "ng-template", 8);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     } if (rf & 2) {
