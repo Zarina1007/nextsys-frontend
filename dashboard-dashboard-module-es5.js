@@ -18504,7 +18504,7 @@
             var _this3 = this;
 
             if (this.selectedCompany) {
-              return this.companyService.getOneCompany(this.selectedCompany.split('/')[1]).toPromise().then(function (res) {
+              return this.companyService.getReportCompany(this.selectedCompany.split('/')[1]).toPromise().then(function (res) {
                 _this3.companyName = res.name;
                 var providerList = [];
                 res.reportingProviders.map(function (report) {

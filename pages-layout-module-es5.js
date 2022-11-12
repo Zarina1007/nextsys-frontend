@@ -42659,6 +42659,11 @@
             return this.companyService.getOneCompany(company);
           }
         }, {
+          key: "getReportCompany",
+          value: function getReportCompany(company) {
+            return this.companyService.getReportCompany(company);
+          }
+        }, {
           key: "updateOneCompany",
           value: function updateOneCompany(company) {
             return this.companyService.updateOneCompany(company);
@@ -43499,8 +43504,8 @@
             var _this120 = this;
 
             if (this.companySelected) {
-              this.companyService.getOneCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
-                console.log(res.reportingProviders);
+              this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
+                console.log("resese", res);
                 res.reportingProviders.map(function (report) {
                   _this120.reportingProviderList.push(report.reportingProvider);
                 });
@@ -50419,7 +50424,8 @@
             var _this130 = this;
 
             if (this.companySelected) {
-              this.companyService.getOneCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
+              this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
+                console.log("asdfasdfsfasdf", res);
                 res.reportingProviders.map(function (report) {
                   _this130.companyList.push(report.reportingProvider);
                 });
@@ -51076,6 +51082,11 @@
           key: "getOneCompany",
           value: function getOneCompany(company) {
             return this.http.get(API_COMPANY_URL + "/get_company/".concat(company));
+          }
+        }, {
+          key: "getReportCompany",
+          value: function getReportCompany(company) {
+            return this.http.get(API_COMPANY_URL + "/get_company_report/".concat(company));
           }
         }, {
           key: "getUserCompanies",

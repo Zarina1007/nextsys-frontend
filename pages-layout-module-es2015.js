@@ -26061,6 +26061,9 @@ class CompanyManagementService {
     getOneCompany(company) {
         return this.companyService.getOneCompany(company);
     }
+    getReportCompany(company) {
+        return this.companyService.getReportCompany(company);
+    }
     updateOneCompany(company) {
         return this.companyService.updateOneCompany(company);
     }
@@ -26500,8 +26503,8 @@ class AsideDynamicComponent {
     //get Report Providers in Current Company
     getReportingProviderList() {
         if (this.companySelected) {
-            this.companyService.getOneCompany(this.companySelected.split('/')[1]).subscribe(res => {
-                console.log(res.reportingProviders);
+            this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(res => {
+                console.log("resese", res);
                 res.reportingProviders.map(report => {
                     this.reportingProviderList.push(report.reportingProvider);
                 });
@@ -29990,7 +29993,8 @@ class LayoutComponent {
     //get Report Providers in Current Company
     getReportingProviderList() {
         if (this.companySelected) {
-            this.companyService.getOneCompany(this.companySelected.split('/')[1]).subscribe(res => {
+            this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(res => {
+                console.log("asdfasdfsfasdf", res);
                 res.reportingProviders.map(report => {
                     this.companyList.push(report.reportingProvider);
                 });
@@ -30348,6 +30352,9 @@ class CompanyService {
     }
     getOneCompany(company) {
         return this.http.get(API_COMPANY_URL + `/get_company/${company}`);
+    }
+    getReportCompany(company) {
+        return this.http.get(API_COMPANY_URL + `/get_company_report/${company}`);
     }
     getUserCompanies(companies) {
         let params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpParams"]();

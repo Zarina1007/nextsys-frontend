@@ -817,7 +817,7 @@ class Dashboard1Component {
     //get Report Providers in Current Company
     getReportingProviderList() {
         if (this.selectedCompany) {
-            return this.companyService.getOneCompany(this.selectedCompany.split('/')[1]).toPromise().then(res => {
+            return this.companyService.getReportCompany(this.selectedCompany.split('/')[1]).toPromise().then(res => {
                 this.companyName = res.name;
                 var providerList = [];
                 res.reportingProviders.map(report => {
