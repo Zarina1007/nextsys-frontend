@@ -50425,7 +50425,6 @@
 
             if (this.companySelected) {
               this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
-                console.log("asdfasdfsfasdf", res);
                 res.reportingProviders.map(function (report) {
                   _this130.companyList.push(report.reportingProvider);
                 });

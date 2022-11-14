@@ -29994,7 +29994,6 @@ class LayoutComponent {
     getReportingProviderList() {
         if (this.companySelected) {
             this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(res => {
-                console.log("asdfasdfsfasdf", res);
                 res.reportingProviders.map(report => {
                     this.companyList.push(report.reportingProvider);
                 });
