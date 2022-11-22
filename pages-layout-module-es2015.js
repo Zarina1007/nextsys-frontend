@@ -19489,7 +19489,7 @@ const DynamicAsideMenuConfig = {
             submenu: [
                 {
                     title: 'Send Publisher Notifications',
-                    page: '/',
+                    page: '/send-publisher-notification',
                 },
             ],
         },

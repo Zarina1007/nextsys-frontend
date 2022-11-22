@@ -30196,7 +30196,7 @@
           permissionName: "notifications",
           submenu: [{
             title: 'Send Publisher Notifications',
-            page: '/'
+            page: '/send-publisher-notification'
           }]
         }, {
           section: 'Custom'
