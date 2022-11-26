@@ -711,8 +711,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/shared/service/admin-stats/system1.service */ "./src/app/shared/service/admin-stats/system1.service.ts");
 /* harmony import */ var src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/modules/company-management/company-management.service */ "./src/app/modules/company-management/company-management.service.ts");
 /* harmony import */ var src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! src/app/shared/service/admin-stats/solexbc.service */ "./src/app/shared/service/admin-stats/solexbc.service.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../widgets/mixed/mixed-widget1/mixed-widget1.component */ "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget1/mixed-widget1.component.ts");
+/* harmony import */ var src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! src/app/shared/service/admin-stats/apptitude.service */ "./src/app/shared/service/admin-stats/apptitude.service.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../widgets/mixed/mixed-widget1/mixed-widget1.component */ "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget1/mixed-widget1.component.ts");
+
 
 
 
@@ -753,7 +755,7 @@ function Dashboard1Component_div_3_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } }
 class Dashboard1Component {
-    constructor(authService, perionService, userService, cdr, lyonService, rubiService, verizonService, tagService, system1Service, companyService, solexbcService) {
+    constructor(authService, perionService, userService, cdr, lyonService, rubiService, verizonService, tagService, system1Service, companyService, solexbcService, apptitudeService) {
         this.authService = authService;
         this.perionService = perionService;
         this.userService = userService;
@@ -765,6 +767,7 @@ class Dashboard1Component {
         this.system1Service = system1Service;
         this.companyService = companyService;
         this.solexbcService = solexbcService;
+        this.apptitudeService = apptitudeService;
         this.tagList = [];
         this.tempChartData = [];
         this.allDaysList = [];
@@ -788,6 +791,7 @@ class Dashboard1Component {
                 this.verizonChartData = yield this.getVerizonChart(this.selectedCompany);
                 this.system1ChartData = yield this.getSystem1Chart(this.selectedCompany);
                 this.solexbcChartData = yield this.getSolexBCChart(this.selectedCompany);
+                this.apptitudeChartData = yield this.getApptitudeChart(this.selectedCompany);
                 if (this.reportTypeData.includes('perion')) {
                     this.tempChartData = this.tempChartData.concat(this.perionChartData);
                 }
@@ -805,6 +809,9 @@ class Dashboard1Component {
                 }
                 if (this.reportTypeData.includes('solex-bc')) {
                     this.tempChartData = this.tempChartData.concat(this.solexbcChartData);
+                }
+                if (this.reportTypeData.includes('apptitude')) {
+                    this.tempChartData = this.tempChartData.concat(this.apptitudeChartData);
                 }
                 this.ChartData = this.tempChartData;
             }
@@ -1232,21 +1239,21 @@ class Dashboard1Component {
     //Get Solex Bc
     getSolexBCChart(company) {
         return this.solexbcService.getAllDashboardStats().toPromise().then((response) => {
-            this.allRubiChart = response[0];
-            var chartRubiMetric = [];
-            var chartAllRubiStat = this.allRubiChart.currentStat;
-            var chartAllBeforeRubiStat = this.allRubiChart.beforeStat;
-            chartAllRubiStat = chartAllRubiStat.slice().sort((a, b) => a.date - b.date);
-            chartAllBeforeRubiStat = chartAllBeforeRubiStat.slice().sort((a, b) => a.date - b.date);
+            this.allSolexBCChart = response[0];
+            var chartSolexBCMetric = [];
+            var chartAllSolexBCStat = this.allSolexBCChart.currentStat;
+            var chartAllBeforeSolexBCStat = this.allSolexBCChart.beforeStat;
+            chartAllSolexBCStat = chartAllSolexBCStat.slice().sort((a, b) => a.date - b.date);
+            chartAllBeforeSolexBCStat = chartAllBeforeSolexBCStat.slice().sort((a, b) => a.date - b.date);
             var revenuePerDayVal = [];
             var datesOfRevenueVal = [];
             var revenuePerDayBeforeVal = [];
             var datesOfRevenueBeforeVal = [];
-            var chartRubiDataValue = {};
+            var chartSolexBCDataValue = {};
             var revenueCurrentSum = 0;
             var revenueBeforeSum = 0;
             for (var dayData of this.allDaysList) {
-                var checkExistDay = chartAllRubiStat.filter((result) => result.date == dayData);
+                var checkExistDay = chartAllSolexBCStat.filter((result) => result.date == dayData);
                 if (checkExistDay.length == 0) {
                     revenuePerDayVal.push(0);
                     datesOfRevenueVal.push(dayData);
@@ -1259,20 +1266,70 @@ class Dashboard1Component {
                     }
                 }
             }
-            for (var resBeforeVal of chartAllBeforeRubiStat) {
+            for (var resBeforeVal of chartAllBeforeSolexBCStat) {
                 revenueBeforeSum += resBeforeVal.revenue;
                 revenuePerDayBeforeVal.push(resBeforeVal.revenue);
                 datesOfRevenueBeforeVal.push(resBeforeVal.date);
             }
-            chartRubiDataValue['revenuePerDay'] = revenuePerDayVal;
-            chartRubiDataValue['datesOfRevenue'] = datesOfRevenueVal;
-            chartRubiDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-            chartRubiDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-            chartRubiDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-            chartRubiDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-            chartRubiDataValue['statType'] = "SolexBC";
-            chartRubiDataValue['redirectUri'] = "/reporting/solex-bc";
-            chartRubiMetric.push(chartRubiDataValue);
+            chartSolexBCDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartSolexBCDataValue['datesOfRevenue'] = datesOfRevenueVal;
+            chartSolexBCDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+            chartSolexBCDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+            chartSolexBCDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+            chartSolexBCDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+            chartSolexBCDataValue['statType'] = "SolexBC";
+            chartSolexBCDataValue['redirectUri'] = "/reporting/solex-bc";
+            chartSolexBCMetric.push(chartSolexBCDataValue);
+            return chartSolexBCMetric;
+        })
+            .catch((error) => {
+            return error;
+        });
+    }
+    //Get Apptitude
+    getApptitudeChart(company) {
+        return this.apptitudeService.getAllDashboardStats().toPromise().then((response) => {
+            this.allApptitudeChart = response[0];
+            var chartRubiMetric = [];
+            var chartAllApptitudeStat = this.allApptitudeChart.currentStat;
+            var chartAllBeforeApptitudeStat = this.allApptitudeChart.beforeStat;
+            chartAllApptitudeStat = chartAllApptitudeStat.slice().sort((a, b) => a.date - b.date);
+            chartAllBeforeApptitudeStat = chartAllBeforeApptitudeStat.slice().sort((a, b) => a.date - b.date);
+            var revenuePerDayVal = [];
+            var datesOfRevenueVal = [];
+            var revenuePerDayBeforeVal = [];
+            var datesOfRevenueBeforeVal = [];
+            var chartApptitudeDataValue = {};
+            var revenueCurrentSum = 0;
+            var revenueBeforeSum = 0;
+            for (var dayData of this.allDaysList) {
+                var checkExistDay = chartAllApptitudeStat.filter((result) => result.date == dayData);
+                if (checkExistDay.length == 0) {
+                    revenuePerDayVal.push(0);
+                    datesOfRevenueVal.push(dayData);
+                }
+                else {
+                    for (var resVal of checkExistDay) {
+                        revenueCurrentSum += resVal.revenue;
+                        revenuePerDayVal.push(resVal.revenue);
+                        datesOfRevenueVal.push(resVal.date);
+                    }
+                }
+            }
+            for (var resBeforeVal of chartAllBeforeApptitudeStat) {
+                revenueBeforeSum += resBeforeVal.revenue;
+                revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                datesOfRevenueBeforeVal.push(resBeforeVal.date);
+            }
+            chartApptitudeDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartApptitudeDataValue['datesOfRevenue'] = datesOfRevenueVal;
+            chartApptitudeDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+            chartApptitudeDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+            chartApptitudeDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+            chartApptitudeDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+            chartApptitudeDataValue['statType'] = "Monarch Apptitude";
+            chartApptitudeDataValue['redirectUri'] = "/reporting/apptitude";
+            chartRubiMetric.push(chartApptitudeDataValue);
             return chartRubiMetric;
         })
             .catch((error) => {
@@ -1284,7 +1341,7 @@ class Dashboard1Component {
         return lastThirtyDays;
     }
 }
-Dashboard1Component.ɵfac = function Dashboard1Component_Factory(t) { return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__["SolexBCService"])); };
+Dashboard1Component.ɵfac = function Dashboard1Component_Factory(t) { return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__["ApptitudeService"])); };
 Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: Dashboard1Component, selectors: [["app-dashboard1"]], decls: 4, vars: 2, consts: [[1, "row"], [1, "col-lg-12", "col-xxl-12"], [3, "ChartData", "CompanyName", 4, "ngIf"], ["class", "error error-3 d-flex flex-row-fluid bgi-size-cover bgi-position-center", "style", "background-image: url('./assets/media/error/bg3.jpg'); height: 100%;zoom: 1;\n  display: block;\n  min-height: 80vh;\n  font-size: 14px;\n  line-height: 1.4;\n  color: #0e1724;", 4, "ngIf"], [3, "ChartData", "CompanyName"], [1, "error", "error-3", "d-flex", "flex-row-fluid", "bgi-size-cover", "bgi-position-center", 2, "background-image", "url('./assets/media/error/bg3.jpg')", "height", "100%", "zoom", "1", "display", "block", "min-height", "80vh", "font-size", "14px", "line-height", "1.4", "color", "#0e1724"], [1, "px-10", "px-md-30", "py-10", "py-md-0", "d-flex", "flex-column", "justify-content-md-center"], [1, "display-4", "font-weight-boldest", "text-white", "mb-12"], [1, "font-size-h1", "font-weight-boldest", "text-dark-75"], [1, "font-size-h4", "line-height-md"]], template: function Dashboard1Component_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
@@ -1297,14 +1354,14 @@ Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefi
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.ChartData);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.pagePermission);
-    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_14__["MixedWidget1Component"]], encapsulation: 2 });
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_14__["NgIf"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_15__["MixedWidget1Component"]], encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](Dashboard1Component, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{
                 selector: 'app-dashboard1',
                 templateUrl: './dashboard1.component.html',
             }]
-    }], function () { return [{ type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] }, { type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"] }, { type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"] }, { type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"] }, { type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__["VerizonService"] }, { type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__["TagManagementService"] }, { type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"] }, { type: src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__["CompanyManagementService"] }, { type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__["SolexBCService"] }]; }, null); })();
+    }], function () { return [{ type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] }, { type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"] }, { type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"] }, { type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"] }, { type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__["VerizonService"] }, { type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__["TagManagementService"] }, { type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"] }, { type: src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__["CompanyManagementService"] }, { type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__["SolexBCService"] }, { type: src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__["ApptitudeService"] }]; }, null); })();
 
 
 /***/ }),

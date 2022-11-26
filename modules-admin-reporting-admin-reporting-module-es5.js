@@ -562,316 +562,553 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var echarts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! echarts */
-      "./node_modules/echarts/index.js");
+      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/shared/service/users.service */
+      "./src/app/shared/service/users.service.ts");
       /* harmony import */
 
 
-      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/shared/service/admin-stats/apptitude.service */
+      "./src/app/shared/service/admin-stats/apptitude.service.ts");
+      /* harmony import */
+
+
+      var _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! ../../tag-management/tag-management.service */
+      "./src/app/modules/tag-management/tag-management.service.ts");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */
       "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
-      /* harmony import */
-
-
-      var _angular_material_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/material/list */
-      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/list.js");
-      /* harmony import */
-
-
-      var _angular_material_divider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/divider */
-      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/divider.js");
-      /* harmony import */
-
-
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      /* harmony import */
+
+
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @swimlane/ngx-datatable */
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
+      "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
+      /* harmony import */
+
+
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
+      "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
 
       var _c0 = ["expandableTable"];
 
-      function ApptitudeComponent_ng_template_45_Template(rf, ctx) {
+      function ApptitudeComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 24);
+        }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div");
+        if (rf & 2) {
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Address");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Test");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("chartData", ctx_r0.chartData);
         }
       }
 
-      function ApptitudeComponent_ng_template_47_Template(rf, ctx) {
+      function ApptitudeComponent_app_summary_metrics_2_Template(rf, ctx) {
         if (rf & 1) {
-          var _r23 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 25);
+        }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "a", 25);
+        if (rf & 2) {
+          var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function ApptitudeComponent_ng_template_47_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r23);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("summaryMetricsData", ctx_r1.summaryMetrics);
+        }
+      }
 
-            var row_r20 = ctx.row;
+      function ApptitudeComponent_ng_template_12_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 26);
 
-            var ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
-            return ctx_r22.toggleExpandRow(row_r20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Address");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Test");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function ApptitudeComponent_ng_template_14_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r30 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 27);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ApptitudeComponent_ng_template_14_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r30);
+
+            var row_r27 = ctx.row;
+
+            var ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r29.toggleExpandRow(row_r27);
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r21 = ctx.expanded;
+          var expanded_r28 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("datatable-icon-right", !expanded_r21)("datatable-icon-down", expanded_r21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r28)("datatable-icon-down", expanded_r28);
         }
       }
 
-      function ApptitudeComponent_ng_template_49_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_15_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Publisher ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function ApptitudeComponent_ng_template_50_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_15_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var value_r25 = ctx.value;
+          var value_r34 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](value_r25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r34));
         }
       }
 
-      function ApptitudeComponent_ng_template_52_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_15_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Tag ");
-        }
-      }
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 28);
 
-      function ApptitudeComponent_ng_template_53_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_15_ng_template_1_Template, 1, 0, "ng-template", 15);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_15_ng_template_2_Template, 3, 3, "ng-template", 12);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var value_r27 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](value_r27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
         }
       }
 
-      function ApptitudeComponent_ng_template_55_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_17_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Total Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
-      function ApptitudeComponent_ng_template_56_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_18_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "number");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var value_r29 = ctx.value;
+          var value_r36 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, value_r29));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r36);
         }
       }
 
-      function ApptitudeComponent_ng_template_58_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Monetized Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
         }
       }
 
-      function ApptitudeComponent_ng_template_59_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_21_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "number");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var value_r31 = ctx.value;
+          var value_r38 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, value_r31));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r38));
         }
       }
 
-      function ApptitudeComponent_ng_template_61_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_23_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Clicks ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
         }
       }
 
-      function ApptitudeComponent_ng_template_62_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_24_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "number");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var value_r33 = ctx.value;
+          var value_r40 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, value_r33));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r40));
         }
       }
 
-      function ApptitudeComponent_ng_template_64_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Impressions ");
+        }
+      }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+      function ApptitudeComponent_ng_template_27_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var column_r34 = ctx.column;
+          var value_r42 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](column_r34.name);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r42));
         }
       }
 
-      function ApptitudeComponent_ng_template_65_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_29_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "strong", 26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " AdImpressions ");
+        }
+      }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "percent");
+      function ApptitudeComponent_ng_template_30_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var row_r36 = ctx.row;
+          var value_r44 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](1, 1, row_r36["clicks"] / row_r36["totalSearches"], "2.2-2"), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r44));
         }
       }
 
-      function ApptitudeComponent_ng_template_67_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_32_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Revenue ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
         }
       }
 
-      function ApptitudeComponent_ng_template_68_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_33_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var value_r39 = ctx.value;
+          var value_r46 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](2, 1, value_r39, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r46, "USD") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "USD"));
+        }
+      }
+
+      function ApptitudeComponent_ng_template_35_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
+        }
+      }
+
+      function ApptitudeComponent_ng_template_36_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "percent");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "percent");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r48 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r48, "2.2-2") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "2.2-2"));
+        }
+      }
+
+      function ApptitudeComponent_ng_template_38_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
+        }
+      }
+
+      function ApptitudeComponent_ng_template_39_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r50 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r50));
+        }
+      }
+
+      function ApptitudeComponent_ng_template_41_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function ApptitudeComponent_ng_template_42_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r52 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r52, "USD"));
         }
       }
 
       var ApptitudeComponent = /*#__PURE__*/function () {
-        function ApptitudeComponent() {
+        function ApptitudeComponent(cdr, userService, apptitudeService, tagService) {
           _classCallCheck(this, ApptitudeComponent);
 
-          this.rows = [{
-            name: 'MNA',
-            tag: 'BHS',
-            totalSearches: '152311',
-            monetizedSearches: '102316',
-            revenue: '8623',
-            clicks: 15684
-          }];
-          this.columns = [{
-            prop: 'name'
-          }, {
-            name: 'Gender'
-          }];
+          this.cdr = cdr;
+          this.userService = userService;
+          this.apptitudeService = apptitudeService;
+          this.tagService = tagService; //Chart setup variables
+
+          this.range = {
+            startDate: '',
+            endDate: ''
+          };
+          this.loadingIndicator = true;
           this.expanded = {};
+          this.tagList = [];
+          this.groupFlag = false;
+          this.selectedCompany = this.getSelectedCompanyStored();
         }
 
         _createClass(ApptitudeComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {
-            var revenueByDayArray = Array.from({
-              length: 20
-            }, function () {
-              return Math.floor(Math.random() * (8000 - 4000) + 4000);
+          key: "ngAfterViewInit",
+          value: function ngAfterViewInit() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              return regeneratorRuntime.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      _context.next = 2;
+                      return this.getCompanyTags(this.selectedCompany);
+
+                    case 2:
+                      this.tagList = _context.sent;
+                      this.rows = [];
+                      _context.next = 6;
+                      return this.getAllApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 6:
+                      this.rows = _context.sent;
+                      _context.next = 9;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 9:
+                      this.chartData = _context.sent;
+                      _context.next = 12;
+                      return this.getSummaryMetrics(this.selectedCompany);
+
+                    case 12:
+                      this.summaryMetrics = _context.sent;
+                      this.cdr.markForCheck();
+
+                    case 14:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee, this);
+            }));
+          }
+        }, {
+          key: "getAllApptitudeStats",
+          value: function getAllApptitudeStats(company, startDate, endDate) {
+            var _this = this;
+
+            return this.apptitudeService.getApptitudeStats(company, startDate, endDate).toPromise().then(function (response) {
+              console.log('getApptitudeStats() response:', response);
+              _this.loadingIndicator = false;
+              _this.allStats = response.stats;
+
+              _this.allStats.map(function (resStat) {
+                resStat.publisher = "No Publisher"; // resStat.tagname = "No Tag" 
+              });
+
+              var _iterator = _createForOfIteratorHelper(_this.tagList),
+                  _step;
+
+              try {
+                for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                  var tagL = _step.value;
+
+                  if (tagL.tag.advertiser == "apptitude") {
+                    var _iterator2 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step2;
+
+                    try {
+                      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                        var tagSub = _step2.value;
+
+                        if (tagSub.filterTag == "Contains") {
+                          _this.allStats.map(function (stat) {
+                            if (stat.subid.includes(tagSub.subid)) {
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher"; // stat.tagname = tagL.tag.name
+                            }
+                          });
+                        } else if (tagSub.filterTag == "StartsWith") {
+                          _this.allStats.map(function (stat) {
+                            if (stat.subid.startsWith(tagSub.subid)) {
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher"; // stat.tagname = tagL.tag.name
+                            }
+                          });
+                        } else if (tagSub.filterTag == "EndsWith") {
+                          _this.allStats.map(function (stat) {
+                            if (stat.subid.endsWith(tagSub.subid)) {
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher"; // stat.tagname = tagL.tag.name
+                            }
+                          });
+                        } else if (tagSub.filterTag == "ExactValue") {
+                          _this.allStats.map(function (stat) {
+                            if (stat.subid == tagSub.subid) {
+                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher"; // stat.tagname = tagL.tag.name
+                            }
+                          });
+                        }
+                      }
+                    } catch (err) {
+                      _iterator2.e(err);
+                    } finally {
+                      _iterator2.f();
+                    }
+                  }
+                }
+              } catch (err) {
+                _iterator.e(err);
+              } finally {
+                _iterator.f();
+              }
+
+              return _this.allStats;
             });
-            var searchesPerDay = Array.from({
-              length: 20
-            }, function () {
-              return Math.floor(Math.random() * (100000 - 40000) + 40000);
-            });
-            this.setChartOptions(10000, 100000, ['Nov 1, Nov 2, Nov 3, Nov 4', 'Nov 5', 'Nov 5', 'Nov 6', 'Nov 7', 'Nov 8', 'Nov 9', 'Nov 10', 'Nov 11', 'Nov 12', 'Nov 13', 'Nov 14', 'Nov 15', 'Nov 16', 'Nov 17', 'Nov 18', 'Nov 19', 'Nov 20'], revenueByDayArray, searchesPerDay);
+          } //Gets the Selected Company from Local Storage
+
+        }, {
+          key: "getSelectedCompanyStored",
+          value: function getSelectedCompanyStored() {
+            return this.userService.getSelectedCompanyFromLocalStorage();
           }
         }, {
           key: "toggleExpandRow",
@@ -887,88 +1124,132 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            // this.range = range;
-            // this.getAllPerionStats(
-            //   'manic_perion',
-            //   this.range.startDate,
-            //   this.range.endDate
-            // );
-            console.log('Report');
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                while (1) {
+                  switch (_context2.prev = _context2.next) {
+                    case 0:
+                      this.range = range;
+                      _context2.next = 3;
+                      return this.getAllApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 3:
+                      this.rows = _context2.sent;
+                      _context2.next = 6;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 6:
+                      this.chartData = _context2.sent;
+                      _context2.next = 9;
+                      return this.getSummaryMetrics(this.selectedCompany);
+
+                    case 9:
+                      this.summaryMetrics = _context2.sent;
+                      this.groupFlag = false;
+                      this.cdr.markForCheck();
+
+                    case 12:
+                    case "end":
+                      return _context2.stop();
+                  }
+                }
+              }, _callee2, this);
+            }));
           }
         }, {
-          key: "setChartOptions",
-          value: function setChartOptions(maxRevenue, maxSearches, daysArray, revenueByDayArray, searchesPerDay) {
-            this.chartDom = document.getElementById('main');
-            this.myChart = echarts__WEBPACK_IMPORTED_MODULE_1__["init"](this.chartDom);
-            this.option = {
-              tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                  type: 'cross',
-                  crossStyle: {
-                    color: '#999'
-                  }
-                }
-              },
-              toolbox: {
-                feature: {
-                  dataView: {
-                    show: true,
-                    readOnly: false
-                  },
-                  magicType: {
-                    show: true,
-                    type: ['line', 'bar']
-                  },
-                  restore: {
-                    show: true
-                  },
-                  saveAsImage: {
-                    show: true
-                  }
-                }
-              },
-              legend: {
-                data: ['Revenue', 'Searches']
-              },
-              xAxis: [{
-                type: 'category',
-                data: daysArray,
-                axisPointer: {
-                  type: 'shadow'
-                }
-              }],
-              yAxis: [{
-                type: 'value',
-                name: 'Revenue',
-                min: 0,
-                max: maxRevenue,
-                interval: 25000,
-                axisLabel: {
-                  formatter: '${value}'
-                }
-              }, {
-                type: 'value',
-                name: 'Searches',
-                min: 0,
-                max: maxSearches,
-                interval: 100000,
-                axisLabel: {
-                  formatter: '{value}'
-                }
-              }],
-              series: [{
-                name: 'Revenue',
-                type: 'bar',
-                data: revenueByDayArray
-              }, {
-                name: 'Searches',
-                type: 'line',
-                yAxisIndex: 1,
-                data: searchesPerDay
-              }]
-            };
-            this.option && this.myChart.setOption(this.option);
+          key: "groupProvider",
+          value: function groupProvider() {
+            var helperSummary = {};
+            var groupData = this.allStats.reduce(function (r, o) {
+              var key = o.publisher;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
+                helperSummary[key].adimpressions += parseFloat(o.adimpressions ? o.adimpressions : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator3 = _createForOfIteratorHelper(groupData),
+                _step3;
+
+            try {
+              for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+                var group = _step3.value;
+                group.split = group.split / group.counter;
+              }
+            } catch (err) {
+              _iterator3.e(err);
+            } finally {
+              _iterator3.f();
+            }
+
+            this.rows = groupData;
+            this.groupFlag = true;
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "backProvider",
+          value: function backProvider() {
+            this.rows = this.allStats;
+            this.groupFlag = false;
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "getChartMetrics",
+          value: function getChartMetrics(company, startDate, endDate) {
+            return this.apptitudeService.getChartMetrics(company, startDate, endDate).toPromise().then(function (response) {
+              return response;
+            })["catch"](function (error) {
+              return error;
+            });
+          }
+        }, {
+          key: "getSummaryMetrics",
+          value: function getSummaryMetrics(company) {
+            return this.apptitudeService.getSummaryMetrics(company).toPromise().then(function (response) {
+              console.log('Got summary metrics');
+              var allSummary = {};
+              var currentPercentPace = 0;
+              var lastPercentPace = 0;
+
+              if (response.summary[0].lastMonthStat[0].profitPace != 0) {
+                currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
+              }
+
+              if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
+                lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
+              }
+
+              response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
+              response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
+              allSummary['summary'] = response.summary;
+              return allSummary;
+            });
+          } //get Tags with selected company
+
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(selectedCompany) {
+            var companyId = selectedCompany.split("/")[1];
+            return this.tagService.getCompanyTags(companyId).toPromise().then(function (response) {
+              return response;
+            })["catch"](function (error) {
+              return error;
+            });
           }
         }]);
 
@@ -976,272 +1257,212 @@
       }();
 
       ApptitudeComponent.ɵfac = function ApptitudeComponent_Factory(t) {
-        return new (t || ApptitudeComponent)();
+        return new (t || ApptitudeComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_3__["ApptitudeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]));
       };
 
-      ApptitudeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      ApptitudeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
         type: ApptitudeComponent,
         selectors: [["app-apptitude"]],
         viewQuery: function ApptitudeComponent_Query(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, true);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
           }
 
           if (rf & 2) {
             var _t;
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 69,
-        vars: 13,
-        consts: [[3, "onDatesPicked"], ["id", "main", 2, "width", "100%", "height", "300px"], [1, "row"], [1, "col-xl-6"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], [1, "material", "fullscreen", "expandable", 2, "top", "52px", "margin-bottom", "10px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "name"], ["ngx-datatable-header-template", ""], ["name", "tag"], ["name", "totalSearches"], ["name", "monetizedSearches"], ["name", "clicks"], ["name", "CTR"], ["name", "revenue"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], [3, "innerHTML"]],
+        decls: 43,
+        vars: 16,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row", "px-6"], [1, "btn", "btn-sm", "btn-primary", "mx-3", 3, "click"], [1, "btn", "btn-sm", "btn-dark", "mx-3", 3, "click"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "name"], ["ngx-datatable-header-template", ""], ["name", "clicks"], ["name", "searches"], ["name", "impressions"], ["name", "adimpressions"], ["name", "cpc"], ["name", "ctr"], ["name", "split"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"]],
         template: function ApptitudeComponent_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("onDatesPicked", function ApptitudeComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("onDatesPicked", function ApptitudeComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) {
               return ctx.updateReportingFiltering($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_app_reporting_revenue_chart_1_Template, 1, 1, "app-reporting-revenue-chart", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_app_summary_metrics_2_Template, 1, 1, "app-summary-metrics", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "button", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ApptitudeComponent_Template_button_click_4_listener() {
+              return ctx.groupProvider();
+            });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Group ");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "h2", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Month to Date Stats");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "button", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ApptitudeComponent_Template_button_click_6_listener() {
+              return ctx.backProvider();
+            });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, " Back ");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-list");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "ngx-datatable", 6, 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-list-item");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "ngx-datatable-row-detail", 8, 9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Revenue: $202,121.26");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Revenue Pace: $231,285.19");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Profit: $29,109.59");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Profit Pace: $173,121.45");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Percentage Change: +21%");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 3);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "div", 4);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 5);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 6);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "h2", 7);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Last Month Stats");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "mat-list");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "Revenue: $167,542.23");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, "Profit: $22,954.45");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "Percentage Change: +0%");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "ngx-datatable", 9, 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "ngx-datatable-row-detail", 11, 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("toggle", function ApptitudeComponent_Template_ngx_datatable_row_detail_toggle_43_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function ApptitudeComponent_Template_ngx_datatable_row_detail_toggle_10_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](45, ApptitudeComponent_ng_template_45_Template, 6, 0, "ng-template", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](12, ApptitudeComponent_ng_template_12_Template, 6, 0, "ng-template", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "ngx-datatable-column", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "ngx-datatable-column", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](47, ApptitudeComponent_ng_template_47_Template, 1, 4, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, ApptitudeComponent_ng_template_14_Template, 1, 4, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "ngx-datatable-column", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, ApptitudeComponent_ngx_datatable_column_15_Template, 3, 1, "ngx-datatable-column", 13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](49, ApptitudeComponent_ng_template_49_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "ngx-datatable-column", 14);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](50, ApptitudeComponent_ng_template_50_Template, 2, 1, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, ApptitudeComponent_ng_template_17_Template, 1, 0, "ng-template", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](18, ApptitudeComponent_ng_template_18_Template, 2, 1, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "ngx-datatable-column", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](52, ApptitudeComponent_ng_template_52_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-column", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](53, ApptitudeComponent_ng_template_53_Template, 2, 1, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, ApptitudeComponent_ng_template_20_Template, 1, 0, "ng-template", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, ApptitudeComponent_ng_template_21_Template, 3, 3, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "ngx-datatable-column", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](55, ApptitudeComponent_ng_template_55_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 17);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](56, ApptitudeComponent_ng_template_56_Template, 3, 3, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, ApptitudeComponent_ng_template_23_Template, 1, 0, "ng-template", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, ApptitudeComponent_ng_template_24_Template, 3, 3, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "ngx-datatable-column", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](58, ApptitudeComponent_ng_template_58_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "ngx-datatable-column", 18);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](59, ApptitudeComponent_ng_template_59_Template, 3, 3, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, ApptitudeComponent_ng_template_26_Template, 1, 0, "ng-template", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, ApptitudeComponent_ng_template_27_Template, 3, 3, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "ngx-datatable-column", 21);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](61, ApptitudeComponent_ng_template_61_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "ngx-datatable-column", 19);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](62, ApptitudeComponent_ng_template_62_Template, 3, 3, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, ApptitudeComponent_ng_template_29_Template, 1, 0, "ng-template", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, ApptitudeComponent_ng_template_30_Template, 3, 3, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "ngx-datatable-column", 22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](64, ApptitudeComponent_ng_template_64_Template, 2, 1, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "ngx-datatable-column", 20);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](65, ApptitudeComponent_ng_template_65_Template, 2, 4, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, ApptitudeComponent_ng_template_32_Template, 1, 0, "ng-template", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, ApptitudeComponent_ng_template_33_Template, 4, 7, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "ngx-datatable-column", 23);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](67, ApptitudeComponent_ng_template_67_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "ngx-datatable-column", 21);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](68, ApptitudeComponent_ng_template_68_Template, 3, 4, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, ApptitudeComponent_ng_template_35_Template, 1, 0, "ng-template", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, ApptitudeComponent_ng_template_36_Template, 4, 7, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "ngx-datatable-column", 22);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, ApptitudeComponent_ng_template_38_Template, 1, 0, "ng-template", 15);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, ApptitudeComponent_ng_template_39_Template, 3, 3, "ng-template", 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "ngx-datatable-column", 23);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](41, ApptitudeComponent_ng_template_41_Template, 1, 0, "ng-template", 15);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](42, ApptitudeComponent_ng_template_42_Template, 3, 4, "ng-template", 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](41);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("scrollbarH", true)("rows", ctx.rows);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.chartData);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("rowHeight", 100);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupFlag);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_2__["ReportingFilteringComponent"], _angular_material_list__WEBPACK_IMPORTED_MODULE_3__["MatList"], _angular_material_list__WEBPACK_IMPORTED_MODULE_3__["MatListItem"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_4__["MatDivider"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DataTableColumnHeaderDirective"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_5__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_8__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_9__["SummaryMetricsComponent"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["PercentPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL2FwcHRpdHVkZS9hcHB0aXR1ZGUuY29tcG9uZW50LnNjc3MifQ== */"]
       });
       /*@__PURE__*/
 
       (function () {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ApptitudeComponent, [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ApptitudeComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
           args: [{
             selector: 'app-apptitude',
             templateUrl: './apptitude.component.html',
             styleUrls: ['./apptitude.component.scss']
           }]
         }], function () {
-          return [];
+          return [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+          }, {
+            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"]
+          }, {
+            type: src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_3__["ApptitudeService"]
+          }, {
+            type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]
+          }];
         }, {
           table: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
             args: ['expandableTable']
           }]
         });
@@ -3160,40 +3381,40 @@
         _createClass(LyonsComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-              return regeneratorRuntime.wrap(function _callee$(_context) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+              return regeneratorRuntime.wrap(function _callee3$(_context3) {
                 while (1) {
-                  switch (_context.prev = _context.next) {
+                  switch (_context3.prev = _context3.next) {
                     case 0:
-                      _context.next = 2;
+                      _context3.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context.sent;
+                      this.tagList = _context3.sent;
                       this.rows = [];
-                      _context.next = 6;
+                      _context3.next = 6;
                       return this.getAllLyonStats(this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context.sent;
-                      _context.next = 9;
+                      this.rows = _context3.sent;
+                      _context3.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context.sent;
-                      _context.next = 12;
+                      this.chartData = _context3.sent;
+                      _context3.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetricsData = _context.sent;
+                      this.summaryMetricsData = _context3.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context.stop();
+                      return _context3.stop();
                   }
                 }
-              }, _callee, this);
+              }, _callee3, this);
             }));
           }
         }, {
@@ -3210,10 +3431,10 @@
         }, {
           key: "routeTester",
           value: function routeTester() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+              return regeneratorRuntime.wrap(function _callee4$(_context4) {
                 while (1) {
-                  switch (_context2.prev = _context2.next) {
+                  switch (_context4.prev = _context4.next) {
                     case 0:
                       console.log('Testing Route');
                       this.lyonService.testingRoute().subscribe(function (response) {
@@ -3224,10 +3445,10 @@
 
                     case 2:
                     case "end":
-                      return _context2.stop();
+                      return _context4.stop();
                   }
                 }
-              }, _callee2, this);
+              }, _callee4, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -3251,56 +3472,56 @@
         }, {
           key: "getAllLyonStats",
           value: function getAllLyonStats(startDate, endDate) {
-            var _this = this;
+            var _this2 = this;
 
             return this.lyonService.getAllStats(startDate, endDate).toPromise().then(function (response) {
-              _this.loadingIndicator = false;
-              _this.allstat = response;
+              _this2.loadingIndicator = false;
+              _this2.allstat = response;
 
-              _this.allstat.map(function (resStat) {
+              _this2.allstat.map(function (resStat) {
                 resStat.publisher = "No Publisher";
                 resStat.tagname = "No Tag";
               }); // var allLyonStat = [];
 
 
-              var _iterator = _createForOfIteratorHelper(_this.tagList),
-                  _step;
+              var _iterator4 = _createForOfIteratorHelper(_this2.tagList),
+                  _step4;
 
               try {
-                for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                  var tagL = _step.value;
+                for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+                  var tagL = _step4.value;
 
                   if (tagL.tag.advertiser == "lyons") {
-                    var _iterator2 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step2;
+                    var _iterator5 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step5;
 
                     try {
-                      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-                        var tagSub = _step2.value;
+                      for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+                        var tagSub = _step5.value;
 
                         if (tagSub.filterTag == "Contains") {
-                          _this.allstat.map(function (stat) {
+                          _this2.allstat.map(function (stat) {
                             if (stat.subid.includes(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "StartsWith") {
-                          _this.allstat.map(function (stat) {
+                          _this2.allstat.map(function (stat) {
                             if (stat.subid.startsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "EndsWith") {
-                          _this.allstat.map(function (stat) {
+                          _this2.allstat.map(function (stat) {
                             if (stat.subid.endsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "ExactValue") {
-                          _this.allstat.map(function (stat) {
+                          _this2.allstat.map(function (stat) {
                             if (stat.subid == tagSub.subid) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
@@ -3309,9 +3530,9 @@
                         }
                       }
                     } catch (err) {
-                      _iterator2.e(err);
+                      _iterator5.e(err);
                     } finally {
-                      _iterator2.f();
+                      _iterator5.f();
                     }
                   }
                 } //duplicated remove
@@ -3362,12 +3583,12 @@
                 // return resultAll;
 
               } catch (err) {
-                _iterator.e(err);
+                _iterator4.e(err);
               } finally {
-                _iterator.f();
+                _iterator4.f();
               }
 
-              return _this.allstat;
+              return _this2.allstat;
             })["catch"](function (error) {
               return error;
             });
@@ -3400,20 +3621,20 @@
               return r;
             }, []);
 
-            var _iterator3 = _createForOfIteratorHelper(groupData),
-                _step3;
+            var _iterator6 = _createForOfIteratorHelper(groupData),
+                _step6;
 
             try {
-              for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-                var group = _step3.value;
+              for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+                var group = _step6.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator3.e(err);
+              _iterator6.e(err);
             } finally {
-              _iterator3.f();
+              _iterator6.f();
             }
 
             this.rows = groupData;
@@ -3439,37 +3660,37 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-              return regeneratorRuntime.wrap(function _callee3$(_context3) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+              return regeneratorRuntime.wrap(function _callee5$(_context5) {
                 while (1) {
-                  switch (_context3.prev = _context3.next) {
+                  switch (_context5.prev = _context5.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context3.next = 3;
+                      _context5.next = 3;
                       return this.getAllLyonStats(this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context3.sent;
-                      _context3.next = 6;
+                      this.rows = _context5.sent;
+                      _context5.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context3.sent;
-                      _context3.next = 9;
+                      this.chartData = _context5.sent;
+                      _context5.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetricsData = _context3.sent;
+                      this.summaryMetricsData = _context5.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context3.stop();
+                      return _context5.stop();
                   }
                 }
-              }, _callee3, this);
+              }, _callee5, this);
             }));
           }
         }, {
@@ -3480,12 +3701,12 @@
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            var _this2 = this;
+            var _this3 = this;
 
             return this.lyonService.getSummaryMetrics(company).toPromise().then(function (response) {
-              _this2.currentMonthData = response[0].summaryMetrics;
-              _this2.beforeMonthData = response[0].lastMonthStat;
-              _this2.twoBeforeMonthData = response[0].twoLastMonthStat;
+              _this3.currentMonthData = response[0].summaryMetrics;
+              _this3.beforeMonthData = response[0].lastMonthStat;
+              _this3.twoBeforeMonthData = response[0].twoLastMonthStat;
               var dayInCurrentMonth = response[0].dayInCurrentMonth;
               var dayInBeforeMonth = response[0].dayInBeforeMonth;
               var dayInTwoBeforeMonth = response[0].dayInTwoBeforeMonth; // var summaryCurrentStat = [];
@@ -3516,12 +3737,12 @@
 
               var helperSummary = {};
 
-              _this2.currentMonthData.map(function (f) {
+              _this3.currentMonthData.map(function (f) {
                 f.revenue = parseFloat(f.revenue); // f.ctr = parseFloat(f.ctr);
                 // f.biddedCtr = parseFloat(f.biddedCTR);
               });
 
-              var resultSummary = _this2.currentMonthData.reduce(function (r, o) {
+              var resultSummary = _this3.currentMonthData.reduce(function (r, o) {
                 var key = o.date;
 
                 if (!helperSummary[key]) {
@@ -3544,12 +3765,12 @@
               var monthRevenuePace = 0;
               var profitPace = 0;
 
-              var _iterator4 = _createForOfIteratorHelper(resultSummary),
-                  _step4;
+              var _iterator7 = _createForOfIteratorHelper(resultSummary),
+                  _step7;
 
               try {
-                for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-                  var sumData = _step4.value;
+                for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
+                  var sumData = _step7.value;
                   monthRevenue += sumData.revenue;
                   monthProfit += sumData.revenue * (100 - sumData.split) * 0.01;
                   monthRevenuePace += sumData.revenue / resultSummary.length * dayInCurrentMonth;
@@ -3581,19 +3802,19 @@
                 // });
 
               } catch (err) {
-                _iterator4.e(err);
+                _iterator7.e(err);
               } finally {
-                _iterator4.f();
+                _iterator7.f();
               }
 
               var helperBeforeSummary = {};
 
-              _this2.beforeMonthData.map(function (f) {
+              _this3.beforeMonthData.map(function (f) {
                 f.revenue = parseFloat(f.revenue); // f.ctr = parseFloat(f.ctr);
                 // f.biddedCtr = parseFloat(f.biddedCTR);
               });
 
-              var resultBeforeSummary = _this2.beforeMonthData.reduce(function (r, o) {
+              var resultBeforeSummary = _this3.beforeMonthData.reduce(function (r, o) {
                 var key = o.date;
 
                 if (!helperBeforeSummary[key]) {
@@ -3616,12 +3837,12 @@
               var monthBeforeRevenuePace = 0;
               var profitBeforePace = 0;
 
-              var _iterator5 = _createForOfIteratorHelper(resultBeforeSummary),
-                  _step5;
+              var _iterator8 = _createForOfIteratorHelper(resultBeforeSummary),
+                  _step8;
 
               try {
-                for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-                  var sumBeforeData = _step5.value;
+                for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
+                  var sumBeforeData = _step8.value;
                   monthBeforeRevenue += sumBeforeData.revenue;
                   monthBeforeProfit += sumBeforeData.revenue * (100 - sumBeforeData.split) * 0.01;
                   monthBeforeRevenuePace += sumBeforeData.revenue / resultBeforeSummary.length * dayInBeforeMonth;
@@ -3653,19 +3874,19 @@
                 // });
 
               } catch (err) {
-                _iterator5.e(err);
+                _iterator8.e(err);
               } finally {
-                _iterator5.f();
+                _iterator8.f();
               }
 
               var helperTwoBeforeSummary = {};
 
-              _this2.twoBeforeMonthData.map(function (f) {
+              _this3.twoBeforeMonthData.map(function (f) {
                 f.revenue = parseFloat(f.revenue); // f.ctr = parseFloat(f.ctr);
                 // f.biddedCtr = parseFloat(f.biddedCTR);
               });
 
-              var resultTwoBeforeSummary = _this2.twoBeforeMonthData.reduce(function (r, o) {
+              var resultTwoBeforeSummary = _this3.twoBeforeMonthData.reduce(function (r, o) {
                 var key = o.date;
 
                 if (!helperTwoBeforeSummary[key]) {
@@ -3688,21 +3909,21 @@
               var monthTwoBeforeRevenuePace = 0;
               var profitTwoBeforePace = 0;
 
-              var _iterator6 = _createForOfIteratorHelper(resultTwoBeforeSummary),
-                  _step6;
+              var _iterator9 = _createForOfIteratorHelper(resultTwoBeforeSummary),
+                  _step9;
 
               try {
-                for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
-                  var sumTwoBeforeData = _step6.value;
+                for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
+                  var sumTwoBeforeData = _step9.value;
                   monthTwoBeforeRevenue += sumTwoBeforeData.revenue;
                   monthTwoBeforeProfit += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01;
                   monthTwoBeforeRevenuePace += sumTwoBeforeData.revenue / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
                   profitTwoBeforePace += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01 / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
                 }
               } catch (err) {
-                _iterator6.e(err);
+                _iterator9.e(err);
               } finally {
-                _iterator6.f();
+                _iterator9.f();
               }
 
               var currentPercentPace = 0;
@@ -3743,13 +3964,13 @@
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            var _this3 = this;
+            var _this4 = this;
 
             return this.lyonService.getAllStats(startDate, endDate).toPromise().then(function (response) {
               var sortResponse = response.slice().sort(function (a, b) {
                 return a.date - b.date;
               });
-              _this3.allChart = sortResponse; // var chartAllLyonStat = [];
+              _this4.allChart = sortResponse; // var chartAllLyonStat = [];
               // for (var tagL of this.tagList) {
               //   for (var tagSub of tagL.tag.subids) {
               //     if(tagSub.filterTag =="Contains") {
@@ -3793,7 +4014,7 @@
               //   f.biddedCtr = parseFloat(f.biddedCTR);
               // })
 
-              var resultChart = _this3.allChart.reduce(function (r, o) {
+              var resultChart = _this4.allChart.reduce(function (r, o) {
                 var key = o.date;
 
                 if (!helperChart[key]) {
@@ -3816,20 +4037,20 @@
               var searchesPerDayVal = [];
               var chartDataValue = {};
 
-              var _iterator7 = _createForOfIteratorHelper(resultChart),
-                  _step7;
+              var _iterator10 = _createForOfIteratorHelper(resultChart),
+                  _step10;
 
               try {
-                for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
-                  var resVal = _step7.value;
+                for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
+                  var resVal = _step10.value;
                   revenuePerDayVal.push(resVal.revenue);
                   datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.searches);
                 }
               } catch (err) {
-                _iterator7.e(err);
+                _iterator10.e(err);
               } finally {
-                _iterator7.f();
+                _iterator10.f();
               }
 
               chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -3843,11 +4064,11 @@
         }, {
           key: "combineSummaryMetrics",
           value: function combineSummaryMetrics(metrics) {
-            var _this4 = this;
+            var _this5 = this;
 
             metrics.summary.keys.forEach(function (element) {
-              _this4.summary.revenue += element.revenue;
-              _this4.summary.profit += element.revenue * ((100 - element.split) * 0.01);
+              _this5.summary.revenue += element.revenue;
+              _this5.summary.profit += element.revenue * ((100 - element.split) * 0.01);
             });
           }
         }, {
@@ -4328,26 +4549,26 @@
         }, {
           key: "getAllTags",
           value: function getAllTags() {
-            var _this5 = this;
+            var _this6 = this;
 
             this.tagService.getAllTags().subscribe(function (response) {
               var resData = [];
 
-              if (_this5.companySelected) {
+              if (_this6.companySelected) {
                 resData = response.filter(function (res) {
-                  return res.company[0]['_id'] == _this5.companySelected;
+                  return res.company[0]['_id'] == _this6.companySelected;
                 });
               }
 
               if (resData.length > 0) {
-                _this5.tagData = [{
+                _this6.tagData = [{
                   value: 'all tag',
                   viewValue: 'All Tag'
                 }];
               }
 
               resData.map(function (res) {
-                _this5.tagData.push({
+                _this6.tagData.push({
                   value: res._id,
                   viewValue: res.name
                 });
@@ -4469,7 +4690,7 @@
         }, {
           key: "onReportSubmit",
           value: function onReportSubmit() {
-            var _this6 = this;
+            var _this7 = this;
 
             if (this.manaulUpFG.valid) {
               this.manaulUpFG.addControl('company', new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required));
@@ -4477,12 +4698,12 @@
                 company: this.companySelected
               });
               this.manualUpdateService.updateManualSplit(this.manaulUpFG.value).subscribe(function (response) {
-                var checkExist = _this6.isObjectEmpty(response);
+                var checkExist = _this7.isObjectEmpty(response);
 
                 if (!checkExist) {
-                  _this6.notification.showSuccess("".concat(_this6.selectedTagName, " data splits  successfully updated!"), "");
+                  _this7.notification.showSuccess("".concat(_this7.selectedTagName, " data splits  successfully updated!"), "");
                 } else {
-                  _this6.notification.showWarning("".concat(_this6.selectedTagName, " data not existed!"), "");
+                  _this7.notification.showWarning("".concat(_this7.selectedTagName, " data not existed!"), "");
                 }
               });
             }
@@ -4971,12 +5192,12 @@
         }, {
           key: "getReportingProviderList",
           value: function getReportingProviderList() {
-            var _this7 = this;
+            var _this8 = this;
 
             if (this.companySelected) {
               this.companyService.getOneCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
                 res.reportingProviders.map(function (report) {
-                  _this7.reportTypeData.push({
+                  _this8.reportTypeData.push({
                     value: report.reportingProvider,
                     viewValue: report.reportingProvider
                   });
@@ -4993,7 +5214,7 @@
         }, {
           key: "onReportSubmit",
           value: function onReportSubmit() {
-            var _this8 = this;
+            var _this9 = this;
 
             if (this.manaulUpFG.valid) {
               this.manaulUpFG.addControl('company', new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required));
@@ -5002,12 +5223,12 @@
               });
               var reportTypeValue = this.manaulUpFG.value['reportType'];
               this.manualUpdateService.updateManualStats(this.manaulUpFG.value).subscribe(function (response) {
-                var checkExist = _this8.isObjectEmpty(response);
+                var checkExist = _this9.isObjectEmpty(response);
 
                 if (!checkExist) {
-                  _this8.notification.showSuccess("".concat(reportTypeValue, " data stats successfully updated!"), "");
+                  _this9.notification.showSuccess("".concat(reportTypeValue, " data stats successfully updated!"), "");
                 } else {
-                  _this8.notification.showWarning("".concat(reportTypeValue, " data not existed!"), "");
+                  _this9.notification.showWarning("".concat(reportTypeValue, " data not existed!"), "");
                 }
               });
             }
@@ -5984,40 +6205,40 @@
         _createClass(PerionComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
-              return regeneratorRuntime.wrap(function _callee4$(_context4) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+              return regeneratorRuntime.wrap(function _callee6$(_context6) {
                 while (1) {
-                  switch (_context4.prev = _context4.next) {
+                  switch (_context6.prev = _context6.next) {
                     case 0:
-                      _context4.next = 2;
+                      _context6.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context4.sent;
+                      this.tagList = _context6.sent;
                       this.rows = [];
-                      _context4.next = 6;
+                      _context6.next = 6;
                       return this.getAllPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context4.sent;
-                      _context4.next = 9;
+                      this.rows = _context6.sent;
+                      _context6.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context4.sent;
-                      _context4.next = 12;
+                      this.chartData = _context6.sent;
+                      _context6.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context4.sent;
+                      this.summaryMetrics = _context6.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context4.stop();
+                      return _context6.stop();
                   }
                 }
-              }, _callee4, this);
+              }, _callee6, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -6040,10 +6261,10 @@
         }, {
           key: "routeTester",
           value: function routeTester() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
-              return regeneratorRuntime.wrap(function _callee5$(_context5) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+              return regeneratorRuntime.wrap(function _callee7$(_context7) {
                 while (1) {
-                  switch (_context5.prev = _context5.next) {
+                  switch (_context7.prev = _context7.next) {
                     case 0:
                       console.log('Testing Route');
                       this.perionService.testingRoute().subscribe(function (response) {
@@ -6054,10 +6275,10 @@
 
                     case 2:
                     case "end":
-                      return _context5.stop();
+                      return _context7.stop();
                   }
                 }
-              }, _callee5, this);
+              }, _callee7, this);
             }));
           }
         }, {
@@ -6072,93 +6293,93 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
-              return regeneratorRuntime.wrap(function _callee6$(_context6) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+              return regeneratorRuntime.wrap(function _callee8$(_context8) {
                 while (1) {
-                  switch (_context6.prev = _context6.next) {
+                  switch (_context8.prev = _context8.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context6.next = 3;
+                      _context8.next = 3;
                       return this.getAllPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context6.sent;
-                      _context6.next = 6;
+                      this.rows = _context8.sent;
+                      _context8.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context6.sent;
-                      _context6.next = 9;
+                      this.chartData = _context8.sent;
+                      _context8.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context6.sent;
+                      this.summaryMetrics = _context8.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context6.stop();
+                      return _context8.stop();
                   }
                 }
-              }, _callee6, this);
+              }, _callee8, this);
             }));
           }
         }, {
           key: "getAllPerionStats",
           value: function getAllPerionStats(company, startDate, endDate) {
-            var _this9 = this;
+            var _this10 = this;
 
             return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('response:', response);
-              _this9.loadingIndicator = false; // console.log(response.stats);
+              _this10.loadingIndicator = false; // console.log(response.stats);
 
-              _this9.allStat = response.stats;
+              _this10.allStat = response.stats;
 
-              _this9.allStat.map(function (resStat) {
+              _this10.allStat.map(function (resStat) {
                 resStat.publisher = "No Publisher";
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator8 = _createForOfIteratorHelper(_this9.tagList),
-                  _step8;
+              var _iterator11 = _createForOfIteratorHelper(_this10.tagList),
+                  _step11;
 
               try {
-                for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
-                  var tagL = _step8.value;
+                for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
+                  var tagL = _step11.value;
 
                   if (tagL.tag.advertiser == "perion") {
-                    var _iterator9 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step9;
+                    var _iterator12 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step12;
 
                     try {
-                      for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
-                        var tagSub = _step9.value;
+                      for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
+                        var tagSub = _step12.value;
 
                         if (tagSub.filterTag == "Contains") {
-                          _this9.allStat.map(function (stat) {
+                          _this10.allStat.map(function (stat) {
                             if (stat.subid.includes(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "StartsWith") {
-                          _this9.allStat.map(function (stat) {
+                          _this10.allStat.map(function (stat) {
                             if (stat.subid.startsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "EndsWith") {
-                          _this9.allStat.map(function (stat) {
+                          _this10.allStat.map(function (stat) {
                             if (stat.subid.endsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "ExactValue") {
-                          _this9.allStat.map(function (stat) {
+                          _this10.allStat.map(function (stat) {
                             if (stat.subid == tagSub.subid) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
@@ -6167,9 +6388,9 @@
                         }
                       }
                     } catch (err) {
-                      _iterator9.e(err);
+                      _iterator12.e(err);
                     } finally {
-                      _iterator9.f();
+                      _iterator12.f();
                     }
                   }
                 } // var helper = new Set();
@@ -6182,12 +6403,12 @@
                 //return filtered_data.slice().sort((a, b) => b.date - a.date);
 
               } catch (err) {
-                _iterator8.e(err);
+                _iterator11.e(err);
               } finally {
-                _iterator8.f();
+                _iterator11.f();
               }
 
-              return _this9.allStat;
+              return _this10.allStat;
             })["catch"](function (error) {
               return error;
             });
@@ -6221,20 +6442,20 @@
               return r;
             }, []);
 
-            var _iterator10 = _createForOfIteratorHelper(groupData),
-                _step10;
+            var _iterator13 = _createForOfIteratorHelper(groupData),
+                _step13;
 
             try {
-              for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
-                var group = _step10.value;
+              for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
+                var group = _step13.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator10.e(err);
+              _iterator13.e(err);
             } finally {
-              _iterator10.f();
+              _iterator13.f();
             }
 
             this.rows = groupData;
@@ -6487,11 +6708,11 @@
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            var _this10 = this;
+            var _this11 = this;
 
             return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise().then(function (response) {
               // console.log('getAllPerionStats() response:');
-              _this10.allChartStat = response.stats; // var allChartPerionStat = [];
+              _this11.allChartStat = response.stats; // var allChartPerionStat = [];
               // for (var tagL of this.tagList) {
               //   if(tagL.tag.advertiser == "perion") {
               //     for (var tagSub of tagL.tag.subids) {
@@ -6530,12 +6751,12 @@
               //   return !helper.has(key) && helper.add(key);
               // });
 
-              _this10.allChartStat = _this10.allChartStat.slice().sort(function (a, b) {
+              _this11.allChartStat = _this11.allChartStat.slice().sort(function (a, b) {
                 return a.date - b.date;
               });
               var helperChart = {};
 
-              var resultChart = _this10.allChartStat.reduce(function (r, o) {
+              var resultChart = _this11.allChartStat.reduce(function (r, o) {
                 var key = o.date;
 
                 if (!helperChart[key]) {
@@ -6558,20 +6779,20 @@
               var searchesPerDayVal = [];
               var chartDataValue = {};
 
-              var _iterator11 = _createForOfIteratorHelper(resultChart),
-                  _step11;
+              var _iterator14 = _createForOfIteratorHelper(resultChart),
+                  _step14;
 
               try {
-                for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
-                  var resVal = _step11.value;
+                for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
+                  var resVal = _step14.value;
                   revenuePerDayVal.push(resVal.revenue);
                   datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.impressions);
                 }
               } catch (err) {
-                _iterator11.e(err);
+                _iterator14.e(err);
               } finally {
-                _iterator11.f();
+                _iterator14.f();
               }
 
               chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -6585,12 +6806,12 @@
         }, {
           key: "combineSummaryMetrics",
           value: function combineSummaryMetrics(metrics) {
-            var _this11 = this;
+            var _this12 = this;
 
             metrics.summary.keys.forEach(function (element) {
               console.log(element.revenue);
-              _this11.summary.revenue += element.revenue;
-              _this11.summary.profit += element.revenue * ((100 - element.split) * 0.01);
+              _this12.summary.revenue += element.revenue;
+              _this12.summary.profit += element.revenue * ((100 - element.split) * 0.01);
             });
           } //get Tags with selected company
 
@@ -7235,75 +7456,75 @@
         _createClass(RubiComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
-              return regeneratorRuntime.wrap(function _callee7$(_context7) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
+              return regeneratorRuntime.wrap(function _callee9$(_context9) {
                 while (1) {
-                  switch (_context7.prev = _context7.next) {
+                  switch (_context9.prev = _context9.next) {
                     case 0:
-                      _context7.next = 2;
+                      _context9.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context7.sent;
+                      this.tagList = _context9.sent;
                       this.rows = [];
-                      _context7.next = 6;
+                      _context9.next = 6;
                       return this.getAllRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context7.sent;
-                      _context7.next = 9;
+                      this.rows = _context9.sent;
+                      _context9.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context7.sent;
-                      _context7.next = 12;
+                      this.chartData = _context9.sent;
+                      _context9.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context7.sent;
+                      this.summaryMetrics = _context9.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context7.stop();
+                      return _context9.stop();
                   }
                 }
-              }, _callee7, this);
+              }, _callee9, this);
             }));
           }
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
-              return regeneratorRuntime.wrap(function _callee8$(_context8) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
+              return regeneratorRuntime.wrap(function _callee10$(_context10) {
                 while (1) {
-                  switch (_context8.prev = _context8.next) {
+                  switch (_context10.prev = _context10.next) {
                     case 0:
                       this.range = range;
-                      _context8.next = 3;
+                      _context10.next = 3;
                       return this.getAllRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context8.sent;
-                      _context8.next = 6;
+                      this.rows = _context10.sent;
+                      _context10.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context8.sent;
-                      _context8.next = 9;
+                      this.chartData = _context10.sent;
+                      _context10.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context8.sent;
+                      this.summaryMetrics = _context10.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context8.stop();
+                      return _context10.stop();
                   }
                 }
-              }, _callee8, this);
+              }, _callee10, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -7331,56 +7552,56 @@
         }, {
           key: "getAllRubiStats",
           value: function getAllRubiStats(company, startDate, endDate) {
-            var _this12 = this;
+            var _this13 = this;
 
             return this.rubiService.getRubiStats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('getRubiStats() response:', response);
-              _this12.loadingIndicator = false;
-              _this12.allStats = response.stats;
+              _this13.loadingIndicator = false;
+              _this13.allStats = response.stats;
 
-              _this12.allStats.map(function (resStat) {
+              _this13.allStats.map(function (resStat) {
                 resStat.publisher = "No Publisher";
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator12 = _createForOfIteratorHelper(_this12.tagList),
-                  _step12;
+              var _iterator15 = _createForOfIteratorHelper(_this13.tagList),
+                  _step15;
 
               try {
-                for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
-                  var tagL = _step12.value;
+                for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
+                  var tagL = _step15.value;
 
                   if (tagL.tag.advertiser == "rubi") {
-                    var _iterator13 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step13;
+                    var _iterator16 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step16;
 
                     try {
-                      for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
-                        var tagSub = _step13.value;
+                      for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
+                        var tagSub = _step16.value;
 
                         if (tagSub.filterTag == "Contains") {
-                          _this12.allStats.map(function (stat) {
+                          _this13.allStats.map(function (stat) {
                             if (stat.subid.includes(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "StartsWith") {
-                          _this12.allStats.map(function (stat) {
+                          _this13.allStats.map(function (stat) {
                             if (stat.subid.startsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "EndsWith") {
-                          _this12.allStats.map(function (stat) {
+                          _this13.allStats.map(function (stat) {
                             if (stat.subid.endsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "ExactValue") {
-                          _this12.allStats.map(function (stat) {
+                          _this13.allStats.map(function (stat) {
                             if (stat.subid == tagSub.subid) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
@@ -7389,19 +7610,19 @@
                         }
                       }
                     } catch (err) {
-                      _iterator13.e(err);
+                      _iterator16.e(err);
                     } finally {
-                      _iterator13.f();
+                      _iterator16.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator12.e(err);
+                _iterator15.e(err);
               } finally {
-                _iterator12.f();
+                _iterator15.f();
               }
 
-              return _this12.allStats;
+              return _this13.allStats;
             });
           }
         }, {
@@ -7428,18 +7649,18 @@
               return r;
             }, []);
 
-            var _iterator14 = _createForOfIteratorHelper(groupData),
-                _step14;
+            var _iterator17 = _createForOfIteratorHelper(groupData),
+                _step17;
 
             try {
-              for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
-                var group = _step14.value;
+              for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
+                var group = _step17.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator14.e(err);
+              _iterator17.e(err);
             } finally {
-              _iterator14.f();
+              _iterator17.f();
             }
 
             this.rows = groupData;
@@ -8110,75 +8331,75 @@
         _createClass(SolexBcComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
-              return regeneratorRuntime.wrap(function _callee9$(_context9) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
+              return regeneratorRuntime.wrap(function _callee11$(_context11) {
                 while (1) {
-                  switch (_context9.prev = _context9.next) {
+                  switch (_context11.prev = _context11.next) {
                     case 0:
-                      _context9.next = 2;
+                      _context11.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context9.sent;
+                      this.tagList = _context11.sent;
                       this.rows = [];
-                      _context9.next = 6;
+                      _context11.next = 6;
                       return this.getAllSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context9.sent;
-                      _context9.next = 9;
+                      this.rows = _context11.sent;
+                      _context11.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context9.sent;
-                      _context9.next = 12;
+                      this.chartData = _context11.sent;
+                      _context11.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context9.sent;
+                      this.summaryMetrics = _context11.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context9.stop();
+                      return _context11.stop();
                   }
                 }
-              }, _callee9, this);
+              }, _callee11, this);
             }));
           }
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
-              return regeneratorRuntime.wrap(function _callee10$(_context10) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
+              return regeneratorRuntime.wrap(function _callee12$(_context12) {
                 while (1) {
-                  switch (_context10.prev = _context10.next) {
+                  switch (_context12.prev = _context12.next) {
                     case 0:
                       this.range = range;
-                      _context10.next = 3;
+                      _context12.next = 3;
                       return this.getAllSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context10.sent;
-                      _context10.next = 6;
+                      this.rows = _context12.sent;
+                      _context12.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context10.sent;
-                      _context10.next = 9;
+                      this.chartData = _context12.sent;
+                      _context12.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context10.sent;
+                      this.summaryMetrics = _context12.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context10.stop();
+                      return _context12.stop();
                   }
                 }
-              }, _callee10, this);
+              }, _callee12, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -8206,56 +8427,56 @@
         }, {
           key: "getAllSolexBCStats",
           value: function getAllSolexBCStats(company, startDate, endDate) {
-            var _this13 = this;
+            var _this14 = this;
 
             return this.solexBCService.getSolexBCStats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('getSolexBCStats() response:', response);
-              _this13.loadingIndicator = false;
-              _this13.allStats = response.stats;
+              _this14.loadingIndicator = false;
+              _this14.allStats = response.stats;
 
-              _this13.allStats.map(function (resStat) {
+              _this14.allStats.map(function (resStat) {
                 resStat.publisher = "No Publisher";
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator15 = _createForOfIteratorHelper(_this13.tagList),
-                  _step15;
+              var _iterator18 = _createForOfIteratorHelper(_this14.tagList),
+                  _step18;
 
               try {
-                for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
-                  var tagL = _step15.value;
+                for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
+                  var tagL = _step18.value;
 
                   if (tagL.tag.advertiser == "solex-bc") {
-                    var _iterator16 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step16;
+                    var _iterator19 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step19;
 
                     try {
-                      for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
-                        var tagSub = _step16.value;
+                      for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
+                        var tagSub = _step19.value;
 
                         if (tagSub.filterTag == "Contains") {
-                          _this13.allStats.map(function (stat) {
+                          _this14.allStats.map(function (stat) {
                             if (stat.subid.includes(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "StartsWith") {
-                          _this13.allStats.map(function (stat) {
+                          _this14.allStats.map(function (stat) {
                             if (stat.subid.startsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "EndsWith") {
-                          _this13.allStats.map(function (stat) {
+                          _this14.allStats.map(function (stat) {
                             if (stat.subid.endsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "ExactValue") {
-                          _this13.allStats.map(function (stat) {
+                          _this14.allStats.map(function (stat) {
                             if (stat.subid == tagSub.subid) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
@@ -8264,19 +8485,19 @@
                         }
                       }
                     } catch (err) {
-                      _iterator16.e(err);
+                      _iterator19.e(err);
                     } finally {
-                      _iterator16.f();
+                      _iterator19.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator15.e(err);
+                _iterator18.e(err);
               } finally {
-                _iterator15.f();
+                _iterator18.f();
               }
 
-              return _this13.allStats;
+              return _this14.allStats;
             });
           }
         }, {
@@ -8303,18 +8524,18 @@
               return r;
             }, []);
 
-            var _iterator17 = _createForOfIteratorHelper(groupData),
-                _step17;
+            var _iterator20 = _createForOfIteratorHelper(groupData),
+                _step20;
 
             try {
-              for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
-                var group = _step17.value;
+              for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+                var group = _step20.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator17.e(err);
+              _iterator20.e(err);
             } finally {
-              _iterator17.f();
+              _iterator20.f();
             }
 
             this.rows = groupData;
@@ -8950,63 +9171,63 @@
         _createClass(System1Component, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
-              return regeneratorRuntime.wrap(function _callee11$(_context11) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
+              return regeneratorRuntime.wrap(function _callee13$(_context13) {
                 while (1) {
-                  switch (_context11.prev = _context11.next) {
+                  switch (_context13.prev = _context13.next) {
                     case 0:
                       this.rows = [];
-                      _context11.next = 3;
+                      _context13.next = 3;
                       return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context11.sent;
+                      this.rows = _context13.sent;
 
                     case 4:
                     case "end":
-                      return _context11.stop();
+                      return _context13.stop();
                   }
                 }
-              }, _callee11, this);
+              }, _callee13, this);
             }));
           }
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
-              return regeneratorRuntime.wrap(function _callee12$(_context12) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
+              return regeneratorRuntime.wrap(function _callee14$(_context14) {
                 while (1) {
-                  switch (_context12.prev = _context12.next) {
+                  switch (_context14.prev = _context14.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context12.next = 3;
+                      _context14.next = 3;
                       return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context12.sent;
+                      this.rows = _context14.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 6:
                     case "end":
-                      return _context12.stop();
+                      return _context14.stop();
                   }
                 }
-              }, _callee12, this);
+              }, _callee14, this);
             }));
           } //get Stat all
 
         }, {
           key: "getAllSystem1Stats",
           value: function getAllSystem1Stats(company, startDate, endDate) {
-            var _this14 = this;
+            var _this15 = this;
 
             return this.system1Service.getAllSystem1Stats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('getAllSystem1Stats() response:', response);
-              _this14.loadingIndicator = false;
-              _this14.allStats = response.stats;
-              return _this14.allStats;
+              _this15.loadingIndicator = false;
+              _this15.allStats = response.stats;
+              return _this15.allStats;
             });
           }
         }, {
@@ -10338,40 +10559,40 @@
         _createClass(VerizonDirectComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
-              return regeneratorRuntime.wrap(function _callee13$(_context13) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee15() {
+              return regeneratorRuntime.wrap(function _callee15$(_context15) {
                 while (1) {
-                  switch (_context13.prev = _context13.next) {
+                  switch (_context15.prev = _context15.next) {
                     case 0:
-                      _context13.next = 2;
+                      _context15.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context13.sent;
+                      this.tagList = _context15.sent;
                       this.rows = [];
-                      _context13.next = 6;
+                      _context15.next = 6;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context13.sent;
-                      _context13.next = 9;
+                      this.rows = _context15.sent;
+                      _context15.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context13.sent;
-                      _context13.next = 12;
+                      this.chartData = _context15.sent;
+                      _context15.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context13.sent;
+                      this.summaryMetrics = _context15.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context13.stop();
+                      return _context15.stop();
                   }
                 }
-              }, _callee13, this);
+              }, _callee15, this);
             }));
           } //get Tags with selected company
 
@@ -10394,36 +10615,36 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
-              return regeneratorRuntime.wrap(function _callee14$(_context14) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee16() {
+              return regeneratorRuntime.wrap(function _callee16$(_context16) {
                 while (1) {
-                  switch (_context14.prev = _context14.next) {
+                  switch (_context16.prev = _context16.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context14.next = 3;
+                      _context16.next = 3;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context14.sent;
-                      _context14.next = 6;
+                      this.rows = _context16.sent;
+                      _context16.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context14.sent;
-                      _context14.next = 9;
+                      this.chartData = _context16.sent;
+                      _context16.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context14.sent;
+                      this.summaryMetrics = _context16.sent;
                       this.refreshTable();
 
                     case 11:
                     case "end":
-                      return _context14.stop();
+                      return _context16.stop();
                   }
                 }
-              }, _callee14, this);
+              }, _callee16, this);
             }));
           }
         }, {
@@ -10454,56 +10675,56 @@
         }, {
           key: "getAllVerizonStats",
           value: function getAllVerizonStats(company, startDate, endDate) {
-            var _this15 = this;
+            var _this16 = this;
 
             return this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('getAllVerizonStats() response:', response);
-              _this15.loadingIndicator = false;
-              _this15.allStats = response.stats;
+              _this16.loadingIndicator = false;
+              _this16.allStats = response.stats;
 
-              _this15.allStats.map(function (resStat) {
+              _this16.allStats.map(function (resStat) {
                 resStat.publisher = "No Publisher";
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator18 = _createForOfIteratorHelper(_this15.tagList),
-                  _step18;
+              var _iterator21 = _createForOfIteratorHelper(_this16.tagList),
+                  _step21;
 
               try {
-                for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
-                  var tagL = _step18.value;
+                for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+                  var tagL = _step21.value;
 
                   if (tagL.tag.advertiser == "verizon-direct") {
-                    var _iterator19 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step19;
+                    var _iterator22 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step22;
 
                     try {
-                      for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
-                        var tagSub = _step19.value;
+                      for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                        var tagSub = _step22.value;
 
                         if (tagSub.filterTag == "Contains") {
-                          _this15.allStats.map(function (stat) {
+                          _this16.allStats.map(function (stat) {
                             if (stat.subid.includes(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "StartsWith") {
-                          _this15.allStats.map(function (stat) {
+                          _this16.allStats.map(function (stat) {
                             if (stat.subid.startsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "EndsWith") {
-                          _this15.allStats.map(function (stat) {
+                          _this16.allStats.map(function (stat) {
                             if (stat.subid.endsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "ExactValue") {
-                          _this15.allStats.map(function (stat) {
+                          _this16.allStats.map(function (stat) {
                             if (stat.subid == tagSub.subid) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
@@ -10512,19 +10733,19 @@
                         }
                       }
                     } catch (err) {
-                      _iterator19.e(err);
+                      _iterator22.e(err);
                     } finally {
-                      _iterator19.f();
+                      _iterator22.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator18.e(err);
+                _iterator21.e(err);
               } finally {
-                _iterator18.f();
+                _iterator21.f();
               }
 
-              return _this15.allStats;
+              return _this16.allStats;
             });
           }
         }, {

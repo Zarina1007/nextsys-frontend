@@ -140,6 +140,132 @@
     },
 
     /***/
+    "./src/app/shared/service/admin-stats/apptitude.service.ts":
+    /*!*****************************************************************!*\
+      !*** ./src/app/shared/service/admin-stats/apptitude.service.ts ***!
+      \*****************************************************************/
+
+    /*! exports provided: ApptitudeService */
+
+    /***/
+    function srcAppSharedServiceAdminStatsApptitudeServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ApptitudeService", function () {
+        return ApptitudeService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ../../../../environments/environment */
+      "./src/environments/environment.ts");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+      var API_APPTITDE_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/apptitude");
+
+      var ApptitudeService = /*#__PURE__*/function () {
+        function ApptitudeService(http) {
+          _classCallCheck(this, ApptitudeService);
+
+          this.http = http;
+        }
+
+        _createClass(ApptitudeService, [{
+          key: "getChartMetrics",
+          value: function getChartMetrics(company, startDate, endDate) {
+            return this.http.get(API_APPTITDE_URL + '/chart_metrics', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getPublisherApptitudeStats",
+          value: function getPublisherApptitudeStats(company, startDate, endDate) {
+            return this.http.get(API_APPTITDE_URL + '/all-publishers', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getApptitudeStats",
+          value: function getApptitudeStats(company, startDate, endDate) {
+            return this.http.get(API_APPTITDE_URL + '/', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getSummaryMetrics",
+          value: function getSummaryMetrics(company) {
+            return this.http.get(API_APPTITDE_URL + '/summary_metrics', {
+              params: {
+                company: company
+              }
+            });
+          }
+        }, {
+          key: "getAllDashboardStats",
+          value: function getAllDashboardStats() {
+            return this.http.get(API_APPTITDE_URL + '/all-stat');
+          }
+        }]);
+
+        return ApptitudeService;
+      }();
+
+      ApptitudeService.ɵfac = function ApptitudeService_Factory(t) {
+        return new (t || ApptitudeService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+      };
+
+      ApptitudeService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: ApptitudeService,
+        factory: ApptitudeService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ApptitudeService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/shared/service/admin-stats/lyon.service.ts":
     /*!************************************************************!*\
       !*** ./src/app/shared/service/admin-stats/lyon.service.ts ***!

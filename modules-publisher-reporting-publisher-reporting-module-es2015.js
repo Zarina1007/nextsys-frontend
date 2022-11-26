@@ -176,10 +176,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/shared/service/admin-stats/rubi.service */ "./src/app/shared/service/admin-stats/rubi.service.ts");
 /* harmony import */ var src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/shared/service/admin-stats/solexbc.service */ "./src/app/shared/service/admin-stats/solexbc.service.ts");
 /* harmony import */ var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/shared/service/admin-stats/system1.service */ "./src/app/shared/service/admin-stats/system1.service.ts");
-/* harmony import */ var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */ "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @swimlane/ngx-datatable */ "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
-/* harmony import */ var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */ "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
+/* harmony import */ var src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/shared/service/admin-stats/apptitude.service */ "./src/app/shared/service/admin-stats/apptitude.service.ts");
+/* harmony import */ var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */ "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @swimlane/ngx-datatable */ "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
+/* harmony import */ var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */ "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
+
 
 
 
@@ -303,7 +305,7 @@ function PublisherComponent_ng_template_26_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r34, "USD"));
 } }
 class PublisherComponent {
-    constructor(route, tagManagementService, cdr, userService, perionService, lyonService, verizonService, rubiService, solexbcService, system1Service) {
+    constructor(route, tagManagementService, cdr, userService, perionService, lyonService, verizonService, rubiService, solexbcService, system1Service, apptitudeService) {
         this.route = route;
         this.tagManagementService = tagManagementService;
         this.cdr = cdr;
@@ -314,6 +316,7 @@ class PublisherComponent {
         this.rubiService = rubiService;
         this.solexbcService = solexbcService;
         this.system1Service = system1Service;
+        this.apptitudeService = apptitudeService;
         this.loadingIndicator = true;
         this.range = {
             startDate: '',
@@ -352,6 +355,10 @@ class PublisherComponent {
                 else if (this.selectedAdvertiser == "system1") {
                     this.chartData = yield this.getSystem1ChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
                     this.statData = yield this.getSystem1AllStats(this.range.startDate, this.range.endDate, this.tagRows);
+                }
+                else if (this.selectedAdvertiser == "apptitude") {
+                    this.chartData = yield this.getApptitudeChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                    this.statData = yield this.getApptitudePublisherStats(this.range.startDate, this.range.endDate, this.tagRows);
                 }
                 this.refreshTable();
             }));
@@ -402,6 +409,10 @@ class PublisherComponent {
             else if (this.selectedAdvertiser == "system1") {
                 this.chartData = yield this.getSystem1ChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.statData = yield this.getSystem1AllStats(this.range.startDate, this.range.endDate, this.tagRows);
+            }
+            else if (this.selectedAdvertiser == "apptitude") {
+                this.chartData = yield this.getApptitudeChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                this.statData = yield this.getApptitudePublisherStats(this.range.startDate, this.range.endDate, this.tagRows);
             }
             this.refreshTable();
         });
@@ -1067,8 +1078,107 @@ class PublisherComponent {
             return error;
         });
     }
+    getApptitudePublisherStats(startDate, endDate, tag) {
+        return this.apptitudeService.getPublisherApptitudeStats(this.selectedCompany, startDate, endDate).toPromise().then((res) => {
+            this.allApptitudeStatData = res.stats;
+            var allApptitudeStat = [];
+            for (var tagSub of tag.subids) {
+                if (tagSub.filterTag == "Contains") {
+                    allApptitudeStat = allApptitudeStat.concat(this.allApptitudeStatData.filter(stat => stat.subid.includes(tagSub.subid)));
+                    allApptitudeStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
+                    });
+                }
+                else if (tagSub.filterTag == "StartsWith") {
+                    allApptitudeStat = allApptitudeStat.concat(this.allApptitudeStatData.filter(stat => stat.subid.startsWith(tagSub.subid)));
+                    allApptitudeStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
+                    });
+                }
+                else if (tagSub.filterTag == "EndsWith") {
+                    allApptitudeStat = allApptitudeStat.concat(this.allApptitudeStatData.filter(stat => stat.subid.endsWith(tagSub.subid)));
+                    allApptitudeStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
+                    });
+                }
+                else if (tagSub.filterTag == "ExactValue") {
+                    allApptitudeStat = allApptitudeStat.concat(this.allApptitudeStatData.filter(stat => stat.subid == tagSub.subid));
+                    allApptitudeStat.map(stat => {
+                        stat.publisher = tag.publisher ? tag.publisher.fullname : "";
+                        // stat.tagname = tag.name
+                    });
+                }
+            }
+            //duplicated remove
+            let filtered_data = allApptitudeStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
+            return filtered_data.slice().sort((a, b) => b.date - a.date);
+        })
+            .catch((error) => {
+            return error;
+        });
+    }
+    getApptitudeChartMetrics(company, startDate, endDate) {
+        return this.apptitudeService.getPublisherApptitudeStats(this.selectedCompany, startDate, endDate).toPromise().then((response) => {
+            this.allApptitudeChart = response.stats;
+            var chatAllApptitudeStat = [];
+            for (var tagSub of this.tagRows.subids) {
+                if (tagSub['filterTag'] == "Contains") {
+                    chatAllApptitudeStat = chatAllApptitudeStat.concat(this.allApptitudeChart.filter(stat => stat.subid.includes(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "StartsWith") {
+                    chatAllApptitudeStat = chatAllApptitudeStat.concat(this.allApptitudeChart.filter(stat => stat.subid.startsWith(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "EndsWith") {
+                    chatAllApptitudeStat = chatAllApptitudeStat.concat(this.allApptitudeChart.filter(stat => stat.subid.endsWith(tagSub['subid'])));
+                }
+                else if (tagSub['filterTag'] == "ExactValue") {
+                    chatAllApptitudeStat = chatAllApptitudeStat.concat(this.allApptitudeChart.filter(stat => stat.subid == tagSub['subid']));
+                }
+            }
+            //duplicated remove
+            let filter_data = chatAllApptitudeStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
+            // filter_data.map(f =>{
+            //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+            // })
+            filter_data = filter_data.slice().sort((a, b) => a.date - b.date);
+            var helperChart = {};
+            var resultChart = filter_data.reduce(function (r, o) {
+                var key = o.date;
+                if (!helperChart[key]) {
+                    helperChart[key] = Object.assign({}, o); // create a copy of o
+                    r.push(helperChart[key]);
+                }
+                else {
+                    helperChart[key].searches += parseInt(o.searches);
+                    if (o.revenue) {
+                        helperChart[key].revenue += o.revenue;
+                    }
+                }
+                return r;
+            }, []);
+            var revenuePerDayVal = [];
+            var datesOfRevenueVal = [];
+            var searchesPerDayVal = [];
+            var chartDataValue = {};
+            for (var resVal of resultChart) {
+                revenuePerDayVal.push(resVal.revenue);
+                datesOfRevenueVal.push(resVal.date);
+                searchesPerDayVal.push(resVal.searches);
+            }
+            chartDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+            chartDataValue['searchesPerDay'] = searchesPerDayVal;
+            return chartDataValue;
+        })
+            .catch((error) => {
+            return error;
+        });
+    }
 }
-PublisherComponent.ɵfac = function PublisherComponent_Factory(t) { return new (t || PublisherComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"])); };
+PublisherComponent.ɵfac = function PublisherComponent_Factory(t) { return new (t || PublisherComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_11__["ApptitudeService"])); };
 PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: PublisherComponent, selectors: [["app-publisher"]], viewQuery: function PublisherComponent_Query(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
     } if (rf & 2) {
@@ -1121,7 +1231,7 @@ PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
-    } }, directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_11__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_14__["ReportingRevenueChartComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_12__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["CurrencyPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcHVibGlzaGVyLXJlcG9ydGluZy9wdWJsaXNoZXIvcHVibGlzaGVyLmNvbXBvbmVudC5zY3NzIn0= */"] });
+    } }, directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_12__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_15__["ReportingRevenueChartComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_13__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["CurrencyPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcHVibGlzaGVyLXJlcG9ydGluZy9wdWJsaXNoZXIvcHVibGlzaGVyLmNvbXBvbmVudC5zY3NzIn0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](PublisherComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{
@@ -1129,7 +1239,7 @@ PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
                 templateUrl: './publisher.component.html',
                 styleUrls: ['./publisher.component.scss']
             }]
-    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }, { type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"] }, { type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"] }, { type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"] }, { type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"] }, { type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"] }, { type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__["SolexBCService"] }, { type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"] }]; }, { table: [{
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] }, { type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"] }, { type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"] }, { type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"] }, { type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"] }, { type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"] }, { type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__["SolexBCService"] }, { type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"] }, { type: src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_11__["ApptitudeService"] }]; }, { table: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
             args: ['expandableTable']
         }] }); })();
