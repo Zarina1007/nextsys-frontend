@@ -1446,10 +1446,10 @@
                   return t.date === thing.date && t.subid === thing.subid;
                 });
               }); // var helper = {};
+              // filtered_data.map(f =>{
+              //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+              // })
 
-              filtered_data.map(function (f) {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-              });
               return filtered_data.slice().sort(function (a, b) {
                 return b.date - a.date;
               });

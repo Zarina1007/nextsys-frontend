@@ -699,9 +699,9 @@ class PublisherComponent {
             //duplicated remove
             let filtered_data = allVerizonStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
             // var helper = {};
-            filtered_data.map(f => {
-                f.revenue = parseFloat(f.revenue) * parseFloat(f.split) / 100;
-            });
+            // filtered_data.map(f =>{
+            //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
+            // })
             return filtered_data.slice().sort((a, b) => b.date - a.date);
         })
             .catch((error) => {
