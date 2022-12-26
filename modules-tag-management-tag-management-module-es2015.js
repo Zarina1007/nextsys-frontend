@@ -3922,6 +3922,7 @@ class TagsComponent {
             { value: "perion", viewValue: "Perion" },
             { value: "rubi", viewValue: "Rubi" },
             { value: "system1", viewValue: "System1" },
+            { value: "solex-bc", viewValue: "Solex BC" },
             { value: "verizon-direct", viewValue: "Verizon Direct" },
         ];
         this.reportingProviderHandleList = [];

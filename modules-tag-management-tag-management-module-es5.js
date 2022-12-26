@@ -8156,6 +8156,9 @@
             value: "system1",
             viewValue: "System1"
           }, {
+            value: "solex-bc",
+            viewValue: "Solex BC"
+          }, {
             value: "verizon-direct",
             viewValue: "Verizon Direct"
           }];
