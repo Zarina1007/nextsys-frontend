@@ -3090,7 +3090,7 @@ class MixedWidget1Component {
         }
     }
     getCurrentMontDateList() {
-        const lastThirtyDays = [...new Array(30)].map((i, idx) => moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(idx, "days").format("MM-DD")).reverse();
+        const lastThirtyDays = [...new Array(30)].map((i, idx) => moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(idx, "days").toDate().getTime() + moment__WEBPACK_IMPORTED_MODULE_1__["utc"](1000 * 60 * 60 * 10).toDate().getTime()).reverse();
         return lastThirtyDays;
     }
     getChartOptions(chartSeries) {
@@ -3106,16 +3106,12 @@ class MixedWidget1Component {
                 zoom: {
                     enabled: false,
                 },
-                // sparkline: {
-                //   enabled: true,
-                // },
                 dropShadow: {
                     enabled: true,
                     enabledOnSeries: undefined,
                     top: 5,
                     left: 0,
                     blur: 3,
-                    //color: strokeColor,
                     opacity: 0.4,
                 },
             },
@@ -3126,10 +3122,6 @@ class MixedWidget1Component {
             dataLabels: {
                 enabled: false,
             },
-            // fill: {
-            //   type: 'solid',
-            //   opacity: 0,
-            // },
             stroke: {
                 curve: 'smooth',
                 show: true,
@@ -3227,11 +3219,11 @@ class MixedWidget1Component {
             colors: ["#00A19F", "#919EAB"],
             series: [
                 {
-                    name: moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(30, "days").format("MMM DD") + " - " + moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").format("MMM DD") + " , " + moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").format("YYYY"),
+                    name: moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(30, "days").format("MMM DD") + " , " + moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(30, "days").format("YYYY") + " - " + moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").format("MMM DD") + " , " + moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").format("YYYY"),
                     data: subChart.revenuePerDay
                 },
                 {
-                    name: moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(61, "days").format("MMM DD") + " - " + moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(31, "days").format("MMM DD") + " , " + moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(30, "days").format("YYYY"),
+                    name: moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(61, "days").format("MMM DD") + " , " + moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(60, "days").format("YYYY") + " - " + moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(31, "days").format("MMM DD") + " , " + moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(30, "days").format("YYYY"),
                     data: subChart.revenueBeforePerDay
                 }
             ],

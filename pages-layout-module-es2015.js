@@ -19441,6 +19441,10 @@ const DynamicAsideMenuConfig = {
                     title: 'Manual Split Update',
                     page: '/reporting/manual-split-update',
                 },
+                {
+                    title: 'Accounting Stats',
+                    page: '/reporting/accounting',
+                },
             ],
         },
         //AUTHENTICATION
@@ -26476,6 +26480,9 @@ class AsideDynamicComponent {
                     return true;
                 }
                 else if (item.page.includes("publisher-reporting")) {
+                    return true;
+                }
+                else if (item.page.includes("accounting")) {
                     return true;
                 }
                 return false;

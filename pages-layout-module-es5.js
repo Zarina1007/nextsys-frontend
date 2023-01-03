@@ -30155,6 +30155,9 @@
           }, {
             title: 'Manual Split Update',
             page: '/reporting/manual-split-update'
+          }, {
+            title: 'Accounting Stats',
+            page: '/reporting/accounting'
           }]
         }, //AUTHENTICATION
         {
@@ -43464,6 +43467,8 @@
                 if ((itemPath == "manual-stat-update" || itemPath == "manual-split-update") && this.currentUser.role == 1) {
                   return true;
                 } else if (item.page.includes("publisher-reporting")) {
+                  return true;
+                } else if (item.page.includes("accounting")) {
                   return true;
                 }
 

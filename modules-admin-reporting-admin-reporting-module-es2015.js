@@ -1,5 +1,61 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["modules-admin-reporting-admin-reporting-module"],{
 
+/***/ "./src/app/modules/admin-reporting/accounting/accounting.component.ts":
+/*!****************************************************************************!*\
+  !*** ./src/app/modules/admin-reporting/accounting/accounting.component.ts ***!
+  \****************************************************************************/
+/*! exports provided: AccountingComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountingComponent", function() { return AccountingComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/service/users.service */ "./src/app/shared/service/users.service.ts");
+/* harmony import */ var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */ "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
+
+
+
+
+
+class AccountingComponent {
+    constructor(cdr, userService) {
+        this.cdr = cdr;
+        this.userService = userService;
+        this.selectedCompany = this.getSelectedCompanyStored();
+    }
+    ngAfterViewInit() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+        });
+    }
+    //Gets the Selected Company from Local Storage
+    getSelectedCompanyStored() {
+        return this.userService.getSelectedCompanyFromLocalStorage();
+    }
+    updateReportingFiltering(range) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+        });
+    }
+}
+AccountingComponent.ɵfac = function AccountingComponent_Factory(t) { return new (t || AccountingComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"])); };
+AccountingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AccountingComponent, selectors: [["app-accounting"]], decls: 1, vars: 0, consts: [[3, "onDatesPicked"]], template: function AccountingComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("onDatesPicked", function AccountingComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) { return ctx.updateReportingFiltering($event); });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    } }, directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_3__["ReportingFilteringComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL2FjY291bnRpbmcvYWNjb3VudGluZy5jb21wb25lbnQuc2NzcyJ9 */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AccountingComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'app-accounting',
+                templateUrl: './accounting.component.html',
+                styleUrls: ['./accounting.component.scss']
+            }]
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"] }]; }, null); })();
+
+
+/***/ }),
+
 /***/ "./src/app/modules/admin-reporting/admin-reporting-routing.module.ts":
 /*!***************************************************************************!*\
   !*** ./src/app/modules/admin-reporting/admin-reporting-routing.module.ts ***!
@@ -27,6 +83,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _manual_update_manual_update_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./manual-update/manual-update.component */ "./src/app/modules/admin-reporting/manual-update/manual-update.component.ts");
 /* harmony import */ var _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./manual-split-update/manual-split-update.component */ "./src/app/modules/admin-reporting/manual-split-update/manual-split-update.component.ts");
 /* harmony import */ var _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./solex-bc/solex-bc.component */ "./src/app/modules/admin-reporting/solex-bc/solex-bc.component.ts");
+/* harmony import */ var _accounting_accounting_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./accounting/accounting.component */ "./src/app/modules/admin-reporting/accounting/accounting.component.ts");
+
 
 
 
@@ -51,6 +109,10 @@ const routes = [
         path: '',
         component: _admin_reporting_component__WEBPACK_IMPORTED_MODULE_7__["AdminReportingComponent"],
         children: [
+            {
+                path: 'accounting',
+                component: _accounting_accounting_component__WEBPACK_IMPORTED_MODULE_17__["AccountingComponent"],
+            },
             {
                 path: 'perion',
                 component: _perion_perion_component__WEBPACK_IMPORTED_MODULE_6__["PerionComponent"],
@@ -168,6 +230,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./manual-split-update/manual-split-update.component */ "./src/app/modules/admin-reporting/manual-split-update/manual-split-update.component.ts");
 /* harmony import */ var _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./system1/system1.component */ "./src/app/modules/admin-reporting/system1/system1.component.ts");
 /* harmony import */ var _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./solex-bc/solex-bc.component */ "./src/app/modules/admin-reporting/solex-bc/solex-bc.component.ts");
+/* harmony import */ var _accounting_accounting_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./accounting/accounting.component */ "./src/app/modules/admin-reporting/accounting/accounting.component.ts");
+
 
 
 
@@ -234,7 +298,8 @@ AdminReportingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
         _manual_update_manual_update_component__WEBPACK_IMPORTED_MODULE_23__["ManualUpdateComponent"],
         _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_27__["ManualSplitUpdateComponent"],
         _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__["System1Component"],
-        _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_29__["SolexBcComponent"]], imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"],
+        _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_29__["SolexBcComponent"],
+        _accounting_accounting_component__WEBPACK_IMPORTED_MODULE_30__["AccountingComponent"]], imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"],
         _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
         _admin_reporting_routing_module__WEBPACK_IMPORTED_MODULE_2__["AdminReportingRoutingModule"],
         _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["NgxDatatableModule"],
@@ -269,6 +334,7 @@ AdminReportingModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
                     _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_27__["ManualSplitUpdateComponent"],
                     _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__["System1Component"],
                     _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_29__["SolexBcComponent"],
+                    _accounting_accounting_component__WEBPACK_IMPORTED_MODULE_30__["AccountingComponent"],
                 ],
                 imports: [
                     _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"],
