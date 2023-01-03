@@ -13,20 +13,128 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../shared/service/users.service */ "./src/app/shared/service/users.service.ts");
-/* harmony import */ var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */ "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
+/* harmony import */ var src_app_shared_service_admin_stats_accounting_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/shared/service/admin-stats/accounting.service */ "./src/app/shared/service/admin-stats/accounting.service.ts");
+/* harmony import */ var src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/modules/tag-management/tag-management.service */ "./src/app/modules/tag-management/tag-management.service.ts");
+/* harmony import */ var src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/modules/company-management/company-management.service */ "./src/app/modules/company-management/company-management.service.ts");
+/* harmony import */ var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */ "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
+/* harmony import */ var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @swimlane/ngx-datatable */ "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 
 
 
 
 
+
+
+
+
+
+function AccountingComponent_ng_template_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Name ");
+} }
+function AccountingComponent_ng_template_4_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const value_r7 = ctx.value;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r7);
+} }
+function AccountingComponent_ng_template_6_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Stats Reporting ");
+} }
+function AccountingComponent_ng_template_7_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const value_r9 = ctx.value;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r9);
+} }
+function AccountingComponent_ng_template_9_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue Net ");
+} }
+function AccountingComponent_ng_template_10_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const value_r11 = ctx.value;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r11, "USD"));
+} }
 class AccountingComponent {
-    constructor(cdr, userService) {
+    constructor(cdr, userService, accountingService, tagService, companyService) {
         this.cdr = cdr;
         this.userService = userService;
+        this.accountingService = accountingService;
+        this.tagService = tagService;
+        this.companyService = companyService;
+        this.rows = [];
+        this.loadingIndicator = true;
+        this.range = {
+            startDate: '',
+            endDate: '',
+        };
+        this.allRubiStats = [];
+        this.allLyonStats = [];
+        this.allPerionStats = [];
+        this.allSystem1Stats = [];
+        this.allVerizonStats = [];
+        this.allSolexBCStats = [];
+        this.allApptitudeStats = [];
+        this.tagList = [];
+        this.tempStatData = [];
+        this.tempUpdateStatData = [];
+        this.reportTypeData = [];
         this.selectedCompany = this.getSelectedCompanyStored();
     }
     ngAfterViewInit() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.tagList = yield this.getCompanyTags(this.selectedCompany);
+            this.reportTypeData = yield this.getReportingProviderList();
+            this.rows = [];
+            this.tempStatData = [];
+            this.PerionData = yield this.getPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            this.LyonData = yield this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            this.RubiData = yield this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            this.ApptitudeData = yield this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            this.SolexBCData = yield this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            this.VerizonData = yield this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            if (this.reportTypeData.includes('perion')) {
+                this.tempStatData = this.tempStatData.concat(this.PerionData);
+            }
+            if (this.reportTypeData.includes('lyons')) {
+                this.tempStatData = this.tempStatData.concat(this.LyonData);
+            }
+            if (this.reportTypeData.includes('rubi')) {
+                this.tempStatData = this.tempStatData.concat(this.RubiData);
+            }
+            if (this.reportTypeData.includes('apptitude')) {
+                this.tempStatData = this.tempStatData.concat(this.ApptitudeData);
+            }
+            if (this.reportTypeData.includes('solex-bc')) {
+                this.tempStatData = this.tempStatData.concat(this.SolexBCData);
+            }
+            if (this.reportTypeData.includes('verizon-direct')) {
+                this.tempStatData = this.tempStatData.concat(this.VerizonData);
+            }
+            this.rows = this.tempStatData;
+            if (this.rows.length > 0) {
+                var totalRevenueNet = 0;
+                this.rows.map((rowOne) => {
+                    totalRevenueNet = totalRevenueNet + rowOne.revenue;
+                });
+                this.rows.push({
+                    publisher: "Total",
+                    revenue: totalRevenueNet
+                });
+            }
+            this.loadingIndicator = false;
+            this.cdr.detectChanges();
         });
     }
     //Gets the Selected Company from Local Storage
@@ -35,15 +143,454 @@ class AccountingComponent {
     }
     updateReportingFiltering(range) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.range = range;
+            this.rows = [];
+            this.tempUpdateStatData = [];
+            var perionUpData = [];
+            var lyonsUpData = [];
+            var rubiUpData = [];
+            var apptitudeUpData = [];
+            var solexBCUpData = [];
+            var verizonUpData = [];
+            perionUpData = yield this.getPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            lyonsUpData = yield this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            rubiUpData = yield this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            apptitudeUpData = yield this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            solexBCUpData = yield this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            verizonUpData = yield this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            if (this.reportTypeData.includes('perion')) {
+                this.tempUpdateStatData = this.tempUpdateStatData.concat(perionUpData);
+            }
+            if (this.reportTypeData.includes('lyons')) {
+                this.tempUpdateStatData = this.tempUpdateStatData.concat(lyonsUpData);
+            }
+            if (this.reportTypeData.includes('rubi')) {
+                this.tempUpdateStatData = this.tempUpdateStatData.concat(rubiUpData);
+            }
+            if (this.reportTypeData.includes('apptitude')) {
+                this.tempUpdateStatData = this.tempUpdateStatData.concat(apptitudeUpData);
+            }
+            if (this.reportTypeData.includes('solex-bc')) {
+                this.tempUpdateStatData = this.tempUpdateStatData.concat(solexBCUpData);
+            }
+            if (this.reportTypeData.includes('verizon-direct')) {
+                this.tempUpdateStatData = this.tempUpdateStatData.concat(verizonUpData);
+            }
+            this.rows = this.tempUpdateStatData;
+            if (this.rows.length > 0) {
+                var totalRevenueNet = 0;
+                this.rows.map((rowOne) => {
+                    totalRevenueNet = totalRevenueNet + rowOne.revenue;
+                });
+                this.rows.push({
+                    publisher: "Total",
+                    revenue: totalRevenueNet
+                });
+            }
+            this.loadingIndicator = false;
+            this.cdr.detectChanges();
+        });
+    }
+    //get Report Providers in Current Company
+    getReportingProviderList() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            if (this.selectedCompany) {
+                try {
+                    const res = yield this.companyService.getReportCompany(this.selectedCompany.split('/')[1]).toPromise();
+                    var providerList = [];
+                    res.reportingProviders.map(report => {
+                        providerList.push(report.reportingProvider);
+                    });
+                    return providerList;
+                }
+                catch (error) {
+                    return error;
+                }
+                ;
+            }
+        });
+    }
+    getRubiStats(company, startDate, endDate) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const response = yield this.accountingService.getRubiStats(company, startDate, endDate).toPromise();
+            this.allRubiStats = response.stats;
+            for (var tagL of this.tagList) {
+                if (tagL.tag.advertiser == "rubi") {
+                    for (var tagSub of tagL.tag.subids) {
+                        if (tagSub.filterTag == "Contains") {
+                            this.allRubiStats.map(stat => {
+                                if (stat.subid.includes(tagSub.subid)) {
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat.reporting = "Rubi";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "StartsWith") {
+                            this.allRubiStats.map(stat_1 => {
+                                if (stat_1.subid.startsWith(tagSub.subid)) {
+                                    stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_1.reporting = "Rubi";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "EndsWith") {
+                            this.allRubiStats.map(stat_2 => {
+                                if (stat_2.subid.endsWith(tagSub.subid)) {
+                                    stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_2.reporting = "Rubi";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "ExactValue") {
+                            this.allRubiStats.map(stat_3 => {
+                                if (stat_3.subid == tagSub.subid) {
+                                    stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_3.reporting = "Rubi";
+                                }
+                            });
+                        }
+                    }
+                }
+            }
+            var rubiStats = [];
+            var rubiNet = 0;
+            if (this.allRubiStats.length > 0) {
+                this.allRubiStats.map((rubiOne) => {
+                    rubiNet = rubiNet + rubiOne.revenue;
+                });
+                rubiStats.push({
+                    publisher: this.allRubiStats.length > 0 ? this.allRubiStats[0].publisher : "No Publisher",
+                    reporting: this.allRubiStats.length > 0 ? this.allRubiStats[0].reporting : "No Reporting",
+                    revenue: rubiNet
+                });
+            }
+            return rubiStats;
+        });
+    }
+    getSolexBCStats(company, startDate, endDate) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const response = yield this.accountingService.getSolexBCStats(company, startDate, endDate).toPromise();
+            this.allSolexBCStats = response.stats;
+            for (var tagL of this.tagList) {
+                if (tagL.tag.advertiser == "solex-bc") {
+                    for (var tagSub of tagL.tag.subids) {
+                        if (tagSub.filterTag == "Contains") {
+                            this.allSolexBCStats.map(stat => {
+                                if (stat.subid.includes(tagSub.subid)) {
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat.reporting = "Solex BC";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "StartsWith") {
+                            this.allSolexBCStats.map(stat_1 => {
+                                if (stat_1.subid.startsWith(tagSub.subid)) {
+                                    stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_1.reporting = "Solex BC";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "EndsWith") {
+                            this.allSolexBCStats.map(stat_2 => {
+                                if (stat_2.subid.endsWith(tagSub.subid)) {
+                                    stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_2.reporting = "Solex BC";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "ExactValue") {
+                            this.allSolexBCStats.map(stat_3 => {
+                                if (stat_3.subid == tagSub.subid) {
+                                    stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_3.reporting = "Solex BC";
+                                }
+                            });
+                        }
+                    }
+                }
+            }
+            var solexBCStats = [];
+            var solexbcNet = 0;
+            if (this.allSolexBCStats.length > 0) {
+                this.allSolexBCStats.map((solexbcOne) => {
+                    solexbcNet = solexbcNet + solexbcOne.revenue;
+                });
+                solexBCStats.push({
+                    publisher: this.allSolexBCStats.length > 0 ? this.allSolexBCStats[0].publisher : "No Publisher",
+                    reporting: this.allSolexBCStats.length > 0 ? this.allSolexBCStats[0].reporting : "No Reporting",
+                    revenue: solexbcNet
+                });
+            }
+            return solexBCStats;
+        });
+    }
+    getVerizonDirectStats(company, startDate, endDate) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const response = yield this.accountingService.getVerizonDirectStats(company, startDate, endDate).toPromise();
+            this.allVerizonStats = response.stats;
+            for (var tagL of this.tagList) {
+                if (tagL.tag.advertiser == "verizon-direct") {
+                    for (var tagSub of tagL.tag.subids) {
+                        if (tagSub.filterTag == "Contains") {
+                            this.allVerizonStats.map(stat => {
+                                if (stat.subid.includes(tagSub.subid)) {
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat.reporting = "Verizon Direct";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "StartsWith") {
+                            this.allVerizonStats.map(stat_1 => {
+                                if (stat_1.subid.startsWith(tagSub.subid)) {
+                                    stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_1.reporting = "Verizon Direct";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "EndsWith") {
+                            this.allVerizonStats.map(stat_2 => {
+                                if (stat_2.subid.endsWith(tagSub.subid)) {
+                                    stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_2.reporting = "Verizon Direct";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "ExactValue") {
+                            this.allVerizonStats.map(stat_3 => {
+                                if (stat_3.subid == tagSub.subid) {
+                                    stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_3.reporting = "Verizon Direct";
+                                }
+                            });
+                        }
+                    }
+                }
+            }
+            var verizonStats = [];
+            var verizonNet = 0;
+            if (this.allVerizonStats.length > 0) {
+                this.allVerizonStats.map((verizonOne) => {
+                    verizonNet = verizonNet + verizonOne.revenue;
+                });
+                verizonStats.push({
+                    publisher: this.allVerizonStats.length > 0 ? this.allVerizonStats[0].publisher : "No Publisher",
+                    reporting: this.allVerizonStats.length > 0 ? this.allVerizonStats[0].reporting : "No Reporting",
+                    revenue: verizonNet
+                });
+            }
+            return verizonStats;
+        });
+    }
+    getLyonStats(company, startDate, endDate) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const response = yield this.accountingService.getLyonStats(company, startDate, endDate).toPromise();
+            this.allLyonStats = response.stats;
+            for (var tagL of this.tagList) {
+                if (tagL.tag.advertiser == "lyons") {
+                    for (var tagSub of tagL.tag.subids) {
+                        if (tagSub.filterTag == "Contains") {
+                            this.allLyonStats.map(stat => {
+                                if (stat.subid.includes(tagSub.subid)) {
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat.reporting = "Lyons";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "StartsWith") {
+                            this.allLyonStats.map(stat_1 => {
+                                if (stat_1.subid.startsWith(tagSub.subid)) {
+                                    stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_1.reporting = "Lyons";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "EndsWith") {
+                            this.allLyonStats.map(stat_2 => {
+                                if (stat_2.subid.endsWith(tagSub.subid)) {
+                                    stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_2.reporting = "Lyons";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "ExactValue") {
+                            this.allLyonStats.map(stat_3 => {
+                                if (stat_3.subid == tagSub.subid) {
+                                    stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_3.reporting = "Lyons";
+                                }
+                            });
+                        }
+                    }
+                }
+            }
+            var lyonStats = [];
+            var lyonNet = 0;
+            if (this.allLyonStats.length > 0) {
+                this.allLyonStats.map((lyonOne) => {
+                    lyonNet = lyonNet + lyonOne.revenue;
+                });
+                lyonStats.push({
+                    publisher: this.allLyonStats.length > 0 ? this.allLyonStats[0].publisher : "No Publisher",
+                    reporting: this.allLyonStats.length > 0 ? this.allLyonStats[0].reporting : "No Reporting",
+                    revenue: lyonNet
+                });
+            }
+            return lyonStats;
+        });
+    }
+    getPerionStats(company, startDate, endDate) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const response = yield this.accountingService.getPerionStats(company, startDate, endDate).toPromise();
+            this.allPerionStats = response.stats;
+            for (var tagL of this.tagList) {
+                if (tagL.tag.advertiser == "perion") {
+                    for (var tagSub of tagL.tag.subids) {
+                        if (tagSub.filterTag == "Contains") {
+                            this.allPerionStats.map(stat => {
+                                if (stat.subid.includes(tagSub.subid)) {
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat.reporting = "Perion";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "StartsWith") {
+                            this.allPerionStats.map(stat_1 => {
+                                if (stat_1.subid.startsWith(tagSub.subid)) {
+                                    stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_1.reporting = "Perion";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "EndsWith") {
+                            this.allPerionStats.map(stat_2 => {
+                                if (stat_2.subid.endsWith(tagSub.subid)) {
+                                    stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_2.reporting = "Perion";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "ExactValue") {
+                            this.allPerionStats.map(stat_3 => {
+                                if (stat_3.subid == tagSub.subid) {
+                                    stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_3.reporting = "Perion";
+                                }
+                            });
+                        }
+                    }
+                }
+            }
+            var perionStats = [];
+            var perionNet = 0;
+            if (this.allPerionStats.length > 0) {
+                this.allPerionStats.map((perionOne) => {
+                    perionNet = perionNet + perionOne.revenue;
+                });
+                perionStats.push({
+                    publisher: this.allPerionStats.length > 0 ? this.allPerionStats[0].publisher : "No Publisher",
+                    reporting: this.allPerionStats.length > 0 ? this.allPerionStats[0].reporting : "No Reporting",
+                    revenue: perionNet
+                });
+            }
+            return perionStats;
+        });
+    }
+    getApptitudeStats(company, startDate, endDate) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const response = yield this.accountingService.getApptitudeStats(company, startDate, endDate).toPromise();
+            this.allApptitudeStats = response.stats;
+            for (var tagL of this.tagList) {
+                if (tagL.tag.advertiser == "apptitude") {
+                    for (var tagSub of tagL.tag.subids) {
+                        if (tagSub.filterTag == "Contains") {
+                            this.allApptitudeStats.map(stat => {
+                                if (stat.subid.includes(tagSub.subid)) {
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat.reporting = "Apptitude";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "StartsWith") {
+                            this.allApptitudeStats.map(stat_1 => {
+                                if (stat_1.subid.startsWith(tagSub.subid)) {
+                                    stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_1.reporting = "Apptitude";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "EndsWith") {
+                            this.allApptitudeStats.map(stat_2 => {
+                                if (stat_2.subid.endsWith(tagSub.subid)) {
+                                    stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_2.reporting = "Apptitude";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "ExactValue") {
+                            this.allApptitudeStats.map(stat_3 => {
+                                if (stat_3.subid == tagSub.subid) {
+                                    stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_3.reporting = "Apptitude";
+                                }
+                            });
+                        }
+                    }
+                }
+            }
+            var apptitudeStats = [];
+            var apptitudeNet = 0;
+            if (this.allApptitudeStats.length > 0) {
+                this.allApptitudeStats.map((rubiOne) => {
+                    apptitudeNet = apptitudeNet + rubiOne.revenue;
+                });
+                apptitudeStats.push({
+                    publisher: this.allApptitudeStats.length > 0 ? this.allApptitudeStats[0].publisher : "No Publisher",
+                    reporting: this.allApptitudeStats.length > 0 ? this.allApptitudeStats[0].reporting : "No Reporting",
+                    revenue: apptitudeNet
+                });
+            }
+            return apptitudeStats;
+        });
+    }
+    //get Tags with selected company
+    getCompanyTags(selectedCompany) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            var companyId = selectedCompany.split("/")[1];
+            try {
+                const response = yield this.tagService.getCompanyTags(companyId).toPromise();
+                return response;
+            }
+            catch (error) {
+                return error;
+            }
         });
     }
 }
-AccountingComponent.ɵfac = function AccountingComponent_Factory(t) { return new (t || AccountingComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"])); };
-AccountingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AccountingComponent, selectors: [["app-accounting"]], decls: 1, vars: 0, consts: [[3, "onDatesPicked"]], template: function AccountingComponent_Template(rf, ctx) { if (rf & 1) {
+AccountingComponent.ɵfac = function AccountingComponent_Factory(t) { return new (t || AccountingComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_accounting_service__WEBPACK_IMPORTED_MODULE_3__["AccountingService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_5__["CompanyManagementService"])); };
+AccountingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AccountingComponent, selectors: [["app-accounting"]], decls: 11, vars: 8, consts: [[3, "onDatesPicked"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["name", "publisher", 3, "minWidth"], ["ngx-datatable-header-template", ""], ["ngx-datatable-cell-template", ""], ["name", "reporting"], ["name", "revenue"]], template: function AccountingComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("onDatesPicked", function AccountingComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) { return ctx.updateReportingFiltering($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    } }, directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_3__["ReportingFilteringComponent"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL2FjY291bnRpbmcvYWNjb3VudGluZy5jb21wb25lbnQuc2NzcyJ9 */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "ngx-datatable", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "ngx-datatable-column", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](3, AccountingComponent_ng_template_3_Template, 1, 0, "ng-template", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](4, AccountingComponent_ng_template_4_Template, 2, 1, "ng-template", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "ngx-datatable-column", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](6, AccountingComponent_ng_template_6_Template, 1, 0, "ng-template", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](7, AccountingComponent_ng_template_7_Template, 2, 1, "ng-template", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "ngx-datatable-column", 6);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](9, AccountingComponent_ng_template_9_Template, 1, 0, "ng-template", 3);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](10, AccountingComponent_ng_template_10_Template, 3, 4, "ng-template", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
+    } }, directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnHeaderDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnCellDirective"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["CurrencyPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL2FjY291bnRpbmcvYWNjb3VudGluZy5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AccountingComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{
@@ -51,7 +598,7 @@ AccountingComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefi
                 templateUrl: './accounting.component.html',
                 styleUrls: ['./accounting.component.scss']
             }]
-    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"] }]; }, null); })();
+    }], function () { return [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"] }, { type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"] }, { type: src_app_shared_service_admin_stats_accounting_service__WEBPACK_IMPORTED_MODULE_3__["AccountingService"] }, { type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"] }, { type: src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_5__["CompanyManagementService"] }]; }, null); })();
 
 
 /***/ }),
@@ -6082,6 +6629,71 @@ VerizonDirectComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵd
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
             args: ['expandableTable']
         }] }); })();
+
+
+/***/ }),
+
+/***/ "./src/app/shared/service/admin-stats/accounting.service.ts":
+/*!******************************************************************!*\
+  !*** ./src/app/shared/service/admin-stats/accounting.service.ts ***!
+  \******************************************************************/
+/*! exports provided: AccountingService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AccountingService", function() { return AccountingService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+
+const API_ACCOUNTING_URL = `${_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/stats/admin/accounting`;
+class AccountingService {
+    constructor(http) {
+        this.http = http;
+    }
+    getRubiStats(company, startDate, endDate) {
+        return this.http.get(API_ACCOUNTING_URL + '/rubi', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getPerionStats(company, startDate, endDate) {
+        return this.http.get(API_ACCOUNTING_URL + '/perion', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getLyonStats(company, startDate, endDate) {
+        return this.http.get(API_ACCOUNTING_URL + '/lyons', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getApptitudeStats(company, startDate, endDate) {
+        return this.http.get(API_ACCOUNTING_URL + '/apptitude', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getSolexBCStats(company, startDate, endDate) {
+        return this.http.get(API_ACCOUNTING_URL + '/solex-bc', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getVerizonDirectStats(company, startDate, endDate) {
+        return this.http.get(API_ACCOUNTING_URL + '/verizon-direct', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+}
+AccountingService.ɵfac = function AccountingService_Factory(t) { return new (t || AccountingService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
+AccountingService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: AccountingService, factory: AccountingService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AccountingService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root',
+            }]
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),

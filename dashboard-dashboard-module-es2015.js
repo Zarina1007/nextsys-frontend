@@ -823,20 +823,23 @@ class Dashboard1Component {
     }
     //get Report Providers in Current Company
     getReportingProviderList() {
-        if (this.selectedCompany) {
-            return this.companyService.getReportCompany(this.selectedCompany.split('/')[1]).toPromise().then(res => {
-                this.companyName = res.name;
-                var providerList = [];
-                res.reportingProviders.map(report => {
-                    providerList.push(report.reportingProvider);
-                });
-                return providerList;
-            })
-                .catch((error) => {
-                return error;
-            });
-            ;
-        }
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            if (this.selectedCompany) {
+                try {
+                    const res = yield this.companyService.getReportCompany(this.selectedCompany.split('/')[1]).toPromise();
+                    this.companyName = res.name;
+                    var providerList = [];
+                    res.reportingProviders.map(report => {
+                        providerList.push(report.reportingProvider);
+                    });
+                    return providerList;
+                }
+                catch (error) {
+                    return error;
+                }
+                ;
+            }
+        });
     }
     //Gets the Selected Company from Local Storage
     getSelectedCompanyFromLocalStorage() {

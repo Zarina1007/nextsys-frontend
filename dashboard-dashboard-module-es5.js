@@ -18517,21 +18517,45 @@
         }, {
           key: "getReportingProviderList",
           value: function getReportingProviderList() {
-            var _this3 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+              var res, providerList;
+              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                while (1) {
+                  switch (_context2.prev = _context2.next) {
+                    case 0:
+                      if (!this.selectedCompany) {
+                        _context2.next = 15;
+                        break;
+                      }
 
-            if (this.selectedCompany) {
-              return this.companyService.getReportCompany(this.selectedCompany.split('/')[1]).toPromise().then(function (res) {
-                _this3.companyName = res.name;
-                var providerList = [];
-                res.reportingProviders.map(function (report) {
-                  providerList.push(report.reportingProvider);
-                });
-                return providerList;
-              })["catch"](function (error) {
-                return error;
-              });
-              ;
-            }
+                      _context2.prev = 1;
+                      _context2.next = 4;
+                      return this.companyService.getReportCompany(this.selectedCompany.split('/')[1]).toPromise();
+
+                    case 4:
+                      res = _context2.sent;
+                      this.companyName = res.name;
+                      providerList = [];
+                      res.reportingProviders.map(function (report) {
+                        providerList.push(report.reportingProvider);
+                      });
+                      return _context2.abrupt("return", providerList);
+
+                    case 11:
+                      _context2.prev = 11;
+                      _context2.t0 = _context2["catch"](1);
+                      return _context2.abrupt("return", _context2.t0);
+
+                    case 14:
+                      ;
+
+                    case 15:
+                    case "end":
+                      return _context2.stop();
+                  }
+                }
+              }, _callee2, this, [[1, 11]]);
+            }));
           } //Gets the Selected Company from Local Storage
 
         }, {
@@ -18542,13 +18566,13 @@
         }, {
           key: "getPerionChart",
           value: function getPerionChart(company) {
-            var _this4 = this;
+            var _this3 = this;
 
             return this.perionService.getAllDashboardStats(company).toPromise().then(function (response) {
-              _this4.allPerionChart = response[0];
+              _this3.allPerionChart = response[0];
               var chartPerionMetric = [];
-              var chartAllPerionStat = _this4.allPerionChart.currentStat;
-              var chartAllBeforePerionStat = _this4.allPerionChart.beforeStat; // for (var tagL of this.tagList) {
+              var chartAllPerionStat = _this3.allPerionChart.currentStat;
+              var chartAllBeforePerionStat = _this3.allPerionChart.beforeStat; // for (var tagL of this.tagList) {
               //   var chartAllPerionStat = [];
               //   var chartAllBeforePerionStat = [];
               //   if(tagL.tag.advertiser == 'perion') {
@@ -18630,7 +18654,7 @@
               var revenueCurrentSum = 0;
               var revenueBeforeSum = 0;
 
-              var _iterator = _createForOfIteratorHelper(_this4.allDaysList),
+              var _iterator = _createForOfIteratorHelper(_this3.allDaysList),
                   _step;
 
               try {
@@ -18700,14 +18724,14 @@
         }, {
           key: "getLyonChart",
           value: function getLyonChart(company) {
-            var _this5 = this;
+            var _this4 = this;
 
             return this.lyonService.getAllDashboardStats().toPromise().then(function (response) {
-              _this5.allLyonChart = response[0]; // console.log("=======dddd======", this.allLyonChart)
+              _this4.allLyonChart = response[0]; // console.log("=======dddd======", this.allLyonChart)
 
               var chartLyonMetric = [];
-              var chartAllLyonStat = _this5.allLyonChart.currentStat;
-              var chartAllBeforeLyonStat = _this5.allLyonChart.beforeStat; // for (var tagL of this.tagList) {
+              var chartAllLyonStat = _this4.allLyonChart.currentStat;
+              var chartAllBeforeLyonStat = _this4.allLyonChart.beforeStat; // for (var tagL of this.tagList) {
               //   if(tagL.tag.advertiser == 'lyons') {
               //     for(var tagSub of tagL.tag.subids) {
               //       if(tagSub['filterTag'] =="Contains") {   
@@ -18781,7 +18805,7 @@
               var revenueCurrentSum = 0;
               var revenueBeforeSum = 0;
 
-              var _iterator4 = _createForOfIteratorHelper(_this5.allDaysList),
+              var _iterator4 = _createForOfIteratorHelper(_this4.allDaysList),
                   _step4;
 
               try {
@@ -18851,13 +18875,13 @@
         }, {
           key: "getRubiChart",
           value: function getRubiChart(company) {
-            var _this6 = this;
+            var _this5 = this;
 
             return this.rubiService.getAllDashboardStats().toPromise().then(function (response) {
-              _this6.allRubiChart = response[0];
+              _this5.allRubiChart = response[0];
               var chartRubiMetric = [];
-              var chartAllRubiStat = _this6.allRubiChart.currentStat;
-              var chartAllBeforeRubiStat = _this6.allRubiChart.beforeStat;
+              var chartAllRubiStat = _this5.allRubiChart.currentStat;
+              var chartAllBeforeRubiStat = _this5.allRubiChart.beforeStat;
               chartAllRubiStat = chartAllRubiStat.slice().sort(function (a, b) {
                 return a.date - b.date;
               });
@@ -18872,7 +18896,7 @@
               var revenueCurrentSum = 0;
               var revenueBeforeSum = 0;
 
-              var _iterator7 = _createForOfIteratorHelper(_this6.allDaysList),
+              var _iterator7 = _createForOfIteratorHelper(_this5.allDaysList),
                   _step7;
 
               try {
@@ -18942,13 +18966,13 @@
         }, {
           key: "getSystem1Chart",
           value: function getSystem1Chart(company) {
-            var _this7 = this;
+            var _this6 = this;
 
             return this.system1Service.getAllDashboardStats().toPromise().then(function (response) {
-              _this7.allSystem1Chart = response[0];
+              _this6.allSystem1Chart = response[0];
               var chartSystem1Metric = [];
-              var chartAllSystem1Stat = _this7.allSystem1Chart.currentStat;
-              var chartAllBeforeSystem1Stat = _this7.allSystem1Chart.beforeStat;
+              var chartAllSystem1Stat = _this6.allSystem1Chart.currentStat;
+              var chartAllBeforeSystem1Stat = _this6.allSystem1Chart.beforeStat;
               chartAllSystem1Stat = chartAllSystem1Stat.slice().sort(function (a, b) {
                 return a.date - b.date;
               });
@@ -18963,7 +18987,7 @@
               var revenueCurrentSum = 0;
               var revenueBeforeSum = 0;
 
-              var _iterator10 = _createForOfIteratorHelper(_this7.allDaysList),
+              var _iterator10 = _createForOfIteratorHelper(_this6.allDaysList),
                   _step10;
 
               try {
@@ -19037,13 +19061,13 @@
         }, {
           key: "getVerizonChart",
           value: function getVerizonChart(company) {
-            var _this8 = this;
+            var _this7 = this;
 
             return this.verizonService.getAllDashboardStats().toPromise().then(function (response) {
-              _this8.allVerizonChart = response[0];
+              _this7.allVerizonChart = response[0];
               var chartVerizonMetric = [];
-              var chartAllVerizonStat = _this8.allVerizonChart.currentStat;
-              var chartAllBeforeVerizonStat = _this8.allVerizonChart.beforeStat;
+              var chartAllVerizonStat = _this7.allVerizonChart.currentStat;
+              var chartAllBeforeVerizonStat = _this7.allVerizonChart.beforeStat;
               chartAllVerizonStat = chartAllVerizonStat.slice().sort(function (a, b) {
                 return a.date - b.date;
               });
@@ -19058,7 +19082,7 @@
               var revenueCurrentSum = 0;
               var revenueBeforeSum = 0;
 
-              var _iterator13 = _createForOfIteratorHelper(_this8.allDaysList),
+              var _iterator13 = _createForOfIteratorHelper(_this7.allDaysList),
                   _step13;
 
               try {
@@ -19147,13 +19171,13 @@
         }, {
           key: "getSolexBCChart",
           value: function getSolexBCChart(company) {
-            var _this9 = this;
+            var _this8 = this;
 
             return this.solexbcService.getAllDashboardStats().toPromise().then(function (response) {
-              _this9.allSolexBCChart = response[0];
+              _this8.allSolexBCChart = response[0];
               var chartSolexBCMetric = [];
-              var chartAllSolexBCStat = _this9.allSolexBCChart.currentStat;
-              var chartAllBeforeSolexBCStat = _this9.allSolexBCChart.beforeStat;
+              var chartAllSolexBCStat = _this8.allSolexBCChart.currentStat;
+              var chartAllBeforeSolexBCStat = _this8.allSolexBCChart.beforeStat;
               chartAllSolexBCStat = chartAllSolexBCStat.slice().sort(function (a, b) {
                 return a.date - b.date;
               });
@@ -19168,7 +19192,7 @@
               var revenueCurrentSum = 0;
               var revenueBeforeSum = 0;
 
-              var _iterator16 = _createForOfIteratorHelper(_this9.allDaysList),
+              var _iterator16 = _createForOfIteratorHelper(_this8.allDaysList),
                   _step16;
 
               try {
@@ -19239,13 +19263,13 @@
         }, {
           key: "getApptitudeChart",
           value: function getApptitudeChart(company) {
-            var _this10 = this;
+            var _this9 = this;
 
             return this.apptitudeService.getAllDashboardStats().toPromise().then(function (response) {
-              _this10.allApptitudeChart = response[0];
+              _this9.allApptitudeChart = response[0];
               var chartRubiMetric = [];
-              var chartAllApptitudeStat = _this10.allApptitudeChart.currentStat;
-              var chartAllBeforeApptitudeStat = _this10.allApptitudeChart.beforeStat;
+              var chartAllApptitudeStat = _this9.allApptitudeChart.currentStat;
+              var chartAllBeforeApptitudeStat = _this9.allApptitudeChart.beforeStat;
               chartAllApptitudeStat = chartAllApptitudeStat.slice().sort(function (a, b) {
                 return a.date - b.date;
               });
@@ -19260,7 +19284,7 @@
               var revenueCurrentSum = 0;
               var revenueBeforeSum = 0;
 
-              var _iterator19 = _createForOfIteratorHelper(_this10.allDaysList),
+              var _iterator19 = _createForOfIteratorHelper(_this9.allDaysList),
                   _step19;
 
               try {
