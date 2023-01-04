@@ -240,6 +240,11 @@
 
                     case 25:
                       this.VerizonData = _context.sent;
+                      _context.next = 28;
+                      return this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 28:
+                      this.System1Data = _context.sent;
 
                       if (this.reportTypeData.includes('perion')) {
                         this.tempStatData = this.tempStatData.concat(this.PerionData);
@@ -265,6 +270,10 @@
                         this.tempStatData = this.tempStatData.concat(this.VerizonData);
                       }
 
+                      if (this.reportTypeData.includes('verizon-direct')) {
+                        this.tempStatData = this.tempStatData.concat(this.System1Data);
+                      }
+
                       this.rows = this.tempStatData;
 
                       if (this.rows.length > 0) {
@@ -281,7 +290,7 @@
                       this.loadingIndicator = false;
                       this.cdr.detectChanges();
 
-                    case 36:
+                    case 40:
                     case "end":
                       return _context.stop();
                   }
@@ -299,7 +308,7 @@
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-              var perionUpData, lyonsUpData, rubiUpData, apptitudeUpData, solexBCUpData, verizonUpData, totalRevenueNet;
+              var perionUpData, lyonsUpData, rubiUpData, apptitudeUpData, solexBCUpData, verizonUpData, system1UpData, totalRevenueNet;
               return regeneratorRuntime.wrap(function _callee2$(_context2) {
                 while (1) {
                   switch (_context2.prev = _context2.next) {
@@ -313,36 +322,42 @@
                       apptitudeUpData = [];
                       solexBCUpData = [];
                       verizonUpData = [];
-                      _context2.next = 11;
+                      system1UpData = [];
+                      _context2.next = 12;
                       return this.getPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 11:
+                    case 12:
                       perionUpData = _context2.sent;
-                      _context2.next = 14;
+                      _context2.next = 15;
                       return this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 14:
+                    case 15:
                       lyonsUpData = _context2.sent;
-                      _context2.next = 17;
+                      _context2.next = 18;
                       return this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 17:
+                    case 18:
                       rubiUpData = _context2.sent;
-                      _context2.next = 20;
+                      _context2.next = 21;
                       return this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 20:
+                    case 21:
                       apptitudeUpData = _context2.sent;
-                      _context2.next = 23;
+                      _context2.next = 24;
                       return this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 23:
+                    case 24:
                       solexBCUpData = _context2.sent;
-                      _context2.next = 26;
+                      _context2.next = 27;
                       return this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 26:
+                    case 27:
                       verizonUpData = _context2.sent;
+                      _context2.next = 30;
+                      return this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 30:
+                      system1UpData = _context2.sent;
 
                       if (this.reportTypeData.includes('perion')) {
                         this.tempUpdateStatData = this.tempUpdateStatData.concat(perionUpData);
@@ -368,6 +383,10 @@
                         this.tempUpdateStatData = this.tempUpdateStatData.concat(verizonUpData);
                       }
 
+                      if (this.reportTypeData.includes('system1')) {
+                        this.tempUpdateStatData = this.tempUpdateStatData.concat(system1UpData);
+                      }
+
                       this.rows = this.tempUpdateStatData;
 
                       if (this.rows.length > 0) {
@@ -384,7 +403,7 @@
                       this.loadingIndicator = false;
                       this.cdr.detectChanges();
 
-                    case 37:
+                    case 42:
                     case "end":
                       return _context2.stop();
                   }
@@ -999,7 +1018,8 @@
                           reporting: this.allApptitudeStats.length > 0 ? this.allApptitudeStats[0].reporting : "No Reporting",
                           revenue: apptitudeNet
                         });
-                      }
+                      } // console.log(this.allApptitudeStats, "dfsdfsdf")
+
 
                       return _context9.abrupt("return", apptitudeStats);
 
@@ -1010,37 +1030,133 @@
                 }
               }, _callee9, this);
             }));
+          }
+        }, {
+          key: "getSystem1Stats",
+          value: function getSystem1Stats(company, startDate, endDate) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
+              var response, _iterator13, _step13, tagL, _iterator14, _step14, tagSub, system1Stats, system1Net;
+
+              return regeneratorRuntime.wrap(function _callee10$(_context10) {
+                while (1) {
+                  switch (_context10.prev = _context10.next) {
+                    case 0:
+                      _context10.next = 2;
+                      return this.accountingService.getSystem1Stats(company, startDate, endDate).toPromise();
+
+                    case 2:
+                      response = _context10.sent;
+                      this.allSystem1Stats = response.stats;
+                      _iterator13 = _createForOfIteratorHelper(this.tagList);
+
+                      try {
+                        for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
+                          tagL = _step13.value;
+
+                          if (tagL.tag.advertiser == "system1") {
+                            _iterator14 = _createForOfIteratorHelper(tagL.tag.subids);
+
+                            try {
+                              for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
+                                tagSub = _step14.value;
+
+                                if (tagSub.filterTag == "Contains") {
+                                  this.allSystem1Stats.map(function (stat) {
+                                    if (stat.subid.includes(tagSub.subid)) {
+                                      stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat.reporting = "System1";
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "StartsWith") {
+                                  this.allSystem1Stats.map(function (stat_1) {
+                                    if (stat_1.subid.startsWith(tagSub.subid)) {
+                                      stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_1.reporting = "System1";
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "EndsWith") {
+                                  this.allSystem1Stats.map(function (stat_2) {
+                                    if (stat_2.subid.endsWith(tagSub.subid)) {
+                                      stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_2.reporting = "System1";
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "ExactValue") {
+                                  this.allSystem1Stats.map(function (stat_3) {
+                                    if (stat_3.subid == tagSub.subid) {
+                                      stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_3.reporting = "System1";
+                                    }
+                                  });
+                                }
+                              }
+                            } catch (err) {
+                              _iterator14.e(err);
+                            } finally {
+                              _iterator14.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator13.e(err);
+                      } finally {
+                        _iterator13.f();
+                      }
+
+                      system1Stats = [];
+                      system1Net = 0;
+
+                      if (this.allSystem1Stats.length > 0) {
+                        this.allSystem1Stats.map(function (rubiOne) {
+                          system1Net = system1Net + rubiOne.revenue;
+                        });
+                        system1Stats.push({
+                          publisher: this.allSystem1Stats.length > 0 ? this.allSystem1Stats[0].publisher : "No Publisher",
+                          reporting: this.allSystem1Stats.length > 0 ? this.allSystem1Stats[0].reporting : "No Reporting",
+                          revenue: system1Net
+                        });
+                      }
+
+                      return _context10.abrupt("return", system1Stats);
+
+                    case 10:
+                    case "end":
+                      return _context10.stop();
+                  }
+                }
+              }, _callee10, this);
+            }));
           } //get Tags with selected company
 
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
               var companyId, response;
-              return regeneratorRuntime.wrap(function _callee10$(_context10) {
+              return regeneratorRuntime.wrap(function _callee11$(_context11) {
                 while (1) {
-                  switch (_context10.prev = _context10.next) {
+                  switch (_context11.prev = _context11.next) {
                     case 0:
                       companyId = selectedCompany.split("/")[1];
-                      _context10.prev = 1;
-                      _context10.next = 4;
+                      _context11.prev = 1;
+                      _context11.next = 4;
                       return this.tagService.getCompanyTags(companyId).toPromise();
 
                     case 4:
-                      response = _context10.sent;
-                      return _context10.abrupt("return", response);
+                      response = _context11.sent;
+                      return _context11.abrupt("return", response);
 
                     case 8:
-                      _context10.prev = 8;
-                      _context10.t0 = _context10["catch"](1);
-                      return _context10.abrupt("return", _context10.t0);
+                      _context11.prev = 8;
+                      _context11.t0 = _context11["catch"](1);
+                      return _context11.abrupt("return", _context11.t0);
 
                     case 11:
                     case "end":
-                      return _context10.stop();
+                      return _context11.stop();
                   }
                 }
-              }, _callee10, this, [[1, 8]]);
+              }, _callee11, this, [[1, 8]]);
             }));
           }
         }]);
@@ -2145,40 +2261,40 @@
         _createClass(ApptitudeComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
-              return regeneratorRuntime.wrap(function _callee11$(_context11) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
+              return regeneratorRuntime.wrap(function _callee12$(_context12) {
                 while (1) {
-                  switch (_context11.prev = _context11.next) {
+                  switch (_context12.prev = _context12.next) {
                     case 0:
-                      _context11.next = 2;
+                      _context12.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context11.sent;
+                      this.tagList = _context12.sent;
                       this.rows = [];
-                      _context11.next = 6;
+                      _context12.next = 6;
                       return this.getAllApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context11.sent;
-                      _context11.next = 9;
+                      this.rows = _context12.sent;
+                      _context12.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context11.sent;
-                      _context11.next = 12;
+                      this.chartData = _context12.sent;
+                      _context12.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context11.sent;
+                      this.summaryMetrics = _context12.sent;
                       this.cdr.markForCheck();
 
                     case 14:
                     case "end":
-                      return _context11.stop();
+                      return _context12.stop();
                   }
                 }
-              }, _callee11, this);
+              }, _callee12, this);
             }));
           }
         }, {
@@ -2195,20 +2311,20 @@
                 resStat.publisher = "No Publisher"; // resStat.tagname = "No Tag" 
               });
 
-              var _iterator13 = _createForOfIteratorHelper(_this.tagList),
-                  _step13;
+              var _iterator15 = _createForOfIteratorHelper(_this.tagList),
+                  _step15;
 
               try {
-                for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
-                  var tagL = _step13.value;
+                for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
+                  var tagL = _step15.value;
 
                   if (tagL.tag.advertiser == "apptitude") {
-                    var _iterator14 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step14;
+                    var _iterator16 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step16;
 
                     try {
-                      for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
-                        var tagSub = _step14.value;
+                      for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
+                        var tagSub = _step16.value;
 
                         if (tagSub.filterTag == "Contains") {
                           _this.allStats.map(function (stat) {
@@ -2237,16 +2353,16 @@
                         }
                       }
                     } catch (err) {
-                      _iterator14.e(err);
+                      _iterator16.e(err);
                     } finally {
-                      _iterator14.f();
+                      _iterator16.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator13.e(err);
+                _iterator15.e(err);
               } finally {
-                _iterator13.f();
+                _iterator15.f();
               }
 
               return _this.allStats;
@@ -2272,36 +2388,36 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
-              return regeneratorRuntime.wrap(function _callee12$(_context12) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
+              return regeneratorRuntime.wrap(function _callee13$(_context13) {
                 while (1) {
-                  switch (_context12.prev = _context12.next) {
+                  switch (_context13.prev = _context13.next) {
                     case 0:
                       this.range = range;
-                      _context12.next = 3;
+                      _context13.next = 3;
                       return this.getAllApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context12.sent;
-                      _context12.next = 6;
+                      this.rows = _context13.sent;
+                      _context13.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context12.sent;
-                      _context12.next = 9;
+                      this.chartData = _context13.sent;
+                      _context13.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context12.sent;
+                      this.summaryMetrics = _context13.sent;
                       this.groupFlag = false;
                       this.cdr.markForCheck();
 
                     case 12:
                     case "end":
-                      return _context12.stop();
+                      return _context13.stop();
                   }
                 }
-              }, _callee12, this);
+              }, _callee13, this);
             }));
           }
         }, {
@@ -2330,20 +2446,20 @@
               return r;
             }, []);
 
-            var _iterator15 = _createForOfIteratorHelper(groupData),
-                _step15;
+            var _iterator17 = _createForOfIteratorHelper(groupData),
+                _step17;
 
             try {
-              for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
-                var group = _step15.value;
+              for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
+                var group = _step17.value;
                 group.split = group.split / group.counter;
                 group.cpc = group.cpc / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator15.e(err);
+              _iterator17.e(err);
             } finally {
-              _iterator15.f();
+              _iterator17.f();
             }
 
             this.rows = groupData;
@@ -4528,40 +4644,40 @@
         _createClass(LyonsComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
-              return regeneratorRuntime.wrap(function _callee13$(_context13) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
+              return regeneratorRuntime.wrap(function _callee14$(_context14) {
                 while (1) {
-                  switch (_context13.prev = _context13.next) {
+                  switch (_context14.prev = _context14.next) {
                     case 0:
-                      _context13.next = 2;
+                      _context14.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context13.sent;
+                      this.tagList = _context14.sent;
                       this.rows = [];
-                      _context13.next = 6;
+                      _context14.next = 6;
                       return this.getAllLyonStats(this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context13.sent;
-                      _context13.next = 9;
+                      this.rows = _context14.sent;
+                      _context14.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context13.sent;
-                      _context13.next = 12;
+                      this.chartData = _context14.sent;
+                      _context14.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetricsData = _context13.sent;
+                      this.summaryMetricsData = _context14.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context13.stop();
+                      return _context14.stop();
                   }
                 }
-              }, _callee13, this);
+              }, _callee14, this);
             }));
           }
         }, {
@@ -4578,10 +4694,10 @@
         }, {
           key: "routeTester",
           value: function routeTester() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
-              return regeneratorRuntime.wrap(function _callee14$(_context14) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee15() {
+              return regeneratorRuntime.wrap(function _callee15$(_context15) {
                 while (1) {
-                  switch (_context14.prev = _context14.next) {
+                  switch (_context15.prev = _context15.next) {
                     case 0:
                       console.log('Testing Route');
                       this.lyonService.testingRoute().subscribe(function (response) {
@@ -4592,10 +4708,10 @@
 
                     case 2:
                     case "end":
-                      return _context14.stop();
+                      return _context15.stop();
                   }
                 }
-              }, _callee14, this);
+              }, _callee15, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -4631,20 +4747,20 @@
               }); // var allLyonStat = [];
 
 
-              var _iterator16 = _createForOfIteratorHelper(_this2.tagList),
-                  _step16;
+              var _iterator18 = _createForOfIteratorHelper(_this2.tagList),
+                  _step18;
 
               try {
-                for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
-                  var tagL = _step16.value;
+                for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
+                  var tagL = _step18.value;
 
                   if (tagL.tag.advertiser == "lyons") {
-                    var _iterator17 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step17;
+                    var _iterator19 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step19;
 
                     try {
-                      for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
-                        var tagSub = _step17.value;
+                      for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
+                        var tagSub = _step19.value;
 
                         if (tagSub.filterTag == "Contains") {
                           _this2.allstat.map(function (stat) {
@@ -4677,9 +4793,9 @@
                         }
                       }
                     } catch (err) {
-                      _iterator17.e(err);
+                      _iterator19.e(err);
                     } finally {
-                      _iterator17.f();
+                      _iterator19.f();
                     }
                   }
                 } //duplicated remove
@@ -4730,9 +4846,9 @@
                 // return resultAll;
 
               } catch (err) {
-                _iterator16.e(err);
+                _iterator18.e(err);
               } finally {
-                _iterator16.f();
+                _iterator18.f();
               }
 
               return _this2.allstat;
@@ -4768,20 +4884,20 @@
               return r;
             }, []);
 
-            var _iterator18 = _createForOfIteratorHelper(groupData),
-                _step18;
+            var _iterator20 = _createForOfIteratorHelper(groupData),
+                _step20;
 
             try {
-              for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
-                var group = _step18.value;
+              for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+                var group = _step20.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator18.e(err);
+              _iterator20.e(err);
             } finally {
-              _iterator18.f();
+              _iterator20.f();
             }
 
             this.rows = groupData;
@@ -4807,37 +4923,37 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee15() {
-              return regeneratorRuntime.wrap(function _callee15$(_context15) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee16() {
+              return regeneratorRuntime.wrap(function _callee16$(_context16) {
                 while (1) {
-                  switch (_context15.prev = _context15.next) {
+                  switch (_context16.prev = _context16.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context15.next = 3;
+                      _context16.next = 3;
                       return this.getAllLyonStats(this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context15.sent;
-                      _context15.next = 6;
+                      this.rows = _context16.sent;
+                      _context16.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context15.sent;
-                      _context15.next = 9;
+                      this.chartData = _context16.sent;
+                      _context16.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetricsData = _context15.sent;
+                      this.summaryMetricsData = _context16.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context15.stop();
+                      return _context16.stop();
                   }
                 }
-              }, _callee15, this);
+              }, _callee16, this);
             }));
           }
         }, {
@@ -4912,12 +5028,12 @@
               var monthRevenuePace = 0;
               var profitPace = 0;
 
-              var _iterator19 = _createForOfIteratorHelper(resultSummary),
-                  _step19;
+              var _iterator21 = _createForOfIteratorHelper(resultSummary),
+                  _step21;
 
               try {
-                for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
-                  var sumData = _step19.value;
+                for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+                  var sumData = _step21.value;
                   monthRevenue += sumData.revenue;
                   monthProfit += sumData.revenue * (100 - sumData.split) * 0.01;
                   monthRevenuePace += sumData.revenue / resultSummary.length * dayInCurrentMonth;
@@ -4949,9 +5065,9 @@
                 // });
 
               } catch (err) {
-                _iterator19.e(err);
+                _iterator21.e(err);
               } finally {
-                _iterator19.f();
+                _iterator21.f();
               }
 
               var helperBeforeSummary = {};
@@ -4984,12 +5100,12 @@
               var monthBeforeRevenuePace = 0;
               var profitBeforePace = 0;
 
-              var _iterator20 = _createForOfIteratorHelper(resultBeforeSummary),
-                  _step20;
+              var _iterator22 = _createForOfIteratorHelper(resultBeforeSummary),
+                  _step22;
 
               try {
-                for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
-                  var sumBeforeData = _step20.value;
+                for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                  var sumBeforeData = _step22.value;
                   monthBeforeRevenue += sumBeforeData.revenue;
                   monthBeforeProfit += sumBeforeData.revenue * (100 - sumBeforeData.split) * 0.01;
                   monthBeforeRevenuePace += sumBeforeData.revenue / resultBeforeSummary.length * dayInBeforeMonth;
@@ -5021,9 +5137,9 @@
                 // });
 
               } catch (err) {
-                _iterator20.e(err);
+                _iterator22.e(err);
               } finally {
-                _iterator20.f();
+                _iterator22.f();
               }
 
               var helperTwoBeforeSummary = {};
@@ -5056,21 +5172,21 @@
               var monthTwoBeforeRevenuePace = 0;
               var profitTwoBeforePace = 0;
 
-              var _iterator21 = _createForOfIteratorHelper(resultTwoBeforeSummary),
-                  _step21;
+              var _iterator23 = _createForOfIteratorHelper(resultTwoBeforeSummary),
+                  _step23;
 
               try {
-                for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
-                  var sumTwoBeforeData = _step21.value;
+                for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+                  var sumTwoBeforeData = _step23.value;
                   monthTwoBeforeRevenue += sumTwoBeforeData.revenue;
                   monthTwoBeforeProfit += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01;
                   monthTwoBeforeRevenuePace += sumTwoBeforeData.revenue / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
                   profitTwoBeforePace += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01 / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
                 }
               } catch (err) {
-                _iterator21.e(err);
+                _iterator23.e(err);
               } finally {
-                _iterator21.f();
+                _iterator23.f();
               }
 
               var currentPercentPace = 0;
@@ -5184,20 +5300,20 @@
               var searchesPerDayVal = [];
               var chartDataValue = {};
 
-              var _iterator22 = _createForOfIteratorHelper(resultChart),
-                  _step22;
+              var _iterator24 = _createForOfIteratorHelper(resultChart),
+                  _step24;
 
               try {
-                for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
-                  var resVal = _step22.value;
+                for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+                  var resVal = _step24.value;
                   revenuePerDayVal.push(resVal.revenue);
                   datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.searches);
                 }
               } catch (err) {
-                _iterator22.e(err);
+                _iterator24.e(err);
               } finally {
-                _iterator22.f();
+                _iterator24.f();
               }
 
               chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -7324,40 +7440,40 @@
         _createClass(PerionComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee16() {
-              return regeneratorRuntime.wrap(function _callee16$(_context16) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee17() {
+              return regeneratorRuntime.wrap(function _callee17$(_context17) {
                 while (1) {
-                  switch (_context16.prev = _context16.next) {
+                  switch (_context17.prev = _context17.next) {
                     case 0:
-                      _context16.next = 2;
+                      _context17.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context16.sent;
+                      this.tagList = _context17.sent;
                       this.rows = [];
-                      _context16.next = 6;
+                      _context17.next = 6;
                       return this.getAllPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context16.sent;
-                      _context16.next = 9;
+                      this.rows = _context17.sent;
+                      _context17.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context16.sent;
-                      _context16.next = 12;
+                      this.chartData = _context17.sent;
+                      _context17.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context16.sent;
+                      this.summaryMetrics = _context17.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context16.stop();
+                      return _context17.stop();
                   }
                 }
-              }, _callee16, this);
+              }, _callee17, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -7380,10 +7496,10 @@
         }, {
           key: "routeTester",
           value: function routeTester() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee17() {
-              return regeneratorRuntime.wrap(function _callee17$(_context17) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
+              return regeneratorRuntime.wrap(function _callee18$(_context18) {
                 while (1) {
-                  switch (_context17.prev = _context17.next) {
+                  switch (_context18.prev = _context18.next) {
                     case 0:
                       console.log('Testing Route');
                       this.perionService.testingRoute().subscribe(function (response) {
@@ -7394,10 +7510,10 @@
 
                     case 2:
                     case "end":
-                      return _context17.stop();
+                      return _context18.stop();
                   }
                 }
-              }, _callee17, this);
+              }, _callee18, this);
             }));
           }
         }, {
@@ -7412,37 +7528,37 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
-              return regeneratorRuntime.wrap(function _callee18$(_context18) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
+              return regeneratorRuntime.wrap(function _callee19$(_context19) {
                 while (1) {
-                  switch (_context18.prev = _context18.next) {
+                  switch (_context19.prev = _context19.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context18.next = 3;
+                      _context19.next = 3;
                       return this.getAllPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context18.sent;
-                      _context18.next = 6;
+                      this.rows = _context19.sent;
+                      _context19.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context18.sent;
-                      _context18.next = 9;
+                      this.chartData = _context19.sent;
+                      _context19.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context18.sent;
+                      this.summaryMetrics = _context19.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context18.stop();
+                      return _context19.stop();
                   }
                 }
-              }, _callee18, this);
+              }, _callee19, this);
             }));
           }
         }, {
@@ -7461,20 +7577,20 @@
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator23 = _createForOfIteratorHelper(_this10.tagList),
-                  _step23;
+              var _iterator25 = _createForOfIteratorHelper(_this10.tagList),
+                  _step25;
 
               try {
-                for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
-                  var tagL = _step23.value;
+                for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+                  var tagL = _step25.value;
 
                   if (tagL.tag.advertiser == "perion") {
-                    var _iterator24 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step24;
+                    var _iterator26 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step26;
 
                     try {
-                      for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
-                        var tagSub = _step24.value;
+                      for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+                        var tagSub = _step26.value;
 
                         if (tagSub.filterTag == "Contains") {
                           _this10.allStat.map(function (stat) {
@@ -7507,9 +7623,9 @@
                         }
                       }
                     } catch (err) {
-                      _iterator24.e(err);
+                      _iterator26.e(err);
                     } finally {
-                      _iterator24.f();
+                      _iterator26.f();
                     }
                   }
                 } // var helper = new Set();
@@ -7522,9 +7638,9 @@
                 //return filtered_data.slice().sort((a, b) => b.date - a.date);
 
               } catch (err) {
-                _iterator23.e(err);
+                _iterator25.e(err);
               } finally {
-                _iterator23.f();
+                _iterator25.f();
               }
 
               return _this10.allStat;
@@ -7560,20 +7676,20 @@
               return r;
             }, []);
 
-            var _iterator25 = _createForOfIteratorHelper(groupData),
-                _step25;
+            var _iterator27 = _createForOfIteratorHelper(groupData),
+                _step27;
 
             try {
-              for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
-                var group = _step25.value;
+              for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
+                var group = _step27.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator25.e(err);
+              _iterator27.e(err);
             } finally {
-              _iterator25.f();
+              _iterator27.f();
             }
 
             this.rows = groupData;
@@ -7897,20 +8013,20 @@
               var searchesPerDayVal = [];
               var chartDataValue = {};
 
-              var _iterator26 = _createForOfIteratorHelper(resultChart),
-                  _step26;
+              var _iterator28 = _createForOfIteratorHelper(resultChart),
+                  _step28;
 
               try {
-                for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-                  var resVal = _step26.value;
+                for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+                  var resVal = _step28.value;
                   revenuePerDayVal.push(resVal.revenue);
                   datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.totalsearches);
                 }
               } catch (err) {
-                _iterator26.e(err);
+                _iterator28.e(err);
               } finally {
-                _iterator26.f();
+                _iterator28.f();
               }
 
               chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -8566,75 +8682,75 @@
         _createClass(RubiComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
-              return regeneratorRuntime.wrap(function _callee19$(_context19) {
-                while (1) {
-                  switch (_context19.prev = _context19.next) {
-                    case 0:
-                      _context19.next = 2;
-                      return this.getCompanyTags(this.selectedCompany);
-
-                    case 2:
-                      this.tagList = _context19.sent;
-                      this.rows = [];
-                      _context19.next = 6;
-                      return this.getAllRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-
-                    case 6:
-                      this.rows = _context19.sent;
-                      _context19.next = 9;
-                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
-
-                    case 9:
-                      this.chartData = _context19.sent;
-                      _context19.next = 12;
-                      return this.getSummaryMetrics(this.selectedCompany);
-
-                    case 12:
-                      this.summaryMetrics = _context19.sent;
-                      this.refreshTable();
-
-                    case 14:
-                    case "end":
-                      return _context19.stop();
-                  }
-                }
-              }, _callee19, this);
-            }));
-          }
-        }, {
-          key: "updateReportingFiltering",
-          value: function updateReportingFiltering(range) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
               return regeneratorRuntime.wrap(function _callee20$(_context20) {
                 while (1) {
                   switch (_context20.prev = _context20.next) {
                     case 0:
-                      this.range = range;
-                      _context20.next = 3;
+                      _context20.next = 2;
+                      return this.getCompanyTags(this.selectedCompany);
+
+                    case 2:
+                      this.tagList = _context20.sent;
+                      this.rows = [];
+                      _context20.next = 6;
                       return this.getAllRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 3:
+                    case 6:
                       this.rows = _context20.sent;
-                      _context20.next = 6;
+                      _context20.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 6:
+                    case 9:
                       this.chartData = _context20.sent;
-                      _context20.next = 9;
+                      _context20.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
-                    case 9:
+                    case 12:
                       this.summaryMetrics = _context20.sent;
-                      this.groupFlag = false;
                       this.refreshTable();
 
-                    case 12:
+                    case 14:
                     case "end":
                       return _context20.stop();
                   }
                 }
               }, _callee20, this);
+            }));
+          }
+        }, {
+          key: "updateReportingFiltering",
+          value: function updateReportingFiltering(range) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
+              return regeneratorRuntime.wrap(function _callee21$(_context21) {
+                while (1) {
+                  switch (_context21.prev = _context21.next) {
+                    case 0:
+                      this.range = range;
+                      _context21.next = 3;
+                      return this.getAllRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 3:
+                      this.rows = _context21.sent;
+                      _context21.next = 6;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 6:
+                      this.chartData = _context21.sent;
+                      _context21.next = 9;
+                      return this.getSummaryMetrics(this.selectedCompany);
+
+                    case 9:
+                      this.summaryMetrics = _context21.sent;
+                      this.groupFlag = false;
+                      this.refreshTable();
+
+                    case 12:
+                    case "end":
+                      return _context21.stop();
+                  }
+                }
+              }, _callee21, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -8674,20 +8790,20 @@
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator27 = _createForOfIteratorHelper(_this13.tagList),
-                  _step27;
+              var _iterator29 = _createForOfIteratorHelper(_this13.tagList),
+                  _step29;
 
               try {
-                for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
-                  var tagL = _step27.value;
+                for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
+                  var tagL = _step29.value;
 
                   if (tagL.tag.advertiser == "rubi") {
-                    var _iterator28 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step28;
+                    var _iterator30 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step30;
 
                     try {
-                      for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
-                        var tagSub = _step28.value;
+                      for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
+                        var tagSub = _step30.value;
 
                         if (tagSub.filterTag == "Contains") {
                           _this13.allStats.map(function (stat) {
@@ -8720,16 +8836,16 @@
                         }
                       }
                     } catch (err) {
-                      _iterator28.e(err);
+                      _iterator30.e(err);
                     } finally {
-                      _iterator28.f();
+                      _iterator30.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator27.e(err);
+                _iterator29.e(err);
               } finally {
-                _iterator27.f();
+                _iterator29.f();
               }
 
               return _this13.allStats;
@@ -8759,18 +8875,18 @@
               return r;
             }, []);
 
-            var _iterator29 = _createForOfIteratorHelper(groupData),
-                _step29;
+            var _iterator31 = _createForOfIteratorHelper(groupData),
+                _step31;
 
             try {
-              for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
-                var group = _step29.value;
+              for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
+                var group = _step31.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator29.e(err);
+              _iterator31.e(err);
             } finally {
-              _iterator29.f();
+              _iterator31.f();
             }
 
             this.rows = groupData;
@@ -9415,75 +9531,75 @@
         _createClass(SolexBcComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
-              return regeneratorRuntime.wrap(function _callee21$(_context21) {
-                while (1) {
-                  switch (_context21.prev = _context21.next) {
-                    case 0:
-                      _context21.next = 2;
-                      return this.getCompanyTags(this.selectedCompany);
-
-                    case 2:
-                      this.tagList = _context21.sent;
-                      this.rows = [];
-                      _context21.next = 6;
-                      return this.getAllSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-
-                    case 6:
-                      this.rows = _context21.sent;
-                      _context21.next = 9;
-                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
-
-                    case 9:
-                      this.chartData = _context21.sent;
-                      _context21.next = 12;
-                      return this.getSummaryMetrics(this.selectedCompany);
-
-                    case 12:
-                      this.summaryMetrics = _context21.sent;
-                      this.refreshTable();
-
-                    case 14:
-                    case "end":
-                      return _context21.stop();
-                  }
-                }
-              }, _callee21, this);
-            }));
-          }
-        }, {
-          key: "updateReportingFiltering",
-          value: function updateReportingFiltering(range) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
               return regeneratorRuntime.wrap(function _callee22$(_context22) {
                 while (1) {
                   switch (_context22.prev = _context22.next) {
                     case 0:
-                      this.range = range;
-                      _context22.next = 3;
+                      _context22.next = 2;
+                      return this.getCompanyTags(this.selectedCompany);
+
+                    case 2:
+                      this.tagList = _context22.sent;
+                      this.rows = [];
+                      _context22.next = 6;
                       return this.getAllSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 3:
+                    case 6:
                       this.rows = _context22.sent;
-                      _context22.next = 6;
+                      _context22.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 6:
+                    case 9:
                       this.chartData = _context22.sent;
-                      _context22.next = 9;
+                      _context22.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
-                    case 9:
+                    case 12:
                       this.summaryMetrics = _context22.sent;
-                      this.groupFlag = false;
                       this.refreshTable();
 
-                    case 12:
+                    case 14:
                     case "end":
                       return _context22.stop();
                   }
                 }
               }, _callee22, this);
+            }));
+          }
+        }, {
+          key: "updateReportingFiltering",
+          value: function updateReportingFiltering(range) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
+              return regeneratorRuntime.wrap(function _callee23$(_context23) {
+                while (1) {
+                  switch (_context23.prev = _context23.next) {
+                    case 0:
+                      this.range = range;
+                      _context23.next = 3;
+                      return this.getAllSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 3:
+                      this.rows = _context23.sent;
+                      _context23.next = 6;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 6:
+                      this.chartData = _context23.sent;
+                      _context23.next = 9;
+                      return this.getSummaryMetrics(this.selectedCompany);
+
+                    case 9:
+                      this.summaryMetrics = _context23.sent;
+                      this.groupFlag = false;
+                      this.refreshTable();
+
+                    case 12:
+                    case "end":
+                      return _context23.stop();
+                  }
+                }
+              }, _callee23, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -9523,20 +9639,20 @@
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator30 = _createForOfIteratorHelper(_this14.tagList),
-                  _step30;
+              var _iterator32 = _createForOfIteratorHelper(_this14.tagList),
+                  _step32;
 
               try {
-                for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
-                  var tagL = _step30.value;
+                for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
+                  var tagL = _step32.value;
 
                   if (tagL.tag.advertiser == "solex-bc") {
-                    var _iterator31 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step31;
+                    var _iterator33 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step33;
 
                     try {
-                      for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
-                        var tagSub = _step31.value;
+                      for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
+                        var tagSub = _step33.value;
 
                         if (tagSub.filterTag == "Contains") {
                           _this14.allStats.map(function (stat) {
@@ -9569,16 +9685,16 @@
                         }
                       }
                     } catch (err) {
-                      _iterator31.e(err);
+                      _iterator33.e(err);
                     } finally {
-                      _iterator31.f();
+                      _iterator33.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator30.e(err);
+                _iterator32.e(err);
               } finally {
-                _iterator30.f();
+                _iterator32.f();
               }
 
               return _this14.allStats;
@@ -9607,18 +9723,18 @@
               return r;
             }, []);
 
-            var _iterator32 = _createForOfIteratorHelper(groupData),
-                _step32;
+            var _iterator34 = _createForOfIteratorHelper(groupData),
+                _step34;
 
             try {
-              for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
-                var group = _step32.value;
+              for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
+                var group = _step34.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator32.e(err);
+              _iterator34.e(err);
             } finally {
-              _iterator32.f();
+              _iterator34.f();
             }
 
             this.rows = groupData;
@@ -10246,50 +10362,50 @@
         _createClass(System1Component, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
-              return regeneratorRuntime.wrap(function _callee23$(_context23) {
-                while (1) {
-                  switch (_context23.prev = _context23.next) {
-                    case 0:
-                      this.rows = [];
-                      _context23.next = 3;
-                      return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
-
-                    case 3:
-                      this.rows = _context23.sent;
-
-                    case 4:
-                    case "end":
-                      return _context23.stop();
-                  }
-                }
-              }, _callee23, this);
-            }));
-          }
-        }, {
-          key: "updateReportingFiltering",
-          value: function updateReportingFiltering(range) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
               return regeneratorRuntime.wrap(function _callee24$(_context24) {
                 while (1) {
                   switch (_context24.prev = _context24.next) {
                     case 0:
-                      // console.log('Update report filtering....');
-                      this.range = range;
+                      this.rows = [];
                       _context24.next = 3;
                       return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
                       this.rows = _context24.sent;
-                      this.groupFlag = false;
-                      this.refreshTable();
 
-                    case 6:
+                    case 4:
                     case "end":
                       return _context24.stop();
                   }
                 }
               }, _callee24, this);
+            }));
+          }
+        }, {
+          key: "updateReportingFiltering",
+          value: function updateReportingFiltering(range) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
+              return regeneratorRuntime.wrap(function _callee25$(_context25) {
+                while (1) {
+                  switch (_context25.prev = _context25.next) {
+                    case 0:
+                      // console.log('Update report filtering....');
+                      this.range = range;
+                      _context25.next = 3;
+                      return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 3:
+                      this.rows = _context25.sent;
+                      this.groupFlag = false;
+                      this.refreshTable();
+
+                    case 6:
+                    case "end":
+                      return _context25.stop();
+                  }
+                }
+              }, _callee25, this);
             }));
           } //get Stat all
 
@@ -11634,40 +11750,40 @@
         _createClass(VerizonDirectComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
-              return regeneratorRuntime.wrap(function _callee25$(_context25) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
+              return regeneratorRuntime.wrap(function _callee26$(_context26) {
                 while (1) {
-                  switch (_context25.prev = _context25.next) {
+                  switch (_context26.prev = _context26.next) {
                     case 0:
-                      _context25.next = 2;
+                      _context26.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context25.sent;
+                      this.tagList = _context26.sent;
                       this.rows = [];
-                      _context25.next = 6;
+                      _context26.next = 6;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context25.sent;
-                      _context25.next = 9;
+                      this.rows = _context26.sent;
+                      _context26.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context25.sent;
-                      _context25.next = 12;
+                      this.chartData = _context26.sent;
+                      _context26.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context25.sent;
+                      this.summaryMetrics = _context26.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context25.stop();
+                      return _context26.stop();
                   }
                 }
-              }, _callee25, this);
+              }, _callee26, this);
             }));
           } //get Tags with selected company
 
@@ -11690,36 +11806,36 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
-              return regeneratorRuntime.wrap(function _callee26$(_context26) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
+              return regeneratorRuntime.wrap(function _callee27$(_context27) {
                 while (1) {
-                  switch (_context26.prev = _context26.next) {
+                  switch (_context27.prev = _context27.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context26.next = 3;
+                      _context27.next = 3;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context26.sent;
-                      _context26.next = 6;
+                      this.rows = _context27.sent;
+                      _context27.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context26.sent;
-                      _context26.next = 9;
+                      this.chartData = _context27.sent;
+                      _context27.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context26.sent;
+                      this.summaryMetrics = _context27.sent;
                       this.refreshTable();
 
                     case 11:
                     case "end":
-                      return _context26.stop();
+                      return _context27.stop();
                   }
                 }
-              }, _callee26, this);
+              }, _callee27, this);
             }));
           }
         }, {
@@ -11762,20 +11878,20 @@
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator33 = _createForOfIteratorHelper(_this16.tagList),
-                  _step33;
+              var _iterator35 = _createForOfIteratorHelper(_this16.tagList),
+                  _step35;
 
               try {
-                for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
-                  var tagL = _step33.value;
+                for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
+                  var tagL = _step35.value;
 
                   if (tagL.tag.advertiser == "verizon-direct") {
-                    var _iterator34 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step34;
+                    var _iterator36 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step36;
 
                     try {
-                      for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
-                        var tagSub = _step34.value;
+                      for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
+                        var tagSub = _step36.value;
 
                         if (tagSub.filterTag == "Contains") {
                           _this16.allStats.map(function (stat) {
@@ -11808,16 +11924,16 @@
                         }
                       }
                     } catch (err) {
-                      _iterator34.e(err);
+                      _iterator36.e(err);
                     } finally {
-                      _iterator34.f();
+                      _iterator36.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator33.e(err);
+                _iterator35.e(err);
               } finally {
-                _iterator33.f();
+                _iterator35.f();
               }
 
               return _this16.allStats;
@@ -12194,6 +12310,17 @@
           key: "getVerizonDirectStats",
           value: function getVerizonDirectStats(company, startDate, endDate) {
             return this.http.get(API_ACCOUNTING_URL + '/verizon-direct', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getSystem1Stats",
+          value: function getSystem1Stats(company, startDate, endDate) {
+            return this.http.get(API_ACCOUNTING_URL + '/system1', {
               params: {
                 company: company,
                 startDate: startDate,

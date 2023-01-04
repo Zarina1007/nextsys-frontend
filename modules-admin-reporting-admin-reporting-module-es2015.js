@@ -104,6 +104,7 @@ class AccountingComponent {
             this.ApptitudeData = yield this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
             this.SolexBCData = yield this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
             this.VerizonData = yield this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            this.System1Data = yield this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
             if (this.reportTypeData.includes('perion')) {
                 this.tempStatData = this.tempStatData.concat(this.PerionData);
             }
@@ -121,6 +122,9 @@ class AccountingComponent {
             }
             if (this.reportTypeData.includes('verizon-direct')) {
                 this.tempStatData = this.tempStatData.concat(this.VerizonData);
+            }
+            if (this.reportTypeData.includes('verizon-direct')) {
+                this.tempStatData = this.tempStatData.concat(this.System1Data);
             }
             this.rows = this.tempStatData;
             if (this.rows.length > 0) {
@@ -152,12 +156,14 @@ class AccountingComponent {
             var apptitudeUpData = [];
             var solexBCUpData = [];
             var verizonUpData = [];
+            var system1UpData = [];
             perionUpData = yield this.getPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
             lyonsUpData = yield this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
             rubiUpData = yield this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
             apptitudeUpData = yield this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
             solexBCUpData = yield this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
             verizonUpData = yield this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            system1UpData = yield this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
             if (this.reportTypeData.includes('perion')) {
                 this.tempUpdateStatData = this.tempUpdateStatData.concat(perionUpData);
             }
@@ -175,6 +181,9 @@ class AccountingComponent {
             }
             if (this.reportTypeData.includes('verizon-direct')) {
                 this.tempUpdateStatData = this.tempUpdateStatData.concat(verizonUpData);
+            }
+            if (this.reportTypeData.includes('system1')) {
+                this.tempUpdateStatData = this.tempUpdateStatData.concat(system1UpData);
             }
             this.rows = this.tempUpdateStatData;
             if (this.rows.length > 0) {
@@ -549,7 +558,65 @@ class AccountingComponent {
                     revenue: apptitudeNet
                 });
             }
+            // console.log(this.allApptitudeStats, "dfsdfsdf")
             return apptitudeStats;
+        });
+    }
+    getSystem1Stats(company, startDate, endDate) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const response = yield this.accountingService.getSystem1Stats(company, startDate, endDate).toPromise();
+            this.allSystem1Stats = response.stats;
+            for (var tagL of this.tagList) {
+                if (tagL.tag.advertiser == "system1") {
+                    for (var tagSub of tagL.tag.subids) {
+                        if (tagSub.filterTag == "Contains") {
+                            this.allSystem1Stats.map(stat => {
+                                if (stat.subid.includes(tagSub.subid)) {
+                                    stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat.reporting = "System1";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "StartsWith") {
+                            this.allSystem1Stats.map(stat_1 => {
+                                if (stat_1.subid.startsWith(tagSub.subid)) {
+                                    stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_1.reporting = "System1";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "EndsWith") {
+                            this.allSystem1Stats.map(stat_2 => {
+                                if (stat_2.subid.endsWith(tagSub.subid)) {
+                                    stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_2.reporting = "System1";
+                                }
+                            });
+                        }
+                        else if (tagSub.filterTag == "ExactValue") {
+                            this.allSystem1Stats.map(stat_3 => {
+                                if (stat_3.subid == tagSub.subid) {
+                                    stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    stat_3.reporting = "System1";
+                                }
+                            });
+                        }
+                    }
+                }
+            }
+            var system1Stats = [];
+            var system1Net = 0;
+            if (this.allSystem1Stats.length > 0) {
+                this.allSystem1Stats.map((rubiOne) => {
+                    system1Net = system1Net + rubiOne.revenue;
+                });
+                system1Stats.push({
+                    publisher: this.allSystem1Stats.length > 0 ? this.allSystem1Stats[0].publisher : "No Publisher",
+                    reporting: this.allSystem1Stats.length > 0 ? this.allSystem1Stats[0].reporting : "No Reporting",
+                    revenue: system1Net
+                });
+            }
+            return system1Stats;
         });
     }
     //get Tags with selected company
@@ -6682,6 +6749,11 @@ class AccountingService {
     }
     getVerizonDirectStats(company, startDate, endDate) {
         return this.http.get(API_ACCOUNTING_URL + '/verizon-direct', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getSystem1Stats(company, startDate, endDate) {
+        return this.http.get(API_ACCOUNTING_URL + '/system1', {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
