@@ -674,7 +674,7 @@ DashboardWrapperComponent.ɵfac = function DashboardWrapperComponent_Factory(t) 
 DashboardWrapperComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DashboardWrapperComponent, selectors: [["app-dashboard-wrapper"]], decls: 1, vars: 1, consts: [[4, "ngIf"]], template: function DashboardWrapperComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, DashboardWrapperComponent_ng_container_0_Template, 2, 0, "ng-container", 0);
     } if (rf & 2) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.demo === "demo1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.demo === "nextsys");
     } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _dashboard1_dashboard1_component__WEBPACK_IMPORTED_MODULE_3__["Dashboard1Component"]], encapsulation: 2 });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DashboardWrapperComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
@@ -846,497 +846,520 @@ class Dashboard1Component {
         return this.userService.getSelectedCompanyFromLocalStorage();
     }
     getPerionChart(company) {
-        return this.perionService
-            .getAllDashboardStats(company)
-            .toPromise()
-            .then((response) => {
-            this.allPerionChart = response[0];
-            var chartPerionMetric = [];
-            var chartAllPerionStat = this.allPerionChart.currentStat;
-            var chartAllBeforePerionStat = this.allPerionChart.beforeStat;
-            // for (var tagL of this.tagList) {
-            //   var chartAllPerionStat = [];
-            //   var chartAllBeforePerionStat = [];
-            //   if(tagL.tag.advertiser == 'perion') {
-            //     for(var tagSub of tagL.tag.subids) {
-            //       if(tagSub['filterTag'] =="Contains") {   
-            //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-            //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-            //       } else if (tagSub['filterTag'] =="StartsWith") {
-            //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-            //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-            //       } else if (tagSub['filterTag'] =="EndsWith") {
-            //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-            //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-            //       } else if (tagSub['filterTag'] =="ExactValue") {
-            //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid == tagSub['subid'] ))
-            //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid == tagSub['subid'] ))
-            //       }
-            //     }
-            //   }
-            // }
-            //duplicated remove
-            // let filter_data = chartAllPerionStat.filter((obj, pos, arr) => {
-            //   return arr
-            //     .map(mapObj => mapObj._id)
-            //     .indexOf(obj._id) == pos;
-            // });
-            chartAllPerionStat = chartAllPerionStat.slice().sort((a, b) => a.date - b.date);
-            chartAllBeforePerionStat = chartAllBeforePerionStat.slice().sort((a, b) => a.date - b.date);
-            // var helperChart = {};
-            // chartAllPerionStat.map(f =>{
-            //   f.revenue = parseFloat(f.revenue);
-            // })
-            // var resultChart = chartAllPerionStat.reduce(function(r, o) {
-            //   var key = o.date;
-            //   if(!helperChart[key]) {
-            //     helperChart[key] = Object.assign({}, o); // create a copy of o
-            //     r.push(helperChart[key]);
-            //   } else {
-            //     helperChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-            //     if(o.revenue) {
-            //       helperChart[key].revenue += o.revenue;
-            //     }
-            //   } 
-            //   return r;
-            // }, []);
-            //duplicated remove Before Month Data
-            // let filter_before_data = chartAllBeforePerionStat.filter((obj, pos, arr) => {
-            //   return arr
-            //     .map(mapObj => mapObj._id)
-            //     .indexOf(obj._id) == pos;
-            // });
-            // var helperBeforeChart = {};
-            // chartAllBeforePerionStat.map(f =>{
-            //   f.revenue = parseFloat(f.revenue);
-            // })
-            // var resultBeforeChart = chartAllBeforePerionStat.reduce(function(r, o) {
-            //   var key = o.date;
-            //   if(!helperBeforeChart[key]) {
-            //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-            //     r.push(helperBeforeChart[key]);
-            //   } else {
-            //     helperBeforeChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-            //     if(o.revenue) {
-            //       helperBeforeChart[key].revenue += o.revenue;
-            //     }
-            //   } 
-            //   return r;
-            // }, []);
-            var revenuePerDayVal = [];
-            var datesOfRevenueVal = [];
-            var revenuePerDayBeforeVal = [];
-            var datesOfRevenueBeforeVal = [];
-            var chartPerionDataValue = {};
-            var revenueCurrentSum = 0;
-            var revenueBeforeSum = 0;
-            for (var dayData of this.allDaysList) {
-                var checkExistDay = chartAllPerionStat.filter((result) => result.date == dayData);
-                if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                }
-                else {
-                    for (var resVal of checkExistDay) {
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                const response = yield this.perionService
+                    .getAllDashboardStats(company)
+                    .toPromise();
+                this.allPerionChart = response[0];
+                var chartPerionMetric = [];
+                var chartAllPerionStat = this.allPerionChart.currentStat;
+                var chartAllBeforePerionStat = this.allPerionChart.beforeStat;
+                // for (var tagL of this.tagList) {
+                //   var chartAllPerionStat = [];
+                //   var chartAllBeforePerionStat = [];
+                //   if(tagL.tag.advertiser == 'perion') {
+                //     for(var tagSub of tagL.tag.subids) {
+                //       if(tagSub['filterTag'] =="Contains") {   
+                //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.includes(tagSub['subid'])))
+                //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.includes(tagSub['subid'])))
+                //       } else if (tagSub['filterTag'] =="StartsWith") {
+                //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
+                //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
+                //       } else if (tagSub['filterTag'] =="EndsWith") {
+                //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
+                //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
+                //       } else if (tagSub['filterTag'] =="ExactValue") {
+                //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid == tagSub['subid'] ))
+                //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid == tagSub['subid'] ))
+                //       }
+                //     }
+                //   }
+                // }
+                //duplicated remove
+                // let filter_data = chartAllPerionStat.filter((obj, pos, arr) => {
+                //   return arr
+                //     .map(mapObj => mapObj._id)
+                //     .indexOf(obj._id) == pos;
+                // });
+                chartAllPerionStat = chartAllPerionStat.slice().sort((a, b) => a.date - b.date);
+                chartAllBeforePerionStat = chartAllBeforePerionStat.slice().sort((a_1, b_1) => a_1.date - b_1.date);
+                // var helperChart = {};
+                // chartAllPerionStat.map(f =>{
+                //   f.revenue = parseFloat(f.revenue);
+                // })
+                // var resultChart = chartAllPerionStat.reduce(function(r, o) {
+                //   var key = o.date;
+                //   if(!helperChart[key]) {
+                //     helperChart[key] = Object.assign({}, o); // create a copy of o
+                //     r.push(helperChart[key]);
+                //   } else {
+                //     helperChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
+                //     if(o.revenue) {
+                //       helperChart[key].revenue += o.revenue;
+                //     }
+                //   } 
+                //   return r;
+                // }, []);
+                //duplicated remove Before Month Data
+                // let filter_before_data = chartAllBeforePerionStat.filter((obj, pos, arr) => {
+                //   return arr
+                //     .map(mapObj => mapObj._id)
+                //     .indexOf(obj._id) == pos;
+                // });
+                // var helperBeforeChart = {};
+                // chartAllBeforePerionStat.map(f =>{
+                //   f.revenue = parseFloat(f.revenue);
+                // })
+                // var resultBeforeChart = chartAllBeforePerionStat.reduce(function(r, o) {
+                //   var key = o.date;
+                //   if(!helperBeforeChart[key]) {
+                //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
+                //     r.push(helperBeforeChart[key]);
+                //   } else {
+                //     helperBeforeChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
+                //     if(o.revenue) {
+                //       helperBeforeChart[key].revenue += o.revenue;
+                //     }
+                //   } 
+                //   return r;
+                // }, []);
+                var revenuePerDayVal = [];
+                var datesOfRevenueVal = [];
+                var revenuePerDayBeforeVal = [];
+                var datesOfRevenueBeforeVal = [];
+                var chartPerionDataValue = {};
+                var revenueCurrentSum = 0;
+                var revenueBeforeSum = 0;
+                for (var dayData of this.allDaysList) {
+                    var checkExistDay = chartAllPerionStat.filter((result) => result.date == dayData);
+                    if (checkExistDay.length == 0) {
+                        revenuePerDayVal.push(0);
+                        datesOfRevenueVal.push(dayData);
+                    }
+                    else {
+                        for (var resVal of checkExistDay) {
+                            revenueCurrentSum += resVal.revenue;
+                            revenuePerDayVal.push(resVal.revenue);
+                            datesOfRevenueVal.push(resVal.date);
+                        }
                     }
                 }
+                for (var resBeforeVal of chartAllBeforePerionStat) {
+                    revenueBeforeSum += resBeforeVal.revenue;
+                    revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                    datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                }
+                chartPerionDataValue['revenuePerDay'] = revenuePerDayVal;
+                chartPerionDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                chartPerionDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                chartPerionDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                chartPerionDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                chartPerionDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                chartPerionDataValue['statType'] = "Perion";
+                chartPerionDataValue['redirectUri'] = "/reporting/perion";
+                chartPerionMetric.push(chartPerionDataValue);
+                return chartPerionMetric;
             }
-            for (var resBeforeVal of chartAllBeforePerionStat) {
-                revenueBeforeSum += resBeforeVal.revenue;
-                revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                datesOfRevenueBeforeVal.push(resBeforeVal.date);
+            catch (error) {
+                return error;
             }
-            chartPerionDataValue['revenuePerDay'] = revenuePerDayVal;
-            chartPerionDataValue['datesOfRevenue'] = datesOfRevenueVal;
-            chartPerionDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-            chartPerionDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-            chartPerionDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-            chartPerionDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-            chartPerionDataValue['statType'] = "Perion";
-            chartPerionDataValue['redirectUri'] = "/reporting/perion";
-            chartPerionMetric.push(chartPerionDataValue);
-            return chartPerionMetric;
-        })
-            .catch((error) => {
-            return error;
         });
     }
     getLyonChart(company) {
-        return this.lyonService.getAllDashboardStats().toPromise().then((response) => {
-            this.allLyonChart = response[0];
-            // console.log("=======dddd======", this.allLyonChart)
-            var chartLyonMetric = [];
-            var chartAllLyonStat = this.allLyonChart.currentStat;
-            var chartAllBeforeLyonStat = this.allLyonChart.beforeStat;
-            // for (var tagL of this.tagList) {
-            //   if(tagL.tag.advertiser == 'lyons') {
-            //     for(var tagSub of tagL.tag.subids) {
-            //       if(tagSub['filterTag'] =="Contains") {   
-            //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-            //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-            //       } else if (tagSub['filterTag'] =="StartsWith") {
-            //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-            //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-            //       } else if (tagSub['filterTag'] =="EndsWith") {
-            //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-            //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-            //       } else if (tagSub['filterTag'] =="ExactValue") {
-            //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid == tagSub['subid'] ))
-            //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid == tagSub['subid'] ))
-            //       }
-            //     }
-            //   }
-            // }
-            // //duplicated remove
-            // let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
-            //   return arr
-            //     .map(mapObj => mapObj._id)
-            //     .indexOf(obj._id) == pos;
-            // });
-            chartAllLyonStat = chartAllLyonStat.slice().sort((a, b) => a.date - b.date);
-            chartAllBeforeLyonStat = chartAllBeforeLyonStat.slice().sort((a, b) => a.date - b.date);
-            // var helperChart = {};
-            // var resultChart = chartAllLyonStat.reduce(function(r, o) {
-            //   var key = o.date;
-            //   if(!helperChart[key]) {
-            //     helperChart[key] = Object.assign({}, o); // create a copy of o
-            //     r.push(helperChart[key]);
-            //   } else {
-            //     helperChart[key].searches += parseInt(o.searches);
-            //     if(o.revenue) {
-            //       helperChart[key].revenue += o.revenue;
-            //     }
-            //   } 
-            //   return r;
-            // }, []);
-            //duplicated remove Before Month Data
-            // let filter_before_data = chartAllBeforeLyonStat.filter((obj, pos, arr) => {
-            //   return arr
-            //     .map(mapObj => mapObj._id)
-            //     .indexOf(obj._id) == pos;
-            // });
-            // var helperBeforeChart = {};
-            // var resultBeforeChart = chartAllBeforeLyonStat.reduce(function(r, o) {
-            //   var key = o.date;
-            //   if(!helperBeforeChart[key]) {
-            //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-            //     r.push(helperBeforeChart[key]);
-            //   } else {
-            //     helperBeforeChart[key].searches += parseInt(o.searches);
-            //     if(o.revenue) {
-            //       helperBeforeChart[key].revenue += o.revenue;
-            //     }
-            //   } 
-            //   return r;
-            // }, []);
-            var revenuePerDayVal = [];
-            var datesOfRevenueVal = [];
-            var revenuePerDayBeforeVal = [];
-            var datesOfRevenueBeforeVal = [];
-            var chartLyonDataValue = {};
-            var revenueCurrentSum = 0;
-            var revenueBeforeSum = 0;
-            for (var dayData of this.allDaysList) {
-                var checkExistDay = chartAllLyonStat.filter((result) => result.date == dayData);
-                if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                }
-                else {
-                    for (var resVal of checkExistDay) {
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                const response = yield this.lyonService.getAllDashboardStats().toPromise();
+                this.allLyonChart = response[0];
+                // console.log("=======dddd======", this.allLyonChart)
+                var chartLyonMetric = [];
+                var chartAllLyonStat = this.allLyonChart.currentStat;
+                var chartAllBeforeLyonStat = this.allLyonChart.beforeStat;
+                // for (var tagL of this.tagList) {
+                //   if(tagL.tag.advertiser == 'lyons') {
+                //     for(var tagSub of tagL.tag.subids) {
+                //       if(tagSub['filterTag'] =="Contains") {   
+                //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.includes(tagSub['subid'])))
+                //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.includes(tagSub['subid'])))
+                //       } else if (tagSub['filterTag'] =="StartsWith") {
+                //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
+                //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
+                //       } else if (tagSub['filterTag'] =="EndsWith") {
+                //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
+                //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
+                //       } else if (tagSub['filterTag'] =="ExactValue") {
+                //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid == tagSub['subid'] ))
+                //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid == tagSub['subid'] ))
+                //       }
+                //     }
+                //   }
+                // }
+                // //duplicated remove
+                // let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
+                //   return arr
+                //     .map(mapObj => mapObj._id)
+                //     .indexOf(obj._id) == pos;
+                // });
+                chartAllLyonStat = chartAllLyonStat.slice().sort((a, b) => a.date - b.date);
+                chartAllBeforeLyonStat = chartAllBeforeLyonStat.slice().sort((a_1, b_1) => a_1.date - b_1.date);
+                // var helperChart = {};
+                // var resultChart = chartAllLyonStat.reduce(function(r, o) {
+                //   var key = o.date;
+                //   if(!helperChart[key]) {
+                //     helperChart[key] = Object.assign({}, o); // create a copy of o
+                //     r.push(helperChart[key]);
+                //   } else {
+                //     helperChart[key].searches += parseInt(o.searches);
+                //     if(o.revenue) {
+                //       helperChart[key].revenue += o.revenue;
+                //     }
+                //   } 
+                //   return r;
+                // }, []);
+                //duplicated remove Before Month Data
+                // let filter_before_data = chartAllBeforeLyonStat.filter((obj, pos, arr) => {
+                //   return arr
+                //     .map(mapObj => mapObj._id)
+                //     .indexOf(obj._id) == pos;
+                // });
+                // var helperBeforeChart = {};
+                // var resultBeforeChart = chartAllBeforeLyonStat.reduce(function(r, o) {
+                //   var key = o.date;
+                //   if(!helperBeforeChart[key]) {
+                //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
+                //     r.push(helperBeforeChart[key]);
+                //   } else {
+                //     helperBeforeChart[key].searches += parseInt(o.searches);
+                //     if(o.revenue) {
+                //       helperBeforeChart[key].revenue += o.revenue;
+                //     }
+                //   } 
+                //   return r;
+                // }, []);
+                var revenuePerDayVal = [];
+                var datesOfRevenueVal = [];
+                var revenuePerDayBeforeVal = [];
+                var datesOfRevenueBeforeVal = [];
+                var chartLyonDataValue = {};
+                var revenueCurrentSum = 0;
+                var revenueBeforeSum = 0;
+                for (var dayData of this.allDaysList) {
+                    var checkExistDay = chartAllLyonStat.filter((result_1) => result_1.date == dayData);
+                    if (checkExistDay.length == 0) {
+                        revenuePerDayVal.push(0);
+                        datesOfRevenueVal.push(dayData);
+                    }
+                    else {
+                        for (var resVal of checkExistDay) {
+                            revenueCurrentSum += resVal.revenue;
+                            revenuePerDayVal.push(resVal.revenue);
+                            datesOfRevenueVal.push(resVal.date);
+                        }
                     }
                 }
+                for (var resBeforeVal of chartAllBeforeLyonStat) {
+                    revenueBeforeSum += resBeforeVal.revenue;
+                    revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                    datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                }
+                chartLyonDataValue['revenuePerDay'] = revenuePerDayVal;
+                chartLyonDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                chartLyonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                chartLyonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                chartLyonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                chartLyonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                chartLyonDataValue['statType'] = "Lyons";
+                chartLyonDataValue['redirectUri'] = "/reporting/lyons";
+                chartLyonMetric.push(chartLyonDataValue);
+                return chartLyonMetric;
             }
-            for (var resBeforeVal of chartAllBeforeLyonStat) {
-                revenueBeforeSum += resBeforeVal.revenue;
-                revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                datesOfRevenueBeforeVal.push(resBeforeVal.date);
+            catch (error) {
+                return error;
             }
-            chartLyonDataValue['revenuePerDay'] = revenuePerDayVal;
-            chartLyonDataValue['datesOfRevenue'] = datesOfRevenueVal;
-            chartLyonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-            chartLyonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-            chartLyonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-            chartLyonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-            chartLyonDataValue['statType'] = "Lyons";
-            chartLyonDataValue['redirectUri'] = "/reporting/lyons";
-            chartLyonMetric.push(chartLyonDataValue);
-            return chartLyonMetric;
-        })
-            .catch((error) => {
-            return error;
         });
     }
     getRubiChart(company) {
-        return this.rubiService.getAllDashboardStats().toPromise().then((response) => {
-            this.allRubiChart = response[0];
-            var chartRubiMetric = [];
-            var chartAllRubiStat = this.allRubiChart.currentStat;
-            var chartAllBeforeRubiStat = this.allRubiChart.beforeStat;
-            chartAllRubiStat = chartAllRubiStat.slice().sort((a, b) => a.date - b.date);
-            chartAllBeforeRubiStat = chartAllBeforeRubiStat.slice().sort((a, b) => a.date - b.date);
-            var revenuePerDayVal = [];
-            var datesOfRevenueVal = [];
-            var revenuePerDayBeforeVal = [];
-            var datesOfRevenueBeforeVal = [];
-            var chartRubiDataValue = {};
-            var revenueCurrentSum = 0;
-            var revenueBeforeSum = 0;
-            for (var dayData of this.allDaysList) {
-                var checkExistDay = chartAllRubiStat.filter((result) => result.date == dayData);
-                if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                }
-                else {
-                    for (var resVal of checkExistDay) {
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                const response = yield this.rubiService.getAllDashboardStats().toPromise();
+                this.allRubiChart = response[0];
+                var chartRubiMetric = [];
+                var chartAllRubiStat = this.allRubiChart.currentStat;
+                var chartAllBeforeRubiStat = this.allRubiChart.beforeStat;
+                chartAllRubiStat = chartAllRubiStat.slice().sort((a, b) => a.date - b.date);
+                chartAllBeforeRubiStat = chartAllBeforeRubiStat.slice().sort((a_1, b_1) => a_1.date - b_1.date);
+                var revenuePerDayVal = [];
+                var datesOfRevenueVal = [];
+                var revenuePerDayBeforeVal = [];
+                var datesOfRevenueBeforeVal = [];
+                var chartRubiDataValue = {};
+                var revenueCurrentSum = 0;
+                var revenueBeforeSum = 0;
+                for (var dayData of this.allDaysList) {
+                    var checkExistDay = chartAllRubiStat.filter((result_1) => result_1.date == dayData);
+                    if (checkExistDay.length == 0) {
+                        revenuePerDayVal.push(0);
+                        datesOfRevenueVal.push(dayData);
+                    }
+                    else {
+                        for (var resVal of checkExistDay) {
+                            revenueCurrentSum += resVal.revenue;
+                            revenuePerDayVal.push(resVal.revenue);
+                            datesOfRevenueVal.push(resVal.date);
+                        }
                     }
                 }
+                for (var resBeforeVal of chartAllBeforeRubiStat) {
+                    revenueBeforeSum += resBeforeVal.revenue;
+                    revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                    datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                }
+                chartRubiDataValue['revenuePerDay'] = revenuePerDayVal;
+                chartRubiDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                chartRubiDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                chartRubiDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                chartRubiDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                chartRubiDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                chartRubiDataValue['statType'] = "Rubi";
+                chartRubiDataValue['redirectUri'] = "/reporting/rubi";
+                chartRubiMetric.push(chartRubiDataValue);
+                return chartRubiMetric;
             }
-            for (var resBeforeVal of chartAllBeforeRubiStat) {
-                revenueBeforeSum += resBeforeVal.revenue;
-                revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                datesOfRevenueBeforeVal.push(resBeforeVal.date);
+            catch (error) {
+                return error;
             }
-            chartRubiDataValue['revenuePerDay'] = revenuePerDayVal;
-            chartRubiDataValue['datesOfRevenue'] = datesOfRevenueVal;
-            chartRubiDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-            chartRubiDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-            chartRubiDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-            chartRubiDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-            chartRubiDataValue['statType'] = "Rubi";
-            chartRubiDataValue['redirectUri'] = "/reporting/rubi";
-            chartRubiMetric.push(chartRubiDataValue);
-            return chartRubiMetric;
-        })
-            .catch((error) => {
-            return error;
         });
     }
     getSystem1Chart(company) {
-        return this.system1Service.getAllDashboardStats().toPromise().then((response) => {
-            this.allSystem1Chart = response[0];
-            var chartSystem1Metric = [];
-            var chartAllSystem1Stat = this.allSystem1Chart.currentStat;
-            var chartAllBeforeSystem1Stat = this.allSystem1Chart.beforeStat;
-            chartAllSystem1Stat = chartAllSystem1Stat.slice().sort((a, b) => a.date - b.date);
-            chartAllBeforeSystem1Stat = chartAllBeforeSystem1Stat.slice().sort((a, b) => a.date - b.date);
-            var revenuePerDayVal = [];
-            var datesOfRevenueVal = [];
-            var revenuePerDayBeforeVal = [];
-            var datesOfRevenueBeforeVal = [];
-            var chartSystem1DataValue = {};
-            var revenueCurrentSum = 0;
-            var revenueBeforeSum = 0;
-            for (var dayData of this.allDaysList) {
-                var checkExistDay = chartAllSystem1Stat.filter((result) => result.date == dayData);
-                if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                }
-                else {
-                    for (var resVal of checkExistDay) {
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                const response = yield this.system1Service.getAllDashboardStats().toPromise();
+                this.allSystem1Chart = response[0];
+                var chartSystem1Metric = [];
+                var chartAllSystem1Stat = this.allSystem1Chart.currentStat;
+                var chartAllBeforeSystem1Stat = this.allSystem1Chart.beforeStat;
+                chartAllSystem1Stat = chartAllSystem1Stat.slice().sort((a, b) => a.date - b.date);
+                chartAllBeforeSystem1Stat = chartAllBeforeSystem1Stat.slice().sort((a_1, b_1) => a_1.date - b_1.date);
+                var revenuePerDayVal = [];
+                var datesOfRevenueVal = [];
+                var revenuePerDayBeforeVal = [];
+                var datesOfRevenueBeforeVal = [];
+                var chartSystem1DataValue = {};
+                var revenueCurrentSum = 0;
+                var revenueBeforeSum = 0;
+                for (var dayData of this.allDaysList) {
+                    var checkExistDay = chartAllSystem1Stat.filter((result_1) => result_1.date == dayData);
+                    if (checkExistDay.length == 0) {
+                        revenuePerDayVal.push(0);
+                        datesOfRevenueVal.push(dayData);
+                    }
+                    else {
+                        for (var resVal of checkExistDay) {
+                            revenueCurrentSum += resVal.revenue;
+                            revenuePerDayVal.push(resVal.revenue);
+                            datesOfRevenueVal.push(resVal.date);
+                        }
                     }
                 }
+                for (var resBeforeVal of chartAllBeforeSystem1Stat) {
+                    revenueBeforeSum += resBeforeVal.revenue;
+                    revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                    datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                }
+                chartSystem1DataValue['revenuePerDay'] = revenuePerDayVal;
+                chartSystem1DataValue['datesOfRevenue'] = datesOfRevenueVal;
+                chartSystem1DataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                chartSystem1DataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                chartSystem1DataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                chartSystem1DataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                chartSystem1DataValue['statType'] = "System 1";
+                chartSystem1DataValue['redirectUri'] = "/reporting/system1";
+                chartSystem1Metric.push(chartSystem1DataValue);
+                return chartSystem1Metric;
             }
-            for (var resBeforeVal of chartAllBeforeSystem1Stat) {
-                revenueBeforeSum += resBeforeVal.revenue;
-                revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                datesOfRevenueBeforeVal.push(resBeforeVal.date);
+            catch (error) {
+                return error;
             }
-            chartSystem1DataValue['revenuePerDay'] = revenuePerDayVal;
-            chartSystem1DataValue['datesOfRevenue'] = datesOfRevenueVal;
-            chartSystem1DataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-            chartSystem1DataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-            chartSystem1DataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-            chartSystem1DataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-            chartSystem1DataValue['statType'] = "System 1";
-            chartSystem1DataValue['redirectUri'] = "/reporting/system1";
-            chartSystem1Metric.push(chartSystem1DataValue);
-            return chartSystem1Metric;
-        })
-            .catch((error) => {
-            return error;
         });
     }
     getProviderChart(company) {
     }
     //get Verizon Direct chart
     getVerizonChart(company) {
-        return this.verizonService.getAllDashboardStats().toPromise().then((response) => {
-            this.allVerizonChart = response[0];
-            var chartVerizonMetric = [];
-            var chartAllVerizonStat = this.allVerizonChart.currentStat;
-            var chartAllBeforeVerizonStat = this.allVerizonChart.beforeStat;
-            chartAllVerizonStat = chartAllVerizonStat.slice().sort((a, b) => a.date - b.date);
-            chartAllBeforeVerizonStat = chartAllBeforeVerizonStat.slice().sort((a, b) => a.date - b.date);
-            var revenuePerDayVal = [];
-            var datesOfRevenueVal = [];
-            var revenuePerDayBeforeVal = [];
-            var datesOfRevenueBeforeVal = [];
-            var chartVerizonDataValue = {};
-            var revenueCurrentSum = 0;
-            var revenueBeforeSum = 0;
-            for (var dayData of this.allDaysList) {
-                var checkExistDay = chartAllVerizonStat.filter((result) => result.date == dayData);
-                if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                }
-                else {
-                    for (var resVal of checkExistDay) {
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                const response = yield this.verizonService.getAllDashboardStats().toPromise();
+                this.allVerizonChart = response[0];
+                var chartVerizonMetric = [];
+                var chartAllVerizonStat = this.allVerizonChart.currentStat;
+                var chartAllBeforeVerizonStat = this.allVerizonChart.beforeStat;
+                chartAllVerizonStat = chartAllVerizonStat.slice().sort((a, b) => a.date - b.date);
+                chartAllBeforeVerizonStat = chartAllBeforeVerizonStat.slice().sort((a_1, b_1) => a_1.date - b_1.date);
+                var revenuePerDayVal = [];
+                var datesOfRevenueVal = [];
+                var revenuePerDayBeforeVal = [];
+                var datesOfRevenueBeforeVal = [];
+                var chartVerizonDataValue = {};
+                var revenueCurrentSum = 0;
+                var revenueBeforeSum = 0;
+                for (var dayData of this.allDaysList) {
+                    var checkExistDay = chartAllVerizonStat.filter((result_1) => result_1.date == dayData);
+                    if (checkExistDay.length == 0) {
+                        revenuePerDayVal.push(0);
+                        datesOfRevenueVal.push(dayData);
+                    }
+                    else {
+                        for (var resVal of checkExistDay) {
+                            revenueCurrentSum += resVal.revenue;
+                            revenuePerDayVal.push(resVal.revenue);
+                            datesOfRevenueVal.push(resVal.date);
+                        }
                     }
                 }
+                for (var resBeforeVal of chartAllBeforeVerizonStat) {
+                    revenueBeforeSum += resBeforeVal.revenue;
+                    revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                    datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                }
+                chartVerizonDataValue['revenuePerDay'] = revenuePerDayVal;
+                chartVerizonDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                chartVerizonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                chartVerizonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                chartVerizonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                chartVerizonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                chartVerizonDataValue['statType'] = "Verizon Direct";
+                chartVerizonDataValue['redirectUri'] = "/reporting/verizon-direct";
+                chartVerizonMetric.push(chartVerizonDataValue);
+                return chartVerizonMetric;
             }
-            for (var resBeforeVal of chartAllBeforeVerizonStat) {
-                revenueBeforeSum += resBeforeVal.revenue;
-                revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                datesOfRevenueBeforeVal.push(resBeforeVal.date);
+            catch (error) {
+                return error;
             }
-            chartVerizonDataValue['revenuePerDay'] = revenuePerDayVal;
-            chartVerizonDataValue['datesOfRevenue'] = datesOfRevenueVal;
-            chartVerizonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-            chartVerizonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-            chartVerizonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-            chartVerizonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-            chartVerizonDataValue['statType'] = "Verizon Direct";
-            chartVerizonDataValue['redirectUri'] = "/reporting/verizon-direct";
-            chartVerizonMetric.push(chartVerizonDataValue);
-            return chartVerizonMetric;
-        })
-            .catch((error) => {
-            return error;
         });
     }
     //get Tags with selected company
     getCompanyTags(selectedCompany) {
-        var companyId;
-        if (selectedCompany) {
-            companyId = selectedCompany.split("/")[1];
-        }
-        else {
-            companyId = null;
-        }
-        return this.tagService.getCompanyTags(companyId).toPromise().then((response) => {
-            return response;
-        })
-            .catch((error) => {
-            return error;
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            var companyId;
+            if (selectedCompany) {
+                companyId = selectedCompany.split("/")[1];
+            }
+            else {
+                companyId = null;
+            }
+            try {
+                const response = yield this.tagService.getCompanyTags(companyId).toPromise();
+                return response;
+            }
+            catch (error) {
+                return error;
+            }
         });
     }
     //Get Solex Bc
     getSolexBCChart(company) {
-        return this.solexbcService.getAllDashboardStats().toPromise().then((response) => {
-            this.allSolexBCChart = response[0];
-            var chartSolexBCMetric = [];
-            var chartAllSolexBCStat = this.allSolexBCChart.currentStat;
-            var chartAllBeforeSolexBCStat = this.allSolexBCChart.beforeStat;
-            chartAllSolexBCStat = chartAllSolexBCStat.slice().sort((a, b) => a.date - b.date);
-            chartAllBeforeSolexBCStat = chartAllBeforeSolexBCStat.slice().sort((a, b) => a.date - b.date);
-            var revenuePerDayVal = [];
-            var datesOfRevenueVal = [];
-            var revenuePerDayBeforeVal = [];
-            var datesOfRevenueBeforeVal = [];
-            var chartSolexBCDataValue = {};
-            var revenueCurrentSum = 0;
-            var revenueBeforeSum = 0;
-            for (var dayData of this.allDaysList) {
-                var checkExistDay = chartAllSolexBCStat.filter((result) => result.date == dayData);
-                if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                }
-                else {
-                    for (var resVal of checkExistDay) {
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                const response = yield this.solexbcService.getAllDashboardStats().toPromise();
+                this.allSolexBCChart = response[0];
+                var chartSolexBCMetric = [];
+                var chartAllSolexBCStat = this.allSolexBCChart.currentStat;
+                var chartAllBeforeSolexBCStat = this.allSolexBCChart.beforeStat;
+                chartAllSolexBCStat = chartAllSolexBCStat.slice().sort((a, b) => a.date - b.date);
+                chartAllBeforeSolexBCStat = chartAllBeforeSolexBCStat.slice().sort((a_1, b_1) => a_1.date - b_1.date);
+                var revenuePerDayVal = [];
+                var datesOfRevenueVal = [];
+                var revenuePerDayBeforeVal = [];
+                var datesOfRevenueBeforeVal = [];
+                var chartSolexBCDataValue = {};
+                var revenueCurrentSum = 0;
+                var revenueBeforeSum = 0;
+                for (var dayData of this.allDaysList) {
+                    var checkExistDay = chartAllSolexBCStat.filter((result_1) => result_1.date == dayData);
+                    if (checkExistDay.length == 0) {
+                        revenuePerDayVal.push(0);
+                        datesOfRevenueVal.push(dayData);
+                    }
+                    else {
+                        for (var resVal of checkExistDay) {
+                            revenueCurrentSum += resVal.revenue;
+                            revenuePerDayVal.push(resVal.revenue);
+                            datesOfRevenueVal.push(resVal.date);
+                        }
                     }
                 }
+                for (var resBeforeVal of chartAllBeforeSolexBCStat) {
+                    revenueBeforeSum += resBeforeVal.revenue;
+                    revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                    datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                }
+                chartSolexBCDataValue['revenuePerDay'] = revenuePerDayVal;
+                chartSolexBCDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                chartSolexBCDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                chartSolexBCDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                chartSolexBCDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                chartSolexBCDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                chartSolexBCDataValue['statType'] = "SolexBC";
+                chartSolexBCDataValue['redirectUri'] = "/reporting/solex-bc";
+                chartSolexBCMetric.push(chartSolexBCDataValue);
+                return chartSolexBCMetric;
             }
-            for (var resBeforeVal of chartAllBeforeSolexBCStat) {
-                revenueBeforeSum += resBeforeVal.revenue;
-                revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                datesOfRevenueBeforeVal.push(resBeforeVal.date);
+            catch (error) {
+                return error;
             }
-            chartSolexBCDataValue['revenuePerDay'] = revenuePerDayVal;
-            chartSolexBCDataValue['datesOfRevenue'] = datesOfRevenueVal;
-            chartSolexBCDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-            chartSolexBCDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-            chartSolexBCDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-            chartSolexBCDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-            chartSolexBCDataValue['statType'] = "SolexBC";
-            chartSolexBCDataValue['redirectUri'] = "/reporting/solex-bc";
-            chartSolexBCMetric.push(chartSolexBCDataValue);
-            return chartSolexBCMetric;
-        })
-            .catch((error) => {
-            return error;
         });
     }
     //Get Apptitude
     getApptitudeChart(company) {
-        return this.apptitudeService.getAllDashboardStats().toPromise().then((response) => {
-            this.allApptitudeChart = response[0];
-            var chartRubiMetric = [];
-            var chartAllApptitudeStat = this.allApptitudeChart.currentStat;
-            var chartAllBeforeApptitudeStat = this.allApptitudeChart.beforeStat;
-            chartAllApptitudeStat = chartAllApptitudeStat.slice().sort((a, b) => a.date - b.date);
-            chartAllBeforeApptitudeStat = chartAllBeforeApptitudeStat.slice().sort((a, b) => a.date - b.date);
-            var revenuePerDayVal = [];
-            var datesOfRevenueVal = [];
-            var revenuePerDayBeforeVal = [];
-            var datesOfRevenueBeforeVal = [];
-            var chartApptitudeDataValue = {};
-            var revenueCurrentSum = 0;
-            var revenueBeforeSum = 0;
-            for (var dayData of this.allDaysList) {
-                var checkExistDay = chartAllApptitudeStat.filter((result) => result.date == dayData);
-                if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                }
-                else {
-                    for (var resVal of checkExistDay) {
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                const response = yield this.apptitudeService.getAllDashboardStats().toPromise();
+                this.allApptitudeChart = response[0];
+                var chartRubiMetric = [];
+                var chartAllApptitudeStat = this.allApptitudeChart.currentStat;
+                var chartAllBeforeApptitudeStat = this.allApptitudeChart.beforeStat;
+                chartAllApptitudeStat = chartAllApptitudeStat.slice().sort((a, b) => a.date - b.date);
+                chartAllBeforeApptitudeStat = chartAllBeforeApptitudeStat.slice().sort((a_1, b_1) => a_1.date - b_1.date);
+                var revenuePerDayVal = [];
+                var datesOfRevenueVal = [];
+                var revenuePerDayBeforeVal = [];
+                var datesOfRevenueBeforeVal = [];
+                var chartApptitudeDataValue = {};
+                var revenueCurrentSum = 0;
+                var revenueBeforeSum = 0;
+                for (var dayData of this.allDaysList) {
+                    var checkExistDay = chartAllApptitudeStat.filter((result_1) => result_1.date == dayData);
+                    if (checkExistDay.length == 0) {
+                        revenuePerDayVal.push(0);
+                        datesOfRevenueVal.push(dayData);
+                    }
+                    else {
+                        for (var resVal of checkExistDay) {
+                            revenueCurrentSum += resVal.revenue;
+                            revenuePerDayVal.push(resVal.revenue);
+                            datesOfRevenueVal.push(resVal.date);
+                        }
                     }
                 }
+                for (var resBeforeVal of chartAllBeforeApptitudeStat) {
+                    revenueBeforeSum += resBeforeVal.revenue;
+                    revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                    datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                }
+                chartApptitudeDataValue['revenuePerDay'] = revenuePerDayVal;
+                chartApptitudeDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                chartApptitudeDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                chartApptitudeDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                chartApptitudeDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                chartApptitudeDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                chartApptitudeDataValue['statType'] = "Monarch Apptitude";
+                chartApptitudeDataValue['redirectUri'] = "/reporting/apptitude";
+                chartRubiMetric.push(chartApptitudeDataValue);
+                return chartRubiMetric;
             }
-            for (var resBeforeVal of chartAllBeforeApptitudeStat) {
-                revenueBeforeSum += resBeforeVal.revenue;
-                revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                datesOfRevenueBeforeVal.push(resBeforeVal.date);
+            catch (error) {
+                return error;
             }
-            chartApptitudeDataValue['revenuePerDay'] = revenuePerDayVal;
-            chartApptitudeDataValue['datesOfRevenue'] = datesOfRevenueVal;
-            chartApptitudeDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-            chartApptitudeDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-            chartApptitudeDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-            chartApptitudeDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-            chartApptitudeDataValue['statType'] = "Monarch Apptitude";
-            chartApptitudeDataValue['redirectUri'] = "/reporting/apptitude";
-            chartRubiMetric.push(chartApptitudeDataValue);
-            return chartRubiMetric;
-        })
-            .catch((error) => {
-            return error;
         });
     }
     getCurrentMontDateList() {

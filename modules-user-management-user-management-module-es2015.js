@@ -1388,27 +1388,6 @@ class EditUsersComponent {
                 });
             }
         });
-        // dialogRef.afterClosed().subscribe((result) => {
-        //   console.log(`Dialog result: ${result}`);
-        // });
-        // console.log(this.user);
-        // const initialState = { data: this.user };
-        // const modalRef = this.modalService.open(AddCompanyComponent, {
-        //   size: 'md',
-        // });
-        // modalRef.componentInstance.companies = [...this.user.companies];
-        // modalRef.result.then((res) => {
-        //   //If a result is passed back, update the user profile with new companies.
-        //   if (res) {
-        //     this.user.companies = [...res];
-        //     this.userManagementService.updateUser(this.user).subscribe((x) => {
-        //       this.getUserData(this.user._key);
-        //       this.snackBarService.info(
-        //         `Updated  ${this.user.fullname}'s companies.`
-        //       );
-        //     });
-        //   }
-        // });
     }
 }
 EditUsersComponent.ɵfac = function EditUsersComponent_Factory(t) { return new (t || EditUsersComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_user_management_service__WEBPACK_IMPORTED_MODULE_6__["UserManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_7__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_8__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_9__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_10__["NgbModal"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_companies_service__WEBPACK_IMPORTED_MODULE_11__["CompanyService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_12__["TagsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_9__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_13__["MatDialog"])); };
@@ -1752,12 +1731,12 @@ function NewAdminComponent_div_0_mat_error_24_Template(rf, ctx) { if (rf & 1) {
 } }
 function NewAdminComponent_div_0_mat_error_29_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function NewAdminComponent_div_0_mat_error_30_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "'Passsword' and 'Confirm Password' didn't match.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " 'Passsword' and 'Confirm Password' didn't match.");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function NewAdminComponent_div_0_Template(rf, ctx) { if (rf & 1) {
@@ -1999,12 +1978,12 @@ function NewAdvertiserComponent_div_0_mat_error_24_Template(rf, ctx) { if (rf & 
 } }
 function NewAdvertiserComponent_div_0_mat_error_29_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function NewAdvertiserComponent_div_0_mat_error_30_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "'Passsword' and 'Confirm Password' didn't match.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " 'Passsword' and 'Confirm Password' didn't match.");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function NewAdvertiserComponent_div_0_Template(rf, ctx) { if (rf & 1) {
@@ -2246,12 +2225,12 @@ function NewSuperadminComponent_div_0_mat_error_24_Template(rf, ctx) { if (rf & 
 } }
 function NewSuperadminComponent_div_0_mat_error_29_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function NewSuperadminComponent_div_0_mat_error_30_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "'Passsword' and 'Confirm Password' didn't match.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " 'Passsword' and 'Confirm Password' didn't match.");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function NewSuperadminComponent_div_0_Template(rf, ctx) { if (rf & 1) {
@@ -2493,12 +2472,12 @@ function NewUserComponent_div_0_mat_error_24_Template(rf, ctx) { if (rf & 1) {
 } }
 function NewUserComponent_div_0_mat_error_29_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function NewUserComponent_div_0_mat_error_30_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "'Passsword' and 'Confirm Password' didn't match.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " 'Passsword' and 'Confirm Password' didn't match.");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function NewUserComponent_div_0_Template(rf, ctx) { if (rf & 1) {

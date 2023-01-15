@@ -1139,9 +1139,6 @@ class PublisherComponent {
             }
             //duplicated remove
             let filter_data = chatAllApptitudeStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
-            // filter_data.map(f =>{
-            //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
-            // })
             filter_data = filter_data.slice().sort((a, b) => a.date - b.date);
             var helperChart = {};
             var resultChart = filter_data.reduce(function (r, o) {

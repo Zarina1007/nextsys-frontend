@@ -18186,7 +18186,7 @@
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.demo === "demo1");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.demo === "nextsys");
           }
         },
         directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _dashboard1_dashboard1_component__WEBPACK_IMPORTED_MODULE_3__["Dashboard1Component"]],
@@ -18566,493 +18566,557 @@
         }, {
           key: "getPerionChart",
           value: function getPerionChart(company) {
-            var _this3 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+              var response, chartPerionMetric, chartAllPerionStat, chartAllBeforePerionStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartPerionDataValue, revenueCurrentSum, revenueBeforeSum, _iterator, _step, dayData, checkExistDay, _iterator3, _step3, resVal, _iterator2, _step2, resBeforeVal;
 
-            return this.perionService.getAllDashboardStats(company).toPromise().then(function (response) {
-              _this3.allPerionChart = response[0];
-              var chartPerionMetric = [];
-              var chartAllPerionStat = _this3.allPerionChart.currentStat;
-              var chartAllBeforePerionStat = _this3.allPerionChart.beforeStat; // for (var tagL of this.tagList) {
-              //   var chartAllPerionStat = [];
-              //   var chartAllBeforePerionStat = [];
-              //   if(tagL.tag.advertiser == 'perion') {
-              //     for(var tagSub of tagL.tag.subids) {
-              //       if(tagSub['filterTag'] =="Contains") {   
-              //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-              //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-              //       } else if (tagSub['filterTag'] =="StartsWith") {
-              //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-              //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-              //       } else if (tagSub['filterTag'] =="EndsWith") {
-              //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-              //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-              //       } else if (tagSub['filterTag'] =="ExactValue") {
-              //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid == tagSub['subid'] ))
-              //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid == tagSub['subid'] ))
-              //       }
-              //     }
-              //   }
-              // }
-              //duplicated remove
-              // let filter_data = chartAllPerionStat.filter((obj, pos, arr) => {
-              //   return arr
-              //     .map(mapObj => mapObj._id)
-              //     .indexOf(obj._id) == pos;
-              // });
+              return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                while (1) {
+                  switch (_context3.prev = _context3.next) {
+                    case 0:
+                      _context3.prev = 0;
+                      _context3.next = 3;
+                      return this.perionService.getAllDashboardStats(company).toPromise();
 
-              chartAllPerionStat = chartAllPerionStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              chartAllBeforePerionStat = chartAllBeforePerionStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              }); // var helperChart = {};
-              // chartAllPerionStat.map(f =>{
-              //   f.revenue = parseFloat(f.revenue);
-              // })
-              // var resultChart = chartAllPerionStat.reduce(function(r, o) {
-              //   var key = o.date;
-              //   if(!helperChart[key]) {
-              //     helperChart[key] = Object.assign({}, o); // create a copy of o
-              //     r.push(helperChart[key]);
-              //   } else {
-              //     helperChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-              //     if(o.revenue) {
-              //       helperChart[key].revenue += o.revenue;
-              //     }
-              //   } 
-              //   return r;
-              // }, []);
-              //duplicated remove Before Month Data
-              // let filter_before_data = chartAllBeforePerionStat.filter((obj, pos, arr) => {
-              //   return arr
-              //     .map(mapObj => mapObj._id)
-              //     .indexOf(obj._id) == pos;
-              // });
-              // var helperBeforeChart = {};
-              // chartAllBeforePerionStat.map(f =>{
-              //   f.revenue = parseFloat(f.revenue);
-              // })
-              // var resultBeforeChart = chartAllBeforePerionStat.reduce(function(r, o) {
-              //   var key = o.date;
-              //   if(!helperBeforeChart[key]) {
-              //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-              //     r.push(helperBeforeChart[key]);
-              //   } else {
-              //     helperBeforeChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-              //     if(o.revenue) {
-              //       helperBeforeChart[key].revenue += o.revenue;
-              //     }
-              //   } 
-              //   return r;
-              // }, []);
+                    case 3:
+                      response = _context3.sent;
+                      this.allPerionChart = response[0];
+                      chartPerionMetric = [];
+                      chartAllPerionStat = this.allPerionChart.currentStat;
+                      chartAllBeforePerionStat = this.allPerionChart.beforeStat; // for (var tagL of this.tagList) {
+                      //   var chartAllPerionStat = [];
+                      //   var chartAllBeforePerionStat = [];
+                      //   if(tagL.tag.advertiser == 'perion') {
+                      //     for(var tagSub of tagL.tag.subids) {
+                      //       if(tagSub['filterTag'] =="Contains") {   
+                      //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.includes(tagSub['subid'])))
+                      //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.includes(tagSub['subid'])))
+                      //       } else if (tagSub['filterTag'] =="StartsWith") {
+                      //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
+                      //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
+                      //       } else if (tagSub['filterTag'] =="EndsWith") {
+                      //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
+                      //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
+                      //       } else if (tagSub['filterTag'] =="ExactValue") {
+                      //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid == tagSub['subid'] ))
+                      //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid == tagSub['subid'] ))
+                      //       }
+                      //     }
+                      //   }
+                      // }
+                      //duplicated remove
+                      // let filter_data = chartAllPerionStat.filter((obj, pos, arr) => {
+                      //   return arr
+                      //     .map(mapObj => mapObj._id)
+                      //     .indexOf(obj._id) == pos;
+                      // });
 
-              var revenuePerDayVal = [];
-              var datesOfRevenueVal = [];
-              var revenuePerDayBeforeVal = [];
-              var datesOfRevenueBeforeVal = [];
-              var chartPerionDataValue = {};
-              var revenueCurrentSum = 0;
-              var revenueBeforeSum = 0;
+                      chartAllPerionStat = chartAllPerionStat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      chartAllBeforePerionStat = chartAllBeforePerionStat.slice().sort(function (a_1, b_1) {
+                        return a_1.date - b_1.date;
+                      }); // var helperChart = {};
+                      // chartAllPerionStat.map(f =>{
+                      //   f.revenue = parseFloat(f.revenue);
+                      // })
+                      // var resultChart = chartAllPerionStat.reduce(function(r, o) {
+                      //   var key = o.date;
+                      //   if(!helperChart[key]) {
+                      //     helperChart[key] = Object.assign({}, o); // create a copy of o
+                      //     r.push(helperChart[key]);
+                      //   } else {
+                      //     helperChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
+                      //     if(o.revenue) {
+                      //       helperChart[key].revenue += o.revenue;
+                      //     }
+                      //   } 
+                      //   return r;
+                      // }, []);
+                      //duplicated remove Before Month Data
+                      // let filter_before_data = chartAllBeforePerionStat.filter((obj, pos, arr) => {
+                      //   return arr
+                      //     .map(mapObj => mapObj._id)
+                      //     .indexOf(obj._id) == pos;
+                      // });
+                      // var helperBeforeChart = {};
+                      // chartAllBeforePerionStat.map(f =>{
+                      //   f.revenue = parseFloat(f.revenue);
+                      // })
+                      // var resultBeforeChart = chartAllBeforePerionStat.reduce(function(r, o) {
+                      //   var key = o.date;
+                      //   if(!helperBeforeChart[key]) {
+                      //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
+                      //     r.push(helperBeforeChart[key]);
+                      //   } else {
+                      //     helperBeforeChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
+                      //     if(o.revenue) {
+                      //       helperBeforeChart[key].revenue += o.revenue;
+                      //     }
+                      //   } 
+                      //   return r;
+                      // }, []);
 
-              var _iterator = _createForOfIteratorHelper(_this3.allDaysList),
-                  _step;
+                      revenuePerDayVal = [];
+                      datesOfRevenueVal = [];
+                      revenuePerDayBeforeVal = [];
+                      datesOfRevenueBeforeVal = [];
+                      chartPerionDataValue = {};
+                      revenueCurrentSum = 0;
+                      revenueBeforeSum = 0;
+                      _iterator = _createForOfIteratorHelper(this.allDaysList);
 
-              try {
-                for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                  var dayData = _step.value;
-                  var checkExistDay = chartAllPerionStat.filter(function (result) {
-                    return result.date == dayData;
-                  });
+                      try {
+                        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                          dayData = _step.value;
+                          checkExistDay = chartAllPerionStat.filter(function (result) {
+                            return result.date == dayData;
+                          });
 
-                  if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                  } else {
-                    var _iterator3 = _createForOfIteratorHelper(checkExistDay),
-                        _step3;
+                          if (checkExistDay.length == 0) {
+                            revenuePerDayVal.push(0);
+                            datesOfRevenueVal.push(dayData);
+                          } else {
+                            _iterator3 = _createForOfIteratorHelper(checkExistDay);
 
-                    try {
-                      for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-                        var resVal = _step3.value;
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+                            try {
+                              for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+                                resVal = _step3.value;
+                                revenueCurrentSum += resVal.revenue;
+                                revenuePerDayVal.push(resVal.revenue);
+                                datesOfRevenueVal.push(resVal.date);
+                              }
+                            } catch (err) {
+                              _iterator3.e(err);
+                            } finally {
+                              _iterator3.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator.e(err);
+                      } finally {
+                        _iterator.f();
                       }
-                    } catch (err) {
-                      _iterator3.e(err);
-                    } finally {
-                      _iterator3.f();
-                    }
+
+                      _iterator2 = _createForOfIteratorHelper(chartAllBeforePerionStat);
+
+                      try {
+                        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                          resBeforeVal = _step2.value;
+                          revenueBeforeSum += resBeforeVal.revenue;
+                          revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                          datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                        }
+                      } catch (err) {
+                        _iterator2.e(err);
+                      } finally {
+                        _iterator2.f();
+                      }
+
+                      chartPerionDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartPerionDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartPerionDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartPerionDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartPerionDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartPerionDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartPerionDataValue['statType'] = "Perion";
+                      chartPerionDataValue['redirectUri'] = "/reporting/perion";
+                      chartPerionMetric.push(chartPerionDataValue);
+                      return _context3.abrupt("return", chartPerionMetric);
+
+                    case 33:
+                      _context3.prev = 33;
+                      _context3.t0 = _context3["catch"](0);
+                      return _context3.abrupt("return", _context3.t0);
+
+                    case 36:
+                    case "end":
+                      return _context3.stop();
                   }
                 }
-              } catch (err) {
-                _iterator.e(err);
-              } finally {
-                _iterator.f();
-              }
-
-              var _iterator2 = _createForOfIteratorHelper(chartAllBeforePerionStat),
-                  _step2;
-
-              try {
-                for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-                  var resBeforeVal = _step2.value;
-                  revenueBeforeSum += resBeforeVal.revenue;
-                  revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                  datesOfRevenueBeforeVal.push(resBeforeVal.date);
-                }
-              } catch (err) {
-                _iterator2.e(err);
-              } finally {
-                _iterator2.f();
-              }
-
-              chartPerionDataValue['revenuePerDay'] = revenuePerDayVal;
-              chartPerionDataValue['datesOfRevenue'] = datesOfRevenueVal;
-              chartPerionDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-              chartPerionDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-              chartPerionDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-              chartPerionDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-              chartPerionDataValue['statType'] = "Perion";
-              chartPerionDataValue['redirectUri'] = "/reporting/perion";
-              chartPerionMetric.push(chartPerionDataValue);
-              return chartPerionMetric;
-            })["catch"](function (error) {
-              return error;
-            });
+              }, _callee3, this, [[0, 33]]);
+            }));
           }
         }, {
           key: "getLyonChart",
           value: function getLyonChart(company) {
-            var _this4 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+              var response, chartLyonMetric, chartAllLyonStat, chartAllBeforeLyonStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartLyonDataValue, revenueCurrentSum, revenueBeforeSum, _iterator4, _step4, dayData, checkExistDay, _iterator6, _step6, resVal, _iterator5, _step5, resBeforeVal;
 
-            return this.lyonService.getAllDashboardStats().toPromise().then(function (response) {
-              _this4.allLyonChart = response[0]; // console.log("=======dddd======", this.allLyonChart)
+              return regeneratorRuntime.wrap(function _callee4$(_context4) {
+                while (1) {
+                  switch (_context4.prev = _context4.next) {
+                    case 0:
+                      _context4.prev = 0;
+                      _context4.next = 3;
+                      return this.lyonService.getAllDashboardStats().toPromise();
 
-              var chartLyonMetric = [];
-              var chartAllLyonStat = _this4.allLyonChart.currentStat;
-              var chartAllBeforeLyonStat = _this4.allLyonChart.beforeStat; // for (var tagL of this.tagList) {
-              //   if(tagL.tag.advertiser == 'lyons') {
-              //     for(var tagSub of tagL.tag.subids) {
-              //       if(tagSub['filterTag'] =="Contains") {   
-              //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-              //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-              //       } else if (tagSub['filterTag'] =="StartsWith") {
-              //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-              //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-              //       } else if (tagSub['filterTag'] =="EndsWith") {
-              //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-              //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-              //       } else if (tagSub['filterTag'] =="ExactValue") {
-              //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid == tagSub['subid'] ))
-              //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid == tagSub['subid'] ))
-              //       }
-              //     }
-              //   }
-              // }
-              // //duplicated remove
-              // let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
-              //   return arr
-              //     .map(mapObj => mapObj._id)
-              //     .indexOf(obj._id) == pos;
-              // });
+                    case 3:
+                      response = _context4.sent;
+                      this.allLyonChart = response[0]; // console.log("=======dddd======", this.allLyonChart)
 
-              chartAllLyonStat = chartAllLyonStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              chartAllBeforeLyonStat = chartAllBeforeLyonStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              }); // var helperChart = {};
-              // var resultChart = chartAllLyonStat.reduce(function(r, o) {
-              //   var key = o.date;
-              //   if(!helperChart[key]) {
-              //     helperChart[key] = Object.assign({}, o); // create a copy of o
-              //     r.push(helperChart[key]);
-              //   } else {
-              //     helperChart[key].searches += parseInt(o.searches);
-              //     if(o.revenue) {
-              //       helperChart[key].revenue += o.revenue;
-              //     }
-              //   } 
-              //   return r;
-              // }, []);
-              //duplicated remove Before Month Data
-              // let filter_before_data = chartAllBeforeLyonStat.filter((obj, pos, arr) => {
-              //   return arr
-              //     .map(mapObj => mapObj._id)
-              //     .indexOf(obj._id) == pos;
-              // });
-              // var helperBeforeChart = {};
-              // var resultBeforeChart = chartAllBeforeLyonStat.reduce(function(r, o) {
-              //   var key = o.date;
-              //   if(!helperBeforeChart[key]) {
-              //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-              //     r.push(helperBeforeChart[key]);
-              //   } else {
-              //     helperBeforeChart[key].searches += parseInt(o.searches);
-              //     if(o.revenue) {
-              //       helperBeforeChart[key].revenue += o.revenue;
-              //     }
-              //   } 
-              //   return r;
-              // }, []);
+                      chartLyonMetric = [];
+                      chartAllLyonStat = this.allLyonChart.currentStat;
+                      chartAllBeforeLyonStat = this.allLyonChart.beforeStat; // for (var tagL of this.tagList) {
+                      //   if(tagL.tag.advertiser == 'lyons') {
+                      //     for(var tagSub of tagL.tag.subids) {
+                      //       if(tagSub['filterTag'] =="Contains") {   
+                      //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.includes(tagSub['subid'])))
+                      //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.includes(tagSub['subid'])))
+                      //       } else if (tagSub['filterTag'] =="StartsWith") {
+                      //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
+                      //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
+                      //       } else if (tagSub['filterTag'] =="EndsWith") {
+                      //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
+                      //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
+                      //       } else if (tagSub['filterTag'] =="ExactValue") {
+                      //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid == tagSub['subid'] ))
+                      //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid == tagSub['subid'] ))
+                      //       }
+                      //     }
+                      //   }
+                      // }
+                      // //duplicated remove
+                      // let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
+                      //   return arr
+                      //     .map(mapObj => mapObj._id)
+                      //     .indexOf(obj._id) == pos;
+                      // });
 
-              var revenuePerDayVal = [];
-              var datesOfRevenueVal = [];
-              var revenuePerDayBeforeVal = [];
-              var datesOfRevenueBeforeVal = [];
-              var chartLyonDataValue = {};
-              var revenueCurrentSum = 0;
-              var revenueBeforeSum = 0;
+                      chartAllLyonStat = chartAllLyonStat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      chartAllBeforeLyonStat = chartAllBeforeLyonStat.slice().sort(function (a_1, b_1) {
+                        return a_1.date - b_1.date;
+                      }); // var helperChart = {};
+                      // var resultChart = chartAllLyonStat.reduce(function(r, o) {
+                      //   var key = o.date;
+                      //   if(!helperChart[key]) {
+                      //     helperChart[key] = Object.assign({}, o); // create a copy of o
+                      //     r.push(helperChart[key]);
+                      //   } else {
+                      //     helperChart[key].searches += parseInt(o.searches);
+                      //     if(o.revenue) {
+                      //       helperChart[key].revenue += o.revenue;
+                      //     }
+                      //   } 
+                      //   return r;
+                      // }, []);
+                      //duplicated remove Before Month Data
+                      // let filter_before_data = chartAllBeforeLyonStat.filter((obj, pos, arr) => {
+                      //   return arr
+                      //     .map(mapObj => mapObj._id)
+                      //     .indexOf(obj._id) == pos;
+                      // });
+                      // var helperBeforeChart = {};
+                      // var resultBeforeChart = chartAllBeforeLyonStat.reduce(function(r, o) {
+                      //   var key = o.date;
+                      //   if(!helperBeforeChart[key]) {
+                      //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
+                      //     r.push(helperBeforeChart[key]);
+                      //   } else {
+                      //     helperBeforeChart[key].searches += parseInt(o.searches);
+                      //     if(o.revenue) {
+                      //       helperBeforeChart[key].revenue += o.revenue;
+                      //     }
+                      //   } 
+                      //   return r;
+                      // }, []);
 
-              var _iterator4 = _createForOfIteratorHelper(_this4.allDaysList),
-                  _step4;
+                      revenuePerDayVal = [];
+                      datesOfRevenueVal = [];
+                      revenuePerDayBeforeVal = [];
+                      datesOfRevenueBeforeVal = [];
+                      chartLyonDataValue = {};
+                      revenueCurrentSum = 0;
+                      revenueBeforeSum = 0;
+                      _iterator4 = _createForOfIteratorHelper(this.allDaysList);
 
-              try {
-                for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-                  var dayData = _step4.value;
-                  var checkExistDay = chartAllLyonStat.filter(function (result) {
-                    return result.date == dayData;
-                  });
+                      try {
+                        for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+                          dayData = _step4.value;
+                          checkExistDay = chartAllLyonStat.filter(function (result_1) {
+                            return result_1.date == dayData;
+                          });
 
-                  if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                  } else {
-                    var _iterator6 = _createForOfIteratorHelper(checkExistDay),
-                        _step6;
+                          if (checkExistDay.length == 0) {
+                            revenuePerDayVal.push(0);
+                            datesOfRevenueVal.push(dayData);
+                          } else {
+                            _iterator6 = _createForOfIteratorHelper(checkExistDay);
 
-                    try {
-                      for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
-                        var resVal = _step6.value;
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+                            try {
+                              for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+                                resVal = _step6.value;
+                                revenueCurrentSum += resVal.revenue;
+                                revenuePerDayVal.push(resVal.revenue);
+                                datesOfRevenueVal.push(resVal.date);
+                              }
+                            } catch (err) {
+                              _iterator6.e(err);
+                            } finally {
+                              _iterator6.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator4.e(err);
+                      } finally {
+                        _iterator4.f();
                       }
-                    } catch (err) {
-                      _iterator6.e(err);
-                    } finally {
-                      _iterator6.f();
-                    }
+
+                      _iterator5 = _createForOfIteratorHelper(chartAllBeforeLyonStat);
+
+                      try {
+                        for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+                          resBeforeVal = _step5.value;
+                          revenueBeforeSum += resBeforeVal.revenue;
+                          revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                          datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                        }
+                      } catch (err) {
+                        _iterator5.e(err);
+                      } finally {
+                        _iterator5.f();
+                      }
+
+                      chartLyonDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartLyonDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartLyonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartLyonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartLyonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartLyonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartLyonDataValue['statType'] = "Lyons";
+                      chartLyonDataValue['redirectUri'] = "/reporting/lyons";
+                      chartLyonMetric.push(chartLyonDataValue);
+                      return _context4.abrupt("return", chartLyonMetric);
+
+                    case 33:
+                      _context4.prev = 33;
+                      _context4.t0 = _context4["catch"](0);
+                      return _context4.abrupt("return", _context4.t0);
+
+                    case 36:
+                    case "end":
+                      return _context4.stop();
                   }
                 }
-              } catch (err) {
-                _iterator4.e(err);
-              } finally {
-                _iterator4.f();
-              }
-
-              var _iterator5 = _createForOfIteratorHelper(chartAllBeforeLyonStat),
-                  _step5;
-
-              try {
-                for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-                  var resBeforeVal = _step5.value;
-                  revenueBeforeSum += resBeforeVal.revenue;
-                  revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                  datesOfRevenueBeforeVal.push(resBeforeVal.date);
-                }
-              } catch (err) {
-                _iterator5.e(err);
-              } finally {
-                _iterator5.f();
-              }
-
-              chartLyonDataValue['revenuePerDay'] = revenuePerDayVal;
-              chartLyonDataValue['datesOfRevenue'] = datesOfRevenueVal;
-              chartLyonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-              chartLyonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-              chartLyonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-              chartLyonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-              chartLyonDataValue['statType'] = "Lyons";
-              chartLyonDataValue['redirectUri'] = "/reporting/lyons";
-              chartLyonMetric.push(chartLyonDataValue);
-              return chartLyonMetric;
-            })["catch"](function (error) {
-              return error;
-            });
+              }, _callee4, this, [[0, 33]]);
+            }));
           }
         }, {
           key: "getRubiChart",
           value: function getRubiChart(company) {
-            var _this5 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+              var response, chartRubiMetric, chartAllRubiStat, chartAllBeforeRubiStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartRubiDataValue, revenueCurrentSum, revenueBeforeSum, _iterator7, _step7, dayData, checkExistDay, _iterator9, _step9, resVal, _iterator8, _step8, resBeforeVal;
 
-            return this.rubiService.getAllDashboardStats().toPromise().then(function (response) {
-              _this5.allRubiChart = response[0];
-              var chartRubiMetric = [];
-              var chartAllRubiStat = _this5.allRubiChart.currentStat;
-              var chartAllBeforeRubiStat = _this5.allRubiChart.beforeStat;
-              chartAllRubiStat = chartAllRubiStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              chartAllBeforeRubiStat = chartAllBeforeRubiStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              var revenuePerDayVal = [];
-              var datesOfRevenueVal = [];
-              var revenuePerDayBeforeVal = [];
-              var datesOfRevenueBeforeVal = [];
-              var chartRubiDataValue = {};
-              var revenueCurrentSum = 0;
-              var revenueBeforeSum = 0;
+              return regeneratorRuntime.wrap(function _callee5$(_context5) {
+                while (1) {
+                  switch (_context5.prev = _context5.next) {
+                    case 0:
+                      _context5.prev = 0;
+                      _context5.next = 3;
+                      return this.rubiService.getAllDashboardStats().toPromise();
 
-              var _iterator7 = _createForOfIteratorHelper(_this5.allDaysList),
-                  _step7;
+                    case 3:
+                      response = _context5.sent;
+                      this.allRubiChart = response[0];
+                      chartRubiMetric = [];
+                      chartAllRubiStat = this.allRubiChart.currentStat;
+                      chartAllBeforeRubiStat = this.allRubiChart.beforeStat;
+                      chartAllRubiStat = chartAllRubiStat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      chartAllBeforeRubiStat = chartAllBeforeRubiStat.slice().sort(function (a_1, b_1) {
+                        return a_1.date - b_1.date;
+                      });
+                      revenuePerDayVal = [];
+                      datesOfRevenueVal = [];
+                      revenuePerDayBeforeVal = [];
+                      datesOfRevenueBeforeVal = [];
+                      chartRubiDataValue = {};
+                      revenueCurrentSum = 0;
+                      revenueBeforeSum = 0;
+                      _iterator7 = _createForOfIteratorHelper(this.allDaysList);
 
-              try {
-                for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
-                  var dayData = _step7.value;
-                  var checkExistDay = chartAllRubiStat.filter(function (result) {
-                    return result.date == dayData;
-                  });
+                      try {
+                        for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
+                          dayData = _step7.value;
+                          checkExistDay = chartAllRubiStat.filter(function (result_1) {
+                            return result_1.date == dayData;
+                          });
 
-                  if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                  } else {
-                    var _iterator9 = _createForOfIteratorHelper(checkExistDay),
-                        _step9;
+                          if (checkExistDay.length == 0) {
+                            revenuePerDayVal.push(0);
+                            datesOfRevenueVal.push(dayData);
+                          } else {
+                            _iterator9 = _createForOfIteratorHelper(checkExistDay);
 
-                    try {
-                      for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
-                        var resVal = _step9.value;
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+                            try {
+                              for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
+                                resVal = _step9.value;
+                                revenueCurrentSum += resVal.revenue;
+                                revenuePerDayVal.push(resVal.revenue);
+                                datesOfRevenueVal.push(resVal.date);
+                              }
+                            } catch (err) {
+                              _iterator9.e(err);
+                            } finally {
+                              _iterator9.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator7.e(err);
+                      } finally {
+                        _iterator7.f();
                       }
-                    } catch (err) {
-                      _iterator9.e(err);
-                    } finally {
-                      _iterator9.f();
-                    }
+
+                      _iterator8 = _createForOfIteratorHelper(chartAllBeforeRubiStat);
+
+                      try {
+                        for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
+                          resBeforeVal = _step8.value;
+                          revenueBeforeSum += resBeforeVal.revenue;
+                          revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                          datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                        }
+                      } catch (err) {
+                        _iterator8.e(err);
+                      } finally {
+                        _iterator8.f();
+                      }
+
+                      chartRubiDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartRubiDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartRubiDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartRubiDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartRubiDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartRubiDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartRubiDataValue['statType'] = "Rubi";
+                      chartRubiDataValue['redirectUri'] = "/reporting/rubi";
+                      chartRubiMetric.push(chartRubiDataValue);
+                      return _context5.abrupt("return", chartRubiMetric);
+
+                    case 33:
+                      _context5.prev = 33;
+                      _context5.t0 = _context5["catch"](0);
+                      return _context5.abrupt("return", _context5.t0);
+
+                    case 36:
+                    case "end":
+                      return _context5.stop();
                   }
                 }
-              } catch (err) {
-                _iterator7.e(err);
-              } finally {
-                _iterator7.f();
-              }
-
-              var _iterator8 = _createForOfIteratorHelper(chartAllBeforeRubiStat),
-                  _step8;
-
-              try {
-                for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
-                  var resBeforeVal = _step8.value;
-                  revenueBeforeSum += resBeforeVal.revenue;
-                  revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                  datesOfRevenueBeforeVal.push(resBeforeVal.date);
-                }
-              } catch (err) {
-                _iterator8.e(err);
-              } finally {
-                _iterator8.f();
-              }
-
-              chartRubiDataValue['revenuePerDay'] = revenuePerDayVal;
-              chartRubiDataValue['datesOfRevenue'] = datesOfRevenueVal;
-              chartRubiDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-              chartRubiDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-              chartRubiDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-              chartRubiDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-              chartRubiDataValue['statType'] = "Rubi";
-              chartRubiDataValue['redirectUri'] = "/reporting/rubi";
-              chartRubiMetric.push(chartRubiDataValue);
-              return chartRubiMetric;
-            })["catch"](function (error) {
-              return error;
-            });
+              }, _callee5, this, [[0, 33]]);
+            }));
           }
         }, {
           key: "getSystem1Chart",
           value: function getSystem1Chart(company) {
-            var _this6 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+              var response, chartSystem1Metric, chartAllSystem1Stat, chartAllBeforeSystem1Stat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartSystem1DataValue, revenueCurrentSum, revenueBeforeSum, _iterator10, _step10, dayData, checkExistDay, _iterator12, _step12, resVal, _iterator11, _step11, resBeforeVal;
 
-            return this.system1Service.getAllDashboardStats().toPromise().then(function (response) {
-              _this6.allSystem1Chart = response[0];
-              var chartSystem1Metric = [];
-              var chartAllSystem1Stat = _this6.allSystem1Chart.currentStat;
-              var chartAllBeforeSystem1Stat = _this6.allSystem1Chart.beforeStat;
-              chartAllSystem1Stat = chartAllSystem1Stat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              chartAllBeforeSystem1Stat = chartAllBeforeSystem1Stat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              var revenuePerDayVal = [];
-              var datesOfRevenueVal = [];
-              var revenuePerDayBeforeVal = [];
-              var datesOfRevenueBeforeVal = [];
-              var chartSystem1DataValue = {};
-              var revenueCurrentSum = 0;
-              var revenueBeforeSum = 0;
+              return regeneratorRuntime.wrap(function _callee6$(_context6) {
+                while (1) {
+                  switch (_context6.prev = _context6.next) {
+                    case 0:
+                      _context6.prev = 0;
+                      _context6.next = 3;
+                      return this.system1Service.getAllDashboardStats().toPromise();
 
-              var _iterator10 = _createForOfIteratorHelper(_this6.allDaysList),
-                  _step10;
+                    case 3:
+                      response = _context6.sent;
+                      this.allSystem1Chart = response[0];
+                      chartSystem1Metric = [];
+                      chartAllSystem1Stat = this.allSystem1Chart.currentStat;
+                      chartAllBeforeSystem1Stat = this.allSystem1Chart.beforeStat;
+                      chartAllSystem1Stat = chartAllSystem1Stat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      chartAllBeforeSystem1Stat = chartAllBeforeSystem1Stat.slice().sort(function (a_1, b_1) {
+                        return a_1.date - b_1.date;
+                      });
+                      revenuePerDayVal = [];
+                      datesOfRevenueVal = [];
+                      revenuePerDayBeforeVal = [];
+                      datesOfRevenueBeforeVal = [];
+                      chartSystem1DataValue = {};
+                      revenueCurrentSum = 0;
+                      revenueBeforeSum = 0;
+                      _iterator10 = _createForOfIteratorHelper(this.allDaysList);
 
-              try {
-                for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
-                  var dayData = _step10.value;
-                  var checkExistDay = chartAllSystem1Stat.filter(function (result) {
-                    return result.date == dayData;
-                  });
+                      try {
+                        for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
+                          dayData = _step10.value;
+                          checkExistDay = chartAllSystem1Stat.filter(function (result_1) {
+                            return result_1.date == dayData;
+                          });
 
-                  if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                  } else {
-                    var _iterator12 = _createForOfIteratorHelper(checkExistDay),
-                        _step12;
+                          if (checkExistDay.length == 0) {
+                            revenuePerDayVal.push(0);
+                            datesOfRevenueVal.push(dayData);
+                          } else {
+                            _iterator12 = _createForOfIteratorHelper(checkExistDay);
 
-                    try {
-                      for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
-                        var resVal = _step12.value;
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+                            try {
+                              for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
+                                resVal = _step12.value;
+                                revenueCurrentSum += resVal.revenue;
+                                revenuePerDayVal.push(resVal.revenue);
+                                datesOfRevenueVal.push(resVal.date);
+                              }
+                            } catch (err) {
+                              _iterator12.e(err);
+                            } finally {
+                              _iterator12.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator10.e(err);
+                      } finally {
+                        _iterator10.f();
                       }
-                    } catch (err) {
-                      _iterator12.e(err);
-                    } finally {
-                      _iterator12.f();
-                    }
+
+                      _iterator11 = _createForOfIteratorHelper(chartAllBeforeSystem1Stat);
+
+                      try {
+                        for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
+                          resBeforeVal = _step11.value;
+                          revenueBeforeSum += resBeforeVal.revenue;
+                          revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                          datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                        }
+                      } catch (err) {
+                        _iterator11.e(err);
+                      } finally {
+                        _iterator11.f();
+                      }
+
+                      chartSystem1DataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartSystem1DataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartSystem1DataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartSystem1DataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartSystem1DataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartSystem1DataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartSystem1DataValue['statType'] = "System 1";
+                      chartSystem1DataValue['redirectUri'] = "/reporting/system1";
+                      chartSystem1Metric.push(chartSystem1DataValue);
+                      return _context6.abrupt("return", chartSystem1Metric);
+
+                    case 33:
+                      _context6.prev = 33;
+                      _context6.t0 = _context6["catch"](0);
+                      return _context6.abrupt("return", _context6.t0);
+
+                    case 36:
+                    case "end":
+                      return _context6.stop();
                   }
                 }
-              } catch (err) {
-                _iterator10.e(err);
-              } finally {
-                _iterator10.f();
-              }
-
-              var _iterator11 = _createForOfIteratorHelper(chartAllBeforeSystem1Stat),
-                  _step11;
-
-              try {
-                for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
-                  var resBeforeVal = _step11.value;
-                  revenueBeforeSum += resBeforeVal.revenue;
-                  revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                  datesOfRevenueBeforeVal.push(resBeforeVal.date);
-                }
-              } catch (err) {
-                _iterator11.e(err);
-              } finally {
-                _iterator11.f();
-              }
-
-              chartSystem1DataValue['revenuePerDay'] = revenuePerDayVal;
-              chartSystem1DataValue['datesOfRevenue'] = datesOfRevenueVal;
-              chartSystem1DataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-              chartSystem1DataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-              chartSystem1DataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-              chartSystem1DataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-              chartSystem1DataValue['statType'] = "System 1";
-              chartSystem1DataValue['redirectUri'] = "/reporting/system1";
-              chartSystem1Metric.push(chartSystem1DataValue);
-              return chartSystem1Metric;
-            })["catch"](function (error) {
-              return error;
-            });
+              }, _callee6, this, [[0, 33]]);
+            }));
           }
         }, {
           key: "getProviderChart",
@@ -19061,295 +19125,362 @@
         }, {
           key: "getVerizonChart",
           value: function getVerizonChart(company) {
-            var _this7 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+              var response, chartVerizonMetric, chartAllVerizonStat, chartAllBeforeVerizonStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartVerizonDataValue, revenueCurrentSum, revenueBeforeSum, _iterator13, _step13, dayData, checkExistDay, _iterator15, _step15, resVal, _iterator14, _step14, resBeforeVal;
 
-            return this.verizonService.getAllDashboardStats().toPromise().then(function (response) {
-              _this7.allVerizonChart = response[0];
-              var chartVerizonMetric = [];
-              var chartAllVerizonStat = _this7.allVerizonChart.currentStat;
-              var chartAllBeforeVerizonStat = _this7.allVerizonChart.beforeStat;
-              chartAllVerizonStat = chartAllVerizonStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              chartAllBeforeVerizonStat = chartAllBeforeVerizonStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              var revenuePerDayVal = [];
-              var datesOfRevenueVal = [];
-              var revenuePerDayBeforeVal = [];
-              var datesOfRevenueBeforeVal = [];
-              var chartVerizonDataValue = {};
-              var revenueCurrentSum = 0;
-              var revenueBeforeSum = 0;
+              return regeneratorRuntime.wrap(function _callee7$(_context7) {
+                while (1) {
+                  switch (_context7.prev = _context7.next) {
+                    case 0:
+                      _context7.prev = 0;
+                      _context7.next = 3;
+                      return this.verizonService.getAllDashboardStats().toPromise();
 
-              var _iterator13 = _createForOfIteratorHelper(_this7.allDaysList),
-                  _step13;
+                    case 3:
+                      response = _context7.sent;
+                      this.allVerizonChart = response[0];
+                      chartVerizonMetric = [];
+                      chartAllVerizonStat = this.allVerizonChart.currentStat;
+                      chartAllBeforeVerizonStat = this.allVerizonChart.beforeStat;
+                      chartAllVerizonStat = chartAllVerizonStat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      chartAllBeforeVerizonStat = chartAllBeforeVerizonStat.slice().sort(function (a_1, b_1) {
+                        return a_1.date - b_1.date;
+                      });
+                      revenuePerDayVal = [];
+                      datesOfRevenueVal = [];
+                      revenuePerDayBeforeVal = [];
+                      datesOfRevenueBeforeVal = [];
+                      chartVerizonDataValue = {};
+                      revenueCurrentSum = 0;
+                      revenueBeforeSum = 0;
+                      _iterator13 = _createForOfIteratorHelper(this.allDaysList);
 
-              try {
-                for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
-                  var dayData = _step13.value;
-                  var checkExistDay = chartAllVerizonStat.filter(function (result) {
-                    return result.date == dayData;
-                  });
+                      try {
+                        for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
+                          dayData = _step13.value;
+                          checkExistDay = chartAllVerizonStat.filter(function (result_1) {
+                            return result_1.date == dayData;
+                          });
 
-                  if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                  } else {
-                    var _iterator15 = _createForOfIteratorHelper(checkExistDay),
-                        _step15;
+                          if (checkExistDay.length == 0) {
+                            revenuePerDayVal.push(0);
+                            datesOfRevenueVal.push(dayData);
+                          } else {
+                            _iterator15 = _createForOfIteratorHelper(checkExistDay);
 
-                    try {
-                      for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
-                        var resVal = _step15.value;
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+                            try {
+                              for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
+                                resVal = _step15.value;
+                                revenueCurrentSum += resVal.revenue;
+                                revenuePerDayVal.push(resVal.revenue);
+                                datesOfRevenueVal.push(resVal.date);
+                              }
+                            } catch (err) {
+                              _iterator15.e(err);
+                            } finally {
+                              _iterator15.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator13.e(err);
+                      } finally {
+                        _iterator13.f();
                       }
-                    } catch (err) {
-                      _iterator15.e(err);
-                    } finally {
-                      _iterator15.f();
-                    }
+
+                      _iterator14 = _createForOfIteratorHelper(chartAllBeforeVerizonStat);
+
+                      try {
+                        for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
+                          resBeforeVal = _step14.value;
+                          revenueBeforeSum += resBeforeVal.revenue;
+                          revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                          datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                        }
+                      } catch (err) {
+                        _iterator14.e(err);
+                      } finally {
+                        _iterator14.f();
+                      }
+
+                      chartVerizonDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartVerizonDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartVerizonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartVerizonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartVerizonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartVerizonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartVerizonDataValue['statType'] = "Verizon Direct";
+                      chartVerizonDataValue['redirectUri'] = "/reporting/verizon-direct";
+                      chartVerizonMetric.push(chartVerizonDataValue);
+                      return _context7.abrupt("return", chartVerizonMetric);
+
+                    case 33:
+                      _context7.prev = 33;
+                      _context7.t0 = _context7["catch"](0);
+                      return _context7.abrupt("return", _context7.t0);
+
+                    case 36:
+                    case "end":
+                      return _context7.stop();
                   }
                 }
-              } catch (err) {
-                _iterator13.e(err);
-              } finally {
-                _iterator13.f();
-              }
-
-              var _iterator14 = _createForOfIteratorHelper(chartAllBeforeVerizonStat),
-                  _step14;
-
-              try {
-                for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
-                  var resBeforeVal = _step14.value;
-                  revenueBeforeSum += resBeforeVal.revenue;
-                  revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                  datesOfRevenueBeforeVal.push(resBeforeVal.date);
-                }
-              } catch (err) {
-                _iterator14.e(err);
-              } finally {
-                _iterator14.f();
-              }
-
-              chartVerizonDataValue['revenuePerDay'] = revenuePerDayVal;
-              chartVerizonDataValue['datesOfRevenue'] = datesOfRevenueVal;
-              chartVerizonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-              chartVerizonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-              chartVerizonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-              chartVerizonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-              chartVerizonDataValue['statType'] = "Verizon Direct";
-              chartVerizonDataValue['redirectUri'] = "/reporting/verizon-direct";
-              chartVerizonMetric.push(chartVerizonDataValue);
-              return chartVerizonMetric;
-            })["catch"](function (error) {
-              return error;
-            });
+              }, _callee7, this, [[0, 33]]);
+            }));
           } //get Tags with selected company
 
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            var companyId;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+              var companyId, response;
+              return regeneratorRuntime.wrap(function _callee8$(_context8) {
+                while (1) {
+                  switch (_context8.prev = _context8.next) {
+                    case 0:
+                      if (selectedCompany) {
+                        companyId = selectedCompany.split("/")[1];
+                      } else {
+                        companyId = null;
+                      }
 
-            if (selectedCompany) {
-              companyId = selectedCompany.split("/")[1];
-            } else {
-              companyId = null;
-            }
+                      _context8.prev = 1;
+                      _context8.next = 4;
+                      return this.tagService.getCompanyTags(companyId).toPromise();
 
-            return this.tagService.getCompanyTags(companyId).toPromise().then(function (response) {
-              return response;
-            })["catch"](function (error) {
-              return error;
-            });
+                    case 4:
+                      response = _context8.sent;
+                      return _context8.abrupt("return", response);
+
+                    case 8:
+                      _context8.prev = 8;
+                      _context8.t0 = _context8["catch"](1);
+                      return _context8.abrupt("return", _context8.t0);
+
+                    case 11:
+                    case "end":
+                      return _context8.stop();
+                  }
+                }
+              }, _callee8, this, [[1, 8]]);
+            }));
           } //Get Solex Bc
 
         }, {
           key: "getSolexBCChart",
           value: function getSolexBCChart(company) {
-            var _this8 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
+              var response, chartSolexBCMetric, chartAllSolexBCStat, chartAllBeforeSolexBCStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartSolexBCDataValue, revenueCurrentSum, revenueBeforeSum, _iterator16, _step16, dayData, checkExistDay, _iterator18, _step18, resVal, _iterator17, _step17, resBeforeVal;
 
-            return this.solexbcService.getAllDashboardStats().toPromise().then(function (response) {
-              _this8.allSolexBCChart = response[0];
-              var chartSolexBCMetric = [];
-              var chartAllSolexBCStat = _this8.allSolexBCChart.currentStat;
-              var chartAllBeforeSolexBCStat = _this8.allSolexBCChart.beforeStat;
-              chartAllSolexBCStat = chartAllSolexBCStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              chartAllBeforeSolexBCStat = chartAllBeforeSolexBCStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              var revenuePerDayVal = [];
-              var datesOfRevenueVal = [];
-              var revenuePerDayBeforeVal = [];
-              var datesOfRevenueBeforeVal = [];
-              var chartSolexBCDataValue = {};
-              var revenueCurrentSum = 0;
-              var revenueBeforeSum = 0;
+              return regeneratorRuntime.wrap(function _callee9$(_context9) {
+                while (1) {
+                  switch (_context9.prev = _context9.next) {
+                    case 0:
+                      _context9.prev = 0;
+                      _context9.next = 3;
+                      return this.solexbcService.getAllDashboardStats().toPromise();
 
-              var _iterator16 = _createForOfIteratorHelper(_this8.allDaysList),
-                  _step16;
+                    case 3:
+                      response = _context9.sent;
+                      this.allSolexBCChart = response[0];
+                      chartSolexBCMetric = [];
+                      chartAllSolexBCStat = this.allSolexBCChart.currentStat;
+                      chartAllBeforeSolexBCStat = this.allSolexBCChart.beforeStat;
+                      chartAllSolexBCStat = chartAllSolexBCStat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      chartAllBeforeSolexBCStat = chartAllBeforeSolexBCStat.slice().sort(function (a_1, b_1) {
+                        return a_1.date - b_1.date;
+                      });
+                      revenuePerDayVal = [];
+                      datesOfRevenueVal = [];
+                      revenuePerDayBeforeVal = [];
+                      datesOfRevenueBeforeVal = [];
+                      chartSolexBCDataValue = {};
+                      revenueCurrentSum = 0;
+                      revenueBeforeSum = 0;
+                      _iterator16 = _createForOfIteratorHelper(this.allDaysList);
 
-              try {
-                for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
-                  var dayData = _step16.value;
-                  var checkExistDay = chartAllSolexBCStat.filter(function (result) {
-                    return result.date == dayData;
-                  });
+                      try {
+                        for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
+                          dayData = _step16.value;
+                          checkExistDay = chartAllSolexBCStat.filter(function (result_1) {
+                            return result_1.date == dayData;
+                          });
 
-                  if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                  } else {
-                    var _iterator18 = _createForOfIteratorHelper(checkExistDay),
-                        _step18;
+                          if (checkExistDay.length == 0) {
+                            revenuePerDayVal.push(0);
+                            datesOfRevenueVal.push(dayData);
+                          } else {
+                            _iterator18 = _createForOfIteratorHelper(checkExistDay);
 
-                    try {
-                      for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
-                        var resVal = _step18.value;
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+                            try {
+                              for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
+                                resVal = _step18.value;
+                                revenueCurrentSum += resVal.revenue;
+                                revenuePerDayVal.push(resVal.revenue);
+                                datesOfRevenueVal.push(resVal.date);
+                              }
+                            } catch (err) {
+                              _iterator18.e(err);
+                            } finally {
+                              _iterator18.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator16.e(err);
+                      } finally {
+                        _iterator16.f();
                       }
-                    } catch (err) {
-                      _iterator18.e(err);
-                    } finally {
-                      _iterator18.f();
-                    }
+
+                      _iterator17 = _createForOfIteratorHelper(chartAllBeforeSolexBCStat);
+
+                      try {
+                        for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
+                          resBeforeVal = _step17.value;
+                          revenueBeforeSum += resBeforeVal.revenue;
+                          revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                          datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                        }
+                      } catch (err) {
+                        _iterator17.e(err);
+                      } finally {
+                        _iterator17.f();
+                      }
+
+                      chartSolexBCDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartSolexBCDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartSolexBCDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartSolexBCDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartSolexBCDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartSolexBCDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartSolexBCDataValue['statType'] = "SolexBC";
+                      chartSolexBCDataValue['redirectUri'] = "/reporting/solex-bc";
+                      chartSolexBCMetric.push(chartSolexBCDataValue);
+                      return _context9.abrupt("return", chartSolexBCMetric);
+
+                    case 33:
+                      _context9.prev = 33;
+                      _context9.t0 = _context9["catch"](0);
+                      return _context9.abrupt("return", _context9.t0);
+
+                    case 36:
+                    case "end":
+                      return _context9.stop();
                   }
                 }
-              } catch (err) {
-                _iterator16.e(err);
-              } finally {
-                _iterator16.f();
-              }
-
-              var _iterator17 = _createForOfIteratorHelper(chartAllBeforeSolexBCStat),
-                  _step17;
-
-              try {
-                for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
-                  var resBeforeVal = _step17.value;
-                  revenueBeforeSum += resBeforeVal.revenue;
-                  revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                  datesOfRevenueBeforeVal.push(resBeforeVal.date);
-                }
-              } catch (err) {
-                _iterator17.e(err);
-              } finally {
-                _iterator17.f();
-              }
-
-              chartSolexBCDataValue['revenuePerDay'] = revenuePerDayVal;
-              chartSolexBCDataValue['datesOfRevenue'] = datesOfRevenueVal;
-              chartSolexBCDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-              chartSolexBCDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-              chartSolexBCDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-              chartSolexBCDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-              chartSolexBCDataValue['statType'] = "SolexBC";
-              chartSolexBCDataValue['redirectUri'] = "/reporting/solex-bc";
-              chartSolexBCMetric.push(chartSolexBCDataValue);
-              return chartSolexBCMetric;
-            })["catch"](function (error) {
-              return error;
-            });
+              }, _callee9, this, [[0, 33]]);
+            }));
           } //Get Apptitude
 
         }, {
           key: "getApptitudeChart",
           value: function getApptitudeChart(company) {
-            var _this9 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
+              var response, chartRubiMetric, chartAllApptitudeStat, chartAllBeforeApptitudeStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartApptitudeDataValue, revenueCurrentSum, revenueBeforeSum, _iterator19, _step19, dayData, checkExistDay, _iterator21, _step21, resVal, _iterator20, _step20, resBeforeVal;
 
-            return this.apptitudeService.getAllDashboardStats().toPromise().then(function (response) {
-              _this9.allApptitudeChart = response[0];
-              var chartRubiMetric = [];
-              var chartAllApptitudeStat = _this9.allApptitudeChart.currentStat;
-              var chartAllBeforeApptitudeStat = _this9.allApptitudeChart.beforeStat;
-              chartAllApptitudeStat = chartAllApptitudeStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              chartAllBeforeApptitudeStat = chartAllBeforeApptitudeStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              var revenuePerDayVal = [];
-              var datesOfRevenueVal = [];
-              var revenuePerDayBeforeVal = [];
-              var datesOfRevenueBeforeVal = [];
-              var chartApptitudeDataValue = {};
-              var revenueCurrentSum = 0;
-              var revenueBeforeSum = 0;
+              return regeneratorRuntime.wrap(function _callee10$(_context10) {
+                while (1) {
+                  switch (_context10.prev = _context10.next) {
+                    case 0:
+                      _context10.prev = 0;
+                      _context10.next = 3;
+                      return this.apptitudeService.getAllDashboardStats().toPromise();
 
-              var _iterator19 = _createForOfIteratorHelper(_this9.allDaysList),
-                  _step19;
+                    case 3:
+                      response = _context10.sent;
+                      this.allApptitudeChart = response[0];
+                      chartRubiMetric = [];
+                      chartAllApptitudeStat = this.allApptitudeChart.currentStat;
+                      chartAllBeforeApptitudeStat = this.allApptitudeChart.beforeStat;
+                      chartAllApptitudeStat = chartAllApptitudeStat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      chartAllBeforeApptitudeStat = chartAllBeforeApptitudeStat.slice().sort(function (a_1, b_1) {
+                        return a_1.date - b_1.date;
+                      });
+                      revenuePerDayVal = [];
+                      datesOfRevenueVal = [];
+                      revenuePerDayBeforeVal = [];
+                      datesOfRevenueBeforeVal = [];
+                      chartApptitudeDataValue = {};
+                      revenueCurrentSum = 0;
+                      revenueBeforeSum = 0;
+                      _iterator19 = _createForOfIteratorHelper(this.allDaysList);
 
-              try {
-                for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
-                  var dayData = _step19.value;
-                  var checkExistDay = chartAllApptitudeStat.filter(function (result) {
-                    return result.date == dayData;
-                  });
+                      try {
+                        for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
+                          dayData = _step19.value;
+                          checkExistDay = chartAllApptitudeStat.filter(function (result_1) {
+                            return result_1.date == dayData;
+                          });
 
-                  if (checkExistDay.length == 0) {
-                    revenuePerDayVal.push(0);
-                    datesOfRevenueVal.push(dayData);
-                  } else {
-                    var _iterator21 = _createForOfIteratorHelper(checkExistDay),
-                        _step21;
+                          if (checkExistDay.length == 0) {
+                            revenuePerDayVal.push(0);
+                            datesOfRevenueVal.push(dayData);
+                          } else {
+                            _iterator21 = _createForOfIteratorHelper(checkExistDay);
 
-                    try {
-                      for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
-                        var resVal = _step21.value;
-                        revenueCurrentSum += resVal.revenue;
-                        revenuePerDayVal.push(resVal.revenue);
-                        datesOfRevenueVal.push(resVal.date);
+                            try {
+                              for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+                                resVal = _step21.value;
+                                revenueCurrentSum += resVal.revenue;
+                                revenuePerDayVal.push(resVal.revenue);
+                                datesOfRevenueVal.push(resVal.date);
+                              }
+                            } catch (err) {
+                              _iterator21.e(err);
+                            } finally {
+                              _iterator21.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator19.e(err);
+                      } finally {
+                        _iterator19.f();
                       }
-                    } catch (err) {
-                      _iterator21.e(err);
-                    } finally {
-                      _iterator21.f();
-                    }
+
+                      _iterator20 = _createForOfIteratorHelper(chartAllBeforeApptitudeStat);
+
+                      try {
+                        for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+                          resBeforeVal = _step20.value;
+                          revenueBeforeSum += resBeforeVal.revenue;
+                          revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                          datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                        }
+                      } catch (err) {
+                        _iterator20.e(err);
+                      } finally {
+                        _iterator20.f();
+                      }
+
+                      chartApptitudeDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartApptitudeDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartApptitudeDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartApptitudeDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartApptitudeDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartApptitudeDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartApptitudeDataValue['statType'] = "Monarch Apptitude";
+                      chartApptitudeDataValue['redirectUri'] = "/reporting/apptitude";
+                      chartRubiMetric.push(chartApptitudeDataValue);
+                      return _context10.abrupt("return", chartRubiMetric);
+
+                    case 33:
+                      _context10.prev = 33;
+                      _context10.t0 = _context10["catch"](0);
+                      return _context10.abrupt("return", _context10.t0);
+
+                    case 36:
+                    case "end":
+                      return _context10.stop();
                   }
                 }
-              } catch (err) {
-                _iterator19.e(err);
-              } finally {
-                _iterator19.f();
-              }
-
-              var _iterator20 = _createForOfIteratorHelper(chartAllBeforeApptitudeStat),
-                  _step20;
-
-              try {
-                for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
-                  var resBeforeVal = _step20.value;
-                  revenueBeforeSum += resBeforeVal.revenue;
-                  revenuePerDayBeforeVal.push(resBeforeVal.revenue);
-                  datesOfRevenueBeforeVal.push(resBeforeVal.date);
-                }
-              } catch (err) {
-                _iterator20.e(err);
-              } finally {
-                _iterator20.f();
-              }
-
-              chartApptitudeDataValue['revenuePerDay'] = revenuePerDayVal;
-              chartApptitudeDataValue['datesOfRevenue'] = datesOfRevenueVal;
-              chartApptitudeDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-              chartApptitudeDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-              chartApptitudeDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-              chartApptitudeDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-              chartApptitudeDataValue['statType'] = "Monarch Apptitude";
-              chartApptitudeDataValue['redirectUri'] = "/reporting/apptitude";
-              chartRubiMetric.push(chartApptitudeDataValue);
-              return chartRubiMetric;
-            })["catch"](function (error) {
-              return error;
-            });
+              }, _callee10, this, [[0, 33]]);
+            }));
           }
         }, {
           key: "getCurrentMontDateList",

@@ -106,7 +106,6 @@ class CompaniesComponent {
         this.notification = notification;
         this.loadingIndicator = true;
         this.hidden = false;
-        this.getAllCompanies();
     }
     getAllCompanies() {
         this.localStorageCompany = this.getSelectedCompanyFromLocalStorage();
@@ -120,7 +119,6 @@ class CompaniesComponent {
         }
         this.companyService.getAllCompanies().subscribe((x) => {
             this.rows = x;
-            console.log(this.rows);
             this.loadingIndicator = false;
             this.cdr.detectChanges();
         });
@@ -129,7 +127,7 @@ class CompaniesComponent {
         this.router.navigateByUrl('/company-management/edit/' + companyID);
     }
     ngOnInit() {
-        // console.log(companies)
+        this.getAllCompanies();
     }
     //Gets the Selected Company from Local Storage
     getSelectedCompanyFromLocalStorage() {
@@ -715,6 +713,7 @@ class EditCompanyComponent {
             { value: "perion", viewValue: "Perion" },
             { value: "rubi", viewValue: "Rubi" },
             { value: "system1", viewValue: "System1" },
+            { value: "solex-bc", viewValue: "Solex BC" },
             { value: "verizon-direct", viewValue: "Verizon Direct" },
         ];
         this.reportingProviderHandleList = [];
@@ -936,7 +935,7 @@ function NewCompanyComponent_form_0_div_46_mat_error_16_Template(rf, ctx) { if (
 } }
 function NewCompanyComponent_form_0_div_46_mat_error_21_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Email is not valid");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Email is not valid ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
 function NewCompanyComponent_form_0_div_46_mat_error_25_Template(rf, ctx) { if (rf & 1) {
@@ -1176,6 +1175,7 @@ class NewCompanyComponent {
             { value: "perion", viewValue: "Perion" },
             { value: "rubi", viewValue: "Rubi" },
             { value: "system1", viewValue: "System1" },
+            { value: "solex-bc", viewValue: "Solex BC" },
             { value: "verizon-direct", viewValue: "Verizon Direct" },
         ];
         this.reportingProviderHandleList = [];

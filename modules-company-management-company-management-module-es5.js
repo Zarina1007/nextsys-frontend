@@ -233,7 +233,6 @@
           this.notification = notification;
           this.loadingIndicator = true;
           this.hidden = false;
-          this.getAllCompanies();
         }
 
         _createClass(CompaniesComponent, [{
@@ -252,7 +251,6 @@
 
             this.companyService.getAllCompanies().subscribe(function (x) {
               _this.rows = x;
-              console.log(_this.rows);
               _this.loadingIndicator = false;
 
               _this.cdr.detectChanges();
@@ -265,7 +263,8 @@
           }
         }, {
           key: "ngOnInit",
-          value: function ngOnInit() {// console.log(companies)
+          value: function ngOnInit() {
+            this.getAllCompanies();
           } //Gets the Selected Company from Local Storage
 
         }, {
@@ -1488,6 +1487,9 @@
             value: "system1",
             viewValue: "System1"
           }, {
+            value: "solex-bc",
+            viewValue: "Solex BC"
+          }, {
             value: "verizon-direct",
             viewValue: "Verizon Direct"
           }];
@@ -1902,7 +1904,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Email is not valid");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Email is not valid ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -2408,6 +2410,9 @@
           }, {
             value: "system1",
             viewValue: "System1"
+          }, {
+            value: "solex-bc",
+            viewValue: "Solex BC"
           }, {
             value: "verizon-direct",
             viewValue: "Verizon Direct"

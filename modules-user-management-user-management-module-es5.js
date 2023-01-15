@@ -2774,27 +2774,7 @@
                   _this12.snackBarService.info("Updated  ".concat(_this12.user.fullname, "'s companies."));
                 });
               }
-            }); // dialogRef.afterClosed().subscribe((result) => {
-            //   console.log(`Dialog result: ${result}`);
-            // });
-            // console.log(this.user);
-            // const initialState = { data: this.user };
-            // const modalRef = this.modalService.open(AddCompanyComponent, {
-            //   size: 'md',
-            // });
-            // modalRef.componentInstance.companies = [...this.user.companies];
-            // modalRef.result.then((res) => {
-            //   //If a result is passed back, update the user profile with new companies.
-            //   if (res) {
-            //     this.user.companies = [...res];
-            //     this.userManagementService.updateUser(this.user).subscribe((x) => {
-            //       this.getUserData(this.user._key);
-            //       this.snackBarService.info(
-            //         `Updated  ${this.user.fullname}'s companies.`
-            //       );
-            //     });
-            //   }
-            // });
+            });
           }
         }]);
 
@@ -3562,7 +3542,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -3572,7 +3552,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "'Passsword' and 'Confirm Password' didn't match.");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " 'Passsword' and 'Confirm Password' didn't match.");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -4056,7 +4036,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -4066,7 +4046,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "'Passsword' and 'Confirm Password' didn't match.");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " 'Passsword' and 'Confirm Password' didn't match.");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -4550,7 +4530,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -4560,7 +4540,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "'Passsword' and 'Confirm Password' didn't match.");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " 'Passsword' and 'Confirm Password' didn't match.");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -5044,7 +5024,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Confirm Password is required ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -5054,7 +5034,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "'Passsword' and 'Confirm Password' didn't match.");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " 'Passsword' and 'Confirm Password' didn't match.");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }

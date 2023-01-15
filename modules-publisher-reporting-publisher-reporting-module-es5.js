@@ -2173,10 +2173,7 @@
                 return index === self.findIndex(function (t) {
                   return t.date === thing.date && t.subid === thing.subid;
                 });
-              }); // filter_data.map(f =>{
-              //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
-              // })
-
+              });
               filter_data = filter_data.slice().sort(function (a, b) {
                 return a.date - b.date;
               });

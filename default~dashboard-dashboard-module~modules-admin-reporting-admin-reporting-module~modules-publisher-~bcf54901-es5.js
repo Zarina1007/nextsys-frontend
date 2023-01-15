@@ -318,12 +318,7 @@
             console.log('being tested');
             console.log(API_LYON_URL);
             return this.http.get('http://localhost:3000/stats/admin/lyon/asd');
-          } // getAllLyonStats(company, startDate, endDate): Observable<any> {
-          //   return this.http.get<any>(API_LYON_URL + '/all', {
-          //     params: { company: company, startDate: startDate, endDate: endDate },
-          //   });
-          // }
-
+          }
         }, {
           key: "getAllStats",
           value: function getAllStats(startDate, endDate) {

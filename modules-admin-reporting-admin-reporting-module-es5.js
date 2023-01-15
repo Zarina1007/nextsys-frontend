@@ -2434,73 +2434,85 @@
         }, {
           key: "getAllApptitudeStats",
           value: function getAllApptitudeStats(company, startDate, endDate) {
-            var _this = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
+              var response, _iterator15, _step15, tagL, _iterator16, _step16, tagSub;
 
-            return this.apptitudeService.getApptitudeStats(company, startDate, endDate).toPromise().then(function (response) {
-              console.log('getApptitudeStats() response:', response);
-              _this.loadingIndicator = false;
-              _this.allStats = response.stats;
+              return regeneratorRuntime.wrap(function _callee13$(_context13) {
+                while (1) {
+                  switch (_context13.prev = _context13.next) {
+                    case 0:
+                      _context13.next = 2;
+                      return this.apptitudeService.getApptitudeStats(company, startDate, endDate).toPromise();
 
-              _this.allStats.map(function (resStat) {
-                resStat.publisher = "No Publisher"; // resStat.tagname = "No Tag" 
-              });
+                    case 2:
+                      response = _context13.sent;
+                      console.log('getApptitudeStats() response:', response);
+                      this.loadingIndicator = false;
+                      this.allStats = response.stats;
+                      this.allStats.map(function (resStat) {
+                        resStat.publisher = "No Publisher";
+                      });
+                      _iterator15 = _createForOfIteratorHelper(this.tagList);
 
-              var _iterator15 = _createForOfIteratorHelper(_this.tagList),
-                  _step15;
+                      try {
+                        for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
+                          tagL = _step15.value;
 
-              try {
-                for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
-                  var tagL = _step15.value;
+                          if (tagL.tag.advertiser == "apptitude") {
+                            _iterator16 = _createForOfIteratorHelper(tagL.tag.subids);
 
-                  if (tagL.tag.advertiser == "apptitude") {
-                    var _iterator16 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step16;
+                            try {
+                              for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
+                                tagSub = _step16.value;
 
-                    try {
-                      for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
-                        var tagSub = _step16.value;
-
-                        if (tagSub.filterTag == "Contains") {
-                          _this.allStats.map(function (stat) {
-                            if (stat.subid.includes(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher"; // stat.tagname = tagL.tag.name
+                                if (tagSub.filterTag == "Contains") {
+                                  this.allStats.map(function (stat) {
+                                    if (stat.subid.includes(tagSub.subid)) {
+                                      stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "StartsWith") {
+                                  this.allStats.map(function (stat_1) {
+                                    if (stat_1.subid.startsWith(tagSub.subid)) {
+                                      stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "EndsWith") {
+                                  this.allStats.map(function (stat_2) {
+                                    if (stat_2.subid.endsWith(tagSub.subid)) {
+                                      stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "ExactValue") {
+                                  this.allStats.map(function (stat_3) {
+                                    if (stat_3.subid == tagSub.subid) {
+                                      stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                    }
+                                  });
+                                }
+                              }
+                            } catch (err) {
+                              _iterator16.e(err);
+                            } finally {
+                              _iterator16.f();
                             }
-                          });
-                        } else if (tagSub.filterTag == "StartsWith") {
-                          _this.allStats.map(function (stat) {
-                            if (stat.subid.startsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher"; // stat.tagname = tagL.tag.name
-                            }
-                          });
-                        } else if (tagSub.filterTag == "EndsWith") {
-                          _this.allStats.map(function (stat) {
-                            if (stat.subid.endsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher"; // stat.tagname = tagL.tag.name
-                            }
-                          });
-                        } else if (tagSub.filterTag == "ExactValue") {
-                          _this.allStats.map(function (stat) {
-                            if (stat.subid == tagSub.subid) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher"; // stat.tagname = tagL.tag.name
-                            }
-                          });
+                          }
                         }
+                      } catch (err) {
+                        _iterator15.e(err);
+                      } finally {
+                        _iterator15.f();
                       }
-                    } catch (err) {
-                      _iterator16.e(err);
-                    } finally {
-                      _iterator16.f();
-                    }
+
+                      return _context13.abrupt("return", this.allStats);
+
+                    case 10:
+                    case "end":
+                      return _context13.stop();
                   }
                 }
-              } catch (err) {
-                _iterator15.e(err);
-              } finally {
-                _iterator15.f();
-              }
-
-              return _this.allStats;
-            });
+              }, _callee13, this);
+            }));
           } //Gets the Selected Company from Local Storage
 
         }, {
@@ -2522,36 +2534,36 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee13() {
-              return regeneratorRuntime.wrap(function _callee13$(_context13) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
+              return regeneratorRuntime.wrap(function _callee14$(_context14) {
                 while (1) {
-                  switch (_context13.prev = _context13.next) {
+                  switch (_context14.prev = _context14.next) {
                     case 0:
                       this.range = range;
-                      _context13.next = 3;
+                      _context14.next = 3;
                       return this.getAllApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context13.sent;
-                      _context13.next = 6;
+                      this.rows = _context14.sent;
+                      _context14.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context13.sent;
-                      _context13.next = 9;
+                      this.chartData = _context14.sent;
+                      _context14.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context13.sent;
+                      this.summaryMetrics = _context14.sent;
                       this.groupFlag = false;
                       this.cdr.markForCheck();
 
                     case 12:
                     case "end":
-                      return _context13.stop();
+                      return _context14.stop();
                   }
                 }
-              }, _callee13, this);
+              }, _callee14, this);
             }));
           }
         }, {
@@ -2610,45 +2622,103 @@
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            return this.apptitudeService.getChartMetrics(company, startDate, endDate).toPromise().then(function (response) {
-              return response;
-            })["catch"](function (error) {
-              return error;
-            });
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee15() {
+              var response;
+              return regeneratorRuntime.wrap(function _callee15$(_context15) {
+                while (1) {
+                  switch (_context15.prev = _context15.next) {
+                    case 0:
+                      _context15.prev = 0;
+                      _context15.next = 3;
+                      return this.apptitudeService.getChartMetrics(company, startDate, endDate).toPromise();
+
+                    case 3:
+                      response = _context15.sent;
+                      return _context15.abrupt("return", response);
+
+                    case 7:
+                      _context15.prev = 7;
+                      _context15.t0 = _context15["catch"](0);
+                      return _context15.abrupt("return", _context15.t0);
+
+                    case 10:
+                    case "end":
+                      return _context15.stop();
+                  }
+                }
+              }, _callee15, this, [[0, 7]]);
+            }));
           }
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            return this.apptitudeService.getSummaryMetrics(company).toPromise().then(function (response) {
-              console.log('Got summary metrics');
-              var allSummary = {};
-              var currentPercentPace = 0;
-              var lastPercentPace = 0;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee16() {
+              var response, allSummary, currentPercentPace, lastPercentPace;
+              return regeneratorRuntime.wrap(function _callee16$(_context16) {
+                while (1) {
+                  switch (_context16.prev = _context16.next) {
+                    case 0:
+                      _context16.next = 2;
+                      return this.apptitudeService.getSummaryMetrics(company).toPromise();
 
-              if (response.summary[0].lastMonthStat[0].profitPace != 0) {
-                currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
-              }
+                    case 2:
+                      response = _context16.sent;
+                      allSummary = {};
+                      currentPercentPace = 0;
+                      lastPercentPace = 0;
 
-              if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
-                lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
-              }
+                      if (response.summary[0].lastMonthStat[0].profitPace != 0) {
+                        currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
+                      }
 
-              response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
-              response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
-              allSummary['summary'] = response.summary;
-              return allSummary;
-            });
+                      if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
+                        lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
+                      }
+
+                      response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
+                      response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
+                      allSummary['summary'] = response.summary;
+                      return _context16.abrupt("return", allSummary);
+
+                    case 12:
+                    case "end":
+                      return _context16.stop();
+                  }
+                }
+              }, _callee16, this);
+            }));
           } //get Tags with selected company
 
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            var companyId = selectedCompany.split("/")[1];
-            return this.tagService.getCompanyTags(companyId).toPromise().then(function (response) {
-              return response;
-            })["catch"](function (error) {
-              return error;
-            });
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee17() {
+              var companyId, response;
+              return regeneratorRuntime.wrap(function _callee17$(_context17) {
+                while (1) {
+                  switch (_context17.prev = _context17.next) {
+                    case 0:
+                      companyId = selectedCompany.split("/")[1];
+                      _context17.prev = 1;
+                      _context17.next = 4;
+                      return this.tagService.getCompanyTags(companyId).toPromise();
+
+                    case 4:
+                      response = _context17.sent;
+                      return _context17.abrupt("return", response);
+
+                    case 8:
+                      _context17.prev = 8;
+                      _context17.t0 = _context17["catch"](1);
+                      return _context17.abrupt("return", _context17.t0);
+
+                    case 11:
+                    case "end":
+                      return _context17.stop();
+                  }
+                }
+              }, _callee17, this, [[1, 8]]);
+            }));
           }
         }]);
 
@@ -4778,40 +4848,40 @@
         _createClass(LyonsComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee14() {
-              return regeneratorRuntime.wrap(function _callee14$(_context14) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
+              return regeneratorRuntime.wrap(function _callee18$(_context18) {
                 while (1) {
-                  switch (_context14.prev = _context14.next) {
+                  switch (_context18.prev = _context18.next) {
                     case 0:
-                      _context14.next = 2;
+                      _context18.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context14.sent;
+                      this.tagList = _context18.sent;
                       this.rows = [];
-                      _context14.next = 6;
+                      _context18.next = 6;
                       return this.getAllLyonStats(this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context14.sent;
-                      _context14.next = 9;
+                      this.rows = _context18.sent;
+                      _context18.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context14.sent;
-                      _context14.next = 12;
+                      this.chartData = _context18.sent;
+                      _context18.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetricsData = _context14.sent;
+                      this.summaryMetricsData = _context18.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context14.stop();
+                      return _context18.stop();
                   }
                 }
-              }, _callee14, this);
+              }, _callee18, this);
             }));
           }
         }, {
@@ -4828,10 +4898,10 @@
         }, {
           key: "routeTester",
           value: function routeTester() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee15() {
-              return regeneratorRuntime.wrap(function _callee15$(_context15) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
+              return regeneratorRuntime.wrap(function _callee19$(_context19) {
                 while (1) {
-                  switch (_context15.prev = _context15.next) {
+                  switch (_context19.prev = _context19.next) {
                     case 0:
                       console.log('Testing Route');
                       this.lyonService.testingRoute().subscribe(function (response) {
@@ -4842,10 +4912,10 @@
 
                     case 2:
                     case "end":
-                      return _context15.stop();
+                      return _context19.stop();
                   }
                 }
-              }, _callee15, this);
+              }, _callee19, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -4858,137 +4928,128 @@
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            var companyId = selectedCompany.split("/")[1];
-            return this.tagService.getCompanyTags(companyId).toPromise().then(function (response) {
-              return response;
-            })["catch"](function (error) {
-              return error;
-            });
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
+              var companyId, response;
+              return regeneratorRuntime.wrap(function _callee20$(_context20) {
+                while (1) {
+                  switch (_context20.prev = _context20.next) {
+                    case 0:
+                      companyId = selectedCompany.split("/")[1];
+                      _context20.prev = 1;
+                      _context20.next = 4;
+                      return this.tagService.getCompanyTags(companyId).toPromise();
+
+                    case 4:
+                      response = _context20.sent;
+                      return _context20.abrupt("return", response);
+
+                    case 8:
+                      _context20.prev = 8;
+                      _context20.t0 = _context20["catch"](1);
+                      return _context20.abrupt("return", _context20.t0);
+
+                    case 11:
+                    case "end":
+                      return _context20.stop();
+                  }
+                }
+              }, _callee20, this, [[1, 8]]);
+            }));
           } //get Stat all
 
         }, {
           key: "getAllLyonStats",
           value: function getAllLyonStats(startDate, endDate) {
-            var _this2 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
+              var response, _iterator18, _step18, tagL, _iterator19, _step19, tagSub;
 
-            return this.lyonService.getAllStats(startDate, endDate).toPromise().then(function (response) {
-              _this2.loadingIndicator = false;
-              _this2.allstat = response;
+              return regeneratorRuntime.wrap(function _callee21$(_context21) {
+                while (1) {
+                  switch (_context21.prev = _context21.next) {
+                    case 0:
+                      _context21.prev = 0;
+                      _context21.next = 3;
+                      return this.lyonService.getAllStats(startDate, endDate).toPromise();
 
-              _this2.allstat.map(function (resStat) {
-                resStat.publisher = "No Publisher";
-                resStat.tagname = "No Tag";
-              }); // var allLyonStat = [];
+                    case 3:
+                      response = _context21.sent;
+                      this.loadingIndicator = false;
+                      this.allstat = response;
+                      this.allstat.map(function (resStat) {
+                        resStat.publisher = "No Publisher";
+                        resStat.tagname = "No Tag";
+                      }); // var allLyonStat = [];
 
+                      _iterator18 = _createForOfIteratorHelper(this.tagList);
 
-              var _iterator18 = _createForOfIteratorHelper(_this2.tagList),
-                  _step18;
+                      try {
+                        for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
+                          tagL = _step18.value;
 
-              try {
-                for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
-                  var tagL = _step18.value;
+                          if (tagL.tag.advertiser == "lyons") {
+                            _iterator19 = _createForOfIteratorHelper(tagL.tag.subids);
 
-                  if (tagL.tag.advertiser == "lyons") {
-                    var _iterator19 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step19;
+                            try {
+                              for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
+                                tagSub = _step19.value;
 
-                    try {
-                      for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
-                        var tagSub = _step19.value;
-
-                        if (tagSub.filterTag == "Contains") {
-                          _this2.allstat.map(function (stat) {
-                            if (stat.subid.includes(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
+                                if (tagSub.filterTag == "Contains") {
+                                  this.allstat.map(function (stat) {
+                                    if (stat.subid.includes(tagSub.subid)) {
+                                      stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "StartsWith") {
+                                  this.allstat.map(function (stat_1) {
+                                    if (stat_1.subid.startsWith(tagSub.subid)) {
+                                      stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_1.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "EndsWith") {
+                                  this.allstat.map(function (stat_2) {
+                                    if (stat_2.subid.endsWith(tagSub.subid)) {
+                                      stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_2.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "ExactValue") {
+                                  this.allstat.map(function (stat_3) {
+                                    if (stat_3.subid == tagSub.subid) {
+                                      stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_3.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                }
+                              }
+                            } catch (err) {
+                              _iterator19.e(err);
+                            } finally {
+                              _iterator19.f();
                             }
-                          });
-                        } else if (tagSub.filterTag == "StartsWith") {
-                          _this2.allstat.map(function (stat) {
-                            if (stat.subid.startsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
-                        } else if (tagSub.filterTag == "EndsWith") {
-                          _this2.allstat.map(function (stat) {
-                            if (stat.subid.endsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
-                        } else if (tagSub.filterTag == "ExactValue") {
-                          _this2.allstat.map(function (stat) {
-                            if (stat.subid == tagSub.subid) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
+                          }
                         }
+                      } catch (err) {
+                        _iterator18.e(err);
+                      } finally {
+                        _iterator18.f();
                       }
-                    } catch (err) {
-                      _iterator19.e(err);
-                    } finally {
-                      _iterator19.f();
-                    }
+
+                      return _context21.abrupt("return", this.allstat);
+
+                    case 12:
+                      _context21.prev = 12;
+                      _context21.t0 = _context21["catch"](0);
+                      return _context21.abrupt("return", _context21.t0);
+
+                    case 15:
+                    case "end":
+                      return _context21.stop();
                   }
-                } //duplicated remove
-                // let filtered_data = this.allstat.filter((obj, pos, arr) => {
-                //   return arr
-                //     .map(mapObj => mapObj._id)
-                //     .indexOf(obj._id) == pos;
-                // });
-                // var helper = {};
-                // filtered_data.map(f =>{
-                //   f.revenue = parseFloat(f.revenue);
-                //   f.ctr = parseFloat(f.ctr);
-                //   f.biddedCtr = parseFloat(f.biddedCTR);
-                //   f.split = parseFloat(f.split);
-                //   f.searches = parseFloat(f.searches);
-                //   f.biddedSearches = parseFloat(f.biddedSearches);
-                //   f.clicks = parseFloat(f.clicks);
-                // });
-                //Calculate the sums and group data (while tracking count)
-                // var resultAll = filtered_data.reduce(function(prev, current) {
-                //   var key = (current.date).toString() + '-' + current.subid;
-                //   if(!helper[key]) {
-                //     helper[key] = Object.assign({}, current); // create a copy of o
-                //     helper[key].count = 1;
-                //     prev.push(helper[key]);
-                //   } else {
-                //     helper[key].clicks += parseInt(current.clicks);
-                //     helper[key].searches += parseInt(current.searches);
-                //     if(current.biddedCtr) {
-                //       helper[key].biddedCtr += current.biddedCtr;
-                //     }
-                //     if(current.ctr) {
-                //       helper[key].ctr += current.ctr;
-                //     }
-                //     if(current.revenue) {
-                //       helper[key].revenue += current.revenue;
-                //     }
-                //     helper[key].biddedSearches += parseInt(current.biddedSearches);
-                //     helper[key].count += 1;
-                //     helper[key].split += parseInt(current.split);
-                //     // helper[key].split_num = 70;
-                //   }
-                //   return prev;
-                // }, []);
-                // resultAll.map((item) => {
-                //   item.split = item.split/item.count
-                // })
-                // return resultAll;
-
-              } catch (err) {
-                _iterator18.e(err);
-              } finally {
-                _iterator18.f();
-              }
-
-              return _this2.allstat;
-            })["catch"](function (error) {
-              return error;
-            });
+                }
+              }, _callee21, this, [[0, 12]]);
+            }));
           }
         }, {
           key: "groupProvider",
@@ -5057,37 +5118,37 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee16() {
-              return regeneratorRuntime.wrap(function _callee16$(_context16) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
+              return regeneratorRuntime.wrap(function _callee22$(_context22) {
                 while (1) {
-                  switch (_context16.prev = _context16.next) {
+                  switch (_context22.prev = _context22.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context16.next = 3;
+                      _context22.next = 3;
                       return this.getAllLyonStats(this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context16.sent;
-                      _context16.next = 6;
+                      this.rows = _context22.sent;
+                      _context22.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context16.sent;
-                      _context16.next = 9;
+                      this.chartData = _context22.sent;
+                      _context22.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetricsData = _context16.sent;
+                      this.summaryMetricsData = _context22.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context16.stop();
+                      return _context22.stop();
                   }
                 }
-              }, _callee16, this);
+              }, _callee22, this);
             }));
           }
         }, {
@@ -5098,379 +5159,395 @@
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            var _this3 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
+              var response, dayInCurrentMonth, dayInBeforeMonth, dayInTwoBeforeMonth, helperSummary, resultSummary, monthRevenue, monthProfit, monthRevenuePace, profitPace, _iterator21, _step21, sumData, helperBeforeSummary, resultBeforeSummary, monthBeforeRevenue, monthBeforeProfit, monthBeforeRevenuePace, profitBeforePace, _iterator22, _step22, sumBeforeData, helperTwoBeforeSummary, resultTwoBeforeSummary, monthTwoBeforeRevenue, monthTwoBeforeProfit, monthTwoBeforeRevenuePace, profitTwoBeforePace, _iterator23, _step23, sumTwoBeforeData, currentPercentPace, lastPercentPace, summaryFinalData, allSummary;
 
-            return this.lyonService.getSummaryMetrics(company).toPromise().then(function (response) {
-              _this3.currentMonthData = response[0].summaryMetrics;
-              _this3.beforeMonthData = response[0].lastMonthStat;
-              _this3.twoBeforeMonthData = response[0].twoLastMonthStat;
-              var dayInCurrentMonth = response[0].dayInCurrentMonth;
-              var dayInBeforeMonth = response[0].dayInBeforeMonth;
-              var dayInTwoBeforeMonth = response[0].dayInTwoBeforeMonth; // var summaryCurrentStat = [];
-              //current data get part
-              // for (var tagL of this.tagList) {
-              //   for (var tagSub of tagL.tag.subids) {
-              //     if(tagSub.filterTag =="Contains") {
-              //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
-              //       summaryCurrentStat.map(stat => {
-              //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //         stat.tagname = tagL.tag.name
-              //       })
-              //     } else if (tagSub.filterTag =="StartsWith") {
-              //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
-              //     } else if (tagSub.filterTag =="EndsWith") {
-              //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
-              //     } else if (tagSub.filterTag =="ExactValue") {
-              //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid == tagSub.subid ))
-              //     }
-              //   }
-              // }
-              // //duplicated remove
-              // let filter_data = summaryCurrentStat.filter((obj, pos, arr) => {
-              //   return arr
-              //     .map(mapObj => mapObj._id)
-              //     .indexOf(obj._id) == pos;
-              // });
+              return regeneratorRuntime.wrap(function _callee23$(_context23) {
+                while (1) {
+                  switch (_context23.prev = _context23.next) {
+                    case 0:
+                      _context23.prev = 0;
+                      _context23.next = 3;
+                      return this.lyonService.getSummaryMetrics(company).toPromise();
 
-              var helperSummary = {};
+                    case 3:
+                      response = _context23.sent;
+                      this.currentMonthData = response[0].summaryMetrics;
+                      this.beforeMonthData = response[0].lastMonthStat;
+                      this.twoBeforeMonthData = response[0].twoLastMonthStat;
+                      dayInCurrentMonth = response[0].dayInCurrentMonth;
+                      dayInBeforeMonth = response[0].dayInBeforeMonth;
+                      dayInTwoBeforeMonth = response[0].dayInTwoBeforeMonth; // var summaryCurrentStat = [];
+                      //current data get part
+                      // for (var tagL of this.tagList) {
+                      //   for (var tagSub of tagL.tag.subids) {
+                      //     if(tagSub.filterTag =="Contains") {
+                      //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+                      //       summaryCurrentStat.map(stat => {
+                      //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //         stat.tagname = tagL.tag.name
+                      //       })
+                      //     } else if (tagSub.filterTag =="StartsWith") {
+                      //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+                      //     } else if (tagSub.filterTag =="EndsWith") {
+                      //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+                      //     } else if (tagSub.filterTag =="ExactValue") {
+                      //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid == tagSub.subid ))
+                      //     }
+                      //   }
+                      // }
+                      // //duplicated remove
+                      // let filter_data = summaryCurrentStat.filter((obj, pos, arr) => {
+                      //   return arr
+                      //     .map(mapObj => mapObj._id)
+                      //     .indexOf(obj._id) == pos;
+                      // });
 
-              _this3.currentMonthData.map(function (f) {
-                f.revenue = parseFloat(f.revenue); // f.ctr = parseFloat(f.ctr);
-                // f.biddedCtr = parseFloat(f.biddedCTR);
-              });
+                      helperSummary = {};
+                      this.currentMonthData.map(function (f) {
+                        f.revenue = parseFloat(f.revenue);
+                      });
+                      resultSummary = this.currentMonthData.reduce(function (r, o) {
+                        var key = o.date;
 
-              var resultSummary = _this3.currentMonthData.reduce(function (r, o) {
-                var key = o.date;
+                        if (!helperSummary[key]) {
+                          helperSummary[key] = Object.assign({}, o); // create a copy of o
 
-                if (!helperSummary[key]) {
-                  helperSummary[key] = Object.assign({}, o); // create a copy of o
+                          r.push(helperSummary[key]);
+                        } else {
+                          helperSummary[key].searches += parseInt(o.searches);
 
-                  r.push(helperSummary[key]);
-                } else {
-                  helperSummary[key].searches += parseInt(o.searches);
+                          if (o.revenue) {
+                            helperSummary[key].revenue += o.revenue;
+                          }
+                        }
 
-                  if (o.revenue) {
-                    helperSummary[key].revenue += o.revenue;
+                        return r;
+                      }, []);
+                      monthRevenue = 0;
+                      monthProfit = 0;
+                      monthRevenuePace = 0;
+                      profitPace = 0;
+                      _iterator21 = _createForOfIteratorHelper(resultSummary);
+
+                      try {
+                        for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+                          sumData = _step21.value;
+                          monthRevenue += sumData.revenue;
+                          monthProfit += sumData.revenue * (100 - sumData.split) * 0.01;
+                          monthRevenuePace += sumData.revenue / resultSummary.length * dayInCurrentMonth;
+                          profitPace += sumData.revenue * (100 - sumData.split) * 0.01 / resultSummary.length * dayInCurrentMonth;
+                        } //before month data get part
+                        // var summaryBeforeStat = [];
+                        // for (var tagL of this.tagList) {
+                        //   for (var tagSub of tagL.tag.subids) {
+                        //     if(tagSub.filterTag =="Contains") {
+                        //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+                        //       summaryBeforeStat.map(stat => {
+                        //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                        //         stat.tagname = tagL.tag.name
+                        //       })
+                        //     } else if (tagSub.filterTag =="StartsWith") {
+                        //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+                        //     } else if (tagSub.filterTag =="EndsWith") {
+                        //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+                        //     } else if (tagSub.filterTag =="ExactValue") {
+                        //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid == tagSub.subid ))
+                        //     }
+                        //   }
+                        // }
+                        // // //duplicated remove
+                        // let filt_data = summaryBeforeStat.filter((obj, pos, arr) => {
+                        //   return arr
+                        //     .map(mapObj => mapObj._id)
+                        //     .indexOf(obj._id) == pos;
+                        // });
+
+                      } catch (err) {
+                        _iterator21.e(err);
+                      } finally {
+                        _iterator21.f();
+                      }
+
+                      helperBeforeSummary = {};
+                      this.beforeMonthData.map(function (f_1) {
+                        f_1.revenue = parseFloat(f_1.revenue);
+                      });
+                      resultBeforeSummary = this.beforeMonthData.reduce(function (r_1, o_1) {
+                        var key_1 = o_1.date;
+
+                        if (!helperBeforeSummary[key_1]) {
+                          helperBeforeSummary[key_1] = Object.assign({}, o_1); // create a copy of o
+
+                          r_1.push(helperBeforeSummary[key_1]);
+                        } else {
+                          helperBeforeSummary[key_1].searches += parseInt(o_1.searches);
+
+                          if (o_1.revenue) {
+                            helperBeforeSummary[key_1].revenue += o_1.revenue;
+                          }
+                        }
+
+                        return r_1;
+                      }, []);
+                      monthBeforeRevenue = 0;
+                      monthBeforeProfit = 0;
+                      monthBeforeRevenuePace = 0;
+                      profitBeforePace = 0;
+                      _iterator22 = _createForOfIteratorHelper(resultBeforeSummary);
+
+                      try {
+                        for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                          sumBeforeData = _step22.value;
+                          monthBeforeRevenue += sumBeforeData.revenue;
+                          monthBeforeProfit += sumBeforeData.revenue * (100 - sumBeforeData.split) * 0.01;
+                          monthBeforeRevenuePace += sumBeforeData.revenue / resultBeforeSummary.length * dayInBeforeMonth;
+                          profitBeforePace += sumBeforeData.revenue * (100 - sumBeforeData.split) * 0.01 / resultBeforeSummary.length * dayInBeforeMonth;
+                        } //tow before month data get part
+                        // var summaryTwoBeforeStat = [];
+                        // for (var tagL of this.tagList) {
+                        //   for (var tagSub of tagL.tag.subids) {
+                        //     if(tagSub.filterTag =="Contains") {
+                        //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+                        //       summaryTwoBeforeStat.map(stat => {
+                        //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                        //         stat.tagname = tagL.tag.name
+                        //       })
+                        //     } else if (tagSub.filterTag =="StartsWith") {
+                        //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+                        //     } else if (tagSub.filterTag =="EndsWith") {
+                        //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+                        //     } else if (tagSub.filterTag =="ExactValue") {
+                        //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid == tagSub.subid ))
+                        //     }
+                        //   }
+                        // }
+                        // // //duplicated remove
+                        // let filter_two_data = summaryTwoBeforeStat.filter((obj, pos, arr) => {
+                        //   return arr
+                        //     .map(mapObj => mapObj._id)
+                        //     .indexOf(obj._id) == pos;
+                        // });
+
+                      } catch (err) {
+                        _iterator22.e(err);
+                      } finally {
+                        _iterator22.f();
+                      }
+
+                      helperTwoBeforeSummary = {};
+                      this.twoBeforeMonthData.map(function (f_2) {
+                        f_2.revenue = parseFloat(f_2.revenue);
+                      });
+                      resultTwoBeforeSummary = this.twoBeforeMonthData.reduce(function (r_2, o_2) {
+                        var key_2 = o_2.date;
+
+                        if (!helperTwoBeforeSummary[key_2]) {
+                          helperTwoBeforeSummary[key_2] = Object.assign({}, o_2); // create a copy of o
+
+                          r_2.push(helperTwoBeforeSummary[key_2]);
+                        } else {
+                          helperTwoBeforeSummary[key_2].searches += parseInt(o_2.searches);
+
+                          if (o_2.revenue) {
+                            helperTwoBeforeSummary[key_2].revenue += o_2.revenue;
+                          }
+                        }
+
+                        return r_2;
+                      }, []);
+                      monthTwoBeforeRevenue = 0;
+                      monthTwoBeforeProfit = 0;
+                      monthTwoBeforeRevenuePace = 0;
+                      profitTwoBeforePace = 0;
+                      _iterator23 = _createForOfIteratorHelper(resultTwoBeforeSummary);
+
+                      try {
+                        for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+                          sumTwoBeforeData = _step23.value;
+                          monthTwoBeforeRevenue += sumTwoBeforeData.revenue;
+                          monthTwoBeforeProfit += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01;
+                          monthTwoBeforeRevenuePace += sumTwoBeforeData.revenue / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
+                          profitTwoBeforePace += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01 / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
+                        }
+                      } catch (err) {
+                        _iterator23.e(err);
+                      } finally {
+                        _iterator23.f();
+                      }
+
+                      currentPercentPace = 0;
+                      lastPercentPace = 0;
+
+                      if (profitBeforePace != 0) {
+                        currentPercentPace = (profitPace - profitBeforePace) / profitBeforePace * 100;
+                      }
+
+                      if (profitTwoBeforePace != 0) {
+                        lastPercentPace = (profitBeforePace - profitTwoBeforePace) / profitTwoBeforePace * 100;
+                      }
+
+                      summaryFinalData = [];
+                      summaryFinalData.push({
+                        summaryMetrics: [{
+                          revenue: monthRevenue,
+                          revenuePace: monthRevenuePace,
+                          profit: monthProfit,
+                          profitPace: profitPace,
+                          percentPace: currentPercentPace
+                        }],
+                        lastMonthStat: [{
+                          revenue: monthBeforeRevenue,
+                          revenuePace: monthBeforeRevenuePace,
+                          profit: monthBeforeProfit,
+                          profitPace: profitBeforePace,
+                          percentPace: lastPercentPace
+                        }]
+                      });
+                      allSummary = {};
+                      allSummary['summary'] = summaryFinalData;
+                      return _context23.abrupt("return", allSummary);
+
+                    case 48:
+                      _context23.prev = 48;
+                      _context23.t0 = _context23["catch"](0);
+                      return _context23.abrupt("return", _context23.t0);
+
+                    case 51:
+                    case "end":
+                      return _context23.stop();
                   }
                 }
-
-                return r;
-              }, []);
-
-              var monthRevenue = 0;
-              var monthProfit = 0;
-              var monthRevenuePace = 0;
-              var profitPace = 0;
-
-              var _iterator21 = _createForOfIteratorHelper(resultSummary),
-                  _step21;
-
-              try {
-                for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
-                  var sumData = _step21.value;
-                  monthRevenue += sumData.revenue;
-                  monthProfit += sumData.revenue * (100 - sumData.split) * 0.01;
-                  monthRevenuePace += sumData.revenue / resultSummary.length * dayInCurrentMonth;
-                  profitPace += sumData.revenue * (100 - sumData.split) * 0.01 / resultSummary.length * dayInCurrentMonth;
-                } //before month data get part
-                // var summaryBeforeStat = [];
-                // for (var tagL of this.tagList) {
-                //   for (var tagSub of tagL.tag.subids) {
-                //     if(tagSub.filterTag =="Contains") {
-                //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
-                //       summaryBeforeStat.map(stat => {
-                //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-                //         stat.tagname = tagL.tag.name
-                //       })
-                //     } else if (tagSub.filterTag =="StartsWith") {
-                //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
-                //     } else if (tagSub.filterTag =="EndsWith") {
-                //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
-                //     } else if (tagSub.filterTag =="ExactValue") {
-                //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid == tagSub.subid ))
-                //     }
-                //   }
-                // }
-                // // //duplicated remove
-                // let filt_data = summaryBeforeStat.filter((obj, pos, arr) => {
-                //   return arr
-                //     .map(mapObj => mapObj._id)
-                //     .indexOf(obj._id) == pos;
-                // });
-
-              } catch (err) {
-                _iterator21.e(err);
-              } finally {
-                _iterator21.f();
-              }
-
-              var helperBeforeSummary = {};
-
-              _this3.beforeMonthData.map(function (f) {
-                f.revenue = parseFloat(f.revenue); // f.ctr = parseFloat(f.ctr);
-                // f.biddedCtr = parseFloat(f.biddedCTR);
-              });
-
-              var resultBeforeSummary = _this3.beforeMonthData.reduce(function (r, o) {
-                var key = o.date;
-
-                if (!helperBeforeSummary[key]) {
-                  helperBeforeSummary[key] = Object.assign({}, o); // create a copy of o
-
-                  r.push(helperBeforeSummary[key]);
-                } else {
-                  helperBeforeSummary[key].searches += parseInt(o.searches);
-
-                  if (o.revenue) {
-                    helperBeforeSummary[key].revenue += o.revenue;
-                  }
-                }
-
-                return r;
-              }, []);
-
-              var monthBeforeRevenue = 0;
-              var monthBeforeProfit = 0;
-              var monthBeforeRevenuePace = 0;
-              var profitBeforePace = 0;
-
-              var _iterator22 = _createForOfIteratorHelper(resultBeforeSummary),
-                  _step22;
-
-              try {
-                for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
-                  var sumBeforeData = _step22.value;
-                  monthBeforeRevenue += sumBeforeData.revenue;
-                  monthBeforeProfit += sumBeforeData.revenue * (100 - sumBeforeData.split) * 0.01;
-                  monthBeforeRevenuePace += sumBeforeData.revenue / resultBeforeSummary.length * dayInBeforeMonth;
-                  profitBeforePace += sumBeforeData.revenue * (100 - sumBeforeData.split) * 0.01 / resultBeforeSummary.length * dayInBeforeMonth;
-                } //tow before month data get part
-                // var summaryTwoBeforeStat = [];
-                // for (var tagL of this.tagList) {
-                //   for (var tagSub of tagL.tag.subids) {
-                //     if(tagSub.filterTag =="Contains") {
-                //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
-                //       summaryTwoBeforeStat.map(stat => {
-                //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-                //         stat.tagname = tagL.tag.name
-                //       })
-                //     } else if (tagSub.filterTag =="StartsWith") {
-                //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
-                //     } else if (tagSub.filterTag =="EndsWith") {
-                //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
-                //     } else if (tagSub.filterTag =="ExactValue") {
-                //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid == tagSub.subid ))
-                //     }
-                //   }
-                // }
-                // // //duplicated remove
-                // let filter_two_data = summaryTwoBeforeStat.filter((obj, pos, arr) => {
-                //   return arr
-                //     .map(mapObj => mapObj._id)
-                //     .indexOf(obj._id) == pos;
-                // });
-
-              } catch (err) {
-                _iterator22.e(err);
-              } finally {
-                _iterator22.f();
-              }
-
-              var helperTwoBeforeSummary = {};
-
-              _this3.twoBeforeMonthData.map(function (f) {
-                f.revenue = parseFloat(f.revenue); // f.ctr = parseFloat(f.ctr);
-                // f.biddedCtr = parseFloat(f.biddedCTR);
-              });
-
-              var resultTwoBeforeSummary = _this3.twoBeforeMonthData.reduce(function (r, o) {
-                var key = o.date;
-
-                if (!helperTwoBeforeSummary[key]) {
-                  helperTwoBeforeSummary[key] = Object.assign({}, o); // create a copy of o
-
-                  r.push(helperTwoBeforeSummary[key]);
-                } else {
-                  helperTwoBeforeSummary[key].searches += parseInt(o.searches);
-
-                  if (o.revenue) {
-                    helperTwoBeforeSummary[key].revenue += o.revenue;
-                  }
-                }
-
-                return r;
-              }, []);
-
-              var monthTwoBeforeRevenue = 0;
-              var monthTwoBeforeProfit = 0;
-              var monthTwoBeforeRevenuePace = 0;
-              var profitTwoBeforePace = 0;
-
-              var _iterator23 = _createForOfIteratorHelper(resultTwoBeforeSummary),
-                  _step23;
-
-              try {
-                for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
-                  var sumTwoBeforeData = _step23.value;
-                  monthTwoBeforeRevenue += sumTwoBeforeData.revenue;
-                  monthTwoBeforeProfit += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01;
-                  monthTwoBeforeRevenuePace += sumTwoBeforeData.revenue / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
-                  profitTwoBeforePace += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01 / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
-                }
-              } catch (err) {
-                _iterator23.e(err);
-              } finally {
-                _iterator23.f();
-              }
-
-              var currentPercentPace = 0;
-              var lastPercentPace = 0;
-
-              if (profitBeforePace != 0) {
-                currentPercentPace = (profitPace - profitBeforePace) / profitBeforePace * 100;
-              }
-
-              if (profitTwoBeforePace != 0) {
-                lastPercentPace = (profitBeforePace - profitTwoBeforePace) / profitTwoBeforePace * 100;
-              }
-
-              var summaryFinalData = [];
-              summaryFinalData.push({
-                summaryMetrics: [{
-                  revenue: monthRevenue,
-                  revenuePace: monthRevenuePace,
-                  profit: monthProfit,
-                  profitPace: profitPace,
-                  percentPace: currentPercentPace
-                }],
-                lastMonthStat: [{
-                  revenue: monthBeforeRevenue,
-                  revenuePace: monthBeforeRevenuePace,
-                  profit: monthBeforeProfit,
-                  profitPace: profitBeforePace,
-                  percentPace: lastPercentPace
-                }]
-              });
-              var allSummary = {};
-              allSummary['summary'] = summaryFinalData;
-              return allSummary; // this.combineSummaryMetrics(response);
-            })["catch"](function (error) {
-              return error;
-            });
+              }, _callee23, this, [[0, 48]]);
+            }));
           }
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            var _this4 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
+              var response, sortResponse, helperChart, resultChart, revenuePerDayVal, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator24, _step24, resVal;
 
-            return this.lyonService.getAllStats(startDate, endDate).toPromise().then(function (response) {
-              var sortResponse = response.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              _this4.allChart = sortResponse; // var chartAllLyonStat = [];
-              // for (var tagL of this.tagList) {
-              //   for (var tagSub of tagL.tag.subids) {
-              //     if(tagSub.filterTag =="Contains") {
-              //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.includes(tagSub.subid)))
-              //       chartAllLyonStat.map(stat => {
-              //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //         stat.tagname = tagL.tag.name
-              //       })
-              //     } else if (tagSub.filterTag =="StartsWith") {
-              //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.startsWith(tagSub.subid)))
-              //       chartAllLyonStat.map(stat => {
-              //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //         stat.tagname = tagL.tag.name
-              //       })
-              //     } else if (tagSub.filterTag =="EndsWith") {
-              //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.endsWith(tagSub.subid)))
-              //       chartAllLyonStat.map(stat => {
-              //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //         stat.tagname = tagL.tag.name
-              //       })
-              //     } else if (tagSub.filterTag =="ExactValue") {
-              //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid == tagSub.subid ))
-              //       chartAllLyonStat.map(stat => {
-              //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //         stat.tagname = tagL.tag.name
-              //       })
-              //     }
-              //   }
-              // }
-              //duplicated remove
-              // let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
-              //   return arr
-              //     .map(mapObj => mapObj._id)
-              //     .indexOf(obj._id) == pos;
-              // });
+              return regeneratorRuntime.wrap(function _callee24$(_context24) {
+                while (1) {
+                  switch (_context24.prev = _context24.next) {
+                    case 0:
+                      _context24.prev = 0;
+                      _context24.next = 3;
+                      return this.lyonService.getAllStats(startDate, endDate).toPromise();
 
-              var helperChart = {}; // this.allChart.map(f =>{
-              //   f.revenue = parseFloat(f.revenue);
-              //   f.ctr = parseFloat(f.ctr);
-              //   f.searches = parseFloat(f.searches);
-              //   f.biddedCtr = parseFloat(f.biddedCTR);
-              // })
+                    case 3:
+                      response = _context24.sent;
+                      sortResponse = response.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      this.allChart = sortResponse; // var chartAllLyonStat = [];
+                      // for (var tagL of this.tagList) {
+                      //   for (var tagSub of tagL.tag.subids) {
+                      //     if(tagSub.filterTag =="Contains") {
+                      //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.includes(tagSub.subid)))
+                      //       chartAllLyonStat.map(stat => {
+                      //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //         stat.tagname = tagL.tag.name
+                      //       })
+                      //     } else if (tagSub.filterTag =="StartsWith") {
+                      //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.startsWith(tagSub.subid)))
+                      //       chartAllLyonStat.map(stat => {
+                      //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //         stat.tagname = tagL.tag.name
+                      //       })
+                      //     } else if (tagSub.filterTag =="EndsWith") {
+                      //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.endsWith(tagSub.subid)))
+                      //       chartAllLyonStat.map(stat => {
+                      //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //         stat.tagname = tagL.tag.name
+                      //       })
+                      //     } else if (tagSub.filterTag =="ExactValue") {
+                      //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid == tagSub.subid ))
+                      //       chartAllLyonStat.map(stat => {
+                      //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //         stat.tagname = tagL.tag.name
+                      //       })
+                      //     }
+                      //   }
+                      // }
+                      //duplicated remove
+                      // let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
+                      //   return arr
+                      //     .map(mapObj => mapObj._id)
+                      //     .indexOf(obj._id) == pos;
+                      // });
 
-              var resultChart = _this4.allChart.reduce(function (r, o) {
-                var key = o.date;
+                      helperChart = {}; // this.allChart.map(f =>{
+                      //   f.revenue = parseFloat(f.revenue);
+                      //   f.ctr = parseFloat(f.ctr);
+                      //   f.searches = parseFloat(f.searches);
+                      //   f.biddedCtr = parseFloat(f.biddedCTR);
+                      // })
 
-                if (!helperChart[key]) {
-                  helperChart[key] = Object.assign({}, o); // create a copy of o
+                      resultChart = this.allChart.reduce(function (r, o) {
+                        var key = o.date;
 
-                  r.push(helperChart[key]);
-                } else {
-                  helperChart[key].searches += parseInt(o.searches);
+                        if (!helperChart[key]) {
+                          helperChart[key] = Object.assign({}, o); // create a copy of o
 
-                  if (o.revenue) {
-                    helperChart[key].revenue += o.revenue;
+                          r.push(helperChart[key]);
+                        } else {
+                          helperChart[key].searches += parseInt(o.searches);
+
+                          if (o.revenue) {
+                            helperChart[key].revenue += o.revenue;
+                          }
+                        }
+
+                        return r;
+                      }, []);
+                      revenuePerDayVal = [];
+                      datesOfRevenueVal = [];
+                      searchesPerDayVal = [];
+                      chartDataValue = {};
+                      _iterator24 = _createForOfIteratorHelper(resultChart);
+
+                      try {
+                        for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+                          resVal = _step24.value;
+                          revenuePerDayVal.push(resVal.revenue);
+                          datesOfRevenueVal.push(resVal.date);
+                          searchesPerDayVal.push(resVal.searches);
+                        }
+                      } catch (err) {
+                        _iterator24.e(err);
+                      } finally {
+                        _iterator24.f();
+                      }
+
+                      chartDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartDataValue['searchesPerDay'] = searchesPerDayVal;
+                      return _context24.abrupt("return", chartDataValue);
+
+                    case 20:
+                      _context24.prev = 20;
+                      _context24.t0 = _context24["catch"](0);
+                      return _context24.abrupt("return", _context24.t0);
+
+                    case 23:
+                    case "end":
+                      return _context24.stop();
                   }
                 }
-
-                return r;
-              }, []);
-
-              var revenuePerDayVal = [];
-              var datesOfRevenueVal = [];
-              var searchesPerDayVal = [];
-              var chartDataValue = {};
-
-              var _iterator24 = _createForOfIteratorHelper(resultChart),
-                  _step24;
-
-              try {
-                for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
-                  var resVal = _step24.value;
-                  revenuePerDayVal.push(resVal.revenue);
-                  datesOfRevenueVal.push(resVal.date);
-                  searchesPerDayVal.push(resVal.searches);
-                }
-              } catch (err) {
-                _iterator24.e(err);
-              } finally {
-                _iterator24.f();
-              }
-
-              chartDataValue['revenuePerDay'] = revenuePerDayVal;
-              chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
-              chartDataValue['searchesPerDay'] = searchesPerDayVal;
-              return chartDataValue;
-            })["catch"](function (error) {
-              return error;
-            });
+              }, _callee24, this, [[0, 20]]);
+            }));
           }
         }, {
           key: "combineSummaryMetrics",
           value: function combineSummaryMetrics(metrics) {
-            var _this5 = this;
+            var _this = this;
 
             metrics.summary.keys.forEach(function (element) {
-              _this5.summary.revenue += element.revenue;
-              _this5.summary.profit += element.revenue * ((100 - element.split) * 0.01);
+              _this.summary.revenue += element.revenue;
+              _this.summary.profit += element.revenue * ((100 - element.split) * 0.01);
             });
           }
-        }, {
-          key: "createChartData",
-          value: function createChartData(stats) {}
         }]);
 
         return LyonsComponent;
@@ -5835,7 +5912,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Invalid start date");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Invalid start date ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -5946,26 +6023,26 @@
         }, {
           key: "getAllTags",
           value: function getAllTags() {
-            var _this6 = this;
+            var _this2 = this;
 
             this.tagService.getAllTags().subscribe(function (response) {
               var resData = [];
 
-              if (_this6.companySelected) {
+              if (_this2.companySelected) {
                 resData = response.filter(function (res) {
-                  return res.company[0]['_id'] == _this6.companySelected;
+                  return res.company[0]['_id'] == _this2.companySelected;
                 });
               }
 
               if (resData.length > 0) {
-                _this6.tagData = [{
+                _this2.tagData = [{
                   value: 'all tag',
                   viewValue: 'All Tag'
                 }];
               }
 
               resData.map(function (res) {
-                _this6.tagData.push({
+                _this2.tagData.push({
                   value: res._id,
                   viewValue: res.name
                 });
@@ -6087,7 +6164,7 @@
         }, {
           key: "onReportSubmit",
           value: function onReportSubmit() {
-            var _this7 = this;
+            var _this3 = this;
 
             if (this.manaulUpFG.valid) {
               this.manaulUpFG.addControl('company', new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required));
@@ -6095,12 +6172,12 @@
                 company: this.companySelected
               });
               this.manualUpdateService.updateManualSplit(this.manaulUpFG.value).subscribe(function (response) {
-                var checkExist = _this7.isObjectEmpty(response);
+                var checkExist = _this3.isObjectEmpty(response);
 
                 if (!checkExist) {
-                  _this7.notification.showSuccess("".concat(_this7.selectedTagName, " data splits  successfully updated!"), "");
+                  _this3.notification.showSuccess("".concat(_this3.selectedTagName, " data splits  successfully updated!"), "");
                 } else {
-                  _this7.notification.showWarning("".concat(_this7.selectedTagName, " data not existed!"), "");
+                  _this3.notification.showWarning("".concat(_this3.selectedTagName, " data not existed!"), "");
                 }
               });
             }
@@ -6485,7 +6562,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Invalid start date");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Invalid start date ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -6589,12 +6666,12 @@
         }, {
           key: "getReportingProviderList",
           value: function getReportingProviderList() {
-            var _this8 = this;
+            var _this4 = this;
 
             if (this.companySelected) {
               this.companyService.getOneCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
                 res.reportingProviders.map(function (report) {
-                  _this8.reportTypeData.push({
+                  _this4.reportTypeData.push({
                     value: report.reportingProvider,
                     viewValue: report.reportingProvider
                   });
@@ -6611,7 +6688,7 @@
         }, {
           key: "onReportSubmit",
           value: function onReportSubmit() {
-            var _this9 = this;
+            var _this5 = this;
 
             if (this.manaulUpFG.valid) {
               this.manaulUpFG.addControl('company', new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required));
@@ -6620,12 +6697,12 @@
               });
               var reportTypeValue = this.manaulUpFG.value['reportType'];
               this.manualUpdateService.updateManualStats(this.manaulUpFG.value).subscribe(function (response) {
-                var checkExist = _this9.isObjectEmpty(response);
+                var checkExist = _this5.isObjectEmpty(response);
 
                 if (!checkExist) {
-                  _this9.notification.showSuccess("".concat(reportTypeValue, " data stats successfully updated!"), "");
+                  _this5.notification.showSuccess("".concat(reportTypeValue, " data stats successfully updated!"), "");
                 } else {
-                  _this9.notification.showWarning("".concat(reportTypeValue, " data not existed!"), "");
+                  _this5.notification.showWarning("".concat(reportTypeValue, " data not existed!"), "");
                 }
               });
             }
@@ -7574,40 +7651,40 @@
         _createClass(PerionComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee17() {
-              return regeneratorRuntime.wrap(function _callee17$(_context17) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
+              return regeneratorRuntime.wrap(function _callee25$(_context25) {
                 while (1) {
-                  switch (_context17.prev = _context17.next) {
+                  switch (_context25.prev = _context25.next) {
                     case 0:
-                      _context17.next = 2;
+                      _context25.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context17.sent;
+                      this.tagList = _context25.sent;
                       this.rows = [];
-                      _context17.next = 6;
+                      _context25.next = 6;
                       return this.getAllPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context17.sent;
-                      _context17.next = 9;
+                      this.rows = _context25.sent;
+                      _context25.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context17.sent;
-                      _context17.next = 12;
+                      this.chartData = _context25.sent;
+                      _context25.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context17.sent;
+                      this.summaryMetrics = _context25.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context17.stop();
+                      return _context25.stop();
                   }
                 }
-              }, _callee17, this);
+              }, _callee25, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -7630,10 +7707,10 @@
         }, {
           key: "routeTester",
           value: function routeTester() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
-              return regeneratorRuntime.wrap(function _callee18$(_context18) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
+              return regeneratorRuntime.wrap(function _callee26$(_context26) {
                 while (1) {
-                  switch (_context18.prev = _context18.next) {
+                  switch (_context26.prev = _context26.next) {
                     case 0:
                       console.log('Testing Route');
                       this.perionService.testingRoute().subscribe(function (response) {
@@ -7644,10 +7721,10 @@
 
                     case 2:
                     case "end":
-                      return _context18.stop();
+                      return _context26.stop();
                   }
                 }
-              }, _callee18, this);
+              }, _callee26, this);
             }));
           }
         }, {
@@ -7662,125 +7739,132 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
-              return regeneratorRuntime.wrap(function _callee19$(_context19) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
+              return regeneratorRuntime.wrap(function _callee27$(_context27) {
                 while (1) {
-                  switch (_context19.prev = _context19.next) {
+                  switch (_context27.prev = _context27.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context19.next = 3;
+                      _context27.next = 3;
                       return this.getAllPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context19.sent;
-                      _context19.next = 6;
+                      this.rows = _context27.sent;
+                      _context27.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context19.sent;
-                      _context19.next = 9;
+                      this.chartData = _context27.sent;
+                      _context27.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context19.sent;
+                      this.summaryMetrics = _context27.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context19.stop();
+                      return _context27.stop();
                   }
                 }
-              }, _callee19, this);
+              }, _callee27, this);
             }));
           }
         }, {
           key: "getAllPerionStats",
           value: function getAllPerionStats(company, startDate, endDate) {
-            var _this10 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee28() {
+              var response, _iterator25, _step25, tagL, _iterator26, _step26, tagSub;
 
-            return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise().then(function (response) {
-              console.log('response:', response);
-              _this10.loadingIndicator = false; // console.log(response.stats);
+              return regeneratorRuntime.wrap(function _callee28$(_context28) {
+                while (1) {
+                  switch (_context28.prev = _context28.next) {
+                    case 0:
+                      _context28.prev = 0;
+                      _context28.next = 3;
+                      return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise();
 
-              _this10.allStat = response.stats;
+                    case 3:
+                      response = _context28.sent;
+                      // console.log('response:', response);
+                      this.loadingIndicator = false;
+                      this.allStat = response.stats;
+                      this.allStat.map(function (resStat) {
+                        resStat.publisher = "No Publisher";
+                        resStat.tagname = "No Tag";
+                      });
+                      _iterator25 = _createForOfIteratorHelper(this.tagList);
 
-              _this10.allStat.map(function (resStat) {
-                resStat.publisher = "No Publisher";
-                resStat.tagname = "No Tag";
-              });
+                      try {
+                        for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+                          tagL = _step25.value;
 
-              var _iterator25 = _createForOfIteratorHelper(_this10.tagList),
-                  _step25;
+                          if (tagL.tag.advertiser == "perion") {
+                            _iterator26 = _createForOfIteratorHelper(tagL.tag.subids);
 
-              try {
-                for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
-                  var tagL = _step25.value;
+                            try {
+                              for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+                                tagSub = _step26.value;
 
-                  if (tagL.tag.advertiser == "perion") {
-                    var _iterator26 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step26;
-
-                    try {
-                      for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-                        var tagSub = _step26.value;
-
-                        if (tagSub.filterTag == "Contains") {
-                          _this10.allStat.map(function (stat) {
-                            if (stat.subid.includes(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
+                                if (tagSub.filterTag == "Contains") {
+                                  this.allStat.map(function (stat) {
+                                    if (stat.subid.includes(tagSub.subid)) {
+                                      stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "StartsWith") {
+                                  this.allStat.map(function (stat_1) {
+                                    if (stat_1.subid.startsWith(tagSub.subid)) {
+                                      stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_1.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "EndsWith") {
+                                  this.allStat.map(function (stat_2) {
+                                    if (stat_2.subid.endsWith(tagSub.subid)) {
+                                      stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_2.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "ExactValue") {
+                                  this.allStat.map(function (stat_3) {
+                                    if (stat_3.subid == tagSub.subid) {
+                                      stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_3.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                }
+                              }
+                            } catch (err) {
+                              _iterator26.e(err);
+                            } finally {
+                              _iterator26.f();
                             }
-                          });
-                        } else if (tagSub.filterTag == "StartsWith") {
-                          _this10.allStat.map(function (stat) {
-                            if (stat.subid.startsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
-                        } else if (tagSub.filterTag == "EndsWith") {
-                          _this10.allStat.map(function (stat) {
-                            if (stat.subid.endsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
-                        } else if (tagSub.filterTag == "ExactValue") {
-                          _this10.allStat.map(function (stat) {
-                            if (stat.subid == tagSub.subid) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
+                          }
                         }
+                      } catch (err) {
+                        _iterator25.e(err);
+                      } finally {
+                        _iterator25.f();
                       }
-                    } catch (err) {
-                      _iterator26.e(err);
-                    } finally {
-                      _iterator26.f();
-                    }
+
+                      return _context28.abrupt("return", this.allStat);
+
+                    case 12:
+                      _context28.prev = 12;
+                      _context28.t0 = _context28["catch"](0);
+                      return _context28.abrupt("return", _context28.t0);
+
+                    case 15:
+                    case "end":
+                      return _context28.stop();
                   }
-                } // var helper = new Set();
-                // //duplicated remove
-                // let filtered_data = this.allStat.filter((perionStat) => {
-                //   const key = JSON.stringify([perionStat.date, perionStat.subid]);
-                //   return !helper.has(key) && helper.add(key);
-                // });
-                // console.log("=========", filtered_data.length)
-                //return filtered_data.slice().sort((a, b) => b.date - a.date);
-
-              } catch (err) {
-                _iterator25.e(err);
-              } finally {
-                _iterator25.f();
-              }
-
-              return _this10.allStat;
-            })["catch"](function (error) {
-              return error;
-            });
+                }
+              }, _callee28, this, [[0, 12]]);
+            }));
           }
         }, {
           key: "groupProvider",
@@ -7845,357 +7929,411 @@
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            return this.perionService.getSummaryMetrics(company).toPromise().then(function (response) {
-              console.log('Got summary metrics'); // console.log("===============", response)
-              // this.currentMonthData = response.summary[0].summaryMetrics;
-              // this.beforeMonthData = response.summary[0].lastMonthStat;  
-              // this.twoBeforeMonthData = response.summary[0].twoLastMonthStat;  
-              // var dayInCurrentMonth = response.summary[0].dayInCurrentMonth;
-              // var dayInBeforeMonth = response.summary[0].dayInBeforeMonth;
-              // var dayInTwoBeforeMonth = response.summary[0].dayInTwoBeforeMonth;
-              // var summaryCurrentStat = [];
-              //current data get part
-              // for (var tagL of this.tagList) {
-              //   for (var tagSub of tagL.tag.subids) {
-              //     if(tagSub.filterTag =="Contains") {
-              //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
-              //       summaryCurrentStat.map(stat => {
-              //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //         stat.tagname = tagL.tag.name
-              //       })
-              //     } else if (tagSub.filterTag =="StartsWith") {
-              //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
-              //       summaryCurrentStat.map(stat => {
-              //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //         stat.tagname = tagL.tag.name
-              //       })
-              //     } else if (tagSub.filterTag =="EndsWith") {
-              //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
-              //       summaryCurrentStat.map(stat => {
-              //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //         stat.tagname = tagL.tag.name
-              //       })
-              //     } else if (tagSub.filterTag =="ExactValue") {
-              //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid == tagSub.subid ))
-              //       summaryCurrentStat.map(stat => {
-              //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //         stat.tagname = tagL.tag.name
-              //       })
-              //     }
-              //   }
-              // }
-              // // //duplicated remove
-              // let filter_data = summaryCurrentStat.filter((obj, pos, arr) => {
-              //   return arr
-              //     .map(mapObj => mapObj._id)
-              //     .indexOf(obj._id) == pos;
-              // });
-              // var helperSummary = {};
-              // filter_data.map(f =>{
-              //   f.revenue = parseFloat(f.revenue);
-              //   f.ctr = parseFloat(f.ctr);
-              //   f.biddedCtr = parseFloat(f.biddedCTR);
-              // })
-              // var resultSummary = filter_data.reduce(function(r, o) {
-              //   var key = o.rptDate;
-              //   if(!helperSummary[key]) {
-              //     helperSummary[key] = Object.assign({}, o); // create a copy of o
-              //     r.push(helperSummary[key]);
-              //   } else {
-              //     helperSummary[key].searches += parseInt(o.searches);
-              //     if(o.revenue) {
-              //       helperSummary[key].revenue += o.revenue;
-              //     }
-              //   } 
-              //   return r;
-              // }, []);
-              // var monthRevenue = 0;
-              // var monthProfit = 0;
-              // var monthRevenuePace = 0;
-              // var profitPace = 0;
-              // for(var sumData of resultSummary) {
-              //   monthRevenue += sumData.revenue;
-              //   monthProfit += sumData.revenue *(100 - sumData.split) * 0.01;
-              //   monthRevenuePace += (monthRevenue/resultSummary.length) * dayInCurrentMonth;
-              //   profitPace += (monthProfit/resultSummary.length)*dayInCurrentMonth;
-              // }
-              // //before month data get part
-              // var summaryBeforeStat = [];
-              // for (var tagL of this.tagList) {
-              //   for (var tagSub of tagL.tag.subids) {
-              //     if(tagSub.filterTag =="Contains") {
-              //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
-              //       summaryBeforeStat.map(stat => {
-              //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //         stat.tagname = tagL.tag.name
-              //       })
-              //     } else if (tagSub.filterTag =="StartsWith") {
-              //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
-              //     } else if (tagSub.filterTag =="EndsWith") {
-              //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
-              //     } else if (tagSub.filterTag =="ExactValue") {
-              //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid == tagSub.subid ))
-              //     }
-              //   }
-              // }
-              // // //duplicated remove
-              // let filt_data = summaryBeforeStat.filter((obj, pos, arr) => {
-              //   return arr
-              //     .map(mapObj => mapObj._id)
-              //     .indexOf(obj._id) == pos;
-              // });
-              // var helperBeforeSummary = {};
-              // filt_data.map(f =>{
-              //   f.revenue = parseFloat(f.revenue);
-              //   f.ctr = parseFloat(f.ctr);
-              //   f.biddedCtr = parseFloat(f.biddedCTR);
-              // })
-              // var resultBeforeSummary = filt_data.reduce(function(r, o) {
-              //   var key = o.rptDate;
-              //   if(!helperBeforeSummary[key]) {
-              //     helperBeforeSummary[key] = Object.assign({}, o); // create a copy of o
-              //     r.push(helperBeforeSummary[key]);
-              //   } else {
-              //     helperBeforeSummary[key].searches += parseInt(o.searches);
-              //     if(o.revenue) {
-              //       helperBeforeSummary[key].revenue += o.revenue;
-              //     }
-              //   } 
-              //   return r;
-              // }, []);
-              // var monthBeforeRevenue = 0;
-              // var monthBeforeProfit = 0;
-              // var monthBeforeRevenuePace = 0;
-              // var profitBeforePace = 0;
-              // for(var sumBeforeData of resultBeforeSummary) {
-              //   monthBeforeRevenue += sumBeforeData.revenue;
-              //   monthBeforeProfit += sumBeforeData.revenue *(100 - sumBeforeData.split) * 0.01;
-              //   monthBeforeRevenuePace += (monthBeforeRevenue/resultBeforeSummary.length) * dayInBeforeMonth;
-              //   profitBeforePace += (monthBeforeProfit/resultBeforeSummary.length)*dayInBeforeMonth;
-              // }
-              // //tow before month data get part
-              // var summaryTwoBeforeStat = [];
-              // for (var tagL of this.tagList) {
-              //   for (var tagSub of tagL.tag.subids) {
-              //     if(tagSub.filterTag =="Contains") {
-              //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
-              //       summaryTwoBeforeStat.map(stat => {
-              //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //         stat.tagname = tagL.tag.name
-              //       })
-              //     } else if (tagSub.filterTag =="StartsWith") {
-              //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
-              //     } else if (tagSub.filterTag =="EndsWith") {
-              //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
-              //     } else if (tagSub.filterTag =="ExactValue") {
-              //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid == tagSub.subid ))
-              //     }
-              //   }
-              // }
-              // // //duplicated remove
-              // let filter_two_data = summaryTwoBeforeStat.filter((obj, pos, arr) => {
-              //   return arr
-              //     .map(mapObj => mapObj._id)
-              //     .indexOf(obj._id) == pos;
-              // });
-              // var helperTwoBeforeSummary = {};
-              // filter_two_data.map(f =>{
-              //   f.revenue = parseFloat(f.revenue);
-              //   f.ctr = parseFloat(f.ctr);
-              //   f.biddedCtr = parseFloat(f.biddedCTR);
-              // })
-              // var resultTwoBeforeSummary = filter_two_data.reduce(function(r, o) {
-              //   var key = o.rptDate;
-              //   if(!helperTwoBeforeSummary[key]) {
-              //     helperTwoBeforeSummary[key] = Object.assign({}, o); // create a copy of o
-              //     r.push(helperTwoBeforeSummary[key]);
-              //   } else {
-              //     helperTwoBeforeSummary[key].searches += parseInt(o.searches);
-              //     if(o.revenue) {
-              //       helperTwoBeforeSummary[key].revenue += o.revenue;
-              //     }
-              //   } 
-              //   return r;
-              // }, []);
-              // var monthTwoBeforeRevenue = 0;
-              // var monthTwoBeforeProfit = 0;
-              // var monthTwoBeforeRevenuePace = 0;
-              // var profitTwoBeforePace = 0;
-              // for(var sumTwoBeforeData of resultTwoBeforeSummary) {
-              //   monthTwoBeforeRevenue += sumTwoBeforeData.revenue;
-              //   monthTwoBeforeProfit += sumTwoBeforeData.revenue *(100 - sumTwoBeforeData.split) * 0.01;
-              //   monthTwoBeforeRevenuePace += (monthTwoBeforeRevenue/resultTwoBeforeSummary.length) * dayInTwoBeforeMonth;
-              //   profitTwoBeforePace += (monthTwoBeforeProfit/resultTwoBeforeSummary.length)*dayInTwoBeforeMonth;
-              // }
-              // var currentPercentPace = 0;
-              // var lastPercentPace = 0;
-              // if (profitBeforePace != 0) {
-              //   currentPercentPace = ((profitPace - profitBeforePace) / profitBeforePace) * 100
-              // }
-              // if (profitTwoBeforePace != 0) {
-              //   lastPercentPace = ((profitBeforePace - profitTwoBeforePace) / profitTwoBeforePace) * 100
-              // }
-              // var summaryFinalData = [];
-              // summaryFinalData.push({
-              //   summaryMetrics: [{
-              //     revenue: monthRevenue,
-              //     revenuePace: monthRevenuePace,
-              //     profit: monthProfit,
-              //     profitPace: profitPace,
-              //     percentPace: currentPercentPace
-              //   }],
-              //   lastMonthStat: [{
-              //     revenue: monthBeforeRevenue,
-              //     revenuePace: monthBeforeRevenuePace,
-              //     profit: monthBeforeProfit,
-              //     profitPace: profitBeforePace,
-              //     percentPace: lastPercentPace
-              //   }]
-              // });
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee29() {
+              var response, allSummary, currentPercentPace, lastPercentPace;
+              return regeneratorRuntime.wrap(function _callee29$(_context29) {
+                while (1) {
+                  switch (_context29.prev = _context29.next) {
+                    case 0:
+                      _context29.prev = 0;
+                      _context29.next = 3;
+                      return this.perionService.getSummaryMetrics(company).toPromise();
 
-              var allSummary = {};
-              var currentPercentPace = 0;
-              var lastPercentPace = 0;
+                    case 3:
+                      response = _context29.sent;
+                      // console.log("===============", response)
+                      // this.currentMonthData = response.summary[0].summaryMetrics;
+                      // this.beforeMonthData = response.summary[0].lastMonthStat;  
+                      // this.twoBeforeMonthData = response.summary[0].twoLastMonthStat;  
+                      // var dayInCurrentMonth = response.summary[0].dayInCurrentMonth;
+                      // var dayInBeforeMonth = response.summary[0].dayInBeforeMonth;
+                      // var dayInTwoBeforeMonth = response.summary[0].dayInTwoBeforeMonth;
+                      // var summaryCurrentStat = [];
+                      //current data get part
+                      // for (var tagL of this.tagList) {
+                      //   for (var tagSub of tagL.tag.subids) {
+                      //     if(tagSub.filterTag =="Contains") {
+                      //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+                      //       summaryCurrentStat.map(stat => {
+                      //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //         stat.tagname = tagL.tag.name
+                      //       })
+                      //     } else if (tagSub.filterTag =="StartsWith") {
+                      //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+                      //       summaryCurrentStat.map(stat => {
+                      //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //         stat.tagname = tagL.tag.name
+                      //       })
+                      //     } else if (tagSub.filterTag =="EndsWith") {
+                      //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+                      //       summaryCurrentStat.map(stat => {
+                      //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //         stat.tagname = tagL.tag.name
+                      //       })
+                      //     } else if (tagSub.filterTag =="ExactValue") {
+                      //       summaryCurrentStat = summaryCurrentStat.concat(this.currentMonthData.filter(stat => stat.subid == tagSub.subid ))
+                      //       summaryCurrentStat.map(stat => {
+                      //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //         stat.tagname = tagL.tag.name
+                      //       })
+                      //     }
+                      //   }
+                      // }
+                      // // //duplicated remove
+                      // let filter_data = summaryCurrentStat.filter((obj, pos, arr) => {
+                      //   return arr
+                      //     .map(mapObj => mapObj._id)
+                      //     .indexOf(obj._id) == pos;
+                      // });
+                      // var helperSummary = {};
+                      // filter_data.map(f =>{
+                      //   f.revenue = parseFloat(f.revenue);
+                      //   f.ctr = parseFloat(f.ctr);
+                      //   f.biddedCtr = parseFloat(f.biddedCTR);
+                      // })
+                      // var resultSummary = filter_data.reduce(function(r, o) {
+                      //   var key = o.rptDate;
+                      //   if(!helperSummary[key]) {
+                      //     helperSummary[key] = Object.assign({}, o); // create a copy of o
+                      //     r.push(helperSummary[key]);
+                      //   } else {
+                      //     helperSummary[key].searches += parseInt(o.searches);
+                      //     if(o.revenue) {
+                      //       helperSummary[key].revenue += o.revenue;
+                      //     }
+                      //   } 
+                      //   return r;
+                      // }, []);
+                      // var monthRevenue = 0;
+                      // var monthProfit = 0;
+                      // var monthRevenuePace = 0;
+                      // var profitPace = 0;
+                      // for(var sumData of resultSummary) {
+                      //   monthRevenue += sumData.revenue;
+                      //   monthProfit += sumData.revenue *(100 - sumData.split) * 0.01;
+                      //   monthRevenuePace += (monthRevenue/resultSummary.length) * dayInCurrentMonth;
+                      //   profitPace += (monthProfit/resultSummary.length)*dayInCurrentMonth;
+                      // }
+                      // //before month data get part
+                      // var summaryBeforeStat = [];
+                      // for (var tagL of this.tagList) {
+                      //   for (var tagSub of tagL.tag.subids) {
+                      //     if(tagSub.filterTag =="Contains") {
+                      //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+                      //       summaryBeforeStat.map(stat => {
+                      //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //         stat.tagname = tagL.tag.name
+                      //       })
+                      //     } else if (tagSub.filterTag =="StartsWith") {
+                      //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+                      //     } else if (tagSub.filterTag =="EndsWith") {
+                      //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+                      //     } else if (tagSub.filterTag =="ExactValue") {
+                      //       summaryBeforeStat = summaryBeforeStat.concat(this.beforeMonthData.filter(stat => stat.subid == tagSub.subid ))
+                      //     }
+                      //   }
+                      // }
+                      // // //duplicated remove
+                      // let filt_data = summaryBeforeStat.filter((obj, pos, arr) => {
+                      //   return arr
+                      //     .map(mapObj => mapObj._id)
+                      //     .indexOf(obj._id) == pos;
+                      // });
+                      // var helperBeforeSummary = {};
+                      // filt_data.map(f =>{
+                      //   f.revenue = parseFloat(f.revenue);
+                      //   f.ctr = parseFloat(f.ctr);
+                      //   f.biddedCtr = parseFloat(f.biddedCTR);
+                      // })
+                      // var resultBeforeSummary = filt_data.reduce(function(r, o) {
+                      //   var key = o.rptDate;
+                      //   if(!helperBeforeSummary[key]) {
+                      //     helperBeforeSummary[key] = Object.assign({}, o); // create a copy of o
+                      //     r.push(helperBeforeSummary[key]);
+                      //   } else {
+                      //     helperBeforeSummary[key].searches += parseInt(o.searches);
+                      //     if(o.revenue) {
+                      //       helperBeforeSummary[key].revenue += o.revenue;
+                      //     }
+                      //   } 
+                      //   return r;
+                      // }, []);
+                      // var monthBeforeRevenue = 0;
+                      // var monthBeforeProfit = 0;
+                      // var monthBeforeRevenuePace = 0;
+                      // var profitBeforePace = 0;
+                      // for(var sumBeforeData of resultBeforeSummary) {
+                      //   monthBeforeRevenue += sumBeforeData.revenue;
+                      //   monthBeforeProfit += sumBeforeData.revenue *(100 - sumBeforeData.split) * 0.01;
+                      //   monthBeforeRevenuePace += (monthBeforeRevenue/resultBeforeSummary.length) * dayInBeforeMonth;
+                      //   profitBeforePace += (monthBeforeProfit/resultBeforeSummary.length)*dayInBeforeMonth;
+                      // }
+                      // //tow before month data get part
+                      // var summaryTwoBeforeStat = [];
+                      // for (var tagL of this.tagList) {
+                      //   for (var tagSub of tagL.tag.subids) {
+                      //     if(tagSub.filterTag =="Contains") {
+                      //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.includes(tagSub.subid)))
+                      //       summaryTwoBeforeStat.map(stat => {
+                      //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //         stat.tagname = tagL.tag.name
+                      //       })
+                      //     } else if (tagSub.filterTag =="StartsWith") {
+                      //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.startsWith(tagSub.subid)))
+                      //     } else if (tagSub.filterTag =="EndsWith") {
+                      //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid.endsWith(tagSub.subid)))
+                      //     } else if (tagSub.filterTag =="ExactValue") {
+                      //       summaryTwoBeforeStat = summaryTwoBeforeStat.concat(this.twoBeforeMonthData.filter(stat => stat.subid == tagSub.subid ))
+                      //     }
+                      //   }
+                      // }
+                      // // //duplicated remove
+                      // let filter_two_data = summaryTwoBeforeStat.filter((obj, pos, arr) => {
+                      //   return arr
+                      //     .map(mapObj => mapObj._id)
+                      //     .indexOf(obj._id) == pos;
+                      // });
+                      // var helperTwoBeforeSummary = {};
+                      // filter_two_data.map(f =>{
+                      //   f.revenue = parseFloat(f.revenue);
+                      //   f.ctr = parseFloat(f.ctr);
+                      //   f.biddedCtr = parseFloat(f.biddedCTR);
+                      // })
+                      // var resultTwoBeforeSummary = filter_two_data.reduce(function(r, o) {
+                      //   var key = o.rptDate;
+                      //   if(!helperTwoBeforeSummary[key]) {
+                      //     helperTwoBeforeSummary[key] = Object.assign({}, o); // create a copy of o
+                      //     r.push(helperTwoBeforeSummary[key]);
+                      //   } else {
+                      //     helperTwoBeforeSummary[key].searches += parseInt(o.searches);
+                      //     if(o.revenue) {
+                      //       helperTwoBeforeSummary[key].revenue += o.revenue;
+                      //     }
+                      //   } 
+                      //   return r;
+                      // }, []);
+                      // var monthTwoBeforeRevenue = 0;
+                      // var monthTwoBeforeProfit = 0;
+                      // var monthTwoBeforeRevenuePace = 0;
+                      // var profitTwoBeforePace = 0;
+                      // for(var sumTwoBeforeData of resultTwoBeforeSummary) {
+                      //   monthTwoBeforeRevenue += sumTwoBeforeData.revenue;
+                      //   monthTwoBeforeProfit += sumTwoBeforeData.revenue *(100 - sumTwoBeforeData.split) * 0.01;
+                      //   monthTwoBeforeRevenuePace += (monthTwoBeforeRevenue/resultTwoBeforeSummary.length) * dayInTwoBeforeMonth;
+                      //   profitTwoBeforePace += (monthTwoBeforeProfit/resultTwoBeforeSummary.length)*dayInTwoBeforeMonth;
+                      // }
+                      // var currentPercentPace = 0;
+                      // var lastPercentPace = 0;
+                      // if (profitBeforePace != 0) {
+                      //   currentPercentPace = ((profitPace - profitBeforePace) / profitBeforePace) * 100
+                      // }
+                      // if (profitTwoBeforePace != 0) {
+                      //   lastPercentPace = ((profitBeforePace - profitTwoBeforePace) / profitTwoBeforePace) * 100
+                      // }
+                      // var summaryFinalData = [];
+                      // summaryFinalData.push({
+                      //   summaryMetrics: [{
+                      //     revenue: monthRevenue,
+                      //     revenuePace: monthRevenuePace,
+                      //     profit: monthProfit,
+                      //     profitPace: profitPace,
+                      //     percentPace: currentPercentPace
+                      //   }],
+                      //   lastMonthStat: [{
+                      //     revenue: monthBeforeRevenue,
+                      //     revenuePace: monthBeforeRevenuePace,
+                      //     profit: monthBeforeProfit,
+                      //     profitPace: profitBeforePace,
+                      //     percentPace: lastPercentPace
+                      //   }]
+                      // });
+                      allSummary = {};
+                      currentPercentPace = 0;
+                      lastPercentPace = 0;
 
-              if (response.summary[0].lastMonthStat[0].profitPace != 0) {
-                currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
-              }
+                      if (response.summary[0].lastMonthStat[0].profitPace != 0) {
+                        currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
+                      }
 
-              if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
-                lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
-              }
+                      if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
+                        lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
+                      }
 
-              response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
-              response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
-              allSummary['summary'] = response.summary;
-              return allSummary;
-            })["catch"](function (error) {
-              return error;
-            });
+                      response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
+                      response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
+                      allSummary['summary'] = response.summary;
+                      return _context29.abrupt("return", allSummary);
+
+                    case 15:
+                      _context29.prev = 15;
+                      _context29.t0 = _context29["catch"](0);
+                      return _context29.abrupt("return", _context29.t0);
+
+                    case 18:
+                    case "end":
+                      return _context29.stop();
+                  }
+                }
+              }, _callee29, this, [[0, 15]]);
+            }));
           }
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            var _this11 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee30() {
+              var response, helperChart, resultChart, revenuePerDayVal, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator28, _step28, resVal;
 
-            return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise().then(function (response) {
-              // console.log('getAllPerionStats() response:');
-              _this11.allChartStat = response.stats; // var allChartPerionStat = [];
-              // for (var tagL of this.tagList) {
-              //   if(tagL.tag.advertiser == "perion") {
-              //     for (var tagSub of tagL.tag.subids) {
-              //       if(tagSub.filterTag =="Contains") {
-              //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.includes(tagSub.subid)))
-              //         allChartPerionStat.map(stat => {
-              //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //           stat.tagname = tagL.tag.name
-              //         })
-              //       } else if (tagSub.filterTag =="StartsWith") {
-              //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.startsWith(tagSub.subid)))
-              //         allChartPerionStat.map(stat => {
-              //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //           stat.tagname = tagL.tag.name
-              //         })
-              //       } else if (tagSub.filterTag =="EndsWith") {
-              //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.endsWith(tagSub.subid)))
-              //         allChartPerionStat.map(stat => {
-              //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //           stat.tagname = tagL.tag.name
-              //         })
-              //       } else if (tagSub.filterTag =="ExactValue") {
-              //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid == tagSub.subid ))
-              //         allChartPerionStat.map(stat => {
-              //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-              //           stat.tagname = tagL.tag.name
-              //         })
-              //       }
-              //     }
-              //   }
-              // }
-              // var helper = new Set();
-              //duplicated remove
-              // let filtered_data = this.allChartStat.filter((perionStat) => {
-              //   const key = JSON.stringify([perionStat.date, perionStat.subid]);
-              //   return !helper.has(key) && helper.add(key);
-              // });
+              return regeneratorRuntime.wrap(function _callee30$(_context30) {
+                while (1) {
+                  switch (_context30.prev = _context30.next) {
+                    case 0:
+                      _context30.prev = 0;
+                      _context30.next = 3;
+                      return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise();
 
-              _this11.allChartStat = _this11.allChartStat.slice().sort(function (a, b) {
-                return a.date - b.date;
-              });
-              var helperChart = {};
+                    case 3:
+                      response = _context30.sent;
+                      // console.log('getAllPerionStats() response:');
+                      this.allChartStat = response.stats; // var allChartPerionStat = [];
+                      // for (var tagL of this.tagList) {
+                      //   if(tagL.tag.advertiser == "perion") {
+                      //     for (var tagSub of tagL.tag.subids) {
+                      //       if(tagSub.filterTag =="Contains") {
+                      //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.includes(tagSub.subid)))
+                      //         allChartPerionStat.map(stat => {
+                      //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //           stat.tagname = tagL.tag.name
+                      //         })
+                      //       } else if (tagSub.filterTag =="StartsWith") {
+                      //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.startsWith(tagSub.subid)))
+                      //         allChartPerionStat.map(stat => {
+                      //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //           stat.tagname = tagL.tag.name
+                      //         })
+                      //       } else if (tagSub.filterTag =="EndsWith") {
+                      //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid.endsWith(tagSub.subid)))
+                      //         allChartPerionStat.map(stat => {
+                      //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //           stat.tagname = tagL.tag.name
+                      //         })
+                      //       } else if (tagSub.filterTag =="ExactValue") {
+                      //         allChartPerionStat = allChartPerionStat.concat(this.allChartStat.filter(stat => stat.subid == tagSub.subid ))
+                      //         allChartPerionStat.map(stat => {
+                      //           stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+                      //           stat.tagname = tagL.tag.name
+                      //         })
+                      //       }
+                      //     }
+                      //   }
+                      // }
+                      // var helper = new Set();
+                      //duplicated remove
+                      // let filtered_data = this.allChartStat.filter((perionStat) => {
+                      //   const key = JSON.stringify([perionStat.date, perionStat.subid]);
+                      //   return !helper.has(key) && helper.add(key);
+                      // });
 
-              var resultChart = _this11.allChartStat.reduce(function (r, o) {
-                var key = o.date;
+                      this.allChartStat = this.allChartStat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      helperChart = {};
+                      resultChart = this.allChartStat.reduce(function (r, o) {
+                        var key = o.date;
 
-                if (!helperChart[key]) {
-                  helperChart[key] = Object.assign({}, o); // create a copy of o
+                        if (!helperChart[key]) {
+                          helperChart[key] = Object.assign({}, o); // create a copy of o
 
-                  r.push(helperChart[key]);
-                } else {
-                  helperChart[key].totalsearches += parseInt(o.totalsearches);
+                          r.push(helperChart[key]);
+                        } else {
+                          helperChart[key].totalsearches += parseInt(o.totalsearches);
 
-                  if (o.revenue) {
-                    helperChart[key].revenue += o.revenue;
+                          if (o.revenue) {
+                            helperChart[key].revenue += o.revenue;
+                          }
+                        }
+
+                        return r;
+                      }, []);
+                      revenuePerDayVal = [];
+                      datesOfRevenueVal = [];
+                      searchesPerDayVal = [];
+                      chartDataValue = {};
+                      _iterator28 = _createForOfIteratorHelper(resultChart);
+
+                      try {
+                        for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+                          resVal = _step28.value;
+                          revenuePerDayVal.push(resVal.revenue);
+                          datesOfRevenueVal.push(resVal.date);
+                          searchesPerDayVal.push(resVal.totalsearches);
+                        }
+                      } catch (err) {
+                        _iterator28.e(err);
+                      } finally {
+                        _iterator28.f();
+                      }
+
+                      chartDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartDataValue['searchesPerDay'] = searchesPerDayVal;
+                      return _context30.abrupt("return", chartDataValue);
+
+                    case 20:
+                      _context30.prev = 20;
+                      _context30.t0 = _context30["catch"](0);
+                      return _context30.abrupt("return", _context30.t0);
+
+                    case 23:
+                    case "end":
+                      return _context30.stop();
                   }
                 }
-
-                return r;
-              }, []);
-
-              var revenuePerDayVal = [];
-              var datesOfRevenueVal = [];
-              var searchesPerDayVal = [];
-              var chartDataValue = {};
-
-              var _iterator28 = _createForOfIteratorHelper(resultChart),
-                  _step28;
-
-              try {
-                for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
-                  var resVal = _step28.value;
-                  revenuePerDayVal.push(resVal.revenue);
-                  datesOfRevenueVal.push(resVal.date);
-                  searchesPerDayVal.push(resVal.totalsearches);
-                }
-              } catch (err) {
-                _iterator28.e(err);
-              } finally {
-                _iterator28.f();
-              }
-
-              chartDataValue['revenuePerDay'] = revenuePerDayVal;
-              chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
-              chartDataValue['searchesPerDay'] = searchesPerDayVal;
-              return chartDataValue;
-            })["catch"](function (error) {
-              return error;
-            });
+              }, _callee30, this, [[0, 20]]);
+            }));
           }
         }, {
           key: "combineSummaryMetrics",
           value: function combineSummaryMetrics(metrics) {
-            var _this12 = this;
+            var _this6 = this;
 
             metrics.summary.keys.forEach(function (element) {
               console.log(element.revenue);
-              _this12.summary.revenue += element.revenue;
-              _this12.summary.profit += element.revenue * ((100 - element.split) * 0.01);
+              _this6.summary.revenue += element.revenue;
+              _this6.summary.profit += element.revenue * ((100 - element.split) * 0.01);
             });
           } //get Tags with selected company
 
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            var companyId = selectedCompany.split("/")[1];
-            return this.tagService.getCompanyTags(companyId).toPromise().then(function (response) {
-              return response;
-            })["catch"](function (error) {
-              return error;
-            });
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee31() {
+              var companyId, response;
+              return regeneratorRuntime.wrap(function _callee31$(_context31) {
+                while (1) {
+                  switch (_context31.prev = _context31.next) {
+                    case 0:
+                      companyId = selectedCompany.split("/")[1];
+                      _context31.prev = 1;
+                      _context31.next = 4;
+                      return this.tagService.getCompanyTags(companyId).toPromise();
+
+                    case 4:
+                      response = _context31.sent;
+                      return _context31.abrupt("return", response);
+
+                    case 8:
+                      _context31.prev = 8;
+                      _context31.t0 = _context31["catch"](1);
+                      return _context31.abrupt("return", _context31.t0);
+
+                    case 11:
+                    case "end":
+                      return _context31.stop();
+                  }
+                }
+              }, _callee31, this, [[1, 8]]);
+            }));
           }
-        }, {
-          key: "createChartData",
-          value: function createChartData(stats) {}
         }]);
 
         return PerionComponent;
@@ -8816,75 +8954,75 @@
         _createClass(RubiComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
-              return regeneratorRuntime.wrap(function _callee20$(_context20) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee32() {
+              return regeneratorRuntime.wrap(function _callee32$(_context32) {
                 while (1) {
-                  switch (_context20.prev = _context20.next) {
+                  switch (_context32.prev = _context32.next) {
                     case 0:
-                      _context20.next = 2;
+                      _context32.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context20.sent;
+                      this.tagList = _context32.sent;
                       this.rows = [];
-                      _context20.next = 6;
+                      _context32.next = 6;
                       return this.getAllRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context20.sent;
-                      _context20.next = 9;
+                      this.rows = _context32.sent;
+                      _context32.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context20.sent;
-                      _context20.next = 12;
+                      this.chartData = _context32.sent;
+                      _context32.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context20.sent;
+                      this.summaryMetrics = _context32.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context20.stop();
+                      return _context32.stop();
                   }
                 }
-              }, _callee20, this);
+              }, _callee32, this);
             }));
           }
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
-              return regeneratorRuntime.wrap(function _callee21$(_context21) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee33() {
+              return regeneratorRuntime.wrap(function _callee33$(_context33) {
                 while (1) {
-                  switch (_context21.prev = _context21.next) {
+                  switch (_context33.prev = _context33.next) {
                     case 0:
                       this.range = range;
-                      _context21.next = 3;
+                      _context33.next = 3;
                       return this.getAllRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context21.sent;
-                      _context21.next = 6;
+                      this.rows = _context33.sent;
+                      _context33.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context21.sent;
-                      _context21.next = 9;
+                      this.chartData = _context33.sent;
+                      _context33.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context21.sent;
+                      this.summaryMetrics = _context33.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context21.stop();
+                      return _context33.stop();
                   }
                 }
-              }, _callee21, this);
+              }, _callee33, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -8912,78 +9050,90 @@
         }, {
           key: "getAllRubiStats",
           value: function getAllRubiStats(company, startDate, endDate) {
-            var _this13 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee34() {
+              var response, _iterator29, _step29, tagL, _iterator30, _step30, tagSub;
 
-            return this.rubiService.getRubiStats(company, startDate, endDate).toPromise().then(function (response) {
-              console.log('getRubiStats() response:', response);
-              _this13.loadingIndicator = false;
-              _this13.allStats = response.stats;
+              return regeneratorRuntime.wrap(function _callee34$(_context34) {
+                while (1) {
+                  switch (_context34.prev = _context34.next) {
+                    case 0:
+                      _context34.next = 2;
+                      return this.rubiService.getRubiStats(company, startDate, endDate).toPromise();
 
-              _this13.allStats.map(function (resStat) {
-                resStat.publisher = "No Publisher";
-                resStat.tagname = "No Tag";
-              });
+                    case 2:
+                      response = _context34.sent;
+                      console.log('getRubiStats() response:', response);
+                      this.loadingIndicator = false;
+                      this.allStats = response.stats;
+                      this.allStats.map(function (resStat) {
+                        resStat.publisher = "No Publisher";
+                        resStat.tagname = "No Tag";
+                      });
+                      _iterator29 = _createForOfIteratorHelper(this.tagList);
 
-              var _iterator29 = _createForOfIteratorHelper(_this13.tagList),
-                  _step29;
+                      try {
+                        for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
+                          tagL = _step29.value;
 
-              try {
-                for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
-                  var tagL = _step29.value;
+                          if (tagL.tag.advertiser == "rubi") {
+                            _iterator30 = _createForOfIteratorHelper(tagL.tag.subids);
 
-                  if (tagL.tag.advertiser == "rubi") {
-                    var _iterator30 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step30;
+                            try {
+                              for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
+                                tagSub = _step30.value;
 
-                    try {
-                      for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
-                        var tagSub = _step30.value;
-
-                        if (tagSub.filterTag == "Contains") {
-                          _this13.allStats.map(function (stat) {
-                            if (stat.subid.includes(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
+                                if (tagSub.filterTag == "Contains") {
+                                  this.allStats.map(function (stat) {
+                                    if (stat.subid.includes(tagSub.subid)) {
+                                      stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "StartsWith") {
+                                  this.allStats.map(function (stat_1) {
+                                    if (stat_1.subid.startsWith(tagSub.subid)) {
+                                      stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_1.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "EndsWith") {
+                                  this.allStats.map(function (stat_2) {
+                                    if (stat_2.subid.endsWith(tagSub.subid)) {
+                                      stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_2.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "ExactValue") {
+                                  this.allStats.map(function (stat_3) {
+                                    if (stat_3.subid == tagSub.subid) {
+                                      stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_3.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                }
+                              }
+                            } catch (err) {
+                              _iterator30.e(err);
+                            } finally {
+                              _iterator30.f();
                             }
-                          });
-                        } else if (tagSub.filterTag == "StartsWith") {
-                          _this13.allStats.map(function (stat) {
-                            if (stat.subid.startsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
-                        } else if (tagSub.filterTag == "EndsWith") {
-                          _this13.allStats.map(function (stat) {
-                            if (stat.subid.endsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
-                        } else if (tagSub.filterTag == "ExactValue") {
-                          _this13.allStats.map(function (stat) {
-                            if (stat.subid == tagSub.subid) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
+                          }
                         }
+                      } catch (err) {
+                        _iterator29.e(err);
+                      } finally {
+                        _iterator29.f();
                       }
-                    } catch (err) {
-                      _iterator30.e(err);
-                    } finally {
-                      _iterator30.f();
-                    }
+
+                      return _context34.abrupt("return", this.allStats);
+
+                    case 10:
+                    case "end":
+                      return _context34.stop();
                   }
                 }
-              } catch (err) {
-                _iterator29.e(err);
-              } finally {
-                _iterator29.f();
-              }
-
-              return _this13.allStats;
-            });
+              }, _callee34, this);
+            }));
           }
         }, {
           key: "groupProvider",
@@ -9037,45 +9187,103 @@
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            return this.rubiService.getChartMetrics(company, startDate, endDate).toPromise().then(function (response) {
-              return response;
-            })["catch"](function (error) {
-              return error;
-            });
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee35() {
+              var response;
+              return regeneratorRuntime.wrap(function _callee35$(_context35) {
+                while (1) {
+                  switch (_context35.prev = _context35.next) {
+                    case 0:
+                      _context35.prev = 0;
+                      _context35.next = 3;
+                      return this.rubiService.getChartMetrics(company, startDate, endDate).toPromise();
+
+                    case 3:
+                      response = _context35.sent;
+                      return _context35.abrupt("return", response);
+
+                    case 7:
+                      _context35.prev = 7;
+                      _context35.t0 = _context35["catch"](0);
+                      return _context35.abrupt("return", _context35.t0);
+
+                    case 10:
+                    case "end":
+                      return _context35.stop();
+                  }
+                }
+              }, _callee35, this, [[0, 7]]);
+            }));
           }
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            return this.rubiService.getSummaryMetrics(company).toPromise().then(function (response) {
-              console.log('Got summary metrics');
-              var allSummary = {};
-              var currentPercentPace = 0;
-              var lastPercentPace = 0;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
+              var response, allSummary, currentPercentPace, lastPercentPace;
+              return regeneratorRuntime.wrap(function _callee36$(_context36) {
+                while (1) {
+                  switch (_context36.prev = _context36.next) {
+                    case 0:
+                      _context36.next = 2;
+                      return this.rubiService.getSummaryMetrics(company).toPromise();
 
-              if (response.summary[0].lastMonthStat[0].profitPace != 0) {
-                currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
-              }
+                    case 2:
+                      response = _context36.sent;
+                      allSummary = {};
+                      currentPercentPace = 0;
+                      lastPercentPace = 0;
 
-              if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
-                lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
-              }
+                      if (response.summary[0].lastMonthStat[0].profitPace != 0) {
+                        currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
+                      }
 
-              response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
-              response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
-              allSummary['summary'] = response.summary;
-              return allSummary;
-            });
+                      if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
+                        lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
+                      }
+
+                      response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
+                      response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
+                      allSummary['summary'] = response.summary;
+                      return _context36.abrupt("return", allSummary);
+
+                    case 12:
+                    case "end":
+                      return _context36.stop();
+                  }
+                }
+              }, _callee36, this);
+            }));
           } //get Tags with selected company
 
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            var companyId = selectedCompany.split("/")[1];
-            return this.tagService.getCompanyTags(companyId).toPromise().then(function (response) {
-              return response;
-            })["catch"](function (error) {
-              return error;
-            });
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee37() {
+              var companyId, response;
+              return regeneratorRuntime.wrap(function _callee37$(_context37) {
+                while (1) {
+                  switch (_context37.prev = _context37.next) {
+                    case 0:
+                      companyId = selectedCompany.split("/")[1];
+                      _context37.prev = 1;
+                      _context37.next = 4;
+                      return this.tagService.getCompanyTags(companyId).toPromise();
+
+                    case 4:
+                      response = _context37.sent;
+                      return _context37.abrupt("return", response);
+
+                    case 8:
+                      _context37.prev = 8;
+                      _context37.t0 = _context37["catch"](1);
+                      return _context37.abrupt("return", _context37.t0);
+
+                    case 11:
+                    case "end":
+                      return _context37.stop();
+                  }
+                }
+              }, _callee37, this, [[1, 8]]);
+            }));
           }
         }]);
 
@@ -9665,75 +9873,75 @@
         _createClass(SolexBcComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
-              return regeneratorRuntime.wrap(function _callee22$(_context22) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee38() {
+              return regeneratorRuntime.wrap(function _callee38$(_context38) {
                 while (1) {
-                  switch (_context22.prev = _context22.next) {
+                  switch (_context38.prev = _context38.next) {
                     case 0:
-                      _context22.next = 2;
+                      _context38.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context22.sent;
+                      this.tagList = _context38.sent;
                       this.rows = [];
-                      _context22.next = 6;
+                      _context38.next = 6;
                       return this.getAllSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context22.sent;
-                      _context22.next = 9;
+                      this.rows = _context38.sent;
+                      _context38.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context22.sent;
-                      _context22.next = 12;
+                      this.chartData = _context38.sent;
+                      _context38.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context22.sent;
+                      this.summaryMetrics = _context38.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context22.stop();
+                      return _context38.stop();
                   }
                 }
-              }, _callee22, this);
+              }, _callee38, this);
             }));
           }
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
-              return regeneratorRuntime.wrap(function _callee23$(_context23) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee39() {
+              return regeneratorRuntime.wrap(function _callee39$(_context39) {
                 while (1) {
-                  switch (_context23.prev = _context23.next) {
+                  switch (_context39.prev = _context39.next) {
                     case 0:
                       this.range = range;
-                      _context23.next = 3;
+                      _context39.next = 3;
                       return this.getAllSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context23.sent;
-                      _context23.next = 6;
+                      this.rows = _context39.sent;
+                      _context39.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context23.sent;
-                      _context23.next = 9;
+                      this.chartData = _context39.sent;
+                      _context39.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context23.sent;
+                      this.summaryMetrics = _context39.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context23.stop();
+                      return _context39.stop();
                   }
                 }
-              }, _callee23, this);
+              }, _callee39, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -9761,19 +9969,19 @@
         }, {
           key: "getAllSolexBCStats",
           value: function getAllSolexBCStats(company, startDate, endDate) {
-            var _this14 = this;
+            var _this7 = this;
 
             return this.solexBCService.getSolexBCStats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('getSolexBCStats() response:', response);
-              _this14.loadingIndicator = false;
-              _this14.allStats = response.stats;
+              _this7.loadingIndicator = false;
+              _this7.allStats = response.stats;
 
-              _this14.allStats.map(function (resStat) {
+              _this7.allStats.map(function (resStat) {
                 resStat.publisher = "No Publisher";
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator32 = _createForOfIteratorHelper(_this14.tagList),
+              var _iterator32 = _createForOfIteratorHelper(_this7.tagList),
                   _step32;
 
               try {
@@ -9789,28 +9997,28 @@
                         var tagSub = _step33.value;
 
                         if (tagSub.filterTag == "Contains") {
-                          _this14.allStats.map(function (stat) {
+                          _this7.allStats.map(function (stat) {
                             if (stat.subid.includes(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "StartsWith") {
-                          _this14.allStats.map(function (stat) {
+                          _this7.allStats.map(function (stat) {
                             if (stat.subid.startsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "EndsWith") {
-                          _this14.allStats.map(function (stat) {
+                          _this7.allStats.map(function (stat) {
                             if (stat.subid.endsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "ExactValue") {
-                          _this14.allStats.map(function (stat) {
+                          _this7.allStats.map(function (stat) {
                             if (stat.subid == tagSub.subid) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
@@ -9831,7 +10039,7 @@
                 _iterator32.f();
               }
 
-              return _this14.allStats;
+              return _this7.allStats;
             });
           }
         }, {
@@ -9895,7 +10103,6 @@
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
             return this.solexBCService.getSummaryMetrics(company).toPromise().then(function (response) {
-              console.log('Got summary metrics');
               var allSummary = {};
               var currentPercentPace = 0;
               var lastPercentPace = 0;
@@ -10496,63 +10703,63 @@
         _createClass(System1Component, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
-              return regeneratorRuntime.wrap(function _callee24$(_context24) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
+              return regeneratorRuntime.wrap(function _callee40$(_context40) {
                 while (1) {
-                  switch (_context24.prev = _context24.next) {
+                  switch (_context40.prev = _context40.next) {
                     case 0:
                       this.rows = [];
-                      _context24.next = 3;
+                      _context40.next = 3;
                       return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context24.sent;
+                      this.rows = _context40.sent;
 
                     case 4:
                     case "end":
-                      return _context24.stop();
+                      return _context40.stop();
                   }
                 }
-              }, _callee24, this);
+              }, _callee40, this);
             }));
           }
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
-              return regeneratorRuntime.wrap(function _callee25$(_context25) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee41() {
+              return regeneratorRuntime.wrap(function _callee41$(_context41) {
                 while (1) {
-                  switch (_context25.prev = _context25.next) {
+                  switch (_context41.prev = _context41.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context25.next = 3;
+                      _context41.next = 3;
                       return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context25.sent;
+                      this.rows = _context41.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 6:
                     case "end":
-                      return _context25.stop();
+                      return _context41.stop();
                   }
                 }
-              }, _callee25, this);
+              }, _callee41, this);
             }));
           } //get Stat all
 
         }, {
           key: "getAllSystem1Stats",
           value: function getAllSystem1Stats(company, startDate, endDate) {
-            var _this15 = this;
+            var _this8 = this;
 
             return this.system1Service.getAllSystem1Stats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('getAllSystem1Stats() response:', response);
-              _this15.loadingIndicator = false;
-              _this15.allStats = response.stats;
-              return _this15.allStats;
+              _this8.loadingIndicator = false;
+              _this8.allStats = response.stats;
+              return _this8.allStats;
             });
           }
         }, {
@@ -11884,52 +12091,73 @@
         _createClass(VerizonDirectComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
-              return regeneratorRuntime.wrap(function _callee26$(_context26) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee42() {
+              return regeneratorRuntime.wrap(function _callee42$(_context42) {
                 while (1) {
-                  switch (_context26.prev = _context26.next) {
+                  switch (_context42.prev = _context42.next) {
                     case 0:
-                      _context26.next = 2;
+                      _context42.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context26.sent;
+                      this.tagList = _context42.sent;
                       this.rows = [];
-                      _context26.next = 6;
+                      _context42.next = 6;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context26.sent;
-                      _context26.next = 9;
+                      this.rows = _context42.sent;
+                      _context42.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context26.sent;
-                      _context26.next = 12;
+                      this.chartData = _context42.sent;
+                      _context42.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context26.sent;
+                      this.summaryMetrics = _context42.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context26.stop();
+                      return _context42.stop();
                   }
                 }
-              }, _callee26, this);
+              }, _callee42, this);
             }));
           } //get Tags with selected company
 
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            var companyId = selectedCompany.split("/")[1];
-            return this.tagService.getCompanyTags(companyId).toPromise().then(function (response) {
-              return response;
-            })["catch"](function (error) {
-              return error;
-            });
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee43() {
+              var companyId, response;
+              return regeneratorRuntime.wrap(function _callee43$(_context43) {
+                while (1) {
+                  switch (_context43.prev = _context43.next) {
+                    case 0:
+                      companyId = selectedCompany.split("/")[1];
+                      _context43.prev = 1;
+                      _context43.next = 4;
+                      return this.tagService.getCompanyTags(companyId).toPromise();
+
+                    case 4:
+                      response = _context43.sent;
+                      return _context43.abrupt("return", response);
+
+                    case 8:
+                      _context43.prev = 8;
+                      _context43.t0 = _context43["catch"](1);
+                      return _context43.abrupt("return", _context43.t0);
+
+                    case 11:
+                    case "end":
+                      return _context43.stop();
+                  }
+                }
+              }, _callee43, this, [[1, 8]]);
+            }));
           } //Gets the Selected Company from Local Storage
 
         }, {
@@ -11940,36 +12168,36 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
-              return regeneratorRuntime.wrap(function _callee27$(_context27) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee44() {
+              return regeneratorRuntime.wrap(function _callee44$(_context44) {
                 while (1) {
-                  switch (_context27.prev = _context27.next) {
+                  switch (_context44.prev = _context44.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context27.next = 3;
+                      _context44.next = 3;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context27.sent;
-                      _context27.next = 6;
+                      this.rows = _context44.sent;
+                      _context44.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context27.sent;
-                      _context27.next = 9;
+                      this.chartData = _context44.sent;
+                      _context44.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context27.sent;
+                      this.summaryMetrics = _context44.sent;
                       this.refreshTable();
 
                     case 11:
                     case "end":
-                      return _context27.stop();
+                      return _context44.stop();
                   }
                 }
-              }, _callee27, this);
+              }, _callee44, this);
             }));
           }
         }, {
@@ -11991,110 +12219,159 @@
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            return this.verizonService.getChartMetrics(company, startDate, endDate).toPromise().then(function (response) {
-              return response;
-            })["catch"](function (error) {
-              return error;
-            });
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee45() {
+              var response;
+              return regeneratorRuntime.wrap(function _callee45$(_context45) {
+                while (1) {
+                  switch (_context45.prev = _context45.next) {
+                    case 0:
+                      _context45.prev = 0;
+                      _context45.next = 3;
+                      return this.verizonService.getChartMetrics(company, startDate, endDate).toPromise();
+
+                    case 3:
+                      response = _context45.sent;
+                      return _context45.abrupt("return", response);
+
+                    case 7:
+                      _context45.prev = 7;
+                      _context45.t0 = _context45["catch"](0);
+                      return _context45.abrupt("return", _context45.t0);
+
+                    case 10:
+                    case "end":
+                      return _context45.stop();
+                  }
+                }
+              }, _callee45, this, [[0, 7]]);
+            }));
           }
         }, {
           key: "getAllVerizonStats",
           value: function getAllVerizonStats(company, startDate, endDate) {
-            var _this16 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee46() {
+              var response, _iterator35, _step35, tagL, _iterator36, _step36, tagSub;
 
-            return this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise().then(function (response) {
-              console.log('getAllVerizonStats() response:', response);
-              _this16.loadingIndicator = false;
-              _this16.allStats = response.stats;
+              return regeneratorRuntime.wrap(function _callee46$(_context46) {
+                while (1) {
+                  switch (_context46.prev = _context46.next) {
+                    case 0:
+                      _context46.next = 2;
+                      return this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
 
-              _this16.allStats.map(function (resStat) {
-                resStat.publisher = "No Publisher";
-                resStat.tagname = "No Tag";
-              });
+                    case 2:
+                      response = _context46.sent;
+                      console.log('getAllVerizonStats() response:', response);
+                      this.loadingIndicator = false;
+                      this.allStats = response.stats;
+                      this.allStats.map(function (resStat) {
+                        resStat.publisher = "No Publisher";
+                        resStat.tagname = "No Tag";
+                      });
+                      _iterator35 = _createForOfIteratorHelper(this.tagList);
 
-              var _iterator35 = _createForOfIteratorHelper(_this16.tagList),
-                  _step35;
+                      try {
+                        for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
+                          tagL = _step35.value;
 
-              try {
-                for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
-                  var tagL = _step35.value;
+                          if (tagL.tag.advertiser == "verizon-direct") {
+                            _iterator36 = _createForOfIteratorHelper(tagL.tag.subids);
 
-                  if (tagL.tag.advertiser == "verizon-direct") {
-                    var _iterator36 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step36;
+                            try {
+                              for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
+                                tagSub = _step36.value;
 
-                    try {
-                      for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
-                        var tagSub = _step36.value;
-
-                        if (tagSub.filterTag == "Contains") {
-                          _this16.allStats.map(function (stat) {
-                            if (stat.subid.includes(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
+                                if (tagSub.filterTag == "Contains") {
+                                  this.allStats.map(function (stat) {
+                                    if (stat.subid.includes(tagSub.subid)) {
+                                      stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "StartsWith") {
+                                  this.allStats.map(function (stat_1) {
+                                    if (stat_1.subid.startsWith(tagSub.subid)) {
+                                      stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_1.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "EndsWith") {
+                                  this.allStats.map(function (stat_2) {
+                                    if (stat_2.subid.endsWith(tagSub.subid)) {
+                                      stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_2.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "ExactValue") {
+                                  this.allStats.map(function (stat_3) {
+                                    if (stat_3.subid == tagSub.subid) {
+                                      stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_3.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                }
+                              }
+                            } catch (err) {
+                              _iterator36.e(err);
+                            } finally {
+                              _iterator36.f();
                             }
-                          });
-                        } else if (tagSub.filterTag == "StartsWith") {
-                          _this16.allStats.map(function (stat) {
-                            if (stat.subid.startsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
-                        } else if (tagSub.filterTag == "EndsWith") {
-                          _this16.allStats.map(function (stat) {
-                            if (stat.subid.endsWith(tagSub.subid)) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
-                        } else if (tagSub.filterTag == "ExactValue") {
-                          _this16.allStats.map(function (stat) {
-                            if (stat.subid == tagSub.subid) {
-                              stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
-                              stat.tagname = tagL.tag.name;
-                            }
-                          });
+                          }
                         }
+                      } catch (err) {
+                        _iterator35.e(err);
+                      } finally {
+                        _iterator35.f();
                       }
-                    } catch (err) {
-                      _iterator36.e(err);
-                    } finally {
-                      _iterator36.f();
-                    }
+
+                      return _context46.abrupt("return", this.allStats);
+
+                    case 10:
+                    case "end":
+                      return _context46.stop();
                   }
                 }
-              } catch (err) {
-                _iterator35.e(err);
-              } finally {
-                _iterator35.f();
-              }
-
-              return _this16.allStats;
-            });
+              }, _callee46, this);
+            }));
           }
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            return this.verizonService.getSummaryMetrics(company).toPromise().then(function (response) {
-              console.log('Got summary metrics');
-              var allSummary = {};
-              var currentPercentPace = 0;
-              var lastPercentPace = 0;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee47() {
+              var response, allSummary, currentPercentPace, lastPercentPace;
+              return regeneratorRuntime.wrap(function _callee47$(_context47) {
+                while (1) {
+                  switch (_context47.prev = _context47.next) {
+                    case 0:
+                      _context47.next = 2;
+                      return this.verizonService.getSummaryMetrics(company).toPromise();
 
-              if (response.summary[0].lastMonthStat[0].profitPace != 0) {
-                currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
-              }
+                    case 2:
+                      response = _context47.sent;
+                      allSummary = {};
+                      currentPercentPace = 0;
+                      lastPercentPace = 0;
 
-              if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
-                lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
-              }
+                      if (response.summary[0].lastMonthStat[0].profitPace != 0) {
+                        currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
+                      }
 
-              response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
-              response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
-              allSummary['summary'] = response.summary;
-              return allSummary;
-            });
+                      if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
+                        lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
+                      }
+
+                      response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
+                      response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
+                      allSummary['summary'] = response.summary;
+                      return _context47.abrupt("return", allSummary);
+
+                    case 12:
+                    case "end":
+                      return _context47.stop();
+                  }
+                }
+              }, _callee47, this);
+            }));
           }
         }]);
 
