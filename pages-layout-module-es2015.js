@@ -20158,6 +20158,15 @@ class DynamicAsideMenuService {
                     page: `/publisher-reporting/${tag._key}`
                 });
             });
+            var apiDocumentationMenu = {
+                title: 'API Documentation',
+                root: true,
+                icon: 'flaticon2-architecture-and-city',
+                svg: './assets/media/svg/icons/Files/File.svg',
+                page: '/api-documentation',
+                bullet: 'dot',
+                permissionName: "apiDocumentationManage",
+            };
             var publisherMenu = {
                 title: 'Publisher Reporting',
                 root: true,
@@ -20172,6 +20181,7 @@ class DynamicAsideMenuService {
             //Publisher REPORTING
             { section: 'Publisher Reporting' });
             menuConfig.items.push(publisherMenu);
+            menuConfig.items.push(apiDocumentationMenu);
             this.menuConfigSubject.next(menuConfig);
         });
     }
@@ -30364,6 +30374,12 @@ const routes = [
                 data: { permission: 'material' },
             },
             {
+                path: 'api-documentation',
+                canActivate: [_modules_auth_services_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]],
+                loadChildren: () => __webpack_require__.e(/*! import() | modules-api-documentation-api-documentation-module */ "modules-api-documentation-api-documentation-module").then(__webpack_require__.bind(null, /*! ../modules/api-documentation/api-documentation.module */ "./src/app/modules/api-documentation/api-documentation.module.ts")).then((m) => m.ApiDocumentationModule),
+                data: { permission: 'apiDocumentationManage' },
+            },
+            {
                 path: '',
                 redirectTo: 'dashboard',
                 pathMatch: 'full',
@@ -34739,13 +34755,11 @@ var KTLayoutAsideMenu = function() {
 				rememberPosition: true, // remember position on page reload
 				height: function() { // calculate available scrollable area height
 					var height = parseInt(_components_util_js__WEBPACK_IMPORTED_MODULE_0__["KTUtil"].getViewPort().height);
-
 					if (_components_util_js__WEBPACK_IMPORTED_MODULE_0__["KTUtil"].isBreakpointUp('lg')) {
 						height = height - _brand_js__WEBPACK_IMPORTED_MODULE_1__["default"].getHeight();
 					}
 
 					height = height - (parseInt(_components_util_js__WEBPACK_IMPORTED_MODULE_0__["KTUtil"].css(_element, 'marginBottom')) + parseInt(_components_util_js__WEBPACK_IMPORTED_MODULE_0__["KTUtil"].css(_element, 'marginTop')));
-
 					return height;
 				}
 			};

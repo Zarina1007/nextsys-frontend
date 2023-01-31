@@ -30978,7 +30978,7 @@
           key: "setMenu",
           value: function setMenu(menuConfig) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-              var submenuList, publisherMenu;
+              var submenuList, apiDocumentationMenu, publisherMenu;
               return regeneratorRuntime.wrap(function _callee$(_context) {
                 while (1) {
                   switch (_context.prev = _context.next) {
@@ -30995,6 +30995,15 @@
                           page: "/publisher-reporting/".concat(tag._key)
                         });
                       });
+                      apiDocumentationMenu = {
+                        title: 'API Documentation',
+                        root: true,
+                        icon: 'flaticon2-architecture-and-city',
+                        svg: './assets/media/svg/icons/Files/File.svg',
+                        page: '/api-documentation',
+                        bullet: 'dot',
+                        permissionName: "apiDocumentationManage"
+                      };
                       publisherMenu = {
                         title: 'Publisher Reporting',
                         root: true,
@@ -31010,9 +31019,10 @@
                         section: 'Publisher Reporting'
                       });
                       menuConfig.items.push(publisherMenu);
+                      menuConfig.items.push(apiDocumentationMenu);
                       this.menuConfigSubject.next(menuConfig);
 
-                    case 10:
+                    case 12:
                     case "end":
                       return _context.stop();
                   }
@@ -51072,6 +51082,21 @@
           },
           data: {
             permission: 'material'
+          }
+        }, {
+          path: 'api-documentation',
+          canActivate: [_modules_auth_services_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]],
+          loadChildren: function loadChildren() {
+            return __webpack_require__.e(
+            /*! import() | modules-api-documentation-api-documentation-module */
+            "modules-api-documentation-api-documentation-module").then(__webpack_require__.bind(null,
+            /*! ../modules/api-documentation/api-documentation.module */
+            "./src/app/modules/api-documentation/api-documentation.module.ts")).then(function (m) {
+              return m.ApiDocumentationModule;
+            });
+          },
+          data: {
+            permission: 'apiDocumentationManage'
           }
         }, {
           path: '',

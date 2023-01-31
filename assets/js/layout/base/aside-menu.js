@@ -21,13 +21,11 @@ var KTLayoutAsideMenu = function() {
 				rememberPosition: true, // remember position on page reload
 				height: function() { // calculate available scrollable area height
 					var height = parseInt(KTUtil.getViewPort().height);
-
 					if (KTUtil.isBreakpointUp('lg')) {
 						height = height - KTLayoutBrand.getHeight();
 					}
 
 					height = height - (parseInt(KTUtil.css(_element, 'marginBottom')) + parseInt(KTUtil.css(_element, 'marginTop')));
-
 					return height;
 				}
 			};
