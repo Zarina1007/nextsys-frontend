@@ -4292,6 +4292,768 @@
     },
 
     /***/
+    "./src/app/modules/tag-management/hopkin-tag/hopkin-tag.component.ts":
+    /*!***************************************************************************!*\
+      !*** ./src/app/modules/tag-management/hopkin-tag/hopkin-tag.component.ts ***!
+      \***************************************************************************/
+
+    /*! exports provided: HopkinTagComponent */
+
+    /***/
+    function srcAppModulesTagManagementHopkinTagHopkinTagComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "HopkinTagComponent", function () {
+        return HopkinTagComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _tag_management_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ../tag-management.service */
+      "./src/app/modules/tag-management/tag-management.service.ts");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/router */
+      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      /* harmony import */
+
+
+      var src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/shared/service/snackbar.service */
+      "./src/app/shared/service/snackbar.service.ts");
+      /* harmony import */
+
+
+      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/shared/service/users.service */
+      "./src/app/shared/service/users.service.ts");
+      /* harmony import */
+
+
+      var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/shared/service/notification.service */
+      "./src/app/shared/service/notification.service.ts");
+      /* harmony import */
+
+
+      var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @angular/material/dialog */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @angular/common */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      /* harmony import */
+
+
+      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! @angular/material/form-field */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
+      /* harmony import */
+
+
+      var _angular_material_select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! @angular/material/select */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      /*! @swimlane/ngx-datatable */
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
+      /* harmony import */
+
+
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      /*! @angular/material/core */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      /*! ng-inline-svg */
+      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+
+      function HopkinTagComponent_div_0_mat_option_16_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var publisherItem_r21 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", publisherItem_r21.value);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", publisherItem_r21.viewValue, " ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_25_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Name ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_26_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+        }
+
+        if (rf & 2) {
+          var value_r23 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r23, " ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_28_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Company ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_29_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+        }
+
+        if (rf & 2) {
+          var value_r25 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r25 ? value_r25[0].name : "", " ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_31_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Advertiser ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_32_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+        }
+
+        if (rf & 2) {
+          var value_r27 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r27, " ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_34_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Publisher ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_35_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+        }
+
+        if (rf & 2) {
+          var value_r29 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r29.length ? value_r29[0].fullname : "", " ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_37_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Browser ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_38_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+        }
+
+        if (rf & 2) {
+          var value_r31 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r31, " ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_40_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Device Type ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_41_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+        }
+
+        if (rf & 2) {
+          var value_r33 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r33, " ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_43_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Browser Version ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_44_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+        }
+
+        if (rf & 2) {
+          var value_r35 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r35, " ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_46_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Country ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_47_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+        }
+
+        if (rf & 2) {
+          var value_r37 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r37, " ");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_49_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, "Action");
+        }
+      }
+
+      function HopkinTagComponent_div_0_ng_template_50_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r40 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "a", 31);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HopkinTagComponent_div_0_ng_template_50_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r40);
+
+            var row_r38 = ctx.row;
+
+            var ctx_r39 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+            return ctx_r39.editTag(row_r38._key);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 32);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 33);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HopkinTagComponent_div_0_ng_template_50_Template_a_click_2_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r40);
+
+            var row_r38 = ctx.row;
+
+            var ctx_r41 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+            return ctx_r41.deleteTag(row_r38._key);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "span", 34);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/Communication/Write.svg");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/General/Trash.svg");
+        }
+      }
+
+      function HopkinTagComponent_div_0_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r43 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "h3", 7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Hopkins YHS Tags");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 9);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-form-field");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "mat-label");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "Publisher");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "mat-select", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("selectionChange", function HopkinTagComponent_div_0_Template_mat_select_selectionChange_15_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r43);
+
+            var ctx_r42 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r42.handleChangePublisher($event.value);
+          })("ngModelChange", function HopkinTagComponent_div_0_Template_mat_select_ngModelChange_15_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r43);
+
+            var ctx_r44 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r44.publisherValue = $event;
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, HopkinTagComponent_div_0_mat_option_16_Template, 2, 2, "mat-option", 13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "button", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HopkinTagComponent_div_0_Template_button_click_18_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r43);
+
+            var ctx_r45 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r45.handleReset();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, " Reset ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "button", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HopkinTagComponent_div_0_Template_button_click_21_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r43);
+
+            var ctx_r46 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r46.handleAddTag();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " Add Tag ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "ngx-datatable", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "ngx-datatable-column", 19);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, HopkinTagComponent_div_0_ng_template_25_Template, 1, 0, "ng-template", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](26, HopkinTagComponent_div_0_ng_template_26_Template, 1, 1, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "ngx-datatable-column", 22);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](28, HopkinTagComponent_div_0_ng_template_28_Template, 1, 0, "ng-template", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](29, HopkinTagComponent_div_0_ng_template_29_Template, 1, 1, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "ngx-datatable-column", 23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, HopkinTagComponent_div_0_ng_template_31_Template, 1, 0, "ng-template", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](32, HopkinTagComponent_div_0_ng_template_32_Template, 1, 1, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "ngx-datatable-column", 24);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](34, HopkinTagComponent_div_0_ng_template_34_Template, 1, 0, "ng-template", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](35, HopkinTagComponent_div_0_ng_template_35_Template, 1, 1, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "ngx-datatable-column", 25);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](37, HopkinTagComponent_div_0_ng_template_37_Template, 1, 0, "ng-template", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](38, HopkinTagComponent_div_0_ng_template_38_Template, 1, 1, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "ngx-datatable-column", 26);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](40, HopkinTagComponent_div_0_ng_template_40_Template, 1, 0, "ng-template", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](41, HopkinTagComponent_div_0_ng_template_41_Template, 1, 1, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](42, "ngx-datatable-column", 27);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](43, HopkinTagComponent_div_0_ng_template_43_Template, 1, 0, "ng-template", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](44, HopkinTagComponent_div_0_ng_template_44_Template, 1, 1, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "ngx-datatable-column", 28);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](46, HopkinTagComponent_div_0_ng_template_46_Template, 1, 0, "ng-template", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](47, HopkinTagComponent_div_0_ng_template_47_Template, 1, 1, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "ngx-datatable-column", 29);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](49, HopkinTagComponent_div_0_ng_template_49_Template, 1, 0, "ng-template", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](50, HopkinTagComponent_div_0_ng_template_50_Template, 4, 2, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx_r0.publisherValue);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.publisherList);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("rows", ctx_r0.rows)("columnMode", "force")("loadingIndicator", ctx_r0.loadingIndicator)("footerHeight", 50)("rowHeight", 50)("scrollbarH", true)("headerHeight", 50)("limit", 10);
+        }
+      }
+
+      function HopkinTagComponent_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 35);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 36);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p", 37);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " How did you get here ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p", 38);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " Sorry you can't access the page you're looking for. ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p", 39);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " There may be a misspelling in the URL entered,");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "or the page you are looking for may no longer exist. ");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
+      var HopkinTagComponent = /*#__PURE__*/function () {
+        function HopkinTagComponent(tagService, cdr, router, _snackBarService, userService, notification, dialog) {
+          _classCallCheck(this, HopkinTagComponent);
+
+          this.tagService = tagService;
+          this.cdr = cdr;
+          this.router = router;
+          this._snackBarService = _snackBarService;
+          this.userService = userService;
+          this.notification = notification;
+          this.dialog = dialog;
+          this.loadingIndicator = true;
+          this.hidden = false;
+          this.publishertempList = [];
+          this.publisherList = [];
+          this.publisherValue = "";
+          this.tagList = [];
+        }
+
+        _createClass(HopkinTagComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            this.localStorageCompany = this.getSelectedCompanyFromLocalStorage(); //access page part
+
+            if (!this.localStorageCompany) {
+              this.hidden = true;
+              this.notification.showError("Please select your Company!", "");
+            } else {
+              this.hidden = false;
+            }
+
+            this.getHopkinsTags();
+            this.getPublisherHopkins();
+            this.cdr.detectChanges();
+          }
+        }, {
+          key: "getHopkinsTags",
+          value: function getHopkinsTags() {
+            var _this14 = this;
+
+            this.tagService.getAllTags().subscribe(function (x) {
+              _this14.tagList = x;
+              _this14.rows = _this14.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this14.localStorageCompany && tag.advertiser == "hopkins";
+              });
+              _this14.loadingIndicator = false;
+
+              _this14.cdr.detectChanges();
+            });
+          }
+        }, {
+          key: "getPublisherHopkins",
+          value: function getPublisherHopkins() {
+            var _this15 = this;
+
+            this.userService.getPublisherAll().subscribe(function (data) {
+              if (_this15.localStorageCompany) {
+                _this15.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this15.localStorageCompany);
+                });
+              } else {
+                _this15.publishertempList = data;
+              }
+
+              _this15.publishertempList.map(function (publisher) {
+                _this15.publisherList.push({
+                  value: publisher._key,
+                  viewValue: publisher.fullname
+                });
+              });
+            });
+          }
+        }, {
+          key: "editTag",
+          value: function editTag(tagID) {
+            this.router.navigateByUrl('/tag-management/edit/' + tagID);
+          }
+        }, {
+          key: "deleteTag",
+          value: function deleteTag(id) {
+            var _this16 = this;
+
+            if (window.confirm('Do you want to go ahead?')) {
+              this.tagService.deleteTag(id).subscribe(function (res) {
+                _this16.getHopkinsTags();
+
+                _this16._snackBarService.info('Deleted a tag');
+              });
+            }
+          }
+        }, {
+          key: "handleAddTag",
+          value: function handleAddTag() {
+            this.router.navigateByUrl('/tag-management/new');
+          }
+        }, {
+          key: "handleReset",
+          value: function handleReset() {
+            var _this17 = this;
+
+            this.publisherValue = "";
+            this.rows = this.tagList.filter(function (tag) {
+              return tag.company[0]['_id'] == _this17.localStorageCompany && tag.advertiser == "hopkins";
+            });
+            this.cdr.detectChanges();
+          } //Gets the Selected Company from Local Storage
+
+        }, {
+          key: "getSelectedCompanyFromLocalStorage",
+          value: function getSelectedCompanyFromLocalStorage() {
+            return this.userService.getSelectedCompanyFromLocalStorage();
+          }
+        }, {
+          key: "handleChangePublisher",
+          value: function handleChangePublisher(event) {
+            var _this18 = this;
+
+            this.publisherValue = event;
+
+            if (this.publisherValue) {
+              this.rows = this.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this18.localStorageCompany && tag.publisher[0]['_key'] == _this18.publisherValue && tag.advertiser == "hopkins";
+              });
+            } else {
+              this.rows = this.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this18.localStorageCompany && tag.advertiser == "hopkins";
+              });
+            }
+
+            this.cdr.detectChanges();
+          }
+        }]);
+
+        return HopkinTagComponent;
+      }();
+
+      HopkinTagComponent.ɵfac = function HopkinTagComponent_Factory(t) {
+        return new (t || HopkinTagComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_service__WEBPACK_IMPORTED_MODULE_1__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"]));
+      };
+
+      HopkinTagComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+        type: HopkinTagComponent,
+        selectors: [["app-hopkin-tag"]],
+        decls: 2,
+        vars: 2,
+        consts: [["class", "row", 4, "ngIf"], ["class", "error error-3 d-flex flex-row-fluid bgi-size-cover bgi-position-center", "style", "background-image: url('./assets/media/error/bg3.jpg'); height: 100%;zoom: 1;\n    display: block;\n    min-height: 80vh;\n    font-size: 14px;\n    line-height: 1.4;\n    color: #0e1724;", 4, "ngIf"], [1, "row"], [1, "col-xl-12"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], [1, "row", "pb-3", 2, "justify-content", "space-between", "padding", "0 10px"], [1, "col-xl-6"], [1, "col-xl-4"], ["matNativeControl", "", 3, "ngModel", "selectionChange", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [1, "col-xl-4", "align-self-center"], ["type", "button", 1, "btn", "btn-sm", "btn-success", 3, "click"], [1, "tag-btn", "align-self-center", "d-flex"], ["type", "button", 1, "btn", "btn-sm", "btn-primary", 3, "click"], [1, "material", "fullscreen", 3, "rows", "columnMode", "loadingIndicator", "footerHeight", "rowHeight", "scrollbarH", "headerHeight", "limit"], ["name", "Name"], ["ngx-datatable-header-template", ""], ["ngx-datatable-cell-template", ""], ["name", "Company"], ["name", "Advertiser"], ["name", "Publisher"], ["name", "Browser"], ["name", "Device Type"], ["name", "Version"], ["name", "Country"], ["name", "id"], [3, "value"], ["title", "Edit Tag", 1, "btn", "btn-icon", "btn-light", "btn-hover-primary", "btn-sm", "mx-3", 3, "click"], ["cacheSVG", "true", 1, "svg-icon", "svg-icon-md", "svg-icon-primary", 3, "inlineSVG"], ["title", "Delete Tag", 1, "btn", "btn-icon", "btn-light", "btn-hover-danger", "btn-sm", 3, "click"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-danger", 3, "inlineSVG"], [1, "error", "error-3", "d-flex", "flex-row-fluid", "bgi-size-cover", "bgi-position-center", 2, "background-image", "url('./assets/media/error/bg3.jpg')", "height", "100%", "zoom", "1", "display", "block", "min-height", "80vh", "font-size", "14px", "line-height", "1.4", "color", "#0e1724"], [1, "px-10", "px-md-30", "py-10", "py-md-0", "d-flex", "flex-column", "justify-content-md-center"], [1, "display-4", "font-weight-boldest", "text-white", "mb-12"], [1, "font-size-h1", "font-weight-boldest", "text-dark-75"], [1, "font-size-h4", "line-height-md"]],
+        template: function HopkinTagComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, HopkinTagComponent_div_0_Template, 51, 10, "div", 0);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, HopkinTagComponent_div_1_Template, 10, 0, "div", 1);
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.hidden);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.hidden);
+          }
+        },
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _angular_material_core__WEBPACK_IMPORTED_MODULE_12__["MatOption"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_13__["InlineSVGDirective"]],
+        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvdGFnLW1hbmFnZW1lbnQvaG9wa2luLXRhZy9ob3BraW4tdGFnLmNvbXBvbmVudC5zY3NzIn0= */"]
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HopkinTagComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+          args: [{
+            selector: 'app-hopkin-tag',
+            templateUrl: './hopkin-tag.component.html',
+            styleUrls: ['./hopkin-tag.component.scss']
+          }]
+        }], function () {
+          return [{
+            type: _tag_management_service__WEBPACK_IMPORTED_MODULE_1__["TagManagementService"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
+          }, {
+            type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+          }, {
+            type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]
+          }, {
+            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]
+          }, {
+            type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__["NotificationService"]
+          }, {
+            type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/modules/tag-management/lyons-tag/lyons-tag.component.ts":
     /*!*************************************************************************!*\
       !*** ./src/app/modules/tag-management/lyons-tag/lyons-tag.component.ts ***!
@@ -4895,34 +5657,34 @@
         }, {
           key: "getLyonsTags",
           value: function getLyonsTags() {
-            var _this14 = this;
+            var _this19 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this14.tagList = x;
-              _this14.rows = _this14.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this14.localStorageCompany && tag.advertiser == "lyons";
+              _this19.tagList = x;
+              _this19.rows = _this19.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this19.localStorageCompany && tag.advertiser == "lyons";
               });
-              _this14.loadingIndicator = false;
+              _this19.loadingIndicator = false;
 
-              _this14.cdr.detectChanges();
+              _this19.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherLyons",
           value: function getPublisherLyons() {
-            var _this15 = this;
+            var _this20 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this15.localStorageCompany) {
-                _this15.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this15.localStorageCompany);
+              if (_this20.localStorageCompany) {
+                _this20.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this20.localStorageCompany);
                 });
               } else {
-                _this15.publishertempList = data;
+                _this20.publishertempList = data;
               }
 
-              _this15.publishertempList.map(function (publisher) {
-                _this15.publisherList.push({
+              _this20.publishertempList.map(function (publisher) {
+                _this20.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -4937,13 +5699,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this16 = this;
+            var _this21 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this16.getLyonsTags();
+                _this21.getLyonsTags();
 
-                _this16._snackBarService.info('Deleted a tag');
+                _this21._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -4955,11 +5717,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this17 = this;
+            var _this22 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this17.localStorageCompany && tag.advertiser == "lyons";
+              return tag.company[0]['_id'] == _this22.localStorageCompany && tag.advertiser == "lyons";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -4972,17 +5734,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this18 = this;
+            var _this23 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this18.localStorageCompany && tag.publisher[0]['_key'] == _this18.publisherValue && tag.advertiser == "lyons";
+                return tag.company[0]['_id'] == _this23.localStorageCompany && tag.publisher[0]['_key'] == _this23.publisherValue && tag.advertiser == "lyons";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this18.localStorageCompany && tag.advertiser == "lyons";
+                return tag.company[0]['_id'] == _this23.localStorageCompany && tag.advertiser == "lyons";
               });
             }
 
@@ -6743,7 +7505,7 @@
 
       var NewTagComponent = /*#__PURE__*/function () {
         function NewTagComponent(tagManagementService, fb, _snackBarService, companyService, auth, userService, dialog, notification, changeDetectorRefs) {
-          var _this19 = this;
+          var _this24 = this;
 
           _classCallCheck(this, NewTagComponent);
 
@@ -6791,21 +7553,21 @@
           var currentUserInfo = this.auth.currentUserValue;
           this.companyService.getUserCompanies(currentUserInfo.companies).subscribe(function (companyResult) {
             companyResult.map(function (company) {
-              _this19.companyList.push({
+              _this24.companyList.push({
                 value: company._id,
                 viewValue: company.name
               });
 
-              if (company._id == _this19.companySelected) {
+              if (company._id == _this24.companySelected) {
                 company.adServerUrls.map(function (url) {
-                  _this19.adServerUrlList.push({
+                  _this24.adServerUrlList.push({
                     value: url['adServerUrl'],
                     viewValue: url['adServerUrl']
                   });
                 }); //advertiser GET
 
                 company.reportingProviders.map(function (reporting) {
-                  _this19.advertiserList.push({
+                  _this24.advertiserList.push({
                     value: reporting.reportingProvider,
                     viewValue: reporting.reportingProvider
                   });
@@ -6818,7 +7580,7 @@
         _createClass(NewTagComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this20 = this;
+            var _this25 = this;
 
             this.url = 'https://google.com/search';
             this.adserverURL = new URL('http://3.227.27.140/search');
@@ -6858,17 +7620,17 @@
             this.getVersions();
             this.browserVersions = [];
             this.initSubid.map(function (item) {
-              _this20.subids.push(_this20.fb.group(item));
+              _this25.subids.push(_this25.fb.group(item));
             });
             this.initTagUrl.map(function (item) {
-              var itemParam = _this20.fb.array([]);
+              var itemParam = _this25.fb.array([]);
 
               item.param.map(function (ip) {
-                itemParam.push(_this20.fb.group(ip));
+                itemParam.push(_this25.fb.group(ip));
                 ip;
               });
 
-              _this20.tagUrls.push(_this20.fb.group({
+              _this25.tagUrls.push(_this25.fb.group({
                 finalUrl: item.finalUrl,
                 percentage: item.percentage,
                 param: itemParam
@@ -6881,7 +7643,7 @@
         }, {
           key: "openDialog",
           value: function openDialog() {
-            var _this21 = this;
+            var _this26 = this;
 
             var dialogRef = this.dialog.open(_template_name_template_name_component__WEBPACK_IMPORTED_MODULE_1__["TemplateNameComponent"], {
               width: '250px',
@@ -6891,7 +7653,7 @@
             });
             dialogRef.afterClosed().subscribe(function (result) {
               console.log('The dialog was closed');
-              _this21.templateName = result;
+              _this26.templateName = result;
             });
           } //Gets the Selected Company from Local Storage
 
@@ -6932,15 +7694,15 @@
         }, {
           key: "getTemplate",
           value: function getTemplate() {
-            var _this22 = this;
+            var _this27 = this;
 
             this.tagManagementService.getAllTemplates().subscribe(function (response) {
-              _this22.templateList = response.filter(function (template) {
-                return template.company[0]['_id'] == _this22.companySelected;
+              _this27.templateList = response.filter(function (template) {
+                return template.company[0]['_id'] == _this27.companySelected;
               });
 
-              _this22.templateList.map(function (template) {
-                _this22.templateData.push({
+              _this27.templateList.map(function (template) {
+                _this27.templateData.push({
                   value: template._key,
                   viewValue: template.templateName
                 });
@@ -6950,20 +7712,20 @@
         }, {
           key: "getPublisherAll",
           value: function getPublisherAll() {
-            var _this23 = this;
+            var _this28 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
               // console.log(data);
-              if (_this23.companySelected) {
-                _this23.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this23.companySelected);
+              if (_this28.companySelected) {
+                _this28.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this28.companySelected);
                 });
               } else {
-                _this23.publishertempList = data;
+                _this28.publishertempList = data;
               }
 
-              _this23.publishertempList.map(function (publisher) {
-                _this23.publisherList.push({
+              _this28.publishertempList.map(function (publisher) {
+                _this28.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -7044,7 +7806,7 @@
         }, {
           key: "createInitialURL",
           value: function createInitialURL(tagIndex) {
-            var _this24 = this;
+            var _this29 = this;
 
             var _a;
 
@@ -7055,15 +7817,15 @@
                 subInitialURL.searchParams["delete"](element.value.key);
                 subInitialURL.searchParams.append(element.value.key, '{{' + element.value.initialParam + '}}');
 
-                _this24.newTagFG.patchValue({
+                _this29.newTagFG.patchValue({
                   initialURL: subInitialURL
                 });
               } else if (element.value.paramType === 'static') {
-                _this24.tagUrlParams(tagIndex).controls.forEach(function (element, index) {
+                _this29.tagUrlParams(tagIndex).controls.forEach(function (element, index) {
                   subInitialURL.searchParams["delete"](element.value.key);
                 });
 
-                _this24.newTagFG.patchValue({
+                _this29.newTagFG.patchValue({
                   initialURL: subInitialURL
                 }); // this.initialURL.searchParams.append(
                 //   element.value.key,
@@ -7108,29 +7870,29 @@
         }, {
           key: "saveTag",
           value: function saveTag() {
-            var _this25 = this;
+            var _this30 = this;
 
             //this.newTagFG.markAllAsTouched();
             if (this.newTagFG.valid) {
               this.tagManagementService.addTag(this.newTagFG.value).subscribe(function (res) {
-                _this25._snackBarService.info('Added a new tag');
+                _this30._snackBarService.info('Added a new tag');
 
-                _this25.newTagFG.reset();
+                _this30.newTagFG.reset();
 
-                _this25.formGroupDirective.resetForm();
+                _this30.formGroupDirective.resetForm();
 
-                _this25.url = 'https://google.com/search';
-                _this25.adserverURL = new URL('http://3.227.27.140/search');
+                _this30.url = 'https://google.com/search';
+                _this30.adserverURL = new URL('http://3.227.27.140/search');
 
-                _this25.tagUrls.controls.map(function (tagItem, index) {
-                  _this25.getUrlParams(_this25.url, index);
+                _this30.tagUrls.controls.map(function (tagItem, index) {
+                  _this30.getUrlParams(_this30.url, index);
 
-                  _this25.tagUrls.at(index).patchValue({
-                    initialURL: _this25.adserverURL
+                  _this30.tagUrls.at(index).patchValue({
+                    initialURL: _this30.adserverURL
                   });
                 });
               }, function (err) {
-                _this25._snackBarService.info(err.error);
+                _this30._snackBarService.info(err.error);
               });
             }
           }
@@ -7151,7 +7913,7 @@
         }, {
           key: "getBrowers",
           value: function getBrowers(event) {
-            var _this26 = this;
+            var _this31 = this;
 
             if (event.value.length > 0) {
               var e;
@@ -7160,7 +7922,7 @@
                 var vTemp = [];
 
                 if (event.value.includes('Any')) {
-                  _this26.browserVersions = _this26.versionList;
+                  _this31.browserVersions = _this31.versionList;
                 } else {
                   var _iterator8 = _createForOfIteratorHelper(event.value),
                       _step8;
@@ -7169,7 +7931,7 @@
                     for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
                       e = _step8.value;
 
-                      var filterdata = _this26.versionList.filter(function (version) {
+                      var filterdata = _this31.versionList.filter(function (version) {
                         return version.value.includes(e);
                       });
 
@@ -7183,7 +7945,7 @@
                     _iterator8.f();
                   }
 
-                  _this26.browserVersions = vTemp;
+                  _this31.browserVersions = vTemp;
                 }
               })();
             } else {
@@ -7194,7 +7956,7 @@
         }, {
           key: "saveTemplate",
           value: function saveTemplate() {
-            var _this27 = this;
+            var _this32 = this;
 
             this.newTagFG.markAllAsTouched();
 
@@ -7209,42 +7971,42 @@
                 console.log('dialog closed!');
 
                 if (result && result.templateName) {
-                  _this27.templateName = result.templateName;
+                  _this32.templateName = result.templateName;
 
-                  _this27.newTagFG.addControl('templateName', new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required));
+                  _this32.newTagFG.addControl('templateName', new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required));
 
-                  _this27.newTagFG.patchValue({
-                    templateName: _this27.templateName
+                  _this32.newTagFG.patchValue({
+                    templateName: _this32.templateName
                   });
 
-                  _this27.tagManagementService.addTemplate(_this27.newTagFG.value).subscribe(function (res) {
-                    _this27.templateData.push({
+                  _this32.tagManagementService.addTemplate(_this32.newTagFG.value).subscribe(function (res) {
+                    _this32.templateData.push({
                       value: res._key,
                       viewValue: res.templateName
                     });
 
-                    _this27.newTagFG.removeControl('templateName');
+                    _this32.newTagFG.removeControl('templateName');
 
-                    _this27._snackBarService.info('Added a new template');
+                    _this32._snackBarService.info('Added a new template');
 
-                    _this27.newTagFG.reset();
+                    _this32.newTagFG.reset();
 
-                    _this27.formGroupDirective.resetForm();
+                    _this32.formGroupDirective.resetForm();
 
-                    _this27.url = 'https://google.com/search';
-                    _this27.adserverURL = new URL('http://3.227.27.140/search');
+                    _this32.url = 'https://google.com/search';
+                    _this32.adserverURL = new URL('http://3.227.27.140/search');
 
-                    _this27.tagUrls.controls.map(function (tagItem, index) {
-                      _this27.getUrlParams(_this27.url, index);
+                    _this32.tagUrls.controls.map(function (tagItem, index) {
+                      _this32.getUrlParams(_this32.url, index);
 
-                      _this27.tagUrls.at(index).patchValue({
-                        initialURL: _this27.adserverURL
+                      _this32.tagUrls.at(index).patchValue({
+                        initialURL: _this32.adserverURL
                       });
                     });
                   }, function (err) {
-                    _this27.newTagFG.markAllAsTouched();
+                    _this32.newTagFG.markAllAsTouched();
 
-                    _this27._snackBarService.info(err.error);
+                    _this32._snackBarService.info(err.error);
                   });
                 }
               });
@@ -7255,7 +8017,7 @@
         }, {
           key: "handleTemplate",
           value: function handleTemplate(event) {
-            var _this28 = this;
+            var _this33 = this;
 
             if (event) {
               this.tagManagementService.getOneTemplate(event).subscribe(function (response) {
@@ -7263,9 +8025,9 @@
                 var deviceTypeVal = [];
                 var versionVal = [];
                 var countryVal = [];
-                _this28.subids.controls = [];
-                _this28.tagUrls.controls = [];
-                _this28.adserverURL = new URL('http://3.227.27.140/search');
+                _this33.subids.controls = [];
+                _this33.tagUrls.controls = [];
+                _this33.adserverURL = new URL('http://3.227.27.140/search');
 
                 var _iterator9 = _createForOfIteratorHelper(response['browser'].toString().split(",")),
                     _step9;
@@ -7281,7 +8043,7 @@
                   _iterator9.f();
                 }
 
-                _this28.browserVersions = _this28.versionList;
+                _this33.browserVersions = _this33.versionList;
 
                 var _iterator10 = _createForOfIteratorHelper(response['deviceType'].toString().split(",")),
                     _step10;
@@ -7326,18 +8088,18 @@
                 }
 
                 response['subids'].map(function (item) {
-                  _this28.subids.push(_this28.fb.group(item));
+                  _this33.subids.push(_this33.fb.group(item));
                 });
                 var resTagUrls = [];
                 resTagUrls = response['tagUrls'];
                 resTagUrls.map(function (item) {
-                  var itemParam = _this28.fb.array([]);
+                  var itemParam = _this33.fb.array([]);
 
                   item.param.map(function (ip) {
-                    itemParam.push(_this28.fb.group(ip));
+                    itemParam.push(_this33.fb.group(ip));
                   });
 
-                  _this28.tagUrls.push(_this28.fb.group({
+                  _this33.tagUrls.push(_this33.fb.group({
                     finalUrl: item.finalUrl,
                     percentage: item.percentage,
                     param: itemParam,
@@ -7345,11 +8107,11 @@
                   }));
                 });
 
-                _this28.newTagFG.reset();
+                _this33.newTagFG.reset();
 
-                _this28.formGroupDirective.resetForm();
+                _this33.formGroupDirective.resetForm();
 
-                _this28.newTagFG.patchValue({
+                _this33.newTagFG.patchValue({
                   name: response['name'],
                   company: response['company'],
                   advertiser: response['advertiser'],
@@ -8134,7 +8896,7 @@
         }, {
           key: "getVersions",
           value: function getVersions() {
-            var _this29 = this;
+            var _this34 = this;
 
             this.edgeVersions = [{
               value: "Edge - 102.0.1245.7",
@@ -8282,14 +9044,14 @@
             this.tagManagementService.getChromeBrowserVersion().subscribe(function (res) {
               var versionsChromeData = res.slice(0, 30);
               versionsChromeData.map(function (version) {
-                _this29.versionList.push({
+                _this34.versionList.push({
                   value: "Chrome - " + version.version,
                   viewValue: "Chrome - " + version.version
                 });
               });
             });
             this.edgeVersions.map(function (edge) {
-              _this29.versionList.push(edge);
+              _this34.versionList.push(edge);
             }); //FireFox Version List Get
 
             this.tagManagementService.getFirefoxBrowserVersion().subscribe(function (res) {
@@ -8303,17 +9065,17 @@
               }
 
               firefoxList.slice(firefoxList['length'] - 30, firefoxList['length']).map(function (version) {
-                _this29.versionList.push({
+                _this34.versionList.push({
                   value: version['value'],
                   viewValue: version['viewValue']
                 });
               });
             });
             this.internetExplorers.map(function (internet) {
-              _this29.versionList.push(internet);
+              _this34.versionList.push(internet);
             });
             this.operaVersions.map(function (opera) {
-              _this29.versionList.push(opera);
+              _this34.versionList.push(opera);
             });
             return this.versionList;
           } //Gets different ways a tag can display stats
@@ -8343,7 +9105,7 @@
         }, {
           key: "addRange",
           value: function addRange() {
-            var _this30 = this;
+            var _this35 = this;
 
             var subList = [];
             var numericId = this.newTagFG.value['numSubid'];
@@ -8382,14 +9144,14 @@
               }
 
               subList.map(function (sub) {
-                var subidsArr = _this30.fb.group({
+                var subidsArr = _this35.fb.group({
                   subid: [sub.subid, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                   limit: [sub.limit, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                   split: [sub.split, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required],
                   filterTag: [sub.filterTag, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]
                 });
 
-                _this30.subids.push(subidsArr);
+                _this35.subids.push(subidsArr);
               });
             } else {
               this.notification.showError("Please fill valid Subid range!", "");
@@ -9095,34 +9857,34 @@
         }, {
           key: "getPerionTags",
           value: function getPerionTags() {
-            var _this31 = this;
+            var _this36 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this31.tagList = x;
-              _this31.rows = _this31.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this31.localStorageCompany && tag.advertiser == "perion";
+              _this36.tagList = x;
+              _this36.rows = _this36.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this36.localStorageCompany && tag.advertiser == "perion";
               });
-              _this31.loadingIndicator = false;
+              _this36.loadingIndicator = false;
 
-              _this31.cdr.detectChanges();
+              _this36.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherPerion",
           value: function getPublisherPerion() {
-            var _this32 = this;
+            var _this37 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this32.localStorageCompany) {
-                _this32.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this32.localStorageCompany);
+              if (_this37.localStorageCompany) {
+                _this37.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this37.localStorageCompany);
                 });
               } else {
-                _this32.publishertempList = data;
+                _this37.publishertempList = data;
               }
 
-              _this32.publishertempList.map(function (publisher) {
-                _this32.publisherList.push({
+              _this37.publishertempList.map(function (publisher) {
+                _this37.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -9137,13 +9899,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this33 = this;
+            var _this38 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this33.getPerionTags();
+                _this38.getPerionTags();
 
-                _this33._snackBarService.info('Deleted a tag');
+                _this38._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -9155,11 +9917,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this34 = this;
+            var _this39 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this34.localStorageCompany && tag.advertiser == "perion";
+              return tag.company[0]['_id'] == _this39.localStorageCompany && tag.advertiser == "perion";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -9172,17 +9934,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this35 = this;
+            var _this40 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this35.localStorageCompany && tag.publisher[0]['_key'] == _this35.publisherValue && tag.advertiser == "perion";
+                return tag.company[0]['_id'] == _this40.localStorageCompany && tag.publisher[0]['_key'] == _this40.publisherValue && tag.advertiser == "perion";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this35.localStorageCompany && tag.advertiser == "perion";
+                return tag.company[0]['_id'] == _this40.localStorageCompany && tag.advertiser == "perion";
               });
             }
 
@@ -9857,34 +10619,34 @@
         }, {
           key: "getRubiTags",
           value: function getRubiTags() {
-            var _this36 = this;
+            var _this41 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this36.tagList = x;
-              _this36.rows = _this36.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this36.localStorageCompany && tag.advertiser == "rubi";
+              _this41.tagList = x;
+              _this41.rows = _this41.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this41.localStorageCompany && tag.advertiser == "rubi";
               });
-              _this36.loadingIndicator = false;
+              _this41.loadingIndicator = false;
 
-              _this36.cdr.detectChanges();
+              _this41.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherRubi",
           value: function getPublisherRubi() {
-            var _this37 = this;
+            var _this42 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this37.localStorageCompany) {
-                _this37.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this37.localStorageCompany);
+              if (_this42.localStorageCompany) {
+                _this42.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this42.localStorageCompany);
                 });
               } else {
-                _this37.publishertempList = data;
+                _this42.publishertempList = data;
               }
 
-              _this37.publishertempList.map(function (publisher) {
-                _this37.publisherList.push({
+              _this42.publishertempList.map(function (publisher) {
+                _this42.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -9899,13 +10661,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this38 = this;
+            var _this43 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this38.getRubiTags();
+                _this43.getRubiTags();
 
-                _this38._snackBarService.info('Deleted a tag');
+                _this43._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -9917,11 +10679,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this39 = this;
+            var _this44 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this39.localStorageCompany && tag.advertiser == "rubi";
+              return tag.company[0]['_id'] == _this44.localStorageCompany && tag.advertiser == "rubi";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -9934,17 +10696,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this40 = this;
+            var _this45 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this40.localStorageCompany && tag.publisher[0]['_key'] == _this40.publisherValue && tag.advertiser == "rubi";
+                return tag.company[0]['_id'] == _this45.localStorageCompany && tag.publisher[0]['_key'] == _this45.publisherValue && tag.advertiser == "rubi";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this40.localStorageCompany && tag.advertiser == "rubi";
+                return tag.company[0]['_id'] == _this45.localStorageCompany && tag.advertiser == "rubi";
               });
             }
 
@@ -10619,34 +11381,34 @@
         }, {
           key: "getSolexBCTags",
           value: function getSolexBCTags() {
-            var _this41 = this;
+            var _this46 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this41.tagList = x;
-              _this41.rows = _this41.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this41.localStorageCompany && tag.advertiser == "solex-bc";
+              _this46.tagList = x;
+              _this46.rows = _this46.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this46.localStorageCompany && tag.advertiser == "solex-bc";
               });
-              _this41.loadingIndicator = false;
+              _this46.loadingIndicator = false;
 
-              _this41.cdr.detectChanges();
+              _this46.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherSolexBC",
           value: function getPublisherSolexBC() {
-            var _this42 = this;
+            var _this47 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this42.localStorageCompany) {
-                _this42.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this42.localStorageCompany);
+              if (_this47.localStorageCompany) {
+                _this47.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this47.localStorageCompany);
                 });
               } else {
-                _this42.publishertempList = data;
+                _this47.publishertempList = data;
               }
 
-              _this42.publishertempList.map(function (publisher) {
-                _this42.publisherList.push({
+              _this47.publishertempList.map(function (publisher) {
+                _this47.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -10661,13 +11423,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this43 = this;
+            var _this48 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this43.getSolexBCTags();
+                _this48.getSolexBCTags();
 
-                _this43._snackBarService.info('Deleted a tag');
+                _this48._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -10679,11 +11441,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this44 = this;
+            var _this49 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this44.localStorageCompany && tag.advertiser == "solex-bc";
+              return tag.company[0]['_id'] == _this49.localStorageCompany && tag.advertiser == "solex-bc";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -10696,17 +11458,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this45 = this;
+            var _this50 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this45.localStorageCompany && tag.publisher[0]['_key'] == _this45.publisherValue && tag.advertiser == "solex-bc";
+                return tag.company[0]['_id'] == _this50.localStorageCompany && tag.publisher[0]['_key'] == _this50.publisherValue && tag.advertiser == "solex-bc";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this45.localStorageCompany && tag.advertiser == "solex-bc";
+                return tag.company[0]['_id'] == _this50.localStorageCompany && tag.advertiser == "solex-bc";
               });
             }
 
@@ -11381,34 +12143,34 @@
         }, {
           key: "getSystem1Tags",
           value: function getSystem1Tags() {
-            var _this46 = this;
+            var _this51 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this46.tagList = x;
-              _this46.rows = _this46.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this46.localStorageCompany && tag.advertiser == "system1";
+              _this51.tagList = x;
+              _this51.rows = _this51.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this51.localStorageCompany && tag.advertiser == "system1";
               });
-              _this46.loadingIndicator = false;
+              _this51.loadingIndicator = false;
 
-              _this46.cdr.detectChanges();
+              _this51.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherSystem1",
           value: function getPublisherSystem1() {
-            var _this47 = this;
+            var _this52 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this47.localStorageCompany) {
-                _this47.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this47.localStorageCompany);
+              if (_this52.localStorageCompany) {
+                _this52.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this52.localStorageCompany);
                 });
               } else {
-                _this47.publishertempList = data;
+                _this52.publishertempList = data;
               }
 
-              _this47.publishertempList.map(function (publisher) {
-                _this47.publisherList.push({
+              _this52.publishertempList.map(function (publisher) {
+                _this52.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -11423,13 +12185,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this48 = this;
+            var _this53 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this48.getSystem1Tags();
+                _this53.getSystem1Tags();
 
-                _this48._snackBarService.info('Deleted a tag');
+                _this53._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -11441,11 +12203,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this49 = this;
+            var _this54 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this49.localStorageCompany && tag.advertiser == "system1";
+              return tag.company[0]['_id'] == _this54.localStorageCompany && tag.advertiser == "system1";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -11458,17 +12220,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this50 = this;
+            var _this55 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this50.localStorageCompany && tag.publisher[0]['_key'] == _this50.publisherValue && tag.advertiser == "system1";
+                return tag.company[0]['_id'] == _this55.localStorageCompany && tag.publisher[0]['_key'] == _this55.publisherValue && tag.advertiser == "system1";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this50.localStorageCompany && tag.advertiser == "system1";
+                return tag.company[0]['_id'] == _this55.localStorageCompany && tag.advertiser == "system1";
               });
             }
 
@@ -11642,6 +12404,12 @@
       var _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ./system1-tag/system1-tag.component */
       "./src/app/modules/tag-management/system1-tag/system1-tag.component.ts");
+      /* harmony import */
+
+
+      var _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      /*! ./hopkin-tag/hopkin-tag.component */
+      "./src/app/modules/tag-management/hopkin-tag/hopkin-tag.component.ts");
 
       var routes = [{
         path: '',
@@ -11661,6 +12429,9 @@
         }, {
           path: 'apptitude',
           component: _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_10__["ApptitudeTagComponent"]
+        }, {
+          path: 'hopkins',
+          component: _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_14__["HopkinTagComponent"]
         }, {
           path: 'verizon-direct',
           component: _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_11__["VerizonDirectTagComponent"]
@@ -12000,6 +12771,12 @@
       var _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
       /*! ./system1-tag/system1-tag.component */
       "./src/app/modules/tag-management/system1-tag/system1-tag.component.ts");
+      /* harmony import */
+
+
+      var _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
+      /*! ./hopkin-tag/hopkin-tag.component */
+      "./src/app/modules/tag-management/hopkin-tag/hopkin-tag.component.ts");
 
       var TagManagementModule = function TagManagementModule() {
         _classCallCheck(this, TagManagementModule);
@@ -12018,7 +12795,7 @@
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](TagManagementModule, {
-          declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"]],
+          declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"], _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__["HopkinTagComponent"]],
           imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _tag_management_routing_module__WEBPACK_IMPORTED_MODULE_2__["TagManagementRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_5__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButtonModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelectModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_10__["MatCheckboxModule"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_12__["MatSnackBarModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["NgxDatatableModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialogModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_20__["InlineSVGModule"]]
         });
       })();
@@ -12029,7 +12806,7 @@
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TagManagementModule, [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
-            declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"]],
+            declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"], _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__["HopkinTagComponent"]],
             imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _tag_management_routing_module__WEBPACK_IMPORTED_MODULE_2__["TagManagementRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_5__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButtonModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelectModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_10__["MatCheckboxModule"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_12__["MatSnackBarModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["NgxDatatableModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialogModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_20__["InlineSVGModule"]],
             providers: [src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_11__["SnackbarService"]],
             entryComponents: [_new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"]]
@@ -12860,7 +13637,7 @@
             viewValue: "Bing Direct"
           }, {
             value: "hopkins",
-            viewValue: "Hopkins"
+            viewValue: "Hopkins YHS"
           }, {
             value: "lyons",
             viewValue: "Lyons"
@@ -12917,33 +13694,33 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this51 = this;
+            var _this56 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this51.getAllTags();
+                _this56.getAllTags();
 
-                _this51._snackBarService.info('Deleted a tag');
+                _this56._snackBarService.info('Deleted a tag');
               });
             }
           }
         }, {
           key: "getPublisherAll",
           value: function getPublisherAll() {
-            var _this52 = this;
+            var _this57 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
               // console.log(data);
-              if (_this52.localStorageCompany) {
-                _this52.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this52.localStorageCompany);
+              if (_this57.localStorageCompany) {
+                _this57.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this57.localStorageCompany);
                 });
               } else {
-                _this52.publishertempList = data;
+                _this57.publishertempList = data;
               }
 
-              _this52.publishertempList.map(function (publisher) {
-                _this52.publisherList.push({
+              _this57.publishertempList.map(function (publisher) {
+                _this57.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -12953,21 +13730,21 @@
         }, {
           key: "handleChangeProvider",
           value: function handleChangeProvider(event) {
-            var _this53 = this;
+            var _this58 = this;
 
             this.advertiserValue = event;
 
             if (this.advertiserValue && this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this53.localStorageCompany && tag.advertiser == _this53.advertiserValue && tag.publisher[0]['_key'] == _this53.publisherValue;
+                return tag.company[0]['_id'] == _this58.localStorageCompany && tag.advertiser == _this58.advertiserValue && tag.publisher[0]['_key'] == _this58.publisherValue;
               });
             } else if (this.advertiserValue && !this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this53.localStorageCompany && tag.advertiser == _this53.advertiserValue;
+                return tag.company[0]['_id'] == _this58.localStorageCompany && tag.advertiser == _this58.advertiserValue;
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this53.localStorageCompany;
+                return tag.company[0]['_id'] == _this58.localStorageCompany;
               });
             }
 
@@ -12976,21 +13753,21 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this54 = this;
+            var _this59 = this;
 
             this.publisherValue = event;
 
             if (this.advertiserValue && this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this54.localStorageCompany && tag.publisher[0]['_key'] == _this54.publisherValue && tag.advertiser == _this54.advertiserValue;
+                return tag.company[0]['_id'] == _this59.localStorageCompany && tag.publisher[0]['_key'] == _this59.publisherValue && tag.advertiser == _this59.advertiserValue;
               });
             } else if (!this.advertiserValue && this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this54.localStorageCompany && tag.publisher[0]['_key'] == _this54.publisherValue;
+                return tag.company[0]['_id'] == _this59.localStorageCompany && tag.publisher[0]['_key'] == _this59.publisherValue;
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this54.localStorageCompany;
+                return tag.company[0]['_id'] == _this59.localStorageCompany;
               });
             }
 
@@ -12999,16 +13776,16 @@
         }, {
           key: "getAllTags",
           value: function getAllTags() {
-            var _this55 = this;
+            var _this60 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this55.tagList = x;
-              _this55.rows = _this55.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this55.localStorageCompany;
+              _this60.tagList = x;
+              _this60.rows = _this60.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this60.localStorageCompany;
               });
-              _this55.loadingIndicator = false;
+              _this60.loadingIndicator = false;
 
-              _this55.cdr.detectChanges();
+              _this60.cdr.detectChanges();
             });
           } //Gets the Selected Company from Local Storage
 
@@ -13025,12 +13802,12 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this56 = this;
+            var _this61 = this;
 
             this.publisherValue = "";
             this.advertiserValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this56.localStorageCompany;
+              return tag.company[0]['_id'] == _this61.localStorageCompany;
             });
             this.cdr.detectChanges();
           }
@@ -13802,30 +14579,30 @@
         }, {
           key: "deleteTemplate",
           value: function deleteTemplate(id) {
-            var _this57 = this;
+            var _this62 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTemplate(id).subscribe(function (res) {
-                _this57.getAllTemplates();
+                _this62.getAllTemplates();
 
-                _this57._snackBarService.info('Deleted a Template');
+                _this62._snackBarService.info('Deleted a Template');
               });
             }
           }
         }, {
           key: "getAllTemplates",
           value: function getAllTemplates() {
-            var _this58 = this;
+            var _this63 = this;
 
             this.tagService.getAllTemplates().subscribe(function (x) {
-              _this58.templateList = x;
+              _this63.templateList = x;
               console.log(x);
-              _this58.rows = _this58.templateList.filter(function (template) {
-                return template.company[0]['_id'] == _this58.localStorageCompany;
+              _this63.rows = _this63.templateList.filter(function (template) {
+                return template.company[0]['_id'] == _this63.localStorageCompany;
               });
-              _this58.loadingIndicator = false;
+              _this63.loadingIndicator = false;
 
-              _this58.cdr.detectChanges();
+              _this63.cdr.detectChanges();
             });
           } //Gets the Selected Company from Local Storage
 
@@ -14501,34 +15278,34 @@
         }, {
           key: "getVerizonDirectTags",
           value: function getVerizonDirectTags() {
-            var _this59 = this;
+            var _this64 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this59.tagList = x;
-              _this59.rows = _this59.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this59.localStorageCompany && tag.advertiser == "verizon-direct";
+              _this64.tagList = x;
+              _this64.rows = _this64.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this64.localStorageCompany && tag.advertiser == "verizon-direct";
               });
-              _this59.loadingIndicator = false;
+              _this64.loadingIndicator = false;
 
-              _this59.cdr.detectChanges();
+              _this64.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherVerizonDirect",
           value: function getPublisherVerizonDirect() {
-            var _this60 = this;
+            var _this65 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this60.localStorageCompany) {
-                _this60.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this60.localStorageCompany);
+              if (_this65.localStorageCompany) {
+                _this65.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this65.localStorageCompany);
                 });
               } else {
-                _this60.publishertempList = data;
+                _this65.publishertempList = data;
               }
 
-              _this60.publishertempList.map(function (publisher) {
-                _this60.publisherList.push({
+              _this65.publishertempList.map(function (publisher) {
+                _this65.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -14543,13 +15320,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this61 = this;
+            var _this66 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this61.getVerizonDirectTags();
+                _this66.getVerizonDirectTags();
 
-                _this61._snackBarService.info('Deleted a tag');
+                _this66._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -14561,11 +15338,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this62 = this;
+            var _this67 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this62.localStorageCompany && tag.advertiser == "verizon-direct";
+              return tag.company[0]['_id'] == _this67.localStorageCompany && tag.advertiser == "verizon-direct";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -14578,17 +15355,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this63 = this;
+            var _this68 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this63.localStorageCompany && tag.publisher[0]['_key'] == _this63.publisherValue && tag.advertiser == "verizon-direct";
+                return tag.company[0]['_id'] == _this68.localStorageCompany && tag.publisher[0]['_key'] == _this68.publisherValue && tag.advertiser == "verizon-direct";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this63.localStorageCompany && tag.advertiser == "verizon-direct";
+                return tag.company[0]['_id'] == _this68.localStorageCompany && tag.advertiser == "verizon-direct";
               });
             }
 

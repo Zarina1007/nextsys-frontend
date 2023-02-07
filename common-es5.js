@@ -133,6 +133,132 @@
     },
 
     /***/
+    "./src/app/shared/service/admin-stats/hopkin.service.ts":
+    /*!**************************************************************!*\
+      !*** ./src/app/shared/service/admin-stats/hopkin.service.ts ***!
+      \**************************************************************/
+
+    /*! exports provided: HopkinService */
+
+    /***/
+    function srcAppSharedServiceAdminStatsHopkinServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "HopkinService", function () {
+        return HopkinService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ../../../../environments/environment */
+      "./src/environments/environment.ts");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+      var API_HOPKIN_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/hopkins");
+
+      var HopkinService = /*#__PURE__*/function () {
+        function HopkinService(http) {
+          _classCallCheck(this, HopkinService);
+
+          this.http = http;
+        }
+
+        _createClass(HopkinService, [{
+          key: "getChartMetrics",
+          value: function getChartMetrics(company, startDate, endDate) {
+            return this.http.get(API_HOPKIN_URL + '/chart_metrics', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getAllHopkinStats",
+          value: function getAllHopkinStats(company, startDate, endDate) {
+            return this.http.get(API_HOPKIN_URL + '/all-publishers', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getHopkinStats",
+          value: function getHopkinStats(company, startDate, endDate) {
+            return this.http.get(API_HOPKIN_URL + '/', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getSummaryMetrics",
+          value: function getSummaryMetrics(company) {
+            return this.http.get(API_HOPKIN_URL + '/summary_metrics', {
+              params: {
+                company: company
+              }
+            });
+          }
+        }, {
+          key: "getAllDashboardStats",
+          value: function getAllDashboardStats() {
+            return this.http.get(API_HOPKIN_URL + '/all-stat');
+          }
+        }]);
+
+        return HopkinService;
+      }();
+
+      HopkinService.ɵfac = function HopkinService_Factory(t) {
+        return new (t || HopkinService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+      };
+
+      HopkinService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: HopkinService,
+        factory: HopkinService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HopkinService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/shared/service/notification.service.ts":
     /*!********************************************************!*\
       !*** ./src/app/shared/service/notification.service.ts ***!

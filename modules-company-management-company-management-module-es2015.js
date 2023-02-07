@@ -707,7 +707,7 @@ class EditCompanyComponent {
         this.reportingProviderList = [
             { value: "apptitude", viewValue: "Apptitude" },
             { value: "bing-direct", viewValue: "Bing Direct" },
-            { value: "hopkins", viewValue: "Hopkins" },
+            { value: "hopkins", viewValue: "Hopkins YHS" },
             { value: "lyons", viewValue: "Lyons" },
             { value: "media-net", viewValue: "Media.net" },
             { value: "perion", viewValue: "Perion" },
@@ -1169,7 +1169,7 @@ class NewCompanyComponent {
         this.reportingProviderList = [
             { value: "apptitude", viewValue: "Apptitude" },
             { value: "bing-direct", viewValue: "Bing Direct" },
-            { value: "hopkins", viewValue: "Hopkins" },
+            { value: "hopkins", viewValue: "Hopkins YHS" },
             { value: "lyons", viewValue: "Lyons" },
             { value: "media-net", viewValue: "Media.net" },
             { value: "perion", viewValue: "Perion" },

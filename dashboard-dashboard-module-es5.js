@@ -18321,13 +18321,19 @@
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      /*! src/app/shared/service/admin-stats/hopkin.service */
+      "./src/app/shared/service/admin-stats/hopkin.service.ts");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! ../../widgets/mixed/mixed-widget1/mixed-widget1.component */
       "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget1/mixed-widget1.component.ts");
 
@@ -18378,7 +18384,7 @@
       }
 
       var Dashboard1Component = /*#__PURE__*/function () {
-        function Dashboard1Component(authService, perionService, userService, cdr, lyonService, rubiService, verizonService, tagService, system1Service, companyService, solexbcService, apptitudeService) {
+        function Dashboard1Component(authService, perionService, userService, cdr, lyonService, rubiService, verizonService, tagService, system1Service, companyService, solexbcService, apptitudeService, hopkinService) {
           _classCallCheck(this, Dashboard1Component);
 
           this.authService = authService;
@@ -18393,6 +18399,7 @@
           this.companyService = companyService;
           this.solexbcService = solexbcService;
           this.apptitudeService = apptitudeService;
+          this.hopkinService = hopkinService;
           this.tagList = [];
           this.tempChartData = [];
           this.allDaysList = [];
@@ -18414,7 +18421,7 @@
                       dashboardPermission = currentUser.permission[0]["dashboard"];
 
                       if (!(dashboardPermission && currentUser.permission[0]['role'] != '3')) {
-                        _context.next = 43;
+                        _context.next = 47;
                         break;
                       }
 
@@ -18466,6 +18473,11 @@
 
                     case 32:
                       this.apptitudeChartData = _context.sent;
+                      _context.next = 35;
+                      return this.getHopkinChart(this.selectedCompany);
+
+                    case 35:
+                      this.hopkinChartData = _context.sent;
 
                       if (this.reportTypeData.includes('perion')) {
                         this.tempChartData = this.tempChartData.concat(this.perionChartData);
@@ -18495,17 +18507,21 @@
                         this.tempChartData = this.tempChartData.concat(this.apptitudeChartData);
                       }
 
+                      if (this.reportTypeData.includes('hopkins')) {
+                        this.tempChartData = this.tempChartData.concat(this.hopkinChartData);
+                      }
+
                       this.ChartData = this.tempChartData;
-                      _context.next = 44;
+                      _context.next = 48;
                       break;
 
-                    case 43:
+                    case 47:
                       this.pagePermission = false;
 
-                    case 44:
+                    case 48:
                       this.cdr.markForCheck();
 
-                    case 45:
+                    case 49:
                     case "end":
                       return _context.stop();
                   }
@@ -19012,10 +19028,10 @@
             }));
           }
         }, {
-          key: "getSystem1Chart",
-          value: function getSystem1Chart(company) {
+          key: "getHopkinChart",
+          value: function getHopkinChart(company) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
-              var response, chartSystem1Metric, chartAllSystem1Stat, chartAllBeforeSystem1Stat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartSystem1DataValue, revenueCurrentSum, revenueBeforeSum, _iterator10, _step10, dayData, checkExistDay, _iterator12, _step12, resVal, _iterator11, _step11, resBeforeVal;
+              var response, chartHopkinMetric, chartAllHopkinStat, chartAllBeforeHopkinStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartHopkinDataValue, revenueCurrentSum, revenueBeforeSum, _iterator10, _step10, dayData, checkExistDay, _iterator12, _step12, resVal, _iterator11, _step11, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee6$(_context6) {
                 while (1) {
@@ -19023,25 +19039,25 @@
                     case 0:
                       _context6.prev = 0;
                       _context6.next = 3;
-                      return this.system1Service.getAllDashboardStats().toPromise();
+                      return this.hopkinService.getAllDashboardStats().toPromise();
 
                     case 3:
                       response = _context6.sent;
-                      this.allSystem1Chart = response[0];
-                      chartSystem1Metric = [];
-                      chartAllSystem1Stat = this.allSystem1Chart.currentStat;
-                      chartAllBeforeSystem1Stat = this.allSystem1Chart.beforeStat;
-                      chartAllSystem1Stat = chartAllSystem1Stat.slice().sort(function (a, b) {
+                      this.allHopkinChart = response[0];
+                      chartHopkinMetric = [];
+                      chartAllHopkinStat = this.allHopkinChart.currentStat;
+                      chartAllBeforeHopkinStat = this.allHopkinChart.beforeStat;
+                      chartAllHopkinStat = chartAllHopkinStat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
-                      chartAllBeforeSystem1Stat = chartAllBeforeSystem1Stat.slice().sort(function (a_1, b_1) {
+                      chartAllBeforeHopkinStat = chartAllBeforeHopkinStat.slice().sort(function (a_1, b_1) {
                         return a_1.date - b_1.date;
                       });
                       revenuePerDayVal = [];
                       datesOfRevenueVal = [];
                       revenuePerDayBeforeVal = [];
                       datesOfRevenueBeforeVal = [];
-                      chartSystem1DataValue = {};
+                      chartHopkinDataValue = {};
                       revenueCurrentSum = 0;
                       revenueBeforeSum = 0;
                       _iterator10 = _createForOfIteratorHelper(this.allDaysList);
@@ -19049,7 +19065,7 @@
                       try {
                         for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
                           dayData = _step10.value;
-                          checkExistDay = chartAllSystem1Stat.filter(function (result_1) {
+                          checkExistDay = chartAllHopkinStat.filter(function (result_1) {
                             return result_1.date == dayData;
                           });
 
@@ -19079,7 +19095,7 @@
                         _iterator10.f();
                       }
 
-                      _iterator11 = _createForOfIteratorHelper(chartAllBeforeSystem1Stat);
+                      _iterator11 = _createForOfIteratorHelper(chartAllBeforeHopkinStat);
 
                       try {
                         for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
@@ -19094,16 +19110,16 @@
                         _iterator11.f();
                       }
 
-                      chartSystem1DataValue['revenuePerDay'] = revenuePerDayVal;
-                      chartSystem1DataValue['datesOfRevenue'] = datesOfRevenueVal;
-                      chartSystem1DataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-                      chartSystem1DataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-                      chartSystem1DataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-                      chartSystem1DataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-                      chartSystem1DataValue['statType'] = "System 1";
-                      chartSystem1DataValue['redirectUri'] = "/reporting/system1";
-                      chartSystem1Metric.push(chartSystem1DataValue);
-                      return _context6.abrupt("return", chartSystem1Metric);
+                      chartHopkinDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartHopkinDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartHopkinDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartHopkinDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartHopkinDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartHopkinDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartHopkinDataValue['statType'] = "Hopkins YHS";
+                      chartHopkinDataValue['redirectUri'] = "/reporting/hopkin";
+                      chartHopkinMetric.push(chartHopkinDataValue);
+                      return _context6.abrupt("return", chartHopkinMetric);
 
                     case 33:
                       _context6.prev = 33;
@@ -19119,14 +19135,10 @@
             }));
           }
         }, {
-          key: "getProviderChart",
-          value: function getProviderChart(company) {} //get Verizon Direct chart
-
-        }, {
-          key: "getVerizonChart",
-          value: function getVerizonChart(company) {
+          key: "getSystem1Chart",
+          value: function getSystem1Chart(company) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
-              var response, chartVerizonMetric, chartAllVerizonStat, chartAllBeforeVerizonStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartVerizonDataValue, revenueCurrentSum, revenueBeforeSum, _iterator13, _step13, dayData, checkExistDay, _iterator15, _step15, resVal, _iterator14, _step14, resBeforeVal;
+              var response, chartSystem1Metric, chartAllSystem1Stat, chartAllBeforeSystem1Stat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartSystem1DataValue, revenueCurrentSum, revenueBeforeSum, _iterator13, _step13, dayData, checkExistDay, _iterator15, _step15, resVal, _iterator14, _step14, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee7$(_context7) {
                 while (1) {
@@ -19134,25 +19146,25 @@
                     case 0:
                       _context7.prev = 0;
                       _context7.next = 3;
-                      return this.verizonService.getAllDashboardStats().toPromise();
+                      return this.system1Service.getAllDashboardStats().toPromise();
 
                     case 3:
                       response = _context7.sent;
-                      this.allVerizonChart = response[0];
-                      chartVerizonMetric = [];
-                      chartAllVerizonStat = this.allVerizonChart.currentStat;
-                      chartAllBeforeVerizonStat = this.allVerizonChart.beforeStat;
-                      chartAllVerizonStat = chartAllVerizonStat.slice().sort(function (a, b) {
+                      this.allSystem1Chart = response[0];
+                      chartSystem1Metric = [];
+                      chartAllSystem1Stat = this.allSystem1Chart.currentStat;
+                      chartAllBeforeSystem1Stat = this.allSystem1Chart.beforeStat;
+                      chartAllSystem1Stat = chartAllSystem1Stat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
-                      chartAllBeforeVerizonStat = chartAllBeforeVerizonStat.slice().sort(function (a_1, b_1) {
+                      chartAllBeforeSystem1Stat = chartAllBeforeSystem1Stat.slice().sort(function (a_1, b_1) {
                         return a_1.date - b_1.date;
                       });
                       revenuePerDayVal = [];
                       datesOfRevenueVal = [];
                       revenuePerDayBeforeVal = [];
                       datesOfRevenueBeforeVal = [];
-                      chartVerizonDataValue = {};
+                      chartSystem1DataValue = {};
                       revenueCurrentSum = 0;
                       revenueBeforeSum = 0;
                       _iterator13 = _createForOfIteratorHelper(this.allDaysList);
@@ -19160,7 +19172,7 @@
                       try {
                         for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
                           dayData = _step13.value;
-                          checkExistDay = chartAllVerizonStat.filter(function (result_1) {
+                          checkExistDay = chartAllSystem1Stat.filter(function (result_1) {
                             return result_1.date == dayData;
                           });
 
@@ -19190,7 +19202,7 @@
                         _iterator13.f();
                       }
 
-                      _iterator14 = _createForOfIteratorHelper(chartAllBeforeVerizonStat);
+                      _iterator14 = _createForOfIteratorHelper(chartAllBeforeSystem1Stat);
 
                       try {
                         for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
@@ -19205,16 +19217,16 @@
                         _iterator14.f();
                       }
 
-                      chartVerizonDataValue['revenuePerDay'] = revenuePerDayVal;
-                      chartVerizonDataValue['datesOfRevenue'] = datesOfRevenueVal;
-                      chartVerizonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-                      chartVerizonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-                      chartVerizonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-                      chartVerizonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-                      chartVerizonDataValue['statType'] = "Verizon Direct";
-                      chartVerizonDataValue['redirectUri'] = "/reporting/verizon-direct";
-                      chartVerizonMetric.push(chartVerizonDataValue);
-                      return _context7.abrupt("return", chartVerizonMetric);
+                      chartSystem1DataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartSystem1DataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartSystem1DataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartSystem1DataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartSystem1DataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartSystem1DataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartSystem1DataValue['statType'] = "System 1";
+                      chartSystem1DataValue['redirectUri'] = "/reporting/system1";
+                      chartSystem1Metric.push(chartSystem1DataValue);
+                      return _context7.abrupt("return", chartSystem1Metric);
 
                     case 33:
                       _context7.prev = 33;
@@ -19228,76 +19240,42 @@
                 }
               }, _callee7, this, [[0, 33]]);
             }));
-          } //get Tags with selected company
+          }
+        }, {
+          key: "getProviderChart",
+          value: function getProviderChart(company) {} //get Verizon Direct chart
 
         }, {
-          key: "getCompanyTags",
-          value: function getCompanyTags(selectedCompany) {
+          key: "getVerizonChart",
+          value: function getVerizonChart(company) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
-              var companyId, response;
+              var response, chartVerizonMetric, chartAllVerizonStat, chartAllBeforeVerizonStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartVerizonDataValue, revenueCurrentSum, revenueBeforeSum, _iterator16, _step16, dayData, checkExistDay, _iterator18, _step18, resVal, _iterator17, _step17, resBeforeVal;
+
               return regeneratorRuntime.wrap(function _callee8$(_context8) {
                 while (1) {
                   switch (_context8.prev = _context8.next) {
                     case 0:
-                      if (selectedCompany) {
-                        companyId = selectedCompany.split("/")[1];
-                      } else {
-                        companyId = null;
-                      }
-
-                      _context8.prev = 1;
-                      _context8.next = 4;
-                      return this.tagService.getCompanyTags(companyId).toPromise();
-
-                    case 4:
-                      response = _context8.sent;
-                      return _context8.abrupt("return", response);
-
-                    case 8:
-                      _context8.prev = 8;
-                      _context8.t0 = _context8["catch"](1);
-                      return _context8.abrupt("return", _context8.t0);
-
-                    case 11:
-                    case "end":
-                      return _context8.stop();
-                  }
-                }
-              }, _callee8, this, [[1, 8]]);
-            }));
-          } //Get Solex Bc
-
-        }, {
-          key: "getSolexBCChart",
-          value: function getSolexBCChart(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
-              var response, chartSolexBCMetric, chartAllSolexBCStat, chartAllBeforeSolexBCStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartSolexBCDataValue, revenueCurrentSum, revenueBeforeSum, _iterator16, _step16, dayData, checkExistDay, _iterator18, _step18, resVal, _iterator17, _step17, resBeforeVal;
-
-              return regeneratorRuntime.wrap(function _callee9$(_context9) {
-                while (1) {
-                  switch (_context9.prev = _context9.next) {
-                    case 0:
-                      _context9.prev = 0;
-                      _context9.next = 3;
-                      return this.solexbcService.getAllDashboardStats().toPromise();
+                      _context8.prev = 0;
+                      _context8.next = 3;
+                      return this.verizonService.getAllDashboardStats().toPromise();
 
                     case 3:
-                      response = _context9.sent;
-                      this.allSolexBCChart = response[0];
-                      chartSolexBCMetric = [];
-                      chartAllSolexBCStat = this.allSolexBCChart.currentStat;
-                      chartAllBeforeSolexBCStat = this.allSolexBCChart.beforeStat;
-                      chartAllSolexBCStat = chartAllSolexBCStat.slice().sort(function (a, b) {
+                      response = _context8.sent;
+                      this.allVerizonChart = response[0];
+                      chartVerizonMetric = [];
+                      chartAllVerizonStat = this.allVerizonChart.currentStat;
+                      chartAllBeforeVerizonStat = this.allVerizonChart.beforeStat;
+                      chartAllVerizonStat = chartAllVerizonStat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
-                      chartAllBeforeSolexBCStat = chartAllBeforeSolexBCStat.slice().sort(function (a_1, b_1) {
+                      chartAllBeforeVerizonStat = chartAllBeforeVerizonStat.slice().sort(function (a_1, b_1) {
                         return a_1.date - b_1.date;
                       });
                       revenuePerDayVal = [];
                       datesOfRevenueVal = [];
                       revenuePerDayBeforeVal = [];
                       datesOfRevenueBeforeVal = [];
-                      chartSolexBCDataValue = {};
+                      chartVerizonDataValue = {};
                       revenueCurrentSum = 0;
                       revenueBeforeSum = 0;
                       _iterator16 = _createForOfIteratorHelper(this.allDaysList);
@@ -19305,7 +19283,7 @@
                       try {
                         for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
                           dayData = _step16.value;
-                          checkExistDay = chartAllSolexBCStat.filter(function (result_1) {
+                          checkExistDay = chartAllVerizonStat.filter(function (result_1) {
                             return result_1.date == dayData;
                           });
 
@@ -19335,7 +19313,7 @@
                         _iterator16.f();
                       }
 
-                      _iterator17 = _createForOfIteratorHelper(chartAllBeforeSolexBCStat);
+                      _iterator17 = _createForOfIteratorHelper(chartAllBeforeVerizonStat);
 
                       try {
                         for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
@@ -19350,36 +19328,73 @@
                         _iterator17.f();
                       }
 
-                      chartSolexBCDataValue['revenuePerDay'] = revenuePerDayVal;
-                      chartSolexBCDataValue['datesOfRevenue'] = datesOfRevenueVal;
-                      chartSolexBCDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-                      chartSolexBCDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-                      chartSolexBCDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-                      chartSolexBCDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-                      chartSolexBCDataValue['statType'] = "SolexBC";
-                      chartSolexBCDataValue['redirectUri'] = "/reporting/solex-bc";
-                      chartSolexBCMetric.push(chartSolexBCDataValue);
-                      return _context9.abrupt("return", chartSolexBCMetric);
+                      chartVerizonDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartVerizonDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartVerizonDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartVerizonDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartVerizonDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartVerizonDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartVerizonDataValue['statType'] = "Verizon Direct";
+                      chartVerizonDataValue['redirectUri'] = "/reporting/verizon-direct";
+                      chartVerizonMetric.push(chartVerizonDataValue);
+                      return _context8.abrupt("return", chartVerizonMetric);
 
                     case 33:
-                      _context9.prev = 33;
-                      _context9.t0 = _context9["catch"](0);
-                      return _context9.abrupt("return", _context9.t0);
+                      _context8.prev = 33;
+                      _context8.t0 = _context8["catch"](0);
+                      return _context8.abrupt("return", _context8.t0);
 
                     case 36:
+                    case "end":
+                      return _context8.stop();
+                  }
+                }
+              }, _callee8, this, [[0, 33]]);
+            }));
+          } //get Tags with selected company
+
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(selectedCompany) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
+              var companyId, response;
+              return regeneratorRuntime.wrap(function _callee9$(_context9) {
+                while (1) {
+                  switch (_context9.prev = _context9.next) {
+                    case 0:
+                      if (selectedCompany) {
+                        companyId = selectedCompany.split("/")[1];
+                      } else {
+                        companyId = null;
+                      }
+
+                      _context9.prev = 1;
+                      _context9.next = 4;
+                      return this.tagService.getCompanyTags(companyId).toPromise();
+
+                    case 4:
+                      response = _context9.sent;
+                      return _context9.abrupt("return", response);
+
+                    case 8:
+                      _context9.prev = 8;
+                      _context9.t0 = _context9["catch"](1);
+                      return _context9.abrupt("return", _context9.t0);
+
+                    case 11:
                     case "end":
                       return _context9.stop();
                   }
                 }
-              }, _callee9, this, [[0, 33]]);
+              }, _callee9, this, [[1, 8]]);
             }));
-          } //Get Apptitude
+          } //Get Solex Bc
 
         }, {
-          key: "getApptitudeChart",
-          value: function getApptitudeChart(company) {
+          key: "getSolexBCChart",
+          value: function getSolexBCChart(company) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
-              var response, chartRubiMetric, chartAllApptitudeStat, chartAllBeforeApptitudeStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartApptitudeDataValue, revenueCurrentSum, revenueBeforeSum, _iterator19, _step19, dayData, checkExistDay, _iterator21, _step21, resVal, _iterator20, _step20, resBeforeVal;
+              var response, chartSolexBCMetric, chartAllSolexBCStat, chartAllBeforeSolexBCStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartSolexBCDataValue, revenueCurrentSum, revenueBeforeSum, _iterator19, _step19, dayData, checkExistDay, _iterator21, _step21, resVal, _iterator20, _step20, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee10$(_context10) {
                 while (1) {
@@ -19387,25 +19402,25 @@
                     case 0:
                       _context10.prev = 0;
                       _context10.next = 3;
-                      return this.apptitudeService.getAllDashboardStats().toPromise();
+                      return this.solexbcService.getAllDashboardStats().toPromise();
 
                     case 3:
                       response = _context10.sent;
-                      this.allApptitudeChart = response[0];
-                      chartRubiMetric = [];
-                      chartAllApptitudeStat = this.allApptitudeChart.currentStat;
-                      chartAllBeforeApptitudeStat = this.allApptitudeChart.beforeStat;
-                      chartAllApptitudeStat = chartAllApptitudeStat.slice().sort(function (a, b) {
+                      this.allSolexBCChart = response[0];
+                      chartSolexBCMetric = [];
+                      chartAllSolexBCStat = this.allSolexBCChart.currentStat;
+                      chartAllBeforeSolexBCStat = this.allSolexBCChart.beforeStat;
+                      chartAllSolexBCStat = chartAllSolexBCStat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
-                      chartAllBeforeApptitudeStat = chartAllBeforeApptitudeStat.slice().sort(function (a_1, b_1) {
+                      chartAllBeforeSolexBCStat = chartAllBeforeSolexBCStat.slice().sort(function (a_1, b_1) {
                         return a_1.date - b_1.date;
                       });
                       revenuePerDayVal = [];
                       datesOfRevenueVal = [];
                       revenuePerDayBeforeVal = [];
                       datesOfRevenueBeforeVal = [];
-                      chartApptitudeDataValue = {};
+                      chartSolexBCDataValue = {};
                       revenueCurrentSum = 0;
                       revenueBeforeSum = 0;
                       _iterator19 = _createForOfIteratorHelper(this.allDaysList);
@@ -19413,7 +19428,7 @@
                       try {
                         for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
                           dayData = _step19.value;
-                          checkExistDay = chartAllApptitudeStat.filter(function (result_1) {
+                          checkExistDay = chartAllSolexBCStat.filter(function (result_1) {
                             return result_1.date == dayData;
                           });
 
@@ -19443,7 +19458,7 @@
                         _iterator19.f();
                       }
 
-                      _iterator20 = _createForOfIteratorHelper(chartAllBeforeApptitudeStat);
+                      _iterator20 = _createForOfIteratorHelper(chartAllBeforeSolexBCStat);
 
                       try {
                         for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
@@ -19458,16 +19473,16 @@
                         _iterator20.f();
                       }
 
-                      chartApptitudeDataValue['revenuePerDay'] = revenuePerDayVal;
-                      chartApptitudeDataValue['datesOfRevenue'] = datesOfRevenueVal;
-                      chartApptitudeDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-                      chartApptitudeDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-                      chartApptitudeDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-                      chartApptitudeDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-                      chartApptitudeDataValue['statType'] = "Monarch Apptitude";
-                      chartApptitudeDataValue['redirectUri'] = "/reporting/apptitude";
-                      chartRubiMetric.push(chartApptitudeDataValue);
-                      return _context10.abrupt("return", chartRubiMetric);
+                      chartSolexBCDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartSolexBCDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartSolexBCDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartSolexBCDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartSolexBCDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartSolexBCDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartSolexBCDataValue['statType'] = "SolexBC";
+                      chartSolexBCDataValue['redirectUri'] = "/reporting/solex-bc";
+                      chartSolexBCMetric.push(chartSolexBCDataValue);
+                      return _context10.abrupt("return", chartSolexBCMetric);
 
                     case 33:
                       _context10.prev = 33;
@@ -19480,6 +19495,114 @@
                   }
                 }
               }, _callee10, this, [[0, 33]]);
+            }));
+          } //Get Apptitude
+
+        }, {
+          key: "getApptitudeChart",
+          value: function getApptitudeChart(company) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
+              var response, chartRubiMetric, chartAllApptitudeStat, chartAllBeforeApptitudeStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartApptitudeDataValue, revenueCurrentSum, revenueBeforeSum, _iterator22, _step22, dayData, checkExistDay, _iterator24, _step24, resVal, _iterator23, _step23, resBeforeVal;
+
+              return regeneratorRuntime.wrap(function _callee11$(_context11) {
+                while (1) {
+                  switch (_context11.prev = _context11.next) {
+                    case 0:
+                      _context11.prev = 0;
+                      _context11.next = 3;
+                      return this.apptitudeService.getAllDashboardStats().toPromise();
+
+                    case 3:
+                      response = _context11.sent;
+                      this.allApptitudeChart = response[0];
+                      chartRubiMetric = [];
+                      chartAllApptitudeStat = this.allApptitudeChart.currentStat;
+                      chartAllBeforeApptitudeStat = this.allApptitudeChart.beforeStat;
+                      chartAllApptitudeStat = chartAllApptitudeStat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      chartAllBeforeApptitudeStat = chartAllBeforeApptitudeStat.slice().sort(function (a_1, b_1) {
+                        return a_1.date - b_1.date;
+                      });
+                      revenuePerDayVal = [];
+                      datesOfRevenueVal = [];
+                      revenuePerDayBeforeVal = [];
+                      datesOfRevenueBeforeVal = [];
+                      chartApptitudeDataValue = {};
+                      revenueCurrentSum = 0;
+                      revenueBeforeSum = 0;
+                      _iterator22 = _createForOfIteratorHelper(this.allDaysList);
+
+                      try {
+                        for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                          dayData = _step22.value;
+                          checkExistDay = chartAllApptitudeStat.filter(function (result_1) {
+                            return result_1.date == dayData;
+                          });
+
+                          if (checkExistDay.length == 0) {
+                            revenuePerDayVal.push(0);
+                            datesOfRevenueVal.push(dayData);
+                          } else {
+                            _iterator24 = _createForOfIteratorHelper(checkExistDay);
+
+                            try {
+                              for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+                                resVal = _step24.value;
+                                revenueCurrentSum += resVal.revenue;
+                                revenuePerDayVal.push(resVal.revenue);
+                                datesOfRevenueVal.push(resVal.date);
+                              }
+                            } catch (err) {
+                              _iterator24.e(err);
+                            } finally {
+                              _iterator24.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator22.e(err);
+                      } finally {
+                        _iterator22.f();
+                      }
+
+                      _iterator23 = _createForOfIteratorHelper(chartAllBeforeApptitudeStat);
+
+                      try {
+                        for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+                          resBeforeVal = _step23.value;
+                          revenueBeforeSum += resBeforeVal.revenue;
+                          revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                          datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                        }
+                      } catch (err) {
+                        _iterator23.e(err);
+                      } finally {
+                        _iterator23.f();
+                      }
+
+                      chartApptitudeDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartApptitudeDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartApptitudeDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartApptitudeDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartApptitudeDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartApptitudeDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartApptitudeDataValue['statType'] = "Monarch Apptitude";
+                      chartApptitudeDataValue['redirectUri'] = "/reporting/apptitude";
+                      chartRubiMetric.push(chartApptitudeDataValue);
+                      return _context11.abrupt("return", chartRubiMetric);
+
+                    case 33:
+                      _context11.prev = 33;
+                      _context11.t0 = _context11["catch"](0);
+                      return _context11.abrupt("return", _context11.t0);
+
+                    case 36:
+                    case "end":
+                      return _context11.stop();
+                  }
+                }
+              }, _callee11, this, [[0, 33]]);
             }));
           }
         }, {
@@ -19497,7 +19620,7 @@
       }();
 
       Dashboard1Component.ɵfac = function Dashboard1Component_Factory(t) {
-        return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__["ApptitudeService"]));
+        return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__["ApptitudeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_14__["HopkinService"]));
       };
 
       Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
@@ -19531,7 +19654,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.pagePermission);
           }
         },
-        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_14__["NgIf"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_15__["MixedWidget1Component"]],
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_16__["MixedWidget1Component"]],
         encapsulation: 2
       });
       /*@__PURE__*/
@@ -19568,6 +19691,8 @@
             type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__["SolexBCService"]
           }, {
             type: src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__["ApptitudeService"]
+          }, {
+            type: src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_14__["HopkinService"]
           }];
         }, null);
       })();
@@ -23128,12 +23253,12 @@
             var tempCurSum = 0;
             var tempPreSum = 0;
 
-            var _iterator22 = _createForOfIteratorHelper(this.ChartData),
-                _step22;
+            var _iterator25 = _createForOfIteratorHelper(this.ChartData),
+                _step25;
 
             try {
-              for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
-                var chart = _step22.value;
+              for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+                var chart = _step25.value;
                 this.chartSeries.push({
                   name: chart.statType,
                   data: chart.revenuePerDay
@@ -23142,27 +23267,27 @@
                 tempPreSum = tempPreSum + chart.revenueBeforeSum;
               }
             } catch (err) {
-              _iterator22.e(err);
+              _iterator25.e(err);
             } finally {
-              _iterator22.f();
+              _iterator25.f();
             }
 
             this.currentMonthSum = tempCurSum;
             this.previousMonthSum = tempPreSum;
             this.chartOptions = this.getChartOptions(this.chartSeries);
 
-            var _iterator23 = _createForOfIteratorHelper(this.ChartData),
-                _step23;
+            var _iterator26 = _createForOfIteratorHelper(this.ChartData),
+                _step26;
 
             try {
-              for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
-                var subChart = _step23.value;
+              for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+                var subChart = _step26.value;
                 this.chartSubOptions.push(this.getSubChartOptions(subChart));
               }
             } catch (err) {
-              _iterator23.e(err);
+              _iterator26.e(err);
             } finally {
-              _iterator23.f();
+              _iterator26.f();
             }
           }
         }, {

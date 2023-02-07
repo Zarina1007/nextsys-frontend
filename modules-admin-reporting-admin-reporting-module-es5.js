@@ -3037,316 +3037,663 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var echarts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! echarts */
-      "./node_modules/echarts/index.js");
+      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! src/app/shared/service/users.service */
+      "./src/app/shared/service/users.service.ts");
       /* harmony import */
 
 
-      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/shared/service/admin-stats/hopkin.service */
+      "./src/app/shared/service/admin-stats/hopkin.service.ts");
+      /* harmony import */
+
+
+      var _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! ../../tag-management/tag-management.service */
+      "./src/app/modules/tag-management/tag-management.service.ts");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */
       "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
-      /* harmony import */
-
-
-      var _angular_material_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/material/list */
-      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/list.js");
-      /* harmony import */
-
-
-      var _angular_material_divider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/divider */
-      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/divider.js");
-      /* harmony import */
-
-
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @swimlane/ngx-datatable */
-      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
       var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      /* harmony import */
+
+
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @swimlane/ngx-datatable */
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
+      "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
+      /* harmony import */
+
+
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
+      "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
 
       var _c0 = ["expandableTable"];
 
-      function HopkinsComponent_ng_template_45_Template(rf, ctx) {
+      function HopkinsComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 24);
+        }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div");
+        if (rf & 2) {
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Address");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Test");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("chartData", ctx_r0.chartData);
         }
       }
 
-      function HopkinsComponent_ng_template_47_Template(rf, ctx) {
+      function HopkinsComponent_app_summary_metrics_2_Template(rf, ctx) {
         if (rf & 1) {
-          var _r23 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 25);
+        }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "a", 25);
+        if (rf & 2) {
+          var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function HopkinsComponent_ng_template_47_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r23);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("summaryMetricsData", ctx_r1.summaryMetrics);
+        }
+      }
 
-            var row_r20 = ctx.row;
+      function HopkinsComponent_ng_template_12_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 26);
 
-            var ctx_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
-            return ctx_r22.toggleExpandRow(row_r20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Address");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Test");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function HopkinsComponent_ng_template_14_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 27);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HopkinsComponent_ng_template_14_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r29);
+
+            var row_r26 = ctx.row;
+
+            var ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r28.toggleExpandRow(row_r26);
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r21 = ctx.expanded;
+          var expanded_r27 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("datatable-icon-right", !expanded_r21)("datatable-icon-down", expanded_r21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r27)("datatable-icon-down", expanded_r27);
         }
       }
 
-      function HopkinsComponent_ng_template_49_Template(rf, ctx) {
+      function HopkinsComponent_ngx_datatable_column_15_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Publisher ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function HopkinsComponent_ng_template_50_Template(rf, ctx) {
+      function HopkinsComponent_ngx_datatable_column_15_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "date");
 
-        if (rf & 2) {
-          var value_r25 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](value_r25);
-        }
-      }
-
-      function HopkinsComponent_ng_template_52_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Tag ");
-        }
-      }
-
-      function HopkinsComponent_ng_template_53_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r27 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](value_r27);
-        }
-      }
-
-      function HopkinsComponent_ng_template_55_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Total Searches ");
-        }
-      }
-
-      function HopkinsComponent_ng_template_56_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "number");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r29 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, value_r29));
-        }
-      }
-
-      function HopkinsComponent_ng_template_58_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Monetized Searches ");
-        }
-      }
-
-      function HopkinsComponent_ng_template_59_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "number");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r31 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, value_r31));
-        }
-      }
-
-      function HopkinsComponent_ng_template_61_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Clicks ");
-        }
-      }
-
-      function HopkinsComponent_ng_template_62_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "number");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
           var value_r33 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, value_r33));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r33));
         }
       }
 
-      function HopkinsComponent_ng_template_64_Template(rf, ctx) {
+      function HopkinsComponent_ngx_datatable_column_15_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 28);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, HopkinsComponent_ngx_datatable_column_15_ng_template_1_Template, 1, 0, "ng-template", 16);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, HopkinsComponent_ngx_datatable_column_15_ng_template_2_Template, 3, 3, "ng-template", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var column_r34 = ctx.column;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](column_r34.name);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
         }
       }
 
-      function HopkinsComponent_ng_template_65_Template(rf, ctx) {
+      function HopkinsComponent_ngx_datatable_column_16_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "strong", 26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
+        }
+      }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](1, "percent");
+      function HopkinsComponent_ngx_datatable_column_16_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var row_r36 = ctx.row;
+          var value_r37 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("innerHTML", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](1, 1, row_r36["clicks"] / row_r36["totalSearches"], "2.2-2"), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeHtml"]);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r37);
         }
       }
 
-      function HopkinsComponent_ng_template_67_Template(rf, ctx) {
+      function HopkinsComponent_ngx_datatable_column_16_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Revenue ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 29);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, HopkinsComponent_ngx_datatable_column_16_ng_template_1_Template, 1, 0, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, HopkinsComponent_ngx_datatable_column_16_ng_template_2_Template, 2, 1, "ng-template", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function HopkinsComponent_ng_template_68_Template(rf, ctx) {
+      function HopkinsComponent_ng_template_18_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
+        }
+      }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+      function HopkinsComponent_ng_template_19_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
           var value_r39 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](2, 1, value_r39, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r39);
+        }
+      }
+
+      function HopkinsComponent_ng_template_21_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+        }
+      }
+
+      function HopkinsComponent_ng_template_22_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r41 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r41));
+        }
+      }
+
+      function HopkinsComponent_ng_template_24_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+        }
+      }
+
+      function HopkinsComponent_ng_template_25_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r43 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r43));
+        }
+      }
+
+      function HopkinsComponent_ng_template_27_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Coverage ");
+        }
+      }
+
+      function HopkinsComponent_ng_template_28_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r45 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r45));
+        }
+      }
+
+      function HopkinsComponent_ng_template_30_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " PPC ");
+        }
+      }
+
+      function HopkinsComponent_ng_template_31_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r47 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r47));
+        }
+      }
+
+      function HopkinsComponent_ng_template_33_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " TQ ");
+        }
+      }
+
+      function HopkinsComponent_ng_template_34_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r49 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r49));
+        }
+      }
+
+      function HopkinsComponent_ng_template_36_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
+        }
+      }
+
+      function HopkinsComponent_ng_template_37_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r51 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r51) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+        }
+      }
+
+      function HopkinsComponent_ng_template_39_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function HopkinsComponent_ng_template_40_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r53 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r53, "USD"));
         }
       }
 
       var HopkinsComponent = /*#__PURE__*/function () {
-        function HopkinsComponent() {
+        function HopkinsComponent(cdr, userService, hopkinService, tagService) {
           _classCallCheck(this, HopkinsComponent);
 
-          this.rows = [{
-            name: 'Greg',
-            tag: 'XML Hopkins',
-            totalSearches: '759123',
-            monetizedSearches: '431231',
-            revenue: '19623',
-            clicks: 50351
-          }];
-          this.columns = [{
-            prop: 'name'
-          }, {
-            name: 'Gender'
-          }];
+          this.cdr = cdr;
+          this.userService = userService;
+          this.hopkinService = hopkinService;
+          this.tagService = tagService;
+          this.range = {
+            startDate: '',
+            endDate: ''
+          };
+          this.loadingIndicator = true;
+          this.groupFlag = false;
           this.expanded = {};
+          this.tagList = [];
+          this.selectedCompany = this.getSelectedCompanyStored();
         }
 
         _createClass(HopkinsComponent, [{
-          key: "ngOnInit",
-          value: function ngOnInit() {
-            var revenueByDayArray = Array.from({
-              length: 20
-            }, function () {
-              return Math.floor(Math.random() * (8000 - 4000) + 4000);
-            });
-            var searchesPerDay = Array.from({
-              length: 20
-            }, function () {
-              return Math.floor(Math.random() * (100000 - 40000) + 40000);
-            });
-            this.setChartOptions(10000, 100000, ['Nov 1, Nov 2, Nov 3, Nov 4', 'Nov 5', 'Nov 5', 'Nov 6', 'Nov 7', 'Nov 8', 'Nov 9', 'Nov 10', 'Nov 11', 'Nov 12', 'Nov 13', 'Nov 14', 'Nov 15', 'Nov 16', 'Nov 17', 'Nov 18', 'Nov 19', 'Nov 20'], revenueByDayArray, searchesPerDay);
+          key: "ngAfterViewInit",
+          value: function ngAfterViewInit() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
+              return regeneratorRuntime.wrap(function _callee18$(_context18) {
+                while (1) {
+                  switch (_context18.prev = _context18.next) {
+                    case 0:
+                      _context18.next = 2;
+                      return this.getCompanyTags(this.selectedCompany);
+
+                    case 2:
+                      this.tagList = _context18.sent;
+                      this.rows = [];
+                      _context18.next = 6;
+                      return this.getAllHopkinStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 6:
+                      this.rows = _context18.sent;
+                      _context18.next = 9;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 9:
+                      this.chartData = _context18.sent;
+                      _context18.next = 12;
+                      return this.getSummaryMetrics(this.selectedCompany);
+
+                    case 12:
+                      this.summaryMetrics = _context18.sent;
+                      this.refreshTable();
+
+                    case 14:
+                    case "end":
+                      return _context18.stop();
+                  }
+                }
+              }, _callee18, this);
+            }));
+          }
+        }, {
+          key: "getAllHopkinStats",
+          value: function getAllHopkinStats(company, startDate, endDate) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
+              var response, _iterator18, _step18, tagL, _iterator19, _step19, tagSub;
+
+              return regeneratorRuntime.wrap(function _callee19$(_context19) {
+                while (1) {
+                  switch (_context19.prev = _context19.next) {
+                    case 0:
+                      _context19.next = 2;
+                      return this.hopkinService.getHopkinStats(company, startDate, endDate).toPromise();
+
+                    case 2:
+                      response = _context19.sent;
+                      console.log('response:', response);
+                      this.loadingIndicator = false;
+                      this.allStats = response.stats;
+                      this.allStats.map(function (resStat) {
+                        resStat.publisher = "No Publisher";
+                        resStat.tagname = "No Tag";
+                      });
+                      _iterator18 = _createForOfIteratorHelper(this.tagList);
+
+                      try {
+                        for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
+                          tagL = _step18.value;
+
+                          if (tagL.tag.advertiser == "hopkins") {
+                            _iterator19 = _createForOfIteratorHelper(tagL.tag.subids);
+
+                            try {
+                              for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
+                                tagSub = _step19.value;
+
+                                if (tagSub.filterTag == "Contains") {
+                                  this.allStats.map(function (stat) {
+                                    if (stat.subid.includes(tagSub.subid)) {
+                                      stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "StartsWith") {
+                                  this.allStats.map(function (stat_1) {
+                                    if (stat_1.subid.startsWith(tagSub.subid)) {
+                                      stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_1.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "EndsWith") {
+                                  this.allStats.map(function (stat_2) {
+                                    if (stat_2.subid.endsWith(tagSub.subid)) {
+                                      stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_2.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "ExactValue") {
+                                  this.allStats.map(function (stat_3) {
+                                    if (stat_3.subid == tagSub.subid) {
+                                      stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_3.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                }
+                              }
+                            } catch (err) {
+                              _iterator19.e(err);
+                            } finally {
+                              _iterator19.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator18.e(err);
+                      } finally {
+                        _iterator18.f();
+                      }
+
+                      return _context19.abrupt("return", this.allStats);
+
+                    case 10:
+                    case "end":
+                      return _context19.stop();
+                  }
+                }
+              }, _callee19, this);
+            }));
+          }
+        }, {
+          key: "groupProvider",
+          value: function groupProvider() {
+            var helperSummary = {};
+            var groupData = this.allStats.reduce(function (r, o) {
+              var key = o.publisher;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
+                helperSummary[key].ppc += parseFloat(o.ppc ? o.ppc : 0);
+                helperSummary[key].tq += parseFloat(o.tq ? o.tq : 0);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator20 = _createForOfIteratorHelper(groupData),
+                _step20;
+
+            try {
+              for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+                var group = _step20.value;
+                group.split = group.split / group.counter;
+              }
+            } catch (err) {
+              _iterator20.e(err);
+            } finally {
+              _iterator20.f();
+            }
+
+            this.rows = groupData;
+            this.groupFlag = true;
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "backProvider",
+          value: function backProvider() {
+            this.rows = this.allStats;
+            this.groupFlag = false;
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "updateReportingFiltering",
+          value: function updateReportingFiltering(range) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
+              return regeneratorRuntime.wrap(function _callee20$(_context20) {
+                while (1) {
+                  switch (_context20.prev = _context20.next) {
+                    case 0:
+                      this.range = range;
+                      _context20.next = 3;
+                      return this.getAllHopkinStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 3:
+                      this.rows = _context20.sent;
+                      _context20.next = 6;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 6:
+                      this.chartData = _context20.sent;
+                      _context20.next = 9;
+                      return this.getSummaryMetrics(this.selectedCompany);
+
+                    case 9:
+                      this.summaryMetrics = _context20.sent;
+                      this.groupFlag = false;
+                      this.refreshTable();
+
+                    case 12:
+                    case "end":
+                      return _context20.stop();
+                  }
+                }
+              }, _callee20, this);
+            }));
+          } //Gets the Selected Company from Local Storage
+
+        }, {
+          key: "getSelectedCompanyStored",
+          value: function getSelectedCompanyStored() {
+            return this.userService.getSelectedCompanyFromLocalStorage();
           }
         }, {
           key: "toggleExpandRow",
@@ -3360,90 +3707,110 @@
             console.log('Detail Toggled', event);
           }
         }, {
-          key: "updateReportingFiltering",
-          value: function updateReportingFiltering(range) {
-            // this.range = range;
-            // this.getAllPerionStats(
-            //   'manic_perion',
-            //   this.range.startDate,
-            //   this.range.endDate
-            // );
-            console.log('Report');
+          key: "refreshTable",
+          value: function refreshTable() {
+            this.cdr.markForCheck();
+          } //get Tags with selected company
+
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(selectedCompany) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
+              var companyId, response;
+              return regeneratorRuntime.wrap(function _callee21$(_context21) {
+                while (1) {
+                  switch (_context21.prev = _context21.next) {
+                    case 0:
+                      companyId = selectedCompany.split("/")[1];
+                      _context21.prev = 1;
+                      _context21.next = 4;
+                      return this.tagService.getCompanyTags(companyId).toPromise();
+
+                    case 4:
+                      response = _context21.sent;
+                      return _context21.abrupt("return", response);
+
+                    case 8:
+                      _context21.prev = 8;
+                      _context21.t0 = _context21["catch"](1);
+                      return _context21.abrupt("return", _context21.t0);
+
+                    case 11:
+                    case "end":
+                      return _context21.stop();
+                  }
+                }
+              }, _callee21, this, [[1, 8]]);
+            }));
           }
         }, {
-          key: "setChartOptions",
-          value: function setChartOptions(maxRevenue, maxSearches, daysArray, revenueByDayArray, searchesPerDay) {
-            this.chartDom = document.getElementById('main');
-            this.myChart = echarts__WEBPACK_IMPORTED_MODULE_1__["init"](this.chartDom);
-            this.option = {
-              tooltip: {
-                trigger: 'axis',
-                axisPointer: {
-                  type: 'cross',
-                  crossStyle: {
-                    color: '#999'
+          key: "getChartMetrics",
+          value: function getChartMetrics(company, startDate, endDate) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
+              var response;
+              return regeneratorRuntime.wrap(function _callee22$(_context22) {
+                while (1) {
+                  switch (_context22.prev = _context22.next) {
+                    case 0:
+                      _context22.prev = 0;
+                      _context22.next = 3;
+                      return this.hopkinService.getChartMetrics(company, startDate, endDate).toPromise();
+
+                    case 3:
+                      response = _context22.sent;
+                      return _context22.abrupt("return", response);
+
+                    case 7:
+                      _context22.prev = 7;
+                      _context22.t0 = _context22["catch"](0);
+                      return _context22.abrupt("return", _context22.t0);
+
+                    case 10:
+                    case "end":
+                      return _context22.stop();
                   }
                 }
-              },
-              toolbox: {
-                feature: {
-                  dataView: {
-                    show: true,
-                    readOnly: false
-                  },
-                  magicType: {
-                    show: true,
-                    type: ['line', 'bar']
-                  },
-                  restore: {
-                    show: true
-                  },
-                  saveAsImage: {
-                    show: true
+              }, _callee22, this, [[0, 7]]);
+            }));
+          }
+        }, {
+          key: "getSummaryMetrics",
+          value: function getSummaryMetrics(company) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
+              var response, allSummary, currentPercentPace, lastPercentPace;
+              return regeneratorRuntime.wrap(function _callee23$(_context23) {
+                while (1) {
+                  switch (_context23.prev = _context23.next) {
+                    case 0:
+                      _context23.next = 2;
+                      return this.hopkinService.getSummaryMetrics(company).toPromise();
+
+                    case 2:
+                      response = _context23.sent;
+                      allSummary = {};
+                      currentPercentPace = 0;
+                      lastPercentPace = 0;
+
+                      if (response.summary[0].lastMonthStat[0].profitPace != 0) {
+                        currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
+                      }
+
+                      if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
+                        lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
+                      }
+
+                      response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
+                      response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
+                      allSummary['summary'] = response.summary;
+                      return _context23.abrupt("return", allSummary);
+
+                    case 12:
+                    case "end":
+                      return _context23.stop();
                   }
                 }
-              },
-              legend: {
-                data: ['Revenue', 'Searches']
-              },
-              xAxis: [{
-                type: 'category',
-                data: daysArray,
-                axisPointer: {
-                  type: 'shadow'
-                }
-              }],
-              yAxis: [{
-                type: 'value',
-                name: 'Revenue',
-                min: 0,
-                max: maxRevenue,
-                interval: 25000,
-                axisLabel: {
-                  formatter: '${value}'
-                }
-              }, {
-                type: 'value',
-                name: 'Searches',
-                min: 0,
-                max: maxSearches,
-                interval: 100000,
-                axisLabel: {
-                  formatter: '{value}'
-                }
-              }],
-              series: [{
-                name: 'Revenue',
-                type: 'bar',
-                data: revenueByDayArray
-              }, {
-                name: 'Searches',
-                type: 'line',
-                yAxisIndex: 1,
-                data: searchesPerDay
-              }]
-            };
-            this.option && this.myChart.setOption(this.option);
+              }, _callee23, this);
+            }));
           }
         }]);
 
@@ -3451,272 +3818,218 @@
       }();
 
       HopkinsComponent.ɵfac = function HopkinsComponent_Factory(t) {
-        return new (t || HopkinsComponent)();
+        return new (t || HopkinsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_3__["HopkinService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]));
       };
 
-      HopkinsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+      HopkinsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
         type: HopkinsComponent,
         selectors: [["app-hopkins"]],
         viewQuery: function HopkinsComponent_Query(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, true);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
           }
 
           if (rf & 2) {
             var _t;
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 69,
-        vars: 13,
-        consts: [[3, "onDatesPicked"], ["id", "main", 2, "width", "100%", "height", "300px"], [1, "row"], [1, "col-xl-6"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], [1, "material", "fullscreen", "expandable", 2, "top", "52px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "name"], ["ngx-datatable-header-template", ""], ["name", "tag"], ["name", "totalSearches"], ["name", "monetizedSearches"], ["name", "clicks"], ["name", "CTR"], ["name", "revenue"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], [3, "innerHTML"]],
+        decls: 41,
+        vars: 19,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row", "px-6"], [1, "btn", "btn-sm", "btn-primary", "mx-3", 3, "click"], [1, "btn", "btn-sm", "btn-dark", "mx-3", 3, "click"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth"], ["ngx-datatable-header-template", ""], ["name", "searches"], ["name", "clicks"], ["name", "coverage"], ["name", "ppc"], ["name", "tq"], ["name", "split", 3, "minWidth"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"]],
         template: function HopkinsComponent_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("onDatesPicked", function HopkinsComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("onDatesPicked", function HopkinsComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) {
               return ctx.updateReportingFiltering($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, HopkinsComponent_app_reporting_revenue_chart_1_Template, 1, 1, "app-reporting-revenue-chart", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, HopkinsComponent_app_summary_metrics_2_Template, 1, 1, "app-summary-metrics", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "button", 4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HopkinsComponent_Template_button_click_4_listener() {
+              return ctx.groupProvider();
+            });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Group ");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "h2", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Month to Date Stats");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "button", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function HopkinsComponent_Template_button_click_6_listener() {
+              return ctx.backProvider();
+            });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, " Back ");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "mat-list");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "ngx-datatable", 6, 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-list-item");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "ngx-datatable-row-detail", 8, 9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "Revenue: $0");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Revenue Pace: $0");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Profit: $0");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Profit Pace: $0");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](24, "Percentage Change: +0%");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 3);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "div", 4);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 5);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 6);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "h2", 7);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Last Month Stats");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "div", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "mat-list");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "Revenue: $0");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, "Profit: $0");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](38, "mat-divider");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "mat-list-item");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "Percentage Change: +11%");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "ngx-datatable", 9, 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "ngx-datatable-row-detail", 11, 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("toggle", function HopkinsComponent_Template_ngx_datatable_row_detail_toggle_43_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function HopkinsComponent_Template_ngx_datatable_row_detail_toggle_10_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](45, HopkinsComponent_ng_template_45_Template, 6, 0, "ng-template", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](12, HopkinsComponent_ng_template_12_Template, 6, 0, "ng-template", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](46, "ngx-datatable-column", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "ngx-datatable-column", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](47, HopkinsComponent_ng_template_47_Template, 1, 4, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, HopkinsComponent_ng_template_14_Template, 1, 4, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "ngx-datatable-column", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, HopkinsComponent_ngx_datatable_column_15_Template, 3, 1, "ngx-datatable-column", 13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](49, HopkinsComponent_ng_template_49_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, HopkinsComponent_ngx_datatable_column_16_Template, 3, 0, "ngx-datatable-column", 14);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](50, HopkinsComponent_ng_template_50_Template, 2, 1, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable-column", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](18, HopkinsComponent_ng_template_18_Template, 1, 0, "ng-template", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "ngx-datatable-column", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](19, HopkinsComponent_ng_template_19_Template, 2, 1, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](52, HopkinsComponent_ng_template_52_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](53, HopkinsComponent_ng_template_53_Template, 2, 1, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "ngx-datatable-column", 17);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, HopkinsComponent_ng_template_21_Template, 1, 0, "ng-template", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "ngx-datatable-column", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, HopkinsComponent_ng_template_22_Template, 3, 3, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](55, HopkinsComponent_ng_template_55_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](56, HopkinsComponent_ng_template_56_Template, 3, 3, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](23, "ngx-datatable-column", 18);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, HopkinsComponent_ng_template_24_Template, 1, 0, "ng-template", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "ngx-datatable-column", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, HopkinsComponent_ng_template_25_Template, 3, 3, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](58, HopkinsComponent_ng_template_58_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](59, HopkinsComponent_ng_template_59_Template, 3, 3, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](26, "ngx-datatable-column", 19);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, HopkinsComponent_ng_template_27_Template, 1, 0, "ng-template", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](60, "ngx-datatable-column", 21);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, HopkinsComponent_ng_template_28_Template, 3, 3, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](61, HopkinsComponent_ng_template_61_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](62, HopkinsComponent_ng_template_62_Template, 3, 3, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](29, "ngx-datatable-column", 20);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, HopkinsComponent_ng_template_30_Template, 1, 0, "ng-template", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "ngx-datatable-column", 22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, HopkinsComponent_ng_template_31_Template, 3, 3, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](64, HopkinsComponent_ng_template_64_Template, 2, 1, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](65, HopkinsComponent_ng_template_65_Template, 2, 4, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](32, "ngx-datatable-column", 21);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, HopkinsComponent_ng_template_33_Template, 1, 0, "ng-template", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "ngx-datatable-column", 23);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, HopkinsComponent_ng_template_34_Template, 3, 3, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](67, HopkinsComponent_ng_template_67_Template, 1, 0, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](68, HopkinsComponent_ng_template_68_Template, 3, 4, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "ngx-datatable-column", 22);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, HopkinsComponent_ng_template_36_Template, 1, 0, "ng-template", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, HopkinsComponent_ng_template_37_Template, 4, 6, "ng-template", 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "ngx-datatable-column", 23);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, HopkinsComponent_ng_template_39_Template, 1, 0, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, HopkinsComponent_ng_template_40_Template, 3, 4, "ng-template", 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](41);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("scrollbarH", true)("rows", ctx.rows);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.chartData);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("rowHeight", 100);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 30)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](18);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 35);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_2__["ReportingFilteringComponent"], _angular_material_list__WEBPACK_IMPORTED_MODULE_3__["MatList"], _angular_material_list__WEBPACK_IMPORTED_MODULE_3__["MatListItem"], _angular_material_divider__WEBPACK_IMPORTED_MODULE_4__["MatDivider"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DataTableColumnHeaderDirective"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_5__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_8__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_9__["SummaryMetricsComponent"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["CurrencyPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL2hvcGtpbnMvaG9wa2lucy5jb21wb25lbnQuc2NzcyJ9 */"]
       });
       /*@__PURE__*/
 
       (function () {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HopkinsComponent, [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](HopkinsComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
           args: [{
             selector: 'app-hopkins',
             templateUrl: './hopkins.component.html',
             styleUrls: ['./hopkins.component.scss']
           }]
         }], function () {
-          return [];
+          return [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+          }, {
+            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"]
+          }, {
+            type: src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_3__["HopkinService"]
+          }, {
+            type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]
+          }];
         }, {
           table: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
             args: ['expandableTable']
           }]
         });
@@ -4848,40 +5161,40 @@
         _createClass(LyonsComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee18() {
-              return regeneratorRuntime.wrap(function _callee18$(_context18) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
+              return regeneratorRuntime.wrap(function _callee24$(_context24) {
                 while (1) {
-                  switch (_context18.prev = _context18.next) {
+                  switch (_context24.prev = _context24.next) {
                     case 0:
-                      _context18.next = 2;
+                      _context24.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context18.sent;
+                      this.tagList = _context24.sent;
                       this.rows = [];
-                      _context18.next = 6;
+                      _context24.next = 6;
                       return this.getAllLyonStats(this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context18.sent;
-                      _context18.next = 9;
+                      this.rows = _context24.sent;
+                      _context24.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context18.sent;
-                      _context18.next = 12;
+                      this.chartData = _context24.sent;
+                      _context24.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetricsData = _context18.sent;
+                      this.summaryMetricsData = _context24.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context18.stop();
+                      return _context24.stop();
                   }
                 }
-              }, _callee18, this);
+              }, _callee24, this);
             }));
           }
         }, {
@@ -4898,10 +5211,10 @@
         }, {
           key: "routeTester",
           value: function routeTester() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
-              return regeneratorRuntime.wrap(function _callee19$(_context19) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
+              return regeneratorRuntime.wrap(function _callee25$(_context25) {
                 while (1) {
-                  switch (_context19.prev = _context19.next) {
+                  switch (_context25.prev = _context25.next) {
                     case 0:
                       console.log('Testing Route');
                       this.lyonService.testingRoute().subscribe(function (response) {
@@ -4912,10 +5225,10 @@
 
                     case 2:
                     case "end":
-                      return _context19.stop();
+                      return _context25.stop();
                   }
                 }
-              }, _callee19, this);
+              }, _callee25, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -4928,51 +5241,51 @@
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee20() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
               var companyId, response;
-              return regeneratorRuntime.wrap(function _callee20$(_context20) {
+              return regeneratorRuntime.wrap(function _callee26$(_context26) {
                 while (1) {
-                  switch (_context20.prev = _context20.next) {
+                  switch (_context26.prev = _context26.next) {
                     case 0:
                       companyId = selectedCompany.split("/")[1];
-                      _context20.prev = 1;
-                      _context20.next = 4;
+                      _context26.prev = 1;
+                      _context26.next = 4;
                       return this.tagService.getCompanyTags(companyId).toPromise();
 
                     case 4:
-                      response = _context20.sent;
-                      return _context20.abrupt("return", response);
+                      response = _context26.sent;
+                      return _context26.abrupt("return", response);
 
                     case 8:
-                      _context20.prev = 8;
-                      _context20.t0 = _context20["catch"](1);
-                      return _context20.abrupt("return", _context20.t0);
+                      _context26.prev = 8;
+                      _context26.t0 = _context26["catch"](1);
+                      return _context26.abrupt("return", _context26.t0);
 
                     case 11:
                     case "end":
-                      return _context20.stop();
+                      return _context26.stop();
                   }
                 }
-              }, _callee20, this, [[1, 8]]);
+              }, _callee26, this, [[1, 8]]);
             }));
           } //get Stat all
 
         }, {
           key: "getAllLyonStats",
           value: function getAllLyonStats(startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee21() {
-              var response, _iterator18, _step18, tagL, _iterator19, _step19, tagSub;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
+              var response, _iterator21, _step21, tagL, _iterator22, _step22, tagSub;
 
-              return regeneratorRuntime.wrap(function _callee21$(_context21) {
+              return regeneratorRuntime.wrap(function _callee27$(_context27) {
                 while (1) {
-                  switch (_context21.prev = _context21.next) {
+                  switch (_context27.prev = _context27.next) {
                     case 0:
-                      _context21.prev = 0;
-                      _context21.next = 3;
+                      _context27.prev = 0;
+                      _context27.next = 3;
                       return this.lyonService.getAllStats(startDate, endDate).toPromise();
 
                     case 3:
-                      response = _context21.sent;
+                      response = _context27.sent;
                       this.loadingIndicator = false;
                       this.allstat = response;
                       this.allstat.map(function (resStat) {
@@ -4980,18 +5293,18 @@
                         resStat.tagname = "No Tag";
                       }); // var allLyonStat = [];
 
-                      _iterator18 = _createForOfIteratorHelper(this.tagList);
+                      _iterator21 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
-                          tagL = _step18.value;
+                        for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+                          tagL = _step21.value;
 
                           if (tagL.tag.advertiser == "lyons") {
-                            _iterator19 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator22 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
-                                tagSub = _step19.value;
+                              for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                                tagSub = _step22.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allstat.map(function (stat) {
@@ -5024,31 +5337,31 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator19.e(err);
+                              _iterator22.e(err);
                             } finally {
-                              _iterator19.f();
+                              _iterator22.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator18.e(err);
+                        _iterator21.e(err);
                       } finally {
-                        _iterator18.f();
+                        _iterator21.f();
                       }
 
-                      return _context21.abrupt("return", this.allstat);
+                      return _context27.abrupt("return", this.allstat);
 
                     case 12:
-                      _context21.prev = 12;
-                      _context21.t0 = _context21["catch"](0);
-                      return _context21.abrupt("return", _context21.t0);
+                      _context27.prev = 12;
+                      _context27.t0 = _context27["catch"](0);
+                      return _context27.abrupt("return", _context27.t0);
 
                     case 15:
                     case "end":
-                      return _context21.stop();
+                      return _context27.stop();
                   }
                 }
-              }, _callee21, this, [[0, 12]]);
+              }, _callee27, this, [[0, 12]]);
             }));
           }
         }, {
@@ -5079,20 +5392,20 @@
               return r;
             }, []);
 
-            var _iterator20 = _createForOfIteratorHelper(groupData),
-                _step20;
+            var _iterator23 = _createForOfIteratorHelper(groupData),
+                _step23;
 
             try {
-              for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
-                var group = _step20.value;
+              for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+                var group = _step23.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator20.e(err);
+              _iterator23.e(err);
             } finally {
-              _iterator20.f();
+              _iterator23.f();
             }
 
             this.rows = groupData;
@@ -5118,37 +5431,37 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
-              return regeneratorRuntime.wrap(function _callee22$(_context22) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee28() {
+              return regeneratorRuntime.wrap(function _callee28$(_context28) {
                 while (1) {
-                  switch (_context22.prev = _context22.next) {
+                  switch (_context28.prev = _context28.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context22.next = 3;
+                      _context28.next = 3;
                       return this.getAllLyonStats(this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context22.sent;
-                      _context22.next = 6;
+                      this.rows = _context28.sent;
+                      _context28.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context22.sent;
-                      _context22.next = 9;
+                      this.chartData = _context28.sent;
+                      _context28.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetricsData = _context22.sent;
+                      this.summaryMetricsData = _context28.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context22.stop();
+                      return _context28.stop();
                   }
                 }
-              }, _callee22, this);
+              }, _callee28, this);
             }));
           }
         }, {
@@ -5159,19 +5472,19 @@
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee23() {
-              var response, dayInCurrentMonth, dayInBeforeMonth, dayInTwoBeforeMonth, helperSummary, resultSummary, monthRevenue, monthProfit, monthRevenuePace, profitPace, _iterator21, _step21, sumData, helperBeforeSummary, resultBeforeSummary, monthBeforeRevenue, monthBeforeProfit, monthBeforeRevenuePace, profitBeforePace, _iterator22, _step22, sumBeforeData, helperTwoBeforeSummary, resultTwoBeforeSummary, monthTwoBeforeRevenue, monthTwoBeforeProfit, monthTwoBeforeRevenuePace, profitTwoBeforePace, _iterator23, _step23, sumTwoBeforeData, currentPercentPace, lastPercentPace, summaryFinalData, allSummary;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee29() {
+              var response, dayInCurrentMonth, dayInBeforeMonth, dayInTwoBeforeMonth, helperSummary, resultSummary, monthRevenue, monthProfit, monthRevenuePace, profitPace, _iterator24, _step24, sumData, helperBeforeSummary, resultBeforeSummary, monthBeforeRevenue, monthBeforeProfit, monthBeforeRevenuePace, profitBeforePace, _iterator25, _step25, sumBeforeData, helperTwoBeforeSummary, resultTwoBeforeSummary, monthTwoBeforeRevenue, monthTwoBeforeProfit, monthTwoBeforeRevenuePace, profitTwoBeforePace, _iterator26, _step26, sumTwoBeforeData, currentPercentPace, lastPercentPace, summaryFinalData, allSummary;
 
-              return regeneratorRuntime.wrap(function _callee23$(_context23) {
+              return regeneratorRuntime.wrap(function _callee29$(_context29) {
                 while (1) {
-                  switch (_context23.prev = _context23.next) {
+                  switch (_context29.prev = _context29.next) {
                     case 0:
-                      _context23.prev = 0;
-                      _context23.next = 3;
+                      _context29.prev = 0;
+                      _context29.next = 3;
                       return this.lyonService.getSummaryMetrics(company).toPromise();
 
                     case 3:
-                      response = _context23.sent;
+                      response = _context29.sent;
                       this.currentMonthData = response[0].summaryMetrics;
                       this.beforeMonthData = response[0].lastMonthStat;
                       this.twoBeforeMonthData = response[0].twoLastMonthStat;
@@ -5228,11 +5541,11 @@
                       monthProfit = 0;
                       monthRevenuePace = 0;
                       profitPace = 0;
-                      _iterator21 = _createForOfIteratorHelper(resultSummary);
+                      _iterator24 = _createForOfIteratorHelper(resultSummary);
 
                       try {
-                        for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
-                          sumData = _step21.value;
+                        for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+                          sumData = _step24.value;
                           monthRevenue += sumData.revenue;
                           monthProfit += sumData.revenue * (100 - sumData.split) * 0.01;
                           monthRevenuePace += sumData.revenue / resultSummary.length * dayInCurrentMonth;
@@ -5264,9 +5577,9 @@
                         // });
 
                       } catch (err) {
-                        _iterator21.e(err);
+                        _iterator24.e(err);
                       } finally {
-                        _iterator21.f();
+                        _iterator24.f();
                       }
 
                       helperBeforeSummary = {};
@@ -5294,11 +5607,11 @@
                       monthBeforeProfit = 0;
                       monthBeforeRevenuePace = 0;
                       profitBeforePace = 0;
-                      _iterator22 = _createForOfIteratorHelper(resultBeforeSummary);
+                      _iterator25 = _createForOfIteratorHelper(resultBeforeSummary);
 
                       try {
-                        for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
-                          sumBeforeData = _step22.value;
+                        for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+                          sumBeforeData = _step25.value;
                           monthBeforeRevenue += sumBeforeData.revenue;
                           monthBeforeProfit += sumBeforeData.revenue * (100 - sumBeforeData.split) * 0.01;
                           monthBeforeRevenuePace += sumBeforeData.revenue / resultBeforeSummary.length * dayInBeforeMonth;
@@ -5330,9 +5643,9 @@
                         // });
 
                       } catch (err) {
-                        _iterator22.e(err);
+                        _iterator25.e(err);
                       } finally {
-                        _iterator22.f();
+                        _iterator25.f();
                       }
 
                       helperTwoBeforeSummary = {};
@@ -5360,20 +5673,20 @@
                       monthTwoBeforeProfit = 0;
                       monthTwoBeforeRevenuePace = 0;
                       profitTwoBeforePace = 0;
-                      _iterator23 = _createForOfIteratorHelper(resultTwoBeforeSummary);
+                      _iterator26 = _createForOfIteratorHelper(resultTwoBeforeSummary);
 
                       try {
-                        for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
-                          sumTwoBeforeData = _step23.value;
+                        for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+                          sumTwoBeforeData = _step26.value;
                           monthTwoBeforeRevenue += sumTwoBeforeData.revenue;
                           monthTwoBeforeProfit += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01;
                           monthTwoBeforeRevenuePace += sumTwoBeforeData.revenue / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
                           profitTwoBeforePace += sumTwoBeforeData.revenue * (100 - sumTwoBeforeData.split) * 0.01 / resultTwoBeforeSummary.length * dayInTwoBeforeMonth;
                         }
                       } catch (err) {
-                        _iterator23.e(err);
+                        _iterator26.e(err);
                       } finally {
-                        _iterator23.f();
+                        _iterator26.f();
                       }
 
                       currentPercentPace = 0;
@@ -5406,37 +5719,37 @@
                       });
                       allSummary = {};
                       allSummary['summary'] = summaryFinalData;
-                      return _context23.abrupt("return", allSummary);
+                      return _context29.abrupt("return", allSummary);
 
                     case 48:
-                      _context23.prev = 48;
-                      _context23.t0 = _context23["catch"](0);
-                      return _context23.abrupt("return", _context23.t0);
+                      _context29.prev = 48;
+                      _context29.t0 = _context29["catch"](0);
+                      return _context29.abrupt("return", _context29.t0);
 
                     case 51:
                     case "end":
-                      return _context23.stop();
+                      return _context29.stop();
                   }
                 }
-              }, _callee23, this, [[0, 48]]);
+              }, _callee29, this, [[0, 48]]);
             }));
           }
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee24() {
-              var response, sortResponse, helperChart, resultChart, revenuePerDayVal, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator24, _step24, resVal;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee30() {
+              var response, sortResponse, helperChart, resultChart, revenuePerDayVal, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator27, _step27, resVal;
 
-              return regeneratorRuntime.wrap(function _callee24$(_context24) {
+              return regeneratorRuntime.wrap(function _callee30$(_context30) {
                 while (1) {
-                  switch (_context24.prev = _context24.next) {
+                  switch (_context30.prev = _context30.next) {
                     case 0:
-                      _context24.prev = 0;
-                      _context24.next = 3;
+                      _context30.prev = 0;
+                      _context30.next = 3;
                       return this.lyonService.getAllStats(startDate, endDate).toPromise();
 
                     case 3:
-                      response = _context24.sent;
+                      response = _context30.sent;
                       sortResponse = response.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
@@ -5505,37 +5818,37 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator24 = _createForOfIteratorHelper(resultChart);
+                      _iterator27 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
-                          resVal = _step24.value;
+                        for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
+                          resVal = _step27.value;
                           revenuePerDayVal.push(resVal.revenue);
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator24.e(err);
+                        _iterator27.e(err);
                       } finally {
-                        _iterator24.f();
+                        _iterator27.f();
                       }
 
                       chartDataValue['revenuePerDay'] = revenuePerDayVal;
                       chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
                       chartDataValue['searchesPerDay'] = searchesPerDayVal;
-                      return _context24.abrupt("return", chartDataValue);
+                      return _context30.abrupt("return", chartDataValue);
 
                     case 20:
-                      _context24.prev = 20;
-                      _context24.t0 = _context24["catch"](0);
-                      return _context24.abrupt("return", _context24.t0);
+                      _context30.prev = 20;
+                      _context30.t0 = _context30["catch"](0);
+                      return _context30.abrupt("return", _context30.t0);
 
                     case 23:
                     case "end":
-                      return _context24.stop();
+                      return _context30.stop();
                   }
                 }
-              }, _callee24, this, [[0, 20]]);
+              }, _callee30, this, [[0, 20]]);
             }));
           }
         }, {
@@ -7651,40 +7964,40 @@
         _createClass(PerionComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee25() {
-              return regeneratorRuntime.wrap(function _callee25$(_context25) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee31() {
+              return regeneratorRuntime.wrap(function _callee31$(_context31) {
                 while (1) {
-                  switch (_context25.prev = _context25.next) {
+                  switch (_context31.prev = _context31.next) {
                     case 0:
-                      _context25.next = 2;
+                      _context31.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context25.sent;
+                      this.tagList = _context31.sent;
                       this.rows = [];
-                      _context25.next = 6;
+                      _context31.next = 6;
                       return this.getAllPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context25.sent;
-                      _context25.next = 9;
+                      this.rows = _context31.sent;
+                      _context31.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context25.sent;
-                      _context25.next = 12;
+                      this.chartData = _context31.sent;
+                      _context31.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context25.sent;
+                      this.summaryMetrics = _context31.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context25.stop();
+                      return _context31.stop();
                   }
                 }
-              }, _callee25, this);
+              }, _callee31, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -7707,10 +8020,10 @@
         }, {
           key: "routeTester",
           value: function routeTester() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
-              return regeneratorRuntime.wrap(function _callee26$(_context26) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee32() {
+              return regeneratorRuntime.wrap(function _callee32$(_context32) {
                 while (1) {
-                  switch (_context26.prev = _context26.next) {
+                  switch (_context32.prev = _context32.next) {
                     case 0:
                       console.log('Testing Route');
                       this.perionService.testingRoute().subscribe(function (response) {
@@ -7721,10 +8034,10 @@
 
                     case 2:
                     case "end":
-                      return _context26.stop();
+                      return _context32.stop();
                   }
                 }
-              }, _callee26, this);
+              }, _callee32, this);
             }));
           }
         }, {
@@ -7739,55 +8052,55 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
-              return regeneratorRuntime.wrap(function _callee27$(_context27) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee33() {
+              return regeneratorRuntime.wrap(function _callee33$(_context33) {
                 while (1) {
-                  switch (_context27.prev = _context27.next) {
+                  switch (_context33.prev = _context33.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context27.next = 3;
+                      _context33.next = 3;
                       return this.getAllPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context27.sent;
-                      _context27.next = 6;
+                      this.rows = _context33.sent;
+                      _context33.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context27.sent;
-                      _context27.next = 9;
+                      this.chartData = _context33.sent;
+                      _context33.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context27.sent;
+                      this.summaryMetrics = _context33.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context27.stop();
+                      return _context33.stop();
                   }
                 }
-              }, _callee27, this);
+              }, _callee33, this);
             }));
           }
         }, {
           key: "getAllPerionStats",
           value: function getAllPerionStats(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee28() {
-              var response, _iterator25, _step25, tagL, _iterator26, _step26, tagSub;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee34() {
+              var response, _iterator28, _step28, tagL, _iterator29, _step29, tagSub;
 
-              return regeneratorRuntime.wrap(function _callee28$(_context28) {
+              return regeneratorRuntime.wrap(function _callee34$(_context34) {
                 while (1) {
-                  switch (_context28.prev = _context28.next) {
+                  switch (_context34.prev = _context34.next) {
                     case 0:
-                      _context28.prev = 0;
-                      _context28.next = 3;
+                      _context34.prev = 0;
+                      _context34.next = 3;
                       return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise();
 
                     case 3:
-                      response = _context28.sent;
+                      response = _context34.sent;
                       // console.log('response:', response);
                       this.loadingIndicator = false;
                       this.allStat = response.stats;
@@ -7795,18 +8108,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator25 = _createForOfIteratorHelper(this.tagList);
+                      _iterator28 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
-                          tagL = _step25.value;
+                        for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+                          tagL = _step28.value;
 
                           if (tagL.tag.advertiser == "perion") {
-                            _iterator26 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator29 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-                                tagSub = _step26.value;
+                              for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
+                                tagSub = _step29.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStat.map(function (stat) {
@@ -7839,31 +8152,31 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator26.e(err);
+                              _iterator29.e(err);
                             } finally {
-                              _iterator26.f();
+                              _iterator29.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator25.e(err);
+                        _iterator28.e(err);
                       } finally {
-                        _iterator25.f();
+                        _iterator28.f();
                       }
 
-                      return _context28.abrupt("return", this.allStat);
+                      return _context34.abrupt("return", this.allStat);
 
                     case 12:
-                      _context28.prev = 12;
-                      _context28.t0 = _context28["catch"](0);
-                      return _context28.abrupt("return", _context28.t0);
+                      _context34.prev = 12;
+                      _context34.t0 = _context34["catch"](0);
+                      return _context34.abrupt("return", _context34.t0);
 
                     case 15:
                     case "end":
-                      return _context28.stop();
+                      return _context34.stop();
                   }
                 }
-              }, _callee28, this, [[0, 12]]);
+              }, _callee34, this, [[0, 12]]);
             }));
           }
         }, {
@@ -7894,20 +8207,20 @@
               return r;
             }, []);
 
-            var _iterator27 = _createForOfIteratorHelper(groupData),
-                _step27;
+            var _iterator30 = _createForOfIteratorHelper(groupData),
+                _step30;
 
             try {
-              for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
-                var group = _step27.value;
+              for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
+                var group = _step30.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator27.e(err);
+              _iterator30.e(err);
             } finally {
-              _iterator27.f();
+              _iterator30.f();
             }
 
             this.rows = groupData;
@@ -7929,18 +8242,18 @@
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee29() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee35() {
               var response, allSummary, currentPercentPace, lastPercentPace;
-              return regeneratorRuntime.wrap(function _callee29$(_context29) {
+              return regeneratorRuntime.wrap(function _callee35$(_context35) {
                 while (1) {
-                  switch (_context29.prev = _context29.next) {
+                  switch (_context35.prev = _context35.next) {
                     case 0:
-                      _context29.prev = 0;
-                      _context29.next = 3;
+                      _context35.prev = 0;
+                      _context35.next = 3;
                       return this.perionService.getSummaryMetrics(company).toPromise();
 
                     case 3:
-                      response = _context29.sent;
+                      response = _context35.sent;
                       // console.log("===============", response)
                       // this.currentMonthData = response.summary[0].summaryMetrics;
                       // this.beforeMonthData = response.summary[0].lastMonthStat;  
@@ -8162,37 +8475,37 @@
                       response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
                       response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
                       allSummary['summary'] = response.summary;
-                      return _context29.abrupt("return", allSummary);
+                      return _context35.abrupt("return", allSummary);
 
                     case 15:
-                      _context29.prev = 15;
-                      _context29.t0 = _context29["catch"](0);
-                      return _context29.abrupt("return", _context29.t0);
+                      _context35.prev = 15;
+                      _context35.t0 = _context35["catch"](0);
+                      return _context35.abrupt("return", _context35.t0);
 
                     case 18:
                     case "end":
-                      return _context29.stop();
+                      return _context35.stop();
                   }
                 }
-              }, _callee29, this, [[0, 15]]);
+              }, _callee35, this, [[0, 15]]);
             }));
           }
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee30() {
-              var response, helperChart, resultChart, revenuePerDayVal, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator28, _step28, resVal;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
+              var response, helperChart, resultChart, revenuePerDayVal, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator31, _step31, resVal;
 
-              return regeneratorRuntime.wrap(function _callee30$(_context30) {
+              return regeneratorRuntime.wrap(function _callee36$(_context36) {
                 while (1) {
-                  switch (_context30.prev = _context30.next) {
+                  switch (_context36.prev = _context36.next) {
                     case 0:
-                      _context30.prev = 0;
-                      _context30.next = 3;
+                      _context36.prev = 0;
+                      _context36.next = 3;
                       return this.perionService.getAllPerionStats(company, startDate, endDate).toPromise();
 
                     case 3:
-                      response = _context30.sent;
+                      response = _context36.sent;
                       // console.log('getAllPerionStats() response:');
                       this.allChartStat = response.stats; // var allChartPerionStat = [];
                       // for (var tagL of this.tagList) {
@@ -8258,37 +8571,37 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator28 = _createForOfIteratorHelper(resultChart);
+                      _iterator31 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
-                          resVal = _step28.value;
+                        for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
+                          resVal = _step31.value;
                           revenuePerDayVal.push(resVal.revenue);
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.totalsearches);
                         }
                       } catch (err) {
-                        _iterator28.e(err);
+                        _iterator31.e(err);
                       } finally {
-                        _iterator28.f();
+                        _iterator31.f();
                       }
 
                       chartDataValue['revenuePerDay'] = revenuePerDayVal;
                       chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
                       chartDataValue['searchesPerDay'] = searchesPerDayVal;
-                      return _context30.abrupt("return", chartDataValue);
+                      return _context36.abrupt("return", chartDataValue);
 
                     case 20:
-                      _context30.prev = 20;
-                      _context30.t0 = _context30["catch"](0);
-                      return _context30.abrupt("return", _context30.t0);
+                      _context36.prev = 20;
+                      _context36.t0 = _context36["catch"](0);
+                      return _context36.abrupt("return", _context36.t0);
 
                     case 23:
                     case "end":
-                      return _context30.stop();
+                      return _context36.stop();
                   }
                 }
-              }, _callee30, this, [[0, 20]]);
+              }, _callee36, this, [[0, 20]]);
             }));
           }
         }, {
@@ -8306,32 +8619,32 @@
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee31() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee37() {
               var companyId, response;
-              return regeneratorRuntime.wrap(function _callee31$(_context31) {
+              return regeneratorRuntime.wrap(function _callee37$(_context37) {
                 while (1) {
-                  switch (_context31.prev = _context31.next) {
+                  switch (_context37.prev = _context37.next) {
                     case 0:
                       companyId = selectedCompany.split("/")[1];
-                      _context31.prev = 1;
-                      _context31.next = 4;
+                      _context37.prev = 1;
+                      _context37.next = 4;
                       return this.tagService.getCompanyTags(companyId).toPromise();
 
                     case 4:
-                      response = _context31.sent;
-                      return _context31.abrupt("return", response);
+                      response = _context37.sent;
+                      return _context37.abrupt("return", response);
 
                     case 8:
-                      _context31.prev = 8;
-                      _context31.t0 = _context31["catch"](1);
-                      return _context31.abrupt("return", _context31.t0);
+                      _context37.prev = 8;
+                      _context37.t0 = _context37["catch"](1);
+                      return _context37.abrupt("return", _context37.t0);
 
                     case 11:
                     case "end":
-                      return _context31.stop();
+                      return _context37.stop();
                   }
                 }
-              }, _callee31, this, [[1, 8]]);
+              }, _callee37, this, [[1, 8]]);
             }));
           }
         }]);
@@ -8954,75 +9267,75 @@
         _createClass(RubiComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee32() {
-              return regeneratorRuntime.wrap(function _callee32$(_context32) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee38() {
+              return regeneratorRuntime.wrap(function _callee38$(_context38) {
                 while (1) {
-                  switch (_context32.prev = _context32.next) {
+                  switch (_context38.prev = _context38.next) {
                     case 0:
-                      _context32.next = 2;
+                      _context38.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context32.sent;
+                      this.tagList = _context38.sent;
                       this.rows = [];
-                      _context32.next = 6;
+                      _context38.next = 6;
                       return this.getAllRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context32.sent;
-                      _context32.next = 9;
+                      this.rows = _context38.sent;
+                      _context38.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context32.sent;
-                      _context32.next = 12;
+                      this.chartData = _context38.sent;
+                      _context38.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context32.sent;
+                      this.summaryMetrics = _context38.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context32.stop();
+                      return _context38.stop();
                   }
                 }
-              }, _callee32, this);
+              }, _callee38, this);
             }));
           }
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee33() {
-              return regeneratorRuntime.wrap(function _callee33$(_context33) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee39() {
+              return regeneratorRuntime.wrap(function _callee39$(_context39) {
                 while (1) {
-                  switch (_context33.prev = _context33.next) {
+                  switch (_context39.prev = _context39.next) {
                     case 0:
                       this.range = range;
-                      _context33.next = 3;
+                      _context39.next = 3;
                       return this.getAllRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context33.sent;
-                      _context33.next = 6;
+                      this.rows = _context39.sent;
+                      _context39.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context33.sent;
-                      _context33.next = 9;
+                      this.chartData = _context39.sent;
+                      _context39.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context33.sent;
+                      this.summaryMetrics = _context39.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context33.stop();
+                      return _context39.stop();
                   }
                 }
-              }, _callee33, this);
+              }, _callee39, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -9050,18 +9363,18 @@
         }, {
           key: "getAllRubiStats",
           value: function getAllRubiStats(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee34() {
-              var response, _iterator29, _step29, tagL, _iterator30, _step30, tagSub;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
+              var response, _iterator32, _step32, tagL, _iterator33, _step33, tagSub;
 
-              return regeneratorRuntime.wrap(function _callee34$(_context34) {
+              return regeneratorRuntime.wrap(function _callee40$(_context40) {
                 while (1) {
-                  switch (_context34.prev = _context34.next) {
+                  switch (_context40.prev = _context40.next) {
                     case 0:
-                      _context34.next = 2;
+                      _context40.next = 2;
                       return this.rubiService.getRubiStats(company, startDate, endDate).toPromise();
 
                     case 2:
-                      response = _context34.sent;
+                      response = _context40.sent;
                       console.log('getRubiStats() response:', response);
                       this.loadingIndicator = false;
                       this.allStats = response.stats;
@@ -9069,18 +9382,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator29 = _createForOfIteratorHelper(this.tagList);
+                      _iterator32 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
-                          tagL = _step29.value;
+                        for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
+                          tagL = _step32.value;
 
                           if (tagL.tag.advertiser == "rubi") {
-                            _iterator30 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator33 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
-                                tagSub = _step30.value;
+                              for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
+                                tagSub = _step33.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -9113,26 +9426,26 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator30.e(err);
+                              _iterator33.e(err);
                             } finally {
-                              _iterator30.f();
+                              _iterator33.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator29.e(err);
+                        _iterator32.e(err);
                       } finally {
-                        _iterator29.f();
+                        _iterator32.f();
                       }
 
-                      return _context34.abrupt("return", this.allStats);
+                      return _context40.abrupt("return", this.allStats);
 
                     case 10:
                     case "end":
-                      return _context34.stop();
+                      return _context40.stop();
                   }
                 }
-              }, _callee34, this);
+              }, _callee40, this);
             }));
           }
         }, {
@@ -9159,18 +9472,18 @@
               return r;
             }, []);
 
-            var _iterator31 = _createForOfIteratorHelper(groupData),
-                _step31;
+            var _iterator34 = _createForOfIteratorHelper(groupData),
+                _step34;
 
             try {
-              for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
-                var group = _step31.value;
+              for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
+                var group = _step34.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator31.e(err);
+              _iterator34.e(err);
             } finally {
-              _iterator31.f();
+              _iterator34.f();
             }
 
             this.rows = groupData;
@@ -9187,47 +9500,47 @@
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee35() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee41() {
               var response;
-              return regeneratorRuntime.wrap(function _callee35$(_context35) {
+              return regeneratorRuntime.wrap(function _callee41$(_context41) {
                 while (1) {
-                  switch (_context35.prev = _context35.next) {
+                  switch (_context41.prev = _context41.next) {
                     case 0:
-                      _context35.prev = 0;
-                      _context35.next = 3;
+                      _context41.prev = 0;
+                      _context41.next = 3;
                       return this.rubiService.getChartMetrics(company, startDate, endDate).toPromise();
 
                     case 3:
-                      response = _context35.sent;
-                      return _context35.abrupt("return", response);
+                      response = _context41.sent;
+                      return _context41.abrupt("return", response);
 
                     case 7:
-                      _context35.prev = 7;
-                      _context35.t0 = _context35["catch"](0);
-                      return _context35.abrupt("return", _context35.t0);
+                      _context41.prev = 7;
+                      _context41.t0 = _context41["catch"](0);
+                      return _context41.abrupt("return", _context41.t0);
 
                     case 10:
                     case "end":
-                      return _context35.stop();
+                      return _context41.stop();
                   }
                 }
-              }, _callee35, this, [[0, 7]]);
+              }, _callee41, this, [[0, 7]]);
             }));
           }
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee42() {
               var response, allSummary, currentPercentPace, lastPercentPace;
-              return regeneratorRuntime.wrap(function _callee36$(_context36) {
+              return regeneratorRuntime.wrap(function _callee42$(_context42) {
                 while (1) {
-                  switch (_context36.prev = _context36.next) {
+                  switch (_context42.prev = _context42.next) {
                     case 0:
-                      _context36.next = 2;
+                      _context42.next = 2;
                       return this.rubiService.getSummaryMetrics(company).toPromise();
 
                     case 2:
-                      response = _context36.sent;
+                      response = _context42.sent;
                       allSummary = {};
                       currentPercentPace = 0;
                       lastPercentPace = 0;
@@ -9243,46 +9556,46 @@
                       response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
                       response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
                       allSummary['summary'] = response.summary;
-                      return _context36.abrupt("return", allSummary);
+                      return _context42.abrupt("return", allSummary);
 
                     case 12:
                     case "end":
-                      return _context36.stop();
+                      return _context42.stop();
                   }
                 }
-              }, _callee36, this);
+              }, _callee42, this);
             }));
           } //get Tags with selected company
 
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee37() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee43() {
               var companyId, response;
-              return regeneratorRuntime.wrap(function _callee37$(_context37) {
+              return regeneratorRuntime.wrap(function _callee43$(_context43) {
                 while (1) {
-                  switch (_context37.prev = _context37.next) {
+                  switch (_context43.prev = _context43.next) {
                     case 0:
                       companyId = selectedCompany.split("/")[1];
-                      _context37.prev = 1;
-                      _context37.next = 4;
+                      _context43.prev = 1;
+                      _context43.next = 4;
                       return this.tagService.getCompanyTags(companyId).toPromise();
 
                     case 4:
-                      response = _context37.sent;
-                      return _context37.abrupt("return", response);
+                      response = _context43.sent;
+                      return _context43.abrupt("return", response);
 
                     case 8:
-                      _context37.prev = 8;
-                      _context37.t0 = _context37["catch"](1);
-                      return _context37.abrupt("return", _context37.t0);
+                      _context43.prev = 8;
+                      _context43.t0 = _context43["catch"](1);
+                      return _context43.abrupt("return", _context43.t0);
 
                     case 11:
                     case "end":
-                      return _context37.stop();
+                      return _context43.stop();
                   }
                 }
-              }, _callee37, this, [[1, 8]]);
+              }, _callee43, this, [[1, 8]]);
             }));
           }
         }]);
@@ -9873,75 +10186,75 @@
         _createClass(SolexBcComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee38() {
-              return regeneratorRuntime.wrap(function _callee38$(_context38) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee44() {
+              return regeneratorRuntime.wrap(function _callee44$(_context44) {
                 while (1) {
-                  switch (_context38.prev = _context38.next) {
+                  switch (_context44.prev = _context44.next) {
                     case 0:
-                      _context38.next = 2;
+                      _context44.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context38.sent;
+                      this.tagList = _context44.sent;
                       this.rows = [];
-                      _context38.next = 6;
+                      _context44.next = 6;
                       return this.getAllSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context38.sent;
-                      _context38.next = 9;
+                      this.rows = _context44.sent;
+                      _context44.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context38.sent;
-                      _context38.next = 12;
+                      this.chartData = _context44.sent;
+                      _context44.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context38.sent;
+                      this.summaryMetrics = _context44.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context38.stop();
+                      return _context44.stop();
                   }
                 }
-              }, _callee38, this);
+              }, _callee44, this);
             }));
           }
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee39() {
-              return regeneratorRuntime.wrap(function _callee39$(_context39) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee45() {
+              return regeneratorRuntime.wrap(function _callee45$(_context45) {
                 while (1) {
-                  switch (_context39.prev = _context39.next) {
+                  switch (_context45.prev = _context45.next) {
                     case 0:
                       this.range = range;
-                      _context39.next = 3;
+                      _context45.next = 3;
                       return this.getAllSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context39.sent;
-                      _context39.next = 6;
+                      this.rows = _context45.sent;
+                      _context45.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context39.sent;
-                      _context39.next = 9;
+                      this.chartData = _context45.sent;
+                      _context45.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context39.sent;
+                      this.summaryMetrics = _context45.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 12:
                     case "end":
-                      return _context39.stop();
+                      return _context45.stop();
                   }
                 }
-              }, _callee39, this);
+              }, _callee45, this);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -9981,20 +10294,20 @@
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator32 = _createForOfIteratorHelper(_this7.tagList),
-                  _step32;
+              var _iterator35 = _createForOfIteratorHelper(_this7.tagList),
+                  _step35;
 
               try {
-                for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
-                  var tagL = _step32.value;
+                for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
+                  var tagL = _step35.value;
 
                   if (tagL.tag.advertiser == "solex-bc") {
-                    var _iterator33 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step33;
+                    var _iterator36 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step36;
 
                     try {
-                      for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
-                        var tagSub = _step33.value;
+                      for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
+                        var tagSub = _step36.value;
 
                         if (tagSub.filterTag == "Contains") {
                           _this7.allStats.map(function (stat) {
@@ -10027,16 +10340,16 @@
                         }
                       }
                     } catch (err) {
-                      _iterator33.e(err);
+                      _iterator36.e(err);
                     } finally {
-                      _iterator33.f();
+                      _iterator36.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator32.e(err);
+                _iterator35.e(err);
               } finally {
-                _iterator32.f();
+                _iterator35.f();
               }
 
               return _this7.allStats;
@@ -10065,18 +10378,18 @@
               return r;
             }, []);
 
-            var _iterator34 = _createForOfIteratorHelper(groupData),
-                _step34;
+            var _iterator37 = _createForOfIteratorHelper(groupData),
+                _step37;
 
             try {
-              for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
-                var group = _step34.value;
+              for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
+                var group = _step37.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator34.e(err);
+              _iterator37.e(err);
             } finally {
-              _iterator34.f();
+              _iterator37.f();
             }
 
             this.rows = groupData;
@@ -10703,50 +11016,50 @@
         _createClass(System1Component, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
-              return regeneratorRuntime.wrap(function _callee40$(_context40) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee46() {
+              return regeneratorRuntime.wrap(function _callee46$(_context46) {
                 while (1) {
-                  switch (_context40.prev = _context40.next) {
+                  switch (_context46.prev = _context46.next) {
                     case 0:
                       this.rows = [];
-                      _context40.next = 3;
+                      _context46.next = 3;
                       return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context40.sent;
+                      this.rows = _context46.sent;
 
                     case 4:
                     case "end":
-                      return _context40.stop();
+                      return _context46.stop();
                   }
                 }
-              }, _callee40, this);
+              }, _callee46, this);
             }));
           }
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee41() {
-              return regeneratorRuntime.wrap(function _callee41$(_context41) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee47() {
+              return regeneratorRuntime.wrap(function _callee47$(_context47) {
                 while (1) {
-                  switch (_context41.prev = _context41.next) {
+                  switch (_context47.prev = _context47.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context41.next = 3;
+                      _context47.next = 3;
                       return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context41.sent;
+                      this.rows = _context47.sent;
                       this.groupFlag = false;
                       this.refreshTable();
 
                     case 6:
                     case "end":
-                      return _context41.stop();
+                      return _context47.stop();
                   }
                 }
-              }, _callee41, this);
+              }, _callee47, this);
             }));
           } //get Stat all
 
@@ -12091,72 +12404,72 @@
         _createClass(VerizonDirectComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee42() {
-              return regeneratorRuntime.wrap(function _callee42$(_context42) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee48() {
+              return regeneratorRuntime.wrap(function _callee48$(_context48) {
                 while (1) {
-                  switch (_context42.prev = _context42.next) {
+                  switch (_context48.prev = _context48.next) {
                     case 0:
-                      _context42.next = 2;
+                      _context48.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context42.sent;
+                      this.tagList = _context48.sent;
                       this.rows = [];
-                      _context42.next = 6;
+                      _context48.next = 6;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context42.sent;
-                      _context42.next = 9;
+                      this.rows = _context48.sent;
+                      _context48.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context42.sent;
-                      _context42.next = 12;
+                      this.chartData = _context48.sent;
+                      _context48.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 12:
-                      this.summaryMetrics = _context42.sent;
+                      this.summaryMetrics = _context48.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context42.stop();
+                      return _context48.stop();
                   }
                 }
-              }, _callee42, this);
+              }, _callee48, this);
             }));
           } //get Tags with selected company
 
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee43() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee49() {
               var companyId, response;
-              return regeneratorRuntime.wrap(function _callee43$(_context43) {
+              return regeneratorRuntime.wrap(function _callee49$(_context49) {
                 while (1) {
-                  switch (_context43.prev = _context43.next) {
+                  switch (_context49.prev = _context49.next) {
                     case 0:
                       companyId = selectedCompany.split("/")[1];
-                      _context43.prev = 1;
-                      _context43.next = 4;
+                      _context49.prev = 1;
+                      _context49.next = 4;
                       return this.tagService.getCompanyTags(companyId).toPromise();
 
                     case 4:
-                      response = _context43.sent;
-                      return _context43.abrupt("return", response);
+                      response = _context49.sent;
+                      return _context49.abrupt("return", response);
 
                     case 8:
-                      _context43.prev = 8;
-                      _context43.t0 = _context43["catch"](1);
-                      return _context43.abrupt("return", _context43.t0);
+                      _context49.prev = 8;
+                      _context49.t0 = _context49["catch"](1);
+                      return _context49.abrupt("return", _context49.t0);
 
                     case 11:
                     case "end":
-                      return _context43.stop();
+                      return _context49.stop();
                   }
                 }
-              }, _callee43, this, [[1, 8]]);
+              }, _callee49, this, [[1, 8]]);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -12168,36 +12481,36 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee44() {
-              return regeneratorRuntime.wrap(function _callee44$(_context44) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee50() {
+              return regeneratorRuntime.wrap(function _callee50$(_context50) {
                 while (1) {
-                  switch (_context44.prev = _context44.next) {
+                  switch (_context50.prev = _context50.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context44.next = 3;
+                      _context50.next = 3;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context44.sent;
-                      _context44.next = 6;
+                      this.rows = _context50.sent;
+                      _context50.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context44.sent;
-                      _context44.next = 9;
+                      this.chartData = _context50.sent;
+                      _context50.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany);
 
                     case 9:
-                      this.summaryMetrics = _context44.sent;
+                      this.summaryMetrics = _context50.sent;
                       this.refreshTable();
 
                     case 11:
                     case "end":
-                      return _context44.stop();
+                      return _context50.stop();
                   }
                 }
-              }, _callee44, this);
+              }, _callee50, this);
             }));
           }
         }, {
@@ -12219,48 +12532,48 @@
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee45() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee51() {
               var response;
-              return regeneratorRuntime.wrap(function _callee45$(_context45) {
+              return regeneratorRuntime.wrap(function _callee51$(_context51) {
                 while (1) {
-                  switch (_context45.prev = _context45.next) {
+                  switch (_context51.prev = _context51.next) {
                     case 0:
-                      _context45.prev = 0;
-                      _context45.next = 3;
+                      _context51.prev = 0;
+                      _context51.next = 3;
                       return this.verizonService.getChartMetrics(company, startDate, endDate).toPromise();
 
                     case 3:
-                      response = _context45.sent;
-                      return _context45.abrupt("return", response);
+                      response = _context51.sent;
+                      return _context51.abrupt("return", response);
 
                     case 7:
-                      _context45.prev = 7;
-                      _context45.t0 = _context45["catch"](0);
-                      return _context45.abrupt("return", _context45.t0);
+                      _context51.prev = 7;
+                      _context51.t0 = _context51["catch"](0);
+                      return _context51.abrupt("return", _context51.t0);
 
                     case 10:
                     case "end":
-                      return _context45.stop();
+                      return _context51.stop();
                   }
                 }
-              }, _callee45, this, [[0, 7]]);
+              }, _callee51, this, [[0, 7]]);
             }));
           }
         }, {
           key: "getAllVerizonStats",
           value: function getAllVerizonStats(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee46() {
-              var response, _iterator35, _step35, tagL, _iterator36, _step36, tagSub;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee52() {
+              var response, _iterator38, _step38, tagL, _iterator39, _step39, tagSub;
 
-              return regeneratorRuntime.wrap(function _callee46$(_context46) {
+              return regeneratorRuntime.wrap(function _callee52$(_context52) {
                 while (1) {
-                  switch (_context46.prev = _context46.next) {
+                  switch (_context52.prev = _context52.next) {
                     case 0:
-                      _context46.next = 2;
+                      _context52.next = 2;
                       return this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
 
                     case 2:
-                      response = _context46.sent;
+                      response = _context52.sent;
                       console.log('getAllVerizonStats() response:', response);
                       this.loadingIndicator = false;
                       this.allStats = response.stats;
@@ -12268,18 +12581,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator35 = _createForOfIteratorHelper(this.tagList);
+                      _iterator38 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
-                          tagL = _step35.value;
+                        for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
+                          tagL = _step38.value;
 
                           if (tagL.tag.advertiser == "verizon-direct") {
-                            _iterator36 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator39 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
-                                tagSub = _step36.value;
+                              for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
+                                tagSub = _step39.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -12312,42 +12625,42 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator36.e(err);
+                              _iterator39.e(err);
                             } finally {
-                              _iterator36.f();
+                              _iterator39.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator35.e(err);
+                        _iterator38.e(err);
                       } finally {
-                        _iterator35.f();
+                        _iterator38.f();
                       }
 
-                      return _context46.abrupt("return", this.allStats);
+                      return _context52.abrupt("return", this.allStats);
 
                     case 10:
                     case "end":
-                      return _context46.stop();
+                      return _context52.stop();
                   }
                 }
-              }, _callee46, this);
+              }, _callee52, this);
             }));
           }
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee47() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee53() {
               var response, allSummary, currentPercentPace, lastPercentPace;
-              return regeneratorRuntime.wrap(function _callee47$(_context47) {
+              return regeneratorRuntime.wrap(function _callee53$(_context53) {
                 while (1) {
-                  switch (_context47.prev = _context47.next) {
+                  switch (_context53.prev = _context53.next) {
                     case 0:
-                      _context47.next = 2;
+                      _context53.next = 2;
                       return this.verizonService.getSummaryMetrics(company).toPromise();
 
                     case 2:
-                      response = _context47.sent;
+                      response = _context53.sent;
                       allSummary = {};
                       currentPercentPace = 0;
                       lastPercentPace = 0;
@@ -12363,14 +12676,14 @@
                       response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
                       response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
                       allSummary['summary'] = response.summary;
-                      return _context47.abrupt("return", allSummary);
+                      return _context53.abrupt("return", allSummary);
 
                     case 12:
                     case "end":
-                      return _context47.stop();
+                      return _context53.stop();
                   }
                 }
-              }, _callee47, this);
+              }, _callee53, this);
             }));
           }
         }]);

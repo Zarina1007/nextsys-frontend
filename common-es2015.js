@@ -63,6 +63,64 @@ TranslationModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
 
 /***/ }),
 
+/***/ "./src/app/shared/service/admin-stats/hopkin.service.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/shared/service/admin-stats/hopkin.service.ts ***!
+  \**************************************************************/
+/*! exports provided: HopkinService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HopkinService", function() { return HopkinService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+
+
+
+const API_HOPKIN_URL = `${_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/stats/admin/hopkins`;
+class HopkinService {
+    constructor(http) {
+        this.http = http;
+    }
+    getChartMetrics(company, startDate, endDate) {
+        return this.http.get(API_HOPKIN_URL + '/chart_metrics', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getAllHopkinStats(company, startDate, endDate) {
+        return this.http.get(API_HOPKIN_URL + '/all-publishers', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getHopkinStats(company, startDate, endDate) {
+        return this.http.get(API_HOPKIN_URL + '/', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
+    getSummaryMetrics(company) {
+        return this.http.get(API_HOPKIN_URL + '/summary_metrics', {
+            params: { company: company },
+        });
+    }
+    getAllDashboardStats() {
+        return this.http.get(API_HOPKIN_URL + '/all-stat');
+    }
+}
+HopkinService.ɵfac = function HopkinService_Factory(t) { return new (t || HopkinService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
+HopkinService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: HopkinService, factory: HopkinService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HopkinService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root',
+            }]
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, null); })();
+
+
+/***/ }),
+
 /***/ "./src/app/shared/service/notification.service.ts":
 /*!********************************************************!*\
   !*** ./src/app/shared/service/notification.service.ts ***!

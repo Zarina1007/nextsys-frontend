@@ -1470,7 +1470,7 @@
             viewValue: "Bing Direct"
           }, {
             value: "hopkins",
-            viewValue: "Hopkins"
+            viewValue: "Hopkins YHS"
           }, {
             value: "lyons",
             viewValue: "Lyons"
@@ -2394,7 +2394,7 @@
             viewValue: "Bing Direct"
           }, {
             value: "hopkins",
-            viewValue: "Hopkins"
+            viewValue: "Hopkins YHS"
           }, {
             value: "lyons",
             viewValue: "Lyons"
