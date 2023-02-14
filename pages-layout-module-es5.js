@@ -51395,6 +51395,11 @@
           value: function getTagAdvertiser(companyId) {
             return this.http.get(API_TAGS_URL + "/get_tag_advertiser/".concat(companyId));
           }
+        }, {
+          key: "getTagUserAdvertiser",
+          value: function getTagUserAdvertiser(userId) {
+            return this.http.get(API_TAGS_URL + "/get_user_tag_advertiser/".concat(userId));
+          }
         }]);
 
         return TagsService;

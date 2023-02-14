@@ -116,6 +116,7 @@
             this.role = 0;
             this.companies = [];
             this.tagsId = [];
+            this.advertisers = [];
             this._key = user._key;
           }
         }]);

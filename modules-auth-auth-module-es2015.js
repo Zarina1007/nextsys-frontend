@@ -51,6 +51,7 @@ class UserModel extends _auth_model__WEBPACK_IMPORTED_MODULE_0__["AuthModel"] {
         this.role = 0;
         this.companies = [];
         this.tagsId = [];
+        this.advertisers = [];
         this._key = user._key;
     }
 }

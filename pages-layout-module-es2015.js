@@ -30544,6 +30544,9 @@ class TagsService {
     getTagAdvertiser(companyId) {
         return this.http.get(API_TAGS_URL + `/get_tag_advertiser/${companyId}`);
     }
+    getTagUserAdvertiser(userId) {
+        return this.http.get(API_TAGS_URL + `/get_user_tag_advertiser/${userId}`);
+    }
 }
 TagsService.ɵfac = function TagsService_Factory(t) { return new (t || TagsService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClient"])); };
 TagsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: TagsService, factory: TagsService.ɵfac, providedIn: 'root' });
