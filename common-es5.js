@@ -214,10 +214,12 @@
           }
         }, {
           key: "getSummaryMetrics",
-          value: function getSummaryMetrics(company) {
+          value: function getSummaryMetrics(company, startDate, endDate) {
             return this.http.get(API_HOPKIN_URL + '/summary_metrics', {
               params: {
-                company: company
+                company: company,
+                startDate: startDate,
+                endDate: endDate
               }
             });
           }

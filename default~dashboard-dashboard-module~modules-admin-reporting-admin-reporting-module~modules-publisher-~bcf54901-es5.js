@@ -221,10 +221,12 @@
           }
         }, {
           key: "getSummaryMetrics",
-          value: function getSummaryMetrics(company) {
+          value: function getSummaryMetrics(company, startDate, endDate) {
             return this.http.get(API_APPTITDE_URL + '/summary_metrics', {
               params: {
-                company: company
+                company: company,
+                startDate: startDate,
+                endDate: endDate
               }
             });
           }
@@ -354,10 +356,12 @@
           }
         }, {
           key: "getSummaryMetrics",
-          value: function getSummaryMetrics(company) {
+          value: function getSummaryMetrics(company, startDate, endDate) {
             return this.http.get(API_LYON_URL + '/summary_metrics', {
               params: {
-                company: company
+                company: company,
+                startDate: startDate,
+                endDate: endDate
               }
             });
           }
@@ -492,11 +496,6 @@
         }, {
           key: "updateAllPerionStats",
           value: function updateAllPerionStats(company, startDate, endDate) {
-            // let params = new HttpParams()
-            //   .set('company', company)
-            //   .set('startDate', startDate)
-            //   .set('endDate', endDate);
-            //   console.log("===============", params)
             var data = {
               "company": company,
               'startDate': startDate,
@@ -506,10 +505,12 @@
           }
         }, {
           key: "getSummaryMetrics",
-          value: function getSummaryMetrics(company) {
+          value: function getSummaryMetrics(company, startDate, endDate) {
             return this.http.get(API_PERION_URL + '/summary_metrics', {
               params: {
-                company: company
+                company: company,
+                startDate: startDate,
+                endDate: endDate
               }
             });
           }
@@ -654,10 +655,12 @@
           }
         }, {
           key: "getSummaryMetrics",
-          value: function getSummaryMetrics(company) {
+          value: function getSummaryMetrics(company, startDate, endDate) {
             return this.http.get(API_RUBI_URL + '/summary_metrics', {
               params: {
-                company: company
+                company: company,
+                startDate: startDate,
+                endDate: endDate
               }
             });
           }
@@ -790,10 +793,12 @@
           }
         }, {
           key: "getSummaryMetrics",
-          value: function getSummaryMetrics(company) {
+          value: function getSummaryMetrics(company, startDate, endDate) {
             return this.http.get(API_SOLEXBC_URL + '/summary_metrics', {
               params: {
-                company: company
+                company: company,
+                startDate: startDate,
+                endDate: endDate
               }
             });
           }
@@ -1022,10 +1027,12 @@
           }
         }, {
           key: "getSummaryMetrics",
-          value: function getSummaryMetrics(company) {
+          value: function getSummaryMetrics(company, startDate, endDate) {
             return this.http.get(API_VERIZON_URL + '/summary_metrics', {
               params: {
-                company: company
+                company: company,
+                startDate: startDate,
+                endDate: endDate
               }
             });
           }

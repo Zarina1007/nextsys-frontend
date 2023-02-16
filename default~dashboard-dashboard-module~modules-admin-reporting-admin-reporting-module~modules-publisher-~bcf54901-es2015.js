@@ -107,9 +107,9 @@ class ApptitudeService {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
-    getSummaryMetrics(company) {
+    getSummaryMetrics(company, startDate, endDate) {
         return this.http.get(API_APPTITDE_URL + '/summary_metrics', {
-            params: { company: company },
+            params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
     getAllDashboardStats() {
@@ -176,9 +176,9 @@ class LyonService {
             .set('endDate', endDate);
         return this.http.put(API_LYON_URL + '/', { params });
     }
-    getSummaryMetrics(company) {
+    getSummaryMetrics(company, startDate, endDate) {
         return this.http.get(API_LYON_URL + '/summary_metrics', {
-            params: { company: company },
+            params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
     getChartMetrics(company, startDate, endDate) {
@@ -240,11 +240,6 @@ class PerionService {
         return this.http.get(API_PERION_URL + '/all-stat', { params: { company: company } });
     }
     updateAllPerionStats(company, startDate, endDate) {
-        // let params = new HttpParams()
-        //   .set('company', company)
-        //   .set('startDate', startDate)
-        //   .set('endDate', endDate);
-        //   console.log("===============", params)
         var data = {
             "company": company,
             'startDate': startDate,
@@ -252,9 +247,9 @@ class PerionService {
         };
         return this.http.put(API_PERION_URL + '/', data);
     }
-    getSummaryMetrics(company) {
+    getSummaryMetrics(company, startDate, endDate) {
         return this.http.get(API_PERION_URL + '/summary_metrics', {
-            params: { company: company },
+            params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
     getChartMetrics(company, startDate, endDate) {
@@ -322,9 +317,9 @@ class RubiService {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
-    getSummaryMetrics(company) {
+    getSummaryMetrics(company, startDate, endDate) {
         return this.http.get(API_RUBI_URL + '/summary_metrics', {
-            params: { company: company },
+            params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
     updateAllPerionStats(company, startDate, endDate) {
@@ -388,9 +383,9 @@ class SolexBCService {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
-    getSummaryMetrics(company) {
+    getSummaryMetrics(company, startDate, endDate) {
         return this.http.get(API_SOLEXBC_URL + '/summary_metrics', {
-            params: { company: company },
+            params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
     getAllDashboardStats() {
@@ -494,9 +489,9 @@ class VerizonService {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
-    getSummaryMetrics(company) {
+    getSummaryMetrics(company, startDate, endDate) {
         return this.http.get(API_VERIZON_URL + '/summary_metrics', {
-            params: { company: company },
+            params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
     updateAllPerionStats(company, startDate, endDate) {

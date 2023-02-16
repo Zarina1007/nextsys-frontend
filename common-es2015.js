@@ -100,9 +100,9 @@ class HopkinService {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
-    getSummaryMetrics(company) {
+    getSummaryMetrics(company, startDate, endDate) {
         return this.http.get(API_HOPKIN_URL + '/summary_metrics', {
-            params: { company: company },
+            params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
     getAllDashboardStats() {
