@@ -23248,6 +23248,9 @@
         _createClass(MixedWidget1Component, [{
           key: "ngOnInit",
           value: function ngOnInit() {
+            // const timing = window.performance.timing;
+            // const latency = timing.responseEnd - timing.fetchStart;
+            // console.log("===========",performance.getEntriesByType("resource")[0], latency,timing, timing.responseEnd, timing.fetchStart)
             this.allDaysList = this.getCurrentMontDateList();
             this.ChartData = this.getChartData(this.ChartData);
             var tempCurSum = 0;

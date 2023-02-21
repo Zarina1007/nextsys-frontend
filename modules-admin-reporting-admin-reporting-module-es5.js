@@ -6368,43 +6368,49 @@
       /* harmony import */
 
 
-      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! ../../tag-management/tag-management.service */
+      "./src/app/modules/tag-management/tag-management.service.ts");
+      /* harmony import */
+
+
+      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/material/form-field */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
       /* harmony import */
 
 
-      var _angular_material_select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var _angular_material_select__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! @angular/material/select */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @angular/material/datepicker */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/datepicker.js");
       /* harmony import */
 
 
-      var _angular_material_button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! @angular/material/button */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
       /* harmony import */
 
 
-      var _angular_material_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! @angular/material/core */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
 
       function ManualSplitUpdateComponent_mat_option_13_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 18);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 19);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -6412,17 +6418,37 @@
         }
 
         if (rf & 2) {
-          var reportProvider_r7 = ctx.$implicit;
+          var reportProvider_r8 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", reportProvider_r7.value);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", reportProvider_r8.value);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", reportProvider_r7.viewValue, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", reportProvider_r8.viewValue, " ");
         }
       }
 
-      function ManualSplitUpdateComponent_mat_error_23_Template(rf, ctx) {
+      function ManualSplitUpdateComponent_mat_option_18_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 19);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var tagItem_r9 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", tagItem_r9.value);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", tagItem_r9.viewValue, " ");
+        }
+      }
+
+      function ManualSplitUpdateComponent_mat_error_28_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
@@ -6432,7 +6458,7 @@
         }
       }
 
-      function ManualSplitUpdateComponent_mat_error_24_Template(rf, ctx) {
+      function ManualSplitUpdateComponent_mat_error_29_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
@@ -6442,7 +6468,7 @@
         }
       }
 
-      function ManualSplitUpdateComponent_mat_error_25_Template(rf, ctx) {
+      function ManualSplitUpdateComponent_mat_error_30_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
@@ -6452,7 +6478,7 @@
         }
       }
 
-      function ManualSplitUpdateComponent_mat_error_26_Template(rf, ctx) {
+      function ManualSplitUpdateComponent_mat_error_31_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-error");
 
@@ -6462,9 +6488,9 @@
         }
       }
 
-      function ManualSplitUpdateComponent_mat_option_31_Template(rf, ctx) {
+      function ManualSplitUpdateComponent_mat_option_36_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 18);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 19);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
@@ -6472,18 +6498,18 @@
         }
 
         if (rf & 2) {
-          var dateRange_r8 = ctx.$implicit;
+          var dateRange_r10 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", dateRange_r8.value);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", dateRange_r10.value);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", dateRange_r8.viewValue, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", dateRange_r10.viewValue, " ");
         }
       }
 
       var ManualSplitUpdateComponent = /*#__PURE__*/function () {
-        function ManualSplitUpdateComponent(manualUpdateService, fb, companyService, authService, userService, notification) {
+        function ManualSplitUpdateComponent(manualUpdateService, fb, companyService, authService, userService, notification, tagService, cdr) {
           _classCallCheck(this, ManualSplitUpdateComponent);
 
           this.manualUpdateService = manualUpdateService;
@@ -6492,8 +6518,13 @@
           this.authService = authService;
           this.userService = userService;
           this.notification = notification;
+          this.tagService = tagService;
+          this.cdr = cdr;
           this.reportProviderData = [];
+          this.tagData = [];
+          this.selectedTagData = [];
           this.reportUpdateTitle = 'Report Split Update';
+          this.selectedTagName = '';
           this.currentUser = this.authService.currentUserValue;
           this.companySelected = this.getSelectedCompanyLocalStorage();
         }
@@ -6502,8 +6533,10 @@
           key: "ngOnInit",
           value: function ngOnInit() {
             this.getReportingProviderList();
+            this.getAllTags();
             this.manaulUpFG = this.fb.group({
               reportType: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
+              tag: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
               preSelectValue: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
               startDate: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
               endDate: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required)
@@ -6531,17 +6564,50 @@
           key: "getSelectedCompanyLocalStorage",
           value: function getSelectedCompanyLocalStorage() {
             return this.userService.getSelectedCompanyFromLocalStorage();
+          }
+        }, {
+          key: "getAllTags",
+          value: function getAllTags() {
+            var _this2 = this;
+
+            this.tagService.getAllTags().subscribe(function (response) {
+              var resData = [];
+
+              if (_this2.companySelected) {
+                resData = response.filter(function (res) {
+                  return res.company[0]['_id'] == _this2.companySelected;
+                });
+              }
+
+              resData.map(function (res) {
+                _this2.tagData.push({
+                  value: res._id,
+                  viewValue: res.name,
+                  advertiser: res.advertiser
+                });
+              });
+              _this2.selectedTagData = _this2.tagData;
+
+              _this2.cdr.detectChanges();
+            });
+          }
+        }, {
+          key: "handleTag",
+          value: function handleTag(event) {
+            this.selectedTagName = this.tagData.filter(function (tag) {
+              return tag.value == event.value;
+            })[0].viewValue;
           } //get report Provider List
 
         }, {
           key: "getReportingProviderList",
           value: function getReportingProviderList() {
-            var _this2 = this;
+            var _this3 = this;
 
             if (this.companySelected) {
               this.companyService.getOneCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
                 res.reportingProviders.map(function (report) {
-                  _this2.reportProviderData.push({
+                  _this3.reportProviderData.push({
                     value: report.reportingProvider,
                     viewValue: report.reportingProvider
                   });
@@ -6653,26 +6719,30 @@
                 return letter.toUpperCase();
               });
               this.reportUpdateTitle = "".concat(typeName, " Split Update");
+              this.selectedTagData = this.tagData.filter(function (tag) {
+                return tag.advertiser == event.value;
+              });
+              this.cdr.detectChanges();
             }
           }
         }, {
           key: "onReportSubmit",
           value: function onReportSubmit() {
-            var _this3 = this;
+            var _this4 = this;
 
             if (this.manaulUpFG.valid) {
               this.manaulUpFG.addControl('company', new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required));
               this.manaulUpFG.patchValue({
                 company: this.companySelected
-              });
-              var reportTypeValue = this.manaulUpFG.value['reportType'];
+              }); //var reportTypeValue = this.manaulUpFG.value['reportType'];
+
               this.manualUpdateService.updateManualSplit(this.manaulUpFG.value).subscribe(function (response) {
-                var checkExist = _this3.isObjectEmpty(response);
+                var checkExist = _this4.isObjectEmpty(response);
 
                 if (!checkExist) {
-                  _this3.notification.showSuccess("".concat(reportTypeValue, " data splits  successfully updated!"), "");
+                  _this4.notification.showSuccess("".concat(_this4.selectedTagName, " data splits  successfully updated!"), "");
                 } else {
-                  _this3.notification.showWarning("".concat(reportTypeValue, " data not existed!"), "");
+                  _this4.notification.showWarning("".concat(_this4.selectedTagName, " data not existed!"), "");
                 }
               });
             }
@@ -6702,15 +6772,15 @@
       }();
 
       ManualSplitUpdateComponent.ɵfac = function ManualSplitUpdateComponent_Factory(t) {
-        return new (t || ManualSplitUpdateComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_update_service__WEBPACK_IMPORTED_MODULE_3__["ManualUpdateService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_4__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_7__["NotificationService"]));
+        return new (t || ManualSplitUpdateComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_update_service__WEBPACK_IMPORTED_MODULE_3__["ManualUpdateService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_4__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_7__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]));
       };
 
       ManualSplitUpdateComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: ManualSplitUpdateComponent,
         selectors: [["app-manual-split-update"]],
-        decls: 36,
-        vars: 12,
-        consts: [["id", "manaulUpForm", 1, "example-container", 3, "formGroup", "ngSubmit"], [1, "row"], [1, "col-xl-6"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], ["matNativeControl", "", "placeholder", "Select Provider", "formControlName", "reportType", 3, "selectionChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "rangePicker", "formGroup", "dateChange"], ["matStartDate", "", "formControlName", "startDate", "placeholder", "Start date", "required", ""], ["matEndDate", "", "formControlName", "endDate", "placeholder", "End date", "required", "", 3, "dateChange"], ["matSuffix", "", 3, "for"], ["picker", ""], [4, "ngIf"], ["formControlName", "preSelectValue", 3, "ngModel", "ngModelChange", "selectionChange"], ["mat-raised-button", "", "color", "primary", "type", "submit"], [3, "value"]],
+        decls: 41,
+        vars: 13,
+        consts: [["id", "manaulUpForm", 1, "example-container", 3, "formGroup", "ngSubmit"], [1, "row"], [1, "col-xl-6"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], ["matNativeControl", "", "placeholder", "Select Provider", "formControlName", "reportType", 3, "selectionChange"], [3, "value", 4, "ngFor", "ngForOf"], ["matNativeControl", "", "placeholder", "Select Report", "formControlName", "tag", 3, "selectionChange"], [3, "rangePicker", "formGroup", "dateChange"], ["matStartDate", "", "formControlName", "startDate", "placeholder", "Start date", "required", ""], ["matEndDate", "", "formControlName", "endDate", "placeholder", "End date", "required", "", 3, "dateChange"], ["matSuffix", "", 3, "for"], ["picker", ""], [4, "ngIf"], ["formControlName", "preSelectValue", 3, "ngModel", "ngModelChange", "selectionChange"], ["mat-raised-button", "", "color", "primary", "type", "submit"], [3, "value"]],
         template: function ManualSplitUpdateComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 0);
@@ -6765,21 +6835,41 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "mat-label");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Enter a custom date range");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Tag");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-date-range-input", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-select", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("dateChange", function ManualSplitUpdateComponent_Template_mat_date_range_input_dateChange_17_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("selectionChange", function ManualSplitUpdateComponent_Template_mat_select_selectionChange_17_listener($event) {
+              return ctx.handleTag($event);
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](18, ManualSplitUpdateComponent_mat_option_18_Template, 2, 2, "mat-option", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "mat-form-field");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "mat-label");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Enter a custom date range");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "mat-date-range-input", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("dateChange", function ManualSplitUpdateComponent_Template_mat_date_range_input_dateChange_22_listener() {
               return ctx.changeDatePicker();
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "input", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](23, "input", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "input", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "input", 13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("dateChange", function ManualSplitUpdateComponent_Template_input_dateChange_19_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("dateChange", function ManualSplitUpdateComponent_Template_input_dateChange_24_listener() {
               return ctx.changeDatePicker();
             });
 
@@ -6787,49 +6877,49 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](20, "mat-datepicker-toggle", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "mat-datepicker-toggle", 14);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "mat-date-range-picker", null, 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](26, "mat-date-range-picker", null, 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, ManualSplitUpdateComponent_mat_error_23_Template, 2, 0, "mat-error", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](28, ManualSplitUpdateComponent_mat_error_28_Template, 2, 0, "mat-error", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](24, ManualSplitUpdateComponent_mat_error_24_Template, 2, 0, "mat-error", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](29, ManualSplitUpdateComponent_mat_error_29_Template, 2, 0, "mat-error", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, ManualSplitUpdateComponent_mat_error_25_Template, 2, 0, "mat-error", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](30, ManualSplitUpdateComponent_mat_error_30_Template, 2, 0, "mat-error", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](26, ManualSplitUpdateComponent_mat_error_26_Template, 2, 0, "mat-error", 15);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "mat-form-field");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "mat-label");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "Preset Date Range");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, ManualSplitUpdateComponent_mat_error_31_Template, 2, 0, "mat-error", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "mat-select", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "mat-form-field");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ManualSplitUpdateComponent_Template_mat_select_ngModelChange_30_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "mat-label");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "Preset Date Range");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "mat-select", 17);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function ManualSplitUpdateComponent_Template_mat_select_ngModelChange_35_listener($event) {
               return ctx.preSelectValue = $event;
-            })("selectionChange", function ManualSplitUpdateComponent_Template_mat_select_selectionChange_30_listener($event) {
+            })("selectionChange", function ManualSplitUpdateComponent_Template_mat_select_selectionChange_35_listener($event) {
               return ctx.onPreSetRangeSelectChange($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, ManualSplitUpdateComponent_mat_option_31_Template, 2, 2, "mat-option", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](36, ManualSplitUpdateComponent_mat_option_36_Template, 2, 2, "mat-option", 9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "div", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "button", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](39, "button", 18);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](35, "Update Splits");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "Update Splits");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -6849,7 +6939,7 @@
           }
 
           if (rf & 2) {
-            var _r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](22);
+            var _r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵreference"](27);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx.manaulUpFG);
 
@@ -6861,13 +6951,17 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.reportProviderData);
 
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.selectedTagData);
+
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("rangePicker", _r1)("formGroup", ctx.range);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("rangePicker", _r2)("formGroup", ctx.range);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("for", _r1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("for", _r2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
@@ -6894,7 +6988,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.preSetDateRanges);
           }
         },
-        directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__["MatDateRangeInput"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__["MatStartDate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["RequiredValidator"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__["MatEndDate"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__["MatDatepickerToggle"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatSuffix"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__["MatDateRangePicker"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_12__["MatButton"], _angular_material_core__WEBPACK_IMPORTED_MODULE_13__["MatOption"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatError"]],
+        directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_10__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgForOf"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_12__["MatDateRangeInput"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_12__["MatStartDate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["RequiredValidator"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_12__["MatEndDate"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_12__["MatDatepickerToggle"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatSuffix"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_12__["MatDateRangePicker"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_13__["MatButton"], _angular_material_core__WEBPACK_IMPORTED_MODULE_14__["MatOption"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_9__["MatError"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL21hbnVhbC1zcGxpdC11cGRhdGUvbWFudWFsLXNwbGl0LXVwZGF0ZS5jb21wb25lbnQuc2NzcyJ9 */"]
       });
       /*@__PURE__*/
@@ -6920,6 +7014,10 @@
             type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"]
           }, {
             type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_7__["NotificationService"]
+          }, {
+            type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
           }];
         }, null);
       })();
@@ -7163,12 +7261,12 @@
         }, {
           key: "getReportingProviderList",
           value: function getReportingProviderList() {
-            var _this4 = this;
+            var _this5 = this;
 
             if (this.companySelected) {
               this.companyService.getOneCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
                 res.reportingProviders.map(function (report) {
-                  _this4.reportTypeData.push({
+                  _this5.reportTypeData.push({
                     value: report.reportingProvider,
                     viewValue: report.reportingProvider
                   });
@@ -7185,7 +7283,7 @@
         }, {
           key: "onReportSubmit",
           value: function onReportSubmit() {
-            var _this5 = this;
+            var _this6 = this;
 
             if (this.manaulUpFG.valid) {
               this.manaulUpFG.addControl('company', new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required));
@@ -7194,12 +7292,12 @@
               });
               var reportTypeValue = this.manaulUpFG.value['reportType'];
               this.manualUpdateService.updateManualStats(this.manaulUpFG.value).subscribe(function (response) {
-                var checkExist = _this5.isObjectEmpty(response);
+                var checkExist = _this6.isObjectEmpty(response);
 
                 if (!checkExist) {
-                  _this5.notification.showSuccess("".concat(reportTypeValue, " data stats successfully updated!"), "");
+                  _this6.notification.showSuccess("".concat(reportTypeValue, " data stats successfully updated!"), "");
                 } else {
-                  _this5.notification.showWarning("".concat(reportTypeValue, " data not existed!"), "");
+                  _this6.notification.showWarning("".concat(reportTypeValue, " data not existed!"), "");
                 }
               });
             }
@@ -8593,12 +8691,12 @@
         }, {
           key: "combineSummaryMetrics",
           value: function combineSummaryMetrics(metrics) {
-            var _this6 = this;
+            var _this7 = this;
 
             metrics.summary.keys.forEach(function (element) {
               console.log(element.revenue);
-              _this6.summary.revenue += element.revenue;
-              _this6.summary.profit += element.revenue * ((100 - element.split) * 0.01);
+              _this7.summary.revenue += element.revenue;
+              _this7.summary.profit += element.revenue * ((100 - element.split) * 0.01);
             });
           } //get Tags with selected company
 
@@ -10432,19 +10530,19 @@
         }, {
           key: "getAllSolexBCStats",
           value: function getAllSolexBCStats(company, startDate, endDate) {
-            var _this7 = this;
+            var _this8 = this;
 
             return this.solexBCService.getSolexBCStats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('getSolexBCStats() response:', response);
-              _this7.loadingIndicator = false;
-              _this7.allStats = response.stats;
+              _this8.loadingIndicator = false;
+              _this8.allStats = response.stats;
 
-              _this7.allStats.map(function (resStat) {
+              _this8.allStats.map(function (resStat) {
                 resStat.publisher = "No Publisher";
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator32 = _createForOfIteratorHelper(_this7.tagList),
+              var _iterator32 = _createForOfIteratorHelper(_this8.tagList),
                   _step32;
 
               try {
@@ -10460,28 +10558,28 @@
                         var tagSub = _step33.value;
 
                         if (tagSub.filterTag == "Contains") {
-                          _this7.allStats.map(function (stat) {
+                          _this8.allStats.map(function (stat) {
                             if (stat.subid.includes(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "StartsWith") {
-                          _this7.allStats.map(function (stat) {
+                          _this8.allStats.map(function (stat) {
                             if (stat.subid.startsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "EndsWith") {
-                          _this7.allStats.map(function (stat) {
+                          _this8.allStats.map(function (stat) {
                             if (stat.subid.endsWith(tagSub.subid)) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
                             }
                           });
                         } else if (tagSub.filterTag == "ExactValue") {
-                          _this7.allStats.map(function (stat) {
+                          _this8.allStats.map(function (stat) {
                             if (stat.subid == tagSub.subid) {
                               stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
                               stat.tagname = tagL.tag.name;
@@ -10502,7 +10600,7 @@
                 _iterator32.f();
               }
 
-              return _this7.allStats;
+              return _this8.allStats;
             });
           }
         }, {
@@ -11292,13 +11390,13 @@
         }, {
           key: "getAllSystem1Stats",
           value: function getAllSystem1Stats(company, startDate, endDate) {
-            var _this8 = this;
+            var _this9 = this;
 
             return this.system1Service.getAllSystem1Stats(company, startDate, endDate).toPromise().then(function (response) {
               console.log('getAllSystem1Stats() response:', response);
-              _this8.loadingIndicator = false;
-              _this8.allStats = response.stats;
-              return _this8.allStats;
+              _this9.loadingIndicator = false;
+              _this9.allStats = response.stats;
+              return _this9.allStats;
             });
           }
         }, {
@@ -13445,11 +13543,13 @@
           value: function updateManualSplit(updateData) {
             var company = updateData.company,
                 reportType = updateData.reportType,
+                tag = updateData.tag,
                 startDate = updateData.startDate,
                 endDate = updateData.endDate;
             var data = {
               "company": company,
               "reportType": reportType,
+              "tag": tag,
               'startDate': startDate,
               'endDate': endDate
             };
