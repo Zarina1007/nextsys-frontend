@@ -1,8 +1,4 @@
 (function () {
-  function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
-
-  function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
-
   function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
   function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -30923,31 +30919,37 @@
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! rxjs */
       "./node_modules/rxjs/_esm2015/index.js");
       /* harmony import */
 
 
-      var _configs_dynamic_aside_menu_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _configs_dynamic_aside_menu_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ../../configs/dynamic-aside-menu.config */
       "./src/app/_metronic/configs/dynamic-aside-menu.config.ts");
       /* harmony import */
 
 
-      var src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! src/app/modules/auth/_services/auth.service */
       "./src/app/modules/auth/_services/auth.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! src/app/shared/service/tags.service */
       "./src/app/shared/service/tags.service.ts");
 
@@ -30961,7 +30963,7 @@
 
           this.authService = authService;
           this.tagService = tagService;
-          this.menuConfigSubject = new rxjs__WEBPACK_IMPORTED_MODULE_1__["BehaviorSubject"](emptyMenuConfig);
+          this.menuConfigSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](emptyMenuConfig);
           this.tagList = [];
           this.menuConfig$ = this.menuConfigSubject.asObservable();
           this.currentUser = this.authService.currentUserValue;
@@ -30973,12 +30975,12 @@
         _createClass(DynamicAsideMenuService, [{
           key: "loadMenu",
           value: function loadMenu() {
-            this.setMenu(_configs_dynamic_aside_menu_config__WEBPACK_IMPORTED_MODULE_2__["DynamicAsideMenuConfig"]);
+            this.setMenu(_configs_dynamic_aside_menu_config__WEBPACK_IMPORTED_MODULE_3__["DynamicAsideMenuConfig"]);
           }
         }, {
           key: "setMenu",
-          value: function () {
-            var _setMenu = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(menuConfig) {
+          value: function setMenu(menuConfig) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
               var submenuList, apiDocumentationMenu, publisherMenu;
               return regeneratorRuntime.wrap(function _callee$(_context) {
                 while (1) {
@@ -31030,13 +31032,7 @@
                 }
               }, _callee, this);
             }));
-
-            function setMenu(_x) {
-              return _setMenu.apply(this, arguments);
-            }
-
-            return setMenu;
-          }()
+          }
         }, {
           key: "getMenu",
           value: function getMenu() {
@@ -31048,10 +31044,10 @@
       }();
 
       DynamicAsideMenuService.ɵfac = function DynamicAsideMenuService_Factory(t) {
-        return new (t || DynamicAsideMenuService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_4__["TagsService"]));
+        return new (t || DynamicAsideMenuService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__["TagsService"]));
       };
 
-      DynamicAsideMenuService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      DynamicAsideMenuService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
         token: DynamicAsideMenuService,
         factory: DynamicAsideMenuService.ɵfac,
         providedIn: 'root'
@@ -31059,16 +31055,16 @@
       /*@__PURE__*/
 
       (function () {
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DynamicAsideMenuService, [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](DynamicAsideMenuService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
           args: [{
             providedIn: 'root'
           }]
         }], function () {
           return [{
-            type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]
+            type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]
           }, {
-            type: src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_4__["TagsService"]
+            type: src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__["TagsService"]
           }];
         }, null);
       })();
