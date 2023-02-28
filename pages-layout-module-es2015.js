@@ -19512,7 +19512,7 @@ const DynamicAsideMenuConfig = {
                 },
             ],
         },
-        //Publisher Notifications
+        //Notifications
         { section: 'Notifications' },
         {
             title: 'Notifications',
@@ -19524,8 +19524,8 @@ const DynamicAsideMenuConfig = {
             permissionName: "notifications",
             submenu: [
                 {
-                    title: 'Send Publisher Notifications',
-                    page: '/send-publisher-notification',
+                    title: 'Admin Notifications',
+                    page: '/admin-notification',
                 },
             ],
         },

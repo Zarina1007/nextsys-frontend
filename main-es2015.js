@@ -346,6 +346,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/company-management/company-management.component */ "./src/app/modules/company-management/company-management.component.ts");
 /* harmony import */ var _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/admin-reporting/admin-reporting.component */ "./src/app/modules/admin-reporting/admin-reporting.component.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.esm.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
 
 
 
@@ -372,6 +374,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+Object(firebase_app__WEBPACK_IMPORTED_MODULE_21__["initializeApp"])(src_environments_environment__WEBPACK_IMPORTED_MODULE_22__["environment"].firebase);
 function appInitializer(authService) {
     return () => {
         return new Promise((resolve) => {
@@ -1602,6 +1607,17 @@ const environment = {
     appVersion: 'v710nextsystem',
     USERDATA_KEY: 'authf649fc9a5f55',
     apiUrl: 'http://34.232.43.97/api',
+    // 'http://localhost:3000',
+    firebase: {
+        apiKey: 'AIzaSyBo5HkH7rhbHwAsAj-986M5e66HsX5maQ0',
+        authDomain: 'nextsys-notification.firebaseapp.com',
+        projectId: 'nextsys-notification',
+        storageBucket: 'nextsys-notification.appspot.com',
+        messagingSenderId: '819552312851',
+        appId: '1:819552312851:web:1d9358beec81f8b3b229e6',
+        measurementId: 'G-KSYX19F1LC',
+        vapidKey: 'BIvjo2A-YIlEAVmu-jBZv62SSA8JPUnnMeFldBQCiF9TWMgPsxjlh9Q2TvmqrkC2TnuhfS9wV4Q1cSNPMhpAklU'
+    },
 };
 
 

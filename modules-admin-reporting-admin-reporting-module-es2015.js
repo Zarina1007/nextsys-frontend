@@ -1,5 +1,2758 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["modules-admin-reporting-admin-reporting-module"],{
 
+/***/ "./node_modules/@firebase/installations/dist/index.esm2017.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@firebase/installations/dist/index.esm2017.js ***!
+  \********************************************************************/
+/*! exports provided: deleteInstallations, getId, getInstallations, getToken, onIdChange */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteInstallations", function() { return deleteInstallations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getId", function() { return getId; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getInstallations", function() { return getInstallations; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getToken", function() { return getToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onIdChange", function() { return onIdChange; });
+/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/app */ "./node_modules/@firebase/app/dist/index.esm2017.js");
+/* harmony import */ var _firebase_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @firebase/component */ "./node_modules/@firebase/component/dist/index.esm.js");
+/* harmony import */ var _firebase_util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @firebase/util */ "./node_modules/@firebase/util/dist/index.esm2017.js");
+/* harmony import */ var idb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! idb */ "./node_modules/idb/build/idb.js");
+/* harmony import */ var idb__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(idb__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+const name = "@firebase/installations";
+const version = "0.5.2";
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const PENDING_TIMEOUT_MS = 10000;
+const PACKAGE_VERSION = `w:${version}`;
+const INTERNAL_AUTH_VERSION = 'FIS_v2';
+const INSTALLATIONS_API_URL = 'https://firebaseinstallations.googleapis.com/v1';
+const TOKEN_EXPIRATION_BUFFER = 60 * 60 * 1000; // One hour
+const SERVICE = 'installations';
+const SERVICE_NAME = 'Installations';
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const ERROR_DESCRIPTION_MAP = {
+    ["missing-app-config-values" /* MISSING_APP_CONFIG_VALUES */]: 'Missing App configuration value: "{$valueName}"',
+    ["not-registered" /* NOT_REGISTERED */]: 'Firebase Installation is not registered.',
+    ["installation-not-found" /* INSTALLATION_NOT_FOUND */]: 'Firebase Installation not found.',
+    ["request-failed" /* REQUEST_FAILED */]: '{$requestName} request failed with error "{$serverCode} {$serverStatus}: {$serverMessage}"',
+    ["app-offline" /* APP_OFFLINE */]: 'Could not process request. Application offline.',
+    ["delete-pending-registration" /* DELETE_PENDING_REGISTRATION */]: "Can't delete installation while there is a pending registration request."
+};
+const ERROR_FACTORY = new _firebase_util__WEBPACK_IMPORTED_MODULE_2__["ErrorFactory"](SERVICE, SERVICE_NAME, ERROR_DESCRIPTION_MAP);
+/** Returns true if error is a FirebaseError that is based on an error from the server. */
+function isServerError(error) {
+    return (error instanceof _firebase_util__WEBPACK_IMPORTED_MODULE_2__["FirebaseError"] &&
+        error.code.includes("request-failed" /* REQUEST_FAILED */));
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function getInstallationsEndpoint({ projectId }) {
+    return `${INSTALLATIONS_API_URL}/projects/${projectId}/installations`;
+}
+function extractAuthTokenInfoFromResponse(response) {
+    return {
+        token: response.token,
+        requestStatus: 2 /* COMPLETED */,
+        expiresIn: getExpiresInFromResponseExpiresIn(response.expiresIn),
+        creationTime: Date.now()
+    };
+}
+async function getErrorFromResponse(requestName, response) {
+    const responseJson = await response.json();
+    const errorData = responseJson.error;
+    return ERROR_FACTORY.create("request-failed" /* REQUEST_FAILED */, {
+        requestName,
+        serverCode: errorData.code,
+        serverMessage: errorData.message,
+        serverStatus: errorData.status
+    });
+}
+function getHeaders({ apiKey }) {
+    return new Headers({
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'x-goog-api-key': apiKey
+    });
+}
+function getHeadersWithAuth(appConfig, { refreshToken }) {
+    const headers = getHeaders(appConfig);
+    headers.append('Authorization', getAuthorizationHeader(refreshToken));
+    return headers;
+}
+/**
+ * Calls the passed in fetch wrapper and returns the response.
+ * If the returned response has a status of 5xx, re-runs the function once and
+ * returns the response.
+ */
+async function retryIfServerError(fn) {
+    const result = await fn();
+    if (result.status >= 500 && result.status < 600) {
+        // Internal Server Error. Retry request.
+        return fn();
+    }
+    return result;
+}
+function getExpiresInFromResponseExpiresIn(responseExpiresIn) {
+    // This works because the server will never respond with fractions of a second.
+    return Number(responseExpiresIn.replace('s', '000'));
+}
+function getAuthorizationHeader(refreshToken) {
+    return `${INTERNAL_AUTH_VERSION} ${refreshToken}`;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function createInstallationRequest(appConfig, { fid }) {
+    const endpoint = getInstallationsEndpoint(appConfig);
+    const headers = getHeaders(appConfig);
+    const body = {
+        fid,
+        authVersion: INTERNAL_AUTH_VERSION,
+        appId: appConfig.appId,
+        sdkVersion: PACKAGE_VERSION
+    };
+    const request = {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(body)
+    };
+    const response = await retryIfServerError(() => fetch(endpoint, request));
+    if (response.ok) {
+        const responseValue = await response.json();
+        const registeredInstallationEntry = {
+            fid: responseValue.fid || fid,
+            registrationStatus: 2 /* COMPLETED */,
+            refreshToken: responseValue.refreshToken,
+            authToken: extractAuthTokenInfoFromResponse(responseValue.authToken)
+        };
+        return registeredInstallationEntry;
+    }
+    else {
+        throw await getErrorFromResponse('Create Installation', response);
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/** Returns a promise that resolves after given time passes. */
+function sleep(ms) {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms);
+    });
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function bufferToBase64UrlSafe(array) {
+    const b64 = btoa(String.fromCharCode(...array));
+    return b64.replace(/\+/g, '-').replace(/\//g, '_');
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const VALID_FID_PATTERN = /^[cdef][\w-]{21}$/;
+const INVALID_FID = '';
+/**
+ * Generates a new FID using random values from Web Crypto API.
+ * Returns an empty string if FID generation fails for any reason.
+ */
+function generateFid() {
+    try {
+        // A valid FID has exactly 22 base64 characters, which is 132 bits, or 16.5
+        // bytes. our implementation generates a 17 byte array instead.
+        const fidByteArray = new Uint8Array(17);
+        const crypto = self.crypto || self.msCrypto;
+        crypto.getRandomValues(fidByteArray);
+        // Replace the first 4 random bits with the constant FID header of 0b0111.
+        fidByteArray[0] = 0b01110000 + (fidByteArray[0] % 0b00010000);
+        const fid = encode(fidByteArray);
+        return VALID_FID_PATTERN.test(fid) ? fid : INVALID_FID;
+    }
+    catch (_a) {
+        // FID generation errored
+        return INVALID_FID;
+    }
+}
+/** Converts a FID Uint8Array to a base64 string representation. */
+function encode(fidByteArray) {
+    const b64String = bufferToBase64UrlSafe(fidByteArray);
+    // Remove the 23rd character that was added because of the extra 4 bits at the
+    // end of our 17 byte array, and the '=' padding.
+    return b64String.substr(0, 22);
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/** Returns a string key that can be used to identify the app. */
+function getKey(appConfig) {
+    return `${appConfig.appName}!${appConfig.appId}`;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const fidChangeCallbacks = new Map();
+/**
+ * Calls the onIdChange callbacks with the new FID value, and broadcasts the
+ * change to other tabs.
+ */
+function fidChanged(appConfig, fid) {
+    const key = getKey(appConfig);
+    callFidChangeCallbacks(key, fid);
+    broadcastFidChange(key, fid);
+}
+function addCallback(appConfig, callback) {
+    // Open the broadcast channel if it's not already open,
+    // to be able to listen to change events from other tabs.
+    getBroadcastChannel();
+    const key = getKey(appConfig);
+    let callbackSet = fidChangeCallbacks.get(key);
+    if (!callbackSet) {
+        callbackSet = new Set();
+        fidChangeCallbacks.set(key, callbackSet);
+    }
+    callbackSet.add(callback);
+}
+function removeCallback(appConfig, callback) {
+    const key = getKey(appConfig);
+    const callbackSet = fidChangeCallbacks.get(key);
+    if (!callbackSet) {
+        return;
+    }
+    callbackSet.delete(callback);
+    if (callbackSet.size === 0) {
+        fidChangeCallbacks.delete(key);
+    }
+    // Close broadcast channel if there are no more callbacks.
+    closeBroadcastChannel();
+}
+function callFidChangeCallbacks(key, fid) {
+    const callbacks = fidChangeCallbacks.get(key);
+    if (!callbacks) {
+        return;
+    }
+    for (const callback of callbacks) {
+        callback(fid);
+    }
+}
+function broadcastFidChange(key, fid) {
+    const channel = getBroadcastChannel();
+    if (channel) {
+        channel.postMessage({ key, fid });
+    }
+    closeBroadcastChannel();
+}
+let broadcastChannel = null;
+/** Opens and returns a BroadcastChannel if it is supported by the browser. */
+function getBroadcastChannel() {
+    if (!broadcastChannel && 'BroadcastChannel' in self) {
+        broadcastChannel = new BroadcastChannel('[Firebase] FID Change');
+        broadcastChannel.onmessage = e => {
+            callFidChangeCallbacks(e.data.key, e.data.fid);
+        };
+    }
+    return broadcastChannel;
+}
+function closeBroadcastChannel() {
+    if (fidChangeCallbacks.size === 0 && broadcastChannel) {
+        broadcastChannel.close();
+        broadcastChannel = null;
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const DATABASE_NAME = 'firebase-installations-database';
+const DATABASE_VERSION = 1;
+const OBJECT_STORE_NAME = 'firebase-installations-store';
+let dbPromise = null;
+function getDbPromise() {
+    if (!dbPromise) {
+        dbPromise = Object(idb__WEBPACK_IMPORTED_MODULE_3__["openDb"])(DATABASE_NAME, DATABASE_VERSION, upgradeDB => {
+            // We don't use 'break' in this switch statement, the fall-through
+            // behavior is what we want, because if there are multiple versions between
+            // the old version and the current version, we want ALL the migrations
+            // that correspond to those versions to run, not only the last one.
+            // eslint-disable-next-line default-case
+            switch (upgradeDB.oldVersion) {
+                case 0:
+                    upgradeDB.createObjectStore(OBJECT_STORE_NAME);
+            }
+        });
+    }
+    return dbPromise;
+}
+/** Assigns or overwrites the record for the given key with the given value. */
+async function set(appConfig, value) {
+    const key = getKey(appConfig);
+    const db = await getDbPromise();
+    const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');
+    const objectStore = tx.objectStore(OBJECT_STORE_NAME);
+    const oldValue = await objectStore.get(key);
+    await objectStore.put(value, key);
+    await tx.complete;
+    if (!oldValue || oldValue.fid !== value.fid) {
+        fidChanged(appConfig, value.fid);
+    }
+    return value;
+}
+/** Removes record(s) from the objectStore that match the given key. */
+async function remove(appConfig) {
+    const key = getKey(appConfig);
+    const db = await getDbPromise();
+    const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');
+    await tx.objectStore(OBJECT_STORE_NAME).delete(key);
+    await tx.complete;
+}
+/**
+ * Atomically updates a record with the result of updateFn, which gets
+ * called with the current value. If newValue is undefined, the record is
+ * deleted instead.
+ * @return Updated value
+ */
+async function update(appConfig, updateFn) {
+    const key = getKey(appConfig);
+    const db = await getDbPromise();
+    const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');
+    const store = tx.objectStore(OBJECT_STORE_NAME);
+    const oldValue = await store.get(key);
+    const newValue = updateFn(oldValue);
+    if (newValue === undefined) {
+        await store.delete(key);
+    }
+    else {
+        await store.put(newValue, key);
+    }
+    await tx.complete;
+    if (newValue && (!oldValue || oldValue.fid !== newValue.fid)) {
+        fidChanged(appConfig, newValue.fid);
+    }
+    return newValue;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Updates and returns the InstallationEntry from the database.
+ * Also triggers a registration request if it is necessary and possible.
+ */
+async function getInstallationEntry(appConfig) {
+    let registrationPromise;
+    const installationEntry = await update(appConfig, oldEntry => {
+        const installationEntry = updateOrCreateInstallationEntry(oldEntry);
+        const entryWithPromise = triggerRegistrationIfNecessary(appConfig, installationEntry);
+        registrationPromise = entryWithPromise.registrationPromise;
+        return entryWithPromise.installationEntry;
+    });
+    if (installationEntry.fid === INVALID_FID) {
+        // FID generation failed. Waiting for the FID from the server.
+        return { installationEntry: await registrationPromise };
+    }
+    return {
+        installationEntry,
+        registrationPromise
+    };
+}
+/**
+ * Creates a new Installation Entry if one does not exist.
+ * Also clears timed out pending requests.
+ */
+function updateOrCreateInstallationEntry(oldEntry) {
+    const entry = oldEntry || {
+        fid: generateFid(),
+        registrationStatus: 0 /* NOT_STARTED */
+    };
+    return clearTimedOutRequest(entry);
+}
+/**
+ * If the Firebase Installation is not registered yet, this will trigger the
+ * registration and return an InProgressInstallationEntry.
+ *
+ * If registrationPromise does not exist, the installationEntry is guaranteed
+ * to be registered.
+ */
+function triggerRegistrationIfNecessary(appConfig, installationEntry) {
+    if (installationEntry.registrationStatus === 0 /* NOT_STARTED */) {
+        if (!navigator.onLine) {
+            // Registration required but app is offline.
+            const registrationPromiseWithError = Promise.reject(ERROR_FACTORY.create("app-offline" /* APP_OFFLINE */));
+            return {
+                installationEntry,
+                registrationPromise: registrationPromiseWithError
+            };
+        }
+        // Try registering. Change status to IN_PROGRESS.
+        const inProgressEntry = {
+            fid: installationEntry.fid,
+            registrationStatus: 1 /* IN_PROGRESS */,
+            registrationTime: Date.now()
+        };
+        const registrationPromise = registerInstallation(appConfig, inProgressEntry);
+        return { installationEntry: inProgressEntry, registrationPromise };
+    }
+    else if (installationEntry.registrationStatus === 1 /* IN_PROGRESS */) {
+        return {
+            installationEntry,
+            registrationPromise: waitUntilFidRegistration(appConfig)
+        };
+    }
+    else {
+        return { installationEntry };
+    }
+}
+/** This will be executed only once for each new Firebase Installation. */
+async function registerInstallation(appConfig, installationEntry) {
+    try {
+        const registeredInstallationEntry = await createInstallationRequest(appConfig, installationEntry);
+        return set(appConfig, registeredInstallationEntry);
+    }
+    catch (e) {
+        if (isServerError(e) && e.customData.serverCode === 409) {
+            // Server returned a "FID can not be used" error.
+            // Generate a new ID next time.
+            await remove(appConfig);
+        }
+        else {
+            // Registration failed. Set FID as not registered.
+            await set(appConfig, {
+                fid: installationEntry.fid,
+                registrationStatus: 0 /* NOT_STARTED */
+            });
+        }
+        throw e;
+    }
+}
+/** Call if FID registration is pending in another request. */
+async function waitUntilFidRegistration(appConfig) {
+    // Unfortunately, there is no way of reliably observing when a value in
+    // IndexedDB changes (yet, see https://github.com/WICG/indexed-db-observers),
+    // so we need to poll.
+    let entry = await updateInstallationRequest(appConfig);
+    while (entry.registrationStatus === 1 /* IN_PROGRESS */) {
+        // createInstallation request still in progress.
+        await sleep(100);
+        entry = await updateInstallationRequest(appConfig);
+    }
+    if (entry.registrationStatus === 0 /* NOT_STARTED */) {
+        // The request timed out or failed in a different call. Try again.
+        const { installationEntry, registrationPromise } = await getInstallationEntry(appConfig);
+        if (registrationPromise) {
+            return registrationPromise;
+        }
+        else {
+            // if there is no registrationPromise, entry is registered.
+            return installationEntry;
+        }
+    }
+    return entry;
+}
+/**
+ * Called only if there is a CreateInstallation request in progress.
+ *
+ * Updates the InstallationEntry in the DB based on the status of the
+ * CreateInstallation request.
+ *
+ * Returns the updated InstallationEntry.
+ */
+function updateInstallationRequest(appConfig) {
+    return update(appConfig, oldEntry => {
+        if (!oldEntry) {
+            throw ERROR_FACTORY.create("installation-not-found" /* INSTALLATION_NOT_FOUND */);
+        }
+        return clearTimedOutRequest(oldEntry);
+    });
+}
+function clearTimedOutRequest(entry) {
+    if (hasInstallationRequestTimedOut(entry)) {
+        return {
+            fid: entry.fid,
+            registrationStatus: 0 /* NOT_STARTED */
+        };
+    }
+    return entry;
+}
+function hasInstallationRequestTimedOut(installationEntry) {
+    return (installationEntry.registrationStatus === 1 /* IN_PROGRESS */ &&
+        installationEntry.registrationTime + PENDING_TIMEOUT_MS < Date.now());
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function generateAuthTokenRequest({ appConfig, platformLoggerProvider }, installationEntry) {
+    const endpoint = getGenerateAuthTokenEndpoint(appConfig, installationEntry);
+    const headers = getHeadersWithAuth(appConfig, installationEntry);
+    // If platform logger exists, add the platform info string to the header.
+    const platformLogger = platformLoggerProvider.getImmediate({
+        optional: true
+    });
+    if (platformLogger) {
+        headers.append('x-firebase-client', platformLogger.getPlatformInfoString());
+    }
+    const body = {
+        installation: {
+            sdkVersion: PACKAGE_VERSION
+        }
+    };
+    const request = {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(body)
+    };
+    const response = await retryIfServerError(() => fetch(endpoint, request));
+    if (response.ok) {
+        const responseValue = await response.json();
+        const completedAuthToken = extractAuthTokenInfoFromResponse(responseValue);
+        return completedAuthToken;
+    }
+    else {
+        throw await getErrorFromResponse('Generate Auth Token', response);
+    }
+}
+function getGenerateAuthTokenEndpoint(appConfig, { fid }) {
+    return `${getInstallationsEndpoint(appConfig)}/${fid}/authTokens:generate`;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Returns a valid authentication token for the installation. Generates a new
+ * token if one doesn't exist, is expired or about to expire.
+ *
+ * Should only be called if the Firebase Installation is registered.
+ */
+async function refreshAuthToken(installations, forceRefresh = false) {
+    let tokenPromise;
+    const entry = await update(installations.appConfig, oldEntry => {
+        if (!isEntryRegistered(oldEntry)) {
+            throw ERROR_FACTORY.create("not-registered" /* NOT_REGISTERED */);
+        }
+        const oldAuthToken = oldEntry.authToken;
+        if (!forceRefresh && isAuthTokenValid(oldAuthToken)) {
+            // There is a valid token in the DB.
+            return oldEntry;
+        }
+        else if (oldAuthToken.requestStatus === 1 /* IN_PROGRESS */) {
+            // There already is a token request in progress.
+            tokenPromise = waitUntilAuthTokenRequest(installations, forceRefresh);
+            return oldEntry;
+        }
+        else {
+            // No token or token expired.
+            if (!navigator.onLine) {
+                throw ERROR_FACTORY.create("app-offline" /* APP_OFFLINE */);
+            }
+            const inProgressEntry = makeAuthTokenRequestInProgressEntry(oldEntry);
+            tokenPromise = fetchAuthTokenFromServer(installations, inProgressEntry);
+            return inProgressEntry;
+        }
+    });
+    const authToken = tokenPromise
+        ? await tokenPromise
+        : entry.authToken;
+    return authToken;
+}
+/**
+ * Call only if FID is registered and Auth Token request is in progress.
+ *
+ * Waits until the current pending request finishes. If the request times out,
+ * tries once in this thread as well.
+ */
+async function waitUntilAuthTokenRequest(installations, forceRefresh) {
+    // Unfortunately, there is no way of reliably observing when a value in
+    // IndexedDB changes (yet, see https://github.com/WICG/indexed-db-observers),
+    // so we need to poll.
+    let entry = await updateAuthTokenRequest(installations.appConfig);
+    while (entry.authToken.requestStatus === 1 /* IN_PROGRESS */) {
+        // generateAuthToken still in progress.
+        await sleep(100);
+        entry = await updateAuthTokenRequest(installations.appConfig);
+    }
+    const authToken = entry.authToken;
+    if (authToken.requestStatus === 0 /* NOT_STARTED */) {
+        // The request timed out or failed in a different call. Try again.
+        return refreshAuthToken(installations, forceRefresh);
+    }
+    else {
+        return authToken;
+    }
+}
+/**
+ * Called only if there is a GenerateAuthToken request in progress.
+ *
+ * Updates the InstallationEntry in the DB based on the status of the
+ * GenerateAuthToken request.
+ *
+ * Returns the updated InstallationEntry.
+ */
+function updateAuthTokenRequest(appConfig) {
+    return update(appConfig, oldEntry => {
+        if (!isEntryRegistered(oldEntry)) {
+            throw ERROR_FACTORY.create("not-registered" /* NOT_REGISTERED */);
+        }
+        const oldAuthToken = oldEntry.authToken;
+        if (hasAuthTokenRequestTimedOut(oldAuthToken)) {
+            return Object.assign(Object.assign({}, oldEntry), { authToken: { requestStatus: 0 /* NOT_STARTED */ } });
+        }
+        return oldEntry;
+    });
+}
+async function fetchAuthTokenFromServer(installations, installationEntry) {
+    try {
+        const authToken = await generateAuthTokenRequest(installations, installationEntry);
+        const updatedInstallationEntry = Object.assign(Object.assign({}, installationEntry), { authToken });
+        await set(installations.appConfig, updatedInstallationEntry);
+        return authToken;
+    }
+    catch (e) {
+        if (isServerError(e) &&
+            (e.customData.serverCode === 401 || e.customData.serverCode === 404)) {
+            // Server returned a "FID not found" or a "Invalid authentication" error.
+            // Generate a new ID next time.
+            await remove(installations.appConfig);
+        }
+        else {
+            const updatedInstallationEntry = Object.assign(Object.assign({}, installationEntry), { authToken: { requestStatus: 0 /* NOT_STARTED */ } });
+            await set(installations.appConfig, updatedInstallationEntry);
+        }
+        throw e;
+    }
+}
+function isEntryRegistered(installationEntry) {
+    return (installationEntry !== undefined &&
+        installationEntry.registrationStatus === 2 /* COMPLETED */);
+}
+function isAuthTokenValid(authToken) {
+    return (authToken.requestStatus === 2 /* COMPLETED */ &&
+        !isAuthTokenExpired(authToken));
+}
+function isAuthTokenExpired(authToken) {
+    const now = Date.now();
+    return (now < authToken.creationTime ||
+        authToken.creationTime + authToken.expiresIn < now + TOKEN_EXPIRATION_BUFFER);
+}
+/** Returns an updated InstallationEntry with an InProgressAuthToken. */
+function makeAuthTokenRequestInProgressEntry(oldEntry) {
+    const inProgressAuthToken = {
+        requestStatus: 1 /* IN_PROGRESS */,
+        requestTime: Date.now()
+    };
+    return Object.assign(Object.assign({}, oldEntry), { authToken: inProgressAuthToken });
+}
+function hasAuthTokenRequestTimedOut(authToken) {
+    return (authToken.requestStatus === 1 /* IN_PROGRESS */ &&
+        authToken.requestTime + PENDING_TIMEOUT_MS < Date.now());
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Creates a Firebase Installation if there isn't one for the app and
+ * returns the Installation ID.
+ * @param installations - The `Installations` instance.
+ *
+ * @public
+ */
+async function getId(installations) {
+    const installationsImpl = installations;
+    const { installationEntry, registrationPromise } = await getInstallationEntry(installationsImpl.appConfig);
+    if (registrationPromise) {
+        registrationPromise.catch(console.error);
+    }
+    else {
+        // If the installation is already registered, update the authentication
+        // token if needed.
+        refreshAuthToken(installationsImpl).catch(console.error);
+    }
+    return installationEntry.fid;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Returns a Firebase Installations auth token, identifying the current
+ * Firebase Installation.
+ * @param installations - The `Installations` instance.
+ * @param forceRefresh - Force refresh regardless of token expiration.
+ *
+ * @public
+ */
+async function getToken(installations, forceRefresh = false) {
+    const installationsImpl = installations;
+    await completeInstallationRegistration(installationsImpl.appConfig);
+    // At this point we either have a Registered Installation in the DB, or we've
+    // already thrown an error.
+    const authToken = await refreshAuthToken(installationsImpl, forceRefresh);
+    return authToken.token;
+}
+async function completeInstallationRegistration(appConfig) {
+    const { registrationPromise } = await getInstallationEntry(appConfig);
+    if (registrationPromise) {
+        // A createInstallation request is in progress. Wait until it finishes.
+        await registrationPromise;
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function deleteInstallationRequest(appConfig, installationEntry) {
+    const endpoint = getDeleteEndpoint(appConfig, installationEntry);
+    const headers = getHeadersWithAuth(appConfig, installationEntry);
+    const request = {
+        method: 'DELETE',
+        headers
+    };
+    const response = await retryIfServerError(() => fetch(endpoint, request));
+    if (!response.ok) {
+        throw await getErrorFromResponse('Delete Installation', response);
+    }
+}
+function getDeleteEndpoint(appConfig, { fid }) {
+    return `${getInstallationsEndpoint(appConfig)}/${fid}`;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Deletes the Firebase Installation and all associated data.
+ * @param installations - The `Installations` instance.
+ *
+ * @public
+ */
+async function deleteInstallations(installations) {
+    const { appConfig } = installations;
+    const entry = await update(appConfig, oldEntry => {
+        if (oldEntry && oldEntry.registrationStatus === 0 /* NOT_STARTED */) {
+            // Delete the unregistered entry without sending a deleteInstallation request.
+            return undefined;
+        }
+        return oldEntry;
+    });
+    if (entry) {
+        if (entry.registrationStatus === 1 /* IN_PROGRESS */) {
+            // Can't delete while trying to register.
+            throw ERROR_FACTORY.create("delete-pending-registration" /* DELETE_PENDING_REGISTRATION */);
+        }
+        else if (entry.registrationStatus === 2 /* COMPLETED */) {
+            if (!navigator.onLine) {
+                throw ERROR_FACTORY.create("app-offline" /* APP_OFFLINE */);
+            }
+            else {
+                await deleteInstallationRequest(appConfig, entry);
+                await remove(appConfig);
+            }
+        }
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Sets a new callback that will get called when Installation ID changes.
+ * Returns an unsubscribe function that will remove the callback when called.
+ * @param installations - The `Installations` instance.
+ * @param callback - The callback function that is invoked when FID changes.
+ * @returns A function that can be called to unsubscribe.
+ *
+ * @public
+ */
+function onIdChange(installations, callback) {
+    const { appConfig } = installations;
+    addCallback(appConfig, callback);
+    return () => {
+        removeCallback(appConfig, callback);
+    };
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Returns an instance of {@link Installations} associated with the given
+ * {@link @firebase/app#FirebaseApp} instance.
+ * @param app - The {@link @firebase/app#FirebaseApp} instance.
+ *
+ * @public
+ */
+function getInstallations(app = Object(_firebase_app__WEBPACK_IMPORTED_MODULE_0__["getApp"])()) {
+    const installationsImpl = Object(_firebase_app__WEBPACK_IMPORTED_MODULE_0__["_getProvider"])(app, 'installations').getImmediate();
+    return installationsImpl;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function extractAppConfig(app) {
+    if (!app || !app.options) {
+        throw getMissingValueError('App Configuration');
+    }
+    if (!app.name) {
+        throw getMissingValueError('App Name');
+    }
+    // Required app config keys
+    const configKeys = [
+        'projectId',
+        'apiKey',
+        'appId'
+    ];
+    for (const keyName of configKeys) {
+        if (!app.options[keyName]) {
+            throw getMissingValueError(keyName);
+        }
+    }
+    return {
+        appName: app.name,
+        projectId: app.options.projectId,
+        apiKey: app.options.apiKey,
+        appId: app.options.appId
+    };
+}
+function getMissingValueError(valueName) {
+    return ERROR_FACTORY.create("missing-app-config-values" /* MISSING_APP_CONFIG_VALUES */, {
+        valueName
+    });
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const INSTALLATIONS_NAME = 'installations';
+const INSTALLATIONS_NAME_INTERNAL = 'installations-internal';
+const publicFactory = (container) => {
+    const app = container.getProvider('app').getImmediate();
+    // Throws if app isn't configured properly.
+    const appConfig = extractAppConfig(app);
+    const platformLoggerProvider = Object(_firebase_app__WEBPACK_IMPORTED_MODULE_0__["_getProvider"])(app, 'platform-logger');
+    const installationsImpl = {
+        app,
+        appConfig,
+        platformLoggerProvider,
+        _delete: () => Promise.resolve()
+    };
+    return installationsImpl;
+};
+const internalFactory = (container) => {
+    const app = container.getProvider('app').getImmediate();
+    // Internal FIS instance relies on public FIS instance.
+    const installations = Object(_firebase_app__WEBPACK_IMPORTED_MODULE_0__["_getProvider"])(app, INSTALLATIONS_NAME).getImmediate();
+    const installationsInternal = {
+        getId: () => getId(installations),
+        getToken: (forceRefresh) => getToken(installations, forceRefresh)
+    };
+    return installationsInternal;
+};
+function registerInstallations() {
+    Object(_firebase_app__WEBPACK_IMPORTED_MODULE_0__["_registerComponent"])(new _firebase_component__WEBPACK_IMPORTED_MODULE_1__["Component"](INSTALLATIONS_NAME, publicFactory, "PUBLIC" /* PUBLIC */));
+    Object(_firebase_app__WEBPACK_IMPORTED_MODULE_0__["_registerComponent"])(new _firebase_component__WEBPACK_IMPORTED_MODULE_1__["Component"](INSTALLATIONS_NAME_INTERNAL, internalFactory, "PRIVATE" /* PRIVATE */));
+}
+
+/**
+ * Firebase Installations
+ *
+ * @packageDocumentation
+ */
+registerInstallations();
+Object(_firebase_app__WEBPACK_IMPORTED_MODULE_0__["registerVersion"])(name, version);
+// BUILD_TARGET will be replaced by values like esm5, esm2017, cjs5, etc during the compilation
+Object(_firebase_app__WEBPACK_IMPORTED_MODULE_0__["registerVersion"])(name, version, 'esm2017');
+
+
+//# sourceMappingURL=index.esm2017.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/@firebase/messaging/dist/index.esm2017.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@firebase/messaging/dist/index.esm2017.js ***!
+  \****************************************************************/
+/*! exports provided: deleteToken, getMessaging, getToken, isSupported, onMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteToken", function() { return deleteToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getMessaging", function() { return getMessagingInWindow; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getToken", function() { return getToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isSupported", function() { return isWindowSupported; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "onMessage", function() { return onMessage; });
+/* harmony import */ var _firebase_installations__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/installations */ "./node_modules/@firebase/installations/dist/index.esm2017.js");
+/* harmony import */ var _firebase_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @firebase/component */ "./node_modules/@firebase/component/dist/index.esm.js");
+/* harmony import */ var idb__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! idb */ "./node_modules/idb/build/idb.js");
+/* harmony import */ var idb__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(idb__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _firebase_util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @firebase/util */ "./node_modules/@firebase/util/dist/index.esm2017.js");
+/* harmony import */ var _firebase_app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @firebase/app */ "./node_modules/@firebase/app/dist/index.esm2017.js");
+
+
+
+
+
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const DEFAULT_SW_PATH = '/firebase-messaging-sw.js';
+const DEFAULT_SW_SCOPE = '/firebase-cloud-messaging-push-scope';
+const DEFAULT_VAPID_KEY = 'BDOU99-h67HcA6JeFXHbSNMu7e2yNNu3RzoMj8TM4W88jITfq7ZmPvIM1Iv-4_l2LxQcYwhqby2xGpWwzjfAnG4';
+const ENDPOINT = 'https://fcmregistrations.googleapis.com/v1';
+const CONSOLE_CAMPAIGN_ID = 'google.c.a.c_id';
+const CONSOLE_CAMPAIGN_NAME = 'google.c.a.c_l';
+const CONSOLE_CAMPAIGN_TIME = 'google.c.a.ts';
+/** Set to '1' if Analytics is enabled for the campaign */
+const CONSOLE_CAMPAIGN_ANALYTICS_ENABLED = 'google.c.a.e';
+var MessageType$1;
+(function (MessageType) {
+    MessageType[MessageType["DATA_MESSAGE"] = 1] = "DATA_MESSAGE";
+    MessageType[MessageType["DISPLAY_NOTIFICATION"] = 3] = "DISPLAY_NOTIFICATION";
+})(MessageType$1 || (MessageType$1 = {}));
+
+/**
+ * @license
+ * Copyright 2018 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
+var MessageType;
+(function (MessageType) {
+    MessageType["PUSH_RECEIVED"] = "push-received";
+    MessageType["NOTIFICATION_CLICKED"] = "notification-clicked";
+})(MessageType || (MessageType = {}));
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function arrayToBase64(array) {
+    const uint8Array = new Uint8Array(array);
+    const base64String = btoa(String.fromCharCode(...uint8Array));
+    return base64String.replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_');
+}
+function base64ToArray(base64String) {
+    const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
+    const base64 = (base64String + padding)
+        .replace(/\-/g, '+')
+        .replace(/_/g, '/');
+    const rawData = atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
+    for (let i = 0; i < rawData.length; ++i) {
+        outputArray[i] = rawData.charCodeAt(i);
+    }
+    return outputArray;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const OLD_DB_NAME = 'fcm_token_details_db';
+/**
+ * The last DB version of 'fcm_token_details_db' was 4. This is one higher, so that the upgrade
+ * callback is called for all versions of the old DB.
+ */
+const OLD_DB_VERSION = 5;
+const OLD_OBJECT_STORE_NAME = 'fcm_token_object_Store';
+async function migrateOldDatabase(senderId) {
+    if ('databases' in indexedDB) {
+        // indexedDb.databases() is an IndexedDB v3 API and does not exist in all browsers. TODO: Remove
+        // typecast when it lands in TS types.
+        const databases = await indexedDB.databases();
+        const dbNames = databases.map(db => db.name);
+        if (!dbNames.includes(OLD_DB_NAME)) {
+            // old DB didn't exist, no need to open.
+            return null;
+        }
+    }
+    let tokenDetails = null;
+    const db = await Object(idb__WEBPACK_IMPORTED_MODULE_2__["openDb"])(OLD_DB_NAME, OLD_DB_VERSION, async (db) => {
+        var _a;
+        if (db.oldVersion < 2) {
+            // Database too old, skip migration.
+            return;
+        }
+        if (!db.objectStoreNames.contains(OLD_OBJECT_STORE_NAME)) {
+            // Database did not exist. Nothing to do.
+            return;
+        }
+        const objectStore = db.transaction.objectStore(OLD_OBJECT_STORE_NAME);
+        const value = await objectStore.index('fcmSenderId').get(senderId);
+        await objectStore.clear();
+        if (!value) {
+            // No entry in the database, nothing to migrate.
+            return;
+        }
+        if (db.oldVersion === 2) {
+            const oldDetails = value;
+            if (!oldDetails.auth || !oldDetails.p256dh || !oldDetails.endpoint) {
+                return;
+            }
+            tokenDetails = {
+                token: oldDetails.fcmToken,
+                createTime: (_a = oldDetails.createTime) !== null && _a !== void 0 ? _a : Date.now(),
+                subscriptionOptions: {
+                    auth: oldDetails.auth,
+                    p256dh: oldDetails.p256dh,
+                    endpoint: oldDetails.endpoint,
+                    swScope: oldDetails.swScope,
+                    vapidKey: typeof oldDetails.vapidKey === 'string'
+                        ? oldDetails.vapidKey
+                        : arrayToBase64(oldDetails.vapidKey)
+                }
+            };
+        }
+        else if (db.oldVersion === 3) {
+            const oldDetails = value;
+            tokenDetails = {
+                token: oldDetails.fcmToken,
+                createTime: oldDetails.createTime,
+                subscriptionOptions: {
+                    auth: arrayToBase64(oldDetails.auth),
+                    p256dh: arrayToBase64(oldDetails.p256dh),
+                    endpoint: oldDetails.endpoint,
+                    swScope: oldDetails.swScope,
+                    vapidKey: arrayToBase64(oldDetails.vapidKey)
+                }
+            };
+        }
+        else if (db.oldVersion === 4) {
+            const oldDetails = value;
+            tokenDetails = {
+                token: oldDetails.fcmToken,
+                createTime: oldDetails.createTime,
+                subscriptionOptions: {
+                    auth: arrayToBase64(oldDetails.auth),
+                    p256dh: arrayToBase64(oldDetails.p256dh),
+                    endpoint: oldDetails.endpoint,
+                    swScope: oldDetails.swScope,
+                    vapidKey: arrayToBase64(oldDetails.vapidKey)
+                }
+            };
+        }
+    });
+    db.close();
+    // Delete all old databases.
+    await Object(idb__WEBPACK_IMPORTED_MODULE_2__["deleteDb"])(OLD_DB_NAME);
+    await Object(idb__WEBPACK_IMPORTED_MODULE_2__["deleteDb"])('fcm_vapid_details_db');
+    await Object(idb__WEBPACK_IMPORTED_MODULE_2__["deleteDb"])('undefined');
+    return checkTokenDetails(tokenDetails) ? tokenDetails : null;
+}
+function checkTokenDetails(tokenDetails) {
+    if (!tokenDetails || !tokenDetails.subscriptionOptions) {
+        return false;
+    }
+    const { subscriptionOptions } = tokenDetails;
+    return (typeof tokenDetails.createTime === 'number' &&
+        tokenDetails.createTime > 0 &&
+        typeof tokenDetails.token === 'string' &&
+        tokenDetails.token.length > 0 &&
+        typeof subscriptionOptions.auth === 'string' &&
+        subscriptionOptions.auth.length > 0 &&
+        typeof subscriptionOptions.p256dh === 'string' &&
+        subscriptionOptions.p256dh.length > 0 &&
+        typeof subscriptionOptions.endpoint === 'string' &&
+        subscriptionOptions.endpoint.length > 0 &&
+        typeof subscriptionOptions.swScope === 'string' &&
+        subscriptionOptions.swScope.length > 0 &&
+        typeof subscriptionOptions.vapidKey === 'string' &&
+        subscriptionOptions.vapidKey.length > 0);
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+// Exported for tests.
+const DATABASE_NAME = 'firebase-messaging-database';
+const DATABASE_VERSION = 1;
+const OBJECT_STORE_NAME = 'firebase-messaging-store';
+let dbPromise = null;
+function getDbPromise() {
+    if (!dbPromise) {
+        dbPromise = Object(idb__WEBPACK_IMPORTED_MODULE_2__["openDb"])(DATABASE_NAME, DATABASE_VERSION, upgradeDb => {
+            // We don't use 'break' in this switch statement, the fall-through behavior is what we want,
+            // because if there are multiple versions between the old version and the current version, we
+            // want ALL the migrations that correspond to those versions to run, not only the last one.
+            // eslint-disable-next-line default-case
+            switch (upgradeDb.oldVersion) {
+                case 0:
+                    upgradeDb.createObjectStore(OBJECT_STORE_NAME);
+            }
+        });
+    }
+    return dbPromise;
+}
+/** Gets record(s) from the objectStore that match the given key. */
+async function dbGet(firebaseDependencies) {
+    const key = getKey(firebaseDependencies);
+    const db = await getDbPromise();
+    const tokenDetails = await db
+        .transaction(OBJECT_STORE_NAME)
+        .objectStore(OBJECT_STORE_NAME)
+        .get(key);
+    if (tokenDetails) {
+        return tokenDetails;
+    }
+    else {
+        // Check if there is a tokenDetails object in the old DB.
+        const oldTokenDetails = await migrateOldDatabase(firebaseDependencies.appConfig.senderId);
+        if (oldTokenDetails) {
+            await dbSet(firebaseDependencies, oldTokenDetails);
+            return oldTokenDetails;
+        }
+    }
+}
+/** Assigns or overwrites the record for the given key with the given value. */
+async function dbSet(firebaseDependencies, tokenDetails) {
+    const key = getKey(firebaseDependencies);
+    const db = await getDbPromise();
+    const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');
+    await tx.objectStore(OBJECT_STORE_NAME).put(tokenDetails, key);
+    await tx.complete;
+    return tokenDetails;
+}
+/** Removes record(s) from the objectStore that match the given key. */
+async function dbRemove(firebaseDependencies) {
+    const key = getKey(firebaseDependencies);
+    const db = await getDbPromise();
+    const tx = db.transaction(OBJECT_STORE_NAME, 'readwrite');
+    await tx.objectStore(OBJECT_STORE_NAME).delete(key);
+    await tx.complete;
+}
+function getKey({ appConfig }) {
+    return appConfig.appId;
+}
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const ERROR_MAP = {
+    ["missing-app-config-values" /* MISSING_APP_CONFIG_VALUES */]: 'Missing App configuration value: "{$valueName}"',
+    ["only-available-in-window" /* AVAILABLE_IN_WINDOW */]: 'This method is available in a Window context.',
+    ["only-available-in-sw" /* AVAILABLE_IN_SW */]: 'This method is available in a service worker context.',
+    ["permission-default" /* PERMISSION_DEFAULT */]: 'The notification permission was not granted and dismissed instead.',
+    ["permission-blocked" /* PERMISSION_BLOCKED */]: 'The notification permission was not granted and blocked instead.',
+    ["unsupported-browser" /* UNSUPPORTED_BROWSER */]: "This browser doesn't support the API's required to use the firebase SDK.",
+    ["indexed-db-unsupported" /* INDEXED_DB_UNSUPPORTED */]: "This browser doesn't support indexedDb.open() (ex. Safari iFrame, Firefox Private Browsing, etc)",
+    ["failed-service-worker-registration" /* FAILED_DEFAULT_REGISTRATION */]: 'We are unable to register the default service worker. {$browserErrorMessage}',
+    ["token-subscribe-failed" /* TOKEN_SUBSCRIBE_FAILED */]: 'A problem occurred while subscribing the user to FCM: {$errorInfo}',
+    ["token-subscribe-no-token" /* TOKEN_SUBSCRIBE_NO_TOKEN */]: 'FCM returned no token when subscribing the user to push.',
+    ["token-unsubscribe-failed" /* TOKEN_UNSUBSCRIBE_FAILED */]: 'A problem occurred while unsubscribing the ' +
+        'user from FCM: {$errorInfo}',
+    ["token-update-failed" /* TOKEN_UPDATE_FAILED */]: 'A problem occurred while updating the user from FCM: {$errorInfo}',
+    ["token-update-no-token" /* TOKEN_UPDATE_NO_TOKEN */]: 'FCM returned no token when updating the user to push.',
+    ["use-sw-after-get-token" /* USE_SW_AFTER_GET_TOKEN */]: 'The useServiceWorker() method may only be called once and must be ' +
+        'called before calling getToken() to ensure your service worker is used.',
+    ["invalid-sw-registration" /* INVALID_SW_REGISTRATION */]: 'The input to useServiceWorker() must be a ServiceWorkerRegistration.',
+    ["invalid-bg-handler" /* INVALID_BG_HANDLER */]: 'The input to setBackgroundMessageHandler() must be a function.',
+    ["invalid-vapid-key" /* INVALID_VAPID_KEY */]: 'The public VAPID key must be a string.',
+    ["use-vapid-key-after-get-token" /* USE_VAPID_KEY_AFTER_GET_TOKEN */]: 'The usePublicVapidKey() method may only be called once and must be ' +
+        'called before calling getToken() to ensure your VAPID key is used.'
+};
+const ERROR_FACTORY = new _firebase_util__WEBPACK_IMPORTED_MODULE_3__["ErrorFactory"]('messaging', 'Messaging', ERROR_MAP);
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function requestGetToken(firebaseDependencies, subscriptionOptions) {
+    const headers = await getHeaders(firebaseDependencies);
+    const body = getBody(subscriptionOptions);
+    const subscribeOptions = {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(body)
+    };
+    let responseData;
+    try {
+        const response = await fetch(getEndpoint(firebaseDependencies.appConfig), subscribeOptions);
+        responseData = await response.json();
+    }
+    catch (err) {
+        throw ERROR_FACTORY.create("token-subscribe-failed" /* TOKEN_SUBSCRIBE_FAILED */, {
+            errorInfo: err
+        });
+    }
+    if (responseData.error) {
+        const message = responseData.error.message;
+        throw ERROR_FACTORY.create("token-subscribe-failed" /* TOKEN_SUBSCRIBE_FAILED */, {
+            errorInfo: message
+        });
+    }
+    if (!responseData.token) {
+        throw ERROR_FACTORY.create("token-subscribe-no-token" /* TOKEN_SUBSCRIBE_NO_TOKEN */);
+    }
+    return responseData.token;
+}
+async function requestUpdateToken(firebaseDependencies, tokenDetails) {
+    const headers = await getHeaders(firebaseDependencies);
+    const body = getBody(tokenDetails.subscriptionOptions);
+    const updateOptions = {
+        method: 'PATCH',
+        headers,
+        body: JSON.stringify(body)
+    };
+    let responseData;
+    try {
+        const response = await fetch(`${getEndpoint(firebaseDependencies.appConfig)}/${tokenDetails.token}`, updateOptions);
+        responseData = await response.json();
+    }
+    catch (err) {
+        throw ERROR_FACTORY.create("token-update-failed" /* TOKEN_UPDATE_FAILED */, {
+            errorInfo: err
+        });
+    }
+    if (responseData.error) {
+        const message = responseData.error.message;
+        throw ERROR_FACTORY.create("token-update-failed" /* TOKEN_UPDATE_FAILED */, {
+            errorInfo: message
+        });
+    }
+    if (!responseData.token) {
+        throw ERROR_FACTORY.create("token-update-no-token" /* TOKEN_UPDATE_NO_TOKEN */);
+    }
+    return responseData.token;
+}
+async function requestDeleteToken(firebaseDependencies, token) {
+    const headers = await getHeaders(firebaseDependencies);
+    const unsubscribeOptions = {
+        method: 'DELETE',
+        headers
+    };
+    try {
+        const response = await fetch(`${getEndpoint(firebaseDependencies.appConfig)}/${token}`, unsubscribeOptions);
+        const responseData = await response.json();
+        if (responseData.error) {
+            const message = responseData.error.message;
+            throw ERROR_FACTORY.create("token-unsubscribe-failed" /* TOKEN_UNSUBSCRIBE_FAILED */, {
+                errorInfo: message
+            });
+        }
+    }
+    catch (err) {
+        throw ERROR_FACTORY.create("token-unsubscribe-failed" /* TOKEN_UNSUBSCRIBE_FAILED */, {
+            errorInfo: err
+        });
+    }
+}
+function getEndpoint({ projectId }) {
+    return `${ENDPOINT}/projects/${projectId}/registrations`;
+}
+async function getHeaders({ appConfig, installations }) {
+    const authToken = await installations.getToken();
+    return new Headers({
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'x-goog-api-key': appConfig.apiKey,
+        'x-goog-firebase-installations-auth': `FIS ${authToken}`
+    });
+}
+function getBody({ p256dh, auth, endpoint, vapidKey }) {
+    const body = {
+        web: {
+            endpoint,
+            auth,
+            p256dh
+        }
+    };
+    if (vapidKey !== DEFAULT_VAPID_KEY) {
+        body.web.applicationPubKey = vapidKey;
+    }
+    return body;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+// UpdateRegistration will be called once every week.
+const TOKEN_EXPIRATION_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+async function getTokenInternal(messaging) {
+    const pushSubscription = await getPushSubscription(messaging.swRegistration, messaging.vapidKey);
+    const subscriptionOptions = {
+        vapidKey: messaging.vapidKey,
+        swScope: messaging.swRegistration.scope,
+        endpoint: pushSubscription.endpoint,
+        auth: arrayToBase64(pushSubscription.getKey('auth')),
+        p256dh: arrayToBase64(pushSubscription.getKey('p256dh'))
+    };
+    const tokenDetails = await dbGet(messaging.firebaseDependencies);
+    if (!tokenDetails) {
+        // No token, get a new one.
+        return getNewToken(messaging.firebaseDependencies, subscriptionOptions);
+    }
+    else if (!isTokenValid(tokenDetails.subscriptionOptions, subscriptionOptions)) {
+        // Invalid token, get a new one.
+        try {
+            await requestDeleteToken(messaging.firebaseDependencies, tokenDetails.token);
+        }
+        catch (e) {
+            // Suppress errors because of #2364
+            console.warn(e);
+        }
+        return getNewToken(messaging.firebaseDependencies, subscriptionOptions);
+    }
+    else if (Date.now() >= tokenDetails.createTime + TOKEN_EXPIRATION_MS) {
+        // Weekly token refresh
+        return updateToken(messaging, {
+            token: tokenDetails.token,
+            createTime: Date.now(),
+            subscriptionOptions
+        });
+    }
+    else {
+        // Valid token, nothing to do.
+        return tokenDetails.token;
+    }
+}
+/**
+ * This method deletes the token from the database, unsubscribes the token from FCM, and unregisters
+ * the push subscription if it exists.
+ */
+async function deleteTokenInternal(messaging) {
+    const tokenDetails = await dbGet(messaging.firebaseDependencies);
+    if (tokenDetails) {
+        await requestDeleteToken(messaging.firebaseDependencies, tokenDetails.token);
+        await dbRemove(messaging.firebaseDependencies);
+    }
+    // Unsubscribe from the push subscription.
+    const pushSubscription = await messaging.swRegistration.pushManager.getSubscription();
+    if (pushSubscription) {
+        return pushSubscription.unsubscribe();
+    }
+    // If there's no SW, consider it a success.
+    return true;
+}
+async function updateToken(messaging, tokenDetails) {
+    try {
+        const updatedToken = await requestUpdateToken(messaging.firebaseDependencies, tokenDetails);
+        const updatedTokenDetails = Object.assign(Object.assign({}, tokenDetails), { token: updatedToken, createTime: Date.now() });
+        await dbSet(messaging.firebaseDependencies, updatedTokenDetails);
+        return updatedToken;
+    }
+    catch (e) {
+        await deleteTokenInternal(messaging);
+        throw e;
+    }
+}
+async function getNewToken(firebaseDependencies, subscriptionOptions) {
+    const token = await requestGetToken(firebaseDependencies, subscriptionOptions);
+    const tokenDetails = {
+        token,
+        createTime: Date.now(),
+        subscriptionOptions
+    };
+    await dbSet(firebaseDependencies, tokenDetails);
+    return tokenDetails.token;
+}
+/**
+ * Gets a PushSubscription for the current user.
+ */
+async function getPushSubscription(swRegistration, vapidKey) {
+    const subscription = await swRegistration.pushManager.getSubscription();
+    if (subscription) {
+        return subscription;
+    }
+    return swRegistration.pushManager.subscribe({
+        userVisibleOnly: true,
+        // Chrome <= 75 doesn't support base64-encoded VAPID key. For backward compatibility, VAPID key
+        // submitted to pushManager#subscribe must be of type Uint8Array.
+        applicationServerKey: base64ToArray(vapidKey)
+    });
+}
+/**
+ * Checks if the saved tokenDetails object matches the configuration provided.
+ */
+function isTokenValid(dbOptions, currentOptions) {
+    const isVapidKeyEqual = currentOptions.vapidKey === dbOptions.vapidKey;
+    const isEndpointEqual = currentOptions.endpoint === dbOptions.endpoint;
+    const isAuthEqual = currentOptions.auth === dbOptions.auth;
+    const isP256dhEqual = currentOptions.p256dh === dbOptions.p256dh;
+    return isVapidKeyEqual && isEndpointEqual && isAuthEqual && isP256dhEqual;
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function externalizePayload(internalPayload) {
+    const payload = {
+        from: internalPayload.from,
+        // eslint-disable-next-line camelcase
+        collapseKey: internalPayload.collapse_key,
+        // eslint-disable-next-line camelcase
+        messageId: internalPayload.fcm_message_id
+    };
+    propagateNotificationPayload(payload, internalPayload);
+    propagateDataPayload(payload, internalPayload);
+    propagateFcmOptions(payload, internalPayload);
+    return payload;
+}
+function propagateNotificationPayload(payload, messagePayloadInternal) {
+    if (!messagePayloadInternal.notification) {
+        return;
+    }
+    payload.notification = {};
+    const title = messagePayloadInternal.notification.title;
+    if (!!title) {
+        payload.notification.title = title;
+    }
+    const body = messagePayloadInternal.notification.body;
+    if (!!body) {
+        payload.notification.body = body;
+    }
+    const image = messagePayloadInternal.notification.image;
+    if (!!image) {
+        payload.notification.image = image;
+    }
+}
+function propagateDataPayload(payload, messagePayloadInternal) {
+    if (!messagePayloadInternal.data) {
+        return;
+    }
+    payload.data = messagePayloadInternal.data;
+}
+function propagateFcmOptions(payload, messagePayloadInternal) {
+    if (!messagePayloadInternal.fcmOptions) {
+        return;
+    }
+    payload.fcmOptions = {};
+    const link = messagePayloadInternal.fcmOptions.link;
+    if (!!link) {
+        payload.fcmOptions.link = link;
+    }
+    // eslint-disable-next-line camelcase
+    const analyticsLabel = messagePayloadInternal.fcmOptions.analytics_label;
+    if (!!analyticsLabel) {
+        payload.fcmOptions.analyticsLabel = analyticsLabel;
+    }
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function isConsoleMessage(data) {
+    // This message has a campaign ID, meaning it was sent using the Firebase Console.
+    return typeof data === 'object' && !!data && CONSOLE_CAMPAIGN_ID in data;
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+_mergeStrings('hts/frbslgigp.ogepscmv/ieo/eaylg', 'tp:/ieaeogn-agolai.o/1frlglgc/o');
+_mergeStrings('AzSCbw63g1R0nCw85jG8', 'Iaya3yLKwmgvh7cF0q4');
+function _mergeStrings(s1, s2) {
+    const resultArray = [];
+    for (let i = 0; i < s1.length; i++) {
+        resultArray.push(s1.charAt(i));
+        if (i < s2.length) {
+            resultArray.push(s2.charAt(i));
+        }
+    }
+    return resultArray.join('');
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function extractAppConfig(app) {
+    if (!app || !app.options) {
+        throw getMissingValueError('App Configuration Object');
+    }
+    if (!app.name) {
+        throw getMissingValueError('App Name');
+    }
+    // Required app config keys
+    const configKeys = [
+        'projectId',
+        'apiKey',
+        'appId',
+        'messagingSenderId'
+    ];
+    const { options } = app;
+    for (const keyName of configKeys) {
+        if (!options[keyName]) {
+            throw getMissingValueError(keyName);
+        }
+    }
+    return {
+        appName: app.name,
+        projectId: options.projectId,
+        apiKey: options.apiKey,
+        appId: options.appId,
+        senderId: options.messagingSenderId
+    };
+}
+function getMissingValueError(valueName) {
+    return ERROR_FACTORY.create("missing-app-config-values" /* MISSING_APP_CONFIG_VALUES */, {
+        valueName
+    });
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+class MessagingService {
+    constructor(app, installations, analyticsProvider) {
+        // logging is only done with end user consent. Default to false.
+        this.deliveryMetricsExportedToBigQueryEnabled = false;
+        this.onBackgroundMessageHandler = null;
+        this.onMessageHandler = null;
+        this.logEvents = [];
+        this.isLogServiceStarted = false;
+        const appConfig = extractAppConfig(app);
+        this.firebaseDependencies = {
+            app,
+            appConfig,
+            installations,
+            analyticsProvider
+        };
+    }
+    _delete() {
+        return Promise.resolve();
+    }
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function registerDefaultSw(messaging) {
+    try {
+        messaging.swRegistration = await navigator.serviceWorker.register(DEFAULT_SW_PATH, {
+            scope: DEFAULT_SW_SCOPE
+        });
+        // The timing when browser updates sw when sw has an update is unreliable from experiment. It
+        // leads to version conflict when the SDK upgrades to a newer version in the main page, but sw
+        // is stuck with the old version. For example,
+        // https://github.com/firebase/firebase-js-sdk/issues/2590 The following line reliably updates
+        // sw if there was an update.
+        messaging.swRegistration.update().catch(() => {
+            /* it is non blocking and we don't care if it failed */
+        });
+    }
+    catch (e) {
+        throw ERROR_FACTORY.create("failed-service-worker-registration" /* FAILED_DEFAULT_REGISTRATION */, {
+            browserErrorMessage: e.message
+        });
+    }
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function updateSwReg(messaging, swRegistration) {
+    if (!swRegistration && !messaging.swRegistration) {
+        await registerDefaultSw(messaging);
+    }
+    if (!swRegistration && !!messaging.swRegistration) {
+        return;
+    }
+    if (!(swRegistration instanceof ServiceWorkerRegistration)) {
+        throw ERROR_FACTORY.create("invalid-sw-registration" /* INVALID_SW_REGISTRATION */);
+    }
+    messaging.swRegistration = swRegistration;
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function updateVapidKey(messaging, vapidKey) {
+    if (!!vapidKey) {
+        messaging.vapidKey = vapidKey;
+    }
+    else if (!messaging.vapidKey) {
+        messaging.vapidKey = DEFAULT_VAPID_KEY;
+    }
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function getToken$1(messaging, options) {
+    if (!navigator) {
+        throw ERROR_FACTORY.create("only-available-in-window" /* AVAILABLE_IN_WINDOW */);
+    }
+    if (Notification.permission === 'default') {
+        await Notification.requestPermission();
+    }
+    if (Notification.permission !== 'granted') {
+        throw ERROR_FACTORY.create("permission-blocked" /* PERMISSION_BLOCKED */);
+    }
+    await updateVapidKey(messaging, options === null || options === void 0 ? void 0 : options.vapidKey);
+    await updateSwReg(messaging, options === null || options === void 0 ? void 0 : options.serviceWorkerRegistration);
+    return getTokenInternal(messaging);
+}
+
+/**
+ * @license
+ * Copyright 2019 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function logToScion(messaging, messageType, data) {
+    const eventType = getEventType(messageType);
+    const analytics = await messaging.firebaseDependencies.analyticsProvider.get();
+    analytics.logEvent(eventType, {
+        /* eslint-disable camelcase */
+        message_id: data[CONSOLE_CAMPAIGN_ID],
+        message_name: data[CONSOLE_CAMPAIGN_NAME],
+        message_time: data[CONSOLE_CAMPAIGN_TIME],
+        message_device_time: Math.floor(Date.now() / 1000)
+        /* eslint-enable camelcase */
+    });
+}
+function getEventType(messageType) {
+    switch (messageType) {
+        case MessageType.NOTIFICATION_CLICKED:
+            return 'notification_open';
+        case MessageType.PUSH_RECEIVED:
+            return 'notification_foreground';
+        default:
+            throw new Error();
+    }
+}
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function messageEventListener(messaging, event) {
+    const internalPayload = event.data;
+    if (!internalPayload.isFirebaseMessaging) {
+        return;
+    }
+    if (messaging.onMessageHandler &&
+        internalPayload.messageType === MessageType.PUSH_RECEIVED) {
+        if (typeof messaging.onMessageHandler === 'function') {
+            messaging.onMessageHandler(externalizePayload(internalPayload));
+        }
+        else {
+            messaging.onMessageHandler.next(externalizePayload(internalPayload));
+        }
+    }
+    // Log to Scion if applicable
+    const dataPayload = internalPayload.data;
+    if (isConsoleMessage(dataPayload) &&
+        dataPayload[CONSOLE_CAMPAIGN_ANALYTICS_ENABLED] === '1') {
+        await logToScion(messaging, internalPayload.messageType, dataPayload);
+    }
+}
+
+const name = "@firebase/messaging";
+const version = "0.9.2";
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+const WindowMessagingFactory = (container) => {
+    const messaging = new MessagingService(container.getProvider('app').getImmediate(), container.getProvider('installations-internal').getImmediate(), container.getProvider('analytics-internal'));
+    navigator.serviceWorker.addEventListener('message', e => messageEventListener(messaging, e));
+    return messaging;
+};
+const WindowMessagingInternalFactory = (container) => {
+    const messaging = container
+        .getProvider('messaging')
+        .getImmediate();
+    const messagingInternal = {
+        getToken: (options) => getToken$1(messaging, options)
+    };
+    return messagingInternal;
+};
+function registerMessagingInWindow() {
+    Object(_firebase_app__WEBPACK_IMPORTED_MODULE_4__["_registerComponent"])(new _firebase_component__WEBPACK_IMPORTED_MODULE_1__["Component"]('messaging', WindowMessagingFactory, "PUBLIC" /* PUBLIC */));
+    Object(_firebase_app__WEBPACK_IMPORTED_MODULE_4__["_registerComponent"])(new _firebase_component__WEBPACK_IMPORTED_MODULE_1__["Component"]('messaging-internal', WindowMessagingInternalFactory, "PRIVATE" /* PRIVATE */));
+    Object(_firebase_app__WEBPACK_IMPORTED_MODULE_4__["registerVersion"])(name, version);
+    // BUILD_TARGET will be replaced by values like esm5, esm2017, cjs5, etc during the compilation
+    Object(_firebase_app__WEBPACK_IMPORTED_MODULE_4__["registerVersion"])(name, version, 'esm2017');
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Checks if all required APIs exist in the browser.
+ * @returns a Promise that resolves to a boolean.
+ *
+ * @public
+ */
+async function isWindowSupported() {
+    // firebase-js-sdk/issues/2393 reveals that idb#open in Safari iframe and Firefox private browsing
+    // might be prohibited to run. In these contexts, an error would be thrown during the messaging
+    // instantiating phase, informing the developers to import/call isSupported for special handling.
+    return (typeof window !== 'undefined' &&
+        Object(_firebase_util__WEBPACK_IMPORTED_MODULE_3__["isIndexedDBAvailable"])() &&
+        (await Object(_firebase_util__WEBPACK_IMPORTED_MODULE_3__["validateIndexedDBOpenable"])()) &&
+        Object(_firebase_util__WEBPACK_IMPORTED_MODULE_3__["areCookiesEnabled"])() &&
+        'serviceWorker' in navigator &&
+        'PushManager' in window &&
+        'Notification' in window &&
+        'fetch' in window &&
+        ServiceWorkerRegistration.prototype.hasOwnProperty('showNotification') &&
+        PushSubscription.prototype.hasOwnProperty('getKey'));
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+async function deleteToken$1(messaging) {
+    if (!navigator) {
+        throw ERROR_FACTORY.create("only-available-in-window" /* AVAILABLE_IN_WINDOW */);
+    }
+    if (!messaging.swRegistration) {
+        await registerDefaultSw(messaging);
+    }
+    return deleteTokenInternal(messaging);
+}
+
+/**
+ * @license
+ * Copyright 2020 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+function onMessage$1(messaging, nextOrObserver) {
+    if (!navigator) {
+        throw ERROR_FACTORY.create("only-available-in-window" /* AVAILABLE_IN_WINDOW */);
+    }
+    messaging.onMessageHandler = nextOrObserver;
+    return () => {
+        messaging.onMessageHandler = null;
+    };
+}
+
+/**
+ * @license
+ * Copyright 2017 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/**
+ * Retrieves a Firebase Cloud Messaging instance.
+ *
+ * @returns The Firebase Cloud Messaging instance associated with the provided firebase app.
+ *
+ * @public
+ */
+function getMessagingInWindow(app = Object(_firebase_app__WEBPACK_IMPORTED_MODULE_4__["getApp"])()) {
+    // Conscious decision to make this async check non-blocking during the messaging instance
+    // initialization phase for performance consideration. An error would be thrown latter for
+    // developer's information. Developers can then choose to import and call `isSupported` for
+    // special handling.
+    isWindowSupported().then(isSupported => {
+        // If `isWindowSupported()` resolved, but returned false.
+        if (!isSupported) {
+            throw ERROR_FACTORY.create("unsupported-browser" /* UNSUPPORTED_BROWSER */);
+        }
+    }, _ => {
+        // If `isWindowSupported()` rejected.
+        throw ERROR_FACTORY.create("indexed-db-unsupported" /* INDEXED_DB_UNSUPPORTED */);
+    });
+    return Object(_firebase_app__WEBPACK_IMPORTED_MODULE_4__["_getProvider"])(Object(_firebase_util__WEBPACK_IMPORTED_MODULE_3__["getModularInstance"])(app), 'messaging').getImmediate();
+}
+/**
+ * Subscribes the {@link Messaging} instance to push notifications. Returns an Firebase Cloud
+ * Messaging registration token that can be used to send push messages to that {@link Messaging}
+ * instance.
+ *
+ * If a notification permission isn't already granted, this method asks the user for permission. The
+ * returned promise rejects if the user does not allow the app to show notifications.
+ *
+ * @param messaging - The {@link Messaging} instance.
+ * @param options - Provides an optional vapid key and an optinoal service worker registration
+ *
+ * @returns The promise resolves with an FCM registration token.
+ *
+ * @public
+ */
+async function getToken(messaging, options) {
+    messaging = Object(_firebase_util__WEBPACK_IMPORTED_MODULE_3__["getModularInstance"])(messaging);
+    return getToken$1(messaging, options);
+}
+/**
+ * Deletes the registration token associated with this {@link Messaging} instance and unsubscribes
+ * the {@link Messaging} instance from the push subscription.
+ *
+ * @param messaging - The {@link Messaging} instance.
+ *
+ * @returns The promise resolves when the token has been successfully deleted.
+ *
+ * @public
+ */
+function deleteToken(messaging) {
+    messaging = Object(_firebase_util__WEBPACK_IMPORTED_MODULE_3__["getModularInstance"])(messaging);
+    return deleteToken$1(messaging);
+}
+/**
+ * When a push message is received and the user is currently on a page for your origin, the
+ * message is passed to the page and an `onMessage()` event is dispatched with the payload of
+ * the push message.
+ *
+ *
+ * @param messaging - The {@link Messaging} instance.
+ * @param nextOrObserver - This function, or observer object with `next` defined,
+ *     is called when a message is received and the user is currently viewing your page.
+ * @returns To stop listening for messages execute this returned function.
+ *
+ * @public
+ */
+function onMessage(messaging, nextOrObserver) {
+    messaging = Object(_firebase_util__WEBPACK_IMPORTED_MODULE_3__["getModularInstance"])(messaging);
+    return onMessage$1(messaging, nextOrObserver);
+}
+
+/**
+ * Firebase Cloud Messaging
+ *
+ * @packageDocumentation
+ */
+registerMessagingInWindow();
+
+
+//# sourceMappingURL=index.esm2017.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/firebase/messaging/dist/index.esm.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/firebase/messaging/dist/index.esm.js ***!
+  \***********************************************************/
+/*! exports provided: deleteToken, getMessaging, getToken, isSupported, onMessage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _firebase_messaging__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @firebase/messaging */ "./node_modules/@firebase/messaging/dist/index.esm2017.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "deleteToken", function() { return _firebase_messaging__WEBPACK_IMPORTED_MODULE_0__["deleteToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getMessaging", function() { return _firebase_messaging__WEBPACK_IMPORTED_MODULE_0__["getMessaging"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "getToken", function() { return _firebase_messaging__WEBPACK_IMPORTED_MODULE_0__["getToken"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "isSupported", function() { return _firebase_messaging__WEBPACK_IMPORTED_MODULE_0__["isSupported"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "onMessage", function() { return _firebase_messaging__WEBPACK_IMPORTED_MODULE_0__["onMessage"]; });
+
+
+//# sourceMappingURL=index.esm.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/idb/build/idb.js":
+/*!***************************************!*\
+  !*** ./node_modules/idb/build/idb.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+(function (global, factory) {
+   true ? factory(exports) :
+  undefined;
+}(this, function (exports) { 'use strict';
+
+  function toArray(arr) {
+    return Array.prototype.slice.call(arr);
+  }
+
+  function promisifyRequest(request) {
+    return new Promise(function(resolve, reject) {
+      request.onsuccess = function() {
+        resolve(request.result);
+      };
+
+      request.onerror = function() {
+        reject(request.error);
+      };
+    });
+  }
+
+  function promisifyRequestCall(obj, method, args) {
+    var request;
+    var p = new Promise(function(resolve, reject) {
+      request = obj[method].apply(obj, args);
+      promisifyRequest(request).then(resolve, reject);
+    });
+
+    p.request = request;
+    return p;
+  }
+
+  function promisifyCursorRequestCall(obj, method, args) {
+    var p = promisifyRequestCall(obj, method, args);
+    return p.then(function(value) {
+      if (!value) return;
+      return new Cursor(value, p.request);
+    });
+  }
+
+  function proxyProperties(ProxyClass, targetProp, properties) {
+    properties.forEach(function(prop) {
+      Object.defineProperty(ProxyClass.prototype, prop, {
+        get: function() {
+          return this[targetProp][prop];
+        },
+        set: function(val) {
+          this[targetProp][prop] = val;
+        }
+      });
+    });
+  }
+
+  function proxyRequestMethods(ProxyClass, targetProp, Constructor, properties) {
+    properties.forEach(function(prop) {
+      if (!(prop in Constructor.prototype)) return;
+      ProxyClass.prototype[prop] = function() {
+        return promisifyRequestCall(this[targetProp], prop, arguments);
+      };
+    });
+  }
+
+  function proxyMethods(ProxyClass, targetProp, Constructor, properties) {
+    properties.forEach(function(prop) {
+      if (!(prop in Constructor.prototype)) return;
+      ProxyClass.prototype[prop] = function() {
+        return this[targetProp][prop].apply(this[targetProp], arguments);
+      };
+    });
+  }
+
+  function proxyCursorRequestMethods(ProxyClass, targetProp, Constructor, properties) {
+    properties.forEach(function(prop) {
+      if (!(prop in Constructor.prototype)) return;
+      ProxyClass.prototype[prop] = function() {
+        return promisifyCursorRequestCall(this[targetProp], prop, arguments);
+      };
+    });
+  }
+
+  function Index(index) {
+    this._index = index;
+  }
+
+  proxyProperties(Index, '_index', [
+    'name',
+    'keyPath',
+    'multiEntry',
+    'unique'
+  ]);
+
+  proxyRequestMethods(Index, '_index', IDBIndex, [
+    'get',
+    'getKey',
+    'getAll',
+    'getAllKeys',
+    'count'
+  ]);
+
+  proxyCursorRequestMethods(Index, '_index', IDBIndex, [
+    'openCursor',
+    'openKeyCursor'
+  ]);
+
+  function Cursor(cursor, request) {
+    this._cursor = cursor;
+    this._request = request;
+  }
+
+  proxyProperties(Cursor, '_cursor', [
+    'direction',
+    'key',
+    'primaryKey',
+    'value'
+  ]);
+
+  proxyRequestMethods(Cursor, '_cursor', IDBCursor, [
+    'update',
+    'delete'
+  ]);
+
+  // proxy 'next' methods
+  ['advance', 'continue', 'continuePrimaryKey'].forEach(function(methodName) {
+    if (!(methodName in IDBCursor.prototype)) return;
+    Cursor.prototype[methodName] = function() {
+      var cursor = this;
+      var args = arguments;
+      return Promise.resolve().then(function() {
+        cursor._cursor[methodName].apply(cursor._cursor, args);
+        return promisifyRequest(cursor._request).then(function(value) {
+          if (!value) return;
+          return new Cursor(value, cursor._request);
+        });
+      });
+    };
+  });
+
+  function ObjectStore(store) {
+    this._store = store;
+  }
+
+  ObjectStore.prototype.createIndex = function() {
+    return new Index(this._store.createIndex.apply(this._store, arguments));
+  };
+
+  ObjectStore.prototype.index = function() {
+    return new Index(this._store.index.apply(this._store, arguments));
+  };
+
+  proxyProperties(ObjectStore, '_store', [
+    'name',
+    'keyPath',
+    'indexNames',
+    'autoIncrement'
+  ]);
+
+  proxyRequestMethods(ObjectStore, '_store', IDBObjectStore, [
+    'put',
+    'add',
+    'delete',
+    'clear',
+    'get',
+    'getAll',
+    'getKey',
+    'getAllKeys',
+    'count'
+  ]);
+
+  proxyCursorRequestMethods(ObjectStore, '_store', IDBObjectStore, [
+    'openCursor',
+    'openKeyCursor'
+  ]);
+
+  proxyMethods(ObjectStore, '_store', IDBObjectStore, [
+    'deleteIndex'
+  ]);
+
+  function Transaction(idbTransaction) {
+    this._tx = idbTransaction;
+    this.complete = new Promise(function(resolve, reject) {
+      idbTransaction.oncomplete = function() {
+        resolve();
+      };
+      idbTransaction.onerror = function() {
+        reject(idbTransaction.error);
+      };
+      idbTransaction.onabort = function() {
+        reject(idbTransaction.error);
+      };
+    });
+  }
+
+  Transaction.prototype.objectStore = function() {
+    return new ObjectStore(this._tx.objectStore.apply(this._tx, arguments));
+  };
+
+  proxyProperties(Transaction, '_tx', [
+    'objectStoreNames',
+    'mode'
+  ]);
+
+  proxyMethods(Transaction, '_tx', IDBTransaction, [
+    'abort'
+  ]);
+
+  function UpgradeDB(db, oldVersion, transaction) {
+    this._db = db;
+    this.oldVersion = oldVersion;
+    this.transaction = new Transaction(transaction);
+  }
+
+  UpgradeDB.prototype.createObjectStore = function() {
+    return new ObjectStore(this._db.createObjectStore.apply(this._db, arguments));
+  };
+
+  proxyProperties(UpgradeDB, '_db', [
+    'name',
+    'version',
+    'objectStoreNames'
+  ]);
+
+  proxyMethods(UpgradeDB, '_db', IDBDatabase, [
+    'deleteObjectStore',
+    'close'
+  ]);
+
+  function DB(db) {
+    this._db = db;
+  }
+
+  DB.prototype.transaction = function() {
+    return new Transaction(this._db.transaction.apply(this._db, arguments));
+  };
+
+  proxyProperties(DB, '_db', [
+    'name',
+    'version',
+    'objectStoreNames'
+  ]);
+
+  proxyMethods(DB, '_db', IDBDatabase, [
+    'close'
+  ]);
+
+  // Add cursor iterators
+  // TODO: remove this once browsers do the right thing with promises
+  ['openCursor', 'openKeyCursor'].forEach(function(funcName) {
+    [ObjectStore, Index].forEach(function(Constructor) {
+      // Don't create iterateKeyCursor if openKeyCursor doesn't exist.
+      if (!(funcName in Constructor.prototype)) return;
+
+      Constructor.prototype[funcName.replace('open', 'iterate')] = function() {
+        var args = toArray(arguments);
+        var callback = args[args.length - 1];
+        var nativeObject = this._store || this._index;
+        var request = nativeObject[funcName].apply(nativeObject, args.slice(0, -1));
+        request.onsuccess = function() {
+          callback(request.result);
+        };
+      };
+    });
+  });
+
+  // polyfill getAll
+  [Index, ObjectStore].forEach(function(Constructor) {
+    if (Constructor.prototype.getAll) return;
+    Constructor.prototype.getAll = function(query, count) {
+      var instance = this;
+      var items = [];
+
+      return new Promise(function(resolve) {
+        instance.iterateCursor(query, function(cursor) {
+          if (!cursor) {
+            resolve(items);
+            return;
+          }
+          items.push(cursor.value);
+
+          if (count !== undefined && items.length == count) {
+            resolve(items);
+            return;
+          }
+          cursor.continue();
+        });
+      });
+    };
+  });
+
+  function openDb(name, version, upgradeCallback) {
+    var p = promisifyRequestCall(indexedDB, 'open', [name, version]);
+    var request = p.request;
+
+    if (request) {
+      request.onupgradeneeded = function(event) {
+        if (upgradeCallback) {
+          upgradeCallback(new UpgradeDB(request.result, event.oldVersion, request.transaction));
+        }
+      };
+    }
+
+    return p.then(function(db) {
+      return new DB(db);
+    });
+  }
+
+  function deleteDb(name) {
+    return promisifyRequestCall(indexedDB, 'deleteDatabase', [name]);
+  }
+
+  exports.openDb = openDb;
+  exports.deleteDb = deleteDb;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
+
+}));
+
+
+/***/ }),
+
 /***/ "./src/app/modules/admin-reporting/accounting/accounting.component.ts":
 /*!****************************************************************************!*\
   !*** ./src/app/modules/admin-reporting/accounting/accounting.component.ts ***!
@@ -3808,17 +6561,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var src_app_shared_service_admin_stats_update_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/shared/service/admin-stats/update.service */ "./src/app/shared/service/admin-stats/update.service.ts");
-/* harmony import */ var src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/modules/company-management/company-management.service */ "./src/app/modules/company-management/company-management.service.ts");
-/* harmony import */ var src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/modules/auth/_services/auth.service */ "./src/app/modules/auth/_services/auth.service.ts");
-/* harmony import */ var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/shared/service/users.service */ "./src/app/shared/service/users.service.ts");
-/* harmony import */ var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/shared/service/notification.service */ "./src/app/shared/service/notification.service.ts");
-/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
-/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/datepicker */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/datepicker.js");
-/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
-/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var firebase_messaging__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! firebase/messaging */ "./node_modules/firebase/messaging/dist/index.esm.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var src_app_shared_service_admin_stats_update_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/service/admin-stats/update.service */ "./src/app/shared/service/admin-stats/update.service.ts");
+/* harmony import */ var src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/modules/company-management/company-management.service */ "./src/app/modules/company-management/company-management.service.ts");
+/* harmony import */ var src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/modules/auth/_services/auth.service */ "./src/app/modules/auth/_services/auth.service.ts");
+/* harmony import */ var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! src/app/shared/service/users.service */ "./src/app/shared/service/users.service.ts");
+/* harmony import */ var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/app/shared/service/notification.service */ "./src/app/shared/service/notification.service.ts");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
+/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/material/datepicker */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/datepicker.js");
+/* harmony import */ var _angular_material_button__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @angular/material/button */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+
+
 
 
 
@@ -3885,11 +6642,14 @@ class ManualUpdateComponent {
         this.notification = notification;
         this.reportUpdateTitle = 'Report Stat Update';
         this.reportTypeData = [];
+        this.message = null;
         this.currentUser = this.authService.currentUserValue;
         this.companySelected = this.getSelectedCompanyLocalStorage();
     }
     ngOnInit() {
         this.getReportingProviderList();
+        this.requestPermission();
+        this.listenNotification();
         this.manaulUpFG = this.fb.group({
             reportType: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
             preSelectValue: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required),
@@ -3913,6 +6673,28 @@ class ManualUpdateComponent {
         this.preSelectDates = this.getPreSetDateRange(this.preSelectValue);
         //Manually updates the mat date picker with new start and end dates
         this.updateDatePickerRange(this.preSelectDates.startDate, this.preSelectDates.endDate);
+    }
+    requestPermission() {
+        const messaging = Object(firebase_messaging__WEBPACK_IMPORTED_MODULE_3__["getMessaging"])();
+        Object(firebase_messaging__WEBPACK_IMPORTED_MODULE_3__["getToken"])(messaging, { vapidKey: src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].firebase.vapidKey }).then((currentToken) => {
+            if (currentToken) {
+                this.deviceToken = currentToken;
+            }
+            else {
+                // Show permission request UI
+                console.log('No registration token available. Request permission to generate one.');
+            }
+        }).catch((err) => {
+            console.log('An error occurred while retrieving token. ', err);
+        });
+    }
+    listenNotification() {
+        const messaging = Object(firebase_messaging__WEBPACK_IMPORTED_MODULE_3__["getMessaging"])();
+        Object(firebase_messaging__WEBPACK_IMPORTED_MODULE_3__["onMessage"])(messaging, (payload) => {
+            console.log('Message received. ', payload);
+            this.message = payload;
+            this.notification.showWarning(payload.notification.body, payload.notification.title);
+        });
     }
     //get Report Providers in Current Company
     getReportingProviderList() {
@@ -3938,7 +6720,7 @@ class ManualUpdateComponent {
                 company: this.companySelected,
             });
             var reportTypeValue = this.manaulUpFG.value['reportType'];
-            this.manualUpdateService.updateManualStats(this.manaulUpFG.value).subscribe((response) => {
+            this.manualUpdateService.updateManualStats(this.manaulUpFG.value, this.deviceToken).subscribe((response) => {
                 var checkExist = this.isObjectEmpty(response);
                 if (!checkExist) {
                     this.notification.showSuccess(`${reportTypeValue} data stats successfully updated!`, "");
@@ -4071,7 +6853,7 @@ class ManualUpdateComponent {
         }
     }
 }
-ManualUpdateComponent.ɵfac = function ManualUpdateComponent_Factory(t) { return new (t || ManualUpdateComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_update_service__WEBPACK_IMPORTED_MODULE_3__["ManualUpdateService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_4__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_7__["NotificationService"])); };
+ManualUpdateComponent.ɵfac = function ManualUpdateComponent_Factory(t) { return new (t || ManualUpdateComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_update_service__WEBPACK_IMPORTED_MODULE_5__["ManualUpdateService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_6__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_7__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_8__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_9__["NotificationService"])); };
 ManualUpdateComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ManualUpdateComponent, selectors: [["app-manual-update"]], decls: 36, vars: 12, consts: [["id", "manaulUpForm", 1, "example-container", 3, "formGroup", "ngSubmit"], [1, "row"], [1, "col-xl-6"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], ["matNativeControl", "", "placeholder", "Select Report", "formControlName", "reportType", 3, "selectionChange"], [3, "value", 4, "ngFor", "ngForOf"], [3, "rangePicker", "formGroup", "dateChange"], ["matStartDate", "", "formControlName", "startDate", "placeholder", "Start date", "required", ""], ["matEndDate", "", "formControlName", "endDate", "placeholder", "End date", "required", "", 3, "dateChange"], ["matSuffix", "", 3, "for"], ["picker", ""], [4, "ngIf"], ["formControlName", "preSelectValue", 3, "ngModel", "ngModelChange", "selectionChange"], ["mat-raised-button", "", "color", "primary", "type", "submit"], [3, "value"]], template: function ManualUpdateComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "form", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function ManualUpdateComponent_Template_form_ngSubmit_0_listener() { return ctx.onReportSubmit(); });
@@ -4157,7 +6939,7 @@ ManualUpdateComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.preSelectValue);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.preSetDateRanges);
-    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__["MatDateRangeInput"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__["MatStartDate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["RequiredValidator"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__["MatEndDate"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__["MatDatepickerToggle"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatSuffix"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_11__["MatDateRangePicker"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_12__["MatButton"], _angular_material_core__WEBPACK_IMPORTED_MODULE_13__["MatOption"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatError"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL21hbnVhbC11cGRhdGUvbWFudWFsLXVwZGF0ZS5jb21wb25lbnQuc2NzcyJ9 */"] });
+    } }, directives: [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroupDirective"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_11__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControlName"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgForOf"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDateRangeInput"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatStartDate"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_1__["RequiredValidator"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatEndDate"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerToggle"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__["MatSuffix"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDateRangePicker"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_14__["MatButton"], _angular_material_core__WEBPACK_IMPORTED_MODULE_15__["MatOption"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__["MatError"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL21hbnVhbC11cGRhdGUvbWFudWFsLXVwZGF0ZS5jb21wb25lbnQuc2NzcyJ9 */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ManualUpdateComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
         args: [{
@@ -4165,7 +6947,7 @@ ManualUpdateComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
                 templateUrl: './manual-update.component.html',
                 styleUrls: ['./manual-update.component.scss']
             }]
-    }], function () { return [{ type: src_app_shared_service_admin_stats_update_service__WEBPACK_IMPORTED_MODULE_3__["ManualUpdateService"] }, { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }, { type: src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_4__["CompanyManagementService"] }, { type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_5__["AuthService"] }, { type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_6__["UsersService"] }, { type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_7__["NotificationService"] }]; }, null); })();
+    }], function () { return [{ type: src_app_shared_service_admin_stats_update_service__WEBPACK_IMPORTED_MODULE_5__["ManualUpdateService"] }, { type: _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormBuilder"] }, { type: src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_6__["CompanyManagementService"] }, { type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_7__["AuthService"] }, { type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_8__["UsersService"] }, { type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_9__["NotificationService"] }]; }, null); })();
 
 
 /***/ }),
@@ -7528,13 +10310,14 @@ class ManualUpdateService {
     constructor(http) {
         this.http = http;
     }
-    updateManualStats(updateData) {
+    updateManualStats(updateData, deviceToken) {
         const { company, reportType, startDate, endDate } = updateData;
         var data = {
             "company": company,
             "reportType": reportType,
             'startDate': moment__WEBPACK_IMPORTED_MODULE_2__(startDate).format("YYYY-MM-DD"),
-            'endDate': moment__WEBPACK_IMPORTED_MODULE_2__(endDate).format("YYYY-MM-DD")
+            'endDate': moment__WEBPACK_IMPORTED_MODULE_2__(endDate).format("YYYY-MM-DD"),
+            "deviceToken": deviceToken,
         };
         return this.http.put(API_MANUAL_UPDATE_URL + '/stat-update', data);
     }

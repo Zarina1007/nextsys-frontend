@@ -30210,7 +30210,7 @@
             title: 'Roles',
             page: '/user-management/roles'
           }]
-        }, //Publisher Notifications
+        }, //Notifications
         {
           section: 'Notifications'
         }, {
@@ -30222,8 +30222,8 @@
           page: '/notifications',
           permissionName: "notifications",
           submenu: [{
-            title: 'Send Publisher Notifications',
-            page: '/send-publisher-notification'
+            title: 'Admin Notifications',
+            page: '/admin-notification'
           }]
         }, {
           section: 'Custom'
