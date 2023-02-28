@@ -5,6 +5,10 @@
 
   function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+  function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+  function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
   function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
   function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
@@ -317,97 +321,91 @@
       /* harmony import */
 
 
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/router */
       "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
       /* harmony import */
 
 
-      var _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ../../tag-management/tag-management.service */
       "./src/app/modules/tag-management/tag-management.service.ts");
       /* harmony import */
 
 
-      var _shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ../../../shared/service/users.service */
       "./src/app/shared/service/users.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/perion.service */
       "./src/app/shared/service/admin-stats/perion.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/lyon.service */
       "./src/app/shared/service/admin-stats/lyon.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/verizon.service */
       "./src/app/shared/service/admin-stats/verizon.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/rubi.service */
       "./src/app/shared/service/admin-stats/rubi.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/solexbc.service */
       "./src/app/shared/service/admin-stats/solexbc.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/system1.service */
       "./src/app/shared/service/admin-stats/system1.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/apptitude.service */
       "./src/app/shared/service/admin-stats/apptitude.service.ts");
       /* harmony import */
 
 
-      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */
       "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
       "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
 
@@ -415,217 +413,217 @@
 
       function PublisherComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-reporting-revenue-chart", 16);
         }
 
         if (rf & 2) {
-          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("chartData", ctx_r0.chartData);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("chartData", ctx_r0.chartData);
         }
       }
 
       function PublisherComponent_ng_template_6_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 17);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Address");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, "Address");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Test");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, "Test");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
       }
 
       function PublisherComponent_ng_template_8_Template(rf, ctx) {
         if (rf & 1) {
-          var _r22 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          var _r22 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 18);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "a", 18);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PublisherComponent_ng_template_8_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PublisherComponent_ng_template_8_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r22);
 
             var row_r19 = ctx.row;
 
-            var ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+            var ctx_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
             return ctx_r21.toggleExpandRow(row_r19);
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
           var expanded_r20 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r20)("datatable-icon-down", expanded_r20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵclassProp"]("datatable-icon-right", !expanded_r20)("datatable-icon-down", expanded_r20);
         }
       }
 
       function PublisherComponent_ng_template_10_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Date ");
         }
       }
 
       function PublisherComponent_ng_template_11_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "date");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "date");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
           var value_r24 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r24));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, value_r24));
         }
       }
 
       function PublisherComponent_ng_template_13_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Publisher ");
         }
       }
 
       function PublisherComponent_ng_template_14_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
           var value_r26 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](value_r26);
         }
       }
 
       function PublisherComponent_ng_template_16_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Searches ");
         }
       }
 
       function PublisherComponent_ng_template_17_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
           var value_r28 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r28);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](value_r28);
         }
       }
 
       function PublisherComponent_ng_template_19_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " CTR ");
         }
       }
 
       function PublisherComponent_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "number");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "number");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](3, "number");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
           var value_r30 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r30) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, value_r30) || _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
         }
       }
 
       function PublisherComponent_ng_template_22_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " CPC ");
         }
       }
 
       function PublisherComponent_ng_template_23_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "number");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
           var value_r32 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r32, "1.2-2"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](2, 1, value_r32, "1.2-2"));
         }
       }
 
       function PublisherComponent_ng_template_25_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Revenue ");
         }
       }
 
       function PublisherComponent_ng_template_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "strong");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipe"](2, "currency");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
           var value_r34 = ctx.value;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r34, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind2"](2, 1, value_r34, "USD"));
         }
       }
 
@@ -654,171 +652,175 @@
 
         _createClass(PublisherComponent, [{
           key: "ngAfterViewInit",
-          value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+          value: function () {
+            var _ngAfterViewInit = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
               var _this = this;
 
               return regeneratorRuntime.wrap(function _callee2$(_context2) {
                 while (1) {
                   switch (_context2.prev = _context2.next) {
                     case 0:
-                      this.route.params.subscribe(function (routeParams) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+                      this.route.params.subscribe( /*#__PURE__*/function () {
+                        var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(routeParams) {
                           return regeneratorRuntime.wrap(function _callee$(_context) {
                             while (1) {
                               switch (_context.prev = _context.next) {
                                 case 0:
                                   //console.log("routeParams===>", routeParams)
-                                  this.statData = [];
+                                  _this.statData = [];
                                   _context.next = 3;
-                                  return this.getTagInformation(routeParams.tagId);
+                                  return _this.getTagInformation(routeParams.tagId);
 
                                 case 3:
-                                  this.tagRows = _context.sent;
-                                  this.selectedAdvertiser = this.tagRows.advertiser;
-                                  this.selectedCompany = this.tagRows.company;
+                                  _this.tagRows = _context.sent;
+                                  _this.selectedAdvertiser = _this.tagRows.advertiser;
+                                  _this.selectedCompany = _this.tagRows.company;
 
-                                  if (!(this.selectedAdvertiser == "lyons")) {
+                                  if (!(_this.selectedAdvertiser == "lyons")) {
                                     _context.next = 15;
                                     break;
                                   }
 
                                   _context.next = 9;
-                                  return this.getLyonChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                                  return _this.getLyonChartMetrics(_this.selectedCompany, _this.range.startDate, _this.range.endDate);
 
                                 case 9:
-                                  this.chartData = _context.sent;
+                                  _this.chartData = _context.sent;
                                   _context.next = 12;
-                                  return this.getAllLyonStats(this.range.startDate, this.range.endDate, this.tagRows);
+                                  return _this.getAllLyonStats(_this.range.startDate, _this.range.endDate, _this.tagRows);
 
                                 case 12:
-                                  this.statData = _context.sent;
+                                  _this.statData = _context.sent;
                                   _context.next = 67;
                                   break;
 
                                 case 15:
-                                  if (!(this.selectedAdvertiser == "perion")) {
+                                  if (!(_this.selectedAdvertiser == "perion")) {
                                     _context.next = 24;
                                     break;
                                   }
 
                                   _context.next = 18;
-                                  return this.getPerionChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                                  return _this.getPerionChartMetrics(_this.selectedCompany, _this.range.startDate, _this.range.endDate);
 
                                 case 18:
-                                  this.chartData = _context.sent;
+                                  _this.chartData = _context.sent;
                                   _context.next = 21;
-                                  return this.getAllPerionStats(this.range.startDate, this.range.endDate, this.tagRows);
+                                  return _this.getAllPerionStats(_this.range.startDate, _this.range.endDate, _this.tagRows);
 
                                 case 21:
-                                  this.statData = _context.sent;
+                                  _this.statData = _context.sent;
                                   _context.next = 67;
                                   break;
 
                                 case 24:
-                                  if (!(this.selectedAdvertiser == "verizon-direct")) {
+                                  if (!(_this.selectedAdvertiser == "verizon-direct")) {
                                     _context.next = 33;
                                     break;
                                   }
 
                                   _context.next = 27;
-                                  return this.getVerizonChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                                  return _this.getVerizonChartMetrics(_this.selectedCompany, _this.range.startDate, _this.range.endDate);
 
                                 case 27:
-                                  this.chartData = _context.sent;
+                                  _this.chartData = _context.sent;
                                   _context.next = 30;
-                                  return this.getAllVerizonStats(this.range.startDate, this.range.endDate, this.tagRows);
+                                  return _this.getAllVerizonStats(_this.range.startDate, _this.range.endDate, _this.tagRows);
 
                                 case 30:
-                                  this.statData = _context.sent;
+                                  _this.statData = _context.sent;
                                   _context.next = 67;
                                   break;
 
                                 case 33:
-                                  if (!(this.selectedAdvertiser == "rubi")) {
+                                  if (!(_this.selectedAdvertiser == "rubi")) {
                                     _context.next = 42;
                                     break;
                                   }
 
                                   _context.next = 36;
-                                  return this.getRubiChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                                  return _this.getRubiChartMetrics(_this.selectedCompany, _this.range.startDate, _this.range.endDate);
 
                                 case 36:
-                                  this.chartData = _context.sent;
+                                  _this.chartData = _context.sent;
                                   _context.next = 39;
-                                  return this.getRubiAllStats(this.range.startDate, this.range.endDate, this.tagRows);
+                                  return _this.getRubiAllStats(_this.range.startDate, _this.range.endDate, _this.tagRows);
 
                                 case 39:
-                                  this.statData = _context.sent;
+                                  _this.statData = _context.sent;
                                   _context.next = 67;
                                   break;
 
                                 case 42:
-                                  if (!(this.selectedAdvertiser == "solex-bc")) {
+                                  if (!(_this.selectedAdvertiser == "solex-bc")) {
                                     _context.next = 51;
                                     break;
                                   }
 
                                   _context.next = 45;
-                                  return this.getSolexBCChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                                  return _this.getSolexBCChartMetrics(_this.selectedCompany, _this.range.startDate, _this.range.endDate);
 
                                 case 45:
-                                  this.chartData = _context.sent;
+                                  _this.chartData = _context.sent;
                                   _context.next = 48;
-                                  return this.getSolexBCAllStats(this.range.startDate, this.range.endDate, this.tagRows);
+                                  return _this.getSolexBCAllStats(_this.range.startDate, _this.range.endDate, _this.tagRows);
 
                                 case 48:
-                                  this.statData = _context.sent;
+                                  _this.statData = _context.sent;
                                   _context.next = 67;
                                   break;
 
                                 case 51:
-                                  if (!(this.selectedAdvertiser == "system1")) {
+                                  if (!(_this.selectedAdvertiser == "system1")) {
                                     _context.next = 60;
                                     break;
                                   }
 
                                   _context.next = 54;
-                                  return this.getSystem1ChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                                  return _this.getSystem1ChartMetrics(_this.selectedCompany, _this.range.startDate, _this.range.endDate);
 
                                 case 54:
-                                  this.chartData = _context.sent;
+                                  _this.chartData = _context.sent;
                                   _context.next = 57;
-                                  return this.getSystem1AllStats(this.range.startDate, this.range.endDate, this.tagRows);
+                                  return _this.getSystem1AllStats(_this.range.startDate, _this.range.endDate, _this.tagRows);
 
                                 case 57:
-                                  this.statData = _context.sent;
+                                  _this.statData = _context.sent;
                                   _context.next = 67;
                                   break;
 
                                 case 60:
-                                  if (!(this.selectedAdvertiser == "apptitude")) {
+                                  if (!(_this.selectedAdvertiser == "apptitude")) {
                                     _context.next = 67;
                                     break;
                                   }
 
                                   _context.next = 63;
-                                  return this.getApptitudeChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+                                  return _this.getApptitudeChartMetrics(_this.selectedCompany, _this.range.startDate, _this.range.endDate);
 
                                 case 63:
-                                  this.chartData = _context.sent;
+                                  _this.chartData = _context.sent;
                                   _context.next = 66;
-                                  return this.getApptitudePublisherStats(this.range.startDate, this.range.endDate, this.tagRows);
+                                  return _this.getApptitudePublisherStats(_this.range.startDate, _this.range.endDate, _this.tagRows);
 
                                 case 66:
-                                  this.statData = _context.sent;
+                                  _this.statData = _context.sent;
 
                                 case 67:
-                                  this.refreshTable();
+                                  _this.refreshTable();
 
                                 case 68:
                                 case "end":
                                   return _context.stop();
                               }
                             }
-                          }, _callee, this);
+                          }, _callee);
                         }));
-                      });
+
+                        return function (_x) {
+                          return _ref.apply(this, arguments);
+                        };
+                      }());
 
                     case 1:
                     case "end":
@@ -827,7 +829,13 @@
                 }
               }, _callee2, this);
             }));
-          } //Gets the Selected Company from Local Storage
+
+            function ngAfterViewInit() {
+              return _ngAfterViewInit.apply(this, arguments);
+            }
+
+            return ngAfterViewInit;
+          }() //Gets the Selected Company from Local Storage
 
         }, {
           key: "getSelectedCompanyFromLocalStorage",
@@ -856,8 +864,8 @@
           }
         }, {
           key: "updateReportingFiltering",
-          value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+          value: function () {
+            var _updateReportingFiltering = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(range) {
               return regeneratorRuntime.wrap(function _callee3$(_context3) {
                 while (1) {
                   switch (_context3.prev = _context3.next) {
@@ -1005,7 +1013,13 @@
                 }
               }, _callee3, this);
             }));
-          }
+
+            function updateReportingFiltering(_x2) {
+              return _updateReportingFiltering.apply(this, arguments);
+            }
+
+            return updateReportingFiltering;
+          }()
         }, {
           key: "getLyonChartMetrics",
           value: function getLyonChartMetrics(company, startDate, endDate) {
@@ -2230,21 +2244,21 @@
       }();
 
       PublisherComponent.ɵfac = function PublisherComponent_Factory(t) {
-        return new (t || PublisherComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_11__["ApptitudeService"]));
+        return new (t || PublisherComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_6__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_8__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_10__["ApptitudeService"]));
       };
 
-      PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+      PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: PublisherComponent,
         selectors: [["app-publisher"]],
         viewQuery: function PublisherComponent_Query(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵviewQuery"](_c0, true);
           }
 
           if (rf & 2) {
             var _t;
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
         decls: 27,
@@ -2252,112 +2266,112 @@
         consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date"], ["ngx-datatable-header-template", ""], ["name", "publisher"], ["name", "searches"], ["name", "ctr"], ["name", "cpc"], ["name", "revenue"], [3, "chartData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
         template: function PublisherComponent_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("onDatesPicked", function PublisherComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("onDatesPicked", function PublisherComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) {
               return ctx.updateReportingFiltering($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PublisherComponent_app_reporting_revenue_chart_1_Template, 1, 1, "app-reporting-revenue-chart", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, PublisherComponent_app_reporting_revenue_chart_1_Template, 1, 1, "app-reporting-revenue-chart", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "ngx-datatable", 2, 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "ngx-datatable", 2, 3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "ngx-datatable-row-detail", 4, 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "ngx-datatable-row-detail", 4, 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function PublisherComponent_Template_ngx_datatable_row_detail_toggle_4_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("toggle", function PublisherComponent_Template_ngx_datatable_row_detail_toggle_4_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](6, PublisherComponent_ng_template_6_Template, 6, 0, "ng-template", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, PublisherComponent_ng_template_6_Template, 6, 0, "ng-template", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "ngx-datatable-column", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "ngx-datatable-column", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, PublisherComponent_ng_template_8_Template, 1, 4, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](8, PublisherComponent_ng_template_8_Template, 1, 4, "ng-template", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "ngx-datatable-column", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "ngx-datatable-column", 9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](10, PublisherComponent_ng_template_10_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, PublisherComponent_ng_template_10_Template, 1, 0, "ng-template", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, PublisherComponent_ng_template_11_Template, 3, 3, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](11, PublisherComponent_ng_template_11_Template, 3, 3, "ng-template", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "ngx-datatable-column", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "ngx-datatable-column", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, PublisherComponent_ng_template_13_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, PublisherComponent_ng_template_13_Template, 1, 0, "ng-template", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, PublisherComponent_ng_template_14_Template, 2, 1, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, PublisherComponent_ng_template_14_Template, 2, 1, "ng-template", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "ngx-datatable-column", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "ngx-datatable-column", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, PublisherComponent_ng_template_16_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, PublisherComponent_ng_template_16_Template, 1, 0, "ng-template", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, PublisherComponent_ng_template_17_Template, 2, 1, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, PublisherComponent_ng_template_17_Template, 2, 1, "ng-template", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "ngx-datatable-column", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "ngx-datatable-column", 13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](19, PublisherComponent_ng_template_19_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](19, PublisherComponent_ng_template_19_Template, 1, 0, "ng-template", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, PublisherComponent_ng_template_20_Template, 4, 6, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, PublisherComponent_ng_template_20_Template, 4, 6, "ng-template", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "ngx-datatable-column", 14);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, PublisherComponent_ng_template_22_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](22, PublisherComponent_ng_template_22_Template, 1, 0, "ng-template", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, PublisherComponent_ng_template_23_Template, 3, 4, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, PublisherComponent_ng_template_23_Template, 3, 4, "ng-template", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](24, "ngx-datatable-column", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "ngx-datatable-column", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, PublisherComponent_ng_template_25_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, PublisherComponent_ng_template_25_Template, 1, 0, "ng-template", 10);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, PublisherComponent_ng_template_26_Template, 3, 4, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](26, PublisherComponent_ng_template_26_Template, 3, 4, "ng-template", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.chartData);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.chartData);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("scrollbarH", true)("rows", ctx.statData);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("scrollbarH", true)("rows", ctx.statData);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("rowHeight", 100);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_12__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_15__["ReportingRevenueChartComponent"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_13__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_11__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_14__["ReportingRevenueChartComponent"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_12__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_12__["CurrencyPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcHVibGlzaGVyLXJlcG9ydGluZy9wdWJsaXNoZXIvcHVibGlzaGVyLmNvbXBvbmVudC5zY3NzIn0= */"]
       });
       /*@__PURE__*/
 
       (function () {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](PublisherComponent, [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PublisherComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
           args: [{
             selector: 'app-publisher',
             templateUrl: './publisher.component.html',
@@ -2365,31 +2379,31 @@
           }]
         }], function () {
           return [{
-            type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]
+            type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"]
           }, {
-            type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]
+            type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]
           }, {
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
           }, {
-            type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]
+            type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]
           }, {
-            type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"]
+            type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"]
           }, {
-            type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]
+            type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"]
           }, {
-            type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]
+            type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_6__["VerizonService"]
           }, {
-            type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"]
+            type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"]
           }, {
-            type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__["SolexBCService"]
+            type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_8__["SolexBCService"]
           }, {
-            type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]
+            type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__["System1Service"]
           }, {
-            type: src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_11__["ApptitudeService"]
+            type: src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_10__["ApptitudeService"]
           }];
         }, {
           table: [{
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"],
             args: ['expandableTable']
           }]
         });

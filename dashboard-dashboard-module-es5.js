@@ -13,6 +13,10 @@
 
   function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+  function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+  function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
   function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -18233,153 +18237,147 @@
       /* harmony import */
 
 
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! @angular/core */
       "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! moment */
       "./node_modules/moment/moment.js");
       /* harmony import */
 
 
-      var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
+      var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
       /* harmony import */
 
 
-      var src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! src/app/modules/auth/_services/auth.service */
       "./src/app/modules/auth/_services/auth.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/perion.service */
       "./src/app/shared/service/admin-stats/perion.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! src/app/shared/service/users.service */
       "./src/app/shared/service/users.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/lyon.service */
       "./src/app/shared/service/admin-stats/lyon.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/rubi.service */
       "./src/app/shared/service/admin-stats/rubi.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/verizon.service */
       "./src/app/shared/service/admin-stats/verizon.service.ts");
       /* harmony import */
 
 
-      var src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! src/app/modules/tag-management/tag-management.service */
       "./src/app/modules/tag-management/tag-management.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/system1.service */
       "./src/app/shared/service/admin-stats/system1.service.ts");
       /* harmony import */
 
 
-      var src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! src/app/modules/company-management/company-management.service */
       "./src/app/modules/company-management/company-management.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/solexbc.service */
       "./src/app/shared/service/admin-stats/solexbc.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/apptitude.service */
       "./src/app/shared/service/admin-stats/apptitude.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/hopkin.service */
       "./src/app/shared/service/admin-stats/hopkin.service.ts");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+      var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! ../../widgets/mixed/mixed-widget1/mixed-widget1.component */
       "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget1/mixed-widget1.component.ts");
 
       function Dashboard1Component_app_mixed_widget1_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-mixed-widget1", 4);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-mixed-widget1", 4);
         }
 
         if (rf & 2) {
-          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ChartData", ctx_r0.ChartData)("CompanyName", ctx_r0.companyName);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ChartData", ctx_r0.ChartData)("CompanyName", ctx_r0.companyName);
         }
       }
 
       function Dashboard1Component_div_3_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 5);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 6);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "p", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p", 7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, " How did you get here ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " How did you get here ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "p", 8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p", 8);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Sorry you can't access the page you're looking for. ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " Sorry you can't access the page you're looking for. ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "p", 9);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p", 9);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, " There may be a misspelling in the URL entered,");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " There may be a misspelling in the URL entered,");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](8, "br");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "br");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "or the page you are looking for may no longer exist. ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "or the page you are looking for may no longer exist. ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
       }
 
@@ -18410,8 +18408,8 @@
 
         _createClass(Dashboard1Component, [{
           key: "ngAfterViewInit",
-          value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+          value: function () {
+            var _ngAfterViewInit = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
               var currentUser, dashboardPermission;
               return regeneratorRuntime.wrap(function _callee$(_context) {
                 while (1) {
@@ -18528,12 +18526,18 @@
                 }
               }, _callee, this);
             }));
-          } //get Report Providers in Current Company
+
+            function ngAfterViewInit() {
+              return _ngAfterViewInit.apply(this, arguments);
+            }
+
+            return ngAfterViewInit;
+          }() //get Report Providers in Current Company
 
         }, {
           key: "getReportingProviderList",
-          value: function getReportingProviderList() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+          value: function () {
+            var _getReportingProviderList = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
               var res, providerList;
               return regeneratorRuntime.wrap(function _callee2$(_context2) {
                 while (1) {
@@ -18572,7 +18576,13 @@
                 }
               }, _callee2, this, [[1, 11]]);
             }));
-          } //Gets the Selected Company from Local Storage
+
+            function getReportingProviderList() {
+              return _getReportingProviderList.apply(this, arguments);
+            }
+
+            return getReportingProviderList;
+          }() //Gets the Selected Company from Local Storage
 
         }, {
           key: "getSelectedCompanyFromLocalStorage",
@@ -18581,8 +18591,8 @@
           }
         }, {
           key: "getPerionChart",
-          value: function getPerionChart(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+          value: function () {
+            var _getPerionChart = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee3(company) {
               var response, chartPerionMetric, chartAllPerionStat, chartAllBeforePerionStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartPerionDataValue, revenueCurrentSum, revenueBeforeSum, _iterator, _step, dayData, checkExistDay, _iterator3, _step3, resVal, _iterator2, _step2, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee3$(_context3) {
@@ -18752,11 +18762,17 @@
                 }
               }, _callee3, this, [[0, 33]]);
             }));
-          }
+
+            function getPerionChart(_x) {
+              return _getPerionChart.apply(this, arguments);
+            }
+
+            return getPerionChart;
+          }()
         }, {
           key: "getLyonChart",
-          value: function getLyonChart(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+          value: function () {
+            var _getLyonChart = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee4(company) {
               var response, chartLyonMetric, chartAllLyonStat, chartAllBeforeLyonStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartLyonDataValue, revenueCurrentSum, revenueBeforeSum, _iterator4, _step4, dayData, checkExistDay, _iterator6, _step6, resVal, _iterator5, _step5, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee4$(_context4) {
@@ -18919,11 +18935,17 @@
                 }
               }, _callee4, this, [[0, 33]]);
             }));
-          }
+
+            function getLyonChart(_x2) {
+              return _getLyonChart.apply(this, arguments);
+            }
+
+            return getLyonChart;
+          }()
         }, {
           key: "getRubiChart",
-          value: function getRubiChart(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+          value: function () {
+            var _getRubiChart = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee5(company) {
               var response, chartRubiMetric, chartAllRubiStat, chartAllBeforeRubiStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartRubiDataValue, revenueCurrentSum, revenueBeforeSum, _iterator7, _step7, dayData, checkExistDay, _iterator9, _step9, resVal, _iterator8, _step8, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee5$(_context5) {
@@ -19026,11 +19048,17 @@
                 }
               }, _callee5, this, [[0, 33]]);
             }));
-          }
+
+            function getRubiChart(_x3) {
+              return _getRubiChart.apply(this, arguments);
+            }
+
+            return getRubiChart;
+          }()
         }, {
           key: "getHopkinChart",
-          value: function getHopkinChart(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+          value: function () {
+            var _getHopkinChart = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee6(company) {
               var response, chartHopkinMetric, chartAllHopkinStat, chartAllBeforeHopkinStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartHopkinDataValue, revenueCurrentSum, revenueBeforeSum, _iterator10, _step10, dayData, checkExistDay, _iterator12, _step12, resVal, _iterator11, _step11, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee6$(_context6) {
@@ -19133,11 +19161,17 @@
                 }
               }, _callee6, this, [[0, 33]]);
             }));
-          }
+
+            function getHopkinChart(_x4) {
+              return _getHopkinChart.apply(this, arguments);
+            }
+
+            return getHopkinChart;
+          }()
         }, {
           key: "getSystem1Chart",
-          value: function getSystem1Chart(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+          value: function () {
+            var _getSystem1Chart = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee7(company) {
               var response, chartSystem1Metric, chartAllSystem1Stat, chartAllBeforeSystem1Stat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartSystem1DataValue, revenueCurrentSum, revenueBeforeSum, _iterator13, _step13, dayData, checkExistDay, _iterator15, _step15, resVal, _iterator14, _step14, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee7$(_context7) {
@@ -19240,15 +19274,21 @@
                 }
               }, _callee7, this, [[0, 33]]);
             }));
-          }
+
+            function getSystem1Chart(_x5) {
+              return _getSystem1Chart.apply(this, arguments);
+            }
+
+            return getSystem1Chart;
+          }()
         }, {
           key: "getProviderChart",
           value: function getProviderChart(company) {} //get Verizon Direct chart
 
         }, {
           key: "getVerizonChart",
-          value: function getVerizonChart(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee8() {
+          value: function () {
+            var _getVerizonChart = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee8(company) {
               var response, chartVerizonMetric, chartAllVerizonStat, chartAllBeforeVerizonStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartVerizonDataValue, revenueCurrentSum, revenueBeforeSum, _iterator16, _step16, dayData, checkExistDay, _iterator18, _step18, resVal, _iterator17, _step17, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee8$(_context8) {
@@ -19351,12 +19391,18 @@
                 }
               }, _callee8, this, [[0, 33]]);
             }));
-          } //get Tags with selected company
+
+            function getVerizonChart(_x6) {
+              return _getVerizonChart.apply(this, arguments);
+            }
+
+            return getVerizonChart;
+          }() //get Tags with selected company
 
         }, {
           key: "getCompanyTags",
-          value: function getCompanyTags(selectedCompany) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
+          value: function () {
+            var _getCompanyTags = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee9(selectedCompany) {
               var companyId, response;
               return regeneratorRuntime.wrap(function _callee9$(_context9) {
                 while (1) {
@@ -19388,12 +19434,18 @@
                 }
               }, _callee9, this, [[1, 8]]);
             }));
-          } //Get Solex Bc
+
+            function getCompanyTags(_x7) {
+              return _getCompanyTags.apply(this, arguments);
+            }
+
+            return getCompanyTags;
+          }() //Get Solex Bc
 
         }, {
           key: "getSolexBCChart",
-          value: function getSolexBCChart(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
+          value: function () {
+            var _getSolexBCChart = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee10(company) {
               var response, chartSolexBCMetric, chartAllSolexBCStat, chartAllBeforeSolexBCStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartSolexBCDataValue, revenueCurrentSum, revenueBeforeSum, _iterator19, _step19, dayData, checkExistDay, _iterator21, _step21, resVal, _iterator20, _step20, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee10$(_context10) {
@@ -19496,12 +19548,18 @@
                 }
               }, _callee10, this, [[0, 33]]);
             }));
-          } //Get Apptitude
+
+            function getSolexBCChart(_x8) {
+              return _getSolexBCChart.apply(this, arguments);
+            }
+
+            return getSolexBCChart;
+          }() //Get Apptitude
 
         }, {
           key: "getApptitudeChart",
-          value: function getApptitudeChart(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
+          value: function () {
+            var _getApptitudeChart = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee11(company) {
               var response, chartRubiMetric, chartAllApptitudeStat, chartAllBeforeApptitudeStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartApptitudeDataValue, revenueCurrentSum, revenueBeforeSum, _iterator22, _step22, dayData, checkExistDay, _iterator24, _step24, resVal, _iterator23, _step23, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee11$(_context11) {
@@ -19604,12 +19662,18 @@
                 }
               }, _callee11, this, [[0, 33]]);
             }));
-          }
+
+            function getApptitudeChart(_x9) {
+              return _getApptitudeChart.apply(this, arguments);
+            }
+
+            return getApptitudeChart;
+          }()
         }, {
           key: "getCurrentMontDateList",
           value: function getCurrentMontDateList() {
             var lastThirtyDays = _toConsumableArray(new Array(30)).map(function (i, idx) {
-              return moment__WEBPACK_IMPORTED_MODULE_2__().utc().startOf("day").subtract(idx, "days").toDate().getTime() + moment__WEBPACK_IMPORTED_MODULE_2__["utc"](1000 * 60 * 60 * 10).toDate().getTime();
+              return moment__WEBPACK_IMPORTED_MODULE_1__().utc().startOf("day").subtract(idx, "days").toDate().getTime() + moment__WEBPACK_IMPORTED_MODULE_1__["utc"](1000 * 60 * 60 * 10).toDate().getTime();
             }).reverse();
 
             return lastThirtyDays;
@@ -19620,10 +19684,10 @@
       }();
 
       Dashboard1Component.ɵfac = function Dashboard1Component_Factory(t) {
-        return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__["ApptitudeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_14__["HopkinService"]));
+        return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_6__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_10__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_11__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_12__["ApptitudeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_13__["HopkinService"]));
       };
 
-      Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+      Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: Dashboard1Component,
         selectors: [["app-dashboard1"]],
         decls: 4,
@@ -19631,68 +19695,68 @@
         consts: [[1, "row"], [1, "col-lg-12", "col-xxl-12"], [3, "ChartData", "CompanyName", 4, "ngIf"], ["class", "error error-3 d-flex flex-row-fluid bgi-size-cover bgi-position-center", "style", "background-image: url('./assets/media/error/bg3.jpg'); height: 100%;zoom: 1;\n  display: block;\n  min-height: 80vh;\n  font-size: 14px;\n  line-height: 1.4;\n  color: #0e1724;", 4, "ngIf"], [3, "ChartData", "CompanyName"], [1, "error", "error-3", "d-flex", "flex-row-fluid", "bgi-size-cover", "bgi-position-center", 2, "background-image", "url('./assets/media/error/bg3.jpg')", "height", "100%", "zoom", "1", "display", "block", "min-height", "80vh", "font-size", "14px", "line-height", "1.4", "color", "#0e1724"], [1, "px-10", "px-md-30", "py-10", "py-md-0", "d-flex", "flex-column", "justify-content-md-center"], [1, "display-4", "font-weight-boldest", "text-white", "mb-12"], [1, "font-size-h1", "font-weight-boldest", "text-dark-75"], [1, "font-size-h4", "line-height-md"]],
         template: function Dashboard1Component_Template(rf, ctx) {
           if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, Dashboard1Component_app_mixed_widget1_2_Template, 1, 2, "app-mixed-widget1", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, Dashboard1Component_app_mixed_widget1_2_Template, 1, 2, "app-mixed-widget1", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](3, Dashboard1Component_div_3_Template, 10, 0, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](3, Dashboard1Component_div_3_Template, 10, 0, "div", 3);
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.ChartData);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.ChartData);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.pagePermission);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.pagePermission);
           }
         },
-        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_16__["MixedWidget1Component"]],
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_14__["NgIf"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_15__["MixedWidget1Component"]],
         encapsulation: 2
       });
       /*@__PURE__*/
 
       (function () {
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](Dashboard1Component, [{
-          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](Dashboard1Component, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
           args: [{
             selector: 'app-dashboard1',
             templateUrl: './dashboard1.component.html'
           }]
         }], function () {
           return [{
-            type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]
+            type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_2__["AuthService"]
           }, {
-            type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"]
+            type: src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_3__["PerionService"]
           }, {
-            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]
+            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]
           }, {
-            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
           }, {
-            type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]
+            type: src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_5__["LyonService"]
           }, {
-            type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"]
+            type: src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_6__["RubiService"]
           }, {
-            type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__["VerizonService"]
+            type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]
           }, {
-            type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__["TagManagementService"]
+            type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_8__["TagManagementService"]
           }, {
-            type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]
+            type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_9__["System1Service"]
           }, {
-            type: src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__["CompanyManagementService"]
+            type: src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_10__["CompanyManagementService"]
           }, {
-            type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__["SolexBCService"]
+            type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_11__["SolexBCService"]
           }, {
-            type: src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__["ApptitudeService"]
+            type: src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_12__["ApptitudeService"]
           }, {
-            type: src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_14__["HopkinService"]
+            type: src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_13__["HopkinService"]
           }];
         }, null);
       })();
