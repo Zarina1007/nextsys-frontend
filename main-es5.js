@@ -811,22 +811,8 @@
 
       var ngx_toastr__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
       /*! ngx-toastr */
-      "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
-      /* harmony import */
+      "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js"); // Highlight JS
 
-
-      var firebase_app__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
-      /*! firebase/app */
-      "./node_modules/firebase/app/dist/index.esm.js");
-      /* harmony import */
-
-
-      var src_environments_environment__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
-      /*! src/environments/environment */
-      "./src/environments/environment.ts"); // Highlight JS
-
-
-      Object(firebase_app__WEBPACK_IMPORTED_MODULE_21__["initializeApp"])(src_environments_environment__WEBPACK_IMPORTED_MODULE_22__["environment"].firebase);
 
       function appInitializer(authService) {
         return function () {

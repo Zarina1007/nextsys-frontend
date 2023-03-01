@@ -346,8 +346,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/company-management/company-management.component */ "./src/app/modules/company-management/company-management.component.ts");
 /* harmony import */ var _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/admin-reporting/admin-reporting.component */ "./src/app/modules/admin-reporting/admin-reporting.component.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
-/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! firebase/app */ "./node_modules/firebase/app/dist/index.esm.js");
-/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
 
 
 
@@ -374,9 +372,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-Object(firebase_app__WEBPACK_IMPORTED_MODULE_21__["initializeApp"])(src_environments_environment__WEBPACK_IMPORTED_MODULE_22__["environment"].firebase);
 function appInitializer(authService) {
     return () => {
         return new Promise((resolve) => {
