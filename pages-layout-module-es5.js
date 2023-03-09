@@ -33455,7 +33455,6 @@
           value: function ngOnInit() {
             this.currentUser = this.authService.currentUserValue;
             this.extrasNotificationsDropdownStyle = this.layout.getProp('extras.notifications.dropdown.style');
-            console.log(this.currentUser);
             this.getSuperadminNotifications();
             this.getPublisherNotifications();
           }
@@ -33533,7 +33532,6 @@
             this.notificationSendService.superAdminNotificatoins().subscribe({
               next: function next(res) {
                 _this116.superAdminRows = res;
-                console.log(res);
 
                 _this116.cdr.detectChanges();
               },

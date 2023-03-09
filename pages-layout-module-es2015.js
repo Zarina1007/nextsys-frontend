@@ -21470,7 +21470,6 @@ class NotificationsDropdownInnerComponent {
     ngOnInit() {
         this.currentUser = this.authService.currentUserValue;
         this.extrasNotificationsDropdownStyle = this.layout.getProp('extras.notifications.dropdown.style');
-        console.log(this.currentUser);
         this.getSuperadminNotifications();
         this.getPublisherNotifications();
     }
@@ -21530,7 +21529,6 @@ class NotificationsDropdownInnerComponent {
         this.notificationSendService.superAdminNotificatoins().subscribe({
             next: (res) => {
                 this.superAdminRows = res;
-                console.log(res);
                 this.cdr.detectChanges();
             },
             error: (e) => {
