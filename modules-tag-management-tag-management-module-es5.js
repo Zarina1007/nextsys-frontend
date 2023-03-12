@@ -13026,43 +13026,49 @@
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! src/app/shared/service/tags.service */
+      "./src/app/shared/service/tags.service.ts");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/material/form-field */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
       /* harmony import */
 
 
-      var _angular_material_select__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _angular_material_select__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @angular/material/select */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
       /* harmony import */
 
 
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! @angular/forms */
       "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _angular_material_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! @angular/material/core */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! ng-inline-svg */
       "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
 
@@ -13611,7 +13617,7 @@
       }
 
       var TagsComponent = /*#__PURE__*/function () {
-        function TagsComponent(tagService, cdr, router, _snackBarService, userService, notification, clipboardService, dialog) {
+        function TagsComponent(tagService, cdr, router, _snackBarService, userService, notification, clipboardService, dialog, tagFilterService) {
           _classCallCheck(this, TagsComponent);
 
           this.tagService = tagService;
@@ -13622,6 +13628,7 @@
           this.notification = notification;
           this.clipboardService = clipboardService;
           this.dialog = dialog;
+          this.tagFilterService = tagFilterService;
           this.loadingIndicator = true;
           this.hidden = false;
           this.publishertempList = [];
@@ -13629,37 +13636,7 @@
           this.publisherValue = "";
           this.advertiserValue = "";
           this.tagList = [];
-          this.reportingProviderList = [{
-            value: "apptitude",
-            viewValue: "Apptitude"
-          }, {
-            value: "bing-direct",
-            viewValue: "Bing Direct"
-          }, {
-            value: "hopkins",
-            viewValue: "Hopkins YHS"
-          }, {
-            value: "lyons",
-            viewValue: "Lyons"
-          }, {
-            value: "media-net",
-            viewValue: "Media.net"
-          }, {
-            value: "perion",
-            viewValue: "Perion"
-          }, {
-            value: "rubi",
-            viewValue: "Rubi"
-          }, {
-            value: "system1",
-            viewValue: "System1"
-          }, {
-            value: "solex-bc",
-            viewValue: "Solex BC"
-          }, {
-            value: "verizon-direct",
-            viewValue: "Verizon Direct"
-          }];
+          this.reportingProviderList = [];
           this.reportingProviderHandleList = [];
         }
 
@@ -13677,6 +13654,7 @@
 
             this.getAllTags();
             this.getPublisherAll();
+            this.getAdvertiserList();
             this.reportingProviderHandleList = this.reportingProviderList.sort(function (a, b) {
               return a.viewValue > b.viewValue ? 1 : -1;
             });
@@ -13705,22 +13683,57 @@
             }
           }
         }, {
+          key: "getAdvertiserList",
+          value: function getAdvertiserList() {
+            var _this57 = this;
+
+            if (this.localStorageCompany) {
+              this.tagFilterService.getTagAdvertiser(this.localStorageCompany.split('/')[1]).subscribe(function (res) {
+                var _iterator13 = _createForOfIteratorHelper(res),
+                    _step13;
+
+                try {
+                  for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
+                    var resAdvertiser = _step13.value;
+                    var adverValue = resAdvertiser.advertiser;
+                    var viewValue = "";
+
+                    if (adverValue.includes("-")) {
+                      viewValue = adverValue.replace("-", " ").split(" ")[0].charAt(0).toUpperCase() + adverValue.replace("-", " ").split(" ")[0].slice(1) + " " + adverValue.replace("-", " ").split(" ")[1].charAt(0).toUpperCase() + adverValue.replace("-", " ").split(" ")[1].slice(1);
+                    } else {
+                      viewValue = adverValue.charAt(0).toUpperCase() + adverValue.slice(1);
+                    }
+
+                    _this57.reportingProviderList.push({
+                      value: adverValue,
+                      viewValue: viewValue
+                    });
+                  }
+                } catch (err) {
+                  _iterator13.e(err);
+                } finally {
+                  _iterator13.f();
+                }
+              });
+            }
+          }
+        }, {
           key: "getPublisherAll",
           value: function getPublisherAll() {
-            var _this57 = this;
+            var _this58 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
               // console.log(data);
-              if (_this57.localStorageCompany) {
-                _this57.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this57.localStorageCompany);
+              if (_this58.localStorageCompany) {
+                _this58.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this58.localStorageCompany);
                 });
               } else {
-                _this57.publishertempList = data;
+                _this58.publishertempList = data;
               }
 
-              _this57.publishertempList.map(function (publisher) {
-                _this57.publisherList.push({
+              _this58.publishertempList.map(function (publisher) {
+                _this58.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -13730,40 +13743,17 @@
         }, {
           key: "handleChangeProvider",
           value: function handleChangeProvider(event) {
-            var _this58 = this;
+            var _this59 = this;
 
             this.advertiserValue = event;
 
             if (this.advertiserValue && this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this58.localStorageCompany && tag.advertiser == _this58.advertiserValue && tag.publisher[0]['_key'] == _this58.publisherValue;
+                return tag.company[0]['_id'] == _this59.localStorageCompany && tag.advertiser == _this59.advertiserValue && tag.publisher[0]['_key'] == _this59.publisherValue;
               });
             } else if (this.advertiserValue && !this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this58.localStorageCompany && tag.advertiser == _this58.advertiserValue;
-              });
-            } else {
-              this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this58.localStorageCompany;
-              });
-            }
-
-            this.cdr.detectChanges();
-          }
-        }, {
-          key: "handleChangePublisher",
-          value: function handleChangePublisher(event) {
-            var _this59 = this;
-
-            this.publisherValue = event;
-
-            if (this.advertiserValue && this.publisherValue) {
-              this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this59.localStorageCompany && tag.publisher[0]['_key'] == _this59.publisherValue && tag.advertiser == _this59.advertiserValue;
-              });
-            } else if (!this.advertiserValue && this.publisherValue) {
-              this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this59.localStorageCompany && tag.publisher[0]['_key'] == _this59.publisherValue;
+                return tag.company[0]['_id'] == _this59.localStorageCompany && tag.advertiser == _this59.advertiserValue;
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
@@ -13774,18 +13764,41 @@
             this.cdr.detectChanges();
           }
         }, {
-          key: "getAllTags",
-          value: function getAllTags() {
+          key: "handleChangePublisher",
+          value: function handleChangePublisher(event) {
             var _this60 = this;
 
-            this.tagService.getAllTags().subscribe(function (x) {
-              _this60.tagList = x;
-              _this60.rows = _this60.tagList.filter(function (tag) {
+            this.publisherValue = event;
+
+            if (this.advertiserValue && this.publisherValue) {
+              this.rows = this.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this60.localStorageCompany && tag.publisher[0]['_key'] == _this60.publisherValue && tag.advertiser == _this60.advertiserValue;
+              });
+            } else if (!this.advertiserValue && this.publisherValue) {
+              this.rows = this.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this60.localStorageCompany && tag.publisher[0]['_key'] == _this60.publisherValue;
+              });
+            } else {
+              this.rows = this.tagList.filter(function (tag) {
                 return tag.company[0]['_id'] == _this60.localStorageCompany;
               });
-              _this60.loadingIndicator = false;
+            }
 
-              _this60.cdr.detectChanges();
+            this.cdr.detectChanges();
+          }
+        }, {
+          key: "getAllTags",
+          value: function getAllTags() {
+            var _this61 = this;
+
+            this.tagService.getAllTags().subscribe(function (x) {
+              _this61.tagList = x;
+              _this61.rows = _this61.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this61.localStorageCompany;
+              });
+              _this61.loadingIndicator = false;
+
+              _this61.cdr.detectChanges();
             });
           } //Gets the Selected Company from Local Storage
 
@@ -13802,12 +13815,12 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this61 = this;
+            var _this62 = this;
 
             this.publisherValue = "";
             this.advertiserValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this61.localStorageCompany;
+              return tag.company[0]['_id'] == _this62.localStorageCompany;
             });
             this.cdr.detectChanges();
           }
@@ -13830,7 +13843,7 @@
       }();
 
       TagsComponent.ɵfac = function TagsComponent_Factory(t) {
-        return new (t || TagsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_4__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_clipboard__WEBPACK_IMPORTED_MODULE_7__["ClipboardService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"]));
+        return new (t || TagsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_4__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_6__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_clipboard__WEBPACK_IMPORTED_MODULE_7__["ClipboardService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_9__["TagsService"]));
       };
 
       TagsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -13854,7 +13867,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.hidden);
           }
         },
-        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_10__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_11__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_12__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_12__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_9__["NgForOf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DataTableColumnHeaderDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["DataTableColumnCellDirective"], _angular_material_core__WEBPACK_IMPORTED_MODULE_14__["MatOption"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_15__["InlineSVGDirective"]],
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_11__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_11__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_12__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_13__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnHeaderDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnCellDirective"], _angular_material_core__WEBPACK_IMPORTED_MODULE_15__["MatOption"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_16__["InlineSVGDirective"]],
         styles: ["[_nghost-%COMP%] {\n  height: 100%;\n}\n\n.tag-btn[_ngcontent-%COMP%] {\n  justify-content: flex-end !important;\n}\n\n@media (max-width: 1200px) {\n  .tag-btn[_ngcontent-%COMP%] {\n    justify-content: flex-start !important;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy90YWctbWFuYWdlbWVudC90YWdzL3RhZ3MuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxZQUFBO0FBQ0o7O0FBRUE7RUFDSSxvQ0FBQTtBQUNKOztBQUVBO0VBQ0k7SUFDSSxzQ0FBQTtFQUNOO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3RhZy1tYW5hZ2VtZW50L3RhZ3MvdGFncy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcclxuICAgIGhlaWdodDogMTAwJTtcclxuICB9XHJcblxyXG4udGFnLWJ0biB7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtZW5kICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbkBtZWRpYSAobWF4LXdpZHRoOiAxMjAwcHgpIHtcclxuICAgIC50YWctYnRuIHtcclxuICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQgIWltcG9ydGFudDtcclxuICAgIH1cclxufVxyXG4iXX0= */"]
       });
       /*@__PURE__*/
@@ -13884,6 +13897,8 @@
             type: ngx_clipboard__WEBPACK_IMPORTED_MODULE_7__["ClipboardService"]
           }, {
             type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"]
+          }, {
+            type: src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_9__["TagsService"]
           }];
         }, null);
       })();
@@ -14579,30 +14594,30 @@
         }, {
           key: "deleteTemplate",
           value: function deleteTemplate(id) {
-            var _this62 = this;
+            var _this63 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTemplate(id).subscribe(function (res) {
-                _this62.getAllTemplates();
+                _this63.getAllTemplates();
 
-                _this62._snackBarService.info('Deleted a Template');
+                _this63._snackBarService.info('Deleted a Template');
               });
             }
           }
         }, {
           key: "getAllTemplates",
           value: function getAllTemplates() {
-            var _this63 = this;
+            var _this64 = this;
 
             this.tagService.getAllTemplates().subscribe(function (x) {
-              _this63.templateList = x;
+              _this64.templateList = x;
               console.log(x);
-              _this63.rows = _this63.templateList.filter(function (template) {
-                return template.company[0]['_id'] == _this63.localStorageCompany;
+              _this64.rows = _this64.templateList.filter(function (template) {
+                return template.company[0]['_id'] == _this64.localStorageCompany;
               });
-              _this63.loadingIndicator = false;
+              _this64.loadingIndicator = false;
 
-              _this63.cdr.detectChanges();
+              _this64.cdr.detectChanges();
             });
           } //Gets the Selected Company from Local Storage
 
@@ -15278,34 +15293,34 @@
         }, {
           key: "getVerizonDirectTags",
           value: function getVerizonDirectTags() {
-            var _this64 = this;
+            var _this65 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this64.tagList = x;
-              _this64.rows = _this64.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this64.localStorageCompany && tag.advertiser == "verizon-direct";
+              _this65.tagList = x;
+              _this65.rows = _this65.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this65.localStorageCompany && tag.advertiser == "verizon-direct";
               });
-              _this64.loadingIndicator = false;
+              _this65.loadingIndicator = false;
 
-              _this64.cdr.detectChanges();
+              _this65.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherVerizonDirect",
           value: function getPublisherVerizonDirect() {
-            var _this65 = this;
+            var _this66 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this65.localStorageCompany) {
-                _this65.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this65.localStorageCompany);
+              if (_this66.localStorageCompany) {
+                _this66.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this66.localStorageCompany);
                 });
               } else {
-                _this65.publishertempList = data;
+                _this66.publishertempList = data;
               }
 
-              _this65.publishertempList.map(function (publisher) {
-                _this65.publisherList.push({
+              _this66.publishertempList.map(function (publisher) {
+                _this66.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -15320,13 +15335,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this66 = this;
+            var _this67 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this66.getVerizonDirectTags();
+                _this67.getVerizonDirectTags();
 
-                _this66._snackBarService.info('Deleted a tag');
+                _this67._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -15338,11 +15353,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this67 = this;
+            var _this68 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this67.localStorageCompany && tag.advertiser == "verizon-direct";
+              return tag.company[0]['_id'] == _this68.localStorageCompany && tag.advertiser == "verizon-direct";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -15355,17 +15370,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this68 = this;
+            var _this69 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this68.localStorageCompany && tag.publisher[0]['_key'] == _this68.publisherValue && tag.advertiser == "verizon-direct";
+                return tag.company[0]['_id'] == _this69.localStorageCompany && tag.publisher[0]['_key'] == _this69.publisherValue && tag.advertiser == "verizon-direct";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this68.localStorageCompany && tag.advertiser == "verizon-direct";
+                return tag.company[0]['_id'] == _this69.localStorageCompany && tag.advertiser == "verizon-direct";
               });
             }
 

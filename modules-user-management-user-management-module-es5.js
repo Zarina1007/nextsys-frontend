@@ -1,6 +1,4 @@
 (function () {
-  function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
   function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
   function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -241,6 +239,139 @@
        */
       //# sourceMappingURL=ng-validate-equal.js.map
 
+      /***/
+
+    },
+
+    /***/
+    "./src/app/modules/tag-management/tag-management.service.ts":
+    /*!******************************************************************!*\
+      !*** ./src/app/modules/tag-management/tag-management.service.ts ***!
+      \******************************************************************/
+
+    /*! exports provided: TagManagementService */
+
+    /***/
+    function srcAppModulesTagManagementTagManagementServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "TagManagementService", function () {
+        return TagManagementService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _shared_service_tags_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ./../../shared/service/tags.service */
+      "./src/app/shared/service/tags.service.ts");
+
+      var TagManagementService = /*#__PURE__*/function () {
+        function TagManagementService(tagsService) {
+          _classCallCheck(this, TagManagementService);
+
+          this.tagsService = tagsService;
+        } // Get all Chrome objects
+
+
+        _createClass(TagManagementService, [{
+          key: "getChromeBrowserVersion",
+          value: function getChromeBrowserVersion() {
+            return this.tagsService.getChrome();
+          } // Get all Chrome objects
+
+        }, {
+          key: "getFirefoxBrowserVersion",
+          value: function getFirefoxBrowserVersion() {
+            return this.tagsService.getFirefox();
+          }
+        }, {
+          key: "addTag",
+          value: function addTag(tag) {
+            return this.tagsService.add(tag);
+          }
+        }, {
+          key: "getAllTags",
+          value: function getAllTags() {
+            return this.tagsService.getAllTags();
+          }
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(companyKey) {
+            return this.tagsService.getCompanyTags(companyKey);
+          }
+        }, {
+          key: "deleteTag",
+          value: function deleteTag(tagKey) {
+            return this.tagsService.deleteTag(tagKey);
+          }
+        }, {
+          key: "getOneTag",
+          value: function getOneTag(tag) {
+            return this.tagsService.getOneTag(tag);
+          }
+        }, {
+          key: "updateOneTag",
+          value: function updateOneTag(tag) {
+            return this.tagsService.updateOneTag(tag);
+          }
+        }, {
+          key: "addTemplate",
+          value: function addTemplate(template) {
+            return this.tagsService.addTemplate(template);
+          }
+        }, {
+          key: "getAllTemplates",
+          value: function getAllTemplates() {
+            return this.tagsService.getAllTemplates();
+          }
+        }, {
+          key: "deleteTemplate",
+          value: function deleteTemplate(templateKey) {
+            return this.tagsService.deleteTemplate(templateKey);
+          }
+        }, {
+          key: "getOneTemplate",
+          value: function getOneTemplate(template) {
+            return this.tagsService.getOneTemplate(template);
+          }
+        }]);
+
+        return TagManagementService;
+      }();
+
+      TagManagementService.ɵfac = function TagManagementService_Factory(t) {
+        return new (t || TagManagementService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_1__["TagsService"]));
+      };
+
+      TagManagementService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: TagManagementService,
+        factory: TagManagementService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TagManagementService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _shared_service_tags_service__WEBPACK_IMPORTED_MODULE_1__["TagsService"]
+          }];
+        }, null);
+      })();
       /***/
 
     },
@@ -1975,60 +2106,107 @@
       /* harmony import */
 
 
-      var _angular_material_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @angular/material/list */
-      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/list.js");
+      var src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/modules/tag-management/tag-management.service */
+      "./src/app/modules/tag-management/tag-management.service.ts");
       /* harmony import */
 
 
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! @angular/forms */
-      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-      /* harmony import */
-
-
-      var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _angular_material_button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/material/button */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
+      /* harmony import */
 
-      function AddTagComponent_mat_list_option_13_Template(rf, ctx) {
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+
+      function AddTagComponent_tr_23_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-list-option", 15);
+          var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "input", 15);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddTagComponent_tr_23_Template_input_ngModelChange_2_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4);
+
+            var tag_r1 = ctx.$implicit;
+            return tag_r1.checked = $event;
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var advertiser_r2 = ctx.$implicit;
+          var tag_r1 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", advertiser_r2.value);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("value", tag_r1._id);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", advertiser_r2.viewValue, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", tag_r1.checked);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](tag_r1.tagName);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](tag_r1.publisher);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](tag_r1.advertiser);
         }
       }
 
       var AddTagComponent = /*#__PURE__*/function () {
-        function AddTagComponent(tagService, cdr, dialogRef, userService, data) {
+        function AddTagComponent(tagService, cdr, dialogRef, userService, tagManagementService, data) {
           _classCallCheck(this, AddTagComponent);
 
           this.tagService = tagService;
           this.cdr = cdr;
           this.dialogRef = dialogRef;
           this.userService = userService;
+          this.tagManagementService = tagManagementService;
           this.data = data; //Variable for loading indicator
 
           this.loadingIndicator = true;
           this.reportProviderData = [];
+          this.allTags = [];
           this.companySelected = this.getSelectedCompanyLocalStorage();
         }
 
@@ -2038,69 +2216,85 @@
             //Sets current user to data input variable
             this.user = this.data; //Sets userAdvertisers to user's current tags
 
-            this.userAdvertisers = this.user.advertisers; //Gets ALL companies available
-            //this.getAllTags();
+            this.userTags = this.user.tagsId; //Gets ALL companies available
 
-            this.getReportingProviderList();
+            this.getAllTags(); //this.getReportingProviderList();
           } //Gets the Selected Company from Local Storage
 
         }, {
           key: "getSelectedCompanyLocalStorage",
           value: function getSelectedCompanyLocalStorage() {
             return this.userService.getSelectedCompanyFromLocalStorage();
-          } //get report Provider List
-
+          }
         }, {
-          key: "getReportingProviderList",
-          value: function getReportingProviderList() {
-            var _this9 = this;
-
-            if (this.companySelected) {
-              this.tagService.getTagUserAdvertiser(this.user._key).subscribe(function (res) {
-                var _iterator = _createForOfIteratorHelper(res),
-                    _step;
-
-                try {
-                  for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                    var resAdvertiser = _step.value;
-
-                    _this9.reportProviderData.push({
-                      value: resAdvertiser.advertiser,
-                      viewValue: resAdvertiser.advertiser
-                    });
-                  }
-                } catch (err) {
-                  _iterator.e(err);
-                } finally {
-                  _iterator.f();
-                }
-
-                _this9.cdr.detectChanges();
-              });
-            }
-          } // getAllTags() {
-          //   this.tagManagementService.getAllTags().subscribe((response) => {
-          //     console.log(response);
-          //     this.loadingIndicator = false;
-          //     this.allTags = response;
-          //     this.cdr.detectChanges();
-          //   });
+          key: "checkAllCheckBox",
+          value: function checkAllCheckBox(event) {
+            console.log(event.target.checked);
+            this.allTags.forEach(function (x) {
+              return x.checked = event.target.checked;
+            });
+          }
+        }, {
+          key: "isAllCheckBoxChecked",
+          value: function isAllCheckBoxChecked() {
+            return this.allTags.every(function (p) {
+              return p.checked;
+            });
+          } //get report Provider List
+          // getReportingProviderList() {
+          //   if (this.companySelected) {
+          //     this.tagService.getTagUserAdvertiser(this.user._key).subscribe(res => {
+          //       for (var resAdvertiser of res) {
+          //         this.reportProviderData.push({
+          //           value: resAdvertiser.advertiser,
+          //           viewValue: resAdvertiser.advertiser,
+          //         })
+          //       }
+          //       this.cdr.detectChanges();
+          //     });
+          //   }
           // }
 
         }, {
+          key: "getAllTags",
+          value: function getAllTags() {
+            var _this9 = this;
+
+            this.tagManagementService.getAllTags().subscribe(function (response) {
+              _this9.loadingIndicator = false;
+              var tempTags = [];
+              var currentCompanyTag = response.filter(function (current) {
+                return current.company[0]["_id"] == _this9.companySelected;
+              });
+              currentCompanyTag.map(function (res) {
+                tempTags.push({
+                  _id: res._id,
+                  tagName: res.name,
+                  publisher: res.publisher[0]["fullname"],
+                  advertiser: res.advertiser,
+                  checked: _this9.userTags.includes(res._id)
+                });
+              });
+              _this9.allTags = tempTags;
+
+              _this9.cdr.detectChanges();
+            });
+          }
+        }, {
           key: "handleSubmit",
           value: function handleSubmit() {
-            this.user.advertisers = _toConsumableArray(this.userAdvertisers);
+            var userNewTags = [];
+            this.allTags.map(function (data) {
+              if (data.checked) {
+                userNewTags.push(data._id);
+              }
+            });
+            this.userTags = userNewTags;
+            this.user.tagsId = _toConsumableArray(this.userTags);
             this.dialogRef.close({
               user: this.user
             });
           }
-          /**
-          * close()
-          * * Closes the dialog and does not make any changes.
-          *
-          */
-
         }, {
           key: "close",
           value: function close() {
@@ -2112,15 +2306,15 @@
       }();
 
       AddTagComponent.ɵfac = function AddTagComponent_Factory(t) {
-        return new (t || AddTagComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_2__["TagsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]));
+        return new (t || AddTagComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_2__["TagsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]));
       };
 
       AddTagComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: AddTagComponent,
         selectors: [["app-add-tag"]],
-        decls: 21,
+        decls: 31,
         vars: 2,
-        consts: [[1, "mat-typography"], [1, "row"], [1, "col-xl-12"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], ["color", "primary", 3, "ngModel", "ngModelChange"], ["advertiser", ""], [3, "value", 4, "ngFor", "ngForOf"], [1, "row", "buttons"], [1, "col-md-6"], ["mat-raised-button", "", "color", "secondary", 1, "save-button", 3, "click"], ["mat-raised-button", "", "color", "primary", 1, "back-button", 3, "click"], [3, "value"]],
+        consts: [[1, "mat-typography"], [1, "row"], [1, "col-xl-12"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], [1, "table", "table-bordered"], ["type", "checkbox", 3, "checked", "change"], [4, "ngFor", "ngForOf"], [1, "row", "buttons"], [1, "col-md-6"], ["mat-raised-button", "", "color", "secondary", 1, "save-button", 3, "click"], ["mat-raised-button", "", "color", "primary", 1, "back-button", 3, "click"], ["type", "checkbox", 3, "value", "ngModel", "ngModelChange"]],
         template: function AddTagComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-dialog-content", 0);
@@ -2151,13 +2345,49 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "mat-selection-list", 8, 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "table", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngModelChange", function AddTagComponent_Template_mat_selection_list_ngModelChange_11_listener($event) {
-              return ctx.userAdvertisers = $event;
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "thead");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "tr");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "th");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "input", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("change", function AddTagComponent_Template_input_change_15_listener($event) {
+              return ctx.checkAllCheckBox($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](13, AddTagComponent_mat_list_option_13_Template, 2, 2, "mat-list-option", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "th");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Tag Name");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "th");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "Publisher");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "th");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Advertiser");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "tbody");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](23, AddTagComponent_tr_23_Template, 9, 5, "tr", 10);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -2175,31 +2405,33 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "div", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "button", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "div", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AddTagComponent_Template_button_click_16_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "button", 13);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AddTagComponent_Template_button_click_26_listener() {
               return ctx.close();
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, " Cancel ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, " Cancel ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "div", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "button", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "button", 14);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AddTagComponent_Template_button_click_19_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AddTagComponent_Template_button_click_29_listener() {
               return ctx.handleSubmit();
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " Save ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, " Save ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -2209,16 +2441,16 @@
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx.userAdvertisers);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("checked", ctx.isAllCheckBoxChecked());
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.reportProviderData);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.allTags);
           }
         },
-        directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogContent"], _angular_material_list__WEBPACK_IMPORTED_MODULE_4__["MatSelectionList"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_7__["MatButton"], _angular_material_list__WEBPACK_IMPORTED_MODULE_4__["MatListOption"]],
+        directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogContent"], _angular_common__WEBPACK_IMPORTED_MODULE_5__["NgForOf"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButton"], _angular_forms__WEBPACK_IMPORTED_MODULE_7__["CheckboxControlValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_7__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_7__["NgModel"]],
         styles: [".buttons[_ngcontent-%COMP%] {\n  margin-top: 10px;\n  width: 100%;\n}\n\nbutton[_ngcontent-%COMP%] {\n  width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy91c2VyLW1hbmFnZW1lbnQvZWRpdC11c2Vycy9hZGQtdGFnL2FkZC10YWcuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxnQkFBQTtFQUNBLFdBQUE7QUFDSjs7QUFFRTtFQUNFLFdBQUE7QUFDSiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvdXNlci1tYW5hZ2VtZW50L2VkaXQtdXNlcnMvYWRkLXRhZy9hZGQtdGFnLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJ1dHRvbnMge1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gIH1cclxuICBcclxuICBidXR0b24ge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgfVxyXG4gICJdfQ== */"]
       });
       /*@__PURE__*/
@@ -2240,6 +2472,8 @@
             type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]
           }, {
             type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]
+          }, {
+            type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]
           }, {
             type: undefined,
             decorators: [{
@@ -2648,8 +2882,6 @@
             }).afterClosed().subscribe(function (response) {
               //If user hits save
               if (response) {
-                //console.log(response);
-                //New variable readability -- all user data
                 _this11.user = response.user; //Updates current user with new company selection.
 
                 _this11.userManagementService.updateUser(_this11.user).subscribe(function (x) {
