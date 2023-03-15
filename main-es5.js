@@ -2519,7 +2519,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       module.exports = __webpack_require__(
-      /*! C:\Code\gitpro\nextsys-in\src\main.ts */
+      /*! C:\Code\gitpro\Client\NextSys\src\main.ts */
       "./src/main.ts");
       /***/
     }

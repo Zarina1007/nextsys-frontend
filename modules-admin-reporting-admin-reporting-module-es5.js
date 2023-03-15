@@ -2127,7 +2127,7 @@
 
       function ApptitudeComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 29);
         }
 
         if (rf & 2) {
@@ -2139,7 +2139,7 @@
 
       function ApptitudeComponent_app_summary_metrics_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 30);
         }
 
         if (rf & 2) {
@@ -2149,9 +2149,9 @@
         }
       }
 
-      function ApptitudeComponent_ng_template_12_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_16_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 28);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 31);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -2173,39 +2173,39 @@
         }
       }
 
-      function ApptitudeComponent_ng_template_14_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_18_Template(rf, ctx) {
         if (rf & 1) {
-          var _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          var _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 29);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 32);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ApptitudeComponent_ng_template_14_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r28);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ApptitudeComponent_ng_template_18_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r29);
 
-            var row_r25 = ctx.row;
+            var row_r26 = ctx.row;
 
-            var ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+            var ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-            return ctx_r27.toggleExpandRow(row_r25);
+            return ctx_r28.toggleExpandRow(row_r26);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r26 = ctx.expanded;
+          var expanded_r27 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r26)("datatable-icon-down", expanded_r26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r27)("datatable-icon-down", expanded_r27);
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_15_ng_template_1_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_19_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_15_ng_template_2_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_19_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -2217,21 +2217,21 @@
         }
 
         if (rf & 2) {
-          var value_r32 = ctx.value;
+          var value_r33 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r32));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r33));
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_15_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_19_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 30);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 33);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_15_ng_template_1_Template, 1, 0, "ng-template", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_19_ng_template_1_Template, 1, 0, "ng-template", 21);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_15_ng_template_2_Template, 3, 3, "ng-template", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_19_ng_template_2_Template, 3, 3, "ng-template", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -2241,69 +2241,9 @@
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_16_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
-        }
-      }
-
-      function ApptitudeComponent_ngx_datatable_column_16_ng_template_2_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r36 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r36);
-        }
-      }
-
-      function ApptitudeComponent_ngx_datatable_column_16_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 31);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_16_ng_template_1_Template, 1, 0, "ng-template", 16);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_16_ng_template_2_Template, 2, 1, "ng-template", 12);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-      }
-
-      function ApptitudeComponent_ng_template_18_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
-        }
-      }
-
-      function ApptitudeComponent_ng_template_19_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r38 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r38);
-        }
-      }
-
       function ApptitudeComponent_ngx_datatable_column_20_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
         }
       }
 
@@ -2313,27 +2253,25 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
-
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var value_r42 = ctx.value;
+          var value_r37 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r42));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r37);
         }
       }
 
       function ApptitudeComponent_ngx_datatable_column_20_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 32);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 34);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_20_ng_template_1_Template, 1, 0, "ng-template", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_20_ng_template_1_Template, 1, 0, "ng-template", 21);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_20_ng_template_2_Template, 3, 3, "ng-template", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_20_ng_template_2_Template, 2, 1, "ng-template", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -2341,7 +2279,7 @@
 
       function ApptitudeComponent_ngx_datatable_column_21_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
@@ -2351,27 +2289,25 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
-
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var value_r46 = ctx.value;
+          var value_r41 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r46));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r41);
         }
       }
 
       function ApptitudeComponent_ngx_datatable_column_21_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 33);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 35);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_21_ng_template_1_Template, 1, 0, "ng-template", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_21_ng_template_1_Template, 1, 0, "ng-template", 21);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_21_ng_template_2_Template, 3, 3, "ng-template", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_21_ng_template_2_Template, 2, 1, "ng-template", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -2379,7 +2315,7 @@
 
       function ApptitudeComponent_ngx_datatable_column_22_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Impressions ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
         }
       }
 
@@ -2395,21 +2331,21 @@
         }
 
         if (rf & 2) {
-          var value_r50 = ctx.value;
+          var value_r45 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r50));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r45));
         }
       }
 
       function ApptitudeComponent_ngx_datatable_column_22_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 34);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 36);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_22_ng_template_1_Template, 1, 0, "ng-template", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_22_ng_template_1_Template, 1, 0, "ng-template", 21);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_22_ng_template_2_Template, 3, 3, "ng-template", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_22_ng_template_2_Template, 3, 3, "ng-template", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -2417,7 +2353,7 @@
 
       function ApptitudeComponent_ngx_datatable_column_23_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
         }
       }
 
@@ -2433,71 +2369,59 @@
         }
 
         if (rf & 2) {
-          var value_r54 = ctx.value;
+          var value_r49 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r54, "1.2-2"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r49));
         }
       }
 
       function ApptitudeComponent_ngx_datatable_column_23_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 35);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 37);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_23_ng_template_1_Template, 1, 0, "ng-template", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_23_ng_template_1_Template, 1, 0, "ng-template", 21);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_23_ng_template_2_Template, 3, 4, "ng-template", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_23_ng_template_2_Template, 3, 3, "ng-template", 14);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_25_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
-        }
-      }
-
-      function ApptitudeComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r58 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r58, "1.2-2"));
-        }
-      }
-
-      function ApptitudeComponent_ngx_datatable_column_24_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 36);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 16);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_24_ng_template_2_Template, 3, 4, "ng-template", 12);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Filtering ");
         }
       }
 
       function ApptitudeComponent_ng_template_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r51 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r51));
         }
       }
 
-      function ApptitudeComponent_ng_template_27_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Impressions ");
+        }
+      }
+
+      function ApptitudeComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -2509,73 +2433,161 @@
         }
 
         if (rf & 2) {
-          var value_r60 = ctx.value;
+          var value_r55 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r60));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r55));
         }
       }
 
-      function ApptitudeComponent_ng_template_29_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_27_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 38);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function ApptitudeComponent_ng_template_30_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
+        }
+      }
+
+      function ApptitudeComponent_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var value_r62 = ctx.value;
+          var value_r59 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r62, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r59, "1.2-2"));
+        }
+      }
+
+      function ApptitudeComponent_ngx_datatable_column_28_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 39);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_28_ng_template_2_Template, 3, 4, "ng-template", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function ApptitudeComponent_ngx_datatable_column_29_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
+        }
+      }
+
+      function ApptitudeComponent_ngx_datatable_column_29_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r63 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r63, "1.2-2"));
+        }
+      }
+
+      function ApptitudeComponent_ngx_datatable_column_29_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 40);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_29_ng_template_1_Template, 1, 0, "ng-template", 21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_29_ng_template_2_Template, 3, 4, "ng-template", 14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function ApptitudeComponent_ng_template_31_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
         }
       }
 
       function ApptitudeComponent_ng_template_32_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
-        }
-      }
-
-      function ApptitudeComponent_ng_template_33_Template(rf, ctx) {
-        if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var value_r64 = ctx.value;
+          var value_r65 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r64, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r65));
+        }
+      }
+
+      function ApptitudeComponent_ng_template_34_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
         }
       }
 
       function ApptitudeComponent_ng_template_35_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r67 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r67, "USD"));
         }
       }
 
-      function ApptitudeComponent_ng_template_36_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_37_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
+        }
+      }
+
+      function ApptitudeComponent_ng_template_38_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -2587,11 +2599,37 @@
         }
 
         if (rf & 2) {
-          var value_r66 = ctx.value;
+          var value_r69 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r66, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r69, "USD"));
+        }
+      }
+
+      function ApptitudeComponent_ng_template_40_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function ApptitudeComponent_ng_template_41_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r71 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r71, "USD"));
         }
       }
 
@@ -2612,6 +2650,8 @@
           this.expanded = {};
           this.tagList = [];
           this.groupPublishFlag = false;
+          this.groupDateShowFlag = false;
+          this.groupSubidShowFlag = false;
           this.selectedCompany = this.getSelectedCompanyStored();
         }
 
@@ -2644,7 +2684,7 @@
 
                     case 12:
                       this.summaryMetrics = _context12.sent;
-                      this.cdr.markForCheck();
+                      this.cdr.detectChanges();
 
                     case 14:
                     case "end":
@@ -2669,7 +2709,6 @@
 
                     case 2:
                       response = _context13.sent;
-                      console.log('getApptitudeStats() response:', response);
                       this.loadingIndicator = false;
                       this.allStats = response.stats;
                       this.allStats.map(function (resStat) {
@@ -2729,7 +2768,7 @@
 
                       return _context13.abrupt("return", this.allStats);
 
-                    case 10:
+                    case 9:
                     case "end":
                       return _context13.stop();
                   }
@@ -2779,7 +2818,7 @@
                     case 9:
                       this.summaryMetrics = _context14.sent;
                       this.groupPublishFlag = false;
-                      this.cdr.markForCheck();
+                      this.cdr.detectChanges();
 
                     case 12:
                     case "end":
@@ -2790,11 +2829,11 @@
             }));
           }
         }, {
-          key: "groupProvider",
-          value: function groupProvider() {
+          key: "groupSubid",
+          value: function groupSubid() {
             var helperSummary = {};
             var groupData = this.allStats.reduce(function (r, o) {
-              var key = o.publisher;
+              var key = o.subid;
 
               if (!helperSummary[key]) {
                 helperSummary[key] = Object.assign({}, o); // create a copy of o
@@ -2806,6 +2845,7 @@
                 helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
                 helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
+                helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
@@ -2834,15 +2874,122 @@
             }
 
             this.rows = groupData;
-            this.groupPublishFlag = true;
-            this.cdr.markForCheck();
+            this.groupPublishFlag = false;
+            this.groupDateShowFlag = false;
+            this.groupSubidShowFlag = true;
+            console.log(this.groupSubidShowFlag, this.groupPublishFlag, this.groupDateShowFlag, "dddd");
+            this.cdr.detectChanges();
           }
         }, {
-          key: "backProvider",
-          value: function backProvider() {
+          key: "groupDate",
+          value: function groupDate() {
+            var helperSummary = {};
+            var groupData = this.allStats.reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
+                helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator18 = _createForOfIteratorHelper(groupData),
+                _step18;
+
+            try {
+              for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
+                var group = _step18.value;
+                group.split = group.split / group.counter;
+                group.cpc = group.cpc / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator18.e(err);
+            } finally {
+              _iterator18.f();
+            }
+
+            this.rows = groupData;
+            this.groupPublishFlag = false;
+            this.groupDateShowFlag = true;
+            this.groupSubidShowFlag = false;
+            this.cdr.detectChanges();
+          }
+        }, {
+          key: "groupProvider",
+          value: function groupProvider() {
+            var helperSummary = {};
+            var groupData = this.allStats.reduce(function (r, o) {
+              var key = o.publisher;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
+                helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator19 = _createForOfIteratorHelper(groupData),
+                _step19;
+
+            try {
+              for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
+                var group = _step19.value;
+                group.split = group.split / group.counter;
+                group.cpc = group.cpc / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator19.e(err);
+            } finally {
+              _iterator19.f();
+            }
+
+            this.rows = groupData;
+            this.groupPublishFlag = true;
+            this.groupDateShowFlag = false;
+            this.groupSubidShowFlag = false;
+            this.cdr.detectChanges();
+          }
+        }, {
+          key: "backGroup",
+          value: function backGroup() {
             this.rows = this.allStats;
             this.groupPublishFlag = false;
-            this.cdr.markForCheck();
+            this.groupDateShowFlag = false;
+            this.groupSubidShowFlag = false;
+            this.cdr.detectChanges();
           }
         }, {
           key: "getChartMetrics",
@@ -2976,9 +3123,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 37,
-        vars: 22,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row", "px-6"], [1, "btn", "btn-sm", "btn-primary", "mx-3", 3, "click"], [1, "btn", "btn-sm", "btn-dark", "mx-3", 3, "click"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher"], ["ngx-datatable-header-template", ""], ["name", "clicks", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "impressions", 4, "ngIf"], ["name", "cpc", 4, "ngIf"], ["name", "ctr", 4, "ngIf"], ["name", "split"], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "clicks"], ["name", "searches"], ["name", "impressions"], ["name", "cpc"], ["name", "ctr"]],
+        decls: 42,
+        vars: 23,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row", "px-6"], [1, "btn", "btn-sm", "btn-primary", "mx-1", 3, "click"], [1, "btn", "btn-sm", "btn-success", "mx-1", 3, "click"], [1, "btn", "btn-sm", "btn-info", "mx-1", 3, "click"], [1, "btn", "btn-sm", "btn-dark", "mx-1", 3, "click"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "filtering"], ["ngx-datatable-header-template", ""], ["name", "impressions", 4, "ngIf"], ["name", "cpc", 4, "ngIf"], ["name", "ctr", 4, "ngIf"], ["name", "split"], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher"], ["name", "clicks"], ["name", "searches"], ["name", "impressions"], ["name", "cpc"], ["name", "ctr"]],
         template: function ApptitudeComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -2998,94 +3145,116 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "button", 4);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ApptitudeComponent_Template_button_click_4_listener() {
-              return ctx.groupProvider();
+              return ctx.groupDate();
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Group ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, " Group by Date ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "button", 5);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ApptitudeComponent_Template_button_click_6_listener() {
-              return ctx.backProvider();
+              return ctx.groupProvider();
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, " Back ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, " Group by Publisher ");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "button", 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ApptitudeComponent_Template_button_click_8_listener() {
+              return ctx.groupSubid();
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, " Group by Subid ");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "button", 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ApptitudeComponent_Template_button_click_10_listener() {
+              return ctx.backGroup();
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, " Back ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "ngx-datatable", 6, 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "ngx-datatable", 8, 9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "ngx-datatable-row-detail", 8, 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "ngx-datatable-row-detail", 10, 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function ApptitudeComponent_Template_ngx_datatable_row_detail_toggle_10_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function ApptitudeComponent_Template_ngx_datatable_row_detail_toggle_14_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](12, ApptitudeComponent_ng_template_12_Template, 6, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, ApptitudeComponent_ng_template_16_Template, 6, 0, "ng-template", 12);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "ngx-datatable-column", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable-column", 13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, ApptitudeComponent_ng_template_14_Template, 1, 4, "ng-template", 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, ApptitudeComponent_ngx_datatable_column_15_Template, 3, 1, "ngx-datatable-column", 13);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, ApptitudeComponent_ngx_datatable_column_16_Template, 3, 0, "ngx-datatable-column", 14);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable-column", 15);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](18, ApptitudeComponent_ng_template_18_Template, 1, 0, "ng-template", 16);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](19, ApptitudeComponent_ng_template_19_Template, 2, 1, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](18, ApptitudeComponent_ng_template_18_Template, 1, 4, "ng-template", 14);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, ApptitudeComponent_ngx_datatable_column_20_Template, 3, 0, "ngx-datatable-column", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](19, ApptitudeComponent_ngx_datatable_column_19_Template, 3, 1, "ngx-datatable-column", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, ApptitudeComponent_ngx_datatable_column_21_Template, 3, 0, "ngx-datatable-column", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, ApptitudeComponent_ngx_datatable_column_20_Template, 3, 0, "ngx-datatable-column", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, ApptitudeComponent_ngx_datatable_column_22_Template, 3, 0, "ngx-datatable-column", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, ApptitudeComponent_ngx_datatable_column_21_Template, 3, 0, "ngx-datatable-column", 17);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, ApptitudeComponent_ngx_datatable_column_23_Template, 3, 0, "ngx-datatable-column", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, ApptitudeComponent_ngx_datatable_column_22_Template, 3, 0, "ngx-datatable-column", 18);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, ApptitudeComponent_ngx_datatable_column_24_Template, 3, 0, "ngx-datatable-column", 21);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, ApptitudeComponent_ngx_datatable_column_23_Template, 3, 0, "ngx-datatable-column", 19);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "ngx-datatable-column", 22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](24, "ngx-datatable-column", 20);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, ApptitudeComponent_ng_template_26_Template, 1, 0, "ng-template", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, ApptitudeComponent_ng_template_25_Template, 1, 0, "ng-template", 21);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, ApptitudeComponent_ng_template_27_Template, 3, 3, "ng-template", 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "ngx-datatable-column", 23);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, ApptitudeComponent_ng_template_29_Template, 1, 0, "ng-template", 16);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, ApptitudeComponent_ng_template_30_Template, 3, 4, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, ApptitudeComponent_ng_template_26_Template, 3, 3, "ng-template", 14);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "ngx-datatable-column", 24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, ApptitudeComponent_ngx_datatable_column_27_Template, 3, 0, "ngx-datatable-column", 22);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, ApptitudeComponent_ng_template_32_Template, 1, 0, "ng-template", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, ApptitudeComponent_ngx_datatable_column_28_Template, 3, 0, "ngx-datatable-column", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, ApptitudeComponent_ng_template_33_Template, 3, 4, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, ApptitudeComponent_ngx_datatable_column_29_Template, 3, 0, "ngx-datatable-column", 24);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](30, "ngx-datatable-column", 25);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, ApptitudeComponent_ng_template_31_Template, 1, 0, "ng-template", 21);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, ApptitudeComponent_ng_template_32_Template, 3, 3, "ng-template", 14);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "ngx-datatable-column", 25);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](33, "ngx-datatable-column", 26);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, ApptitudeComponent_ng_template_35_Template, 1, 0, "ng-template", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, ApptitudeComponent_ng_template_34_Template, 1, 0, "ng-template", 21);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, ApptitudeComponent_ng_template_36_Template, 3, 4, "ng-template", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, ApptitudeComponent_ng_template_35_Template, 3, 4, "ng-template", 14);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "ngx-datatable-column", 27);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, ApptitudeComponent_ng_template_37_Template, 1, 0, "ng-template", 21);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, ApptitudeComponent_ng_template_38_Template, 3, 4, "ng-template", 14);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](39, "ngx-datatable-column", 28);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, ApptitudeComponent_ng_template_40_Template, 1, 0, "ng-template", 21);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](41, ApptitudeComponent_ng_template_41_Template, 3, 4, "ng-template", 14);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -3101,7 +3270,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](10);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
 
@@ -3115,31 +3284,35 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupSubidShowFlag);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
           }
         },
         directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_5__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_8__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_9__["SummaryMetricsComponent"]],
@@ -3870,7 +4043,7 @@
           key: "getAllHopkinStats",
           value: function getAllHopkinStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
-              var response, _iterator18, _step18, tagL, _iterator19, _step19, tagSub;
+              var response, _iterator20, _step20, tagL, _iterator21, _step21, tagSub;
 
               return regeneratorRuntime.wrap(function _callee19$(_context19) {
                 while (1) {
@@ -3888,18 +4061,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator18 = _createForOfIteratorHelper(this.tagList);
+                      _iterator20 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
-                          tagL = _step18.value;
+                        for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+                          tagL = _step20.value;
 
                           if (tagL.tag.advertiser == "hopkins") {
-                            _iterator19 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator21 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
-                                tagSub = _step19.value;
+                              for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+                                tagSub = _step21.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -3932,16 +4105,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator19.e(err);
+                              _iterator21.e(err);
                             } finally {
-                              _iterator19.f();
+                              _iterator21.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator18.e(err);
+                        _iterator20.e(err);
                       } finally {
-                        _iterator18.f();
+                        _iterator20.f();
                       }
 
                       return _context19.abrupt("return", this.allStats);
@@ -3982,18 +4155,18 @@
               return r;
             }, []);
 
-            var _iterator20 = _createForOfIteratorHelper(groupData),
-                _step20;
+            var _iterator22 = _createForOfIteratorHelper(groupData),
+                _step22;
 
             try {
-              for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
-                var group = _step20.value;
+              for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                var group = _step22.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator20.e(err);
+              _iterator22.e(err);
             } finally {
-              _iterator20.f();
+              _iterator22.f();
             }
 
             this.rows = groupData;
@@ -5741,7 +5914,7 @@
           key: "getAllLyonStats",
           value: function getAllLyonStats(startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
-              var response, _iterator21, _step21, tagL, _iterator22, _step22, tagSub;
+              var response, _iterator23, _step23, tagL, _iterator24, _step24, tagSub;
 
               return regeneratorRuntime.wrap(function _callee27$(_context27) {
                 while (1) {
@@ -5760,18 +5933,18 @@
                         resStat.tagname = "No Tag";
                       }); // var allLyonStat = [];
 
-                      _iterator21 = _createForOfIteratorHelper(this.tagList);
+                      _iterator23 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
-                          tagL = _step21.value;
+                        for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+                          tagL = _step23.value;
 
                           if (tagL.tag.advertiser == "lyons") {
-                            _iterator22 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator24 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
-                                tagSub = _step22.value;
+                              for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+                                tagSub = _step24.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allstat.map(function (stat) {
@@ -5804,16 +5977,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator22.e(err);
+                              _iterator24.e(err);
                             } finally {
-                              _iterator22.f();
+                              _iterator24.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator21.e(err);
+                        _iterator23.e(err);
                       } finally {
-                        _iterator21.f();
+                        _iterator23.f();
                       }
 
                       return _context27.abrupt("return", this.allstat);
@@ -5860,20 +6033,20 @@
               return r;
             }, []);
 
-            var _iterator23 = _createForOfIteratorHelper(groupData),
-                _step23;
+            var _iterator25 = _createForOfIteratorHelper(groupData),
+                _step25;
 
             try {
-              for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
-                var group = _step23.value;
+              for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+                var group = _step25.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator23.e(err);
+              _iterator25.e(err);
             } finally {
-              _iterator23.f();
+              _iterator25.f();
             }
 
             this.rows = groupData;
@@ -5911,20 +6084,20 @@
               return r;
             }, []);
 
-            var _iterator24 = _createForOfIteratorHelper(groupData),
-                _step24;
+            var _iterator26 = _createForOfIteratorHelper(groupData),
+                _step26;
 
             try {
-              for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
-                var group = _step24.value;
+              for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+                var group = _step26.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator24.e(err);
+              _iterator26.e(err);
             } finally {
-              _iterator24.f();
+              _iterator26.f();
             }
 
             this.rows = groupData;
@@ -5962,20 +6135,20 @@
               return r;
             }, []);
 
-            var _iterator25 = _createForOfIteratorHelper(groupData),
-                _step25;
+            var _iterator27 = _createForOfIteratorHelper(groupData),
+                _step27;
 
             try {
-              for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
-                var group = _step25.value;
+              for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
+                var group = _step27.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator25.e(err);
+              _iterator27.e(err);
             } finally {
-              _iterator25.f();
+              _iterator27.f();
             }
 
             this.rows = groupData;
@@ -6100,7 +6273,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee30() {
-              var response, sortResponse, helperChart, resultChart, revenuePerDayVal, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator26, _step26, resVal;
+              var response, sortResponse, helperChart, resultChart, revenuePerDayVal, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator28, _step28, resVal;
 
               return regeneratorRuntime.wrap(function _callee30$(_context30) {
                 while (1) {
@@ -6180,19 +6353,19 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator26 = _createForOfIteratorHelper(resultChart);
+                      _iterator28 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-                          resVal = _step26.value;
+                        for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+                          resVal = _step28.value;
                           revenuePerDayVal.push(resVal.revenue);
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator26.e(err);
+                        _iterator28.e(err);
                       } finally {
-                        _iterator26.f();
+                        _iterator28.f();
                       }
 
                       chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -8605,7 +8778,7 @@
           key: "getAllPerionStats",
           value: function getAllPerionStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee34() {
-              var response, _iterator27, _step27, tagL, _iterator28, _step28, tagSub;
+              var response, _iterator29, _step29, tagL, _iterator30, _step30, tagSub;
 
               return regeneratorRuntime.wrap(function _callee34$(_context34) {
                 while (1) {
@@ -8624,18 +8797,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator27 = _createForOfIteratorHelper(this.tagList);
+                      _iterator29 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
-                          tagL = _step27.value;
+                        for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
+                          tagL = _step29.value;
 
                           if (tagL.tag.advertiser == "perion") {
-                            _iterator28 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator30 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
-                                tagSub = _step28.value;
+                              for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
+                                tagSub = _step30.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStat.map(function (stat) {
@@ -8668,16 +8841,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator28.e(err);
+                              _iterator30.e(err);
                             } finally {
-                              _iterator28.f();
+                              _iterator30.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator27.e(err);
+                        _iterator29.e(err);
                       } finally {
-                        _iterator27.f();
+                        _iterator29.f();
                       }
 
                       return _context34.abrupt("return", this.allStat);
@@ -8723,20 +8896,20 @@
               return r;
             }, []);
 
-            var _iterator29 = _createForOfIteratorHelper(groupData),
-                _step29;
+            var _iterator31 = _createForOfIteratorHelper(groupData),
+                _step31;
 
             try {
-              for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
-                var group = _step29.value;
+              for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
+                var group = _step31.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator29.e(err);
+              _iterator31.e(err);
             } finally {
-              _iterator29.f();
+              _iterator31.f();
             }
 
             console.log("=======", groupData);
@@ -8774,20 +8947,20 @@
               return r;
             }, []);
 
-            var _iterator30 = _createForOfIteratorHelper(groupData),
-                _step30;
+            var _iterator32 = _createForOfIteratorHelper(groupData),
+                _step32;
 
             try {
-              for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
-                var group = _step30.value;
+              for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
+                var group = _step32.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator30.e(err);
+              _iterator32.e(err);
             } finally {
-              _iterator30.f();
+              _iterator32.f();
             }
 
             this.rows = groupData;
@@ -8824,20 +8997,20 @@
               return r;
             }, []);
 
-            var _iterator31 = _createForOfIteratorHelper(groupData),
-                _step31;
+            var _iterator33 = _createForOfIteratorHelper(groupData),
+                _step33;
 
             try {
-              for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
-                var group = _step31.value;
+              for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
+                var group = _step33.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator31.e(err);
+              _iterator33.e(err);
             } finally {
-              _iterator31.f();
+              _iterator33.f();
             }
 
             this.rows = groupData;
@@ -8917,7 +9090,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
-              var response, helperChart, resultChart, revenuePerDayVal, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator32, _step32, resVal;
+              var response, helperChart, resultChart, revenuePerDayVal, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator34, _step34, resVal;
 
               return regeneratorRuntime.wrap(function _callee36$(_context36) {
                 while (1) {
@@ -8956,19 +9129,19 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator32 = _createForOfIteratorHelper(resultChart);
+                      _iterator34 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
-                          resVal = _step32.value;
+                        for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
+                          resVal = _step34.value;
                           revenuePerDayVal.push(resVal.revenue);
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.totalsearches);
                         }
                       } catch (err) {
-                        _iterator32.e(err);
+                        _iterator34.e(err);
                       } finally {
-                        _iterator32.f();
+                        _iterator34.f();
                       }
 
                       chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -9849,7 +10022,7 @@
           key: "getAllRubiStats",
           value: function getAllRubiStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
-              var response, _iterator33, _step33, tagL, _iterator34, _step34, tagSub;
+              var response, _iterator35, _step35, tagL, _iterator36, _step36, tagSub;
 
               return regeneratorRuntime.wrap(function _callee40$(_context40) {
                 while (1) {
@@ -9867,18 +10040,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator33 = _createForOfIteratorHelper(this.tagList);
+                      _iterator35 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
-                          tagL = _step33.value;
+                        for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
+                          tagL = _step35.value;
 
                           if (tagL.tag.advertiser == "rubi") {
-                            _iterator34 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator36 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
-                                tagSub = _step34.value;
+                              for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
+                                tagSub = _step36.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -9911,16 +10084,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator34.e(err);
+                              _iterator36.e(err);
                             } finally {
-                              _iterator34.f();
+                              _iterator36.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator33.e(err);
+                        _iterator35.e(err);
                       } finally {
-                        _iterator33.f();
+                        _iterator35.f();
                       }
 
                       return _context40.abrupt("return", this.allStats);
@@ -9959,18 +10132,18 @@
               return r;
             }, []);
 
-            var _iterator35 = _createForOfIteratorHelper(groupData),
-                _step35;
+            var _iterator37 = _createForOfIteratorHelper(groupData),
+                _step37;
 
             try {
-              for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
-                var group = _step35.value;
+              for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
+                var group = _step37.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator35.e(err);
+              _iterator37.e(err);
             } finally {
-              _iterator35.f();
+              _iterator37.f();
             }
 
             this.rows = groupData;
@@ -10005,18 +10178,18 @@
               return r;
             }, []);
 
-            var _iterator36 = _createForOfIteratorHelper(groupData),
-                _step36;
+            var _iterator38 = _createForOfIteratorHelper(groupData),
+                _step38;
 
             try {
-              for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
-                var group = _step36.value;
+              for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
+                var group = _step38.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator36.e(err);
+              _iterator38.e(err);
             } finally {
-              _iterator36.f();
+              _iterator38.f();
             }
 
             this.rows = groupData;
@@ -10051,18 +10224,18 @@
               return r;
             }, []);
 
-            var _iterator37 = _createForOfIteratorHelper(groupData),
-                _step37;
+            var _iterator39 = _createForOfIteratorHelper(groupData),
+                _step39;
 
             try {
-              for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
-                var group = _step37.value;
+              for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
+                var group = _step39.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator37.e(err);
+              _iterator39.e(err);
             } finally {
-              _iterator37.f();
+              _iterator39.f();
             }
 
             this.rows = groupData;
@@ -11005,20 +11178,20 @@
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator38 = _createForOfIteratorHelper(_this8.tagList),
-                  _step38;
+              var _iterator40 = _createForOfIteratorHelper(_this8.tagList),
+                  _step40;
 
               try {
-                for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
-                  var tagL = _step38.value;
+                for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
+                  var tagL = _step40.value;
 
                   if (tagL.tag.advertiser == "solex-bc") {
-                    var _iterator39 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step39;
+                    var _iterator41 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step41;
 
                     try {
-                      for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
-                        var tagSub = _step39.value;
+                      for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
+                        var tagSub = _step41.value;
 
                         if (tagSub.filterTag == "Contains") {
                           _this8.allStats.map(function (stat) {
@@ -11051,16 +11224,16 @@
                         }
                       }
                     } catch (err) {
-                      _iterator39.e(err);
+                      _iterator41.e(err);
                     } finally {
-                      _iterator39.f();
+                      _iterator41.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator38.e(err);
+                _iterator40.e(err);
               } finally {
-                _iterator38.f();
+                _iterator40.f();
               }
 
               return _this8.allStats;
@@ -11091,18 +11264,18 @@
               return r;
             }, []);
 
-            var _iterator40 = _createForOfIteratorHelper(groupData),
-                _step40;
+            var _iterator42 = _createForOfIteratorHelper(groupData),
+                _step42;
 
             try {
-              for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
-                var group = _step40.value;
+              for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
+                var group = _step42.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator40.e(err);
+              _iterator42.e(err);
             } finally {
-              _iterator40.f();
+              _iterator42.f();
             }
 
             this.rows = groupData;
@@ -11136,18 +11309,18 @@
               return r;
             }, []);
 
-            var _iterator41 = _createForOfIteratorHelper(groupData),
-                _step41;
+            var _iterator43 = _createForOfIteratorHelper(groupData),
+                _step43;
 
             try {
-              for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
-                var group = _step41.value;
+              for (_iterator43.s(); !(_step43 = _iterator43.n()).done;) {
+                var group = _step43.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator41.e(err);
+              _iterator43.e(err);
             } finally {
-              _iterator41.f();
+              _iterator43.f();
             }
 
             this.rows = groupData;
@@ -11181,18 +11354,18 @@
               return r;
             }, []);
 
-            var _iterator42 = _createForOfIteratorHelper(groupData),
-                _step42;
+            var _iterator44 = _createForOfIteratorHelper(groupData),
+                _step44;
 
             try {
-              for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
-                var group = _step42.value;
+              for (_iterator44.s(); !(_step44 = _iterator44.n()).done;) {
+                var group = _step44.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator42.e(err);
+              _iterator44.e(err);
             } finally {
-              _iterator42.f();
+              _iterator44.f();
             }
 
             this.rows = groupData;
@@ -13637,19 +13810,19 @@
               return r;
             }, []);
 
-            var _iterator43 = _createForOfIteratorHelper(groupData),
-                _step43;
+            var _iterator45 = _createForOfIteratorHelper(groupData),
+                _step45;
 
             try {
-              for (_iterator43.s(); !(_step43 = _iterator43.n()).done;) {
-                var group = _step43.value;
+              for (_iterator45.s(); !(_step45 = _iterator45.n()).done;) {
+                var group = _step45.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator43.e(err);
+              _iterator45.e(err);
             } finally {
-              _iterator43.f();
+              _iterator45.f();
             }
 
             this.rows = groupData;
@@ -13689,19 +13862,19 @@
               return r;
             }, []);
 
-            var _iterator44 = _createForOfIteratorHelper(groupData),
-                _step44;
+            var _iterator46 = _createForOfIteratorHelper(groupData),
+                _step46;
 
             try {
-              for (_iterator44.s(); !(_step44 = _iterator44.n()).done;) {
-                var group = _step44.value;
+              for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
+                var group = _step46.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator44.e(err);
+              _iterator46.e(err);
             } finally {
-              _iterator44.f();
+              _iterator46.f();
             }
 
             this.rows = groupData;
@@ -13741,19 +13914,19 @@
               return r;
             }, []);
 
-            var _iterator45 = _createForOfIteratorHelper(groupData),
-                _step45;
+            var _iterator47 = _createForOfIteratorHelper(groupData),
+                _step47;
 
             try {
-              for (_iterator45.s(); !(_step45 = _iterator45.n()).done;) {
-                var group = _step45.value;
+              for (_iterator47.s(); !(_step47 = _iterator47.n()).done;) {
+                var group = _step47.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator45.e(err);
+              _iterator47.e(err);
             } finally {
-              _iterator45.f();
+              _iterator47.f();
             }
 
             this.rows = groupData;
@@ -13816,7 +13989,7 @@
           key: "getAllVerizonStats",
           value: function getAllVerizonStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee52() {
-              var response, _iterator46, _step46, tagL, _iterator47, _step47, tagSub;
+              var response, _iterator48, _step48, tagL, _iterator49, _step49, tagSub;
 
               return regeneratorRuntime.wrap(function _callee52$(_context52) {
                 while (1) {
@@ -13834,18 +14007,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator46 = _createForOfIteratorHelper(this.tagList);
+                      _iterator48 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
-                          tagL = _step46.value;
+                        for (_iterator48.s(); !(_step48 = _iterator48.n()).done;) {
+                          tagL = _step48.value;
 
                           if (tagL.tag.advertiser == "verizon-direct") {
-                            _iterator47 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator49 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator47.s(); !(_step47 = _iterator47.n()).done;) {
-                                tagSub = _step47.value;
+                              for (_iterator49.s(); !(_step49 = _iterator49.n()).done;) {
+                                tagSub = _step49.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -13878,16 +14051,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator47.e(err);
+                              _iterator49.e(err);
                             } finally {
-                              _iterator47.f();
+                              _iterator49.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator46.e(err);
+                        _iterator48.e(err);
                       } finally {
-                        _iterator46.f();
+                        _iterator48.f();
                       }
 
                       return _context52.abrupt("return", this.allStats);

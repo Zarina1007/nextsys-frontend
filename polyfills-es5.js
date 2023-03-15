@@ -19140,7 +19140,7 @@
     /***/
     function _(module, exports, __webpack_require__) {
       __webpack_require__(
-      /*! C:\Code\gitpro\nextsys-in\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-polyfills.js */
+      /*! C:\Code\gitpro\Client\NextSys\node_modules\@angular-devkit\build-angular\src\angular-cli-files\models\es5-polyfills.js */
       "./node_modules/@angular-devkit/build-angular/src/angular-cli-files/models/es5-polyfills.js");
 
       __webpack_require__(
@@ -19148,7 +19148,7 @@
       "./node_modules/zone.js/dist/zone-legacy.js");
 
       module.exports = __webpack_require__(
-      /*! C:\Code\gitpro\nextsys-in\src\polyfills.ts */
+      /*! C:\Code\gitpro\Client\NextSys\src\polyfills.ts */
       "./src/polyfills.ts");
       /***/
     }
