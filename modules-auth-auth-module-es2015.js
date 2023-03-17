@@ -614,7 +614,12 @@ class LoginComponent {
                 else {
                     localStorage.removeItem('company');
                 }
-                this.router.navigate([this.returnUrl]);
+                if (user.role == 3) {
+                    this.router.navigate(['publisher-reporting']);
+                }
+                else {
+                    this.router.navigate([this.returnUrl]);
+                }
             }
             else {
                 this.hasError = true;

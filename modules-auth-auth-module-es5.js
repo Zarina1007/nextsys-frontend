@@ -1180,7 +1180,11 @@
                   localStorage.removeItem('company');
                 }
 
-                _this2.router.navigate([_this2.returnUrl]);
+                if (user.role == 3) {
+                  _this2.router.navigate(['publisher-reporting']);
+                } else {
+                  _this2.router.navigate([_this2.returnUrl]);
+                }
               } else {
                 _this2.hasError = true;
               }
