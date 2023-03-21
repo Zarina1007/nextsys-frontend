@@ -2088,7 +2088,6 @@
 
             this.notificationSendService.getDetailNotificatoin(this.notificationId).subscribe({
               next: function next(res) {
-                console.log(res, "ddddd");
                 _this7.notificationData = res;
 
                 _this7.cdr.detectChanges();

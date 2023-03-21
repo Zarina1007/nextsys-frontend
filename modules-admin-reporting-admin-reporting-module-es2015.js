@@ -1578,7 +1578,6 @@ class ApptitudeComponent {
         this.groupPublishFlag = false;
         this.groupDateShowFlag = false;
         this.groupSubidShowFlag = true;
-        console.log(this.groupSubidShowFlag, this.groupPublishFlag, this.groupDateShowFlag, "dddd");
         this.cdr.detectChanges();
     }
     groupDate() {
@@ -3281,85 +3280,94 @@ class LyonsComponent {
     getChartMetrics(company, startDate, endDate) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
-                const response = yield this.lyonService.getAllStats(startDate, endDate).toPromise();
-                var sortResponse = response.slice().sort((a, b) => a.date - b.date);
-                this.allChart = sortResponse;
-                // var chartAllLyonStat = [];
-                // for (var tagL of this.tagList) {
-                //   for (var tagSub of tagL.tag.subids) {
-                //     if(tagSub.filterTag =="Contains") {
-                //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.includes(tagSub.subid)))
-                //       chartAllLyonStat.map(stat => {
-                //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-                //         stat.tagname = tagL.tag.name
-                //       })
-                //     } else if (tagSub.filterTag =="StartsWith") {
-                //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.startsWith(tagSub.subid)))
-                //       chartAllLyonStat.map(stat => {
-                //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-                //         stat.tagname = tagL.tag.name
-                //       })
-                //     } else if (tagSub.filterTag =="EndsWith") {
-                //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.endsWith(tagSub.subid)))
-                //       chartAllLyonStat.map(stat => {
-                //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-                //         stat.tagname = tagL.tag.name
-                //       })
-                //     } else if (tagSub.filterTag =="ExactValue") {
-                //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid == tagSub.subid ))
-                //       chartAllLyonStat.map(stat => {
-                //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
-                //         stat.tagname = tagL.tag.name
-                //       })
-                //     }
-                //   }
-                // }
-                //duplicated remove
-                // let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
-                //   return arr
-                //     .map(mapObj => mapObj._id)
-                //     .indexOf(obj._id) == pos;
-                // });
-                var helperChart = {};
-                // this.allChart.map(f =>{
-                //   f.revenue = parseFloat(f.revenue);
-                //   f.ctr = parseFloat(f.ctr);
-                //   f.searches = parseFloat(f.searches);
-                //   f.biddedCtr = parseFloat(f.biddedCTR);
-                // })
-                var resultChart = this.allChart.reduce(function (r, o) {
-                    var key = o.date;
-                    if (!helperChart[key]) {
-                        helperChart[key] = Object.assign({}, o); // create a copy of o
-                        r.push(helperChart[key]);
-                    }
-                    else {
-                        helperChart[key].searches += parseInt(o.searches);
-                        if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                        }
-                    }
-                    return r;
-                }, []);
-                var revenuePerDayVal = [];
-                var datesOfRevenueVal = [];
-                var searchesPerDayVal = [];
-                var chartDataValue = {};
-                for (var resVal of resultChart) {
-                    revenuePerDayVal.push(resVal.revenue);
-                    datesOfRevenueVal.push(resVal.date);
-                    searchesPerDayVal.push(resVal.searches);
-                }
-                chartDataValue['revenuePerDay'] = revenuePerDayVal;
-                chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
-                chartDataValue['searchesPerDay'] = searchesPerDayVal;
-                return chartDataValue;
+                const response = yield this.lyonService
+                    .getChartMetrics(company, startDate, endDate)
+                    .toPromise();
+                return response;
             }
             catch (error) {
                 return error;
             }
         });
     }
+    // async getChartMetrics(company, startDate, endDate) {
+    //   try {
+    //     const response = await this.lyonService.getAllStats(startDate, endDate).toPromise();
+    //     var sortResponse = response.slice().sort((a, b) => a.date - b.date);
+    //     this.allChart = sortResponse;
+    //     // var chartAllLyonStat = [];
+    //     // for (var tagL of this.tagList) {
+    //     //   for (var tagSub of tagL.tag.subids) {
+    //     //     if(tagSub.filterTag =="Contains") {
+    //     //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.includes(tagSub.subid)))
+    //     //       chartAllLyonStat.map(stat => {
+    //     //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+    //     //         stat.tagname = tagL.tag.name
+    //     //       })
+    //     //     } else if (tagSub.filterTag =="StartsWith") {
+    //     //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.startsWith(tagSub.subid)))
+    //     //       chartAllLyonStat.map(stat => {
+    //     //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+    //     //         stat.tagname = tagL.tag.name
+    //     //       })
+    //     //     } else if (tagSub.filterTag =="EndsWith") {
+    //     //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid.endsWith(tagSub.subid)))
+    //     //       chartAllLyonStat.map(stat => {
+    //     //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+    //     //         stat.tagname = tagL.tag.name
+    //     //       })
+    //     //     } else if (tagSub.filterTag =="ExactValue") {
+    //     //       chartAllLyonStat = chartAllLyonStat.concat(this.allChart.filter(stat => stat.subid == tagSub.subid ))
+    //     //       chartAllLyonStat.map(stat => {
+    //     //         stat.publisher = tagL.user ? tagL.user[0].fullname : ""
+    //     //         stat.tagname = tagL.tag.name
+    //     //       })
+    //     //     }
+    //     //   }
+    //     // }
+    //     //duplicated remove
+    //     // let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
+    //     //   return arr
+    //     //     .map(mapObj => mapObj._id)
+    //     //     .indexOf(obj._id) == pos;
+    //     // });
+    //     var helperChart = {};
+    //     // this.allChart.map(f =>{
+    //     //   f.revenue = parseFloat(f.revenue);
+    //     //   f.ctr = parseFloat(f.ctr);
+    //     //   f.searches = parseFloat(f.searches);
+    //     //   f.biddedCtr = parseFloat(f.biddedCTR);
+    //     // })
+    //     var resultChart = this.allChart.reduce(function (r, o) {
+    //       var key = o.date;
+    //       if (!helperChart[key]) {
+    //         helperChart[key] = Object.assign({}, o); // create a copy of o
+    //         r.push(helperChart[key]);
+    //       } else {
+    //         helperChart[key].searches += parseInt(o.searches);
+    //         if (o.revenue) {
+    //           helperChart[key].revenue += o.revenue;
+    //         }
+    //       }
+    //       return r;
+    //     }, []);
+    //     var revenuePerDayVal = [];
+    //     var datesOfRevenueVal = [];
+    //     var searchesPerDayVal = [];
+    //     var chartDataValue = {};
+    //     for (var resVal of resultChart) {
+    //       revenuePerDayVal.push(resVal.revenue);
+    //       datesOfRevenueVal.push(resVal.date);
+    //       searchesPerDayVal.push(resVal.searches);
+    //     }
+    //     chartDataValue['revenuePerDay'] = revenuePerDayVal;
+    //     chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+    //     chartDataValue['searchesPerDay'] = searchesPerDayVal;
+    //     return chartDataValue;
+    //   } catch (error) {
+    //     return error;
+    //   }
+    // }
     combineSummaryMetrics(metrics) {
         metrics.summary.keys.forEach((element) => {
             this.summary.revenue += element.revenue;
@@ -4750,7 +4758,6 @@ class PerionComponent {
             group.followon = group.followon / group.counter;
             group.ctr = group.ctr / group.counter;
         }
-        console.log("=======", groupData);
         this.rows = groupData;
         this.groupDateShowFlag = true;
         this.groupPublishFlag = false;
@@ -4871,45 +4878,54 @@ class PerionComponent {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
                 const response = yield this.perionService
-                    .getAllPerionStats(company, startDate, endDate)
+                    .getChartMetrics(company, startDate, endDate)
                     .toPromise();
-                // console.log('getAllPerionStats() response:');
-                this.allChartStat = response.stats;
-                this.allChartStat = this.allChartStat.slice().sort((a, b) => a.date - b.date);
-                var helperChart = {};
-                var resultChart = this.allChartStat.reduce(function (r, o) {
-                    var key = o.date;
-                    if (!helperChart[key]) {
-                        helperChart[key] = Object.assign({}, o); // create a copy of o
-                        r.push(helperChart[key]);
-                    }
-                    else {
-                        helperChart[key].totalsearches += parseInt(o.totalsearches);
-                        if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                        }
-                    }
-                    return r;
-                }, []);
-                var revenuePerDayVal = [];
-                var datesOfRevenueVal = [];
-                var searchesPerDayVal = [];
-                var chartDataValue = {};
-                for (var resVal of resultChart) {
-                    revenuePerDayVal.push(resVal.revenue);
-                    datesOfRevenueVal.push(resVal.date);
-                    searchesPerDayVal.push(resVal.totalsearches);
-                }
-                chartDataValue['revenuePerDay'] = revenuePerDayVal;
-                chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
-                chartDataValue['searchesPerDay'] = searchesPerDayVal;
-                return chartDataValue;
+                return response;
             }
             catch (error) {
                 return error;
             }
         });
     }
+    // async getChartMetrics(company, startDate, endDate) {
+    //   try {
+    //     const response = await this.perionService
+    //       .getAllPerionStats(company, startDate, endDate)
+    //       .toPromise();
+    //     // console.log('getAllPerionStats() response:');
+    //     this.allChartStat = response.stats;
+    //     this.allChartStat = this.allChartStat.slice().sort((a, b) => a.date - b.date);
+    //     var helperChart = {};
+    //     var resultChart = this.allChartStat.reduce(function (r, o) {
+    //       var key = o.date;
+    //       if (!helperChart[key]) {
+    //         helperChart[key] = Object.assign({}, o); // create a copy of o
+    //         r.push(helperChart[key]);
+    //       } else {
+    //         helperChart[key].totalsearches += parseInt(o.totalsearches);
+    //         if (o.revenue) {
+    //           helperChart[key].revenue += o.revenue;
+    //         }
+    //       }
+    //       return r;
+    //     }, []);
+    //     var revenuePerDayVal = [];
+    //     var datesOfRevenueVal = [];
+    //     var searchesPerDayVal = [];
+    //     var chartDataValue = {};
+    //     for (var resVal of resultChart) {
+    //       revenuePerDayVal.push(resVal.revenue);
+    //       datesOfRevenueVal.push(resVal.date);
+    //       searchesPerDayVal.push(resVal.totalsearches);
+    //     }
+    //     chartDataValue['revenuePerDay'] = revenuePerDayVal;
+    //     chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+    //     chartDataValue['searchesPerDay'] = searchesPerDayVal;
+    //     return chartDataValue;
+    //   } catch (error) {
+    //     return error;
+    //   }
+    // }
     combineSummaryMetrics(metrics) {
         metrics.summary.keys.forEach((element) => {
             console.log(element.revenue);

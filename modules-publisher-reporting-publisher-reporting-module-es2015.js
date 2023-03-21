@@ -180,7 +180,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */ "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
 /* harmony import */ var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @swimlane/ngx-datatable */ "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
-/* harmony import */ var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */ "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
+/* harmony import */ var _shared_modules_reporting_publisher_revenue_chart_reporting_publisher_revenue_chart_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../shared/modules/reporting-publisher-revenue-chart/reporting-publisher-revenue-chart.component */ "./src/app/shared/modules/reporting-publisher-revenue-chart/reporting-publisher-revenue-chart.component.ts");
 
 
 
@@ -199,8 +199,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const _c0 = ["expandableTable"];
-function PublisherComponent_app_reporting_revenue_chart_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 16);
+function PublisherComponent_app_reporting_publisher_revenue_chart_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-publisher-revenue-chart", 16);
 } if (rf & 2) {
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("chartData", ctx_r0.chartData);
@@ -456,15 +456,18 @@ class PublisherComponent {
                 return r;
             }, []);
             var revenuePerDayVal = [];
+            var publisherRevenuePerDayVal = [];
             var datesOfRevenueVal = [];
             var searchesPerDayVal = [];
             var chartDataValue = {};
             for (var resVal of resultChart) {
-                revenuePerDayVal.push(resVal.revenue);
+                revenuePerDayVal.push(0);
+                publisherRevenuePerDayVal.push(resVal.revenue);
                 datesOfRevenueVal.push(resVal.date);
                 searchesPerDayVal.push(resVal.searches);
             }
             chartDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartDataValue['publisherRevenuePerDay'] = publisherRevenuePerDayVal;
             chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
             chartDataValue['searchesPerDay'] = searchesPerDayVal;
             return chartDataValue;
@@ -513,15 +516,18 @@ class PublisherComponent {
                 return r;
             }, []);
             var revenuePerDayVal = [];
+            var publisherRevenuePerDayVal = [];
             var datesOfRevenueVal = [];
             var searchesPerDayVal = [];
             var chartDataValue = {};
             for (var resVal of resultChart) {
-                revenuePerDayVal.push(resVal.revenue);
+                revenuePerDayVal.push(0);
+                publisherRevenuePerDayVal.push(resVal.revenue);
                 datesOfRevenueVal.push(resVal.date);
                 searchesPerDayVal.push(resVal.impressions);
             }
             chartDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartDataValue['publisherRevenuePerDay'] = publisherRevenuePerDayVal;
             chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
             chartDataValue['searchesPerDay'] = searchesPerDayVal;
             return chartDataValue;
@@ -748,15 +754,18 @@ class PublisherComponent {
                 return r;
             }, []);
             var revenuePerDayVal = [];
+            var publisherRevenuePerDayVal = [];
             var datesOfRevenueVal = [];
             var searchesPerDayVal = [];
             var chartDataValue = {};
             for (var resVal of resultChart) {
-                revenuePerDayVal.push(resVal.revenue);
+                revenuePerDayVal.push(0);
+                publisherRevenuePerDayVal.push(resVal.revenue);
                 datesOfRevenueVal.push(resVal.date);
                 searchesPerDayVal.push(resVal.searches);
             }
             chartDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartDataValue['publisherRevenuePerDay'] = publisherRevenuePerDayVal;
             chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
             chartDataValue['searchesPerDay'] = searchesPerDayVal;
             return chartDataValue;
@@ -852,15 +861,18 @@ class PublisherComponent {
                 return r;
             }, []);
             var revenuePerDayVal = [];
+            var publisherRevenuePerDayVal = [];
             var datesOfRevenueVal = [];
             var searchesPerDayVal = [];
             var chartDataValue = {};
             for (var resVal of resultChart) {
-                revenuePerDayVal.push(resVal.revenue);
+                revenuePerDayVal.push(0);
+                publisherRevenuePerDayVal.push(resVal.revenue);
                 datesOfRevenueVal.push(resVal.date);
                 searchesPerDayVal.push(resVal.searches);
             }
             chartDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartDataValue['publisherRevenuePerDay'] = publisherRevenuePerDayVal;
             chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
             chartDataValue['searchesPerDay'] = searchesPerDayVal;
             return chartDataValue;
@@ -956,15 +968,18 @@ class PublisherComponent {
                 return r;
             }, []);
             var revenuePerDayVal = [];
+            var publisherRevenuePerDayVal = [];
             var datesOfRevenueVal = [];
             var searchesPerDayVal = [];
             var chartDataValue = {};
             for (var resVal of resultChart) {
-                revenuePerDayVal.push(resVal.revenue);
+                revenuePerDayVal.push(0);
+                publisherRevenuePerDayVal.push(resVal.revenue);
                 datesOfRevenueVal.push(resVal.date);
                 searchesPerDayVal.push(resVal.searches);
             }
             chartDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartDataValue['publisherRevenuePerDay'] = publisherRevenuePerDayVal;
             chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
             chartDataValue['searchesPerDay'] = searchesPerDayVal;
             return chartDataValue;
@@ -1060,15 +1075,18 @@ class PublisherComponent {
                 return r;
             }, []);
             var revenuePerDayVal = [];
+            var publisherRevenuePerDayVal = [];
             var datesOfRevenueVal = [];
             var searchesPerDayVal = [];
             var chartDataValue = {};
             for (var resVal of resultChart) {
-                revenuePerDayVal.push(resVal.revenue);
+                revenuePerDayVal.push(0);
+                publisherRevenuePerDayVal.push(resVal.revenue);
                 datesOfRevenueVal.push(resVal.date);
                 searchesPerDayVal.push(resVal.searches);
             }
             chartDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartDataValue['publisherRevenuePerDay'] = publisherRevenuePerDayVal;
             chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
             chartDataValue['searchesPerDay'] = searchesPerDayVal;
             return chartDataValue;
@@ -1156,15 +1174,18 @@ class PublisherComponent {
                 return r;
             }, []);
             var revenuePerDayVal = [];
+            var publisherRevenuePerDayVal = [];
             var datesOfRevenueVal = [];
             var searchesPerDayVal = [];
             var chartDataValue = {};
             for (var resVal of resultChart) {
-                revenuePerDayVal.push(resVal.revenue);
+                revenuePerDayVal.push(0);
+                publisherRevenuePerDayVal.push(resVal.revenue);
                 datesOfRevenueVal.push(resVal.date);
                 searchesPerDayVal.push(resVal.searches);
             }
             chartDataValue['revenuePerDay'] = revenuePerDayVal;
+            chartDataValue['publisherRevenuePerDay'] = publisherRevenuePerDayVal;
             chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
             chartDataValue['searchesPerDay'] = searchesPerDayVal;
             return chartDataValue;
@@ -1184,7 +1205,7 @@ PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("onDatesPicked", function PublisherComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) { return ctx.updateReportingFiltering($event); });
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PublisherComponent_app_reporting_revenue_chart_1_Template, 1, 1, "app-reporting-revenue-chart", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PublisherComponent_app_reporting_publisher_revenue_chart_1_Template, 1, 1, "app-reporting-publisher-revenue-chart", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "ngx-datatable", 2, 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "ngx-datatable-row-detail", 4, 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function PublisherComponent_Template_ngx_datatable_row_detail_toggle_4_listener($event) { return ctx.onDetailToggle($event); });
@@ -1227,7 +1248,7 @@ PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefin
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
-    } }, directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_12__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_15__["ReportingRevenueChartComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_13__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["CurrencyPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcHVibGlzaGVyLXJlcG9ydGluZy9wdWJsaXNoZXIvcHVibGlzaGVyLmNvbXBvbmVudC5zY3NzIn0= */"] });
+    } }, directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_12__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnHeaderDirective"], _shared_modules_reporting_publisher_revenue_chart_reporting_publisher_revenue_chart_component__WEBPACK_IMPORTED_MODULE_15__["ReportingPublisherRevenueChartComponent"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_13__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["CurrencyPipe"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcHVibGlzaGVyLXJlcG9ydGluZy9wdWJsaXNoZXIvcHVibGlzaGVyLmNvbXBvbmVudC5zY3NzIn0= */"] });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](PublisherComponent, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
         args: [{

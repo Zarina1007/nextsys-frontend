@@ -1231,7 +1231,6 @@ class DetailNotificationComponent {
     getNotificationDetail() {
         this.notificationSendService.getDetailNotificatoin(this.notificationId).subscribe({
             next: (res) => {
-                console.log(res, "ddddd");
                 this.notificationData = res;
                 this.cdr.detectChanges();
             },
