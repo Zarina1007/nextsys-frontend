@@ -21155,9 +21155,9 @@
 
                       unique = pulisherArr.filter(function (elem, index, self) {
                         return index === self.indexOf(elem);
-                      });
-                      this.remove_element(unique, "No Publisher");
-                      console.log(unique);
+                      }); // this.remove_element(unique, "No Publisher");
+                      // console.log(unique);
+
                       this.allChartStat = this.allChartStat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
@@ -21250,17 +21250,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context15.abrupt("return", chartDataValue);
 
-                    case 38:
-                      _context15.prev = 38;
+                    case 36:
+                      _context15.prev = 36;
                       _context15.t0 = _context15["catch"](0);
                       return _context15.abrupt("return", _context15.t0);
 
-                    case 41:
+                    case 39:
                     case "end":
                       return _context15.stop();
                   }
                 }
-              }, _callee15, this, [[0, 38]]);
+              }, _callee15, this, [[0, 36]]);
             }));
           }
         }, {
@@ -22654,9 +22654,9 @@
 
                       unique = pulisherArr.filter(function (elem, index, self) {
                         return index === self.indexOf(elem);
-                      });
-                      this.remove_element(unique, "No Publisher");
-                      console.log(unique);
+                      }); // this.remove_element(unique, "No Publisher");
+                      // console.log(unique);
+
                       this.allChartStat = this.allChartStat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
@@ -22750,17 +22750,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context22.abrupt("return", chartDataValue);
 
-                    case 37:
-                      _context22.prev = 37;
+                    case 35:
+                      _context22.prev = 35;
                       _context22.t0 = _context22["catch"](0);
                       return _context22.abrupt("return", _context22.t0);
 
-                    case 40:
+                    case 38:
                     case "end":
                       return _context22.stop();
                   }
                 }
-              }, _callee22, this, [[0, 37]]);
+              }, _callee22, this, [[0, 35]]);
             }));
           }
         }, {
@@ -24868,9 +24868,9 @@
 
                       unique = pulisherArr.filter(function (elem, index, self) {
                         return index === self.indexOf(elem);
-                      });
-                      this.remove_element(unique, "No Publisher");
-                      console.log(unique);
+                      }); // this.remove_element(unique, "No Publisher");
+                      // console.log(unique);
+
                       this.allChart = this.allChart.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
@@ -24964,17 +24964,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context30.abrupt("return", chartDataValue);
 
-                    case 38:
-                      _context30.prev = 38;
+                    case 36:
+                      _context30.prev = 36;
                       _context30.t0 = _context30["catch"](0);
                       return _context30.abrupt("return", _context30.t0);
 
-                    case 41:
+                    case 39:
                     case "end":
                       return _context30.stop();
                   }
                 }
-              }, _callee30, this, [[0, 38]]);
+              }, _callee30, this, [[0, 36]]);
             }));
           }
         }, {
@@ -27828,8 +27828,7 @@
                         }
 
                         prevObj = obj;
-                        indexToChange = reformattedArray.length - 1; //return the newly reformatted array
-
+                        indexToChange = reformattedArray.length - 1;
                         return reformattedArray;
                       });
                       pulisherArr = [];
@@ -27848,9 +27847,9 @@
 
                       unique = pulisherArr.filter(function (elem, index, self) {
                         return index === self.indexOf(elem);
-                      });
-                      this.remove_element(unique, "No Publisher");
-                      console.log(unique);
+                      }); // this.remove_element(unique, "No Publisher");
+                      // console.log(unique);
+
                       this.allChartStat = this.allChartStat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
@@ -27944,17 +27943,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context36.abrupt("return", chartDataValue);
 
-                    case 37:
-                      _context36.prev = 37;
+                    case 35:
+                      _context36.prev = 35;
                       _context36.t0 = _context36["catch"](0);
                       return _context36.abrupt("return", _context36.t0);
 
-                    case 40:
+                    case 38:
                     case "end":
                       return _context36.stop();
                   }
                 }
-              }, _callee36, this, [[0, 37]]);
+              }, _callee36, this, [[0, 35]]);
             }));
           }
         }, {
@@ -30542,9 +30541,9 @@
 
                       unique = pulisherArr.filter(function (elem, index, self) {
                         return index === self.indexOf(elem);
-                      });
-                      this.remove_element(unique, "No Publisher");
-                      console.log(unique);
+                      }); // this.remove_element(unique, "No Publisher");
+                      // console.log(unique);
+
                       this.allChartStat = this.allChartStat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
@@ -30638,17 +30637,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context46.abrupt("return", chartDataValue);
 
-                    case 37:
-                      _context46.prev = 37;
+                    case 35:
+                      _context46.prev = 35;
                       _context46.t0 = _context46["catch"](0);
                       return _context46.abrupt("return", _context46.t0);
 
-                    case 40:
+                    case 38:
                     case "end":
                       return _context46.stop();
                   }
                 }
-              }, _callee46, this, [[0, 37]]);
+              }, _callee46, this, [[0, 35]]);
             }));
           }
         }, {
@@ -33347,9 +33346,9 @@
 
                       unique = pulisherArr.filter(function (elem, index, self) {
                         return index === self.indexOf(elem);
-                      });
-                      this.remove_element(unique, "No Publisher");
-                      console.log(unique);
+                      }); // this.remove_element(unique, "No Publisher");
+                      // console.log(unique);
+
                       this.allChartStat = this.allChartStat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
@@ -33443,17 +33442,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context52.abrupt("return", chartDataValue);
 
-                    case 37:
-                      _context52.prev = 37;
+                    case 35:
+                      _context52.prev = 35;
                       _context52.t0 = _context52["catch"](0);
                       return _context52.abrupt("return", _context52.t0);
 
-                    case 40:
+                    case 38:
                     case "end":
                       return _context52.stop();
                   }
                 }
-              }, _callee52, this, [[0, 37]]);
+              }, _callee52, this, [[0, 35]]);
             }));
           }
         }, {

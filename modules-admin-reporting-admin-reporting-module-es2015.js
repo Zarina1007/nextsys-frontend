@@ -18942,8 +18942,8 @@ class ApptitudeComponent {
                 var unique = pulisherArr.filter(function (elem, index, self) {
                     return index === self.indexOf(elem);
                 });
-                this.remove_element(unique, "No Publisher");
-                console.log(unique);
+                // this.remove_element(unique, "No Publisher");
+                // console.log(unique);
                 this.allChartStat = this.allChartStat.slice().sort((a, b) => a.date - b.date);
                 var helperChart = {};
                 var resultChart = this.allChartStat.reduce(function (r, o) {
@@ -19684,8 +19684,8 @@ class HopkinsComponent {
                 var unique = pulisherArr.filter(function (elem, index, self) {
                     return index === self.indexOf(elem);
                 });
-                this.remove_element(unique, "No Publisher");
-                console.log(unique);
+                // this.remove_element(unique, "No Publisher");
+                // console.log(unique);
                 this.allChartStat = this.allChartStat.slice().sort((a, b) => a.date - b.date);
                 var helperChart = {};
                 var resultChart = this.allChartStat.reduce(function (r, o) {
@@ -20820,8 +20820,8 @@ class LyonsComponent {
                 var unique = pulisherArr.filter(function (elem, index, self) {
                     return index === self.indexOf(elem);
                 });
-                this.remove_element(unique, "No Publisher");
-                console.log(unique);
+                // this.remove_element(unique, "No Publisher");
+                // console.log(unique);
                 this.allChart = this.allChart.slice().sort((a, b) => a.date - b.date);
                 var helperChart = {};
                 var resultChart = this.allChart.reduce(function (r, o) {
@@ -22464,7 +22464,6 @@ class PerionComponent {
                     }
                     prevObj = obj;
                     indexToChange = reformattedArray.length - 1;
-                    //return the newly reformatted array
                     return reformattedArray;
                 });
                 let pulisherArr = [];
@@ -22474,8 +22473,8 @@ class PerionComponent {
                 var unique = pulisherArr.filter(function (elem, index, self) {
                     return index === self.indexOf(elem);
                 });
-                this.remove_element(unique, "No Publisher");
-                console.log(unique);
+                // this.remove_element(unique, "No Publisher");
+                // console.log(unique);
                 this.allChartStat = this.allChartStat.slice().sort((a, b) => a.date - b.date);
                 var helperChart = {};
                 var resultChart = this.allChartStat.reduce(function (r, o) {
@@ -23849,8 +23848,8 @@ class SolexBcComponent {
                 var unique = pulisherArr.filter(function (elem, index, self) {
                     return index === self.indexOf(elem);
                 });
-                this.remove_element(unique, "No Publisher");
-                console.log(unique);
+                // this.remove_element(unique, "No Publisher");
+                // console.log(unique);
                 this.allChartStat = this.allChartStat.slice().sort((a, b) => a.date - b.date);
                 var helperChart = {};
                 var resultChart = this.allChartStat.reduce(function (r, o) {
@@ -25313,8 +25312,8 @@ class VerizonDirectComponent {
                 var unique = pulisherArr.filter(function (elem, index, self) {
                     return index === self.indexOf(elem);
                 });
-                this.remove_element(unique, "No Publisher");
-                console.log(unique);
+                // this.remove_element(unique, "No Publisher");
+                // console.log(unique);
                 this.allChartStat = this.allChartStat.slice().sort((a, b) => a.date - b.date);
                 var helperChart = {};
                 var resultChart = this.allChartStat.reduce(function (r, o) {
