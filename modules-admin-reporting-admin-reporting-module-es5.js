@@ -21081,7 +21081,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee15() {
-              var response, _iterator20, _step20, tagL, _iterator24, _step24, tagSub, sorted, prevObj, indexToChange, reformattedArray, pulisherArr, _iterator21, _step21, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator22, _step22, resVal, stackedArr, _iterator23, _step23, _loop;
+              var response, _iterator20, _step20, tagL, _iterator23, _step23, tagSub, sorted, multiGroupBy, groupedItems, reformattedArray, item, elm, obj, pulisherArr, _i3, _reformattedArray, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator21, _step21, resVal, stackedArr, _iterator22, _step22, _loop;
 
               return regeneratorRuntime.wrap(function _callee15$(_context15) {
                 while (1) {
@@ -21105,11 +21105,11 @@
                           tagL = _step20.value;
 
                           if (tagL.tag.advertiser == "apptitude") {
-                            _iterator24 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator23 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
-                                tagSub = _step24.value;
+                              for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+                                tagSub = _step23.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -21138,9 +21138,9 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator24.e(err);
+                              _iterator23.e(err);
                             } finally {
-                              _iterator24.f();
+                              _iterator23.f();
                             }
                           }
                         }
@@ -21155,33 +21155,39 @@
                       }).sortBy(function (d) {
                         return d.publisher;
                       }).value();
-                      prevObj = {};
-                      indexToChange = 0;
+
+                      multiGroupBy = function multiGroupBy(seq, keys) {
+                        if (!keys.length) return seq;
+                        var first = keys[0];
+                        var rest = keys.slice(1);
+                        return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                          return multiGroupBy(value, rest);
+                        });
+                      };
+
+                      groupedItems = multiGroupBy(sorted, ["date", "publisher"]);
                       reformattedArray = [];
-                      reformattedArray = sorted.map(function (obj, index) {
-                        if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                          reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
-                        } else {
-                          reformattedArray.push(obj);
+
+                      for (item in groupedItems) {
+                        if (groupedItems.hasOwnProperty(item)) {
+                          for (elm in groupedItems[item]) {
+                            obj = {
+                              date: groupedItems[item][elm][0].date,
+                              publisher: groupedItems[item][elm][0].publisher,
+                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.publisherNet;
+                              }, 0)
+                            };
+                            reformattedArray.push(obj);
+                          }
                         }
+                      }
 
-                        prevObj = obj;
-                        indexToChange = reformattedArray.length - 1; //return the newly reformatted array
-
-                        return reformattedArray;
-                      });
                       pulisherArr = [];
-                      _iterator21 = _createForOfIteratorHelper(reformattedArray[0]);
 
-                      try {
-                        for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
-                          reformatData = _step21.value;
-                          pulisherArr.push(reformatData.publisher);
-                        }
-                      } catch (err) {
-                        _iterator21.e(err);
-                      } finally {
-                        _iterator21.f();
+                      for (_i3 = 0, _reformattedArray = reformattedArray; _i3 < _reformattedArray.length; _i3++) {
+                        reformatData = _reformattedArray[_i3];
+                        pulisherArr.push(reformatData.publisher);
                       }
 
                       unique = pulisherArr.filter(function (elem, index, self) {
@@ -21213,35 +21219,35 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator22 = _createForOfIteratorHelper(resultChart);
+                      _iterator21 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
-                          resVal = _step22.value;
+                        for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+                          resVal = _step21.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator22.e(err);
+                        _iterator21.e(err);
                       } finally {
-                        _iterator22.f();
+                        _iterator21.f();
                       }
 
                       stackedArr = [];
-                      _iterator23 = _createForOfIteratorHelper(unique);
+                      _iterator22 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop = function _loop() {
-                          var u = _step23.value;
+                          var u = _step22.value;
                           var subStackedArr = [];
 
-                          var _iterator25 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step25;
+                          var _iterator24 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step24;
 
                           try {
                             var _loop2 = function _loop2() {
-                              var date = _step25.value;
-                              var filterLen = reformattedArray[0].filter(function (reformatted) {
+                              var date = _step24.value;
+                              var filterLen = reformattedArray.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
                               });
 
@@ -21252,13 +21258,13 @@
                               }
                             };
 
-                            for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+                            for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
                               _loop2();
                             }
                           } catch (err) {
-                            _iterator25.e(err);
+                            _iterator24.e(err);
                           } finally {
-                            _iterator25.f();
+                            _iterator24.f();
                           }
 
                           var obj = {};
@@ -21266,13 +21272,13 @@
                           stackedArr.push(obj);
                         };
 
-                        for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
+                        for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
                           _loop();
                         }
                       } catch (err) {
-                        _iterator23.e(err);
+                        _iterator22.e(err);
                       } finally {
-                        _iterator23.f();
+                        _iterator22.f();
                       }
 
                       chartDataValue['revenuePerDay'] = stackedArr;
@@ -21281,17 +21287,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context15.abrupt("return", chartDataValue);
 
-                    case 36:
-                      _context15.prev = 36;
+                    case 35:
+                      _context15.prev = 35;
                       _context15.t0 = _context15["catch"](0);
                       return _context15.abrupt("return", _context15.t0);
 
-                    case 39:
+                    case 38:
                     case "end":
                       return _context15.stop();
                   }
                 }
-              }, _callee15, this, [[0, 36]]);
+              }, _callee15, this, [[0, 35]]);
             }));
           }
         }, {
@@ -22342,7 +22348,7 @@
           key: "getAllHopkinStats",
           value: function getAllHopkinStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
-              var response, _iterator26, _step26, tagL, _iterator27, _step27, tagSub;
+              var response, _iterator25, _step25, tagL, _iterator26, _step26, tagSub;
 
               return regeneratorRuntime.wrap(function _callee19$(_context19) {
                 while (1) {
@@ -22360,18 +22366,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator26 = _createForOfIteratorHelper(this.tagList);
+                      _iterator25 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-                          tagL = _step26.value;
+                        for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+                          tagL = _step25.value;
 
                           if (tagL.tag.advertiser == "hopkins") {
-                            _iterator27 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator26 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
-                                tagSub = _step27.value;
+                              for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+                                tagSub = _step26.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -22404,16 +22410,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator27.e(err);
+                              _iterator26.e(err);
                             } finally {
-                              _iterator27.f();
+                              _iterator26.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator26.e(err);
+                        _iterator25.e(err);
                       } finally {
-                        _iterator26.f();
+                        _iterator25.f();
                       }
 
                       return _context19.abrupt("return", this.allStats);
@@ -22454,18 +22460,18 @@
               return r;
             }, []);
 
-            var _iterator28 = _createForOfIteratorHelper(groupData),
-                _step28;
+            var _iterator27 = _createForOfIteratorHelper(groupData),
+                _step27;
 
             try {
-              for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
-                var group = _step28.value;
+              for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
+                var group = _step27.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator28.e(err);
+              _iterator27.e(err);
             } finally {
-              _iterator28.f();
+              _iterator27.f();
             }
 
             this.rows = groupData;
@@ -22582,7 +22588,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
-              var response, _iterator29, _step29, tagL, _iterator33, _step33, tagSub, sorted, prevObj, indexToChange, reformattedArray, pulisherArr, _iterator30, _step30, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator31, _step31, resVal, _stackedArr, _iterator32, _step32, _loop3;
+              var response, _iterator28, _step28, tagL, _iterator31, _step31, tagSub, sorted, _multiGroupBy, groupedItems, _reformattedArray2, item, elm, obj, pulisherArr, _i4, _reformattedArray3, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator29, _step29, resVal, _stackedArr, _iterator30, _step30, _loop3;
 
               return regeneratorRuntime.wrap(function _callee22$(_context22) {
                 while (1) {
@@ -22599,18 +22605,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator29 = _createForOfIteratorHelper(this.tagList);
+                      _iterator28 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
-                          tagL = _step29.value;
+                        for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+                          tagL = _step28.value;
 
                           if (tagL.tag.advertiser == "hopkins") {
-                            _iterator33 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator31 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
-                                tagSub = _step33.value;
+                              for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
+                                tagSub = _step31.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -22643,16 +22649,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator33.e(err);
+                              _iterator31.e(err);
                             } finally {
-                              _iterator33.f();
+                              _iterator31.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator29.e(err);
+                        _iterator28.e(err);
                       } finally {
-                        _iterator29.f();
+                        _iterator28.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -22660,33 +22666,40 @@
                       }).sortBy(function (d) {
                         return d.publisher;
                       }).value();
-                      prevObj = {};
-                      indexToChange = 0;
-                      reformattedArray = [];
-                      reformattedArray = sorted.map(function (obj, index) {
-                        if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                          reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
-                        } else {
-                          reformattedArray.push(obj);
+
+                      _multiGroupBy = function _multiGroupBy(seq, keys) {
+                        if (!keys.length) return seq;
+                        var first = keys[0];
+                        var rest = keys.slice(1);
+                        return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                          return _multiGroupBy(value, rest);
+                        });
+                      };
+
+                      groupedItems = _multiGroupBy(sorted, ["date", "publisher"]);
+                      _reformattedArray2 = [];
+
+                      for (item in groupedItems) {
+                        if (groupedItems.hasOwnProperty(item)) {
+                          for (elm in groupedItems[item]) {
+                            obj = {
+                              date: groupedItems[item][elm][0].date,
+                              publisher: groupedItems[item][elm][0].publisher,
+                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.publisherNet;
+                              }, 0)
+                            };
+
+                            _reformattedArray2.push(obj);
+                          }
                         }
+                      }
 
-                        prevObj = obj;
-                        indexToChange = reformattedArray.length - 1; //return the newly reformatted array
-
-                        return reformattedArray;
-                      });
                       pulisherArr = [];
-                      _iterator30 = _createForOfIteratorHelper(reformattedArray[0]);
 
-                      try {
-                        for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
-                          reformatData = _step30.value;
-                          pulisherArr.push(reformatData.publisher);
-                        }
-                      } catch (err) {
-                        _iterator30.e(err);
-                      } finally {
-                        _iterator30.f();
+                      for (_i4 = 0, _reformattedArray3 = _reformattedArray2; _i4 < _reformattedArray3.length; _i4++) {
+                        reformatData = _reformattedArray3[_i4];
+                        pulisherArr.push(reformatData.publisher);
                       }
 
                       unique = pulisherArr.filter(function (elem, index, self) {
@@ -22718,35 +22731,36 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator31 = _createForOfIteratorHelper(resultChart);
+                      _iterator29 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
-                          resVal = _step31.value;
+                        for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
+                          resVal = _step29.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator31.e(err);
+                        _iterator29.e(err);
                       } finally {
-                        _iterator31.f();
+                        _iterator29.f();
                       }
 
                       _stackedArr = [];
-                      _iterator32 = _createForOfIteratorHelper(unique);
+                      _iterator30 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop3 = function _loop3() {
-                          var u = _step32.value;
+                          var u = _step30.value;
                           var subStackedArr = [];
 
-                          var _iterator34 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step34;
+                          var _iterator32 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step32;
 
                           try {
                             var _loop4 = function _loop4() {
-                              var date = _step34.value;
-                              var filterLen = reformattedArray[0].filter(function (reformatted) {
+                              var date = _step32.value;
+
+                              var filterLen = _reformattedArray2.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
                               });
 
@@ -22757,13 +22771,13 @@
                               }
                             };
 
-                            for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
+                            for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
                               _loop4();
                             }
                           } catch (err) {
-                            _iterator34.e(err);
+                            _iterator32.e(err);
                           } finally {
-                            _iterator34.f();
+                            _iterator32.f();
                           }
 
                           var obj = {};
@@ -22772,13 +22786,13 @@
                           _stackedArr.push(obj);
                         };
 
-                        for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
+                        for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
                           _loop3();
                         }
                       } catch (err) {
-                        _iterator32.e(err);
+                        _iterator30.e(err);
                       } finally {
-                        _iterator32.f();
+                        _iterator30.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr;
@@ -22787,17 +22801,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context22.abrupt("return", chartDataValue);
 
-                    case 35:
-                      _context22.prev = 35;
+                    case 34:
+                      _context22.prev = 34;
                       _context22.t0 = _context22["catch"](0);
                       return _context22.abrupt("return", _context22.t0);
 
-                    case 38:
+                    case 37:
                     case "end":
                       return _context22.stop();
                   }
                 }
-              }, _callee22, this, [[0, 35]]);
+              }, _callee22, this, [[0, 34]]);
             }));
           }
         }, {
@@ -24443,7 +24457,7 @@
           key: "getAllLyonStats",
           value: function getAllLyonStats(startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee27() {
-              var response, _iterator35, _step35, tagL, _iterator36, _step36, tagSub;
+              var response, _iterator33, _step33, tagL, _iterator34, _step34, tagSub;
 
               return regeneratorRuntime.wrap(function _callee27$(_context27) {
                 while (1) {
@@ -24462,18 +24476,18 @@
                         resStat.tagname = "No Tag";
                       }); // var allLyonStat = [];
 
-                      _iterator35 = _createForOfIteratorHelper(this.tagList);
+                      _iterator33 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
-                          tagL = _step35.value;
+                        for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
+                          tagL = _step33.value;
 
                           if (tagL.tag.advertiser == "lyons") {
-                            _iterator36 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator34 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
-                                tagSub = _step36.value;
+                              for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
+                                tagSub = _step34.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allstat.map(function (stat) {
@@ -24506,16 +24520,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator36.e(err);
+                              _iterator34.e(err);
                             } finally {
-                              _iterator36.f();
+                              _iterator34.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator35.e(err);
+                        _iterator33.e(err);
                       } finally {
-                        _iterator35.f();
+                        _iterator33.f();
                       }
 
                       return _context27.abrupt("return", this.allstat);
@@ -24562,20 +24576,20 @@
               return r;
             }, []);
 
-            var _iterator37 = _createForOfIteratorHelper(groupData),
-                _step37;
+            var _iterator35 = _createForOfIteratorHelper(groupData),
+                _step35;
 
             try {
-              for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
-                var group = _step37.value;
+              for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
+                var group = _step35.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator37.e(err);
+              _iterator35.e(err);
             } finally {
-              _iterator37.f();
+              _iterator35.f();
             }
 
             this.rows = groupData;
@@ -24613,20 +24627,20 @@
               return r;
             }, []);
 
-            var _iterator38 = _createForOfIteratorHelper(groupData),
-                _step38;
+            var _iterator36 = _createForOfIteratorHelper(groupData),
+                _step36;
 
             try {
-              for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
-                var group = _step38.value;
+              for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
+                var group = _step36.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator38.e(err);
+              _iterator36.e(err);
             } finally {
-              _iterator38.f();
+              _iterator36.f();
             }
 
             this.rows = groupData;
@@ -24664,20 +24678,20 @@
               return r;
             }, []);
 
-            var _iterator39 = _createForOfIteratorHelper(groupData),
-                _step39;
+            var _iterator37 = _createForOfIteratorHelper(groupData),
+                _step37;
 
             try {
-              for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
-                var group = _step39.value;
+              for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
+                var group = _step37.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator39.e(err);
+              _iterator37.e(err);
             } finally {
-              _iterator39.f();
+              _iterator37.f();
             }
 
             this.rows = groupData;
@@ -24812,7 +24826,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee30() {
-              var response, _iterator40, _step40, tagL, _iterator44, _step44, tagSub, sorted, prevObj, indexToChange, reformattedArray, pulisherArr, _iterator41, _step41, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator42, _step42, resVal, _stackedArr2, _iterator43, _step43, _loop5;
+              var response, _iterator38, _step38, tagL, _iterator41, _step41, tagSub, sorted, _multiGroupBy2, groupedItems, _reformattedArray4, item, elm, obj, pulisherArr, _i5, _reformattedArray5, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator39, _step39, resVal, _stackedArr2, _iterator40, _step40, _loop5;
 
               return regeneratorRuntime.wrap(function _callee30$(_context30) {
                 while (1) {
@@ -24831,18 +24845,18 @@
                         resStat.tagname = "No Tag";
                       }); // var allLyonStat = [];
 
-                      _iterator40 = _createForOfIteratorHelper(this.tagList);
+                      _iterator38 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
-                          tagL = _step40.value;
+                        for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
+                          tagL = _step38.value;
 
                           if (tagL.tag.advertiser == "lyons") {
-                            _iterator44 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator41 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator44.s(); !(_step44 = _iterator44.n()).done;) {
-                                tagSub = _step44.value;
+                              for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
+                                tagSub = _step41.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChart.map(function (stat) {
@@ -24875,16 +24889,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator44.e(err);
+                              _iterator41.e(err);
                             } finally {
-                              _iterator44.f();
+                              _iterator41.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator40.e(err);
+                        _iterator38.e(err);
                       } finally {
-                        _iterator40.f();
+                        _iterator38.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChart).sortBy(function (d) {
@@ -24892,33 +24906,40 @@
                       }).sortBy(function (d) {
                         return d.publisher;
                       }).value();
-                      prevObj = {};
-                      indexToChange = 0;
-                      reformattedArray = [];
-                      reformattedArray = sorted.map(function (obj, index) {
-                        if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                          reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
-                        } else {
-                          reformattedArray.push(obj);
+
+                      _multiGroupBy2 = function _multiGroupBy2(seq, keys) {
+                        if (!keys.length) return seq;
+                        var first = keys[0];
+                        var rest = keys.slice(1);
+                        return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                          return _multiGroupBy2(value, rest);
+                        });
+                      };
+
+                      groupedItems = _multiGroupBy2(sorted, ["date", "publisher"]);
+                      _reformattedArray4 = [];
+
+                      for (item in groupedItems) {
+                        if (groupedItems.hasOwnProperty(item)) {
+                          for (elm in groupedItems[item]) {
+                            obj = {
+                              date: groupedItems[item][elm][0].date,
+                              publisher: groupedItems[item][elm][0].publisher,
+                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.publisherNet;
+                              }, 0)
+                            };
+
+                            _reformattedArray4.push(obj);
+                          }
                         }
+                      }
 
-                        prevObj = obj;
-                        indexToChange = reformattedArray.length - 1; //return the newly reformatted array
-
-                        return reformattedArray;
-                      });
                       pulisherArr = [];
-                      _iterator41 = _createForOfIteratorHelper(reformattedArray[0]);
 
-                      try {
-                        for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
-                          reformatData = _step41.value;
-                          pulisherArr.push(reformatData.publisher);
-                        }
-                      } catch (err) {
-                        _iterator41.e(err);
-                      } finally {
-                        _iterator41.f();
+                      for (_i5 = 0, _reformattedArray5 = _reformattedArray4; _i5 < _reformattedArray5.length; _i5++) {
+                        reformatData = _reformattedArray5[_i5];
+                        pulisherArr.push(reformatData.publisher);
                       }
 
                       unique = pulisherArr.filter(function (elem, index, self) {
@@ -24950,35 +24971,36 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator42 = _createForOfIteratorHelper(resultChart);
+                      _iterator39 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
-                          resVal = _step42.value;
+                        for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
+                          resVal = _step39.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator42.e(err);
+                        _iterator39.e(err);
                       } finally {
-                        _iterator42.f();
+                        _iterator39.f();
                       }
 
                       _stackedArr2 = [];
-                      _iterator43 = _createForOfIteratorHelper(unique);
+                      _iterator40 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop5 = function _loop5() {
-                          var u = _step43.value;
+                          var u = _step40.value;
                           var subStackedArr = [];
 
-                          var _iterator45 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step45;
+                          var _iterator42 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step42;
 
                           try {
                             var _loop6 = function _loop6() {
-                              var date = _step45.value;
-                              var filterLen = reformattedArray[0].filter(function (reformatted) {
+                              var date = _step42.value;
+
+                              var filterLen = _reformattedArray4.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
                               });
 
@@ -24989,13 +25011,13 @@
                               }
                             };
 
-                            for (_iterator45.s(); !(_step45 = _iterator45.n()).done;) {
+                            for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
                               _loop6();
                             }
                           } catch (err) {
-                            _iterator45.e(err);
+                            _iterator42.e(err);
                           } finally {
-                            _iterator45.f();
+                            _iterator42.f();
                           }
 
                           var obj = {};
@@ -25004,13 +25026,13 @@
                           _stackedArr2.push(obj);
                         };
 
-                        for (_iterator43.s(); !(_step43 = _iterator43.n()).done;) {
+                        for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
                           _loop5();
                         }
                       } catch (err) {
-                        _iterator43.e(err);
+                        _iterator40.e(err);
                       } finally {
-                        _iterator43.f();
+                        _iterator40.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr2;
@@ -25019,17 +25041,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context30.abrupt("return", chartDataValue);
 
-                    case 36:
-                      _context30.prev = 36;
+                    case 35:
+                      _context30.prev = 35;
                       _context30.t0 = _context30["catch"](0);
                       return _context30.abrupt("return", _context30.t0);
 
-                    case 39:
+                    case 38:
                     case "end":
                       return _context30.stop();
                   }
                 }
-              }, _callee30, this, [[0, 36]]);
+              }, _callee30, this, [[0, 35]]);
             }));
           }
         }, {
@@ -27507,7 +27529,7 @@
           key: "getAllPerionStats",
           value: function getAllPerionStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee34() {
-              var response, _iterator46, _step46, tagL, _iterator47, _step47, tagSub;
+              var response, _iterator43, _step43, tagL, _iterator44, _step44, tagSub;
 
               return regeneratorRuntime.wrap(function _callee34$(_context34) {
                 while (1) {
@@ -27526,18 +27548,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator46 = _createForOfIteratorHelper(this.tagList);
+                      _iterator43 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
-                          tagL = _step46.value;
+                        for (_iterator43.s(); !(_step43 = _iterator43.n()).done;) {
+                          tagL = _step43.value;
 
                           if (tagL.tag.advertiser == "perion") {
-                            _iterator47 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator44 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator47.s(); !(_step47 = _iterator47.n()).done;) {
-                                tagSub = _step47.value;
+                              for (_iterator44.s(); !(_step44 = _iterator44.n()).done;) {
+                                tagSub = _step44.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStat.map(function (stat) {
@@ -27570,16 +27592,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator47.e(err);
+                              _iterator44.e(err);
                             } finally {
-                              _iterator47.f();
+                              _iterator44.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator46.e(err);
+                        _iterator43.e(err);
                       } finally {
-                        _iterator46.f();
+                        _iterator43.f();
                       }
 
                       return _context34.abrupt("return", this.allStat);
@@ -27626,20 +27648,20 @@
               return r;
             }, []);
 
-            var _iterator48 = _createForOfIteratorHelper(groupData),
-                _step48;
+            var _iterator45 = _createForOfIteratorHelper(groupData),
+                _step45;
 
             try {
-              for (_iterator48.s(); !(_step48 = _iterator48.n()).done;) {
-                var group = _step48.value;
+              for (_iterator45.s(); !(_step45 = _iterator45.n()).done;) {
+                var group = _step45.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator48.e(err);
+              _iterator45.e(err);
             } finally {
-              _iterator48.f();
+              _iterator45.f();
             }
 
             this.rows = groupData;
@@ -27677,20 +27699,20 @@
               return r;
             }, []);
 
-            var _iterator49 = _createForOfIteratorHelper(groupData),
-                _step49;
+            var _iterator46 = _createForOfIteratorHelper(groupData),
+                _step46;
 
             try {
-              for (_iterator49.s(); !(_step49 = _iterator49.n()).done;) {
-                var group = _step49.value;
+              for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
+                var group = _step46.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator49.e(err);
+              _iterator46.e(err);
             } finally {
-              _iterator49.f();
+              _iterator46.f();
             }
 
             this.rows = groupData;
@@ -27728,20 +27750,20 @@
               return r;
             }, []);
 
-            var _iterator50 = _createForOfIteratorHelper(groupData),
-                _step50;
+            var _iterator47 = _createForOfIteratorHelper(groupData),
+                _step47;
 
             try {
-              for (_iterator50.s(); !(_step50 = _iterator50.n()).done;) {
-                var group = _step50.value;
+              for (_iterator47.s(); !(_step47 = _iterator47.n()).done;) {
+                var group = _step47.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator50.e(err);
+              _iterator47.e(err);
             } finally {
-              _iterator50.f();
+              _iterator47.f();
             }
 
             this.rows = groupData;
@@ -27846,7 +27868,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee36() {
-              var response, _iterator51, _step51, tagL, _iterator55, _step55, tagSub, sorted, prevObj, indexToChange, reformattedArray, pulisherArr, _iterator52, _step52, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator53, _step53, resVal, _stackedArr3, _iterator54, _step54, _loop7;
+              var response, _iterator48, _step48, tagL, _iterator51, _step51, tagSub, sorted, _multiGroupBy3, groupedItems, _reformattedArray6, item, elm, obj, pulisherArr, _i6, _reformattedArray7, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator49, _step49, resVal, _stackedArr3, _iterator50, _step50, _loop7;
 
               return regeneratorRuntime.wrap(function _callee36$(_context36) {
                 while (1) {
@@ -27863,18 +27885,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator51 = _createForOfIteratorHelper(this.tagList);
+                      _iterator48 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator51.s(); !(_step51 = _iterator51.n()).done;) {
-                          tagL = _step51.value;
+                        for (_iterator48.s(); !(_step48 = _iterator48.n()).done;) {
+                          tagL = _step48.value;
 
                           if (tagL.tag.advertiser == "perion") {
-                            _iterator55 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator51 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator55.s(); !(_step55 = _iterator55.n()).done;) {
-                                tagSub = _step55.value;
+                              for (_iterator51.s(); !(_step51 = _iterator51.n()).done;) {
+                                tagSub = _step51.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -27907,16 +27929,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator55.e(err);
+                              _iterator51.e(err);
                             } finally {
-                              _iterator55.f();
+                              _iterator51.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator51.e(err);
+                        _iterator48.e(err);
                       } finally {
-                        _iterator51.f();
+                        _iterator48.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -27924,32 +27946,40 @@
                       }).sortBy(function (d) {
                         return d.publisher;
                       }).value();
-                      prevObj = {};
-                      indexToChange = 0;
-                      reformattedArray = [];
-                      reformattedArray = sorted.map(function (obj, index) {
-                        if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                          reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
-                        } else {
-                          reformattedArray.push(obj);
-                        }
 
-                        prevObj = obj;
-                        indexToChange = reformattedArray.length - 1;
-                        return reformattedArray;
-                      });
+                      _multiGroupBy3 = function _multiGroupBy3(seq, keys) {
+                        if (!keys.length) return seq;
+                        var first = keys[0];
+                        var rest = keys.slice(1);
+                        return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                          return _multiGroupBy3(value, rest);
+                        });
+                      };
+
+                      groupedItems = _multiGroupBy3(sorted, ["date", "publisher"]);
+                      _reformattedArray6 = [];
+
+                      for (item in groupedItems) {
+                        if (groupedItems.hasOwnProperty(item)) {
+                          for (elm in groupedItems[item]) {
+                            obj = {
+                              date: groupedItems[item][elm][0].date,
+                              publisher: groupedItems[item][elm][0].publisher,
+                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.publisherNet;
+                              }, 0)
+                            };
+
+                            _reformattedArray6.push(obj);
+                          }
+                        }
+                      }
+
                       pulisherArr = [];
-                      _iterator52 = _createForOfIteratorHelper(reformattedArray[0]);
 
-                      try {
-                        for (_iterator52.s(); !(_step52 = _iterator52.n()).done;) {
-                          reformatData = _step52.value;
-                          pulisherArr.push(reformatData.publisher);
-                        }
-                      } catch (err) {
-                        _iterator52.e(err);
-                      } finally {
-                        _iterator52.f();
+                      for (_i6 = 0, _reformattedArray7 = _reformattedArray6; _i6 < _reformattedArray7.length; _i6++) {
+                        reformatData = _reformattedArray7[_i6];
+                        pulisherArr.push(reformatData.publisher);
                       }
 
                       unique = pulisherArr.filter(function (elem, index, self) {
@@ -27981,35 +28011,36 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator53 = _createForOfIteratorHelper(resultChart);
+                      _iterator49 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator53.s(); !(_step53 = _iterator53.n()).done;) {
-                          resVal = _step53.value;
+                        for (_iterator49.s(); !(_step49 = _iterator49.n()).done;) {
+                          resVal = _step49.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.totalsearches);
                         }
                       } catch (err) {
-                        _iterator53.e(err);
+                        _iterator49.e(err);
                       } finally {
-                        _iterator53.f();
+                        _iterator49.f();
                       }
 
                       _stackedArr3 = [];
-                      _iterator54 = _createForOfIteratorHelper(unique);
+                      _iterator50 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop7 = function _loop7() {
-                          var u = _step54.value;
+                          var u = _step50.value;
                           var subStackedArr = [];
 
-                          var _iterator56 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step56;
+                          var _iterator52 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step52;
 
                           try {
                             var _loop8 = function _loop8() {
-                              var date = _step56.value;
-                              var filterLen = reformattedArray[0].filter(function (reformatted) {
+                              var date = _step52.value;
+
+                              var filterLen = _reformattedArray6.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
                               });
 
@@ -28020,13 +28051,13 @@
                               }
                             };
 
-                            for (_iterator56.s(); !(_step56 = _iterator56.n()).done;) {
+                            for (_iterator52.s(); !(_step52 = _iterator52.n()).done;) {
                               _loop8();
                             }
                           } catch (err) {
-                            _iterator56.e(err);
+                            _iterator52.e(err);
                           } finally {
-                            _iterator56.f();
+                            _iterator52.f();
                           }
 
                           var obj = {};
@@ -28035,13 +28066,13 @@
                           _stackedArr3.push(obj);
                         };
 
-                        for (_iterator54.s(); !(_step54 = _iterator54.n()).done;) {
+                        for (_iterator50.s(); !(_step50 = _iterator50.n()).done;) {
                           _loop7();
                         }
                       } catch (err) {
-                        _iterator54.e(err);
+                        _iterator50.e(err);
                       } finally {
-                        _iterator54.f();
+                        _iterator50.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr3;
@@ -28050,17 +28081,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context36.abrupt("return", chartDataValue);
 
-                    case 35:
-                      _context36.prev = 35;
+                    case 34:
+                      _context36.prev = 34;
                       _context36.t0 = _context36["catch"](0);
                       return _context36.abrupt("return", _context36.t0);
 
-                    case 38:
+                    case 37:
                     case "end":
                       return _context36.stop();
                   }
                 }
-              }, _callee36, this, [[0, 35]]);
+              }, _callee36, this, [[0, 34]]);
             }));
           }
         }, {
@@ -28975,7 +29006,7 @@
           key: "getAllRubiStats",
           value: function getAllRubiStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
-              var response, _iterator57, _step57, tagL, _iterator58, _step58, tagSub;
+              var response, _iterator53, _step53, tagL, _iterator54, _step54, tagSub;
 
               return regeneratorRuntime.wrap(function _callee40$(_context40) {
                 while (1) {
@@ -28993,18 +29024,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator57 = _createForOfIteratorHelper(this.tagList);
+                      _iterator53 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator57.s(); !(_step57 = _iterator57.n()).done;) {
-                          tagL = _step57.value;
+                        for (_iterator53.s(); !(_step53 = _iterator53.n()).done;) {
+                          tagL = _step53.value;
 
                           if (tagL.tag.advertiser == "rubi") {
-                            _iterator58 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator54 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator58.s(); !(_step58 = _iterator58.n()).done;) {
-                                tagSub = _step58.value;
+                              for (_iterator54.s(); !(_step54 = _iterator54.n()).done;) {
+                                tagSub = _step54.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -29037,16 +29068,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator58.e(err);
+                              _iterator54.e(err);
                             } finally {
-                              _iterator58.f();
+                              _iterator54.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator57.e(err);
+                        _iterator53.e(err);
                       } finally {
-                        _iterator57.f();
+                        _iterator53.f();
                       }
 
                       return _context40.abrupt("return", this.allStats);
@@ -29085,18 +29116,18 @@
               return r;
             }, []);
 
-            var _iterator59 = _createForOfIteratorHelper(groupData),
-                _step59;
+            var _iterator55 = _createForOfIteratorHelper(groupData),
+                _step55;
 
             try {
-              for (_iterator59.s(); !(_step59 = _iterator59.n()).done;) {
-                var group = _step59.value;
+              for (_iterator55.s(); !(_step55 = _iterator55.n()).done;) {
+                var group = _step55.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator59.e(err);
+              _iterator55.e(err);
             } finally {
-              _iterator59.f();
+              _iterator55.f();
             }
 
             this.rows = groupData;
@@ -29131,18 +29162,18 @@
               return r;
             }, []);
 
-            var _iterator60 = _createForOfIteratorHelper(groupData),
-                _step60;
+            var _iterator56 = _createForOfIteratorHelper(groupData),
+                _step56;
 
             try {
-              for (_iterator60.s(); !(_step60 = _iterator60.n()).done;) {
-                var group = _step60.value;
+              for (_iterator56.s(); !(_step56 = _iterator56.n()).done;) {
+                var group = _step56.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator60.e(err);
+              _iterator56.e(err);
             } finally {
-              _iterator60.f();
+              _iterator56.f();
             }
 
             this.rows = groupData;
@@ -29177,18 +29208,18 @@
               return r;
             }, []);
 
-            var _iterator61 = _createForOfIteratorHelper(groupData),
-                _step61;
+            var _iterator57 = _createForOfIteratorHelper(groupData),
+                _step57;
 
             try {
-              for (_iterator61.s(); !(_step61 = _iterator61.n()).done;) {
-                var group = _step61.value;
+              for (_iterator57.s(); !(_step57 = _iterator57.n()).done;) {
+                var group = _step57.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator61.e(err);
+              _iterator57.e(err);
             } finally {
-              _iterator61.f();
+              _iterator57.f();
             }
 
             this.rows = groupData;
@@ -29210,7 +29241,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee41() {
-              var response, _iterator62, _step62, tagL, _iterator66, _step66, tagSub, sorted, prevObj, indexToChange, reformattedArray, pulisherArr, _iterator63, _step63, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator64, _step64, resVal, _stackedArr4, _iterator65, _step65, _loop9;
+              var response, _iterator58, _step58, tagL, _iterator61, _step61, tagSub, sorted, _multiGroupBy4, groupedItems, _reformattedArray8, item, elm, obj, pulisherArr, _i7, _reformattedArray9, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator59, _step59, resVal, _stackedArr4, _iterator60, _step60, _loop9;
 
               return regeneratorRuntime.wrap(function _callee41$(_context41) {
                 while (1) {
@@ -29228,18 +29259,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator62 = _createForOfIteratorHelper(this.tagList);
+                      _iterator58 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator62.s(); !(_step62 = _iterator62.n()).done;) {
-                          tagL = _step62.value;
+                        for (_iterator58.s(); !(_step58 = _iterator58.n()).done;) {
+                          tagL = _step58.value;
 
                           if (tagL.tag.advertiser == "rubi") {
-                            _iterator66 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator61 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator66.s(); !(_step66 = _iterator66.n()).done;) {
-                                tagSub = _step66.value;
+                              for (_iterator61.s(); !(_step61 = _iterator61.n()).done;) {
+                                tagSub = _step61.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -29272,16 +29303,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator66.e(err);
+                              _iterator61.e(err);
                             } finally {
-                              _iterator66.f();
+                              _iterator61.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator62.e(err);
+                        _iterator58.e(err);
                       } finally {
-                        _iterator62.f();
+                        _iterator58.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -29289,40 +29320,47 @@
                       }).sortBy(function (d) {
                         return d.publisher;
                       }).value();
-                      prevObj = {};
-                      indexToChange = 0;
-                      reformattedArray = [];
-                      reformattedArray = sorted.map(function (obj, index) {
-                        if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                          reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
-                        } else {
-                          reformattedArray.push(obj);
+
+                      _multiGroupBy4 = function _multiGroupBy4(seq, keys) {
+                        if (!keys.length) return seq;
+                        var first = keys[0];
+                        var rest = keys.slice(1);
+                        return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                          return _multiGroupBy4(value, rest);
+                        });
+                      };
+
+                      groupedItems = _multiGroupBy4(sorted, ["date", "publisher"]);
+                      _reformattedArray8 = [];
+
+                      for (item in groupedItems) {
+                        if (groupedItems.hasOwnProperty(item)) {
+                          for (elm in groupedItems[item]) {
+                            obj = {
+                              date: groupedItems[item][elm][0].date,
+                              publisher: groupedItems[item][elm][0].publisher,
+                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.publisherNet;
+                              }, 0)
+                            };
+
+                            _reformattedArray8.push(obj);
+                          }
                         }
+                      }
 
-                        prevObj = obj;
-                        indexToChange = reformattedArray.length - 1; //return the newly reformatted array
-
-                        return reformattedArray;
-                      });
                       pulisherArr = [];
-                      _iterator63 = _createForOfIteratorHelper(reformattedArray[0]);
 
-                      try {
-                        for (_iterator63.s(); !(_step63 = _iterator63.n()).done;) {
-                          reformatData = _step63.value;
-                          pulisherArr.push(reformatData.publisher);
-                        }
-                      } catch (err) {
-                        _iterator63.e(err);
-                      } finally {
-                        _iterator63.f();
+                      for (_i7 = 0, _reformattedArray9 = _reformattedArray8; _i7 < _reformattedArray9.length; _i7++) {
+                        reformatData = _reformattedArray9[_i7];
+                        pulisherArr.push(reformatData.publisher);
                       }
 
                       unique = pulisherArr.filter(function (elem, index, self) {
                         return index === self.indexOf(elem);
-                      });
-                      this.remove_element(unique, "No Publisher");
-                      console.log(unique);
+                      }); // this.remove_element(unique, "No Publisher");
+                      // console.log(unique);
+
                       this.allChartStat = this.allChartStat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
@@ -29347,35 +29385,36 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator64 = _createForOfIteratorHelper(resultChart);
+                      _iterator59 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator64.s(); !(_step64 = _iterator64.n()).done;) {
-                          resVal = _step64.value;
+                        for (_iterator59.s(); !(_step59 = _iterator59.n()).done;) {
+                          resVal = _step59.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator64.e(err);
+                        _iterator59.e(err);
                       } finally {
-                        _iterator64.f();
+                        _iterator59.f();
                       }
 
                       _stackedArr4 = [];
-                      _iterator65 = _createForOfIteratorHelper(unique);
+                      _iterator60 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop9 = function _loop9() {
-                          var u = _step65.value;
+                          var u = _step60.value;
                           var subStackedArr = [];
 
-                          var _iterator67 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step67;
+                          var _iterator62 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step62;
 
                           try {
                             var _loop10 = function _loop10() {
-                              var date = _step67.value;
-                              var filterLen = reformattedArray[0].filter(function (reformatted) {
+                              var date = _step62.value;
+
+                              var filterLen = _reformattedArray8.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
                               });
 
@@ -29386,13 +29425,13 @@
                               }
                             };
 
-                            for (_iterator67.s(); !(_step67 = _iterator67.n()).done;) {
+                            for (_iterator62.s(); !(_step62 = _iterator62.n()).done;) {
                               _loop10();
                             }
                           } catch (err) {
-                            _iterator67.e(err);
+                            _iterator62.e(err);
                           } finally {
-                            _iterator67.f();
+                            _iterator62.f();
                           }
 
                           var obj = {};
@@ -29401,13 +29440,13 @@
                           _stackedArr4.push(obj);
                         };
 
-                        for (_iterator65.s(); !(_step65 = _iterator65.n()).done;) {
+                        for (_iterator60.s(); !(_step60 = _iterator60.n()).done;) {
                           _loop9();
                         }
                       } catch (err) {
-                        _iterator65.e(err);
+                        _iterator60.e(err);
                       } finally {
-                        _iterator65.f();
+                        _iterator60.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr4;
@@ -29416,17 +29455,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context41.abrupt("return", chartDataValue);
 
-                    case 38:
-                      _context41.prev = 38;
+                    case 35:
+                      _context41.prev = 35;
                       _context41.t0 = _context41["catch"](0);
                       return _context41.abrupt("return", _context41.t0);
 
-                    case 41:
+                    case 38:
                     case "end":
                       return _context41.stop();
                   }
                 }
-              }, _callee41, this, [[0, 38]]);
+              }, _callee41, this, [[0, 35]]);
             }));
           }
         }, {
@@ -30381,20 +30420,20 @@
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator68 = _createForOfIteratorHelper(_this8.tagList),
-                  _step68;
+              var _iterator63 = _createForOfIteratorHelper(_this8.tagList),
+                  _step63;
 
               try {
-                for (_iterator68.s(); !(_step68 = _iterator68.n()).done;) {
-                  var tagL = _step68.value;
+                for (_iterator63.s(); !(_step63 = _iterator63.n()).done;) {
+                  var tagL = _step63.value;
 
                   if (tagL.tag.advertiser == "solex-bc") {
-                    var _iterator69 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step69;
+                    var _iterator64 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step64;
 
                     try {
-                      for (_iterator69.s(); !(_step69 = _iterator69.n()).done;) {
-                        var tagSub = _step69.value;
+                      for (_iterator64.s(); !(_step64 = _iterator64.n()).done;) {
+                        var tagSub = _step64.value;
 
                         if (tagSub.filterTag == "Contains") {
                           _this8.allStats.map(function (stat) {
@@ -30427,16 +30466,16 @@
                         }
                       }
                     } catch (err) {
-                      _iterator69.e(err);
+                      _iterator64.e(err);
                     } finally {
-                      _iterator69.f();
+                      _iterator64.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator68.e(err);
+                _iterator63.e(err);
               } finally {
-                _iterator68.f();
+                _iterator63.f();
               }
 
               return _this8.allStats;
@@ -30467,18 +30506,18 @@
               return r;
             }, []);
 
-            var _iterator70 = _createForOfIteratorHelper(groupData),
-                _step70;
+            var _iterator65 = _createForOfIteratorHelper(groupData),
+                _step65;
 
             try {
-              for (_iterator70.s(); !(_step70 = _iterator70.n()).done;) {
-                var group = _step70.value;
+              for (_iterator65.s(); !(_step65 = _iterator65.n()).done;) {
+                var group = _step65.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator70.e(err);
+              _iterator65.e(err);
             } finally {
-              _iterator70.f();
+              _iterator65.f();
             }
 
             this.rows = groupData;
@@ -30512,18 +30551,18 @@
               return r;
             }, []);
 
-            var _iterator71 = _createForOfIteratorHelper(groupData),
-                _step71;
+            var _iterator66 = _createForOfIteratorHelper(groupData),
+                _step66;
 
             try {
-              for (_iterator71.s(); !(_step71 = _iterator71.n()).done;) {
-                var group = _step71.value;
+              for (_iterator66.s(); !(_step66 = _iterator66.n()).done;) {
+                var group = _step66.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator71.e(err);
+              _iterator66.e(err);
             } finally {
-              _iterator71.f();
+              _iterator66.f();
             }
 
             this.rows = groupData;
@@ -30557,18 +30596,18 @@
               return r;
             }, []);
 
-            var _iterator72 = _createForOfIteratorHelper(groupData),
-                _step72;
+            var _iterator67 = _createForOfIteratorHelper(groupData),
+                _step67;
 
             try {
-              for (_iterator72.s(); !(_step72 = _iterator72.n()).done;) {
-                var group = _step72.value;
+              for (_iterator67.s(); !(_step67 = _iterator67.n()).done;) {
+                var group = _step67.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator72.e(err);
+              _iterator67.e(err);
             } finally {
-              _iterator72.f();
+              _iterator67.f();
             }
 
             this.rows = groupData;
@@ -30613,7 +30652,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee46() {
-              var response, _iterator73, _step73, tagL, _iterator77, _step77, tagSub, sorted, prevObj, indexToChange, reformattedArray, pulisherArr, _iterator74, _step74, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator75, _step75, resVal, _stackedArr5, _iterator76, _step76, _loop11;
+              var response, _iterator68, _step68, tagL, _iterator71, _step71, tagSub, sorted, _multiGroupBy5, groupedItems, _reformattedArray10, item, elm, obj, pulisherArr, _i8, _reformattedArray11, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator69, _step69, resVal, _stackedArr5, _iterator70, _step70, _loop11;
 
               return regeneratorRuntime.wrap(function _callee46$(_context46) {
                 while (1) {
@@ -30630,18 +30669,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator73 = _createForOfIteratorHelper(this.tagList);
+                      _iterator68 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator73.s(); !(_step73 = _iterator73.n()).done;) {
-                          tagL = _step73.value;
+                        for (_iterator68.s(); !(_step68 = _iterator68.n()).done;) {
+                          tagL = _step68.value;
 
                           if (tagL.tag.advertiser == "solex-bc") {
-                            _iterator77 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator71 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator77.s(); !(_step77 = _iterator77.n()).done;) {
-                                tagSub = _step77.value;
+                              for (_iterator71.s(); !(_step71 = _iterator71.n()).done;) {
+                                tagSub = _step71.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -30674,16 +30713,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator77.e(err);
+                              _iterator71.e(err);
                             } finally {
-                              _iterator77.f();
+                              _iterator71.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator73.e(err);
+                        _iterator68.e(err);
                       } finally {
-                        _iterator73.f();
+                        _iterator68.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -30691,32 +30730,40 @@
                       }).sortBy(function (d) {
                         return d.publisher;
                       }).value();
-                      prevObj = {};
-                      indexToChange = 0;
-                      reformattedArray = [];
-                      reformattedArray = sorted.map(function (obj, index) {
-                        if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                          reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
-                        } else {
-                          reformattedArray.push(obj);
-                        }
 
-                        prevObj = obj;
-                        indexToChange = reformattedArray.length - 1;
-                        return reformattedArray;
-                      });
+                      _multiGroupBy5 = function _multiGroupBy5(seq, keys) {
+                        if (!keys.length) return seq;
+                        var first = keys[0];
+                        var rest = keys.slice(1);
+                        return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                          return _multiGroupBy5(value, rest);
+                        });
+                      };
+
+                      groupedItems = _multiGroupBy5(sorted, ["date", "publisher"]);
+                      _reformattedArray10 = [];
+
+                      for (item in groupedItems) {
+                        if (groupedItems.hasOwnProperty(item)) {
+                          for (elm in groupedItems[item]) {
+                            obj = {
+                              date: groupedItems[item][elm][0].date,
+                              publisher: groupedItems[item][elm][0].publisher,
+                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.publisherNet;
+                              }, 0)
+                            };
+
+                            _reformattedArray10.push(obj);
+                          }
+                        }
+                      }
+
                       pulisherArr = [];
-                      _iterator74 = _createForOfIteratorHelper(reformattedArray[0]);
 
-                      try {
-                        for (_iterator74.s(); !(_step74 = _iterator74.n()).done;) {
-                          reformatData = _step74.value;
-                          pulisherArr.push(reformatData.publisher);
-                        }
-                      } catch (err) {
-                        _iterator74.e(err);
-                      } finally {
-                        _iterator74.f();
+                      for (_i8 = 0, _reformattedArray11 = _reformattedArray10; _i8 < _reformattedArray11.length; _i8++) {
+                        reformatData = _reformattedArray11[_i8];
+                        pulisherArr.push(reformatData.publisher);
                       }
 
                       unique = pulisherArr.filter(function (elem, index, self) {
@@ -30748,35 +30795,36 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator75 = _createForOfIteratorHelper(resultChart);
+                      _iterator69 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator75.s(); !(_step75 = _iterator75.n()).done;) {
-                          resVal = _step75.value;
+                        for (_iterator69.s(); !(_step69 = _iterator69.n()).done;) {
+                          resVal = _step69.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator75.e(err);
+                        _iterator69.e(err);
                       } finally {
-                        _iterator75.f();
+                        _iterator69.f();
                       }
 
                       _stackedArr5 = [];
-                      _iterator76 = _createForOfIteratorHelper(unique);
+                      _iterator70 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop11 = function _loop11() {
-                          var u = _step76.value;
+                          var u = _step70.value;
                           var subStackedArr = [];
 
-                          var _iterator78 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step78;
+                          var _iterator72 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step72;
 
                           try {
                             var _loop12 = function _loop12() {
-                              var date = _step78.value;
-                              var filterLen = reformattedArray[0].filter(function (reformatted) {
+                              var date = _step72.value;
+
+                              var filterLen = _reformattedArray10.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
                               });
 
@@ -30787,13 +30835,13 @@
                               }
                             };
 
-                            for (_iterator78.s(); !(_step78 = _iterator78.n()).done;) {
+                            for (_iterator72.s(); !(_step72 = _iterator72.n()).done;) {
                               _loop12();
                             }
                           } catch (err) {
-                            _iterator78.e(err);
+                            _iterator72.e(err);
                           } finally {
-                            _iterator78.f();
+                            _iterator72.f();
                           }
 
                           var obj = {};
@@ -30802,13 +30850,13 @@
                           _stackedArr5.push(obj);
                         };
 
-                        for (_iterator76.s(); !(_step76 = _iterator76.n()).done;) {
+                        for (_iterator70.s(); !(_step70 = _iterator70.n()).done;) {
                           _loop11();
                         }
                       } catch (err) {
-                        _iterator76.e(err);
+                        _iterator70.e(err);
                       } finally {
-                        _iterator76.f();
+                        _iterator70.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr5;
@@ -30817,17 +30865,17 @@
                       chartDataValue['publisherName'] = unique;
                       return _context46.abrupt("return", chartDataValue);
 
-                    case 35:
-                      _context46.prev = 35;
+                    case 34:
+                      _context46.prev = 34;
                       _context46.t0 = _context46["catch"](0);
                       return _context46.abrupt("return", _context46.t0);
 
-                    case 38:
+                    case 37:
                     case "end":
                       return _context46.stop();
                   }
                 }
-              }, _callee46, this, [[0, 35]]);
+              }, _callee46, this, [[0, 34]]);
             }));
           }
         }, {
@@ -33282,19 +33330,19 @@
               return r;
             }, []);
 
-            var _iterator79 = _createForOfIteratorHelper(groupData),
-                _step79;
+            var _iterator73 = _createForOfIteratorHelper(groupData),
+                _step73;
 
             try {
-              for (_iterator79.s(); !(_step79 = _iterator79.n()).done;) {
-                var group = _step79.value;
+              for (_iterator73.s(); !(_step73 = _iterator73.n()).done;) {
+                var group = _step73.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator79.e(err);
+              _iterator73.e(err);
             } finally {
-              _iterator79.f();
+              _iterator73.f();
             }
 
             this.rows = groupData;
@@ -33334,19 +33382,19 @@
               return r;
             }, []);
 
-            var _iterator80 = _createForOfIteratorHelper(groupData),
-                _step80;
+            var _iterator74 = _createForOfIteratorHelper(groupData),
+                _step74;
 
             try {
-              for (_iterator80.s(); !(_step80 = _iterator80.n()).done;) {
-                var group = _step80.value;
+              for (_iterator74.s(); !(_step74 = _iterator74.n()).done;) {
+                var group = _step74.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator80.e(err);
+              _iterator74.e(err);
             } finally {
-              _iterator80.f();
+              _iterator74.f();
             }
 
             this.rows = groupData;
@@ -33386,19 +33434,19 @@
               return r;
             }, []);
 
-            var _iterator81 = _createForOfIteratorHelper(groupData),
-                _step81;
+            var _iterator75 = _createForOfIteratorHelper(groupData),
+                _step75;
 
             try {
-              for (_iterator81.s(); !(_step81 = _iterator81.n()).done;) {
-                var group = _step81.value;
+              for (_iterator75.s(); !(_step75 = _iterator75.n()).done;) {
+                var group = _step75.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator81.e(err);
+              _iterator75.e(err);
             } finally {
-              _iterator81.f();
+              _iterator75.f();
             }
 
             this.rows = groupData;
@@ -33454,35 +33502,32 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee52() {
-              var response, _iterator82, _step82, tagL, _iterator86, _step86, tagSub, sorted, prevObj, indexToChange, reformattedArray, pulisherArr, _iterator83, _step83, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator84, _step84, resVal, _stackedArr6, _iterator85, _step85, _loop13;
+              var _iterator76, _step76, tagL, _iterator79, _step79, tagSub, sorted, _multiGroupBy6, groupedItems, _reformattedArray12, item, elm, obj, pulisherArr, _i9, _reformattedArray13, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator77, _step77, resVal, _stackedArr6, _iterator78, _step78, _loop13;
 
               return regeneratorRuntime.wrap(function _callee52$(_context52) {
                 while (1) {
                   switch (_context52.prev = _context52.next) {
                     case 0:
                       _context52.prev = 0;
-                      _context52.next = 3;
-                      return this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
-
-                    case 3:
-                      response = _context52.sent;
-                      this.allChartStat = response.stats;
-                      this.allChartStat.map(function (resStat) {
-                        resStat.publisher = "No Publisher";
-                        resStat.tagname = "No Tag";
-                      });
-                      _iterator82 = _createForOfIteratorHelper(this.tagList);
+                      // const response = await this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
+                      // this.allChartStat = response.stats;
+                      // this.allChartStat.map(function (resStat: { publisher: string; tagname: string; }) {
+                      //   resStat.publisher = "No Publisher";
+                      //   resStat.tagname = "No Tag";
+                      // });
+                      this.allChartStat = this.allStats;
+                      _iterator76 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator82.s(); !(_step82 = _iterator82.n()).done;) {
-                          tagL = _step82.value;
+                        for (_iterator76.s(); !(_step76 = _iterator76.n()).done;) {
+                          tagL = _step76.value;
 
                           if (tagL.tag.advertiser == "verizon-direct") {
-                            _iterator86 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator79 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator86.s(); !(_step86 = _iterator86.n()).done;) {
-                                tagSub = _step86.value;
+                              for (_iterator79.s(); !(_step79 = _iterator79.n()).done;) {
+                                tagSub = _step79.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -33515,16 +33560,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator86.e(err);
+                              _iterator79.e(err);
                             } finally {
-                              _iterator86.f();
+                              _iterator79.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator82.e(err);
+                        _iterator76.e(err);
                       } finally {
-                        _iterator82.f();
+                        _iterator76.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -33532,33 +33577,40 @@
                       }).sortBy(function (d) {
                         return d.publisher;
                       }).value();
-                      prevObj = {};
-                      indexToChange = 0;
-                      reformattedArray = [];
-                      reformattedArray = sorted.map(function (obj, index) {
-                        if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                          reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
-                        } else {
-                          reformattedArray.push(obj);
+
+                      _multiGroupBy6 = function _multiGroupBy6(seq, keys) {
+                        if (!keys.length) return seq;
+                        var first = keys[0];
+                        var rest = keys.slice(1);
+                        return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                          return _multiGroupBy6(value, rest);
+                        });
+                      };
+
+                      groupedItems = _multiGroupBy6(sorted, ["date", "publisher"]);
+                      _reformattedArray12 = [];
+
+                      for (item in groupedItems) {
+                        if (groupedItems.hasOwnProperty(item)) {
+                          for (elm in groupedItems[item]) {
+                            obj = {
+                              date: groupedItems[item][elm][0].date,
+                              publisher: groupedItems[item][elm][0].publisher,
+                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.publisherNet;
+                              }, 0)
+                            };
+
+                            _reformattedArray12.push(obj);
+                          }
                         }
+                      }
 
-                        prevObj = obj;
-                        indexToChange = reformattedArray.length - 1; //return the newly reformatted array
-
-                        return reformattedArray;
-                      });
                       pulisherArr = [];
-                      _iterator83 = _createForOfIteratorHelper(reformattedArray[0]);
 
-                      try {
-                        for (_iterator83.s(); !(_step83 = _iterator83.n()).done;) {
-                          reformatData = _step83.value;
-                          pulisherArr.push(reformatData.publisher);
-                        }
-                      } catch (err) {
-                        _iterator83.e(err);
-                      } finally {
-                        _iterator83.f();
+                      for (_i9 = 0, _reformattedArray13 = _reformattedArray12; _i9 < _reformattedArray13.length; _i9++) {
+                        reformatData = _reformattedArray13[_i9];
+                        pulisherArr.push(reformatData.publisher);
                       }
 
                       unique = pulisherArr.filter(function (elem, index, self) {
@@ -33590,35 +33642,36 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator84 = _createForOfIteratorHelper(resultChart);
+                      _iterator77 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator84.s(); !(_step84 = _iterator84.n()).done;) {
-                          resVal = _step84.value;
+                        for (_iterator77.s(); !(_step77 = _iterator77.n()).done;) {
+                          resVal = _step77.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator84.e(err);
+                        _iterator77.e(err);
                       } finally {
-                        _iterator84.f();
+                        _iterator77.f();
                       }
 
                       _stackedArr6 = [];
-                      _iterator85 = _createForOfIteratorHelper(unique);
+                      _iterator78 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop13 = function _loop13() {
-                          var u = _step85.value;
+                          var u = _step78.value;
                           var subStackedArr = [];
 
-                          var _iterator87 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step87;
+                          var _iterator80 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step80;
 
                           try {
                             var _loop14 = function _loop14() {
-                              var date = _step87.value;
-                              var filterLen = reformattedArray[0].filter(function (reformatted) {
+                              var date = _step80.value;
+
+                              var filterLen = _reformattedArray12.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
                               });
 
@@ -33629,13 +33682,13 @@
                               }
                             };
 
-                            for (_iterator87.s(); !(_step87 = _iterator87.n()).done;) {
+                            for (_iterator80.s(); !(_step80 = _iterator80.n()).done;) {
                               _loop14();
                             }
                           } catch (err) {
-                            _iterator87.e(err);
+                            _iterator80.e(err);
                           } finally {
-                            _iterator87.f();
+                            _iterator80.f();
                           }
 
                           var obj = {};
@@ -33644,13 +33697,13 @@
                           _stackedArr6.push(obj);
                         };
 
-                        for (_iterator85.s(); !(_step85 = _iterator85.n()).done;) {
+                        for (_iterator78.s(); !(_step78 = _iterator78.n()).done;) {
                           _loop13();
                         }
                       } catch (err) {
-                        _iterator85.e(err);
+                        _iterator78.e(err);
                       } finally {
-                        _iterator85.f();
+                        _iterator78.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr6;
@@ -33659,24 +33712,24 @@
                       chartDataValue['publisherName'] = unique;
                       return _context52.abrupt("return", chartDataValue);
 
-                    case 35:
-                      _context52.prev = 35;
+                    case 30:
+                      _context52.prev = 30;
                       _context52.t0 = _context52["catch"](0);
                       return _context52.abrupt("return", _context52.t0);
 
-                    case 38:
+                    case 33:
                     case "end":
                       return _context52.stop();
                   }
                 }
-              }, _callee52, this, [[0, 35]]);
+              }, _callee52, this, [[0, 30]]);
             }));
           }
         }, {
           key: "getAllVerizonStats",
           value: function getAllVerizonStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee53() {
-              var response, _iterator88, _step88, tagL, _iterator89, _step89, tagSub;
+              var response, _iterator81, _step81, tagL, _iterator82, _step82, tagSub;
 
               return regeneratorRuntime.wrap(function _callee53$(_context53) {
                 while (1) {
@@ -33694,18 +33747,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator88 = _createForOfIteratorHelper(this.tagList);
+                      _iterator81 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator88.s(); !(_step88 = _iterator88.n()).done;) {
-                          tagL = _step88.value;
+                        for (_iterator81.s(); !(_step81 = _iterator81.n()).done;) {
+                          tagL = _step81.value;
 
                           if (tagL.tag.advertiser == "verizon-direct") {
-                            _iterator89 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator82 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator89.s(); !(_step89 = _iterator89.n()).done;) {
-                                tagSub = _step89.value;
+                              for (_iterator82.s(); !(_step82 = _iterator82.n()).done;) {
+                                tagSub = _step82.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -33738,16 +33791,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator89.e(err);
+                              _iterator82.e(err);
                             } finally {
-                              _iterator89.f();
+                              _iterator82.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator88.e(err);
+                        _iterator81.e(err);
                       } finally {
-                        _iterator88.f();
+                        _iterator81.f();
                       }
 
                       return _context53.abrupt("return", this.allStats);

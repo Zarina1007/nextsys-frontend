@@ -33268,16 +33268,6 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "a", 16);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function NotificationsDropdownInnerComponent_div_4_div_1_Template_a_click_1_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r9);
-
-            var publisherNotify_r7 = ctx.$implicit;
-
-            var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-
-            return ctx_r8.viewNotification(publisherNotify_r7._key);
-          });
-
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 18);
@@ -33287,6 +33277,16 @@
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function NotificationsDropdownInnerComponent_div_4_div_1_Template_div_click_5_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r9);
+
+            var publisherNotify_r7 = ctx.$implicit;
+
+            var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
+
+            return ctx_r8.viewNotification(publisherNotify_r7._key);
+          });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 21);
 
@@ -33362,7 +33362,17 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "a", 16);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function NotificationsDropdownInnerComponent_div_5_div_1_Template_a_click_1_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 18);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](4, "i", 19);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function NotificationsDropdownInnerComponent_div_5_div_1_Template_div_click_5_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r13);
 
             var superNotify_r11 = ctx.$implicit;
@@ -33372,19 +33382,9 @@
             return ctx_r12.viewNotification(superNotify_r11._key);
           });
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 18);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](4, "i", 24);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 20);
-
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 21);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "span", 25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "span", 22);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
 
@@ -33402,6 +33402,22 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 24);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function NotificationsDropdownInnerComponent_div_5_div_1_Template_div_click_12_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r13);
+
+            var superNotify_r11 = ctx.$implicit;
+
+            var ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
+
+            return ctx_r14.clearSuperNotification(superNotify_r11._key);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](13, "i", 25);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -33412,13 +33428,21 @@
         if (rf & 2) {
           var superNotify_r11 = ctx.$implicit;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](8);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", superNotify_r11.status == false ? "text-danger" : "text-success");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngClass", superNotify_r11.status == false ? "text-danger" : "text-success");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](superNotify_r11.title);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](11, 2, superNotify_r11.createdAt, "MMM d, y hh:mm:ss a"), " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](11, 4, superNotify_r11.createdAt, "MMM d, y hh:mm:ss a"), " ");
         }
       }
 
@@ -33426,7 +33450,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 14);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, NotificationsDropdownInnerComponent_div_5_div_1_Template, 12, 5, "div", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, NotificationsDropdownInnerComponent_div_5_div_1_Template, 14, 7, "div", 15);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -33460,6 +33484,7 @@
             this.currentUser = this.authService.currentUserValue;
             this.superAdminRows = this.getSuperAdminRows(this.superAdminRows);
             this.publisherRows = this.getPublisherRows(this.publisherRows);
+            this.unreadSuperCounter = this.getUnreadSuperCounter(this.unreadSuperCounter);
             this.unreadCounter = this.getUnreadCounter(this.unreadCounter);
             this.extrasNotificationsDropdownStyle = this.layout.getProp('extras.notifications.dropdown.style');
           }
@@ -33489,6 +33514,14 @@
             // our logic to group the posts by category
             if (!unreadCounter) return;
             var result = unreadCounter;
+            return result;
+          }
+        }, {
+          key: "getUnreadSuperCounter",
+          value: function getUnreadSuperCounter(unreadSuperCounter) {
+            // our logic to group the posts by category
+            if (!unreadSuperCounter) return;
+            var result = unreadSuperCounter;
             return result;
           }
         }, {
@@ -33529,6 +33562,42 @@
             }
           }
         }, {
+          key: "clearSuperNotification",
+          value: function clearSuperNotification(notificationID) {
+            var _this116 = this;
+
+            this.notificationSendService.clearSuperNotification(notificationID).subscribe({
+              next: function next(res) {
+                if (_this116.currentUser.role == 1) {
+                  _this116.getSuperadminNotifications();
+                } else {
+                  _this116.getPublisherNotifications();
+                }
+              },
+              error: function error(e) {
+                console.log(e.error);
+              }
+            });
+          }
+        }, {
+          key: "clearNotification",
+          value: function clearNotification(notificationID) {
+            var _this117 = this;
+
+            this.notificationSendService.clearNotification(notificationID).subscribe({
+              next: function next(res) {
+                if (_this117.currentUser.role == 1) {
+                  _this117.getSuperadminNotifications();
+                } else {
+                  _this117.getPublisherNotifications();
+                }
+              },
+              error: function error(e) {
+                console.log(e.error);
+              }
+            });
+          }
+        }, {
           key: "seeAll",
           value: function seeAll() {
             if (this.currentUser.role == 1) {
@@ -33540,29 +33609,30 @@
         }, {
           key: "getPublisherNotifications",
           value: function getPublisherNotifications() {
-            var _this116 = this;
+            var _this118 = this;
 
             var notificationArr = [];
             this.notificationSendService.publisherNotificatoins().subscribe({
               next: function next(res) {
+                _this118.unreadCounter = 0;
                 res.map(function (d) {
                   notificationArr.push({
-                    _key: d.notifyData[0]._key,
-                    _id: d.notifyData[0]._id,
-                    content: d.notifyData[0].content,
-                    title: d.notifyData[0].title,
-                    createdAt: d.notifyData[0].createdAt,
+                    _key: d._key,
+                    _id: d._id,
+                    content: d.content,
+                    title: d.title,
+                    createdAt: d.createdAt,
                     sender: d.sender[0],
                     status: d.status
                   });
 
                   if (!d.status) {
-                    _this116.unreadCounter++;
+                    _this118.unreadCounter++;
                   }
                 });
-                _this116.publisherRows = notificationArr;
+                _this118.publisherRows = notificationArr;
 
-                _this116.cdr.detectChanges();
+                _this118.cdr.detectChanges();
               },
               error: function error(e) {
                 console.log(e.error);
@@ -33572,13 +33642,30 @@
         }, {
           key: "getSuperadminNotifications",
           value: function getSuperadminNotifications() {
-            var _this117 = this;
+            var _this119 = this;
 
+            var supernotificationArr = [];
+            this.unreadSuperCounter = 0;
             this.notificationSendService.superAdminNotificatoins().subscribe({
               next: function next(res) {
-                _this117.superAdminRows = res;
+                res.map(function (d) {
+                  supernotificationArr.push({
+                    _key: d._key,
+                    _id: d._id,
+                    content: d.content,
+                    title: d.title,
+                    createdAt: d.createdAt,
+                    sender: d.sender[0],
+                    status: d.status
+                  });
 
-                _this117.cdr.detectChanges();
+                  if (typeof d.status === 'boolean' && !d.status) {
+                    _this119.unreadSuperCounter++;
+                  }
+                });
+                _this119.superAdminRows = supernotificationArr;
+
+                _this119.cdr.detectChanges();
               },
               error: function error(e) {
                 console.log(e.error);
@@ -33600,11 +33687,12 @@
         inputs: {
           superAdminRows: "superAdminRows",
           publisherRows: "publisherRows",
+          unreadSuperCounter: "unreadSuperCounter",
           unreadCounter: "unreadCounter"
         },
         decls: 9,
         vars: 5,
-        consts: [[4, "ngIf"], [1, "tab-content"], ["id", "topbar_notifications_notifications", "role", "tabpanel", 1, "tab-pane", 3, "ngClass"], ["class", "navi navi-hover scroll my-4", "data-scroll", "true", "style", "position: relative; max-height: 300px;", "perfectScrollbar", "", 4, "ngIf"], [1, "d-flex", "flex-center", "py-4"], ["href", "javascript:void(0)", 1, "btn", "btn-light-primary", "font-weight-bold", "text-center", 3, "click"], [1, "d-flex", "flex-column", "pt-12", "bg-dark-o-5", "rounded-top"], [1, "d-flex", "flex-center", "mb-0"], [1, "text-dark"], ["class", "btn btn-text btn-danger btn-sm font-weight-bold btn-font-md ml-2", 4, "ngIf"], [1, "btn", "btn-text", "btn-danger", "btn-sm", "font-weight-bold", "btn-font-md", "ml-2"], [1, "d-flex", "flex-column", "py-5", "bgi-size-cover", "bgi-no-repeat", "rounded-top", 2, "background-image", "url('./assets/media/misc/bg-1.jpg')"], [1, "d-flex", "flex-center", "rounded-top", "mb-0"], [1, "text-white"], ["data-scroll", "true", "perfectScrollbar", "", 1, "navi", "navi-hover", "scroll", "my-4", 2, "position", "relative", "max-height", "300px"], [4, "ngFor", "ngForOf"], ["href", "javascript:void(0);", 1, "navi-item", 3, "click"], [1, "navi-link"], [1, "navi-icon", "mr-2"], [1, "flaticon2-paper-plane", 3, "ngClass"], [1, "navi-text"], [1, "font-weight-bold"], [3, "ngClass"], [1, "text-muted"], [1, "flaticon2-paper-plane", "text-primary"], [1, "text-primary"]],
+        consts: [[4, "ngIf"], [1, "tab-content"], ["id", "topbar_notifications_notifications", "role", "tabpanel", 1, "tab-pane", 3, "ngClass"], ["class", "navi navi-hover scroll my-4", "data-scroll", "true", "style", "position: relative; max-height: 300px;", "perfectScrollbar", "", 4, "ngIf"], [1, "d-flex", "flex-center", "py-4"], ["href", "javascript:void(0)", 1, "btn", "btn-light-primary", "font-weight-bold", "text-center", 3, "click"], [1, "d-flex", "flex-column", "pt-12", "bg-dark-o-5", "rounded-top"], [1, "d-flex", "flex-center", "mb-0"], [1, "text-dark"], ["class", "btn btn-text btn-danger btn-sm font-weight-bold btn-font-md ml-2", 4, "ngIf"], [1, "btn", "btn-text", "btn-danger", "btn-sm", "font-weight-bold", "btn-font-md", "ml-2"], [1, "d-flex", "flex-column", "py-5", "bgi-size-cover", "bgi-no-repeat", "rounded-top", 2, "background-image", "url('./assets/media/misc/bg-1.jpg')"], [1, "d-flex", "flex-center", "rounded-top", "mb-0"], [1, "text-white"], ["data-scroll", "true", "perfectScrollbar", "", 1, "navi", "navi-hover", "scroll", "my-4", 2, "position", "relative", "max-height", "300px"], [4, "ngFor", "ngForOf"], ["href", "javascript:void(0);", 1, "navi-item"], [1, "navi-link"], [1, "navi-icon", "mr-2"], [1, "flaticon2-paper-plane", 3, "ngClass"], [1, "navi-text", 3, "click"], [1, "font-weight-bold"], [3, "ngClass"], [1, "text-muted"], [1, "navi-icon", "mr-2", 3, "click"], [1, "flaticon-delete", "text-danger"]],
         template: function NotificationsDropdownInnerComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, NotificationsDropdownInnerComponent_ng_container_0_Template, 6, 1, "ng-container", 0);
@@ -33691,6 +33779,9 @@
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
           }],
           publisherRows: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
+          }],
+          unreadSuperCounter: [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"]
           }],
           unreadCounter: [{
@@ -34109,7 +34200,7 @@
         }, {
           key: "search",
           value: function search(e) {
-            var _this118 = this;
+            var _this120 = this;
 
             this.data = null;
 
@@ -34119,10 +34210,10 @@
               setTimeout(function () {
                 // Uncomment this. Right now it's just mock
                 // this.data = this.searchInData(e.target.value);
-                _this118.data = [documents, members, files];
-                _this118.loading = false;
+                _this120.data = [documents, members, files];
+                _this120.loading = false;
 
-                _this118.cdr.markForCheck();
+                _this120.cdr.markForCheck();
               }, 500);
             }
           }
@@ -34141,10 +34232,10 @@
         }, {
           key: "openChange",
           value: function openChange() {
-            var _this119 = this;
+            var _this121 = this;
 
             setTimeout(function () {
-              return _this119.searchInput.nativeElement.focus();
+              return _this121.searchInput.nativeElement.focus();
             });
           }
         }, {
@@ -39899,7 +39990,7 @@
 
       var SubheaderWrapperComponent = /*#__PURE__*/function () {
         function SubheaderWrapperComponent(subheader, router) {
-          var _this120 = this;
+          var _this122 = this;
 
           _classCallCheck(this, SubheaderWrapperComponent);
 
@@ -39910,7 +40001,7 @@
 
           var initSubheader = function initSubheader() {
             setTimeout(function () {
-              _this120.subheader.updateAfterRouteChanges(_this120.router.url);
+              _this122.subheader.updateAfterRouteChanges(_this122.router.url);
             }, 0);
           };
 
@@ -40336,7 +40427,7 @@
         _createClass(Subheader1Component, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this121 = this;
+            var _this123 = this;
 
             this.title$ = this.subheader.titleSubject.asObservable();
             this.breadcrumbs$ = this.subheader.breadCrumbsSubject.asObservable();
@@ -40347,13 +40438,13 @@
             this.subheaderDisplayDesc = this.layout.getProp('subheader.displayDesc');
             this.subheaderDisplayDaterangepicker = this.layout.getProp('subheader.displayDaterangepicker');
             this.breadcrumbs$.subscribe(function (res) {
-              _this121.breadcrumbs = res;
+              _this123.breadcrumbs = res;
 
               if (res && res[res.length - 1]) {
-                _this121.linkPath = res[res.length - 1]['linkPath'];
+                _this123.linkPath = res[res.length - 1]['linkPath'];
               }
 
-              _this121.cdr.detectChanges();
+              _this123.cdr.detectChanges();
             });
           }
         }]);
@@ -43021,7 +43112,7 @@
         _createClass(AsideDynamicComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this122 = this;
+            var _this124 = this;
 
             this.companySelected = this.getSelectedCompanyFromLocalStorage();
             this.reportingProviderList = this.getCompanyList(this.companyList);
@@ -43041,16 +43132,16 @@
             var routerSubscr = this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
               return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"];
             })).subscribe(function (event) {
-              _this122.currentUrl = event.url;
+              _this124.currentUrl = event.url;
 
-              _this122.cdr.detectChanges();
+              _this124.cdr.detectChanges();
             });
             this.subscriptions.push(routerSubscr); // menu load
 
             var menuSubscr = this.menu.menuConfig$.subscribe(function (res) {
-              _this122.menuConfig = res;
+              _this124.menuConfig = res;
 
-              _this122.cdr.detectChanges();
+              _this124.cdr.detectChanges();
             });
             this.subscriptions.push(menuSubscr);
           }
@@ -43150,13 +43241,13 @@
         }, {
           key: "getReportingProviderList",
           value: function getReportingProviderList() {
-            var _this123 = this;
+            var _this125 = this;
 
             if (this.companySelected) {
               this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
                 console.log("resese", res);
                 res.reportingProviders.map(function (report) {
-                  _this123.reportingProviderList.push(report.reportingProvider);
+                  _this125.reportingProviderList.push(report.reportingProvider);
                 });
               });
               if (this.reportingProviderList.length > 0) return;
@@ -46165,7 +46256,7 @@
         _createClass(HeaderMenuDynamicComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this124 = this;
+            var _this126 = this;
 
             this.ulCSSClasses = this.layout.getStringCSSClasses('header_menu_nav');
             this.rootArrowEnabled = this.layout.getProp('header.menu.self.rootArrow');
@@ -46175,16 +46266,16 @@
             var routerSubscr = this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
               return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"];
             })).subscribe(function (event) {
-              _this124.currentUrl = event.url;
+              _this126.currentUrl = event.url;
 
-              _this124.cdr.detectChanges();
+              _this126.cdr.detectChanges();
             });
             this.subscriptions.push(routerSubscr); // menu load
 
             var menuSubscr = this.menu.menuConfig$.subscribe(function (res) {
-              _this124.menuConfig = res;
+              _this126.menuConfig = res;
 
-              _this124.cdr.detectChanges();
+              _this126.cdr.detectChanges();
             });
             this.subscriptions.push(menuSubscr);
           }
@@ -48185,7 +48276,7 @@
 
       var HeaderComponent = /*#__PURE__*/function () {
         function HeaderComponent(layout, router) {
-          var _this125 = this;
+          var _this127 = this;
 
           _classCallCheck(this, HeaderComponent);
 
@@ -48200,27 +48291,27 @@
           var routerSubscription = this.router.events.subscribe(function (event) {
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"]) {
               // set page progress bar loading to start on NavigationStart event router
-              _this125.loaderSubject.next(10);
+              _this127.loaderSubject.next(10);
             }
 
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouteConfigLoadStart"]) {
-              _this125.loaderSubject.next(65);
+              _this127.loaderSubject.next(65);
             }
 
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouteConfigLoadEnd"]) {
-              _this125.loaderSubject.next(90);
+              _this127.loaderSubject.next(90);
             }
 
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"] || event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationCancel"]) {
               // set page progress bar loading to end on NavigationEnd event router
-              _this125.loaderSubject.next(100);
+              _this127.loaderSubject.next(100);
 
-              if (_this125.routerLoaderTimout) {
-                clearTimeout(_this125.routerLoaderTimout);
+              if (_this127.routerLoaderTimout) {
+                clearTimeout(_this127.routerLoaderTimout);
               }
 
-              _this125.routerLoaderTimout = setTimeout(function () {
-                _this125.loaderSubject.next(0);
+              _this127.routerLoaderTimout = setTimeout(function () {
+                _this127.loaderSubject.next(0);
               }, 300);
             }
           });
@@ -48523,7 +48614,7 @@
 
       var CompanySelectorComponent = /*#__PURE__*/function () {
         function CompanySelectorComponent(router, auth, companyService, userService, changeDetectorRefs) {
-          var _this126 = this;
+          var _this128 = this;
 
           _classCallCheck(this, CompanySelectorComponent);
 
@@ -48535,49 +48626,49 @@
           this.localStorageCompany = this.getSelectedCompanyFromLocalStorage();
           var currentUserInfo = this.auth.currentUserValue;
           this.companyService.getUserCompanies(currentUserInfo.companies).subscribe(function (companyResult) {
-            _this126.userCompanies = companyResult; //Gets the company saved to local storage
+            _this128.userCompanies = companyResult; //Gets the company saved to local storage
             //Checks to see if the user is part of at least one company
 
-            if (_this126.userCompanies.length > 0) {
+            if (_this128.userCompanies.length > 0) {
               //If company was stored in local storage, checks to ensure the user has this company stored on their profile in the database. Otherwise, returns null.
-              if (_this126.localStorageCompany) {
-                var checkStorageCompany = _this126.userCompanies.filter(function (userCom) {
-                  return userCom._id == _this126.localStorageCompany;
+              if (_this128.localStorageCompany) {
+                var checkStorageCompany = _this128.userCompanies.filter(function (userCom) {
+                  return userCom._id == _this128.localStorageCompany;
                 });
 
                 if (checkStorageCompany.length > 0) {
-                  _this126.selectedCompany = checkStorageCompany[0];
+                  _this128.selectedCompany = checkStorageCompany[0];
 
-                  _this126.setCompanyToLocalStorage(checkStorageCompany[0]._id);
+                  _this128.setCompanyToLocalStorage(checkStorageCompany[0]._id);
                 } else {
                   localStorage.removeItem('company');
-                  _this126.selectedCompany = null;
+                  _this128.selectedCompany = null;
                 }
               } //User did not have a company saved to local storage
               else {
-                  _this126.setCompanyToLocalStorage(_this126.userCompanies[0]._id);
+                  _this128.setCompanyToLocalStorage(_this128.userCompanies[0]._id);
 
-                  _this126.selectedCompany = _this126.userCompanies[0];
+                  _this128.selectedCompany = _this128.userCompanies[0];
                 }
             } else {
               localStorage.removeItem('company');
-              _this126.selectedCompany = null;
+              _this128.selectedCompany = null;
             }
 
-            _this126.changeDetectorRefs.detectChanges();
+            _this128.changeDetectorRefs.detectChanges();
           });
         }
 
         _createClass(CompanySelectorComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this127 = this;
+            var _this129 = this;
 
             this.setSelectedCompany();
             this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
               return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"];
             })).subscribe(function (event) {
-              _this127.setSelectedCompany();
+              _this129.setSelectedCompany();
             });
           } //On button click/select sets company to local storage then refreshes
 
@@ -48596,13 +48687,13 @@
         }, {
           key: "setCompanyToLocalStorage",
           value: function setCompanyToLocalStorage(companyId) {
-            var _this128 = this;
+            var _this130 = this;
 
             if (this.userCompanies) {
               this.userCompanies.forEach(function (selectedCompany) {
                 if (selectedCompany._id === companyId) {
                   selectedCompany.active = true;
-                  _this128.selectedCompany = selectedCompany;
+                  _this130.selectedCompany = selectedCompany;
                 } else {
                   selectedCompany.active = false;
                 }
@@ -48877,13 +48968,13 @@
         _createClass(LanguageSelectorComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this129 = this;
+            var _this131 = this;
 
             this.setSelectedLanguage();
             this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
               return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"];
             })).subscribe(function (event) {
-              _this129.setSelectedLanguage();
+              _this131.setSelectedLanguage();
             });
           }
         }, {
@@ -48895,12 +48986,12 @@
         }, {
           key: "setLanguage",
           value: function setLanguage(lang) {
-            var _this130 = this;
+            var _this132 = this;
 
             this.languages.forEach(function (language) {
               if (language.lang === lang) {
                 language.active = true;
-                _this130.language = language;
+                _this132.language = language;
               } else {
                 language.active = false;
               }
@@ -49161,9 +49252,19 @@
         }
       }
 
+      function TopbarComponent_ng_container_0_ng_container_2_span_7_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 12);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "!");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+      }
+
       function TopbarComponent_ng_container_0_ng_container_2_Template(rf, ctx) {
         if (rf & 1) {
-          var _r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+          var _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerStart"](0);
 
@@ -49174,11 +49275,11 @@
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 8);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function TopbarComponent_ng_container_0_ng_container_2_Template_div_click_3_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r7);
 
-            var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+            var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
-            return ctx_r5.handleNotification();
+            return ctx_r6.handleNotification();
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "span", 4);
@@ -49189,13 +49290,15 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](6, TopbarComponent_ng_container_0_ng_container_2_span_6_Template, 2, 0, "span", 9);
 
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](7, TopbarComponent_ng_container_0_ng_container_2_span_7_Template, 2, 0, "span", 9);
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 10);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 10);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "form");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "form");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "app-notifications-dropdown-inner", 11);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](10, "app-notifications-dropdown-inner", 11);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -49215,11 +49318,15 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r3.unreadCounter != 0 && ctx_r3.currentUser.role != 1);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r3.unreadCounter != 0 && ctx_r3.currentUser.role !== 1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r3.unreadSuperCounter != 0 && ctx_r3.currentUser.role === 1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("unreadCounter", ctx_r3.unreadCounter)("publisherRows", ctx_r3.publisherRows)("superAdminRows", ctx_r3.superAdminRows);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("unreadCounter", ctx_r3.unreadCounter)("unreadSuperCounter", ctx_r3.unreadSuperCounter)("publisherRows", ctx_r3.publisherRows)("superAdminRows", ctx_r3.superAdminRows);
         }
       }
 
@@ -49229,7 +49336,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, TopbarComponent_ng_container_0_ng_container_1_Template, 5, 1, "ng-container", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, TopbarComponent_ng_container_0_ng_container_2_Template, 10, 5, "ng-container", 0);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, TopbarComponent_ng_container_0_ng_container_2_Template, 11, 7, "ng-container", 0);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementContainerEnd"]();
         }
@@ -49287,15 +49394,15 @@
         }
 
         if (rf & 2) {
-          var _user_r10 = ctx.ngIf;
+          var _user_r11 = ctx.ngIf;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_user_r10.fullname);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_user_r11.fullname);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](10, 2, _user_r10.fullname));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](10, 2, _user_r11.fullname));
         }
       }
 
@@ -49311,11 +49418,11 @@
         }
 
         if (rf & 2) {
-          var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+          var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, ctx_r7.user$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, ctx_r8.user$));
         }
       }
 
@@ -49369,15 +49476,15 @@
         }
 
         if (rf & 2) {
-          var _user_r12 = ctx.ngIf;
+          var _user_r13 = ctx.ngIf;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_user_r12.fullname);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_user_r13.fullname);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](11, 2, _user_r12.fullname));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](11, 2, _user_r13.fullname));
         }
       }
 
@@ -49393,11 +49500,11 @@
         }
 
         if (rf & 2) {
-          var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+          var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, ctx_r8.user$));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpipeBind1"](2, 1, ctx_r9.user$));
         }
       }
 
@@ -49436,12 +49543,16 @@
           this.publisherRows = [];
           this.superAdminRows = [];
           this.unreadCounter = 0;
+          this.unreadSuperCounter = 0;
+          this.unreadAdminCounter = 0;
           this.user$ = this.auth.currentUserSubject.asObservable();
         }
 
         _createClass(TopbarComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
+            var _this133 = this;
+
             this.currentUser = this.auth.currentUserValue; // topbar extras
 
             this.extraSearchDisplay = this.layout.getProp('extras.search.display');
@@ -49458,6 +49569,25 @@
             this.extrasQuickPanelDisplay = this.layout.getProp('extras.quickPanel.display');
             this.getSuperadminNotifications();
             this.getPublisherNotifications();
+            this.notificationSendService.getMessage().subscribe(function (notifications) {
+              var myNotifications = notifications.notifications.filter(function (res) {
+                return res.receiver == _this133.currentUser._id;
+              });
+
+              if (myNotifications.length) {
+                if (_this133.currentUser.role !== 1) {
+                  _this133.unreadCounter = _this133.unreadCounter + myNotifications.length;
+
+                  _this133.cdr.detectChanges();
+                } else {
+                  _this133.unreadSuperCounter = _this133.unreadSuperCounter + myNotifications.length;
+
+                  _this133.cdr.detectChanges();
+                }
+              }
+
+              console.log(notifications, _this133.unreadCounter, _this133.currentUser, 'ddddd');
+            });
           }
         }, {
           key: "handleNotification",
@@ -49471,7 +49601,7 @@
         }, {
           key: "getPublisherNotifications",
           value: function getPublisherNotifications() {
-            var _this131 = this;
+            var _this134 = this;
 
             var notificationArr = [];
             this.unreadCounter = 0;
@@ -49479,22 +49609,22 @@
               next: function next(res) {
                 res.map(function (d) {
                   notificationArr.push({
-                    _key: d.notifyData[0]._key,
-                    _id: d.notifyData[0]._id,
-                    content: d.notifyData[0].content,
-                    title: d.notifyData[0].title,
-                    createdAt: d.notifyData[0].createdAt,
+                    _key: d._key,
+                    _id: d._id,
+                    content: d.content,
+                    title: d.title,
+                    createdAt: d.createdAt,
                     sender: d.sender[0],
                     status: d.status
                   });
 
                   if (!d.status) {
-                    _this131.unreadCounter++;
+                    _this134.unreadCounter++;
                   }
                 });
-                _this131.publisherRows = notificationArr;
+                _this134.publisherRows = notificationArr;
 
-                _this131.cdr.detectChanges();
+                _this134.cdr.detectChanges();
               },
               error: function error(e) {
                 console.log(e.error);
@@ -49504,14 +49634,30 @@
         }, {
           key: "getSuperadminNotifications",
           value: function getSuperadminNotifications() {
-            var _this132 = this;
+            var _this135 = this;
 
+            var supernotificationArr = [];
+            this.unreadSuperCounter = 0;
             this.notificationSendService.superAdminNotificatoins().subscribe({
               next: function next(res) {
-                _this132.superAdminRows = res;
-                console.log("======", _this132.superAdminRows);
+                res.map(function (d) {
+                  supernotificationArr.push({
+                    _key: d._key,
+                    _id: d._id,
+                    content: d.content,
+                    title: d.title,
+                    createdAt: d.createdAt,
+                    sender: d.sender[0],
+                    status: d.status
+                  });
 
-                _this132.cdr.detectChanges();
+                  if (typeof d.status === 'boolean' && !d.status) {
+                    _this135.unreadSuperCounter++;
+                  }
+                });
+                _this135.superAdminRows = supernotificationArr;
+
+                _this135.cdr.detectChanges();
               },
               error: function error(e) {
                 console.log(e.error);
@@ -49521,36 +49667,36 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this133 = this;
+            var _this136 = this;
 
             _assets_js_components_util__WEBPACK_IMPORTED_MODULE_8__["KTUtil"].ready(function () {
               // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
               // Add 'implements AfterViewInit' to the class.
-              if (_this133.extraSearchDisplay && _this133.extrasSearchLayout === 'offcanvas') {
+              if (_this136.extraSearchDisplay && _this136.extrasSearchLayout === 'offcanvas') {
                 _assets_js_layout_extended_quick_search__WEBPACK_IMPORTED_MODULE_1__["default"].init('kt_quick_search');
               }
 
-              if (_this133.extrasNotificationsDisplay && _this133.extrasNotificationsLayout === 'offcanvas') {
+              if (_this136.extrasNotificationsDisplay && _this136.extrasNotificationsLayout === 'offcanvas') {
                 // Init Quick Notifications Offcanvas Panel
                 _assets_js_layout_extended_quick_notifications__WEBPACK_IMPORTED_MODULE_2__["default"].init('kt_quick_notifications');
               }
 
-              if (_this133.extrasQuickActionsDisplay && _this133.extrasQuickActionsLayout === 'offcanvas') {
+              if (_this136.extrasQuickActionsDisplay && _this136.extrasQuickActionsLayout === 'offcanvas') {
                 // Init Quick Actions Offcanvas Panel
                 _assets_js_layout_extended_quick_actions__WEBPACK_IMPORTED_MODULE_3__["default"].init('kt_quick_actions');
               }
 
-              if (_this133.extrasCartDisplay && _this133.extrasCartLayout === 'offcanvas') {
+              if (_this136.extrasCartDisplay && _this136.extrasCartLayout === 'offcanvas') {
                 // Init Quick Cart Panel
                 _assets_js_layout_extended_quick_cart__WEBPACK_IMPORTED_MODULE_4__["default"].init('kt_quick_cart');
               }
 
-              if (_this133.extrasQuickPanelDisplay) {
+              if (_this136.extrasQuickPanelDisplay) {
                 // Init Quick Offcanvas Panel
                 _assets_js_layout_extended_quick_panel__WEBPACK_IMPORTED_MODULE_5__["default"].init('kt_quick_panel');
               }
 
-              if (_this133.extrasUserDisplay && _this133.extrasUserLayout === 'offcanvas') {
+              if (_this136.extrasUserDisplay && _this136.extrasUserLayout === 'offcanvas') {
                 // Init Quick User Panel
                 _assets_js_layout_extended_quick_user__WEBPACK_IMPORTED_MODULE_6__["default"].init('kt_quick_user');
               } // Init Header Topbar For Mobile Mode
@@ -49573,7 +49719,7 @@
         selectors: [["app-topbar"]],
         decls: 4,
         vars: 2,
-        consts: [[4, "ngIf"], [2, "display", "flex"], [1, "topbar-item"], ["id", "kt_quick_notifications_toggle", 1, "btn", "btn-icon", "btn-icon-mobile", "btn-clean", "btn-lg", "mr-1", "pulse", "pulse-primary"], ["cacheSVG", "true", 1, "svg-icon", "svg-icon-xl", "svg-icon-primary", 3, "inlineSVG"], [1, "pulse-ring"], ["ngbDropdown", "", "placement", "bottom", 1, "dropdown"], ["data-toggle", "dropdown", "data-offset", "10px,0px", "ngbDropdownToggle", "", 1, "topbar-item"], [1, "btn", "btn-icon", "btn-clean", "btn-dropdown", "btn-lg", "mr-1", "pulse", "pulse-primary", 3, "click"], ["class", "label label-warning", "style", "line-height: 12px;padding: 2px 5px;position: absolute;right: 2px;top: 10px;", 4, "ngIf"], ["ngbDropdownMenu", "", 1, "dropdown-menu", "p-0", "m-0", "dropdown-menu-anim-up", "dropdown-menu-lg"], [3, "unreadCounter", "publisherRows", "superAdminRows"], [1, "label", "label-warning", 2, "line-height", "12px", "padding", "2px 5px", "position", "absolute", "right", "2px", "top", "10px"], ["id", "kt_quick_user_toggle", 1, "btn", "btn-icon", "btn-icon-mobile", "w-auto", "btn-clean", "d-flex", "align-items-center", "btn-lg", "px-2"], [1, "text-muted", "font-weight-bold", "font-size-base", "d-none", "d-md-inline", "mr-1"], [1, "text-dark-50", "font-weight-bolder", "font-size-base", "d-none", "d-md-inline", "mr-3"], [1, "symbol", "symbol-lg-35", "symbol-25", "symbol-light-success"], [1, "symbol-label", "font-size-h5", "font-weight-bold"], ["ngbDropdown", "", "placement", "bottom-right", 1, "dropdown"], ["data-toggle", "dropdown", "data-offset", "0px,0px", "ngbDropdownToggle", "", 1, "topbar-item"], [1, "btn", "btn-icon", "w-auto", "btn-clean", "d-flex", "align-items-center", "btn-lg", "px-2"], [1, "symbol", "symbol-35", "symbol-light-success"], ["ngbDropdownMenu", "", 1, "dropdown-menu", "p-0", "m-0", "dropdown-menu-right", "dropdown-menu-anim-up", "dropdown-menu-lg", "p-0"]],
+        consts: [[4, "ngIf"], [2, "display", "flex"], [1, "topbar-item"], ["id", "kt_quick_notifications_toggle", 1, "btn", "btn-icon", "btn-icon-mobile", "btn-clean", "btn-lg", "mr-1", "pulse", "pulse-primary"], ["cacheSVG", "true", 1, "svg-icon", "svg-icon-xl", "svg-icon-primary", 3, "inlineSVG"], [1, "pulse-ring"], ["ngbDropdown", "", "placement", "bottom", 1, "dropdown"], ["id", "notificationToggle", "data-toggle", "dropdown", "data-offset", "10px,0px", "ngbDropdownToggle", "", 1, "topbar-item"], [1, "btn", "btn-icon", "btn-clean", "btn-dropdown", "btn-lg", "mr-1", "pulse", "pulse-primary", 3, "click"], ["class", "label label-warning", "style", "line-height: 12px;padding: 2px 5px;position: absolute;right: 2px;top: 10px;", 4, "ngIf"], ["ngbDropdownMenu", "", "aria-labelledby", "notificationToggle", 1, "dropdown-menu", "p-0", "m-0", "dropdown-menu-anim-up", "dropdown-menu-lg"], [3, "unreadCounter", "unreadSuperCounter", "publisherRows", "superAdminRows"], [1, "label", "label-warning", 2, "line-height", "12px", "padding", "2px 5px", "position", "absolute", "right", "2px", "top", "10px"], ["id", "kt_quick_user_toggle", 1, "btn", "btn-icon", "btn-icon-mobile", "w-auto", "btn-clean", "d-flex", "align-items-center", "btn-lg", "px-2"], [1, "text-muted", "font-weight-bold", "font-size-base", "d-none", "d-md-inline", "mr-1"], [1, "text-dark-50", "font-weight-bolder", "font-size-base", "d-none", "d-md-inline", "mr-3"], [1, "symbol", "symbol-lg-35", "symbol-25", "symbol-light-success"], [1, "symbol-label", "font-size-h5", "font-weight-bold"], ["ngbDropdown", "", "placement", "bottom-right", 1, "dropdown"], ["data-toggle", "dropdown", "data-offset", "0px,0px", "ngbDropdownToggle", "", 1, "topbar-item"], [1, "btn", "btn-icon", "w-auto", "btn-clean", "d-flex", "align-items-center", "btn-lg", "px-2"], [1, "symbol", "symbol-35", "symbol-light-success"], ["ngbDropdownMenu", "", 1, "dropdown-menu", "p-0", "m-0", "dropdown-menu-right", "dropdown-menu-anim-up", "dropdown-menu-lg", "p-0"]],
         template: function TopbarComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, TopbarComponent_ng_container_0_Template, 3, 2, "ng-container", 0);
@@ -49715,7 +49861,7 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this134 = this;
+            var _this137 = this;
 
             _assets_js_components_util__WEBPACK_IMPORTED_MODULE_1__["KTUtil"].ready(function () {
               // Init Brand Panel For Logo
@@ -49727,7 +49873,7 @@
 
               _assets_js_layout_base_aside_menu__WEBPACK_IMPORTED_MODULE_7__["default"].init('kt_aside_menu');
 
-              if (_this134.asideSelfMinimizeToggle) {
+              if (_this137.asideSelfMinimizeToggle) {
                 // Init Aside Menu Toggle
                 _assets_js_layout_base_aside_toggle__WEBPACK_IMPORTED_MODULE_2__["default"].init('kt_aside_toggle');
               } // Init Sticky Card
@@ -50305,12 +50451,12 @@
         }, {
           key: "getReportingProviderList",
           value: function getReportingProviderList() {
-            var _this135 = this;
+            var _this138 = this;
 
             if (this.companySelected) {
               this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
                 res.reportingProviders.map(function (report) {
-                  _this135.companyList.push(report.reportingProvider);
+                  _this138.companyList.push(report.reportingProvider);
                 });
               });
             }
@@ -50318,11 +50464,11 @@
         }, {
           key: "getAdvertiserList",
           value: function getAdvertiserList() {
-            var _this136 = this;
+            var _this139 = this;
 
             if (this.companySelected) {
               this.tagService.getTagAdvertiser(this.companySelected.split('/')[1]).subscribe(function (res) {
-                _this136.advertiserList.push("all");
+                _this139.advertiserList.push("all");
 
                 var _iterator6 = _createForOfIteratorHelper(res),
                     _step6;
@@ -50331,7 +50477,7 @@
                   for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
                     var resAdvertiser = _step6.value;
 
-                    _this136.advertiserList.push(resAdvertiser.advertiser);
+                    _this139.advertiserList.push(resAdvertiser.advertiser);
                   }
                 } catch (err) {
                   _iterator6.e(err);
@@ -51113,26 +51259,50 @@
       /* harmony import */
 
 
-      var src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! rxjs */
+      "./node_modules/rxjs/_esm2015/index.js");
+      /* harmony import */
+
+
+      var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! src/environments/environment */
       "./src/environments/environment.ts");
       /* harmony import */
 
 
-      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/common/http */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      /* harmony import */
 
-      var API_NOTIFICATION_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/notifications");
+
+      var ngx_socket_io__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! ngx-socket-io */
+      "./node_modules/ngx-socket-io/__ivy_ngcc__/fesm2015/ngx-socket-io.js");
+
+      var API_NOTIFICATION_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl, "/notifications");
 
       var NotificationSendService = /*#__PURE__*/function () {
-        function NotificationSendService(http) {
+        function NotificationSendService(http, socket) {
           _classCallCheck(this, NotificationSendService);
 
           this.http = http;
+          this.socket = socket;
         }
 
         _createClass(NotificationSendService, [{
+          key: "getMessage",
+          value: function getMessage() {
+            var _this140 = this;
+
+            return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](function (observer) {
+              _this140.socket.on('notifications', function (notifications) {
+                observer.next(notifications);
+              });
+            });
+          }
+        }, {
           key: "sendNotitication",
           value: function sendNotitication(notiData) {
             return this.http.post("".concat(API_NOTIFICATION_URL, "/new-notification"), notiData);
@@ -51153,6 +51323,11 @@
             return this.http["delete"](API_NOTIFICATION_URL + "/".concat(notificationKey));
           }
         }, {
+          key: "clearSuperNotification",
+          value: function clearSuperNotification(notificationKey) {
+            return this.http["delete"](API_NOTIFICATION_URL + "/".concat(notificationKey));
+          }
+        }, {
           key: "getDetailNotificatoin",
           value: function getDetailNotificatoin(notificationId) {
             return this.http.get("".concat(API_NOTIFICATION_URL, "/detail/").concat(notificationId));
@@ -51163,7 +51338,7 @@
       }();
 
       NotificationSendService.ɵfac = function NotificationSendService_Factory(t) {
-        return new (t || NotificationSendService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+        return new (t || NotificationSendService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ngx_socket_io__WEBPACK_IMPORTED_MODULE_4__["Socket"]));
       };
 
       NotificationSendService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
@@ -51181,7 +51356,9 @@
           }]
         }], function () {
           return [{
-            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]
+          }, {
+            type: ngx_socket_io__WEBPACK_IMPORTED_MODULE_4__["Socket"]
           }];
         }, null);
       })();

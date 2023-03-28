@@ -3563,11 +3563,11 @@
               next: function next(res) {
                 res.map(function (d) {
                   notificationArr.push({
-                    _key: d.notifyData[0]._key,
-                    _id: d.notifyData[0]._id,
-                    content: d.notifyData[0].content,
-                    title: d.notifyData[0].title,
-                    createdAt: d.notifyData[0].createdAt,
+                    _key: d._key,
+                    _id: d._id,
+                    content: d.content,
+                    title: d.title,
+                    createdAt: d.createdAt,
                     sender: d.sender[0],
                     status: d.status
                   });
@@ -4022,8 +4022,8 @@
           }
         }, {
           key: "viewNotification",
-          value: function viewNotification(notificationID) {
-            this.router.navigateByUrl('/notifications/detail/' + notificationID);
+          value: function viewNotification(subId) {
+            this.router.navigateByUrl('/notifications/detail/' + subId);
           }
         }, {
           key: "clearNotification",

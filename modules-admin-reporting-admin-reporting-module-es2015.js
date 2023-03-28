@@ -18940,23 +18940,31 @@ class ApptitudeComponent {
                     .sortBy(function (d) { return d.date; })
                     .sortBy(function (d) { return d.publisher; })
                     .value();
-                var prevObj = {};
-                var indexToChange = 0;
-                var reformattedArray = [];
-                var reformattedArray = sorted.map(function (obj, index) {
-                    if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                        reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
+                const multiGroupBy = (seq, keys) => {
+                    if (!keys.length)
+                        return seq;
+                    var first = keys[0];
+                    var rest = keys.slice(1);
+                    return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                        return multiGroupBy(value, rest);
+                    });
+                };
+                const groupedItems = multiGroupBy(sorted, ["date", "publisher"]);
+                const reformattedArray = [];
+                for (const item in groupedItems) {
+                    if (groupedItems.hasOwnProperty(item)) {
+                        for (const elm in groupedItems[item]) {
+                            const obj = {
+                                date: groupedItems[item][elm][0].date,
+                                publisher: groupedItems[item][elm][0].publisher,
+                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                            };
+                            reformattedArray.push(obj);
+                        }
                     }
-                    else {
-                        reformattedArray.push(obj);
-                    }
-                    prevObj = obj;
-                    indexToChange = reformattedArray.length - 1;
-                    //return the newly reformatted array
-                    return reformattedArray;
-                });
+                }
                 let pulisherArr = [];
-                for (let reformatData of reformattedArray[0]) {
+                for (let reformatData of reformattedArray) {
                     pulisherArr.push(reformatData.publisher);
                 }
                 var unique = pulisherArr.filter(function (elem, index, self) {
@@ -18991,7 +18999,7 @@ class ApptitudeComponent {
                 for (let u of unique) {
                     let subStackedArr = [];
                     for (let date of datesOfRevenueVal) {
-                        let filterLen = reformattedArray[0].filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
+                        let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
                             subStackedArr.push(filterLen[0].publisherNet);
                         }
@@ -19688,23 +19696,31 @@ class HopkinsComponent {
                     .sortBy(function (d) { return d.date; })
                     .sortBy(function (d) { return d.publisher; })
                     .value();
-                var prevObj = {};
-                var indexToChange = 0;
-                var reformattedArray = [];
-                var reformattedArray = sorted.map(function (obj, index) {
-                    if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                        reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
+                const multiGroupBy = (seq, keys) => {
+                    if (!keys.length)
+                        return seq;
+                    var first = keys[0];
+                    var rest = keys.slice(1);
+                    return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                        return multiGroupBy(value, rest);
+                    });
+                };
+                const groupedItems = multiGroupBy(sorted, ["date", "publisher"]);
+                const reformattedArray = [];
+                for (const item in groupedItems) {
+                    if (groupedItems.hasOwnProperty(item)) {
+                        for (const elm in groupedItems[item]) {
+                            const obj = {
+                                date: groupedItems[item][elm][0].date,
+                                publisher: groupedItems[item][elm][0].publisher,
+                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                            };
+                            reformattedArray.push(obj);
+                        }
                     }
-                    else {
-                        reformattedArray.push(obj);
-                    }
-                    prevObj = obj;
-                    indexToChange = reformattedArray.length - 1;
-                    //return the newly reformatted array
-                    return reformattedArray;
-                });
+                }
                 let pulisherArr = [];
-                for (let reformatData of reformattedArray[0]) {
+                for (let reformatData of reformattedArray) {
                     pulisherArr.push(reformatData.publisher);
                 }
                 var unique = pulisherArr.filter(function (elem, index, self) {
@@ -19739,7 +19755,7 @@ class HopkinsComponent {
                 for (let u of unique) {
                     let subStackedArr = [];
                     for (let date of datesOfRevenueVal) {
-                        let filterLen = reformattedArray[0].filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
+                        let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
                             subStackedArr.push(filterLen[0].publisherNet);
                         }
@@ -20830,23 +20846,31 @@ class LyonsComponent {
                     .sortBy(function (d) { return d.date; })
                     .sortBy(function (d) { return d.publisher; })
                     .value();
-                var prevObj = {};
-                var indexToChange = 0;
-                var reformattedArray = [];
-                var reformattedArray = sorted.map(function (obj, index) {
-                    if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                        reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
+                const multiGroupBy = (seq, keys) => {
+                    if (!keys.length)
+                        return seq;
+                    var first = keys[0];
+                    var rest = keys.slice(1);
+                    return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                        return multiGroupBy(value, rest);
+                    });
+                };
+                const groupedItems = multiGroupBy(sorted, ["date", "publisher"]);
+                const reformattedArray = [];
+                for (const item in groupedItems) {
+                    if (groupedItems.hasOwnProperty(item)) {
+                        for (const elm in groupedItems[item]) {
+                            const obj = {
+                                date: groupedItems[item][elm][0].date,
+                                publisher: groupedItems[item][elm][0].publisher,
+                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                            };
+                            reformattedArray.push(obj);
+                        }
                     }
-                    else {
-                        reformattedArray.push(obj);
-                    }
-                    prevObj = obj;
-                    indexToChange = reformattedArray.length - 1;
-                    //return the newly reformatted array
-                    return reformattedArray;
-                });
+                }
                 let pulisherArr = [];
-                for (let reformatData of reformattedArray[0]) {
+                for (let reformatData of reformattedArray) {
                     pulisherArr.push(reformatData.publisher);
                 }
                 var unique = pulisherArr.filter(function (elem, index, self) {
@@ -20881,7 +20905,7 @@ class LyonsComponent {
                 for (let u of unique) {
                     let subStackedArr = [];
                     for (let date of datesOfRevenueVal) {
-                        let filterLen = reformattedArray[0].filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
+                        let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
                             subStackedArr.push(filterLen[0].publisherNet);
                         }
@@ -22525,22 +22549,31 @@ class PerionComponent {
                     .sortBy(function (d) { return d.date; })
                     .sortBy(function (d) { return d.publisher; })
                     .value();
-                var prevObj = {};
-                var indexToChange = 0;
-                var reformattedArray = [];
-                var reformattedArray = sorted.map(function (obj, index) {
-                    if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                        reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
+                const multiGroupBy = (seq, keys) => {
+                    if (!keys.length)
+                        return seq;
+                    var first = keys[0];
+                    var rest = keys.slice(1);
+                    return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                        return multiGroupBy(value, rest);
+                    });
+                };
+                const groupedItems = multiGroupBy(sorted, ["date", "publisher"]);
+                const reformattedArray = [];
+                for (const item in groupedItems) {
+                    if (groupedItems.hasOwnProperty(item)) {
+                        for (const elm in groupedItems[item]) {
+                            const obj = {
+                                date: groupedItems[item][elm][0].date,
+                                publisher: groupedItems[item][elm][0].publisher,
+                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                            };
+                            reformattedArray.push(obj);
+                        }
                     }
-                    else {
-                        reformattedArray.push(obj);
-                    }
-                    prevObj = obj;
-                    indexToChange = reformattedArray.length - 1;
-                    return reformattedArray;
-                });
+                }
                 let pulisherArr = [];
-                for (let reformatData of reformattedArray[0]) {
+                for (let reformatData of reformattedArray) {
                     pulisherArr.push(reformatData.publisher);
                 }
                 var unique = pulisherArr.filter(function (elem, index, self) {
@@ -22575,7 +22608,7 @@ class PerionComponent {
                 for (let u of unique) {
                     let subStackedArr = [];
                     for (let date of datesOfRevenueVal) {
-                        let filterLen = reformattedArray[0].filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
+                        let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
                             subStackedArr.push(filterLen[0].publisherNet);
                         }
@@ -23218,30 +23251,38 @@ class RubiComponent {
                     .sortBy(function (d) { return d.date; })
                     .sortBy(function (d) { return d.publisher; })
                     .value();
-                var prevObj = {};
-                var indexToChange = 0;
-                var reformattedArray = [];
-                var reformattedArray = sorted.map(function (obj, index) {
-                    if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                        reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
+                const multiGroupBy = (seq, keys) => {
+                    if (!keys.length)
+                        return seq;
+                    var first = keys[0];
+                    var rest = keys.slice(1);
+                    return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                        return multiGroupBy(value, rest);
+                    });
+                };
+                const groupedItems = multiGroupBy(sorted, ["date", "publisher"]);
+                const reformattedArray = [];
+                for (const item in groupedItems) {
+                    if (groupedItems.hasOwnProperty(item)) {
+                        for (const elm in groupedItems[item]) {
+                            const obj = {
+                                date: groupedItems[item][elm][0].date,
+                                publisher: groupedItems[item][elm][0].publisher,
+                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                            };
+                            reformattedArray.push(obj);
+                        }
                     }
-                    else {
-                        reformattedArray.push(obj);
-                    }
-                    prevObj = obj;
-                    indexToChange = reformattedArray.length - 1;
-                    //return the newly reformatted array
-                    return reformattedArray;
-                });
+                }
                 let pulisherArr = [];
-                for (let reformatData of reformattedArray[0]) {
+                for (let reformatData of reformattedArray) {
                     pulisherArr.push(reformatData.publisher);
                 }
                 var unique = pulisherArr.filter(function (elem, index, self) {
                     return index === self.indexOf(elem);
                 });
-                this.remove_element(unique, "No Publisher");
-                console.log(unique);
+                // this.remove_element(unique, "No Publisher");
+                // console.log(unique);
                 this.allChartStat = this.allChartStat.slice().sort((a, b) => a.date - b.date);
                 var helperChart = {};
                 var resultChart = this.allChartStat.reduce(function (r, o) {
@@ -23269,7 +23310,7 @@ class RubiComponent {
                 for (let u of unique) {
                     let subStackedArr = [];
                     for (let date of datesOfRevenueVal) {
-                        let filterLen = reformattedArray[0].filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
+                        let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
                             subStackedArr.push(filterLen[0].publisherNet);
                         }
@@ -23951,22 +23992,31 @@ class SolexBcComponent {
                     .sortBy(function (d) { return d.date; })
                     .sortBy(function (d) { return d.publisher; })
                     .value();
-                var prevObj = {};
-                var indexToChange = 0;
-                var reformattedArray = [];
-                var reformattedArray = sorted.map(function (obj, index) {
-                    if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                        reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
+                const multiGroupBy = (seq, keys) => {
+                    if (!keys.length)
+                        return seq;
+                    var first = keys[0];
+                    var rest = keys.slice(1);
+                    return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                        return multiGroupBy(value, rest);
+                    });
+                };
+                const groupedItems = multiGroupBy(sorted, ["date", "publisher"]);
+                const reformattedArray = [];
+                for (const item in groupedItems) {
+                    if (groupedItems.hasOwnProperty(item)) {
+                        for (const elm in groupedItems[item]) {
+                            const obj = {
+                                date: groupedItems[item][elm][0].date,
+                                publisher: groupedItems[item][elm][0].publisher,
+                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                            };
+                            reformattedArray.push(obj);
+                        }
                     }
-                    else {
-                        reformattedArray.push(obj);
-                    }
-                    prevObj = obj;
-                    indexToChange = reformattedArray.length - 1;
-                    return reformattedArray;
-                });
+                }
                 let pulisherArr = [];
-                for (let reformatData of reformattedArray[0]) {
+                for (let reformatData of reformattedArray) {
                     pulisherArr.push(reformatData.publisher);
                 }
                 var unique = pulisherArr.filter(function (elem, index, self) {
@@ -24001,7 +24051,7 @@ class SolexBcComponent {
                 for (let u of unique) {
                     let subStackedArr = [];
                     for (let date of datesOfRevenueVal) {
-                        let filterLen = reformattedArray[0].filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
+                        let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
                             subStackedArr.push(filterLen[0].publisherNet);
                         }
@@ -25392,12 +25442,13 @@ class VerizonDirectComponent {
     getChartMetrics(company, startDate, endDate) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
-                const response = yield this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
-                this.allChartStat = response.stats;
-                this.allChartStat.map(function (resStat) {
-                    resStat.publisher = "No Publisher";
-                    resStat.tagname = "No Tag";
-                });
+                // const response = await this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
+                // this.allChartStat = response.stats;
+                // this.allChartStat.map(function (resStat: { publisher: string; tagname: string; }) {
+                //   resStat.publisher = "No Publisher";
+                //   resStat.tagname = "No Tag";
+                // });
+                this.allChartStat = this.allStats;
                 for (var tagL of this.tagList) {
                     if (tagL.tag.advertiser == "verizon-direct") {
                         for (var tagSub of tagL.tag.subids) {
@@ -25440,23 +25491,31 @@ class VerizonDirectComponent {
                     .sortBy(function (d) { return d.date; })
                     .sortBy(function (d) { return d.publisher; })
                     .value();
-                var prevObj = {};
-                var indexToChange = 0;
-                var reformattedArray = [];
-                var reformattedArray = sorted.map(function (obj, index) {
-                    if (prevObj['date'] == obj.date && prevObj['publisher'] == obj.publisher) {
-                        reformattedArray[indexToChange].publisherNet = parseFloat(prevObj['publisherNet']) + parseFloat(obj.publisherNet);
+                const multiGroupBy = (seq, keys) => {
+                    if (!keys.length)
+                        return seq;
+                    var first = keys[0];
+                    var rest = keys.slice(1);
+                    return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                        return multiGroupBy(value, rest);
+                    });
+                };
+                const groupedItems = multiGroupBy(sorted, ["date", "publisher"]);
+                const reformattedArray = [];
+                for (const item in groupedItems) {
+                    if (groupedItems.hasOwnProperty(item)) {
+                        for (const elm in groupedItems[item]) {
+                            const obj = {
+                                date: groupedItems[item][elm][0].date,
+                                publisher: groupedItems[item][elm][0].publisher,
+                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                            };
+                            reformattedArray.push(obj);
+                        }
                     }
-                    else {
-                        reformattedArray.push(obj);
-                    }
-                    prevObj = obj;
-                    indexToChange = reformattedArray.length - 1;
-                    //return the newly reformatted array
-                    return reformattedArray;
-                });
+                }
                 let pulisherArr = [];
-                for (let reformatData of reformattedArray[0]) {
+                for (let reformatData of reformattedArray) {
                     pulisherArr.push(reformatData.publisher);
                 }
                 var unique = pulisherArr.filter(function (elem, index, self) {
@@ -25491,7 +25550,7 @@ class VerizonDirectComponent {
                 for (let u of unique) {
                     let subStackedArr = [];
                     for (let date of datesOfRevenueVal) {
-                        let filterLen = reformattedArray[0].filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
+                        let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
                             subStackedArr.push(filterLen[0].publisherNet);
                         }

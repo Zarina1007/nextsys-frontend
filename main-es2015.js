@@ -324,28 +324,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
-/* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/__ivy_ngcc__/fesm2015/ngx-clipboard.js");
-/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/__ivy_ngcc__/fesm2015/ngx-translate-core.js");
-/* harmony import */ var ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ng-inline-svg */ "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/auth/_services/auth.service */ "./src/app/modules/auth/_services/auth.service.ts");
-/* harmony import */ var ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ngx-highlightjs */ "./node_modules/ngx-highlightjs/__ivy_ngcc__/fesm2015/ngx-highlightjs.js");
-/* harmony import */ var highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! highlight.js/lib/languages/xml */ "./node_modules/highlight.js/lib/languages/xml.js");
-/* harmony import */ var highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var highlight_js_lib_languages_json__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! highlight.js/lib/languages/json */ "./node_modules/highlight.js/lib/languages/json.js");
-/* harmony import */ var highlight_js_lib_languages_json__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_json__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! highlight.js/lib/languages/scss */ "./node_modules/highlight.js/lib/languages/scss.js");
-/* harmony import */ var highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! highlight.js/lib/languages/typescript */ "./node_modules/highlight.js/lib/languages/typescript.js");
-/* harmony import */ var highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./_metronic/partials/layout/splash-screen/splash-screen.module */ "./src/app/_metronic/partials/layout/splash-screen/splash-screen.module.ts");
-/* harmony import */ var _shared_service_auth_interceptor__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./shared/service/auth.interceptor */ "./src/app/shared/service/auth.interceptor.ts");
-/* harmony import */ var _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/company-management/company-management.component */ "./src/app/modules/company-management/company-management.component.ts");
-/* harmony import */ var _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/admin-reporting/admin-reporting.component */ "./src/app/modules/admin-reporting/admin-reporting.component.ts");
-/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var ngx_socket_io__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ngx-socket-io */ "./node_modules/ngx-socket-io/__ivy_ngcc__/fesm2015/ngx-socket-io.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-clipboard */ "./node_modules/ngx-clipboard/__ivy_ngcc__/fesm2015/ngx-clipboard.js");
+/* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/__ivy_ngcc__/fesm2015/ngx-translate-core.js");
+/* harmony import */ var ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ng-inline-svg */ "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/__ivy_ngcc__/fesm2015/ng-bootstrap.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/auth/_services/auth.service */ "./src/app/modules/auth/_services/auth.service.ts");
+/* harmony import */ var ngx_highlightjs__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ngx-highlightjs */ "./node_modules/ngx-highlightjs/__ivy_ngcc__/fesm2015/ngx-highlightjs.js");
+/* harmony import */ var highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! highlight.js/lib/languages/xml */ "./node_modules/highlight.js/lib/languages/xml.js");
+/* harmony import */ var highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var highlight_js_lib_languages_json__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! highlight.js/lib/languages/json */ "./node_modules/highlight.js/lib/languages/json.js");
+/* harmony import */ var highlight_js_lib_languages_json__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_json__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! highlight.js/lib/languages/scss */ "./node_modules/highlight.js/lib/languages/scss.js");
+/* harmony import */ var highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! highlight.js/lib/languages/typescript */ "./node_modules/highlight.js/lib/languages/typescript.js");
+/* harmony import */ var highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./_metronic/partials/layout/splash-screen/splash-screen.module */ "./src/app/_metronic/partials/layout/splash-screen/splash-screen.module.ts");
+/* harmony import */ var _shared_service_auth_interceptor__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./shared/service/auth.interceptor */ "./src/app/shared/service/auth.interceptor.ts");
+/* harmony import */ var _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/company-management/company-management.component */ "./src/app/modules/company-management/company-management.component.ts");
+/* harmony import */ var _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/admin-reporting/admin-reporting.component */ "./src/app/modules/admin-reporting/admin-reporting.component.ts");
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
 
 
 
@@ -372,6 +375,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+const config = { url: src_environments_environment__WEBPACK_IMPORTED_MODULE_22__["environment"].apiUrl, options: {} };
 function appInitializer(authService) {
     return () => {
         return new Promise((resolve) => {
@@ -385,95 +391,97 @@ function appInitializer(authService) {
  */
 function getHighlightLanguages() {
     return [
-        { name: 'typescript', func: highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_15___default.a },
-        { name: 'scss', func: highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_14___default.a },
-        { name: 'xml', func: highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_12___default.a },
-        { name: 'json', func: highlight_js_lib_languages_json__WEBPACK_IMPORTED_MODULE_13___default.a },
+        { name: 'typescript', func: highlight_js_lib_languages_typescript__WEBPACK_IMPORTED_MODULE_16___default.a },
+        { name: 'scss', func: highlight_js_lib_languages_scss__WEBPACK_IMPORTED_MODULE_15___default.a },
+        { name: 'xml', func: highlight_js_lib_languages_xml__WEBPACK_IMPORTED_MODULE_13___default.a },
+        { name: 'json', func: highlight_js_lib_languages_json__WEBPACK_IMPORTED_MODULE_14___default.a },
     ];
 }
 class AppModule {
 }
-AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]] });
+AppModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({ type: AppModule, bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]] });
 AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({ factory: function AppModule_Factory(t) { return new (t || AppModule)(); }, providers: [
         {
             provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"],
             useFactory: appInitializer,
             multi: true,
-            deps: [_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_10__["AuthService"]],
+            deps: [_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_11__["AuthService"]],
         },
         {
-            provide: ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HIGHLIGHT_OPTIONS"],
+            provide: ngx_highlightjs__WEBPACK_IMPORTED_MODULE_12__["HIGHLIGHT_OPTIONS"],
             useValue: {
                 languages: getHighlightLanguages,
             },
         },
         {
-            provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HTTP_INTERCEPTORS"],
-            useClass: _shared_service_auth_interceptor__WEBPACK_IMPORTED_MODULE_17__["AuthInterceptor"],
+            provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HTTP_INTERCEPTORS"],
+            useClass: _shared_service_auth_interceptor__WEBPACK_IMPORTED_MODULE_18__["AuthInterceptor"],
             multi: true,
         },
     ], imports: [[
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
-            _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__["SplashScreenModule"],
-            _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"].forRoot(),
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-            ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HighlightModule"],
-            ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
-            ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"].forRoot(),
-            ngx_toastr__WEBPACK_IMPORTED_MODULE_20__["ToastrModule"].forRoot(),
-            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"],
+            _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_17__["SplashScreenModule"],
+            _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateModule"].forRoot(),
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+            ngx_highlightjs__WEBPACK_IMPORTED_MODULE_12__["HighlightModule"],
+            ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__["ClipboardModule"],
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"],
+            ngx_socket_io__WEBPACK_IMPORTED_MODULE_3__["SocketIoModule"].forRoot(config),
+            ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGModule"].forRoot(),
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_21__["ToastrModule"].forRoot(),
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"],
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
-        _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_18__["CompanyManagementComponent"],
-        _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__["AdminReportingComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
+        _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_19__["CompanyManagementComponent"],
+        _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_20__["AdminReportingComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
-        _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-        ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HighlightModule"],
-        ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"],
-        _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_20__["ToastrModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"]] }); })();
+        _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_17__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+        ngx_highlightjs__WEBPACK_IMPORTED_MODULE_12__["HighlightModule"],
+        ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__["ClipboardModule"],
+        _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"], ngx_socket_io__WEBPACK_IMPORTED_MODULE_3__["SocketIoModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGModule"], ngx_toastr__WEBPACK_IMPORTED_MODULE_21__["ToastrModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AppModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
                 declarations: [
-                    _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
-                    _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_18__["CompanyManagementComponent"],
-                    _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__["AdminReportingComponent"],
+                    _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
+                    _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_19__["CompanyManagementComponent"],
+                    _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_20__["AdminReportingComponent"],
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                     _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
-                    _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__["SplashScreenModule"],
-                    _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"].forRoot(),
-                    _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-                    ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HighlightModule"],
-                    ngx_clipboard__WEBPACK_IMPORTED_MODULE_4__["ClipboardModule"],
-                    _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
-                    ng_inline_svg__WEBPACK_IMPORTED_MODULE_6__["InlineSVGModule"].forRoot(),
-                    ngx_toastr__WEBPACK_IMPORTED_MODULE_20__["ToastrModule"].forRoot(),
-                    _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_7__["NgbModule"],
+                    _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_17__["SplashScreenModule"],
+                    _ngx_translate_core__WEBPACK_IMPORTED_MODULE_6__["TranslateModule"].forRoot(),
+                    _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"],
+                    ngx_highlightjs__WEBPACK_IMPORTED_MODULE_12__["HighlightModule"],
+                    ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__["ClipboardModule"],
+                    _app_routing_module__WEBPACK_IMPORTED_MODULE_9__["AppRoutingModule"],
+                    ngx_socket_io__WEBPACK_IMPORTED_MODULE_3__["SocketIoModule"].forRoot(config),
+                    ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGModule"].forRoot(),
+                    ngx_toastr__WEBPACK_IMPORTED_MODULE_21__["ToastrModule"].forRoot(),
+                    _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_8__["NgbModule"],
                 ],
                 providers: [
                     {
                         provide: _angular_core__WEBPACK_IMPORTED_MODULE_0__["APP_INITIALIZER"],
                         useFactory: appInitializer,
                         multi: true,
-                        deps: [_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_10__["AuthService"]],
+                        deps: [_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_11__["AuthService"]],
                     },
                     {
-                        provide: ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HIGHLIGHT_OPTIONS"],
+                        provide: ngx_highlightjs__WEBPACK_IMPORTED_MODULE_12__["HIGHLIGHT_OPTIONS"],
                         useValue: {
                             languages: getHighlightLanguages,
                         },
                     },
                     {
-                        provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HTTP_INTERCEPTORS"],
-                        useClass: _shared_service_auth_interceptor__WEBPACK_IMPORTED_MODULE_17__["AuthInterceptor"],
+                        provide: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HTTP_INTERCEPTORS"],
+                        useClass: _shared_service_auth_interceptor__WEBPACK_IMPORTED_MODULE_18__["AuthInterceptor"],
                         multi: true,
                     },
                 ],
-                bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]],
+                bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"]],
             }]
     }], null, null); })();
 
@@ -1653,6 +1661,17 @@ _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["platformBrowser"]().boot
 
 module.exports = __webpack_require__(/*! C:\Code\gitpro\Client\NextSys\src\main.ts */"./src/main.ts");
 
+
+/***/ }),
+
+/***/ 1:
+/*!********************!*\
+  !*** ws (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ })
 
