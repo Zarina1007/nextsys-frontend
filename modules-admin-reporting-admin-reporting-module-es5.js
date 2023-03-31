@@ -21174,8 +21174,8 @@
                             obj = {
                               date: groupedItems[item][elm][0].date,
                               publisher: groupedItems[item][elm][0].publisher,
-                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
-                                return s + x.publisherNet;
+                              revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.revenue;
                               }, 0)
                             };
                             reformattedArray.push(obj);
@@ -21207,11 +21207,9 @@
 
                           r.push(helperChart[key]);
                         } else {
-                          helperChart[key].searches += parseInt(o.searches);
-
-                          if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                          }
+                          helperChart[key].searches += parseInt(o.searches); // if (o.revenue) {
+                          //   helperChart[key].revenue += o.revenue;
+                          // }
                         }
 
                         return r;
@@ -21252,7 +21250,7 @@
                               });
 
                               if (filterLen.length > 0) {
-                                subStackedArr.push(filterLen[0].publisherNet);
+                                subStackedArr.push(filterLen[0].revenue);
                               } else {
                                 subStackedArr.push(0);
                               }
@@ -22685,8 +22683,8 @@
                             obj = {
                               date: groupedItems[item][elm][0].date,
                               publisher: groupedItems[item][elm][0].publisher,
-                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
-                                return s + x.publisherNet;
+                              revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.revenue;
                               }, 0)
                             };
 
@@ -22719,11 +22717,9 @@
 
                           r.push(helperChart[key]);
                         } else {
-                          helperChart[key].searches += parseInt(o.searches);
-
-                          if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                          }
+                          helperChart[key].searches += parseInt(o.searches); // if (o.revenue) {
+                          //   helperChart[key].revenue += o.revenue;
+                          // }
                         }
 
                         return r;
@@ -22765,7 +22761,7 @@
                               });
 
                               if (filterLen.length > 0) {
-                                subStackedArr.push(filterLen[0].publisherNet);
+                                subStackedArr.push(filterLen[0].revenue);
                               } else {
                                 subStackedArr.push(0);
                               }
@@ -24925,8 +24921,8 @@
                             obj = {
                               date: groupedItems[item][elm][0].date,
                               publisher: groupedItems[item][elm][0].publisher,
-                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
-                                return s + x.publisherNet;
+                              revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.revenue;
                               }, 0)
                             };
 
@@ -24959,11 +24955,9 @@
 
                           r.push(helperChart[key]);
                         } else {
-                          helperChart[key].searches += parseInt(o.searches);
-
-                          if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                          }
+                          helperChart[key].searches += parseInt(o.searches); // if (o.revenue) {
+                          //   helperChart[key].revenue += o.revenue;
+                          // }
                         }
 
                         return r;
@@ -25005,7 +24999,7 @@
                               });
 
                               if (filterLen.length > 0) {
-                                subStackedArr.push(filterLen[0].publisherNet);
+                                subStackedArr.push(filterLen[0].revenue);
                               } else {
                                 subStackedArr.push(0);
                               }
@@ -27965,8 +27959,8 @@
                             obj = {
                               date: groupedItems[item][elm][0].date,
                               publisher: groupedItems[item][elm][0].publisher,
-                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
-                                return s + x.publisherNet;
+                              revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.revenue;
                               }, 0)
                             };
 
@@ -27999,11 +27993,9 @@
 
                           r.push(helperChart[key]);
                         } else {
-                          helperChart[key].totalsearches += parseInt(o.totalsearches);
-
-                          if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                          }
+                          helperChart[key].totalsearches += parseInt(o.totalsearches); // if (o.revenue) {
+                          //   helperChart[key].revenue += o.revenue;
+                          // }
                         }
 
                         return r;
@@ -28045,7 +28037,7 @@
                               });
 
                               if (filterLen.length > 0) {
-                                subStackedArr.push(filterLen[0].publisherNet);
+                                subStackedArr.push(filterLen[0].revenue);
                               } else {
                                 subStackedArr.push(0);
                               }
@@ -29339,8 +29331,8 @@
                             obj = {
                               date: groupedItems[item][elm][0].date,
                               publisher: groupedItems[item][elm][0].publisher,
-                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
-                                return s + x.publisherNet;
+                              revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.revenue;
                               }, 0)
                             };
 
@@ -29373,11 +29365,9 @@
 
                           r.push(helperChart[key]);
                         } else {
-                          helperChart[key].searches += parseInt(o.searches);
-
-                          if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                          }
+                          helperChart[key].searches += parseInt(o.searches); // if (o.revenue) {
+                          //   helperChart[key].revenue += o.revenue;
+                          // }
                         }
 
                         return r;
@@ -29419,7 +29409,7 @@
                               });
 
                               if (filterLen.length > 0) {
-                                subStackedArr.push(filterLen[0].publisherNet);
+                                subStackedArr.push(filterLen[0].revenue);
                               } else {
                                 subStackedArr.push(0);
                               }
@@ -30749,8 +30739,8 @@
                             obj = {
                               date: groupedItems[item][elm][0].date,
                               publisher: groupedItems[item][elm][0].publisher,
-                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
-                                return s + x.publisherNet;
+                              revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.revenue;
                               }, 0)
                             };
 
@@ -30783,11 +30773,9 @@
 
                           r.push(helperChart[key]);
                         } else {
-                          helperChart[key].searches += parseInt(o.searches);
-
-                          if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                          }
+                          helperChart[key].searches += parseInt(o.searches); // if (o.revenue) {
+                          //   helperChart[key].revenue += o.revenue;
+                          // }
                         }
 
                         return r;
@@ -30829,7 +30817,7 @@
                               });
 
                               if (filterLen.length > 0) {
-                                subStackedArr.push(filterLen[0].publisherNet);
+                                subStackedArr.push(filterLen[0].revenue);
                               } else {
                                 subStackedArr.push(0);
                               }
@@ -33596,8 +33584,8 @@
                             obj = {
                               date: groupedItems[item][elm][0].date,
                               publisher: groupedItems[item][elm][0].publisher,
-                              publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
-                                return s + x.publisherNet;
+                              revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.revenue;
                               }, 0)
                             };
 
@@ -33676,7 +33664,7 @@
                               });
 
                               if (filterLen.length > 0) {
-                                subStackedArr.push(filterLen[0].publisherNet);
+                                subStackedArr.push(filterLen[0].revenue);
                               } else {
                                 subStackedArr.push(0);
                               }

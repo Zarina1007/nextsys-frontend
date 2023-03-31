@@ -18957,7 +18957,7 @@ class ApptitudeComponent {
                             const obj = {
                                 date: groupedItems[item][elm][0].date,
                                 publisher: groupedItems[item][elm][0].publisher,
-                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                                revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.revenue, 0),
                             };
                             reformattedArray.push(obj);
                         }
@@ -18982,9 +18982,9 @@ class ApptitudeComponent {
                     }
                     else {
                         helperChart[key].searches += parseInt(o.searches);
-                        if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                        }
+                        // if (o.revenue) {
+                        //   helperChart[key].revenue += o.revenue;
+                        // }
                     }
                     return r;
                 }, []);
@@ -19001,7 +19001,7 @@ class ApptitudeComponent {
                     for (let date of datesOfRevenueVal) {
                         let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
-                            subStackedArr.push(filterLen[0].publisherNet);
+                            subStackedArr.push(filterLen[0].revenue);
                         }
                         else {
                             subStackedArr.push(0);
@@ -19713,7 +19713,7 @@ class HopkinsComponent {
                             const obj = {
                                 date: groupedItems[item][elm][0].date,
                                 publisher: groupedItems[item][elm][0].publisher,
-                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                                revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.revenue, 0),
                             };
                             reformattedArray.push(obj);
                         }
@@ -19738,9 +19738,9 @@ class HopkinsComponent {
                     }
                     else {
                         helperChart[key].searches += parseInt(o.searches);
-                        if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                        }
+                        // if (o.revenue) {
+                        //   helperChart[key].revenue += o.revenue;
+                        // }
                     }
                     return r;
                 }, []);
@@ -19757,7 +19757,7 @@ class HopkinsComponent {
                     for (let date of datesOfRevenueVal) {
                         let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
-                            subStackedArr.push(filterLen[0].publisherNet);
+                            subStackedArr.push(filterLen[0].revenue);
                         }
                         else {
                             subStackedArr.push(0);
@@ -20863,7 +20863,7 @@ class LyonsComponent {
                             const obj = {
                                 date: groupedItems[item][elm][0].date,
                                 publisher: groupedItems[item][elm][0].publisher,
-                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                                revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.revenue, 0),
                             };
                             reformattedArray.push(obj);
                         }
@@ -20888,9 +20888,9 @@ class LyonsComponent {
                     }
                     else {
                         helperChart[key].searches += parseInt(o.searches);
-                        if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                        }
+                        // if (o.revenue) {
+                        //   helperChart[key].revenue += o.revenue;
+                        // }
                     }
                     return r;
                 }, []);
@@ -20907,7 +20907,7 @@ class LyonsComponent {
                     for (let date of datesOfRevenueVal) {
                         let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
-                            subStackedArr.push(filterLen[0].publisherNet);
+                            subStackedArr.push(filterLen[0].revenue);
                         }
                         else {
                             subStackedArr.push(0);
@@ -22566,7 +22566,7 @@ class PerionComponent {
                             const obj = {
                                 date: groupedItems[item][elm][0].date,
                                 publisher: groupedItems[item][elm][0].publisher,
-                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                                revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.revenue, 0),
                             };
                             reformattedArray.push(obj);
                         }
@@ -22591,9 +22591,9 @@ class PerionComponent {
                     }
                     else {
                         helperChart[key].totalsearches += parseInt(o.totalsearches);
-                        if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                        }
+                        // if (o.revenue) {
+                        //   helperChart[key].revenue += o.revenue;
+                        // }
                     }
                     return r;
                 }, []);
@@ -22610,7 +22610,7 @@ class PerionComponent {
                     for (let date of datesOfRevenueVal) {
                         let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
-                            subStackedArr.push(filterLen[0].publisherNet);
+                            subStackedArr.push(filterLen[0].revenue);
                         }
                         else {
                             subStackedArr.push(0);
@@ -23268,7 +23268,7 @@ class RubiComponent {
                             const obj = {
                                 date: groupedItems[item][elm][0].date,
                                 publisher: groupedItems[item][elm][0].publisher,
-                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                                revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.revenue, 0),
                             };
                             reformattedArray.push(obj);
                         }
@@ -23293,9 +23293,9 @@ class RubiComponent {
                     }
                     else {
                         helperChart[key].searches += parseInt(o.searches);
-                        if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                        }
+                        // if (o.revenue) {
+                        //   helperChart[key].revenue += o.revenue;
+                        // }
                     }
                     return r;
                 }, []);
@@ -23312,7 +23312,7 @@ class RubiComponent {
                     for (let date of datesOfRevenueVal) {
                         let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
-                            subStackedArr.push(filterLen[0].publisherNet);
+                            subStackedArr.push(filterLen[0].revenue);
                         }
                         else {
                             subStackedArr.push(0);
@@ -24009,7 +24009,7 @@ class SolexBcComponent {
                             const obj = {
                                 date: groupedItems[item][elm][0].date,
                                 publisher: groupedItems[item][elm][0].publisher,
-                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                                revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.revenue, 0),
                             };
                             reformattedArray.push(obj);
                         }
@@ -24034,9 +24034,9 @@ class SolexBcComponent {
                     }
                     else {
                         helperChart[key].searches += parseInt(o.searches);
-                        if (o.revenue) {
-                            helperChart[key].revenue += o.revenue;
-                        }
+                        // if (o.revenue) {
+                        //   helperChart[key].revenue += o.revenue;
+                        // }
                     }
                     return r;
                 }, []);
@@ -24053,7 +24053,7 @@ class SolexBcComponent {
                     for (let date of datesOfRevenueVal) {
                         let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
-                            subStackedArr.push(filterLen[0].publisherNet);
+                            subStackedArr.push(filterLen[0].revenue);
                         }
                         else {
                             subStackedArr.push(0);
@@ -25508,7 +25508,7 @@ class VerizonDirectComponent {
                             const obj = {
                                 date: groupedItems[item][elm][0].date,
                                 publisher: groupedItems[item][elm][0].publisher,
-                                publisherNet: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.publisherNet, 0),
+                                revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], (s, x) => s + x.revenue, 0),
                             };
                             reformattedArray.push(obj);
                         }
@@ -25552,7 +25552,7 @@ class VerizonDirectComponent {
                     for (let date of datesOfRevenueVal) {
                         let filterLen = reformattedArray.filter((reformatted) => reformatted.date == date && reformatted.publisher == u);
                         if (filterLen.length > 0) {
-                            subStackedArr.push(filterLen[0].publisherNet);
+                            subStackedArr.push(filterLen[0].revenue);
                         }
                         else {
                             subStackedArr.push(0);
