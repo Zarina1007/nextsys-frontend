@@ -17347,32 +17347,33 @@ class AccountingComponent {
             this.reportTypeData = yield this.getReportingProviderList();
             this.rows = [];
             this.tempStatData = [];
-            this.PerionData = yield this.getPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            this.LyonData = yield this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            this.RubiData = yield this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            this.ApptitudeData = yield this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            this.SolexBCData = yield this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            this.VerizonData = yield this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            this.System1Data = yield this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
+            console.log(this.reportTypeData, 'dododododododododododododdo');
             if (this.reportTypeData.includes('perion')) {
+                this.PerionData = yield this.getPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempStatData = this.tempStatData.concat(this.PerionData);
             }
             if (this.reportTypeData.includes('lyons')) {
+                this.LyonData = yield this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempStatData = this.tempStatData.concat(this.LyonData);
             }
             if (this.reportTypeData.includes('rubi')) {
+                this.RubiData = yield this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempStatData = this.tempStatData.concat(this.RubiData);
             }
             if (this.reportTypeData.includes('apptitude')) {
+                this.ApptitudeData = yield this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempStatData = this.tempStatData.concat(this.ApptitudeData);
             }
             if (this.reportTypeData.includes('solex-bc')) {
+                this.SolexBCData = yield this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempStatData = this.tempStatData.concat(this.SolexBCData);
             }
             if (this.reportTypeData.includes('verizon-direct')) {
+                this.VerizonData = yield this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempStatData = this.tempStatData.concat(this.VerizonData);
             }
-            if (this.reportTypeData.includes('verizon-direct')) {
+            if (this.reportTypeData.includes('system1')) {
+                this.System1Data = yield this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempStatData = this.tempStatData.concat(this.System1Data);
             }
             const result = [];
@@ -17419,35 +17420,62 @@ class AccountingComponent {
             var solexBCUpData = [];
             var verizonUpData = [];
             var system1UpData = [];
-            perionUpData = yield this.getPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            lyonsUpData = yield this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            rubiUpData = yield this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            apptitudeUpData = yield this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            solexBCUpData = yield this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            verizonUpData = yield this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-            system1UpData = yield this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
             if (this.reportTypeData.includes('perion')) {
+                perionUpData = yield this.getPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempUpdateStatData = this.tempUpdateStatData.concat(perionUpData);
             }
             if (this.reportTypeData.includes('lyons')) {
+                lyonsUpData = yield this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempUpdateStatData = this.tempUpdateStatData.concat(lyonsUpData);
             }
             if (this.reportTypeData.includes('rubi')) {
+                rubiUpData = yield this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempUpdateStatData = this.tempUpdateStatData.concat(rubiUpData);
             }
             if (this.reportTypeData.includes('apptitude')) {
+                apptitudeUpData = yield this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempUpdateStatData = this.tempUpdateStatData.concat(apptitudeUpData);
             }
             if (this.reportTypeData.includes('solex-bc')) {
+                solexBCUpData = yield this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempUpdateStatData = this.tempUpdateStatData.concat(solexBCUpData);
             }
             if (this.reportTypeData.includes('verizon-direct')) {
+                verizonUpData = yield this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempUpdateStatData = this.tempUpdateStatData.concat(verizonUpData);
             }
             if (this.reportTypeData.includes('system1')) {
+                system1UpData = yield this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
                 this.tempUpdateStatData = this.tempUpdateStatData.concat(system1UpData);
             }
             const result = [];
+            // var sorted = _.chain(this.tempUpdateStatData)
+            //   .sortBy(function (d) { return d.reporting })
+            //   .sortBy(function (d) { return d.publisher })
+            //   .value()
+            // const multiGroupBy = (seq: any, keys: string | any[]) => {
+            //   if (!keys.length) return seq;
+            //   var first = keys[0];
+            //   var rest = keys.slice(1);
+            //   return _.mapValues(_.groupBy(seq, first), function (value: any) {
+            //     return multiGroupBy(value, rest);
+            //   });
+            // };
+            // const groupedItems = multiGroupBy(sorted, ["reporting", "publisher"]);
+            // const reformattedArray = [];
+            // for (const item in groupedItems) {
+            //   if (groupedItems.hasOwnProperty(item)) {
+            //     for (const elm in groupedItems[item]) {
+            //       const obj = {
+            //         reporting: groupedItems[item][elm][0].reporting,
+            //         publisher: groupedItems[item][elm][0].publisher,
+            //         revenue: _.reduce(groupedItems[item][elm], (s: any, x: { revenue: any; }) => s + x.revenue, 0),
+            //       };
+            //       reformattedArray.push(obj);
+            //     }
+            //   }
+            // }
+            // console.log(reformattedArray, 'dddd')
             this.tempUpdateStatData.forEach((object) => {
                 const existing = result.filter((item) => item.publisher == object.publisher);
                 if (existing.length) {
@@ -17988,7 +18016,6 @@ class AccountingComponent {
         if (row) {
             height = row.detailHeight;
         }
-        console.log(height, "-------");
         return height;
     }
 }

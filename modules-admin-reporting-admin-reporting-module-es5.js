@@ -18336,70 +18336,99 @@
                       this.reportTypeData = _context.sent;
                       this.rows = [];
                       this.tempStatData = [];
-                      _context.next = 10;
+                      console.log(this.reportTypeData, 'dododododododododododododdo');
+
+                      if (!this.reportTypeData.includes('perion')) {
+                        _context.next = 14;
+                        break;
+                      }
+
+                      _context.next = 12;
                       return this.getPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 10:
+                    case 12:
                       this.PerionData = _context.sent;
-                      _context.next = 13;
+                      this.tempStatData = this.tempStatData.concat(this.PerionData);
+
+                    case 14:
+                      if (!this.reportTypeData.includes('lyons')) {
+                        _context.next = 19;
+                        break;
+                      }
+
+                      _context.next = 17;
                       return this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 13:
+                    case 17:
                       this.LyonData = _context.sent;
-                      _context.next = 16;
-                      return this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-
-                    case 16:
-                      this.RubiData = _context.sent;
-                      _context.next = 19;
-                      return this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+                      this.tempStatData = this.tempStatData.concat(this.LyonData);
 
                     case 19:
-                      this.ApptitudeData = _context.sent;
+                      if (!this.reportTypeData.includes('rubi')) {
+                        _context.next = 24;
+                        break;
+                      }
+
                       _context.next = 22;
-                      return this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+                      return this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 22:
+                      this.RubiData = _context.sent;
+                      this.tempStatData = this.tempStatData.concat(this.RubiData);
+
+                    case 24:
+                      if (!this.reportTypeData.includes('apptitude')) {
+                        _context.next = 29;
+                        break;
+                      }
+
+                      _context.next = 27;
+                      return this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 27:
+                      this.ApptitudeData = _context.sent;
+                      this.tempStatData = this.tempStatData.concat(this.ApptitudeData);
+
+                    case 29:
+                      if (!this.reportTypeData.includes('solex-bc')) {
+                        _context.next = 34;
+                        break;
+                      }
+
+                      _context.next = 32;
+                      return this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 32:
                       this.SolexBCData = _context.sent;
-                      _context.next = 25;
+                      this.tempStatData = this.tempStatData.concat(this.SolexBCData);
+
+                    case 34:
+                      if (!this.reportTypeData.includes('verizon-direct')) {
+                        _context.next = 39;
+                        break;
+                      }
+
+                      _context.next = 37;
                       return this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 25:
+                    case 37:
                       this.VerizonData = _context.sent;
-                      _context.next = 28;
+                      this.tempStatData = this.tempStatData.concat(this.VerizonData);
+
+                    case 39:
+                      if (!this.reportTypeData.includes('system1')) {
+                        _context.next = 44;
+                        break;
+                      }
+
+                      _context.next = 42;
                       return this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 28:
+                    case 42:
                       this.System1Data = _context.sent;
+                      this.tempStatData = this.tempStatData.concat(this.System1Data);
 
-                      if (this.reportTypeData.includes('perion')) {
-                        this.tempStatData = this.tempStatData.concat(this.PerionData);
-                      }
-
-                      if (this.reportTypeData.includes('lyons')) {
-                        this.tempStatData = this.tempStatData.concat(this.LyonData);
-                      }
-
-                      if (this.reportTypeData.includes('rubi')) {
-                        this.tempStatData = this.tempStatData.concat(this.RubiData);
-                      }
-
-                      if (this.reportTypeData.includes('apptitude')) {
-                        this.tempStatData = this.tempStatData.concat(this.ApptitudeData);
-                      }
-
-                      if (this.reportTypeData.includes('solex-bc')) {
-                        this.tempStatData = this.tempStatData.concat(this.SolexBCData);
-                      }
-
-                      if (this.reportTypeData.includes('verizon-direct')) {
-                        this.tempStatData = this.tempStatData.concat(this.VerizonData);
-                      }
-
-                      if (this.reportTypeData.includes('verizon-direct')) {
-                        this.tempStatData = this.tempStatData.concat(this.System1Data);
-                      }
-
+                    case 44:
                       result = [];
                       this.tempStatData.forEach(function (object) {
                         var existing = result.filter(function (item) {
@@ -18432,7 +18461,7 @@
                       this.loadingIndicator = false;
                       this.cdr.detectChanges();
 
-                    case 42:
+                    case 50:
                     case "end":
                       return _context.stop();
                   }
@@ -18467,71 +18496,126 @@
                       solexBCUpData = [];
                       verizonUpData = [];
                       system1UpData = [];
-                      _context2.next = 13;
+
+                      if (!this.reportTypeData.includes('perion')) {
+                        _context2.next = 16;
+                        break;
+                      }
+
+                      _context2.next = 14;
                       return this.getPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 13:
+                    case 14:
                       perionUpData = _context2.sent;
-                      _context2.next = 16;
-                      return this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+                      this.tempUpdateStatData = this.tempUpdateStatData.concat(perionUpData);
 
                     case 16:
-                      lyonsUpData = _context2.sent;
+                      if (!this.reportTypeData.includes('lyons')) {
+                        _context2.next = 21;
+                        break;
+                      }
+
                       _context2.next = 19;
-                      return this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+                      return this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 19:
+                      lyonsUpData = _context2.sent;
+                      this.tempUpdateStatData = this.tempUpdateStatData.concat(lyonsUpData);
+
+                    case 21:
+                      if (!this.reportTypeData.includes('rubi')) {
+                        _context2.next = 26;
+                        break;
+                      }
+
+                      _context2.next = 24;
+                      return this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 24:
                       rubiUpData = _context2.sent;
-                      _context2.next = 22;
+                      this.tempUpdateStatData = this.tempUpdateStatData.concat(rubiUpData);
+
+                    case 26:
+                      if (!this.reportTypeData.includes('apptitude')) {
+                        _context2.next = 31;
+                        break;
+                      }
+
+                      _context2.next = 29;
                       return this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 22:
+                    case 29:
                       apptitudeUpData = _context2.sent;
-                      _context2.next = 25;
-                      return this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-
-                    case 25:
-                      solexBCUpData = _context2.sent;
-                      _context2.next = 28;
-                      return this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
-
-                    case 28:
-                      verizonUpData = _context2.sent;
-                      _context2.next = 31;
-                      return this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
+                      this.tempUpdateStatData = this.tempUpdateStatData.concat(apptitudeUpData);
 
                     case 31:
+                      if (!this.reportTypeData.includes('solex-bc')) {
+                        _context2.next = 36;
+                        break;
+                      }
+
+                      _context2.next = 34;
+                      return this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 34:
+                      solexBCUpData = _context2.sent;
+                      this.tempUpdateStatData = this.tempUpdateStatData.concat(solexBCUpData);
+
+                    case 36:
+                      if (!this.reportTypeData.includes('verizon-direct')) {
+                        _context2.next = 41;
+                        break;
+                      }
+
+                      _context2.next = 39;
+                      return this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 39:
+                      verizonUpData = _context2.sent;
+                      this.tempUpdateStatData = this.tempUpdateStatData.concat(verizonUpData);
+
+                    case 41:
+                      if (!this.reportTypeData.includes('system1')) {
+                        _context2.next = 46;
+                        break;
+                      }
+
+                      _context2.next = 44;
+                      return this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 44:
                       system1UpData = _context2.sent;
+                      this.tempUpdateStatData = this.tempUpdateStatData.concat(system1UpData);
 
-                      if (this.reportTypeData.includes('perion')) {
-                        this.tempUpdateStatData = this.tempUpdateStatData.concat(perionUpData);
-                      }
+                    case 46:
+                      result = []; // var sorted = _.chain(this.tempUpdateStatData)
+                      //   .sortBy(function (d) { return d.reporting })
+                      //   .sortBy(function (d) { return d.publisher })
+                      //   .value()
+                      // const multiGroupBy = (seq: any, keys: string | any[]) => {
+                      //   if (!keys.length) return seq;
+                      //   var first = keys[0];
+                      //   var rest = keys.slice(1);
+                      //   return _.mapValues(_.groupBy(seq, first), function (value: any) {
+                      //     return multiGroupBy(value, rest);
+                      //   });
+                      // };
+                      // const groupedItems = multiGroupBy(sorted, ["reporting", "publisher"]);
+                      // const reformattedArray = [];
+                      // for (const item in groupedItems) {
+                      //   if (groupedItems.hasOwnProperty(item)) {
+                      //     for (const elm in groupedItems[item]) {
+                      //       const obj = {
+                      //         reporting: groupedItems[item][elm][0].reporting,
+                      //         publisher: groupedItems[item][elm][0].publisher,
+                      //         revenue: _.reduce(groupedItems[item][elm], (s: any, x: { revenue: any; }) => s + x.revenue, 0),
+                      //       };
+                      //       reformattedArray.push(obj);
+                      //     }
+                      //   }
+                      // }
+                      // console.log(reformattedArray, 'dddd')
 
-                      if (this.reportTypeData.includes('lyons')) {
-                        this.tempUpdateStatData = this.tempUpdateStatData.concat(lyonsUpData);
-                      }
-
-                      if (this.reportTypeData.includes('rubi')) {
-                        this.tempUpdateStatData = this.tempUpdateStatData.concat(rubiUpData);
-                      }
-
-                      if (this.reportTypeData.includes('apptitude')) {
-                        this.tempUpdateStatData = this.tempUpdateStatData.concat(apptitudeUpData);
-                      }
-
-                      if (this.reportTypeData.includes('solex-bc')) {
-                        this.tempUpdateStatData = this.tempUpdateStatData.concat(solexBCUpData);
-                      }
-
-                      if (this.reportTypeData.includes('verizon-direct')) {
-                        this.tempUpdateStatData = this.tempUpdateStatData.concat(verizonUpData);
-                      }
-
-                      if (this.reportTypeData.includes('system1')) {
-                        this.tempUpdateStatData = this.tempUpdateStatData.concat(system1UpData);
-                      }
-
-                      result = [];
                       this.tempUpdateStatData.forEach(function (object) {
                         var existing = result.filter(function (item) {
                           return item.publisher == object.publisher;
@@ -18563,7 +18647,7 @@
                       this.loadingIndicator = false;
                       this.cdr.detectChanges();
 
-                    case 45:
+                    case 52:
                     case "end":
                       return _context2.stop();
                   }
@@ -19423,7 +19507,6 @@
               height = row.detailHeight;
             }
 
-            console.log(height, "-------");
             return height;
           }
         }]);
