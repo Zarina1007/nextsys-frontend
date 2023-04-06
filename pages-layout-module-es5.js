@@ -30231,7 +30231,32 @@
             title: 'Publisher Notifications',
             page: '/notifications/publisher-notifications'
           }]
-        }, {
+        }, // API Documentation
+        // { section: 'API Documentation' },
+        // {
+        //   title: 'API Documentation',
+        //   root: true,
+        //   bullet: 'dot',
+        //   icon: 'flaticon2-architecture-and-city',
+        //   svg: './assets/media/svg/icons/Files/File.svg',
+        //   page: '/api-documentation',
+        //   permissionName: "apiDocumentationManage",
+        //   submenu: [
+        //     {
+        //       title: 'Super Admin Documentation',
+        //       page: '/notifications/new-notification',
+        //     },
+        //     {
+        //       title: 'Publisher Notifications',
+        //       page: '/notifications/super-admin-notifications',
+        //     },
+        //     {
+        //       title: 'Publisher Notifications',
+        //       page: '/notifications/publisher-notifications',
+        //     },
+        //   ],
+        // },
+        {
           section: 'Custom'
         }, {
           title: 'Error Pages',
@@ -31011,7 +31036,14 @@
                         svg: './assets/media/svg/icons/Files/File.svg',
                         page: '/api-documentation',
                         bullet: 'dot',
-                        permissionName: "apiDocumentationManage"
+                        permissionName: "apiDocumentationManage",
+                        submenu: [{
+                          title: 'Super Admin Documentation',
+                          page: '/api-documentation/superadmin-documentation'
+                        }, {
+                          title: 'Publisher Documentation',
+                          page: '/api-documentation/publisher-documentation'
+                        }]
                       };
                       publisherMenu = {
                         title: 'Publisher Reporting',
@@ -31023,15 +31055,17 @@
                         permissionName: "publisherReportingManage"
                       };
                       publisherMenu['submenu'] = submenuList;
-                      menuConfig.items.push( //Publisher REPORTING
-                      {
+                      menuConfig.items.push({
                         section: 'Publisher Reporting'
                       });
                       menuConfig.items.push(publisherMenu);
+                      menuConfig.items.push({
+                        section: 'API Documentation'
+                      });
                       menuConfig.items.push(apiDocumentationMenu);
                       this.menuConfigSubject.next(menuConfig);
 
-                    case 12:
+                    case 13:
                     case "end":
                       return _context.stop();
                   }
@@ -42243,6 +42277,18 @@
                 }
               }
 
+              if (data.permission && state.url.split('/')[2] == "superadmin-documentation" && currentUser.role !== 1) {
+                this._router.navigate([this.selectBestRoute()]);
+
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
+              }
+
+              if (data.permission && state.url.split('/')[2] == "publisher-documentation" && currentUser.role !== 3) {
+                this._router.navigate([this.selectBestRoute()]);
+
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(false);
+              }
+
               return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(true);
             } // not logged in so redirect to login page with the return url
 
@@ -43205,6 +43251,18 @@
               if (this.currentUser.role == 1 && (itemPath == "new-notification" || itemPath == "super-admin-notifications")) {
                 return true;
               } else if (this.currentUser.role !== 1 && itemPath == "publisher-notifications") {
+                return true;
+              }
+
+              return false;
+            }
+
+            if (item.page.includes("api-documentation")) {
+              var itemPath = item.page.split("/")[2];
+
+              if (this.currentUser.role == 1 && itemPath == "superadmin-documentation") {
+                return true;
+              } else if (this.currentUser.role !== 1 && itemPath == "publisher-documentation") {
                 return true;
               }
 
