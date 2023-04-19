@@ -18336,99 +18336,98 @@
                       this.reportTypeData = _context.sent;
                       this.rows = [];
                       this.tempStatData = [];
-                      console.log(this.reportTypeData, 'dododododododododododododdo');
 
                       if (!this.reportTypeData.includes('perion')) {
-                        _context.next = 14;
+                        _context.next = 13;
                         break;
                       }
 
-                      _context.next = 12;
+                      _context.next = 11;
                       return this.getPerionStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 12:
+                    case 11:
                       this.PerionData = _context.sent;
                       this.tempStatData = this.tempStatData.concat(this.PerionData);
 
-                    case 14:
+                    case 13:
                       if (!this.reportTypeData.includes('lyons')) {
-                        _context.next = 19;
+                        _context.next = 18;
                         break;
                       }
 
-                      _context.next = 17;
+                      _context.next = 16;
                       return this.getLyonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 17:
+                    case 16:
                       this.LyonData = _context.sent;
                       this.tempStatData = this.tempStatData.concat(this.LyonData);
 
-                    case 19:
+                    case 18:
                       if (!this.reportTypeData.includes('rubi')) {
-                        _context.next = 24;
+                        _context.next = 23;
                         break;
                       }
 
-                      _context.next = 22;
+                      _context.next = 21;
                       return this.getRubiStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 22:
+                    case 21:
                       this.RubiData = _context.sent;
                       this.tempStatData = this.tempStatData.concat(this.RubiData);
 
-                    case 24:
+                    case 23:
                       if (!this.reportTypeData.includes('apptitude')) {
-                        _context.next = 29;
+                        _context.next = 28;
                         break;
                       }
 
-                      _context.next = 27;
+                      _context.next = 26;
                       return this.getApptitudeStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 27:
+                    case 26:
                       this.ApptitudeData = _context.sent;
                       this.tempStatData = this.tempStatData.concat(this.ApptitudeData);
 
-                    case 29:
+                    case 28:
                       if (!this.reportTypeData.includes('solex-bc')) {
-                        _context.next = 34;
+                        _context.next = 33;
                         break;
                       }
 
-                      _context.next = 32;
+                      _context.next = 31;
                       return this.getSolexBCStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 32:
+                    case 31:
                       this.SolexBCData = _context.sent;
                       this.tempStatData = this.tempStatData.concat(this.SolexBCData);
 
-                    case 34:
+                    case 33:
                       if (!this.reportTypeData.includes('verizon-direct')) {
-                        _context.next = 39;
+                        _context.next = 38;
                         break;
                       }
 
-                      _context.next = 37;
+                      _context.next = 36;
                       return this.getVerizonDirectStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 37:
+                    case 36:
                       this.VerizonData = _context.sent;
                       this.tempStatData = this.tempStatData.concat(this.VerizonData);
 
-                    case 39:
+                    case 38:
                       if (!this.reportTypeData.includes('system1')) {
-                        _context.next = 44;
+                        _context.next = 43;
                         break;
                       }
 
-                      _context.next = 42;
+                      _context.next = 41;
                       return this.getSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 42:
+                    case 41:
                       this.System1Data = _context.sent;
                       this.tempStatData = this.tempStatData.concat(this.System1Data);
 
-                    case 44:
+                    case 43:
                       result = [];
                       this.tempStatData.forEach(function (object) {
                         var existing = result.filter(function (item) {
@@ -18461,7 +18460,7 @@
                       this.loadingIndicator = false;
                       this.cdr.detectChanges();
 
-                    case 50:
+                    case 49:
                     case "end":
                       return _context.stop();
                   }
@@ -31258,39 +31257,109 @@
       /* harmony import */
 
 
-      var _shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! lodash */
+      "./node_modules/lodash/lodash.js");
+      /* harmony import */
+
+
+      var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
+      /* harmony import */
+
+
+      var _shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ../../../shared/service/users.service */
       "./src/app/shared/service/users.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/system1.service */
       "./src/app/shared/service/admin-stats/system1.service.ts");
       /* harmony import */
 
 
-      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ../../tag-management/tag-management.service */
+      "./src/app/modules/tag-management/tag-management.service.ts");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */
       "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @angular/common */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      /* harmony import */
+
+
+      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! @angular/material/form-field */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
+      /* harmony import */
+
+
+      var _angular_material_select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! @angular/material/select */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
+      /* harmony import */
+
+
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @angular/material/core */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
+      "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
+      /* harmony import */
+
+
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
+      "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
 
       var _c0 = ["expandableTable"];
 
-      function System1Component_ng_template_5_Template(rf, ctx) {
+      function System1Component_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 29);
+        }
+
+        if (rf & 2) {
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("chartData", ctx_r0.chartData);
+        }
+      }
+
+      function System1Component_app_summary_metrics_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 30);
+        }
+
+        if (rf & 2) {
+          var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("summaryMetricsData", ctx_r1.summaryMetrics);
+        }
+      }
+
+      function System1Component_ng_template_21_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 31);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -31312,39 +31381,39 @@
         }
       }
 
-      function System1Component_ng_template_7_Template(rf, ctx) {
+      function System1Component_ng_template_23_Template(rf, ctx) {
         if (rf & 1) {
-          var _r18 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          var _r25 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 32);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function System1Component_ng_template_7_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r18);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function System1Component_ng_template_23_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r25);
 
-            var row_r15 = ctx.row;
+            var row_r22 = ctx.row;
 
-            var ctx_r17 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+            var ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-            return ctx_r17.toggleExpandRow(row_r15);
+            return ctx_r24.toggleExpandRow(row_r22);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r16 = ctx.expanded;
+          var expanded_r23 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r16)("datatable-icon-down", expanded_r16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r23)("datatable-icon-down", expanded_r23);
         }
       }
 
-      function System1Component_ngx_datatable_column_8_ng_template_1_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function System1Component_ngx_datatable_column_8_ng_template_2_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31356,21 +31425,21 @@
         }
 
         if (rf & 2) {
-          var value_r22 = ctx.value;
+          var value_r29 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r22));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r29));
         }
       }
 
-      function System1Component_ngx_datatable_column_8_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_24_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 18);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 33);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_8_ng_template_1_Template, 1, 0, "ng-template", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_8_ng_template_2_Template, 3, 3, "ng-template", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_24_ng_template_2_Template, 3, 3, "ng-template", 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -31380,13 +31449,13 @@
         }
       }
 
-      function System1Component_ngx_datatable_column_9_ng_template_1_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
         }
       }
 
-      function System1Component_ngx_datatable_column_9_ng_template_2_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31396,33 +31465,33 @@
         }
 
         if (rf & 2) {
-          var value_r26 = ctx.value;
+          var value_r33 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r33);
         }
       }
 
-      function System1Component_ngx_datatable_column_9_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_25_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 19);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 34);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_9_ng_template_1_Template, 1, 0, "ng-template", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_9_ng_template_2_Template, 2, 1, "ng-template", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function System1Component_ngx_datatable_column_10_ng_template_1_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Device ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
-      function System1Component_ngx_datatable_column_10_ng_template_2_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31432,21 +31501,21 @@
         }
 
         if (rf & 2) {
-          var value_r30 = ctx.value;
+          var value_r37 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r30);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r37);
         }
       }
 
-      function System1Component_ngx_datatable_column_10_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 35);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_10_ng_template_1_Template, 1, 0, "ng-template", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_10_ng_template_2_Template, 2, 1, "ng-template", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_26_ng_template_2_Template, 2, 1, "ng-template", 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -31456,13 +31525,53 @@
         }
       }
 
-      function System1Component_ngx_datatable_column_11_ng_template_1_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Device ");
+        }
+      }
+
+      function System1Component_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r41 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r41);
+        }
+      }
+
+      function System1Component_ngx_datatable_column_27_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 36);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 25);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_27_ng_template_2_Template, 2, 1, "ng-template", 17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
+        }
+      }
+
+      function System1Component_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
         }
       }
 
-      function System1Component_ngx_datatable_column_11_ng_template_2_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31474,33 +31583,33 @@
         }
 
         if (rf & 2) {
-          var value_r34 = ctx.value;
+          var value_r45 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r34));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r45));
         }
       }
 
-      function System1Component_ngx_datatable_column_11_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_28_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 37);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_11_ng_template_1_Template, 1, 0, "ng-template", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_11_ng_template_2_Template, 3, 3, "ng-template", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function System1Component_ngx_datatable_column_12_ng_template_1_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_29_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
         }
       }
 
-      function System1Component_ngx_datatable_column_12_ng_template_2_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_29_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31512,33 +31621,33 @@
         }
 
         if (rf & 2) {
-          var value_r38 = ctx.value;
+          var value_r49 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r38));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r49));
         }
       }
 
-      function System1Component_ngx_datatable_column_12_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_29_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 38);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_12_ng_template_1_Template, 1, 0, "ng-template", 14);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_29_ng_template_1_Template, 1, 0, "ng-template", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_12_ng_template_2_Template, 3, 3, "ng-template", 7);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_29_ng_template_2_Template, 3, 3, "ng-template", 17);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function System1Component_ng_template_14_Template(rf, ctx) {
+      function System1Component_ng_template_31_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
         }
       }
 
-      function System1Component_ng_template_15_Template(rf, ctx) {
+      function System1Component_ng_template_32_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31552,21 +31661,21 @@
         }
 
         if (rf & 2) {
-          var value_r40 = ctx.value;
+          var value_r51 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r40) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r51) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
         }
       }
 
-      function System1Component_ng_template_17_Template(rf, ctx) {
+      function System1Component_ng_template_34_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
         }
       }
 
-      function System1Component_ng_template_18_Template(rf, ctx) {
+      function System1Component_ng_template_35_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31578,27 +31687,84 @@
         }
 
         if (rf & 2) {
-          var value_r42 = ctx.value;
+          var value_r53 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r42, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r53, "USD"));
+        }
+      }
+
+      function System1Component_ng_template_37_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
+        }
+      }
+
+      function System1Component_ng_template_38_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r55 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r55, "USD"));
+        }
+      }
+
+      function System1Component_ng_template_40_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function System1Component_ng_template_41_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r57 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r57, "USD"));
         }
       }
 
       var System1Component = /*#__PURE__*/function () {
-        function System1Component(cdr, userService, system1Service) {
+        function System1Component(cdr, userService, system1Service, tagService) {
           _classCallCheck(this, System1Component);
 
           this.cdr = cdr;
           this.userService = userService;
           this.system1Service = system1Service;
+          this.tagService = tagService;
           this.range = {
             startDate: '',
             endDate: ''
           };
           this.loadingIndicator = true;
           this.groupPublishFlag = false;
+          this.groupDateShowFlag = false;
+          this.groupSubidShowFlag = false;
+          this.expanded = {};
+          this.tagList = [];
           this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
         }
 
@@ -31610,14 +31776,30 @@
                 while (1) {
                   switch (_context47.prev = _context47.next) {
                     case 0:
+                      _context47.next = 2;
+                      return this.getCompanyTags(this.selectedCompany);
+
+                    case 2:
+                      this.tagList = _context47.sent;
                       this.rows = [];
-                      _context47.next = 3;
+                      _context47.next = 6;
                       return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 3:
+                    case 6:
                       this.rows = _context47.sent;
+                      _context47.next = 9;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                    case 4:
+                    case 9:
+                      this.chartData = _context47.sent;
+                      _context47.next = 12;
+                      return this.getSummaryMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 12:
+                      this.summaryMetrics = _context47.sent;
+                      this.refreshTable();
+
+                    case 14:
                     case "end":
                       return _context47.stop();
                   }
@@ -31633,41 +31815,555 @@
                 while (1) {
                   switch (_context48.prev = _context48.next) {
                     case 0:
-                      // console.log('Update report filtering....');
                       this.range = range;
                       _context48.next = 3;
                       return this.getAllSystem1Stats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
                       this.rows = _context48.sent;
-                      this.groupPublishFlag = false;
-                      this.refreshTable();
+                      _context48.next = 6;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
+                      this.chartData = _context48.sent;
+                      _context48.next = 9;
+                      return this.getSummaryMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 9:
+                      this.summaryMetrics = _context48.sent;
+                      this.groupPublishFlag = false;
+                      this.groupDateShowFlag = false;
+                      this.groupSubidShowFlag = false;
+                      this.refreshTable();
+
+                    case 14:
                     case "end":
                       return _context48.stop();
                   }
                 }
               }, _callee48, this);
             }));
+          }
+        }, {
+          key: "getChartMetrics",
+          value: function getChartMetrics(company, startDate, endDate) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee49() {
+              var response, _iterator73, _step73, tagL, _iterator76, _step76, tagSub, sorted, _multiGroupBy6, groupedItems, _reformattedArray12, item, elm, obj, pulisherArr, _i9, _reformattedArray13, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator74, _step74, resVal, _stackedArr6, _iterator75, _step75, _loop13;
+
+              return regeneratorRuntime.wrap(function _callee49$(_context49) {
+                while (1) {
+                  switch (_context49.prev = _context49.next) {
+                    case 0:
+                      _context49.prev = 0;
+                      _context49.next = 3;
+                      return this.system1Service.getAllSystem1Stats(company, startDate, endDate).toPromise();
+
+                    case 3:
+                      response = _context49.sent;
+                      this.loadingIndicator = false;
+                      this.allChartStat = response.stats;
+                      this.allChartStat.map(function (resStat) {
+                        resStat.publisher = "No Publisher";
+                        resStat.tagname = "No Tag";
+                      });
+                      _iterator73 = _createForOfIteratorHelper(this.tagList);
+
+                      try {
+                        for (_iterator73.s(); !(_step73 = _iterator73.n()).done;) {
+                          tagL = _step73.value;
+
+                          if (tagL.tag.advertiser == "system1") {
+                            _iterator76 = _createForOfIteratorHelper(tagL.tag.subids);
+
+                            try {
+                              for (_iterator76.s(); !(_step76 = _iterator76.n()).done;) {
+                                tagSub = _step76.value;
+
+                                if (tagSub.filterTag == "Contains") {
+                                  this.allChartStat.map(function (stat) {
+                                    if (stat.subid.includes(tagSub.subid)) {
+                                      stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "StartsWith") {
+                                  this.allChartStat.map(function (stat_1) {
+                                    if (stat_1.subid.startsWith(tagSub.subid)) {
+                                      stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_1.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "EndsWith") {
+                                  this.allChartStat.map(function (stat_2) {
+                                    if (stat_2.subid.endsWith(tagSub.subid)) {
+                                      stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_2.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "ExactValue") {
+                                  this.allChartStat.map(function (stat_3) {
+                                    if (stat_3.subid == tagSub.subid) {
+                                      stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_3.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                }
+                              }
+                            } catch (err) {
+                              _iterator76.e(err);
+                            } finally {
+                              _iterator76.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator73.e(err);
+                      } finally {
+                        _iterator73.f();
+                      }
+
+                      sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
+                        return d.date;
+                      }).sortBy(function (d) {
+                        return d.publisher;
+                      }).value();
+
+                      _multiGroupBy6 = function _multiGroupBy6(seq, keys) {
+                        if (!keys.length) return seq;
+                        var first = keys[0];
+                        var rest = keys.slice(1);
+                        return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                          return _multiGroupBy6(value, rest);
+                        });
+                      };
+
+                      groupedItems = _multiGroupBy6(sorted, ["date", "publisher"]);
+                      _reformattedArray12 = [];
+
+                      for (item in groupedItems) {
+                        if (groupedItems.hasOwnProperty(item)) {
+                          for (elm in groupedItems[item]) {
+                            obj = {
+                              date: groupedItems[item][elm][0].date,
+                              publisher: groupedItems[item][elm][0].publisher,
+                              revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.revenue;
+                              }, 0)
+                            };
+
+                            _reformattedArray12.push(obj);
+                          }
+                        }
+                      }
+
+                      pulisherArr = [];
+
+                      for (_i9 = 0, _reformattedArray13 = _reformattedArray12; _i9 < _reformattedArray13.length; _i9++) {
+                        reformatData = _reformattedArray13[_i9];
+                        pulisherArr.push(reformatData.publisher);
+                      }
+
+                      unique = pulisherArr.filter(function (elem, index, self) {
+                        return index === self.indexOf(elem);
+                      }); // this.remove_element(unique, "No Publisher");
+                      // console.log(unique);
+
+                      this.allChartStat = this.allChartStat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      helperChart = {};
+                      resultChart = this.allChartStat.reduce(function (r, o) {
+                        var key = o.date;
+
+                        if (!helperChart[key]) {
+                          helperChart[key] = Object.assign({}, o); // create a copy of o
+
+                          r.push(helperChart[key]);
+                        } else {
+                          helperChart[key].searches += parseInt(o.searches); // if (o.revenue) {
+                          //   helperChart[key].revenue += o.revenue;
+                          // }
+                        }
+
+                        return r;
+                      }, []);
+                      datesOfRevenueVal = [];
+                      searchesPerDayVal = [];
+                      chartDataValue = {};
+                      _iterator74 = _createForOfIteratorHelper(resultChart);
+
+                      try {
+                        for (_iterator74.s(); !(_step74 = _iterator74.n()).done;) {
+                          resVal = _step74.value;
+                          datesOfRevenueVal.push(resVal.date);
+                          searchesPerDayVal.push(resVal.searches);
+                        }
+                      } catch (err) {
+                        _iterator74.e(err);
+                      } finally {
+                        _iterator74.f();
+                      }
+
+                      _stackedArr6 = [];
+                      _iterator75 = _createForOfIteratorHelper(unique);
+
+                      try {
+                        _loop13 = function _loop13() {
+                          var u = _step75.value;
+                          var subStackedArr = [];
+
+                          var _iterator77 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step77;
+
+                          try {
+                            var _loop14 = function _loop14() {
+                              var date = _step77.value;
+
+                              var filterLen = _reformattedArray12.filter(function (reformatted) {
+                                return reformatted.date == date && reformatted.publisher == u;
+                              });
+
+                              if (filterLen.length > 0) {
+                                subStackedArr.push(filterLen[0].revenue);
+                              } else {
+                                subStackedArr.push(0);
+                              }
+                            };
+
+                            for (_iterator77.s(); !(_step77 = _iterator77.n()).done;) {
+                              _loop14();
+                            }
+                          } catch (err) {
+                            _iterator77.e(err);
+                          } finally {
+                            _iterator77.f();
+                          }
+
+                          var obj = {};
+                          obj[u] = subStackedArr;
+
+                          _stackedArr6.push(obj);
+                        };
+
+                        for (_iterator75.s(); !(_step75 = _iterator75.n()).done;) {
+                          _loop13();
+                        }
+                      } catch (err) {
+                        _iterator75.e(err);
+                      } finally {
+                        _iterator75.f();
+                      }
+
+                      chartDataValue['revenuePerDay'] = _stackedArr6;
+                      chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartDataValue['searchesPerDay'] = searchesPerDayVal;
+                      chartDataValue['publisherName'] = unique;
+                      return _context49.abrupt("return", chartDataValue);
+
+                    case 35:
+                      _context49.prev = 35;
+                      _context49.t0 = _context49["catch"](0);
+                      return _context49.abrupt("return", _context49.t0);
+
+                    case 38:
+                    case "end":
+                      return _context49.stop();
+                  }
+                }
+              }, _callee49, this, [[0, 35]]);
+            }));
           } //get Stat all
 
         }, {
           key: "getAllSystem1Stats",
           value: function getAllSystem1Stats(company, startDate, endDate) {
-            var _this9 = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee50() {
+              var response, _iterator78, _step78, tagL, _iterator79, _step79, tagSub;
 
-            return this.system1Service.getAllSystem1Stats(company, startDate, endDate).toPromise().then(function (response) {
-              console.log('getAllSystem1Stats() response:', response);
-              _this9.loadingIndicator = false;
-              _this9.allStats = response.stats;
-              return _this9.allStats;
-            });
+              return regeneratorRuntime.wrap(function _callee50$(_context50) {
+                while (1) {
+                  switch (_context50.prev = _context50.next) {
+                    case 0:
+                      _context50.next = 2;
+                      return this.system1Service.getAllSystem1Stats(company, startDate, endDate).toPromise();
+
+                    case 2:
+                      response = _context50.sent;
+                      this.loadingIndicator = false;
+                      this.allStats = response["stats"];
+                      this.allStats.map(function (resStat) {
+                        resStat.publisher = "No Publisher";
+                        resStat.tagname = "No Tag";
+                      });
+                      _iterator78 = _createForOfIteratorHelper(this.tagList);
+
+                      try {
+                        for (_iterator78.s(); !(_step78 = _iterator78.n()).done;) {
+                          tagL = _step78.value;
+
+                          if (tagL.tag.advertiser == "system1") {
+                            _iterator79 = _createForOfIteratorHelper(tagL.tag.subids);
+
+                            try {
+                              for (_iterator79.s(); !(_step79 = _iterator79.n()).done;) {
+                                tagSub = _step79.value;
+
+                                if (tagSub.filterTag == "Contains") {
+                                  this.allStats.map(function (stat) {
+                                    if (stat.subid.includes(tagSub.subid)) {
+                                      stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "StartsWith") {
+                                  this.allStats.map(function (stat_1) {
+                                    if (stat_1.subid.startsWith(tagSub.subid)) {
+                                      stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_1.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "EndsWith") {
+                                  this.allStats.map(function (stat_2) {
+                                    if (stat_2.subid.endsWith(tagSub.subid)) {
+                                      stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_2.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "ExactValue") {
+                                  this.allStats.map(function (stat_3) {
+                                    if (stat_3.subid == tagSub.subid) {
+                                      stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_3.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                }
+                              }
+                            } catch (err) {
+                              _iterator79.e(err);
+                            } finally {
+                              _iterator79.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator78.e(err);
+                      } finally {
+                        _iterator78.f();
+                      }
+
+                      return _context50.abrupt("return", this.allStats);
+
+                    case 9:
+                    case "end":
+                      return _context50.stop();
+                  }
+                }
+              }, _callee50, this);
+            }));
           }
         }, {
           key: "getSummaryMetrics",
-          value: function getSummaryMetrics(company) {
-            return [];
+          value: function getSummaryMetrics(company, startDate, endDate) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee51() {
+              var response, allSummary, currentPercentPace, lastPercentPace, selectedPercentPace;
+              return regeneratorRuntime.wrap(function _callee51$(_context51) {
+                while (1) {
+                  switch (_context51.prev = _context51.next) {
+                    case 0:
+                      _context51.next = 2;
+                      return this.system1Service.getSummaryMetrics(company, startDate, endDate).toPromise();
+
+                    case 2:
+                      response = _context51.sent;
+                      allSummary = {};
+                      currentPercentPace = 0;
+                      lastPercentPace = 0;
+                      selectedPercentPace = 0;
+
+                      if (response.summary[0].lastMonthStat[0].profitPace != 0) {
+                        currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
+                      }
+
+                      if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
+                        lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
+                      }
+
+                      if (response.summary[0].prevSelectedStat[0].profitPace != 0) {
+                        selectedPercentPace = (response.summary[0].selectedStat[0].profitPace - response.summary[0].prevSelectedStat[0].profitPace) / response.summary[0].prevSelectedStat[0].profitPace * 100;
+                      }
+
+                      response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
+                      response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
+                      response.summary[0].selectedStat[0].percentPace = selectedPercentPace;
+                      response.summary[0].selectedStat[0].selectedStartDate = startDate;
+                      response.summary[0].selectedStat[0].selectedEndDate = endDate;
+                      allSummary['summary'] = response.summary;
+                      return _context51.abrupt("return", allSummary);
+
+                    case 17:
+                    case "end":
+                      return _context51.stop();
+                  }
+                }
+              }, _callee51, this);
+            }));
+          }
+        }, {
+          key: "groupHandle",
+          value: function groupHandle(event) {
+            if (event.value == "date") {
+              this.groupDate();
+            } else if (event.value == "publisher") {
+              this.groupProvider();
+            } else if (event.value == "subid") {
+              this.groupSubid();
+            } else {
+              this.backGroup();
+            }
+          }
+        }, {
+          key: "backGroup",
+          value: function backGroup() {
+            this.rows = this.allStats;
+            this.groupPublishFlag = false;
+            this.groupDateShowFlag = false;
+            this.groupSubidShowFlag = false;
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "groupDate",
+          value: function groupDate() {
+            var helperSummary = {};
+            var groupData = this.allStats.reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator80 = _createForOfIteratorHelper(groupData),
+                _step80;
+
+            try {
+              for (_iterator80.s(); !(_step80 = _iterator80.n()).done;) {
+                var group = _step80.value;
+                group.split = group.split / group.counter;
+              }
+            } catch (err) {
+              _iterator80.e(err);
+            } finally {
+              _iterator80.f();
+            }
+
+            this.rows = groupData;
+            this.groupPublishFlag = false;
+            this.groupDateShowFlag = true;
+            this.groupSubidShowFlag = false;
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "groupSubid",
+          value: function groupSubid() {
+            var helperSummary = {};
+            var groupData = this.allStats.reduce(function (r, o) {
+              var key = o.subid;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator81 = _createForOfIteratorHelper(groupData),
+                _step81;
+
+            try {
+              for (_iterator81.s(); !(_step81 = _iterator81.n()).done;) {
+                var group = _step81.value;
+                group.split = group.split / group.counter;
+              }
+            } catch (err) {
+              _iterator81.e(err);
+            } finally {
+              _iterator81.f();
+            }
+
+            this.rows = groupData;
+            this.groupPublishFlag = false;
+            this.groupDateShowFlag = false;
+            this.groupSubidShowFlag = true;
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "groupProvider",
+          value: function groupProvider() {
+            var helperSummary = {};
+            var groupData = this.allStats.reduce(function (r, o) {
+              var key = o.publisher;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator82 = _createForOfIteratorHelper(groupData),
+                _step82;
+
+            try {
+              for (_iterator82.s(); !(_step82 = _iterator82.n()).done;) {
+                var group = _step82.value;
+                group.split = group.split / group.counter;
+              }
+            } catch (err) {
+              _iterator82.e(err);
+            } finally {
+              _iterator82.f();
+            }
+
+            this.rows = groupData;
+            this.groupPublishFlag = true;
+            this.groupDateShowFlag = false;
+            this.groupSubidShowFlag = false;
+            this.cdr.markForCheck();
           }
         }, {
           key: "toggleExpandRow",
@@ -31683,13 +32379,45 @@
         }, {
           key: "refreshTable",
           value: function refreshTable() {
-            this.cdr.markForCheck();
+            this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
 
         }, {
           key: "getSelectedCompanyFromLocalStorage",
           value: function getSelectedCompanyFromLocalStorage() {
             return this.userService.getSelectedCompanyFromLocalStorage();
+          } //get Tags with selected company
+
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(selectedCompany) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee52() {
+              var companyId, response;
+              return regeneratorRuntime.wrap(function _callee52$(_context52) {
+                while (1) {
+                  switch (_context52.prev = _context52.next) {
+                    case 0:
+                      companyId = selectedCompany.split("/")[1];
+                      _context52.prev = 1;
+                      _context52.next = 4;
+                      return this.tagService.getCompanyTags(companyId).toPromise();
+
+                    case 4:
+                      response = _context52.sent;
+                      return _context52.abrupt("return", response);
+
+                    case 8:
+                      _context52.prev = 8;
+                      _context52.t0 = _context52["catch"](1);
+                      return _context52.abrupt("return", _context52.t0);
+
+                    case 11:
+                    case "end":
+                      return _context52.stop();
+                  }
+                }
+              }, _callee52, this, [[1, 8]]);
+            }));
           }
         }]);
 
@@ -31697,7 +32425,7 @@
       }();
 
       System1Component.ɵfac = function System1Component_Factory(t) {
-        return new (t || System1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_3__["System1Service"]));
+        return new (t || System1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_4__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_5__["TagManagementService"]));
       };
 
       System1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
@@ -31714,9 +32442,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 19,
-        vars: 19,
-        consts: [[3, "onDatesPicked"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "device", 3, "minWidth", 4, "ngIf"], ["name", "Searches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "split", 3, "minWidth"], ["ngx-datatable-header-template", ""], ["name", "revenue"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "device", 3, "minWidth"], ["name", "Searches"], ["name", "clicks"]],
+        decls: 42,
+        vars: 22,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "selectionChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "device", 3, "minWidth", 4, "ngIf"], ["name", "Searches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "split", 3, "minWidth"], ["ngx-datatable-header-template", ""], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "device", 3, "minWidth"], ["name", "Searches"], ["name", "clicks"]],
         template: function System1Component_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -31727,47 +32455,119 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "ngx-datatable", 1, 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_app_reporting_revenue_chart_1_Template, 1, 1, "app-reporting-revenue-chart", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "ngx-datatable-row-detail", 3, 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_app_summary_metrics_2_Template, 1, 1, "app-summary-metrics", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function System1Component_Template_ngx_datatable_row_detail_toggle_3_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "mat-form-field", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "mat-label");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Choose an Group By");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "mat-select", 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("selectionChange", function System1Component_Template_mat_select_selectionChange_8_listener($event) {
+              return ctx.groupHandle($event);
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "mat-option", 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "Date");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "mat-option", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, "Publisher");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "mat-option", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14, "Subid");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "mat-option", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, "Reset");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable", 11, 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13, 14);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function System1Component_Template_ngx_datatable_row_detail_toggle_19_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](5, System1Component_ng_template_5_Template, 6, 0, "ng-template", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, System1Component_ng_template_21_Template, 6, 0, "ng-template", 15);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "ngx-datatable-column", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 16);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](7, System1Component_ng_template_7_Template, 1, 4, "ng-template", 7);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, System1Component_ngx_datatable_column_8_Template, 3, 1, "ngx-datatable-column", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](9, System1Component_ngx_datatable_column_9_Template, 3, 0, "ngx-datatable-column", 9);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](10, System1Component_ngx_datatable_column_10_Template, 3, 1, "ngx-datatable-column", 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, System1Component_ngx_datatable_column_11_Template, 3, 0, "ngx-datatable-column", 11);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](12, System1Component_ngx_datatable_column_12_Template, 3, 0, "ngx-datatable-column", 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "ngx-datatable-column", 13);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, System1Component_ng_template_14_Template, 1, 0, "ng-template", 14);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, System1Component_ng_template_15_Template, 4, 6, "ng-template", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, System1Component_ng_template_23_Template, 1, 4, "ng-template", 17);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "ngx-datatable-column", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, System1Component_ngx_datatable_column_24_Template, 3, 1, "ngx-datatable-column", 18);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, System1Component_ng_template_17_Template, 1, 0, "ng-template", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, System1Component_ngx_datatable_column_25_Template, 3, 0, "ngx-datatable-column", 19);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](18, System1Component_ng_template_18_Template, 3, 4, "ng-template", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, System1Component_ngx_datatable_column_26_Template, 3, 1, "ngx-datatable-column", 20);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, System1Component_ngx_datatable_column_27_Template, 3, 1, "ngx-datatable-column", 21);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, System1Component_ngx_datatable_column_28_Template, 3, 0, "ngx-datatable-column", 22);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, System1Component_ngx_datatable_column_29_Template, 3, 0, "ngx-datatable-column", 23);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](30, "ngx-datatable-column", 24);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, System1Component_ng_template_31_Template, 1, 0, "ng-template", 25);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, System1Component_ng_template_32_Template, 4, 6, "ng-template", 17);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](33, "ngx-datatable-column", 26);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, System1Component_ng_template_34_Template, 1, 0, "ng-template", 25);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, System1Component_ng_template_35_Template, 3, 4, "ng-template", 17);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "ngx-datatable-column", 27);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, System1Component_ng_template_37_Template, 1, 0, "ng-template", 25);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, System1Component_ng_template_38_Template, 3, 4, "ng-template", 17);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](39, "ngx-datatable-column", 28);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, System1Component_ng_template_40_Template, 1, 0, "ng-template", 25);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](41, System1Component_ng_template_41_Template, 3, 4, "ng-template", 17);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -31776,6 +32576,14 @@
 
           if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.chartData);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
 
@@ -31789,31 +32597,35 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupSubidShowFlag);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 35);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_4__["ReportingFilteringComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DataTableColumnCellDirective"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_5__["DataTableColumnHeaderDirective"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__["SummaryMetricsComponent"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL3N5c3RlbTEvc3lzdGVtMS5jb21wb25lbnQuc2NzcyJ9 */"]
       });
       /*@__PURE__*/
@@ -31830,9 +32642,11 @@
           return [{
             type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
           }, {
-            type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_2__["UsersService"]
+            type: _shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]
           }, {
-            type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_3__["System1Service"]
+            type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_4__["System1Service"]
+          }, {
+            type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_5__["TagManagementService"]
           }];
         }, {
           table: [{
@@ -33206,72 +34020,72 @@
         _createClass(VerizonDirectComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee49() {
-              return regeneratorRuntime.wrap(function _callee49$(_context49) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee53() {
+              return regeneratorRuntime.wrap(function _callee53$(_context53) {
                 while (1) {
-                  switch (_context49.prev = _context49.next) {
+                  switch (_context53.prev = _context53.next) {
                     case 0:
-                      _context49.next = 2;
+                      _context53.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context49.sent;
+                      this.tagList = _context53.sent;
                       this.rows = [];
-                      _context49.next = 6;
+                      _context53.next = 6;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context49.sent;
-                      _context49.next = 9;
+                      this.rows = _context53.sent;
+                      _context53.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context49.sent;
-                      _context49.next = 12;
+                      this.chartData = _context53.sent;
+                      _context53.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 12:
-                      this.summaryMetrics = _context49.sent;
+                      this.summaryMetrics = _context53.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context49.stop();
+                      return _context53.stop();
                   }
                 }
-              }, _callee49, this);
+              }, _callee53, this);
             }));
           } //get Tags with selected company
 
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee50() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee54() {
               var companyId, response;
-              return regeneratorRuntime.wrap(function _callee50$(_context50) {
+              return regeneratorRuntime.wrap(function _callee54$(_context54) {
                 while (1) {
-                  switch (_context50.prev = _context50.next) {
+                  switch (_context54.prev = _context54.next) {
                     case 0:
                       companyId = selectedCompany.split("/")[1];
-                      _context50.prev = 1;
-                      _context50.next = 4;
+                      _context54.prev = 1;
+                      _context54.next = 4;
                       return this.tagService.getCompanyTags(companyId).toPromise();
 
                     case 4:
-                      response = _context50.sent;
-                      return _context50.abrupt("return", response);
+                      response = _context54.sent;
+                      return _context54.abrupt("return", response);
 
                     case 8:
-                      _context50.prev = 8;
-                      _context50.t0 = _context50["catch"](1);
-                      return _context50.abrupt("return", _context50.t0);
+                      _context54.prev = 8;
+                      _context54.t0 = _context54["catch"](1);
+                      return _context54.abrupt("return", _context54.t0);
 
                     case 11:
                     case "end":
-                      return _context50.stop();
+                      return _context54.stop();
                   }
                 }
-              }, _callee50, this, [[1, 8]]);
+              }, _callee54, this, [[1, 8]]);
             }));
           } //Gets the Selected Company from Local Storage
 
@@ -33283,36 +34097,36 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee51() {
-              return regeneratorRuntime.wrap(function _callee51$(_context51) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee55() {
+              return regeneratorRuntime.wrap(function _callee55$(_context55) {
                 while (1) {
-                  switch (_context51.prev = _context51.next) {
+                  switch (_context55.prev = _context55.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context51.next = 3;
+                      _context55.next = 3;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context51.sent;
-                      _context51.next = 6;
+                      this.rows = _context55.sent;
+                      _context55.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context51.sent;
-                      _context51.next = 9;
+                      this.chartData = _context55.sent;
+                      _context55.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.summaryMetrics = _context51.sent;
+                      this.summaryMetrics = _context55.sent;
                       this.refreshTable();
 
                     case 11:
                     case "end":
-                      return _context51.stop();
+                      return _context55.stop();
                   }
                 }
-              }, _callee51, this);
+              }, _callee55, this);
             }));
           }
         }, {
@@ -33351,19 +34165,19 @@
               return r;
             }, []);
 
-            var _iterator73 = _createForOfIteratorHelper(groupData),
-                _step73;
+            var _iterator83 = _createForOfIteratorHelper(groupData),
+                _step83;
 
             try {
-              for (_iterator73.s(); !(_step73 = _iterator73.n()).done;) {
-                var group = _step73.value;
+              for (_iterator83.s(); !(_step83 = _iterator83.n()).done;) {
+                var group = _step83.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator73.e(err);
+              _iterator83.e(err);
             } finally {
-              _iterator73.f();
+              _iterator83.f();
             }
 
             this.rows = groupData;
@@ -33403,19 +34217,19 @@
               return r;
             }, []);
 
-            var _iterator74 = _createForOfIteratorHelper(groupData),
-                _step74;
+            var _iterator84 = _createForOfIteratorHelper(groupData),
+                _step84;
 
             try {
-              for (_iterator74.s(); !(_step74 = _iterator74.n()).done;) {
-                var group = _step74.value;
+              for (_iterator84.s(); !(_step84 = _iterator84.n()).done;) {
+                var group = _step84.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator74.e(err);
+              _iterator84.e(err);
             } finally {
-              _iterator74.f();
+              _iterator84.f();
             }
 
             this.rows = groupData;
@@ -33455,19 +34269,19 @@
               return r;
             }, []);
 
-            var _iterator75 = _createForOfIteratorHelper(groupData),
-                _step75;
+            var _iterator85 = _createForOfIteratorHelper(groupData),
+                _step85;
 
             try {
-              for (_iterator75.s(); !(_step75 = _iterator75.n()).done;) {
-                var group = _step75.value;
+              for (_iterator85.s(); !(_step85 = _iterator85.n()).done;) {
+                var group = _step85.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator75.e(err);
+              _iterator85.e(err);
             } finally {
-              _iterator75.f();
+              _iterator85.f();
             }
 
             this.rows = groupData;
@@ -33522,14 +34336,14 @@
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee52() {
-              var _iterator76, _step76, tagL, _iterator79, _step79, tagSub, sorted, _multiGroupBy6, groupedItems, _reformattedArray12, item, elm, obj, pulisherArr, _i9, _reformattedArray13, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator77, _step77, resVal, _stackedArr6, _iterator78, _step78, _loop13;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee56() {
+              var _iterator86, _step86, tagL, _iterator89, _step89, tagSub, sorted, _multiGroupBy7, groupedItems, _reformattedArray14, item, elm, obj, pulisherArr, _i10, _reformattedArray15, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator87, _step87, resVal, _stackedArr7, _iterator88, _step88, _loop15;
 
-              return regeneratorRuntime.wrap(function _callee52$(_context52) {
+              return regeneratorRuntime.wrap(function _callee56$(_context56) {
                 while (1) {
-                  switch (_context52.prev = _context52.next) {
+                  switch (_context56.prev = _context56.next) {
                     case 0:
-                      _context52.prev = 0;
+                      _context56.prev = 0;
                       // const response = await this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
                       // this.allChartStat = response.stats;
                       // this.allChartStat.map(function (resStat: { publisher: string; tagname: string; }) {
@@ -33537,18 +34351,18 @@
                       //   resStat.tagname = "No Tag";
                       // });
                       this.allChartStat = this.allStats;
-                      _iterator76 = _createForOfIteratorHelper(this.tagList);
+                      _iterator86 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator76.s(); !(_step76 = _iterator76.n()).done;) {
-                          tagL = _step76.value;
+                        for (_iterator86.s(); !(_step86 = _iterator86.n()).done;) {
+                          tagL = _step86.value;
 
                           if (tagL.tag.advertiser == "verizon-direct") {
-                            _iterator79 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator89 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator79.s(); !(_step79 = _iterator79.n()).done;) {
-                                tagSub = _step79.value;
+                              for (_iterator89.s(); !(_step89 = _iterator89.n()).done;) {
+                                tagSub = _step89.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -33581,16 +34395,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator79.e(err);
+                              _iterator89.e(err);
                             } finally {
-                              _iterator79.f();
+                              _iterator89.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator76.e(err);
+                        _iterator86.e(err);
                       } finally {
-                        _iterator76.f();
+                        _iterator86.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -33599,17 +34413,17 @@
                         return d.publisher;
                       }).value();
 
-                      _multiGroupBy6 = function _multiGroupBy6(seq, keys) {
+                      _multiGroupBy7 = function _multiGroupBy7(seq, keys) {
                         if (!keys.length) return seq;
                         var first = keys[0];
                         var rest = keys.slice(1);
                         return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
-                          return _multiGroupBy6(value, rest);
+                          return _multiGroupBy7(value, rest);
                         });
                       };
 
-                      groupedItems = _multiGroupBy6(sorted, ["date", "publisher"]);
-                      _reformattedArray12 = [];
+                      groupedItems = _multiGroupBy7(sorted, ["date", "publisher"]);
+                      _reformattedArray14 = [];
 
                       for (item in groupedItems) {
                         if (groupedItems.hasOwnProperty(item)) {
@@ -33622,15 +34436,15 @@
                               }, 0)
                             };
 
-                            _reformattedArray12.push(obj);
+                            _reformattedArray14.push(obj);
                           }
                         }
                       }
 
                       pulisherArr = [];
 
-                      for (_i9 = 0, _reformattedArray13 = _reformattedArray12; _i9 < _reformattedArray13.length; _i9++) {
-                        reformatData = _reformattedArray13[_i9];
+                      for (_i10 = 0, _reformattedArray15 = _reformattedArray14; _i10 < _reformattedArray15.length; _i10++) {
+                        reformatData = _reformattedArray15[_i10];
                         pulisherArr.push(reformatData.publisher);
                       }
 
@@ -33663,36 +34477,36 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator77 = _createForOfIteratorHelper(resultChart);
+                      _iterator87 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator77.s(); !(_step77 = _iterator77.n()).done;) {
-                          resVal = _step77.value;
+                        for (_iterator87.s(); !(_step87 = _iterator87.n()).done;) {
+                          resVal = _step87.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator77.e(err);
+                        _iterator87.e(err);
                       } finally {
-                        _iterator77.f();
+                        _iterator87.f();
                       }
 
-                      _stackedArr6 = [];
-                      _iterator78 = _createForOfIteratorHelper(unique);
+                      _stackedArr7 = [];
+                      _iterator88 = _createForOfIteratorHelper(unique);
 
                       try {
-                        _loop13 = function _loop13() {
-                          var u = _step78.value;
+                        _loop15 = function _loop15() {
+                          var u = _step88.value;
                           var subStackedArr = [];
 
-                          var _iterator80 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step80;
+                          var _iterator90 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step90;
 
                           try {
-                            var _loop14 = function _loop14() {
-                              var date = _step80.value;
+                            var _loop16 = function _loop16() {
+                              var date = _step90.value;
 
-                              var filterLen = _reformattedArray12.filter(function (reformatted) {
+                              var filterLen = _reformattedArray14.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
                               });
 
@@ -33703,64 +34517,64 @@
                               }
                             };
 
-                            for (_iterator80.s(); !(_step80 = _iterator80.n()).done;) {
-                              _loop14();
+                            for (_iterator90.s(); !(_step90 = _iterator90.n()).done;) {
+                              _loop16();
                             }
                           } catch (err) {
-                            _iterator80.e(err);
+                            _iterator90.e(err);
                           } finally {
-                            _iterator80.f();
+                            _iterator90.f();
                           }
 
                           var obj = {};
                           obj[u] = subStackedArr;
 
-                          _stackedArr6.push(obj);
+                          _stackedArr7.push(obj);
                         };
 
-                        for (_iterator78.s(); !(_step78 = _iterator78.n()).done;) {
-                          _loop13();
+                        for (_iterator88.s(); !(_step88 = _iterator88.n()).done;) {
+                          _loop15();
                         }
                       } catch (err) {
-                        _iterator78.e(err);
+                        _iterator88.e(err);
                       } finally {
-                        _iterator78.f();
+                        _iterator88.f();
                       }
 
-                      chartDataValue['revenuePerDay'] = _stackedArr6;
+                      chartDataValue['revenuePerDay'] = _stackedArr7;
                       chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
                       chartDataValue['searchesPerDay'] = searchesPerDayVal;
                       chartDataValue['publisherName'] = unique;
-                      return _context52.abrupt("return", chartDataValue);
+                      return _context56.abrupt("return", chartDataValue);
 
                     case 30:
-                      _context52.prev = 30;
-                      _context52.t0 = _context52["catch"](0);
-                      return _context52.abrupt("return", _context52.t0);
+                      _context56.prev = 30;
+                      _context56.t0 = _context56["catch"](0);
+                      return _context56.abrupt("return", _context56.t0);
 
                     case 33:
                     case "end":
-                      return _context52.stop();
+                      return _context56.stop();
                   }
                 }
-              }, _callee52, this, [[0, 30]]);
+              }, _callee56, this, [[0, 30]]);
             }));
           }
         }, {
           key: "getAllVerizonStats",
           value: function getAllVerizonStats(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee53() {
-              var response, _iterator81, _step81, tagL, _iterator82, _step82, tagSub;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee57() {
+              var response, _iterator91, _step91, tagL, _iterator92, _step92, tagSub;
 
-              return regeneratorRuntime.wrap(function _callee53$(_context53) {
+              return regeneratorRuntime.wrap(function _callee57$(_context57) {
                 while (1) {
-                  switch (_context53.prev = _context53.next) {
+                  switch (_context57.prev = _context57.next) {
                     case 0:
-                      _context53.next = 2;
+                      _context57.next = 2;
                       return this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
 
                     case 2:
-                      response = _context53.sent;
+                      response = _context57.sent;
                       console.log('getAllVerizonStats() response:', response);
                       this.loadingIndicator = false;
                       this.allStats = response.stats;
@@ -33768,18 +34582,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator81 = _createForOfIteratorHelper(this.tagList);
+                      _iterator91 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator81.s(); !(_step81 = _iterator81.n()).done;) {
-                          tagL = _step81.value;
+                        for (_iterator91.s(); !(_step91 = _iterator91.n()).done;) {
+                          tagL = _step91.value;
 
                           if (tagL.tag.advertiser == "verizon-direct") {
-                            _iterator82 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator92 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator82.s(); !(_step82 = _iterator82.n()).done;) {
-                                tagSub = _step82.value;
+                              for (_iterator92.s(); !(_step92 = _iterator92.n()).done;) {
+                                tagSub = _step92.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -33812,42 +34626,42 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator82.e(err);
+                              _iterator92.e(err);
                             } finally {
-                              _iterator82.f();
+                              _iterator92.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator81.e(err);
+                        _iterator91.e(err);
                       } finally {
-                        _iterator81.f();
+                        _iterator91.f();
                       }
 
-                      return _context53.abrupt("return", this.allStats);
+                      return _context57.abrupt("return", this.allStats);
 
                     case 10:
                     case "end":
-                      return _context53.stop();
+                      return _context57.stop();
                   }
                 }
-              }, _callee53, this);
+              }, _callee57, this);
             }));
           }
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee54() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee58() {
               var response, allSummary, currentPercentPace, lastPercentPace, selectedPercentPace;
-              return regeneratorRuntime.wrap(function _callee54$(_context54) {
+              return regeneratorRuntime.wrap(function _callee58$(_context58) {
                 while (1) {
-                  switch (_context54.prev = _context54.next) {
+                  switch (_context58.prev = _context58.next) {
                     case 0:
-                      _context54.next = 2;
+                      _context58.next = 2;
                       return this.verizonService.getSummaryMetrics(company, startDate, endDate).toPromise();
 
                     case 2:
-                      response = _context54.sent;
+                      response = _context58.sent;
                       allSummary = {};
                       currentPercentPace = 0;
                       lastPercentPace = 0;
@@ -33871,14 +34685,14 @@
                       response.summary[0].selectedStat[0].selectedStartDate = startDate;
                       response.summary[0].selectedStat[0].selectedEndDate = endDate;
                       allSummary['summary'] = response.summary;
-                      return _context54.abrupt("return", allSummary);
+                      return _context58.abrupt("return", allSummary);
 
                     case 17:
                     case "end":
-                      return _context54.stop();
+                      return _context58.stop();
                   }
                 }
-              }, _callee54, this);
+              }, _callee58, this);
             }));
           }
         }]);

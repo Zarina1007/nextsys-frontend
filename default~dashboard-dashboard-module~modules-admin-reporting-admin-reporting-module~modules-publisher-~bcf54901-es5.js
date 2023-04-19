@@ -913,6 +913,17 @@
               }
             });
           }
+        }, {
+          key: "getSummaryMetrics",
+          value: function getSummaryMetrics(company, startDate, endDate) {
+            return this.http.get(API_SYSTEM1_URL + '/summary_metrics', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
         }]);
 
         return System1Service;

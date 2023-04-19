@@ -439,6 +439,11 @@ class System1Service {
             params: { company: company, startDate: startDate, endDate: endDate },
         });
     }
+    getSummaryMetrics(company, startDate, endDate) {
+        return this.http.get(API_SYSTEM1_URL + '/summary_metrics', {
+            params: { company: company, startDate: startDate, endDate: endDate },
+        });
+    }
 }
 System1Service.ɵfac = function System1Service_Factory(t) { return new (t || System1Service)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
 System1Service.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: System1Service, factory: System1Service.ɵfac, providedIn: 'root' });
