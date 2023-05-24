@@ -20558,17 +20558,6 @@ class LyonsComponent {
     onDetailToggle(event) {
         console.log('Detail Toggled', event);
     }
-    routeTester() {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            console.log('Testing Route');
-            this.lyonService.testingRoute().subscribe((response) => {
-                console.log(response);
-            }),
-                (err) => {
-                    console.log(err);
-                };
-        });
-    }
     //Gets the Selected Company from Local Storage
     getSelectedCompanyFromLocalStorage() {
         return this.userService.getSelectedCompanyFromLocalStorage();

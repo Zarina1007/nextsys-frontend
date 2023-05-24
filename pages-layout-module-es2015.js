@@ -20189,9 +20189,9 @@ class DynamicAsideMenuService {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             this.tagList = yield this.tagService.getUserTags(this.currentUser.tagsId).toPromise();
             let submenuList = [];
-            this.tagList.map(tag => {
+            this.tagList.map((tag) => {
                 submenuList.push({
-                    title: `${tag.name}`,
+                    title: `${tag.nickName ? tag.nickName : tag.name}`,
                     page: `/publisher-reporting/${tag._key}`
                 });
             });

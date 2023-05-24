@@ -393,7 +393,7 @@
         type: PublisherDocumentationComponent,
         selectors: [["app-publisher-documentation"]],
         decls: 42,
-        vars: 1,
+        vars: 2,
         consts: [[1, "contents__box", "contents__box--right"], [1, "section"], [1, "section-head"], [1, "section-content"], [1, "hljs", "bash"], [1, "hljs-built_in"], [1, "hljs-built"], [4, "ngFor", "ngForOf"], ["target", "_blank", 3, "href"]],
         template: function PublisherDocumentationComponent_Template(rf, ctx) {
           if (rf & 1) {
@@ -455,7 +455,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, " publisher API Key");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -535,7 +535,11 @@
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](41);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](21);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.userApiKey, "");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](20);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx.tagIds);
           }

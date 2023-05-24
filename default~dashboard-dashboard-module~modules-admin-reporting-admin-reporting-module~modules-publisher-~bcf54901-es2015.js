@@ -151,18 +151,13 @@ class LyonService {
     constructor(http) {
         this.http = http;
     }
-    testingRoute() {
-        console.log('being tested');
-        console.log(API_LYON_URL);
-        return this.http.get('http://localhost:3000/stats/admin/lyon/asd');
-    }
     getAllStats(startDate, endDate) {
         return this.http.get(API_LYON_URL + '/all', {
             params: { startDate: startDate, endDate: endDate },
         });
     }
     getAllPublisherStats(startDate, endDate) {
-        return this.http.get(API_LYON_URL + '/all-publisher', {
+        return this.http.get(API_LYON_URL + '/all-publishers', {
             params: { startDate: startDate, endDate: endDate },
         });
     }

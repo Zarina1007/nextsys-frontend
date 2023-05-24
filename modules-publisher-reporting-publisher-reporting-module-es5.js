@@ -13,6 +13,105 @@
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["modules-publisher-reporting-publisher-reporting-module"], {
     /***/
+    "./node_modules/file-saver/dist/FileSaver.min.js":
+    /*!*******************************************************!*\
+      !*** ./node_modules/file-saver/dist/FileSaver.min.js ***!
+      \*******************************************************/
+
+    /*! no static exports found */
+
+    /***/
+    function node_modulesFileSaverDistFileSaverMinJs(module, exports, __webpack_require__) {
+      var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
+
+      (function (a, b) {
+        if (true) !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = b, __WEBPACK_AMD_DEFINE_RESULT__ = typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? __WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__) : __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));else {}
+      })(this, function () {
+        "use strict";
+
+        function b(a, b) {
+          return "undefined" == typeof b ? b = {
+            autoBom: !1
+          } : "object" != typeof b && (console.warn("Deprecated: Expected third argument to be a object"), b = {
+            autoBom: !b
+          }), b.autoBom && /^\s*(?:text\/\S*|application\/xml|\S*\/\S*\+xml)\s*;.*charset\s*=\s*utf-8/i.test(a.type) ? new Blob(["\uFEFF", a], {
+            type: a.type
+          }) : a;
+        }
+
+        function c(b, c, d) {
+          var e = new XMLHttpRequest();
+          e.open("GET", b), e.responseType = "blob", e.onload = function () {
+            a(e.response, c, d);
+          }, e.onerror = function () {
+            console.error("could not download file");
+          }, e.send();
+        }
+
+        function d(a) {
+          var b = new XMLHttpRequest();
+          b.open("HEAD", a, !1);
+
+          try {
+            b.send();
+          } catch (a) {}
+
+          return 200 <= b.status && 299 >= b.status;
+        }
+
+        function e(a) {
+          try {
+            a.dispatchEvent(new MouseEvent("click"));
+          } catch (c) {
+            var b = document.createEvent("MouseEvents");
+            b.initMouseEvent("click", !0, !0, window, 0, 0, 0, 80, 20, !1, !1, !1, !1, 0, null), a.dispatchEvent(b);
+          }
+        }
+
+        var f = "object" == typeof window && window.window === window ? window : "object" == typeof self && self.self === self ? self : "object" == typeof global && global.global === global ? global : void 0,
+            a = f.saveAs || ("object" != typeof window || window !== f ? function () {} : "download" in HTMLAnchorElement.prototype ? function (b, g, h) {
+          var i = f.URL || f.webkitURL,
+              j = document.createElement("a");
+          g = g || b.name || "download", j.download = g, j.rel = "noopener", "string" == typeof b ? (j.href = b, j.origin === location.origin ? e(j) : d(j.href) ? c(b, g, h) : e(j, j.target = "_blank")) : (j.href = i.createObjectURL(b), setTimeout(function () {
+            i.revokeObjectURL(j.href);
+          }, 4E4), setTimeout(function () {
+            e(j);
+          }, 0));
+        } : "msSaveOrOpenBlob" in navigator ? function (f, g, h) {
+          if (g = g || f.name || "download", "string" != typeof f) navigator.msSaveOrOpenBlob(b(f, h), g);else if (d(f)) c(f, g, h);else {
+            var i = document.createElement("a");
+            i.href = f, i.target = "_blank", setTimeout(function () {
+              e(i);
+            });
+          }
+        } : function (a, b, d, e) {
+          if (e = e || open("", "_blank"), e && (e.document.title = e.document.body.innerText = "downloading..."), "string" == typeof a) return c(a, b, d);
+          var g = "application/octet-stream" === a.type,
+              h = /constructor/i.test(f.HTMLElement) || f.safari,
+              i = /CriOS\/[\d]+/.test(navigator.userAgent);
+
+          if ((i || g && h) && "object" == typeof FileReader) {
+            var j = new FileReader();
+            j.onloadend = function () {
+              var a = j.result;
+              a = i ? a : a.replace(/^data:[^;]*;/, "data:attachment/file;"), e ? e.location.href = a : location = a, e = null;
+            }, j.readAsDataURL(a);
+          } else {
+            var k = f.URL || f.webkitURL,
+                l = k.createObjectURL(a);
+            e ? e.location = l : location.href = l, e = null, setTimeout(function () {
+              k.revokeObjectURL(l);
+            }, 4E4);
+          }
+        });
+        f.saveAs = a.saveAs = a, true && (module.exports = a);
+      }); //# sourceMappingURL=FileSaver.min.js.map
+
+      /***/
+
+    },
+
+    /***/
     "./src/app/modules/publisher-reporting/publisher-reporting-routing.module.ts":
     /*!***********************************************************************************!*\
       !*** ./src/app/modules/publisher-reporting/publisher-reporting-routing.module.ts ***!
@@ -269,6 +368,7 @@
         factory: function PublisherReportingModule_Factory(t) {
           return new (t || PublisherReportingModule)();
         },
+        providers: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CurrencyPipe"]],
         imports: [[_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _publisher_reporting_routing_module__WEBPACK_IMPORTED_MODULE_3__["PublisherReportingRoutingModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_6__["SharedModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["NgxDatatableModule"]]]
       });
 
@@ -287,6 +387,7 @@
           args: [{
             declarations: [_publisher_publisher_component__WEBPACK_IMPORTED_MODULE_4__["PublisherComponent"], _publisher_reporting_component__WEBPACK_IMPORTED_MODULE_5__["PublisherReportingComponent"]],
             imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _publisher_reporting_routing_module__WEBPACK_IMPORTED_MODULE_3__["PublisherReportingRoutingModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_6__["SharedModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["NgxDatatableModule"]],
+            providers: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CurrencyPipe"]],
             entryComponents: []
           }]
         }], null, null);
@@ -389,9 +490,9 @@
       /* harmony import */
 
 
-      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
-      /*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */
-      "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
+      var src_app_shared_service_export_data_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      /*! src/app/shared/service/export-data.service */
+      "./src/app/shared/service/export-data.service.ts");
       /* harmony import */
 
 
@@ -401,13 +502,19 @@
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      /*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */
+      "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
+      /* harmony import */
+
+
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _shared_modules_reporting_publisher_revenue_chart_reporting_publisher_revenue_chart_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      var _shared_modules_reporting_publisher_revenue_chart_reporting_publisher_revenue_chart_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-publisher-revenue-chart/reporting-publisher-revenue-chart.component */
       "./src/app/shared/modules/reporting-publisher-revenue-chart/reporting-publisher-revenue-chart.component.ts");
 
@@ -415,7 +522,7 @@
 
       function PublisherComponent_app_reporting_publisher_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-publisher-revenue-chart", 15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-publisher-revenue-chart", 17);
         }
 
         if (rf & 2) {
@@ -425,9 +532,9 @@
         }
       }
 
-      function PublisherComponent_ng_template_6_Template(rf, ctx) {
+      function PublisherComponent_ng_template_9_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 16);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -449,13 +556,13 @@
         }
       }
 
-      function PublisherComponent_ng_template_8_Template(rf, ctx) {
+      function PublisherComponent_ng_template_11_Template(rf, ctx) {
         if (rf & 1) {
           var _r20 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 19);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PublisherComponent_ng_template_8_Template_a_click_0_listener() {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PublisherComponent_ng_template_11_Template_a_click_0_listener() {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r20);
 
             var row_r17 = ctx.row;
@@ -475,13 +582,13 @@
         }
       }
 
-      function PublisherComponent_ng_template_10_Template(rf, ctx) {
+      function PublisherComponent_ng_template_13_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function PublisherComponent_ng_template_11_Template(rf, ctx) {
+      function PublisherComponent_ng_template_14_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -501,13 +608,13 @@
         }
       }
 
-      function PublisherComponent_ng_template_13_Template(rf, ctx) {
+      function PublisherComponent_ng_template_16_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
         }
       }
 
-      function PublisherComponent_ng_template_14_Template(rf, ctx) {
+      function PublisherComponent_ng_template_17_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -525,37 +632,9 @@
         }
       }
 
-      function PublisherComponent_ng_template_16_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
-        }
-      }
-
-      function PublisherComponent_ng_template_17_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "number");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r26 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r26, "1.2-2") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "1.0-0"));
-        }
-      }
-
       function PublisherComponent_ng_template_19_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
         }
       }
 
@@ -565,9 +644,37 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "number");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r26 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r26, "USD") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "USD"));
+        }
+      }
+
+      function PublisherComponent_ng_template_22_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
+        }
+      }
+
+      function PublisherComponent_ng_template_23_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "percent");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "percent");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -577,17 +684,17 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r28) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r28, "1.2-2") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "1.2-2"));
         }
       }
 
-      function PublisherComponent_ng_template_22_Template(rf, ctx) {
+      function PublisherComponent_ng_template_25_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
         }
       }
 
-      function PublisherComponent_ng_template_23_Template(rf, ctx) {
+      function PublisherComponent_ng_template_26_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -608,7 +715,7 @@
       }
 
       var PublisherComponent = /*#__PURE__*/function () {
-        function PublisherComponent(route, tagManagementService, cdr, userService, perionService, lyonService, verizonService, rubiService, solexbcService, system1Service, apptitudeService) {
+        function PublisherComponent(route, tagManagementService, cdr, userService, perionService, lyonService, verizonService, rubiService, solexbcService, system1Service, apptitudeService, exportDataService, datePipe, currencyPipe, percentPipe) {
           _classCallCheck(this, PublisherComponent);
 
           this.route = route;
@@ -622,6 +729,10 @@
           this.solexbcService = solexbcService;
           this.system1Service = system1Service;
           this.apptitudeService = apptitudeService;
+          this.exportDataService = exportDataService;
+          this.datePipe = datePipe;
+          this.currencyPipe = currencyPipe;
+          this.percentPipe = percentPipe;
           this.loadingIndicator = true;
           this.range = {
             startDate: '',
@@ -640,13 +751,28 @@
                 while (1) {
                   switch (_context2.prev = _context2.next) {
                     case 0:
+                      this.users = [{
+                        id: 1,
+                        firstName: 'Mark',
+                        lastName: 'Otto',
+                        handle: '@mdo'
+                      }, {
+                        id: 2,
+                        firstName: 'Jacob',
+                        lastName: 'Thornton',
+                        handle: '@fat'
+                      }, {
+                        id: 3,
+                        firstName: 'Larry',
+                        lastName: 'the Bird',
+                        handle: '@twitter'
+                      }];
                       this.route.params.subscribe(function (routeParams) {
                         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
                           return regeneratorRuntime.wrap(function _callee$(_context) {
                             while (1) {
                               switch (_context.prev = _context.next) {
                                 case 0:
-                                  //console.log("routeParams===>", routeParams)
                                   this.statData = [];
                                   _context.next = 3;
                                   return this.getTagInformation(routeParams.tagId);
@@ -798,7 +924,7 @@
                         }));
                       });
 
-                    case 1:
+                    case 2:
                     case "end":
                       return _context2.stop();
                   }
@@ -1092,6 +1218,34 @@
             this.cdr.markForCheck();
           }
         }, {
+          key: "exportToCsv",
+          value: function exportToCsv() {
+            var exportCov = [];
+
+            var _iterator3 = _createForOfIteratorHelper(this.statData),
+                _step3;
+
+            try {
+              for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+                var statOne = _step3.value;
+                var stat = {
+                  date: this.datePipe.transform(statOne.date, "dd MMM yyyy"),
+                  searches: statOne.searches,
+                  cpc: this.currencyPipe.transform(statOne.cpc ? statOne.cpc : 0),
+                  ctr: this.percentPipe.transform(statOne.ctr, "1.2-2"),
+                  revenue: statOne.revenue
+                };
+                exportCov.push(stat);
+              }
+            } catch (err) {
+              _iterator3.e(err);
+            } finally {
+              _iterator3.f();
+            }
+
+            this.exportDataService.exportToCsv(exportCov, this.tagRows.nickName ? this.tagRows.nickName : this.tagRows.name, ['date', 'searches', 'cpc', 'ctr', 'revenue']);
+          }
+        }, {
           key: "getPerionChartMetrics",
           value: function getPerionChartMetrics(company, startDate, endDate) {
             var _this3 = this;
@@ -1100,12 +1254,12 @@
               _this3.allPerionChart = response;
               var chartAllPerionStat = [];
 
-              var _iterator3 = _createForOfIteratorHelper(_this3.tagRows.subids),
-                  _step3;
+              var _iterator4 = _createForOfIteratorHelper(_this3.tagRows.subids),
+                  _step4;
 
               try {
-                for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-                  var tagSub = _step3.value;
+                for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+                  var tagSub = _step4.value;
 
                   if (tagSub['filterTag'] == "Contains") {
                     chartAllPerionStat = chartAllPerionStat.concat(_this3.allPerionChart.filter(function (stat) {
@@ -1127,9 +1281,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator3.e(err);
+                _iterator4.e(err);
               } finally {
-                _iterator3.f();
+                _iterator4.f();
               }
 
               var filter_data = chartAllPerionStat.filter(function (thing, index, self) {
@@ -1164,21 +1318,21 @@
               var searchesPerDayVal = [];
               var chartDataValue = {};
 
-              var _iterator4 = _createForOfIteratorHelper(resultChart),
-                  _step4;
+              var _iterator5 = _createForOfIteratorHelper(resultChart),
+                  _step5;
 
               try {
-                for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-                  var resVal = _step4.value;
+                for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+                  var resVal = _step5.value;
                   revenuePerDayVal.push(0);
                   publisherRevenuePerDayVal.push(resVal.revenue);
                   datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.impressions);
                 }
               } catch (err) {
-                _iterator4.e(err);
+                _iterator5.e(err);
               } finally {
-                _iterator4.f();
+                _iterator5.f();
               }
 
               chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -1199,12 +1353,12 @@
               _this4.allPerionStatData = response;
               var allPerionStat = [];
 
-              var _iterator5 = _createForOfIteratorHelper(tag.subids),
-                  _step5;
+              var _iterator6 = _createForOfIteratorHelper(tag.subids),
+                  _step6;
 
               try {
-                for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-                  var tagSub = _step5.value;
+                for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+                  var tagSub = _step6.value;
 
                   if (tagSub.filterTag == "Contains") {
                     allPerionStat = allPerionStat.concat(_this4.allPerionStatData.filter(function (stat) {
@@ -1238,9 +1392,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator5.e(err);
+                _iterator6.e(err);
               } finally {
-                _iterator5.f();
+                _iterator6.f();
               }
 
               var filter_data = allPerionStat.filter(function (thing, index, self) {
@@ -1285,12 +1439,12 @@
               _this5.allLyonStatData = response;
               var allLyonStat = [];
 
-              var _iterator6 = _createForOfIteratorHelper(tag.subids),
-                  _step6;
+              var _iterator7 = _createForOfIteratorHelper(tag.subids),
+                  _step7;
 
               try {
-                for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
-                  var tagSub = _step6.value;
+                for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
+                  var tagSub = _step7.value;
 
                   if (tagSub.filterTag == "Contains") {
                     allLyonStat = allLyonStat.concat(_this5.allLyonStatData.filter(function (stat) {
@@ -1324,9 +1478,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator6.e(err);
+                _iterator7.e(err);
               } finally {
-                _iterator6.f();
+                _iterator7.f();
               }
 
               var filtered_data = allLyonStat.filter(function (thing, index, self) {
@@ -1377,12 +1531,12 @@
               _this6.allVerizonStatData = response.stats;
               var allVerizonStat = [];
 
-              var _iterator7 = _createForOfIteratorHelper(tag.subids),
-                  _step7;
+              var _iterator8 = _createForOfIteratorHelper(tag.subids),
+                  _step8;
 
               try {
-                for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
-                  var tagSub = _step7.value;
+                for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
+                  var tagSub = _step8.value;
 
                   if (tagSub.filterTag == "Contains") {
                     allVerizonStat = allVerizonStat.concat(_this6.allVerizonStatData.filter(function (stat) {
@@ -1420,9 +1574,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator7.e(err);
+                _iterator8.e(err);
               } finally {
-                _iterator7.f();
+                _iterator8.f();
               }
 
               var filtered_data = allVerizonStat.filter(function (thing, index, self) {
@@ -1450,12 +1604,12 @@
               _this7.allVerizonChart = response.stats;
               var chartAllVerizonStat = [];
 
-              var _iterator8 = _createForOfIteratorHelper(_this7.tagRows.subids),
-                  _step8;
+              var _iterator9 = _createForOfIteratorHelper(_this7.tagRows.subids),
+                  _step9;
 
               try {
-                for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
-                  var tagSub = _step8.value;
+                for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
+                  var tagSub = _step9.value;
 
                   if (tagSub['filterTag'] == "Contains") {
                     chartAllVerizonStat = chartAllVerizonStat.concat(_this7.allVerizonChart.filter(function (stat) {
@@ -1477,9 +1631,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator8.e(err);
+                _iterator9.e(err);
               } finally {
-                _iterator8.f();
+                _iterator9.f();
               }
 
               var filter_data = chartAllVerizonStat.filter(function (thing, index, self) {
@@ -1517,21 +1671,21 @@
               var searchesPerDayVal = [];
               var chartDataValue = {};
 
-              var _iterator9 = _createForOfIteratorHelper(resultChart),
-                  _step9;
+              var _iterator10 = _createForOfIteratorHelper(resultChart),
+                  _step10;
 
               try {
-                for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
-                  var resVal = _step9.value;
+                for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
+                  var resVal = _step10.value;
                   revenuePerDayVal.push(0);
                   publisherRevenuePerDayVal.push(resVal.revenue);
                   datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.searches);
                 }
               } catch (err) {
-                _iterator9.e(err);
+                _iterator10.e(err);
               } finally {
-                _iterator9.f();
+                _iterator10.f();
               }
 
               chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -1552,12 +1706,12 @@
               _this8.allRubiStatData = res.stats;
               var allRubiStat = [];
 
-              var _iterator10 = _createForOfIteratorHelper(tag.subids),
-                  _step10;
+              var _iterator11 = _createForOfIteratorHelper(tag.subids),
+                  _step11;
 
               try {
-                for (_iterator10.s(); !(_step10 = _iterator10.n()).done;) {
-                  var tagSub = _step10.value;
+                for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
+                  var tagSub = _step11.value;
 
                   if (tagSub.filterTag == "Contains") {
                     allRubiStat = allRubiStat.concat(_this8.allRubiStatData.filter(function (stat) {
@@ -1591,9 +1745,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator10.e(err);
+                _iterator11.e(err);
               } finally {
-                _iterator10.f();
+                _iterator11.f();
               }
 
               var filtered_data = allRubiStat.filter(function (thing, index, self) {
@@ -1622,12 +1776,12 @@
               _this9.allRubiChart = response.stats;
               var chartAllRubiStat = [];
 
-              var _iterator11 = _createForOfIteratorHelper(_this9.tagRows.subids),
-                  _step11;
+              var _iterator12 = _createForOfIteratorHelper(_this9.tagRows.subids),
+                  _step12;
 
               try {
-                for (_iterator11.s(); !(_step11 = _iterator11.n()).done;) {
-                  var tagSub = _step11.value;
+                for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
+                  var tagSub = _step12.value;
 
                   if (tagSub['filterTag'] == "Contains") {
                     chartAllRubiStat = chartAllRubiStat.concat(_this9.allRubiChart.filter(function (stat) {
@@ -1649,9 +1803,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator11.e(err);
+                _iterator12.e(err);
               } finally {
-                _iterator11.f();
+                _iterator12.f();
               }
 
               var filter_data = chartAllRubiStat.filter(function (thing, index, self) {
@@ -1689,21 +1843,21 @@
               var searchesPerDayVal = [];
               var chartDataValue = {};
 
-              var _iterator12 = _createForOfIteratorHelper(resultChart),
-                  _step12;
+              var _iterator13 = _createForOfIteratorHelper(resultChart),
+                  _step13;
 
               try {
-                for (_iterator12.s(); !(_step12 = _iterator12.n()).done;) {
-                  var resVal = _step12.value;
+                for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
+                  var resVal = _step13.value;
                   revenuePerDayVal.push(0);
                   publisherRevenuePerDayVal.push(resVal.revenue);
                   datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.searches);
                 }
               } catch (err) {
-                _iterator12.e(err);
+                _iterator13.e(err);
               } finally {
-                _iterator12.f();
+                _iterator13.f();
               }
 
               chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -1724,12 +1878,12 @@
               _this10.allSolexBCStatData = res.stats;
               var allSolexBCStat = [];
 
-              var _iterator13 = _createForOfIteratorHelper(tag.subids),
-                  _step13;
+              var _iterator14 = _createForOfIteratorHelper(tag.subids),
+                  _step14;
 
               try {
-                for (_iterator13.s(); !(_step13 = _iterator13.n()).done;) {
-                  var tagSub = _step13.value;
+                for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
+                  var tagSub = _step14.value;
 
                   if (tagSub.filterTag == "Contains") {
                     allSolexBCStat = allSolexBCStat.concat(_this10.allSolexBCStatData.filter(function (stat) {
@@ -1763,9 +1917,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator13.e(err);
+                _iterator14.e(err);
               } finally {
-                _iterator13.f();
+                _iterator14.f();
               }
 
               var filtered_data = allSolexBCStat.filter(function (thing, index, self) {
@@ -1794,12 +1948,12 @@
               _this11.allSolexBCChart = response.stats;
               var chartAllSolexbcStat = [];
 
-              var _iterator14 = _createForOfIteratorHelper(_this11.tagRows.subids),
-                  _step14;
+              var _iterator15 = _createForOfIteratorHelper(_this11.tagRows.subids),
+                  _step15;
 
               try {
-                for (_iterator14.s(); !(_step14 = _iterator14.n()).done;) {
-                  var tagSub = _step14.value;
+                for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
+                  var tagSub = _step15.value;
 
                   if (tagSub['filterTag'] == "Contains") {
                     chartAllSolexbcStat = chartAllSolexbcStat.concat(_this11.allSolexBCChart.filter(function (stat) {
@@ -1821,9 +1975,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator14.e(err);
+                _iterator15.e(err);
               } finally {
-                _iterator14.f();
+                _iterator15.f();
               }
 
               var filter_data = chartAllSolexbcStat.filter(function (thing, index, self) {
@@ -1861,21 +2015,21 @@
               var searchesPerDayVal = [];
               var chartDataValue = {};
 
-              var _iterator15 = _createForOfIteratorHelper(resultChart),
-                  _step15;
+              var _iterator16 = _createForOfIteratorHelper(resultChart),
+                  _step16;
 
               try {
-                for (_iterator15.s(); !(_step15 = _iterator15.n()).done;) {
-                  var resVal = _step15.value;
+                for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
+                  var resVal = _step16.value;
                   revenuePerDayVal.push(0);
                   publisherRevenuePerDayVal.push(resVal.revenue);
                   datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.searches);
                 }
               } catch (err) {
-                _iterator15.e(err);
+                _iterator16.e(err);
               } finally {
-                _iterator15.f();
+                _iterator16.f();
               }
 
               chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -1896,12 +2050,12 @@
               _this12.allSolexBCStatData = res.stats;
               var allSolexBCStat = [];
 
-              var _iterator16 = _createForOfIteratorHelper(tag.subids),
-                  _step16;
+              var _iterator17 = _createForOfIteratorHelper(tag.subids),
+                  _step17;
 
               try {
-                for (_iterator16.s(); !(_step16 = _iterator16.n()).done;) {
-                  var tagSub = _step16.value;
+                for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
+                  var tagSub = _step17.value;
 
                   if (tagSub.filterTag == "Contains") {
                     allSolexBCStat = allSolexBCStat.concat(_this12.allSolexBCStatData.filter(function (stat) {
@@ -1935,9 +2089,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator16.e(err);
+                _iterator17.e(err);
               } finally {
-                _iterator16.f();
+                _iterator17.f();
               }
 
               var filtered_data = allSolexBCStat.filter(function (thing, index, self) {
@@ -1966,12 +2120,12 @@
               _this13.allSolexBCChart = response.stats;
               var chartAllSolexbcStat = [];
 
-              var _iterator17 = _createForOfIteratorHelper(_this13.tagRows.subids),
-                  _step17;
+              var _iterator18 = _createForOfIteratorHelper(_this13.tagRows.subids),
+                  _step18;
 
               try {
-                for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
-                  var tagSub = _step17.value;
+                for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
+                  var tagSub = _step18.value;
 
                   if (tagSub['filterTag'] == "Contains") {
                     chartAllSolexbcStat = chartAllSolexbcStat.concat(_this13.allSolexBCChart.filter(function (stat) {
@@ -1993,9 +2147,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator17.e(err);
+                _iterator18.e(err);
               } finally {
-                _iterator17.f();
+                _iterator18.f();
               }
 
               var filter_data = chartAllSolexbcStat.filter(function (thing, index, self) {
@@ -2033,21 +2187,21 @@
               var searchesPerDayVal = [];
               var chartDataValue = {};
 
-              var _iterator18 = _createForOfIteratorHelper(resultChart),
-                  _step18;
+              var _iterator19 = _createForOfIteratorHelper(resultChart),
+                  _step19;
 
               try {
-                for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
-                  var resVal = _step18.value;
+                for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
+                  var resVal = _step19.value;
                   revenuePerDayVal.push(0);
                   publisherRevenuePerDayVal.push(resVal.revenue);
                   datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.searches);
                 }
               } catch (err) {
-                _iterator18.e(err);
+                _iterator19.e(err);
               } finally {
-                _iterator18.f();
+                _iterator19.f();
               }
 
               chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -2068,12 +2222,12 @@
               _this14.allApptitudeStatData = res.stats;
               var allApptitudeStat = [];
 
-              var _iterator19 = _createForOfIteratorHelper(tag.subids),
-                  _step19;
+              var _iterator20 = _createForOfIteratorHelper(tag.subids),
+                  _step20;
 
               try {
-                for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
-                  var tagSub = _step19.value;
+                for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+                  var tagSub = _step20.value;
 
                   if (tagSub.filterTag == "Contains") {
                     allApptitudeStat = allApptitudeStat.concat(_this14.allApptitudeStatData.filter(function (stat) {
@@ -2107,9 +2261,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator19.e(err);
+                _iterator20.e(err);
               } finally {
-                _iterator19.f();
+                _iterator20.f();
               }
 
               var filtered_data = allApptitudeStat.filter(function (thing, index, self) {
@@ -2133,12 +2287,12 @@
               _this15.allApptitudeChart = response.stats;
               var chatAllApptitudeStat = [];
 
-              var _iterator20 = _createForOfIteratorHelper(_this15.tagRows.subids),
-                  _step20;
+              var _iterator21 = _createForOfIteratorHelper(_this15.tagRows.subids),
+                  _step21;
 
               try {
-                for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
-                  var tagSub = _step20.value;
+                for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+                  var tagSub = _step21.value;
 
                   if (tagSub['filterTag'] == "Contains") {
                     chatAllApptitudeStat = chatAllApptitudeStat.concat(_this15.allApptitudeChart.filter(function (stat) {
@@ -2160,9 +2314,9 @@
                 } //duplicated remove
 
               } catch (err) {
-                _iterator20.e(err);
+                _iterator21.e(err);
               } finally {
-                _iterator20.f();
+                _iterator21.f();
               }
 
               var filter_data = chatAllApptitudeStat.filter(function (thing, index, self) {
@@ -2197,21 +2351,21 @@
               var searchesPerDayVal = [];
               var chartDataValue = {};
 
-              var _iterator21 = _createForOfIteratorHelper(resultChart),
-                  _step21;
+              var _iterator22 = _createForOfIteratorHelper(resultChart),
+                  _step22;
 
               try {
-                for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
-                  var resVal = _step21.value;
+                for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                  var resVal = _step22.value;
                   revenuePerDayVal.push(0);
                   publisherRevenuePerDayVal.push(resVal.revenue);
                   datesOfRevenueVal.push(resVal.date);
                   searchesPerDayVal.push(resVal.searches);
                 }
               } catch (err) {
-                _iterator21.e(err);
+                _iterator22.e(err);
               } finally {
-                _iterator21.f();
+                _iterator22.f();
               }
 
               chartDataValue['revenuePerDay'] = revenuePerDayVal;
@@ -2229,7 +2383,7 @@
       }();
 
       PublisherComponent.ɵfac = function PublisherComponent_Factory(t) {
-        return new (t || PublisherComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_11__["ApptitudeService"]));
+        return new (t || PublisherComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_5__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_7__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_8__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_9__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_11__["ApptitudeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_export_data_service__WEBPACK_IMPORTED_MODULE_12__["ExportDataService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_13__["DatePipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_13__["CurrencyPipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_13__["PercentPipe"]));
       };
 
       PublisherComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
@@ -2246,9 +2400,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 24,
+        decls: 27,
         vars: 14,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date"], ["ngx-datatable-header-template", ""], ["name", "searches"], ["name", "cpc"], ["name", "ctr"], ["name", "revenue"], [3, "chartData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [1, "row", "py-6"], [1, "btn", "btn-sm", "btn-primary", "mx-3", 3, "click"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "scrollbarH", "rows"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date"], ["ngx-datatable-header-template", ""], ["name", "searches"], ["name", "cpc"], ["name", "ctr"], ["name", "revenue"], [3, "chartData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"]],
         template: function PublisherComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -2261,61 +2415,75 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PublisherComponent_app_reporting_publisher_revenue_chart_1_Template, 1, 1, "app-reporting-publisher-revenue-chart", 1);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "ngx-datatable", 2, 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "ngx-datatable-row-detail", 4, 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "button", 3);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function PublisherComponent_Template_ngx_datatable_row_detail_toggle_4_listener($event) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PublisherComponent_Template_button_click_3_listener() {
+              return ctx.exportToCsv();
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, " Export Stats ");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "ngx-datatable", 4, 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "ngx-datatable-row-detail", 6, 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function PublisherComponent_Template_ngx_datatable_row_detail_toggle_7_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](6, PublisherComponent_ng_template_6_Template, 6, 0, "ng-template", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](9, PublisherComponent_ng_template_9_Template, 6, 0, "ng-template", 8);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "ngx-datatable-column", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "ngx-datatable-column", 9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, PublisherComponent_ng_template_8_Template, 1, 4, "ng-template", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "ngx-datatable-column", 9);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](10, PublisherComponent_ng_template_10_Template, 1, 0, "ng-template", 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, PublisherComponent_ng_template_11_Template, 3, 3, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](11, PublisherComponent_ng_template_11_Template, 1, 4, "ng-template", 10);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "ngx-datatable-column", 11);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, PublisherComponent_ng_template_13_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, PublisherComponent_ng_template_13_Template, 1, 0, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, PublisherComponent_ng_template_14_Template, 2, 1, "ng-template", 8);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "ngx-datatable-column", 12);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, PublisherComponent_ng_template_16_Template, 1, 0, "ng-template", 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, PublisherComponent_ng_template_17_Template, 4, 7, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, PublisherComponent_ng_template_14_Template, 3, 3, "ng-template", 10);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "ngx-datatable-column", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "ngx-datatable-column", 13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](19, PublisherComponent_ng_template_19_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, PublisherComponent_ng_template_16_Template, 1, 0, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, PublisherComponent_ng_template_20_Template, 4, 6, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, PublisherComponent_ng_template_17_Template, 2, 1, "ng-template", 10);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "ngx-datatable-column", 14);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, PublisherComponent_ng_template_22_Template, 1, 0, "ng-template", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](19, PublisherComponent_ng_template_19_Template, 1, 0, "ng-template", 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, PublisherComponent_ng_template_23_Template, 3, 4, "ng-template", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, PublisherComponent_ng_template_20_Template, 4, 7, "ng-template", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 15);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, PublisherComponent_ng_template_22_Template, 1, 0, "ng-template", 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, PublisherComponent_ng_template_23_Template, 4, 7, "ng-template", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](24, "ngx-datatable-column", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, PublisherComponent_ng_template_25_Template, 1, 0, "ng-template", 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, PublisherComponent_ng_template_26_Template, 3, 4, "ng-template", 10);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -2327,7 +2495,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.chartData);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("scrollbarH", true)("rows", ctx.statData);
 
@@ -2340,8 +2508,8 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_12__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_14__["DataTableColumnHeaderDirective"], _shared_modules_reporting_publisher_revenue_chart_reporting_publisher_revenue_chart_component__WEBPACK_IMPORTED_MODULE_15__["ReportingPublisherRevenueChartComponent"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_13__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_14__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_15__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_15__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_15__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_15__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_15__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_15__["DataTableColumnHeaderDirective"], _shared_modules_reporting_publisher_revenue_chart_reporting_publisher_revenue_chart_component__WEBPACK_IMPORTED_MODULE_16__["ReportingPublisherRevenueChartComponent"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_13__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_13__["PercentPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvcHVibGlzaGVyLXJlcG9ydGluZy9wdWJsaXNoZXIvcHVibGlzaGVyLmNvbXBvbmVudC5zY3NzIn0= */"]
       });
       /*@__PURE__*/
@@ -2377,6 +2545,14 @@
             type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]
           }, {
             type: src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_11__["ApptitudeService"]
+          }, {
+            type: src_app_shared_service_export_data_service__WEBPACK_IMPORTED_MODULE_12__["ExportDataService"]
+          }, {
+            type: _angular_common__WEBPACK_IMPORTED_MODULE_13__["DatePipe"]
+          }, {
+            type: _angular_common__WEBPACK_IMPORTED_MODULE_13__["CurrencyPipe"]
+          }, {
+            type: _angular_common__WEBPACK_IMPORTED_MODULE_13__["PercentPipe"]
           }];
         }, {
           table: [{
@@ -2384,6 +2560,117 @@
             args: ['expandableTable']
           }]
         });
+      })();
+      /***/
+
+    },
+
+    /***/
+    "./src/app/shared/service/export-data.service.ts":
+    /*!*******************************************************!*\
+      !*** ./src/app/shared/service/export-data.service.ts ***!
+      \*******************************************************/
+
+    /*! exports provided: ExportDataService */
+
+    /***/
+    function srcAppSharedServiceExportDataServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ExportDataService", function () {
+        return ExportDataService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var file_saver__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! file-saver */
+      "./node_modules/file-saver/dist/FileSaver.min.js");
+      /* harmony import */
+
+
+      var file_saver__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(file_saver__WEBPACK_IMPORTED_MODULE_1__);
+
+      var CSV_EXTENSION = '.csv';
+      var CSV_TYPE = 'text/plain;charset=utf-8';
+
+      var ExportDataService = /*#__PURE__*/function () {
+        function ExportDataService() {
+          _classCallCheck(this, ExportDataService);
+        }
+
+        _createClass(ExportDataService, [{
+          key: "saveAsFile",
+          value: function saveAsFile(buffer, fileName, fileType) {
+            var data = new Blob([buffer], {
+              type: fileType
+            });
+            file_saver__WEBPACK_IMPORTED_MODULE_1__["saveAs"](data, fileName);
+          }
+        }, {
+          key: "exportToCsv",
+          value: function exportToCsv(rows, fileName, columns) {
+            if (!rows || !rows.length) {
+              return;
+            }
+
+            var separator = ',';
+            var keys = Object.keys(rows[0]).filter(function (k) {
+              if (columns === null || columns === void 0 ? void 0 : columns.length) {
+                return columns.includes(k);
+              } else {
+                return true;
+              }
+            });
+            var csvContent = keys.join(separator) + '\n' + rows.map(function (row) {
+              return keys.map(function (k) {
+                var cell = row[k] === null || row[k] === undefined ? '' : row[k];
+                cell = cell instanceof Date ? cell.toLocaleString() : cell.toString().replace(/"/g, '""');
+
+                if (cell.search(/("|,|\n)/g) >= 0) {
+                  cell = "\"".concat(cell, "\"");
+                }
+
+                return cell;
+              }).join(separator);
+            }).join('\n');
+            this.saveAsFile(csvContent, "".concat(fileName).concat(CSV_EXTENSION), CSV_TYPE);
+          }
+        }]);
+
+        return ExportDataService;
+      }();
+
+      ExportDataService.ɵfac = function ExportDataService_Factory(t) {
+        return new (t || ExportDataService)();
+      };
+
+      ExportDataService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: ExportDataService,
+        factory: ExportDataService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](ExportDataService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [];
+        }, null);
       })();
       /***/
 

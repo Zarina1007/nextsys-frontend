@@ -315,13 +315,6 @@
         }
 
         _createClass(LyonService, [{
-          key: "testingRoute",
-          value: function testingRoute() {
-            console.log('being tested');
-            console.log(API_LYON_URL);
-            return this.http.get('http://localhost:3000/stats/admin/lyon/asd');
-          }
-        }, {
           key: "getAllStats",
           value: function getAllStats(startDate, endDate) {
             return this.http.get(API_LYON_URL + '/all', {
@@ -334,7 +327,7 @@
         }, {
           key: "getAllPublisherStats",
           value: function getAllPublisherStats(startDate, endDate) {
-            return this.http.get(API_LYON_URL + '/all-publisher', {
+            return this.http.get(API_LYON_URL + '/all-publishers', {
               params: {
                 startDate: startDate,
                 endDate: endDate

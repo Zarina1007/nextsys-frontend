@@ -31025,7 +31025,7 @@
                       submenuList = [];
                       this.tagList.map(function (tag) {
                         submenuList.push({
-                          title: "".concat(tag.name),
+                          title: "".concat(tag.nickName ? tag.nickName : tag.name),
                           page: "/publisher-reporting/".concat(tag._key)
                         });
                       });
