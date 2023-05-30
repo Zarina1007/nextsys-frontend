@@ -20159,7 +20159,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
 /* harmony import */ var _configs_dynamic_aside_menu_config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../configs/dynamic-aside-menu.config */ "./src/app/_metronic/configs/dynamic-aside-menu.config.ts");
 /* harmony import */ var src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/modules/auth/_services/auth.service */ "./src/app/modules/auth/_services/auth.service.ts");
-/* harmony import */ var src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/service/tags.service */ "./src/app/shared/service/tags.service.ts");
+/* harmony import */ var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/service/users.service */ "./src/app/shared/service/users.service.ts");
+/* harmony import */ var src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/app/shared/service/tags.service */ "./src/app/shared/service/tags.service.ts");
+
 
 
 
@@ -20171,11 +20173,13 @@ const emptyMenuConfig = {
     items: []
 };
 class DynamicAsideMenuService {
-    constructor(authService, tagService) {
+    constructor(authService, userService, tagService) {
         this.authService = authService;
+        this.userService = userService;
         this.tagService = tagService;
         this.menuConfigSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](emptyMenuConfig);
         this.tagList = [];
+        this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
         this.menuConfig$ = this.menuConfigSubject.asObservable();
         this.currentUser = this.authService.currentUserValue;
         this.loadMenu();
@@ -20185,9 +20189,13 @@ class DynamicAsideMenuService {
     loadMenu() {
         this.setMenu(_configs_dynamic_aside_menu_config__WEBPACK_IMPORTED_MODULE_3__["DynamicAsideMenuConfig"]);
     }
+    getSelectedCompanyFromLocalStorage() {
+        return this.userService.getSelectedCompanyFromLocalStorage();
+    }
     setMenu(menuConfig) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            this.tagList = yield this.tagService.getUserTags(this.currentUser.tagsId).toPromise();
+            let tagsIdList = this.currentUser.tagsId[this.selectedCompany] ? this.currentUser.tagsId[this.selectedCompany] : [];
+            this.tagList = yield this.tagService.getUserTags(tagsIdList).toPromise();
             let submenuList = [];
             this.tagList.map((tag) => {
                 submenuList.push({
@@ -20235,14 +20243,14 @@ class DynamicAsideMenuService {
         return this.menuConfigSubject.value;
     }
 }
-DynamicAsideMenuService.ɵfac = function DynamicAsideMenuService_Factory(t) { return new (t || DynamicAsideMenuService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__["TagsService"])); };
+DynamicAsideMenuService.ɵfac = function DynamicAsideMenuService_Factory(t) { return new (t || DynamicAsideMenuService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_6__["TagsService"])); };
 DynamicAsideMenuService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({ token: DynamicAsideMenuService, factory: DynamicAsideMenuService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](DynamicAsideMenuService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"] }, { type: src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__["TagsService"] }]; }, null); })();
+    }], function () { return [{ type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"] }, { type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"] }, { type: src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_6__["TagsService"] }]; }, null); })();
 
 
 /***/ }),
@@ -30562,13 +30570,14 @@ TagsService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjec
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UsersService", function() { return UsersService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../environments/environment */ "./src/environments/environment.ts");
 
 
 
 
-const API_USERS_URL = `${_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/users/`;
+
+const API_USERS_URL = `${_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl}/users/`;
 const LOCALIZATION_LOCAL_STORAGE_KEY = 'company';
 /**
  * Service class for the club model, contains CRUD methods and operates with http requests
@@ -30598,8 +30607,8 @@ class UsersService {
             password,
         });
     }
-    updateUser(user) {
-        return this.http.post(API_USERS_URL + `get_user/${user._key}`, user);
+    updateUser(user, company) {
+        return this.http.post(API_USERS_URL + `get_user/${user._key}`, { user, company });
     }
     addUser(user) {
         return this.http.post(API_USERS_URL + "new-user", user);
@@ -30607,8 +30616,10 @@ class UsersService {
     deleteUser(userKey) {
         return this.http.delete(API_USERS_URL + `/${userKey}`);
     }
-    getUser(userId) {
-        return this.http.get(`${API_USERS_URL}get_user` + `/${userId}`);
+    getUser(userId, company) {
+        let params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpParams"]();
+        params = params.append('companyId', company);
+        return this.http.get(`${API_USERS_URL}get_user` + `/${userId}`, { params: params });
     }
     getUserWithCompanies(userId) {
         return this.http.get(`${API_USERS_URL}get_user_with_companies` + `/${userId}`);
@@ -30639,14 +30650,14 @@ class UsersService {
         return this.http.get(API_USERS_URL + `get_permission/${permission}`);
     }
 }
-UsersService.ɵfac = function UsersService_Factory(t) { return new (t || UsersService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
+UsersService.ɵfac = function UsersService_Factory(t) { return new (t || UsersService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
 UsersService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: UsersService, factory: UsersService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](UsersService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
                 providedIn: 'root',
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),

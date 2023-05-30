@@ -30980,7 +30980,13 @@
       /* harmony import */
 
 
-      var src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! src/app/shared/service/users.service */
+      "./src/app/shared/service/users.service.ts");
+      /* harmony import */
+
+
+      var src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/shared/service/tags.service */
       "./src/app/shared/service/tags.service.ts");
 
@@ -30989,13 +30995,15 @@
       };
 
       var DynamicAsideMenuService = /*#__PURE__*/function () {
-        function DynamicAsideMenuService(authService, tagService) {
+        function DynamicAsideMenuService(authService, userService, tagService) {
           _classCallCheck(this, DynamicAsideMenuService);
 
           this.authService = authService;
+          this.userService = userService;
           this.tagService = tagService;
           this.menuConfigSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](emptyMenuConfig);
           this.tagList = [];
+          this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
           this.menuConfig$ = this.menuConfigSubject.asObservable();
           this.currentUser = this.authService.currentUserValue;
           this.loadMenu();
@@ -31009,18 +31017,24 @@
             this.setMenu(_configs_dynamic_aside_menu_config__WEBPACK_IMPORTED_MODULE_3__["DynamicAsideMenuConfig"]);
           }
         }, {
+          key: "getSelectedCompanyFromLocalStorage",
+          value: function getSelectedCompanyFromLocalStorage() {
+            return this.userService.getSelectedCompanyFromLocalStorage();
+          }
+        }, {
           key: "setMenu",
           value: function setMenu(menuConfig) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-              var submenuList, apiDocumentationMenu, publisherMenu;
+              var tagsIdList, submenuList, apiDocumentationMenu, publisherMenu;
               return regeneratorRuntime.wrap(function _callee$(_context) {
                 while (1) {
                   switch (_context.prev = _context.next) {
                     case 0:
-                      _context.next = 2;
-                      return this.tagService.getUserTags(this.currentUser.tagsId).toPromise();
+                      tagsIdList = this.currentUser.tagsId[this.selectedCompany] ? this.currentUser.tagsId[this.selectedCompany] : [];
+                      _context.next = 3;
+                      return this.tagService.getUserTags(tagsIdList).toPromise();
 
-                    case 2:
+                    case 3:
                       this.tagList = _context.sent;
                       submenuList = [];
                       this.tagList.map(function (tag) {
@@ -31065,7 +31079,7 @@
                       menuConfig.items.push(apiDocumentationMenu);
                       this.menuConfigSubject.next(menuConfig);
 
-                    case 13:
+                    case 14:
                     case "end":
                       return _context.stop();
                   }
@@ -31084,7 +31098,7 @@
       }();
 
       DynamicAsideMenuService.ɵfac = function DynamicAsideMenuService_Factory(t) {
-        return new (t || DynamicAsideMenuService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__["TagsService"]));
+        return new (t || DynamicAsideMenuService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_6__["TagsService"]));
       };
 
       DynamicAsideMenuService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
@@ -31104,7 +31118,9 @@
           return [{
             type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]
           }, {
-            type: src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_5__["TagsService"]
+            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]
+          }, {
+            type: src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_6__["TagsService"]
           }];
         }, null);
       })();
@@ -51230,17 +51246,17 @@
       /* harmony import */
 
 
-      var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! ../../../environments/environment */
-      "./src/environments/environment.ts");
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
       /* harmony import */
 
 
-      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! @angular/common/http */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      var _environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ../../../environments/environment */
+      "./src/environments/environment.ts");
 
-      var API_USERS_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/users/");
+      var API_USERS_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl, "/users/");
       var LOCALIZATION_LOCAL_STORAGE_KEY = 'company';
       /**
        * Service class for the club model, contains CRUD methods and operates with http requests
@@ -51288,8 +51304,11 @@
           }
         }, {
           key: "updateUser",
-          value: function updateUser(user) {
-            return this.http.post(API_USERS_URL + "get_user/".concat(user._key), user);
+          value: function updateUser(user, company) {
+            return this.http.post(API_USERS_URL + "get_user/".concat(user._key), {
+              user: user,
+              company: company
+            });
           }
         }, {
           key: "addUser",
@@ -51303,8 +51322,12 @@
           }
         }, {
           key: "getUser",
-          value: function getUser(userId) {
-            return this.http.get("".concat(API_USERS_URL, "get_user") + "/".concat(userId));
+          value: function getUser(userId, company) {
+            var params = new _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpParams"]();
+            params = params.append('companyId', company);
+            return this.http.get("".concat(API_USERS_URL, "get_user") + "/".concat(userId), {
+              params: params
+            });
           }
         }, {
           key: "getUserWithCompanies",
@@ -51352,7 +51375,7 @@
       }();
 
       UsersService.ɵfac = function UsersService_Factory(t) {
-        return new (t || UsersService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+        return new (t || UsersService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]));
       };
 
       UsersService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
@@ -51370,7 +51393,7 @@
           }]
         }], function () {
           return [{
-            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]
           }];
         }, null);
       })();
