@@ -20257,25 +20257,31 @@
       /* harmony import */
 
 
-      var _angular_material_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/material/core */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
       "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
       /* harmony import */
 
 
-      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
       "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
 
@@ -20283,7 +20289,7 @@
 
       function ApptitudeComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 32);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 31);
         }
 
         if (rf & 2) {
@@ -20295,7 +20301,7 @@
 
       function ApptitudeComponent_app_summary_metrics_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 33);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 32);
         }
 
         if (rf & 2) {
@@ -20305,9 +20311,127 @@
         }
       }
 
-      function ApptitudeComponent_ng_template_21_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_20_div_0_tr_13_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 34);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](6, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](9, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](12, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var subDateData_r28 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](3, 4, subDateData_r28.date));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](6, 6, subDateData_r28.publisherNet, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](9, 9, subDateData_r28.profit, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](12, 12, subDateData_r28.revenue, "USD"));
+        }
+      }
+
+      function ApptitudeComponent_ng_template_20_div_0_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 35);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "table", 36);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "thead");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Publisher Net");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Profit");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "Revenue");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "tbody");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, ApptitudeComponent_ng_template_20_div_0_tr_13_Template, 13, 15, "tr", 37);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var row_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().row;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", row_r23.subReportingForDate);
+        }
+      }
+
+      function ApptitudeComponent_ng_template_20_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 38);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -20329,39 +20453,57 @@
         }
       }
 
-      function ApptitudeComponent_ng_template_23_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
-          var _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, ApptitudeComponent_ng_template_20_div_0_Template, 14, 1, "div", 33);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 35);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ng_template_20_div_1_Template, 6, 0, "div", 34);
+        }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ApptitudeComponent_ng_template_23_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r29);
+        if (rf & 2) {
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-            var row_r26 = ctx.row;
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType === "publisher");
 
-            var ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            return ctx_r28.toggleExpandRow(row_r26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType !== "publisher");
+        }
+      }
+
+      function ApptitudeComponent_ng_template_22_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r33 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 39);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ApptitudeComponent_ng_template_22_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r33);
+
+            var row_r30 = ctx.row;
+
+            var ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r32.toggleExpandRow(row_r30);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r27 = ctx.expanded;
+          var expanded_r31 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r27)("datatable-icon-down", expanded_r27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r31)("datatable-icon-down", expanded_r31);
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_23_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_23_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -20373,21 +20515,21 @@
         }
 
         if (rf & 2) {
-          var value_r33 = ctx.value;
+          var value_r37 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r33));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r37));
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_24_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_23_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 36);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 40);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_23_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_24_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_23_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -20397,49 +20539,13 @@
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r37 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r37);
-        }
-      }
-
-      function ApptitudeComponent_ngx_datatable_column_25_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 37);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 24);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-      }
-
-      function ApptitudeComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
-        }
-      }
-
-      function ApptitudeComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -20457,31 +20563,29 @@
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_26_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_24_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 38);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 41);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_26_ng_template_2_Template, 2, 1, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_24_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -20491,29 +20595,29 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r45));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r45);
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_27_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_25_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 39);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 42);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -20533,25 +20637,25 @@
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_28_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 40);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 43);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_26_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function ApptitudeComponent_ng_template_30_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Filtering ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
         }
       }
 
-      function ApptitudeComponent_ng_template_31_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -20563,21 +20667,33 @@
         }
 
         if (rf & 2) {
-          var value_r51 = ctx.value;
+          var value_r53 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r51));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r53));
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_32_ng_template_1_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_27_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Impressions ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 44);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_32_ng_template_2_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_29_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Filtering ");
+        }
+      }
+
+      function ApptitudeComponent_ng_template_30_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -20597,25 +20713,13 @@
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_32_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_31_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 41);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_32_ng_template_1_Template, 1, 0, "ng-template", 24);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_32_ng_template_2_Template, 3, 3, "ng-template", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Impressions ");
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_33_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
-        }
-      }
-
-      function ApptitudeComponent_ngx_datatable_column_33_ng_template_2_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_31_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -20631,29 +20735,29 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r59, "1.2-2"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r59));
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_33_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_31_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 42);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 45);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_33_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_31_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_33_ng_template_2_Template, 3, 4, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_31_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_34_ng_template_1_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_32_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_34_ng_template_2_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_32_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -20673,25 +20777,25 @@
         }
       }
 
-      function ApptitudeComponent_ngx_datatable_column_34_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_32_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 43);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 46);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_34_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_32_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_34_ng_template_2_Template, 3, 4, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_32_ng_template_2_Template, 3, 4, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function ApptitudeComponent_ng_template_36_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_33_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
         }
       }
 
-      function ApptitudeComponent_ng_template_37_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_33_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -20703,53 +20807,39 @@
         }
 
         if (rf & 2) {
-          var value_r65 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r65));
-        }
-      }
-
-      function ApptitudeComponent_ng_template_39_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
-        }
-      }
-
-      function ApptitudeComponent_ng_template_40_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
           var value_r67 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r67, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r67, "1.2-2"));
         }
       }
 
-      function ApptitudeComponent_ng_template_42_Template(rf, ctx) {
+      function ApptitudeComponent_ngx_datatable_column_33_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 47);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ApptitudeComponent_ngx_datatable_column_33_ng_template_1_Template, 1, 0, "ng-template", 23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, ApptitudeComponent_ngx_datatable_column_33_ng_template_2_Template, 3, 4, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function ApptitudeComponent_ng_template_43_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_35_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
+        }
+      }
+
+      function ApptitudeComponent_ng_template_36_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -20759,17 +20849,17 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r69, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r69));
         }
       }
 
-      function ApptitudeComponent_ng_template_45_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_38_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
         }
       }
 
-      function ApptitudeComponent_ng_template_46_Template(rf, ctx) {
+      function ApptitudeComponent_ng_template_39_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -20786,6 +20876,58 @@
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r71, "USD"));
+        }
+      }
+
+      function ApptitudeComponent_ng_template_41_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
+        }
+      }
+
+      function ApptitudeComponent_ng_template_42_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r73 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r73, "USD"));
+        }
+      }
+
+      function ApptitudeComponent_ng_template_44_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function ApptitudeComponent_ng_template_45_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r75 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r75, "USD"));
         }
       }
 
@@ -20808,6 +20950,7 @@
           this.groupPublishFlag = false;
           this.groupDateShowFlag = false;
           this.groupSubidShowFlag = false;
+          this.groupType = '';
           this.selectedCompany = this.getSelectedCompanyStored();
         }
 
@@ -20939,6 +21082,17 @@
             return this.userService.getSelectedCompanyFromLocalStorage();
           }
         }, {
+          key: "getDetailRowHeight",
+          value: function getDetailRowHeight(row, index) {
+            var height;
+
+            if (row) {
+              height = row.detailHeight;
+            }
+
+            return height;
+          }
+        }, {
           key: "toggleExpandRow",
           value: function toggleExpandRow(row) {
             console.log('Toggled Expand Row!', row);
@@ -20974,9 +21128,12 @@
                     case 9:
                       this.summaryMetrics = _context14.sent;
                       this.groupPublishFlag = false;
+                      this.groupDateShowFlag = false;
+                      this.groupSubidShowFlag = false;
+                      this.groupType = '';
                       this.cdr.detectChanges();
 
-                    case 12:
+                    case 15:
                     case "end":
                       return _context14.stop();
                   }
@@ -21124,6 +21281,8 @@
                 group.split = group.split / group.counter;
                 group.cpc = group.cpc / group.counter;
                 group.ctr = group.ctr / group.counter;
+                group.subReportingForDate = this.groupDateForPublisher(group);
+                group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
             } catch (err) {
               _iterator19.e(err);
@@ -21147,8 +21306,59 @@
             this.cdr.detectChanges();
           }
         }, {
+          key: "groupDateForPublisher",
+          value: function groupDateForPublisher(group) {
+            var helperSummary = {};
+            var groupData = this.allStats.filter(function (oStat) {
+              return oStat.publisher === group.publisher;
+            }).reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
+                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator20 = _createForOfIteratorHelper(groupData),
+                _step20;
+
+            try {
+              for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
+                var group = _step20.value;
+                group.split = group.split / group.counter;
+                group.followon = group.followon / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator20.e(err);
+            } finally {
+              _iterator20.f();
+            }
+
+            return groupData;
+          }
+        }, {
           key: "groupHandle",
           value: function groupHandle(event) {
+            this.groupType = event.value;
+
             if (event.value == "date") {
               this.groupDate();
             } else if (event.value == "publisher") {
@@ -21163,7 +21373,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee15() {
-              var response, _iterator20, _step20, tagL, _iterator23, _step23, tagSub, sorted, multiGroupBy, groupedItems, reformattedArray, item, elm, obj, pulisherArr, _i3, _reformattedArray, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator21, _step21, resVal, stackedArr, _iterator22, _step22, _loop;
+              var response, _iterator21, _step21, tagL, _iterator24, _step24, tagSub, sorted, multiGroupBy, groupedItems, reformattedArray, item, elm, obj, pulisherArr, _i3, _reformattedArray, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator22, _step22, resVal, stackedArr, _iterator23, _step23, _loop;
 
               return regeneratorRuntime.wrap(function _callee15$(_context15) {
                 while (1) {
@@ -21180,18 +21390,18 @@
                       this.allChartStat.map(function (resStat) {
                         resStat.publisher = "No Publisher";
                       });
-                      _iterator20 = _createForOfIteratorHelper(this.tagList);
+                      _iterator21 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
-                          tagL = _step20.value;
+                        for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
+                          tagL = _step21.value;
 
                           if (tagL.tag.advertiser == "apptitude") {
-                            _iterator23 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator24 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
-                                tagSub = _step23.value;
+                              for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+                                tagSub = _step24.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -21220,16 +21430,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator23.e(err);
+                              _iterator24.e(err);
                             } finally {
-                              _iterator23.f();
+                              _iterator24.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator20.e(err);
+                        _iterator21.e(err);
                       } finally {
-                        _iterator20.f();
+                        _iterator21.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -21299,34 +21509,34 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator21 = _createForOfIteratorHelper(resultChart);
+                      _iterator22 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
-                          resVal = _step21.value;
+                        for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                          resVal = _step22.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator21.e(err);
+                        _iterator22.e(err);
                       } finally {
-                        _iterator21.f();
+                        _iterator22.f();
                       }
 
                       stackedArr = [];
-                      _iterator22 = _createForOfIteratorHelper(unique);
+                      _iterator23 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop = function _loop() {
-                          var u = _step22.value;
+                          var u = _step23.value;
                           var subStackedArr = [];
 
-                          var _iterator24 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step24;
+                          var _iterator25 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step25;
 
                           try {
                             var _loop2 = function _loop2() {
-                              var date = _step24.value;
+                              var date = _step25.value;
                               var filterLen = reformattedArray.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
                               });
@@ -21338,13 +21548,13 @@
                               }
                             };
 
-                            for (_iterator24.s(); !(_step24 = _iterator24.n()).done;) {
+                            for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
                               _loop2();
                             }
                           } catch (err) {
-                            _iterator24.e(err);
+                            _iterator25.e(err);
                           } finally {
-                            _iterator24.f();
+                            _iterator25.f();
                           }
 
                           var obj = {};
@@ -21352,13 +21562,13 @@
                           stackedArr.push(obj);
                         };
 
-                        for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
+                        for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
                           _loop();
                         }
                       } catch (err) {
-                        _iterator22.e(err);
+                        _iterator23.e(err);
                       } finally {
-                        _iterator22.f();
+                        _iterator23.f();
                       }
 
                       chartDataValue['revenuePerDay'] = stackedArr;
@@ -21492,9 +21702,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 47,
-        vars: 23,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "selectionChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "filtering"], ["ngx-datatable-header-template", ""], ["name", "impressions", 4, "ngIf"], ["name", "cpc", 4, "ngIf"], ["name", "ctr", 4, "ngIf"], ["name", "split"], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher"], ["name", "clicks"], ["name", "searches"], ["name", "impressions"], ["name", "cpc"], ["name", "ctr"]],
+        decls: 46,
+        vars: 24,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "ngModel", "selectionChange", "ngModelChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "filtering"], ["ngx-datatable-header-template", ""], ["name", "impressions", 4, "ngIf"], ["name", "cpc", 4, "ngIf"], ["name", "ctr", 4, "ngIf"], ["name", "split"], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], ["class", "table-responsive", "style", "padding-left: 36px;", 4, "ngIf"], ["style", "padding-left: 35px", 4, "ngIf"], [1, "table-responsive", 2, "padding-left", "36px"], [1, "table", "table-hover"], [4, "ngFor", "ngForOf"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher"], ["name", "clicks"], ["name", "searches"], ["name", "impressions"], ["name", "cpc"], ["name", "ctr"]],
         template: function ApptitudeComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -21525,6 +21735,8 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("selectionChange", function ApptitudeComponent_Template_mat_select_selectionChange_8_listener($event) {
               return ctx.groupHandle($event);
+            })("ngModelChange", function ApptitudeComponent_Template_mat_select_ngModelChange_8_listener($event) {
+              return ctx.groupType = $event;
             });
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "mat-option", 7);
@@ -21561,23 +21773,25 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable", 11, 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13, 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function ApptitudeComponent_Template_ngx_datatable_row_detail_toggle_19_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, ApptitudeComponent_ng_template_21_Template, 6, 0, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, ApptitudeComponent_ng_template_20_Template, 2, 2, "ng-template", 14);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, ApptitudeComponent_ng_template_23_Template, 1, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, ApptitudeComponent_ng_template_22_Template, 1, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, ApptitudeComponent_ngx_datatable_column_24_Template, 3, 1, "ngx-datatable-column", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, ApptitudeComponent_ngx_datatable_column_23_Template, 3, 1, "ngx-datatable-column", 17);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, ApptitudeComponent_ngx_datatable_column_24_Template, 3, 0, "ngx-datatable-column", 18);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, ApptitudeComponent_ngx_datatable_column_25_Template, 3, 0, "ngx-datatable-column", 19);
 
@@ -21585,51 +21799,49 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, ApptitudeComponent_ngx_datatable_column_27_Template, 3, 0, "ngx-datatable-column", 21);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, ApptitudeComponent_ngx_datatable_column_28_Template, 3, 0, "ngx-datatable-column", 22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "ngx-datatable-column", 22);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](29, "ngx-datatable-column", 23);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, ApptitudeComponent_ng_template_29_Template, 1, 0, "ng-template", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, ApptitudeComponent_ng_template_30_Template, 1, 0, "ng-template", 24);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, ApptitudeComponent_ng_template_31_Template, 3, 3, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, ApptitudeComponent_ng_template_30_Template, 3, 3, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, ApptitudeComponent_ngx_datatable_column_31_Template, 3, 0, "ngx-datatable-column", 24);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, ApptitudeComponent_ngx_datatable_column_32_Template, 3, 0, "ngx-datatable-column", 25);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, ApptitudeComponent_ngx_datatable_column_33_Template, 3, 0, "ngx-datatable-column", 26);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, ApptitudeComponent_ngx_datatable_column_34_Template, 3, 0, "ngx-datatable-column", 27);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "ngx-datatable-column", 27);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "ngx-datatable-column", 28);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, ApptitudeComponent_ng_template_35_Template, 1, 0, "ng-template", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, ApptitudeComponent_ng_template_36_Template, 1, 0, "ng-template", 24);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, ApptitudeComponent_ng_template_37_Template, 3, 3, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, ApptitudeComponent_ng_template_36_Template, 3, 3, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "ngx-datatable-column", 29);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "ngx-datatable-column", 28);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, ApptitudeComponent_ng_template_39_Template, 1, 0, "ng-template", 24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, ApptitudeComponent_ng_template_38_Template, 1, 0, "ng-template", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, ApptitudeComponent_ng_template_40_Template, 3, 4, "ng-template", 17);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](41, "ngx-datatable-column", 30);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](42, ApptitudeComponent_ng_template_42_Template, 1, 0, "ng-template", 24);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](43, ApptitudeComponent_ng_template_43_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, ApptitudeComponent_ng_template_39_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](44, "ngx-datatable-column", 31);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "ngx-datatable-column", 29);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](45, ApptitudeComponent_ng_template_45_Template, 1, 0, "ng-template", 24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](41, ApptitudeComponent_ng_template_41_Template, 1, 0, "ng-template", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](46, ApptitudeComponent_ng_template_46_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](42, ApptitudeComponent_ng_template_42_Template, 3, 4, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](43, "ngx-datatable-column", 30);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](44, ApptitudeComponent_ng_template_44_Template, 1, 0, "ng-template", 23);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](45, ApptitudeComponent_ng_template_45_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -21645,15 +21857,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.groupType);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", ctx.groupType === "publisher" ? ctx.getDetailRowHeight : 130);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 50)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
 
@@ -21690,8 +21906,8 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__["SummaryMetricsComponent"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_material_core__WEBPACK_IMPORTED_MODULE_11__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__["SummaryMetricsComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL2FwcHRpdHVkZS9hcHB0aXR1ZGUuY29tcG9uZW50LnNjc3MifQ== */"]
       });
       /*@__PURE__*/
@@ -22428,7 +22644,7 @@
           key: "getAllHopkinStats",
           value: function getAllHopkinStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee19() {
-              var response, _iterator25, _step25, tagL, _iterator26, _step26, tagSub;
+              var response, _iterator26, _step26, tagL, _iterator27, _step27, tagSub;
 
               return regeneratorRuntime.wrap(function _callee19$(_context19) {
                 while (1) {
@@ -22446,18 +22662,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator25 = _createForOfIteratorHelper(this.tagList);
+                      _iterator26 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
-                          tagL = _step25.value;
+                        for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+                          tagL = _step26.value;
 
                           if (tagL.tag.advertiser == "hopkins") {
-                            _iterator26 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator27 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-                                tagSub = _step26.value;
+                              for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
+                                tagSub = _step27.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -22490,16 +22706,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator26.e(err);
+                              _iterator27.e(err);
                             } finally {
-                              _iterator26.f();
+                              _iterator27.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator25.e(err);
+                        _iterator26.e(err);
                       } finally {
-                        _iterator25.f();
+                        _iterator26.f();
                       }
 
                       return _context19.abrupt("return", this.allStats);
@@ -22540,18 +22756,18 @@
               return r;
             }, []);
 
-            var _iterator27 = _createForOfIteratorHelper(groupData),
-                _step27;
+            var _iterator28 = _createForOfIteratorHelper(groupData),
+                _step28;
 
             try {
-              for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
-                var group = _step27.value;
+              for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+                var group = _step28.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator27.e(err);
+              _iterator28.e(err);
             } finally {
-              _iterator27.f();
+              _iterator28.f();
             }
 
             this.rows = groupData;
@@ -22668,7 +22884,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee22() {
-              var response, _iterator28, _step28, tagL, _iterator31, _step31, tagSub, sorted, _multiGroupBy, groupedItems, _reformattedArray2, item, elm, obj, pulisherArr, _i4, _reformattedArray3, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator29, _step29, resVal, _stackedArr, _iterator30, _step30, _loop3;
+              var response, _iterator29, _step29, tagL, _iterator32, _step32, tagSub, sorted, _multiGroupBy, groupedItems, _reformattedArray2, item, elm, obj, pulisherArr, _i4, _reformattedArray3, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator30, _step30, resVal, _stackedArr, _iterator31, _step31, _loop3;
 
               return regeneratorRuntime.wrap(function _callee22$(_context22) {
                 while (1) {
@@ -22685,18 +22901,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator28 = _createForOfIteratorHelper(this.tagList);
+                      _iterator29 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
-                          tagL = _step28.value;
+                        for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
+                          tagL = _step29.value;
 
                           if (tagL.tag.advertiser == "hopkins") {
-                            _iterator31 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator32 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
-                                tagSub = _step31.value;
+                              for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
+                                tagSub = _step32.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -22729,16 +22945,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator31.e(err);
+                              _iterator32.e(err);
                             } finally {
-                              _iterator31.f();
+                              _iterator32.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator28.e(err);
+                        _iterator29.e(err);
                       } finally {
-                        _iterator28.f();
+                        _iterator29.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -22809,34 +23025,34 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator29 = _createForOfIteratorHelper(resultChart);
+                      _iterator30 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
-                          resVal = _step29.value;
+                        for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
+                          resVal = _step30.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator29.e(err);
+                        _iterator30.e(err);
                       } finally {
-                        _iterator29.f();
+                        _iterator30.f();
                       }
 
                       _stackedArr = [];
-                      _iterator30 = _createForOfIteratorHelper(unique);
+                      _iterator31 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop3 = function _loop3() {
-                          var u = _step30.value;
+                          var u = _step31.value;
                           var subStackedArr = [];
 
-                          var _iterator32 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step32;
+                          var _iterator33 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step33;
 
                           try {
                             var _loop4 = function _loop4() {
-                              var date = _step32.value;
+                              var date = _step33.value;
 
                               var filterLen = _reformattedArray2.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
@@ -22849,13 +23065,13 @@
                               }
                             };
 
-                            for (_iterator32.s(); !(_step32 = _iterator32.n()).done;) {
+                            for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
                               _loop4();
                             }
                           } catch (err) {
-                            _iterator32.e(err);
+                            _iterator33.e(err);
                           } finally {
-                            _iterator32.f();
+                            _iterator33.f();
                           }
 
                           var obj = {};
@@ -22864,13 +23080,13 @@
                           _stackedArr.push(obj);
                         };
 
-                        for (_iterator30.s(); !(_step30 = _iterator30.n()).done;) {
+                        for (_iterator31.s(); !(_step31 = _iterator31.n()).done;) {
                           _loop3();
                         }
                       } catch (err) {
-                        _iterator30.e(err);
+                        _iterator31.e(err);
                       } finally {
-                        _iterator30.f();
+                        _iterator31.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr;
@@ -23880,25 +24096,31 @@
       /* harmony import */
 
 
-      var _angular_material_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/material/core */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
       "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
       /* harmony import */
 
 
-      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
       "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
 
@@ -23906,7 +24128,7 @@
 
       function LyonsComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 30);
         }
 
         if (rf & 2) {
@@ -23918,7 +24140,7 @@
 
       function LyonsComponent_app_summary_metrics_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 32);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 31);
         }
 
         if (rf & 2) {
@@ -23928,9 +24150,127 @@
         }
       }
 
-      function LyonsComponent_ng_template_21_Template(rf, ctx) {
+      function LyonsComponent_ng_template_20_div_0_tr_13_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 33);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](6, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](9, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](12, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var subDateData_r26 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](3, 4, subDateData_r26.date));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](6, 6, subDateData_r26.publisherNet, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](9, 9, subDateData_r26.profit, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](12, 12, subDateData_r26.revenue, "USD"));
+        }
+      }
+
+      function LyonsComponent_ng_template_20_div_0_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 34);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "table", 35);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "thead");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Publisher Net");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Profit");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "Revenue");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "tbody");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, LyonsComponent_ng_template_20_div_0_tr_13_Template, 13, 15, "tr", 36);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var row_r21 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().row;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", row_r21.subReportingForDate);
+        }
+      }
+
+      function LyonsComponent_ng_template_20_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 37);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -23952,39 +24292,57 @@
         }
       }
 
-      function LyonsComponent_ng_template_23_Template(rf, ctx) {
+      function LyonsComponent_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
-          var _r27 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, LyonsComponent_ng_template_20_div_0_Template, 14, 1, "div", 32);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 34);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ng_template_20_div_1_Template, 6, 0, "div", 33);
+        }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function LyonsComponent_ng_template_23_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r27);
+        if (rf & 2) {
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-            var row_r24 = ctx.row;
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType === "publisher");
 
-            var ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            return ctx_r26.toggleExpandRow(row_r24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType !== "publisher");
+        }
+      }
+
+      function LyonsComponent_ng_template_22_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r31 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 38);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function LyonsComponent_ng_template_22_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r31);
+
+            var row_r28 = ctx.row;
+
+            var ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r30.toggleExpandRow(row_r28);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r25 = ctx.expanded;
+          var expanded_r29 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r25)("datatable-icon-down", expanded_r25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r29)("datatable-icon-down", expanded_r29);
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_23_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_23_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -23996,69 +24354,33 @@
         }
 
         if (rf & 2) {
-          var value_r31 = ctx.value;
+          var value_r35 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r31));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r35));
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_24_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_23_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 35);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 39);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_23_ng_template_1_Template, 1, 0, "ng-template", 26);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_24_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_23_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r35 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r35);
-        }
-      }
-
-      function LyonsComponent_ngx_datatable_column_25_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 36);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 27);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-      }
-
-      function LyonsComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
-        }
-      }
-
-      function LyonsComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -24076,31 +24398,29 @@
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_26_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_24_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 37);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 40);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 26);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_26_ng_template_2_Template, 2, 1, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_24_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -24110,29 +24430,29 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r43));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r43);
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_27_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_25_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 38);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 41);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 26);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Bid Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -24152,25 +24472,25 @@
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_28_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 39);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 42);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 26);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_26_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_29_ng_template_1_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Bid Searches ");
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_29_ng_template_2_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -24190,33 +24510,31 @@
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_29_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_27_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 40);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 43);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_29_ng_template_1_Template, 1, 0, "ng-template", 27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 26);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_29_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_30_ng_template_1_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " BiddedCTR ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_30_ng_template_2_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -24226,29 +24544,29 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r55, "2.2-2") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "2.2-2"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r55));
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_30_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_28_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 41);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 44);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_30_ng_template_1_Template, 1, 0, "ng-template", 27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 26);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_30_ng_template_2_Template, 4, 7, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_31_ng_template_1_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_29_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " BiddedCTR ");
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_31_ng_template_2_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_29_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -24270,57 +24588,33 @@
         }
       }
 
-      function LyonsComponent_ngx_datatable_column_31_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_29_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 42);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 45);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_31_ng_template_1_Template, 1, 0, "ng-template", 27);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_29_ng_template_1_Template, 1, 0, "ng-template", 26);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_31_ng_template_2_Template, 4, 7, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_29_ng_template_2_Template, 4, 7, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function LyonsComponent_ng_template_33_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_30_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
         }
       }
 
-      function LyonsComponent_ng_template_34_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_30_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r61 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r61, "USD"));
-        }
-      }
-
-      function LyonsComponent_ng_template_36_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
-        }
-      }
-
-      function LyonsComponent_ng_template_37_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -24330,17 +24624,29 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r63, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r63, "2.2-2") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "2.2-2"));
         }
       }
 
-      function LyonsComponent_ng_template_39_Template(rf, ctx) {
+      function LyonsComponent_ngx_datatable_column_30_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 46);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, LyonsComponent_ngx_datatable_column_30_ng_template_1_Template, 1, 0, "ng-template", 26);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, LyonsComponent_ngx_datatable_column_30_ng_template_2_Template, 4, 7, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function LyonsComponent_ng_template_40_Template(rf, ctx) {
+      function LyonsComponent_ng_template_32_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
+        }
+      }
+
+      function LyonsComponent_ng_template_33_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -24360,13 +24666,65 @@
         }
       }
 
-      function LyonsComponent_ng_template_42_Template(rf, ctx) {
+      function LyonsComponent_ng_template_35_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
+        }
+      }
+
+      function LyonsComponent_ng_template_36_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r67 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r67, "USD"));
+        }
+      }
+
+      function LyonsComponent_ng_template_38_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function LyonsComponent_ng_template_39_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r69 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r69, "USD"));
+        }
+      }
+
+      function LyonsComponent_ng_template_41_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Spilt ");
         }
       }
 
-      function LyonsComponent_ng_template_43_Template(rf, ctx) {
+      function LyonsComponent_ng_template_42_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -24380,11 +24738,11 @@
         }
 
         if (rf & 2) {
-          var value_r67 = ctx.value;
+          var value_r71 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r67) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r71) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
         }
       }
 
@@ -24416,6 +24774,7 @@
           this.groupPublishFlag = false;
           this.groupDateShowFlag = false;
           this.groupSubidShowFlag = false;
+          this.groupType = '';
           this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
         }
 
@@ -24512,7 +24871,7 @@
           key: "getAllLyonStats",
           value: function getAllLyonStats(startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee26() {
-              var response, _iterator33, _step33, tagL, _iterator34, _step34, tagSub;
+              var response, _iterator34, _step34, tagL, _iterator35, _step35, tagSub;
 
               return regeneratorRuntime.wrap(function _callee26$(_context26) {
                 while (1) {
@@ -24531,18 +24890,18 @@
                         resStat.tagname = "No Tag";
                       }); // var allLyonStat = [];
 
-                      _iterator33 = _createForOfIteratorHelper(this.tagList);
+                      _iterator34 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator33.s(); !(_step33 = _iterator33.n()).done;) {
-                          tagL = _step33.value;
+                        for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
+                          tagL = _step34.value;
 
                           if (tagL.tag.advertiser == "lyons") {
-                            _iterator34 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator35 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator34.s(); !(_step34 = _iterator34.n()).done;) {
-                                tagSub = _step34.value;
+                              for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
+                                tagSub = _step35.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allstat.map(function (stat) {
@@ -24575,16 +24934,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator34.e(err);
+                              _iterator35.e(err);
                             } finally {
-                              _iterator34.f();
+                              _iterator35.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator33.e(err);
+                        _iterator34.e(err);
                       } finally {
-                        _iterator33.f();
+                        _iterator34.f();
                       }
 
                       return _context26.abrupt("return", this.allstat);
@@ -24631,20 +24990,20 @@
               return r;
             }, []);
 
-            var _iterator35 = _createForOfIteratorHelper(groupData),
-                _step35;
+            var _iterator36 = _createForOfIteratorHelper(groupData),
+                _step36;
 
             try {
-              for (_iterator35.s(); !(_step35 = _iterator35.n()).done;) {
-                var group = _step35.value;
+              for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
+                var group = _step36.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator35.e(err);
+              _iterator36.e(err);
             } finally {
-              _iterator35.f();
+              _iterator36.f();
             }
 
             this.rows = groupData;
@@ -24682,20 +25041,20 @@
               return r;
             }, []);
 
-            var _iterator36 = _createForOfIteratorHelper(groupData),
-                _step36;
+            var _iterator37 = _createForOfIteratorHelper(groupData),
+                _step37;
 
             try {
-              for (_iterator36.s(); !(_step36 = _iterator36.n()).done;) {
-                var group = _step36.value;
+              for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
+                var group = _step37.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator36.e(err);
+              _iterator37.e(err);
             } finally {
-              _iterator36.f();
+              _iterator37.f();
             }
 
             this.rows = groupData;
@@ -24733,20 +25092,22 @@
               return r;
             }, []);
 
-            var _iterator37 = _createForOfIteratorHelper(groupData),
-                _step37;
+            var _iterator38 = _createForOfIteratorHelper(groupData),
+                _step38;
 
             try {
-              for (_iterator37.s(); !(_step37 = _iterator37.n()).done;) {
-                var group = _step37.value;
+              for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
+                var group = _step38.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
                 group.ctr = group.ctr / group.counter;
+                group.subReportingForDate = this.groupDateForPublisher(group);
+                group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
             } catch (err) {
-              _iterator37.e(err);
+              _iterator38.e(err);
             } finally {
-              _iterator37.f();
+              _iterator38.f();
             }
 
             this.rows = groupData;
@@ -24799,9 +25160,12 @@
                     case 9:
                       this.summaryMetricsData = _context27.sent;
                       this.groupPublishFlag = false;
+                      this.groupDateShowFlag = false;
+                      this.groupSubidShowFlag = false;
+                      this.groupType = '';
                       this.refreshTable();
 
-                    case 12:
+                    case 15:
                     case "end":
                       return _context27.stop();
                   }
@@ -24813,6 +25177,17 @@
           key: "refreshTable",
           value: function refreshTable() {
             this.cdr.markForCheck();
+          }
+        }, {
+          key: "getDetailRowHeight",
+          value: function getDetailRowHeight(row, index) {
+            var height;
+
+            if (row) {
+              height = row.detailHeight;
+            }
+
+            return height;
           }
         }, {
           key: "getSummaryMetrics",
@@ -24881,7 +25256,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee29() {
-              var response, _iterator38, _step38, tagL, _iterator41, _step41, tagSub, sorted, _multiGroupBy2, groupedItems, _reformattedArray4, item, elm, obj, pulisherArr, _i5, _reformattedArray5, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator39, _step39, resVal, _stackedArr2, _iterator40, _step40, _loop5;
+              var response, _iterator39, _step39, tagL, _iterator42, _step42, tagSub, sorted, _multiGroupBy2, groupedItems, _reformattedArray4, item, elm, obj, pulisherArr, _i5, _reformattedArray5, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator40, _step40, resVal, _stackedArr2, _iterator41, _step41, _loop5;
 
               return regeneratorRuntime.wrap(function _callee29$(_context29) {
                 while (1) {
@@ -24900,18 +25275,18 @@
                         resStat.tagname = "No Tag";
                       }); // var allLyonStat = [];
 
-                      _iterator38 = _createForOfIteratorHelper(this.tagList);
+                      _iterator39 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator38.s(); !(_step38 = _iterator38.n()).done;) {
-                          tagL = _step38.value;
+                        for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
+                          tagL = _step39.value;
 
                           if (tagL.tag.advertiser == "lyons") {
-                            _iterator41 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator42 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
-                                tagSub = _step41.value;
+                              for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
+                                tagSub = _step42.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChart.map(function (stat) {
@@ -24944,16 +25319,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator41.e(err);
+                              _iterator42.e(err);
                             } finally {
-                              _iterator41.f();
+                              _iterator42.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator38.e(err);
+                        _iterator39.e(err);
                       } finally {
-                        _iterator38.f();
+                        _iterator39.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChart).sortBy(function (d) {
@@ -25024,34 +25399,34 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator39 = _createForOfIteratorHelper(resultChart);
+                      _iterator40 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator39.s(); !(_step39 = _iterator39.n()).done;) {
-                          resVal = _step39.value;
+                        for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
+                          resVal = _step40.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator39.e(err);
+                        _iterator40.e(err);
                       } finally {
-                        _iterator39.f();
+                        _iterator40.f();
                       }
 
                       _stackedArr2 = [];
-                      _iterator40 = _createForOfIteratorHelper(unique);
+                      _iterator41 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop5 = function _loop5() {
-                          var u = _step40.value;
+                          var u = _step41.value;
                           var subStackedArr = [];
 
-                          var _iterator42 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step42;
+                          var _iterator43 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step43;
 
                           try {
                             var _loop6 = function _loop6() {
-                              var date = _step42.value;
+                              var date = _step43.value;
 
                               var filterLen = _reformattedArray4.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
@@ -25064,13 +25439,13 @@
                               }
                             };
 
-                            for (_iterator42.s(); !(_step42 = _iterator42.n()).done;) {
+                            for (_iterator43.s(); !(_step43 = _iterator43.n()).done;) {
                               _loop6();
                             }
                           } catch (err) {
-                            _iterator42.e(err);
+                            _iterator43.e(err);
                           } finally {
-                            _iterator42.f();
+                            _iterator43.f();
                           }
 
                           var obj = {};
@@ -25079,13 +25454,13 @@
                           _stackedArr2.push(obj);
                         };
 
-                        for (_iterator40.s(); !(_step40 = _iterator40.n()).done;) {
+                        for (_iterator41.s(); !(_step41 = _iterator41.n()).done;) {
                           _loop5();
                         }
                       } catch (err) {
-                        _iterator40.e(err);
+                        _iterator41.e(err);
                       } finally {
-                        _iterator40.f();
+                        _iterator41.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr2;
@@ -25108,8 +25483,59 @@
             }));
           }
         }, {
+          key: "groupDateForPublisher",
+          value: function groupDateForPublisher(group) {
+            var helperSummary = {};
+            var groupData = this.allstat.filter(function (oStat) {
+              return oStat.publisher === group.publisher;
+            }).reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
+                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator44 = _createForOfIteratorHelper(groupData),
+                _step44;
+
+            try {
+              for (_iterator44.s(); !(_step44 = _iterator44.n()).done;) {
+                var group = _step44.value;
+                group.split = group.split / group.counter;
+                group.followon = group.followon / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator44.e(err);
+            } finally {
+              _iterator44.f();
+            }
+
+            return groupData;
+          }
+        }, {
           key: "groupHandle",
           value: function groupHandle(event) {
+            this.groupType = event.value;
+
             if (event.value == "date") {
               this.groupDate();
             } else if (event.value == "publisher") {
@@ -25163,9 +25589,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 44,
-        vars: 23,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "selectionChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "biddedSearches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "biddedCtr", 4, "ngIf"], ["name", "ctr", 4, "ngIf"], ["name", "publisherNet"], ["ngx-datatable-header-template", ""], ["name", "profit"], ["name", "revenue"], ["name", "split"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date"], ["name", "subid"], ["name", "publisher"], ["name", "searches"], ["name", "biddedSearches"], ["name", "clicks"], ["name", "biddedCtr"], ["name", "ctr"]],
+        decls: 43,
+        vars: 24,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "ngModel", "selectionChange", "ngModelChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "biddedSearches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "biddedCtr", 4, "ngIf"], ["name", "ctr", 4, "ngIf"], ["name", "publisherNet"], ["ngx-datatable-header-template", ""], ["name", "profit"], ["name", "revenue"], ["name", "split"], [3, "chartData"], [3, "summaryMetricsData"], ["class", "table-responsive", "style", "padding-left: 36px;", 4, "ngIf"], ["style", "padding-left: 35px", 4, "ngIf"], [1, "table-responsive", 2, "padding-left", "36px"], [1, "table", "table-hover"], [4, "ngFor", "ngForOf"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date"], ["name", "subid"], ["name", "publisher"], ["name", "searches"], ["name", "biddedSearches"], ["name", "clicks"], ["name", "biddedCtr"], ["name", "ctr"]],
         template: function LyonsComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -25196,6 +25622,8 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("selectionChange", function LyonsComponent_Template_mat_select_selectionChange_8_listener($event) {
               return ctx.groupHandle($event);
+            })("ngModelChange", function LyonsComponent_Template_mat_select_ngModelChange_8_listener($event) {
+              return ctx.groupType = $event;
             });
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "mat-option", 7);
@@ -25232,21 +25660,23 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable", 11, 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13, 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function LyonsComponent_Template_ngx_datatable_row_detail_toggle_19_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, LyonsComponent_ng_template_21_Template, 6, 0, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, LyonsComponent_ng_template_20_Template, 2, 2, "ng-template", 14);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, LyonsComponent_ng_template_23_Template, 1, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, LyonsComponent_ng_template_22_Template, 1, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, LyonsComponent_ngx_datatable_column_23_Template, 3, 0, "ngx-datatable-column", 17);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, LyonsComponent_ngx_datatable_column_24_Template, 3, 0, "ngx-datatable-column", 18);
 
@@ -25262,37 +25692,35 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, LyonsComponent_ngx_datatable_column_30_Template, 3, 0, "ngx-datatable-column", 24);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, LyonsComponent_ngx_datatable_column_31_Template, 3, 0, "ngx-datatable-column", 25);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "ngx-datatable-column", 25);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](32, "ngx-datatable-column", 26);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, LyonsComponent_ng_template_32_Template, 1, 0, "ng-template", 26);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, LyonsComponent_ng_template_33_Template, 1, 0, "ng-template", 27);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, LyonsComponent_ng_template_34_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, LyonsComponent_ng_template_33_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "ngx-datatable-column", 28);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "ngx-datatable-column", 27);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, LyonsComponent_ng_template_36_Template, 1, 0, "ng-template", 27);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, LyonsComponent_ng_template_35_Template, 1, 0, "ng-template", 26);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, LyonsComponent_ng_template_37_Template, 3, 4, "ng-template", 17);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "ngx-datatable-column", 29);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, LyonsComponent_ng_template_39_Template, 1, 0, "ng-template", 27);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, LyonsComponent_ng_template_40_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, LyonsComponent_ng_template_36_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](41, "ngx-datatable-column", 30);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "ngx-datatable-column", 28);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](42, LyonsComponent_ng_template_42_Template, 1, 0, "ng-template", 27);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, LyonsComponent_ng_template_38_Template, 1, 0, "ng-template", 26);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](43, LyonsComponent_ng_template_43_Template, 4, 6, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, LyonsComponent_ng_template_39_Template, 3, 4, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "ngx-datatable-column", 29);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](41, LyonsComponent_ng_template_41_Template, 1, 0, "ng-template", 26);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](42, LyonsComponent_ng_template_42_Template, 4, 6, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -25308,15 +25736,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetricsData);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.groupType);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", ctx.groupType === "publisher" ? ctx.getDetailRowHeight : 130);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 30)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
 
@@ -25353,8 +25785,8 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__["SummaryMetricsComponent"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_material_core__WEBPACK_IMPORTED_MODULE_11__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__["SummaryMetricsComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL2x5b25zL2x5b25zLmNvbXBvbmVudC5zY3NzIn0= */"]
       });
       /*@__PURE__*/
@@ -26920,25 +27352,31 @@
       /* harmony import */
 
 
-      var _angular_material_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/material/core */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
       "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
       /* harmony import */
 
 
-      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
       "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
 
@@ -26946,7 +27384,7 @@
 
       function PerionComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 30);
         }
 
         if (rf & 2) {
@@ -26958,7 +27396,7 @@
 
       function PerionComponent_app_summary_metrics_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 32);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 31);
         }
 
         if (rf & 2) {
@@ -26968,9 +27406,127 @@
         }
       }
 
-      function PerionComponent_ng_template_21_Template(rf, ctx) {
+      function PerionComponent_ng_template_20_div_0_tr_13_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 33);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](6, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](9, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](12, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var subDateData_r27 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](3, 4, subDateData_r27.date));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](6, 6, subDateData_r27.publisherNet, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](9, 9, subDateData_r27.profit, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](12, 12, subDateData_r27.revenue, "USD"));
+        }
+      }
+
+      function PerionComponent_ng_template_20_div_0_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 34);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "table", 35);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "thead");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Publisher Net");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Profit");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "Revenue");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "tbody");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, PerionComponent_ng_template_20_div_0_tr_13_Template, 13, 15, "tr", 36);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var row_r22 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().row;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", row_r22.subReportingForDate);
+        }
+      }
+
+      function PerionComponent_ng_template_20_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 37);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -26992,39 +27548,57 @@
         }
       }
 
-      function PerionComponent_ng_template_23_Template(rf, ctx) {
+      function PerionComponent_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
-          var _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, PerionComponent_ng_template_20_div_0_Template, 14, 1, "div", 32);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 34);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ng_template_20_div_1_Template, 6, 0, "div", 33);
+        }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PerionComponent_ng_template_23_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r28);
+        if (rf & 2) {
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-            var row_r25 = ctx.row;
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType === "publisher");
 
-            var ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            return ctx_r27.toggleExpandRow(row_r25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType !== "publisher");
+        }
+      }
+
+      function PerionComponent_ng_template_22_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r32 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 38);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function PerionComponent_ng_template_22_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r32);
+
+            var row_r29 = ctx.row;
+
+            var ctx_r31 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r31.toggleExpandRow(row_r29);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r26 = ctx.expanded;
+          var expanded_r30 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r26)("datatable-icon-down", expanded_r26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r30)("datatable-icon-down", expanded_r30);
         }
       }
 
-      function PerionComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_23_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function PerionComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_23_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -27036,21 +27610,21 @@
         }
 
         if (rf & 2) {
-          var value_r32 = ctx.value;
+          var value_r36 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r32));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r36));
         }
       }
 
-      function PerionComponent_ngx_datatable_column_24_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_23_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 35);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 39);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_23_ng_template_1_Template, 1, 0, "ng-template", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_24_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_23_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -27060,49 +27634,13 @@
         }
       }
 
-      function PerionComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
         }
       }
 
-      function PerionComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r36 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r36);
-        }
-      }
-
-      function PerionComponent_ngx_datatable_column_25_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 36);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 26);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-      }
-
-      function PerionComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
-        }
-      }
-
-      function PerionComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -27120,35 +27658,29 @@
         }
       }
 
-      function PerionComponent_ngx_datatable_column_26_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_24_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 37);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 40);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_26_ng_template_2_Template, 2, 1, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_24_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
-
-        if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
-        }
       }
 
-      function PerionComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
-      function PerionComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -27158,29 +27690,33 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r44));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r44);
         }
       }
 
-      function PerionComponent_ngx_datatable_column_27_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_25_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 38);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 41);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
-      }
 
-      function PerionComponent_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
         }
       }
 
-      function PerionComponent_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+        }
+      }
+
+      function PerionComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -27200,25 +27736,63 @@
         }
       }
 
-      function PerionComponent_ngx_datatable_column_28_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 39);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 42);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_26_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function PerionComponent_ngx_datatable_column_29_ng_template_1_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+        }
+      }
+
+      function PerionComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r52 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r52));
+        }
+      }
+
+      function PerionComponent_ngx_datatable_column_27_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 43);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 25);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function PerionComponent_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
         }
       }
 
-      function PerionComponent_ngx_datatable_column_29_ng_template_2_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -27232,33 +27806,33 @@
         }
 
         if (rf & 2) {
-          var value_r52 = ctx.value;
+          var value_r56 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r52, "USD") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r56, "USD") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "USD"));
         }
       }
 
-      function PerionComponent_ngx_datatable_column_29_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_28_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 40);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 44);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_29_ng_template_1_Template, 1, 0, "ng-template", 26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_29_ng_template_2_Template, 4, 7, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_28_ng_template_2_Template, 4, 7, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function PerionComponent_ngx_datatable_column_30_ng_template_1_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_29_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
         }
       }
 
-      function PerionComponent_ngx_datatable_column_30_ng_template_2_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_29_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -27272,33 +27846,33 @@
         }
 
         if (rf & 2) {
-          var value_r56 = ctx.value;
+          var value_r60 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r56, "2.2-2") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "2.2-2"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r60, "2.2-2") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 4, 0, "2.2-2"));
         }
       }
 
-      function PerionComponent_ngx_datatable_column_30_Template(rf, ctx) {
+      function PerionComponent_ngx_datatable_column_29_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 41);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 45);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_30_ng_template_1_Template, 1, 0, "ng-template", 26);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, PerionComponent_ngx_datatable_column_29_ng_template_1_Template, 1, 0, "ng-template", 25);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_30_ng_template_2_Template, 4, 7, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, PerionComponent_ngx_datatable_column_29_ng_template_2_Template, 4, 7, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function PerionComponent_ng_template_32_Template(rf, ctx) {
+      function PerionComponent_ng_template_31_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Follow On ");
         }
       }
 
-      function PerionComponent_ng_template_33_Template(rf, ctx) {
+      function PerionComponent_ng_template_32_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -27310,73 +27884,21 @@
         }
 
         if (rf & 2) {
-          var value_r58 = ctx.value;
+          var value_r62 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r58, "1.2-2"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r62, "1.2-2"));
         }
       }
 
-      function PerionComponent_ng_template_35_Template(rf, ctx) {
+      function PerionComponent_ng_template_34_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
         }
       }
 
-      function PerionComponent_ng_template_36_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r60 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r60, "USD"));
-        }
-      }
-
-      function PerionComponent_ng_template_38_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
-        }
-      }
-
-      function PerionComponent_ng_template_39_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r62 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r62, "USD"));
-        }
-      }
-
-      function PerionComponent_ng_template_41_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
-        }
-      }
-
-      function PerionComponent_ng_template_42_Template(rf, ctx) {
+      function PerionComponent_ng_template_35_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -27396,13 +27918,65 @@
         }
       }
 
-      function PerionComponent_ng_template_44_Template(rf, ctx) {
+      function PerionComponent_ng_template_37_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
+        }
+      }
+
+      function PerionComponent_ng_template_38_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r66 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r66, "USD"));
+        }
+      }
+
+      function PerionComponent_ng_template_40_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function PerionComponent_ng_template_41_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r68 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r68, "USD"));
+        }
+      }
+
+      function PerionComponent_ng_template_43_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
         }
       }
 
-      function PerionComponent_ng_template_45_Template(rf, ctx) {
+      function PerionComponent_ng_template_44_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -27416,11 +27990,11 @@
         }
 
         if (rf & 2) {
-          var value_r66 = ctx.value;
+          var value_r70 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r66) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r70) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
         }
       }
 
@@ -27451,6 +28025,7 @@
           }];
           this.expanded = {};
           this.tagList = [];
+          this.groupType = '';
           this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
         }
 
@@ -27511,6 +28086,17 @@
             console.log('Detail Toggled', event);
           }
         }, {
+          key: "getDetailRowHeight",
+          value: function getDetailRowHeight(row, index) {
+            var height;
+
+            if (row) {
+              height = row.detailHeight;
+            }
+
+            return height;
+          }
+        }, {
           key: "routeTester",
           value: function routeTester() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee31() {
@@ -27568,9 +28154,12 @@
                     case 9:
                       this.summaryMetrics = _context32.sent;
                       this.groupPublishFlag = false;
+                      this.groupDateShowFlag = false;
+                      this.groupSubidShowFlag = false;
+                      this.groupType = '';
                       this.refreshTable();
 
-                    case 12:
+                    case 15:
                     case "end":
                       return _context32.stop();
                   }
@@ -27582,7 +28171,7 @@
           key: "getAllPerionStats",
           value: function getAllPerionStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee33() {
-              var response, _iterator43, _step43, tagL, _iterator44, _step44, tagSub;
+              var response, _iterator45, _step45, tagL, _iterator46, _step46, tagSub;
 
               return regeneratorRuntime.wrap(function _callee33$(_context33) {
                 while (1) {
@@ -27601,18 +28190,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator43 = _createForOfIteratorHelper(this.tagList);
+                      _iterator45 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator43.s(); !(_step43 = _iterator43.n()).done;) {
-                          tagL = _step43.value;
+                        for (_iterator45.s(); !(_step45 = _iterator45.n()).done;) {
+                          tagL = _step45.value;
 
                           if (tagL.tag.advertiser == "perion") {
-                            _iterator44 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator46 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator44.s(); !(_step44 = _iterator44.n()).done;) {
-                                tagSub = _step44.value;
+                              for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
+                                tagSub = _step46.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStat.map(function (stat) {
@@ -27645,16 +28234,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator44.e(err);
+                              _iterator46.e(err);
                             } finally {
-                              _iterator44.f();
+                              _iterator46.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator43.e(err);
+                        _iterator45.e(err);
                       } finally {
-                        _iterator43.f();
+                        _iterator45.f();
                       }
 
                       return _context33.abrupt("return", this.allStat);
@@ -27701,20 +28290,20 @@
               return r;
             }, []);
 
-            var _iterator45 = _createForOfIteratorHelper(groupData),
-                _step45;
+            var _iterator47 = _createForOfIteratorHelper(groupData),
+                _step47;
 
             try {
-              for (_iterator45.s(); !(_step45 = _iterator45.n()).done;) {
-                var group = _step45.value;
+              for (_iterator47.s(); !(_step47 = _iterator47.n()).done;) {
+                var group = _step47.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator45.e(err);
+              _iterator47.e(err);
             } finally {
-              _iterator45.f();
+              _iterator47.f();
             }
 
             this.rows = groupData;
@@ -27752,20 +28341,20 @@
               return r;
             }, []);
 
-            var _iterator46 = _createForOfIteratorHelper(groupData),
-                _step46;
+            var _iterator48 = _createForOfIteratorHelper(groupData),
+                _step48;
 
             try {
-              for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
-                var group = _step46.value;
+              for (_iterator48.s(); !(_step48 = _iterator48.n()).done;) {
+                var group = _step48.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator46.e(err);
+              _iterator48.e(err);
             } finally {
-              _iterator46.f();
+              _iterator48.f();
             }
 
             this.rows = groupData;
@@ -27803,20 +28392,22 @@
               return r;
             }, []);
 
-            var _iterator47 = _createForOfIteratorHelper(groupData),
-                _step47;
+            var _iterator49 = _createForOfIteratorHelper(groupData),
+                _step49;
 
             try {
-              for (_iterator47.s(); !(_step47 = _iterator47.n()).done;) {
-                var group = _step47.value;
+              for (_iterator49.s(); !(_step49 = _iterator49.n()).done;) {
+                var group = _step49.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
+                group.subReportingForDate = this.groupDateForPublisher(group);
+                group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
             } catch (err) {
-              _iterator47.e(err);
+              _iterator49.e(err);
             } finally {
-              _iterator47.f();
+              _iterator49.f();
             }
 
             this.rows = groupData;
@@ -27835,9 +28426,58 @@
             this.cdr.markForCheck();
           }
         }, {
+          key: "groupDateForPublisher",
+          value: function groupDateForPublisher(group) {
+            var helperSummary = {};
+            var groupData = this.allStat.filter(function (oStat) {
+              return oStat.publisher === group.publisher;
+            }).reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
+                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator50 = _createForOfIteratorHelper(groupData),
+                _step50;
+
+            try {
+              for (_iterator50.s(); !(_step50 = _iterator50.n()).done;) {
+                var group = _step50.value;
+                group.split = group.split / group.counter;
+                group.followon = group.followon / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator50.e(err);
+            } finally {
+              _iterator50.f();
+            }
+
+            return groupData;
+          }
+        }, {
           key: "groupHandle",
           value: function groupHandle(event) {
-            console.log(event.value);
+            this.groupType = event.value;
 
             if (event.value == "date") {
               this.groupDate();
@@ -27848,6 +28488,8 @@
             } else {
               this.backGroup();
             }
+
+            this.cdr.markForCheck();
           }
         }, {
           key: "refreshTable",
@@ -27921,7 +28563,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee35() {
-              var response, _iterator48, _step48, tagL, _iterator51, _step51, tagSub, sorted, _multiGroupBy3, groupedItems, _reformattedArray6, item, elm, obj, pulisherArr, _i6, _reformattedArray7, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator49, _step49, resVal, _stackedArr3, _iterator50, _step50, _loop7;
+              var response, _iterator51, _step51, tagL, _iterator54, _step54, tagSub, sorted, _multiGroupBy3, groupedItems, _reformattedArray6, item, elm, obj, pulisherArr, _i6, _reformattedArray7, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator52, _step52, resVal, _stackedArr3, _iterator53, _step53, _loop7;
 
               return regeneratorRuntime.wrap(function _callee35$(_context35) {
                 while (1) {
@@ -27938,18 +28580,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator48 = _createForOfIteratorHelper(this.tagList);
+                      _iterator51 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator48.s(); !(_step48 = _iterator48.n()).done;) {
-                          tagL = _step48.value;
+                        for (_iterator51.s(); !(_step51 = _iterator51.n()).done;) {
+                          tagL = _step51.value;
 
                           if (tagL.tag.advertiser == "perion") {
-                            _iterator51 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator54 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator51.s(); !(_step51 = _iterator51.n()).done;) {
-                                tagSub = _step51.value;
+                              for (_iterator54.s(); !(_step54 = _iterator54.n()).done;) {
+                                tagSub = _step54.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -27982,16 +28624,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator51.e(err);
+                              _iterator54.e(err);
                             } finally {
-                              _iterator51.f();
+                              _iterator54.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator48.e(err);
+                        _iterator51.e(err);
                       } finally {
-                        _iterator48.f();
+                        _iterator51.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -28062,34 +28704,34 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator49 = _createForOfIteratorHelper(resultChart);
+                      _iterator52 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator49.s(); !(_step49 = _iterator49.n()).done;) {
-                          resVal = _step49.value;
+                        for (_iterator52.s(); !(_step52 = _iterator52.n()).done;) {
+                          resVal = _step52.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.totalsearches);
                         }
                       } catch (err) {
-                        _iterator49.e(err);
+                        _iterator52.e(err);
                       } finally {
-                        _iterator49.f();
+                        _iterator52.f();
                       }
 
                       _stackedArr3 = [];
-                      _iterator50 = _createForOfIteratorHelper(unique);
+                      _iterator53 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop7 = function _loop7() {
-                          var u = _step50.value;
+                          var u = _step53.value;
                           var subStackedArr = [];
 
-                          var _iterator52 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step52;
+                          var _iterator55 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step55;
 
                           try {
                             var _loop8 = function _loop8() {
-                              var date = _step52.value;
+                              var date = _step55.value;
 
                               var filterLen = _reformattedArray6.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
@@ -28102,13 +28744,13 @@
                               }
                             };
 
-                            for (_iterator52.s(); !(_step52 = _iterator52.n()).done;) {
+                            for (_iterator55.s(); !(_step55 = _iterator55.n()).done;) {
                               _loop8();
                             }
                           } catch (err) {
-                            _iterator52.e(err);
+                            _iterator55.e(err);
                           } finally {
-                            _iterator52.f();
+                            _iterator55.f();
                           }
 
                           var obj = {};
@@ -28117,13 +28759,13 @@
                           _stackedArr3.push(obj);
                         };
 
-                        for (_iterator50.s(); !(_step50 = _iterator50.n()).done;) {
+                        for (_iterator53.s(); !(_step53 = _iterator53.n()).done;) {
                           _loop7();
                         }
                       } catch (err) {
-                        _iterator50.e(err);
+                        _iterator53.e(err);
                       } finally {
-                        _iterator50.f();
+                        _iterator53.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr3;
@@ -28221,9 +28863,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 46,
-        vars: 23,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "selectionChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "totalsearches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "cpc", 4, "ngIf"], ["name", "ctr", 4, "ngIf"], ["name", "followon"], ["ngx-datatable-header-template", ""], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], ["name", "split", 3, "minWidth"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "totalsearches"], ["name", "clicks"], ["name", "cpc"], ["name", "ctr"]],
+        decls: 45,
+        vars: 24,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "ngModel", "selectionChange", "ngModelChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "totalsearches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "cpc", 4, "ngIf"], ["name", "ctr", 4, "ngIf"], ["name", "followon"], ["ngx-datatable-header-template", ""], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], ["name", "split", 3, "minWidth"], [3, "chartData"], [3, "summaryMetricsData"], ["class", "table-responsive", "style", "padding-left: 36px;", 4, "ngIf"], ["style", "padding-left: 35px", 4, "ngIf"], [1, "table-responsive", 2, "padding-left", "36px"], [1, "table", "table-hover"], [4, "ngFor", "ngForOf"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "totalsearches"], ["name", "clicks"], ["name", "cpc"], ["name", "ctr"]],
         template: function PerionComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -28254,6 +28896,8 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("selectionChange", function PerionComponent_Template_mat_select_selectionChange_8_listener($event) {
               return ctx.groupHandle($event);
+            })("ngModelChange", function PerionComponent_Template_mat_select_ngModelChange_8_listener($event) {
+              return ctx.groupType = $event;
             });
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "mat-option", 7);
@@ -28290,27 +28934,29 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable", 11, 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13, 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function PerionComponent_Template_ngx_datatable_row_detail_toggle_19_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, PerionComponent_ng_template_21_Template, 6, 0, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, PerionComponent_ng_template_20_Template, 2, 2, "ng-template", 14);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, PerionComponent_ng_template_23_Template, 1, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, PerionComponent_ng_template_22_Template, 1, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, PerionComponent_ngx_datatable_column_24_Template, 3, 1, "ngx-datatable-column", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, PerionComponent_ngx_datatable_column_23_Template, 3, 1, "ngx-datatable-column", 17);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, PerionComponent_ngx_datatable_column_25_Template, 3, 0, "ngx-datatable-column", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, PerionComponent_ngx_datatable_column_24_Template, 3, 0, "ngx-datatable-column", 18);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, PerionComponent_ngx_datatable_column_26_Template, 3, 1, "ngx-datatable-column", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, PerionComponent_ngx_datatable_column_25_Template, 3, 1, "ngx-datatable-column", 19);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, PerionComponent_ngx_datatable_column_26_Template, 3, 0, "ngx-datatable-column", 20);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, PerionComponent_ngx_datatable_column_27_Template, 3, 0, "ngx-datatable-column", 21);
 
@@ -28318,45 +28964,43 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, PerionComponent_ngx_datatable_column_29_Template, 3, 0, "ngx-datatable-column", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, PerionComponent_ngx_datatable_column_30_Template, 3, 0, "ngx-datatable-column", 24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](30, "ngx-datatable-column", 24);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "ngx-datatable-column", 25);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, PerionComponent_ng_template_31_Template, 1, 0, "ng-template", 25);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, PerionComponent_ng_template_32_Template, 1, 0, "ng-template", 26);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, PerionComponent_ng_template_33_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, PerionComponent_ng_template_32_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "ngx-datatable-column", 27);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](33, "ngx-datatable-column", 26);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, PerionComponent_ng_template_35_Template, 1, 0, "ng-template", 26);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, PerionComponent_ng_template_34_Template, 1, 0, "ng-template", 25);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, PerionComponent_ng_template_36_Template, 3, 4, "ng-template", 17);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "ngx-datatable-column", 28);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, PerionComponent_ng_template_38_Template, 1, 0, "ng-template", 26);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, PerionComponent_ng_template_39_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, PerionComponent_ng_template_35_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "ngx-datatable-column", 29);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "ngx-datatable-column", 27);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](41, PerionComponent_ng_template_41_Template, 1, 0, "ng-template", 26);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, PerionComponent_ng_template_37_Template, 1, 0, "ng-template", 25);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](42, PerionComponent_ng_template_42_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, PerionComponent_ng_template_38_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](43, "ngx-datatable-column", 30);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](39, "ngx-datatable-column", 28);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](44, PerionComponent_ng_template_44_Template, 1, 0, "ng-template", 26);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, PerionComponent_ng_template_40_Template, 1, 0, "ng-template", 25);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](45, PerionComponent_ng_template_45_Template, 4, 6, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](41, PerionComponent_ng_template_41_Template, 3, 4, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](42, "ngx-datatable-column", 29);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](43, PerionComponent_ng_template_43_Template, 1, 0, "ng-template", 25);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](44, PerionComponent_ng_template_44_Template, 4, 6, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -28372,15 +29016,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.groupType);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", ctx.groupType === "publisher" ? ctx.getDetailRowHeight : 130);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 30)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
 
@@ -28417,8 +29065,8 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 35);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__["SummaryMetricsComponent"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["PercentPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_material_core__WEBPACK_IMPORTED_MODULE_11__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__["SummaryMetricsComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["PercentPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL3Blcmlvbi9wZXJpb24uY29tcG9uZW50LnNjc3MifQ== */"]
       });
       /*@__PURE__*/
@@ -28538,25 +29186,31 @@
       /* harmony import */
 
 
-      var _angular_material_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/material/core */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
       "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
       /* harmony import */
 
 
-      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
       "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
 
@@ -28564,7 +29218,7 @@
 
       function RubiComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 28);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 27);
         }
 
         if (rf & 2) {
@@ -28576,7 +29230,7 @@
 
       function RubiComponent_app_summary_metrics_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 29);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 28);
         }
 
         if (rf & 2) {
@@ -28586,9 +29240,127 @@
         }
       }
 
-      function RubiComponent_ng_template_21_Template(rf, ctx) {
+      function RubiComponent_ng_template_20_div_0_tr_13_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 30);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](6, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](9, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](12, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var subDateData_r23 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](3, 4, subDateData_r23.date));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](6, 6, subDateData_r23.publisherNet, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](9, 9, subDateData_r23.profit, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](12, 12, subDateData_r23.revenue, "USD"));
+        }
+      }
+
+      function RubiComponent_ng_template_20_div_0_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 31);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "table", 32);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "thead");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Publisher Net");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Profit");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "Revenue");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "tbody");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, RubiComponent_ng_template_20_div_0_tr_13_Template, 13, 15, "tr", 33);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var row_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().row;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", row_r18.subReportingForDate);
+        }
+      }
+
+      function RubiComponent_ng_template_20_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 34);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -28610,39 +29382,57 @@
         }
       }
 
-      function RubiComponent_ng_template_23_Template(rf, ctx) {
+      function RubiComponent_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
-          var _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, RubiComponent_ng_template_20_div_0_Template, 14, 1, "div", 29);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, RubiComponent_ng_template_20_div_1_Template, 6, 0, "div", 30);
+        }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function RubiComponent_ng_template_23_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r24);
+        if (rf & 2) {
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-            var row_r21 = ctx.row;
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType === "publisher");
 
-            var ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            return ctx_r23.toggleExpandRow(row_r21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType !== "publisher");
+        }
+      }
+
+      function RubiComponent_ng_template_22_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 35);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function RubiComponent_ng_template_22_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r28);
+
+            var row_r25 = ctx.row;
+
+            var ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r27.toggleExpandRow(row_r25);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r22 = ctx.expanded;
+          var expanded_r26 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r22)("datatable-icon-down", expanded_r22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r26)("datatable-icon-down", expanded_r26);
         }
       }
 
-      function RubiComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_23_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function RubiComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_23_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -28654,21 +29444,21 @@
         }
 
         if (rf & 2) {
-          var value_r28 = ctx.value;
+          var value_r32 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r28));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r32));
         }
       }
 
-      function RubiComponent_ngx_datatable_column_24_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_23_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 32);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 36);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, RubiComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, RubiComponent_ngx_datatable_column_23_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, RubiComponent_ngx_datatable_column_24_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, RubiComponent_ngx_datatable_column_23_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -28678,49 +29468,13 @@
         }
       }
 
-      function RubiComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
         }
       }
 
-      function RubiComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r32 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r32);
-        }
-      }
-
-      function RubiComponent_ngx_datatable_column_25_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 33);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, RubiComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 24);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, RubiComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-      }
-
-      function RubiComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
-        }
-      }
-
-      function RubiComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -28738,35 +29492,29 @@
         }
       }
 
-      function RubiComponent_ngx_datatable_column_26_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_24_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 34);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 37);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, RubiComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, RubiComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, RubiComponent_ngx_datatable_column_26_ng_template_2_Template, 2, 1, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, RubiComponent_ngx_datatable_column_24_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
-
-        if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
-        }
       }
 
-      function RubiComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
-      function RubiComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -28776,29 +29524,33 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r40));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r40);
         }
       }
 
-      function RubiComponent_ngx_datatable_column_27_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_25_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 35);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 38);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, RubiComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, RubiComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, RubiComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, RubiComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
-      }
 
-      function RubiComponent_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
         }
       }
 
-      function RubiComponent_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+        }
+      }
+
+      function RubiComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -28818,25 +29570,63 @@
         }
       }
 
-      function RubiComponent_ngx_datatable_column_28_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 36);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 39);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, RubiComponent_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, RubiComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, RubiComponent_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, RubiComponent_ngx_datatable_column_26_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function RubiComponent_ng_template_30_Template(rf, ctx) {
+      function RubiComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+        }
+      }
+
+      function RubiComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r48 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r48));
+        }
+      }
+
+      function RubiComponent_ngx_datatable_column_27_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 40);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, RubiComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, RubiComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function RubiComponent_ng_template_29_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
         }
       }
 
-      function RubiComponent_ng_template_31_Template(rf, ctx) {
+      function RubiComponent_ng_template_30_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -28850,73 +29640,21 @@
         }
 
         if (rf & 2) {
-          var value_r46 = ctx.value;
+          var value_r50 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r46) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r50) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
         }
       }
 
-      function RubiComponent_ng_template_33_Template(rf, ctx) {
+      function RubiComponent_ng_template_32_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
         }
       }
 
-      function RubiComponent_ng_template_34_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r48 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r48, "USD"));
-        }
-      }
-
-      function RubiComponent_ng_template_36_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
-        }
-      }
-
-      function RubiComponent_ng_template_37_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r50 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r50, "USD"));
-        }
-      }
-
-      function RubiComponent_ng_template_39_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
-        }
-      }
-
-      function RubiComponent_ng_template_40_Template(rf, ctx) {
+      function RubiComponent_ng_template_33_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -28933,6 +29671,58 @@
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r52, "USD"));
+        }
+      }
+
+      function RubiComponent_ng_template_35_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
+        }
+      }
+
+      function RubiComponent_ng_template_36_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r54 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r54, "USD"));
+        }
+      }
+
+      function RubiComponent_ng_template_38_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function RubiComponent_ng_template_39_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r56 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r56, "USD"));
         }
       }
 
@@ -28954,6 +29744,7 @@
           this.groupSubidShowFlag = false;
           this.expanded = {};
           this.tagList = [];
+          this.groupType = '';
           this.selectedCompany = this.getSelectedCompanyStored();
         }
 
@@ -29021,9 +29812,12 @@
                     case 9:
                       this.summaryMetrics = _context38.sent;
                       this.groupPublishFlag = false;
+                      this.groupDateShowFlag = false;
+                      this.groupSubidShowFlag = false;
+                      this.groupType = '';
                       this.refreshTable();
 
-                    case 12:
+                    case 15:
                     case "end":
                       return _context38.stop();
                   }
@@ -29057,7 +29851,7 @@
           key: "getAllRubiStats",
           value: function getAllRubiStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee39() {
-              var response, _iterator53, _step53, tagL, _iterator54, _step54, tagSub;
+              var response, _iterator56, _step56, tagL, _iterator57, _step57, tagSub;
 
               return regeneratorRuntime.wrap(function _callee39$(_context39) {
                 while (1) {
@@ -29075,18 +29869,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator53 = _createForOfIteratorHelper(this.tagList);
+                      _iterator56 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator53.s(); !(_step53 = _iterator53.n()).done;) {
-                          tagL = _step53.value;
+                        for (_iterator56.s(); !(_step56 = _iterator56.n()).done;) {
+                          tagL = _step56.value;
 
                           if (tagL.tag.advertiser == "rubi") {
-                            _iterator54 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator57 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator54.s(); !(_step54 = _iterator54.n()).done;) {
-                                tagSub = _step54.value;
+                              for (_iterator57.s(); !(_step57 = _iterator57.n()).done;) {
+                                tagSub = _step57.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -29119,16 +29913,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator54.e(err);
+                              _iterator57.e(err);
                             } finally {
-                              _iterator54.f();
+                              _iterator57.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator53.e(err);
+                        _iterator56.e(err);
                       } finally {
-                        _iterator53.f();
+                        _iterator56.f();
                       }
 
                       return _context39.abrupt("return", this.allStats);
@@ -29140,6 +29934,17 @@
                 }
               }, _callee39, this);
             }));
+          }
+        }, {
+          key: "getDetailRowHeight",
+          value: function getDetailRowHeight(row, index) {
+            var height;
+
+            if (row) {
+              height = row.detailHeight;
+            }
+
+            return height;
           }
         }, {
           key: "groupDate",
@@ -29167,18 +29972,18 @@
               return r;
             }, []);
 
-            var _iterator55 = _createForOfIteratorHelper(groupData),
-                _step55;
+            var _iterator58 = _createForOfIteratorHelper(groupData),
+                _step58;
 
             try {
-              for (_iterator55.s(); !(_step55 = _iterator55.n()).done;) {
-                var group = _step55.value;
+              for (_iterator58.s(); !(_step58 = _iterator58.n()).done;) {
+                var group = _step58.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator55.e(err);
+              _iterator58.e(err);
             } finally {
-              _iterator55.f();
+              _iterator58.f();
             }
 
             this.rows = groupData;
@@ -29213,18 +30018,18 @@
               return r;
             }, []);
 
-            var _iterator56 = _createForOfIteratorHelper(groupData),
-                _step56;
+            var _iterator59 = _createForOfIteratorHelper(groupData),
+                _step59;
 
             try {
-              for (_iterator56.s(); !(_step56 = _iterator56.n()).done;) {
-                var group = _step56.value;
+              for (_iterator59.s(); !(_step59 = _iterator59.n()).done;) {
+                var group = _step59.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator56.e(err);
+              _iterator59.e(err);
             } finally {
-              _iterator56.f();
+              _iterator59.f();
             }
 
             this.rows = groupData;
@@ -29259,18 +30064,20 @@
               return r;
             }, []);
 
-            var _iterator57 = _createForOfIteratorHelper(groupData),
-                _step57;
+            var _iterator60 = _createForOfIteratorHelper(groupData),
+                _step60;
 
             try {
-              for (_iterator57.s(); !(_step57 = _iterator57.n()).done;) {
-                var group = _step57.value;
+              for (_iterator60.s(); !(_step60 = _iterator60.n()).done;) {
+                var group = _step60.value;
                 group.split = group.split / group.counter;
+                group.subReportingForDate = this.groupDateForPublisher(group);
+                group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
             } catch (err) {
-              _iterator57.e(err);
+              _iterator60.e(err);
             } finally {
-              _iterator57.f();
+              _iterator60.f();
             }
 
             this.rows = groupData;
@@ -29289,10 +30096,59 @@
             this.cdr.markForCheck();
           }
         }, {
+          key: "groupDateForPublisher",
+          value: function groupDateForPublisher(group) {
+            var helperSummary = {};
+            var groupData = this.allStats.filter(function (oStat) {
+              return oStat.publisher === group.publisher;
+            }).reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
+                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator61 = _createForOfIteratorHelper(groupData),
+                _step61;
+
+            try {
+              for (_iterator61.s(); !(_step61 = _iterator61.n()).done;) {
+                var group = _step61.value;
+                group.split = group.split / group.counter;
+                group.followon = group.followon / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator61.e(err);
+            } finally {
+              _iterator61.f();
+            }
+
+            return groupData;
+          }
+        }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee40() {
-              var response, _iterator58, _step58, tagL, _iterator61, _step61, tagSub, sorted, _multiGroupBy4, groupedItems, _reformattedArray8, item, elm, obj, pulisherArr, _i7, _reformattedArray9, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator59, _step59, resVal, _stackedArr4, _iterator60, _step60, _loop9;
+              var response, _iterator62, _step62, tagL, _iterator65, _step65, tagSub, sorted, _multiGroupBy4, groupedItems, _reformattedArray8, item, elm, obj, pulisherArr, _i7, _reformattedArray9, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator63, _step63, resVal, _stackedArr4, _iterator64, _step64, _loop9;
 
               return regeneratorRuntime.wrap(function _callee40$(_context40) {
                 while (1) {
@@ -29310,18 +30166,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator58 = _createForOfIteratorHelper(this.tagList);
+                      _iterator62 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator58.s(); !(_step58 = _iterator58.n()).done;) {
-                          tagL = _step58.value;
+                        for (_iterator62.s(); !(_step62 = _iterator62.n()).done;) {
+                          tagL = _step62.value;
 
                           if (tagL.tag.advertiser == "rubi") {
-                            _iterator61 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator65 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator61.s(); !(_step61 = _iterator61.n()).done;) {
-                                tagSub = _step61.value;
+                              for (_iterator65.s(); !(_step65 = _iterator65.n()).done;) {
+                                tagSub = _step65.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -29354,16 +30210,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator61.e(err);
+                              _iterator65.e(err);
                             } finally {
-                              _iterator61.f();
+                              _iterator65.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator58.e(err);
+                        _iterator62.e(err);
                       } finally {
-                        _iterator58.f();
+                        _iterator62.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -29434,34 +30290,34 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator59 = _createForOfIteratorHelper(resultChart);
+                      _iterator63 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator59.s(); !(_step59 = _iterator59.n()).done;) {
-                          resVal = _step59.value;
+                        for (_iterator63.s(); !(_step63 = _iterator63.n()).done;) {
+                          resVal = _step63.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator59.e(err);
+                        _iterator63.e(err);
                       } finally {
-                        _iterator59.f();
+                        _iterator63.f();
                       }
 
                       _stackedArr4 = [];
-                      _iterator60 = _createForOfIteratorHelper(unique);
+                      _iterator64 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop9 = function _loop9() {
-                          var u = _step60.value;
+                          var u = _step64.value;
                           var subStackedArr = [];
 
-                          var _iterator62 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step62;
+                          var _iterator66 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step66;
 
                           try {
                             var _loop10 = function _loop10() {
-                              var date = _step62.value;
+                              var date = _step66.value;
 
                               var filterLen = _reformattedArray8.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
@@ -29474,13 +30330,13 @@
                               }
                             };
 
-                            for (_iterator62.s(); !(_step62 = _iterator62.n()).done;) {
+                            for (_iterator66.s(); !(_step66 = _iterator66.n()).done;) {
                               _loop10();
                             }
                           } catch (err) {
-                            _iterator62.e(err);
+                            _iterator66.e(err);
                           } finally {
-                            _iterator62.f();
+                            _iterator66.f();
                           }
 
                           var obj = {};
@@ -29489,13 +30345,13 @@
                           _stackedArr4.push(obj);
                         };
 
-                        for (_iterator60.s(); !(_step60 = _iterator60.n()).done;) {
+                        for (_iterator64.s(); !(_step64 = _iterator64.n()).done;) {
                           _loop9();
                         }
                       } catch (err) {
-                        _iterator60.e(err);
+                        _iterator64.e(err);
                       } finally {
-                        _iterator60.f();
+                        _iterator64.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr4;
@@ -29520,6 +30376,8 @@
         }, {
           key: "groupHandle",
           value: function groupHandle(event) {
+            this.groupType = event.value;
+
             if (event.value == "date") {
               this.groupDate();
             } else if (event.value == "publisher") {
@@ -29642,9 +30500,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 41,
-        vars: 21,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "selectionChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "split", 3, "minWidth"], ["ngx-datatable-header-template", ""], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "searches"], ["name", "clicks"]],
+        decls: 40,
+        vars: 22,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "ngModel", "selectionChange", "ngModelChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "split", 3, "minWidth"], ["ngx-datatable-header-template", ""], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], ["class", "table-responsive", "style", "padding-left: 36px;", 4, "ngIf"], ["style", "padding-left: 35px", 4, "ngIf"], [1, "table-responsive", 2, "padding-left", "36px"], [1, "table", "table-hover"], [4, "ngFor", "ngForOf"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "searches"], ["name", "clicks"]],
         template: function RubiComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -29675,6 +30533,8 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("selectionChange", function RubiComponent_Template_mat_select_selectionChange_8_listener($event) {
               return ctx.groupHandle($event);
+            })("ngModelChange", function RubiComponent_Template_mat_select_ngModelChange_8_listener($event) {
+              return ctx.groupType = $event;
             });
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "mat-option", 7);
@@ -29711,61 +30571,61 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable", 11, 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13, 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function RubiComponent_Template_ngx_datatable_row_detail_toggle_19_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, RubiComponent_ng_template_21_Template, 6, 0, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, RubiComponent_ng_template_20_Template, 2, 2, "ng-template", 14);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, RubiComponent_ng_template_23_Template, 1, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, RubiComponent_ng_template_22_Template, 1, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, RubiComponent_ngx_datatable_column_24_Template, 3, 1, "ngx-datatable-column", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, RubiComponent_ngx_datatable_column_23_Template, 3, 1, "ngx-datatable-column", 17);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, RubiComponent_ngx_datatable_column_25_Template, 3, 0, "ngx-datatable-column", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, RubiComponent_ngx_datatable_column_24_Template, 3, 0, "ngx-datatable-column", 18);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, RubiComponent_ngx_datatable_column_26_Template, 3, 1, "ngx-datatable-column", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, RubiComponent_ngx_datatable_column_25_Template, 3, 1, "ngx-datatable-column", 19);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, RubiComponent_ngx_datatable_column_26_Template, 3, 0, "ngx-datatable-column", 20);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, RubiComponent_ngx_datatable_column_27_Template, 3, 0, "ngx-datatable-column", 21);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, RubiComponent_ngx_datatable_column_28_Template, 3, 0, "ngx-datatable-column", 22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "ngx-datatable-column", 22);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](29, "ngx-datatable-column", 23);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, RubiComponent_ng_template_29_Template, 1, 0, "ng-template", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, RubiComponent_ng_template_30_Template, 1, 0, "ng-template", 24);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, RubiComponent_ng_template_31_Template, 4, 6, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, RubiComponent_ng_template_30_Template, 4, 6, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](32, "ngx-datatable-column", 25);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "ngx-datatable-column", 24);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, RubiComponent_ng_template_33_Template, 1, 0, "ng-template", 24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, RubiComponent_ng_template_32_Template, 1, 0, "ng-template", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, RubiComponent_ng_template_34_Template, 3, 4, "ng-template", 17);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "ngx-datatable-column", 26);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, RubiComponent_ng_template_36_Template, 1, 0, "ng-template", 24);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, RubiComponent_ng_template_37_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, RubiComponent_ng_template_33_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "ngx-datatable-column", 27);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "ngx-datatable-column", 25);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, RubiComponent_ng_template_39_Template, 1, 0, "ng-template", 24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, RubiComponent_ng_template_35_Template, 1, 0, "ng-template", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, RubiComponent_ng_template_40_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, RubiComponent_ng_template_36_Template, 3, 4, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "ngx-datatable-column", 26);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, RubiComponent_ng_template_38_Template, 1, 0, "ng-template", 23);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, RubiComponent_ng_template_39_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -29781,15 +30641,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.groupType);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", ctx.groupType === "publisher" ? ctx.getDetailRowHeight : 130);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 30)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
 
@@ -29818,8 +30682,8 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 35);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__["SummaryMetricsComponent"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_material_core__WEBPACK_IMPORTED_MODULE_11__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__["SummaryMetricsComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL3J1YmkvcnViaS5jb21wb25lbnQuc2NzcyJ9 */"]
       });
       /*@__PURE__*/
@@ -29939,25 +30803,31 @@
       /* harmony import */
 
 
-      var _angular_material_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/material/core */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
       "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
       /* harmony import */
 
 
-      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
       "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
 
@@ -29965,7 +30835,7 @@
 
       function SolexBcComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 28);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 27);
         }
 
         if (rf & 2) {
@@ -29977,7 +30847,7 @@
 
       function SolexBcComponent_app_summary_metrics_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 29);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 28);
         }
 
         if (rf & 2) {
@@ -29987,9 +30857,127 @@
         }
       }
 
-      function SolexBcComponent_ng_template_21_Template(rf, ctx) {
+      function SolexBcComponent_ng_template_20_div_0_tr_13_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 30);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](6, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](9, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](12, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var subDateData_r23 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](3, 4, subDateData_r23.date));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](6, 6, subDateData_r23.publisherNet, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](9, 9, subDateData_r23.profit, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](12, 12, subDateData_r23.revenue, "USD"));
+        }
+      }
+
+      function SolexBcComponent_ng_template_20_div_0_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 31);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "table", 32);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "thead");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Publisher Net");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Profit");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "Revenue");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "tbody");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, SolexBcComponent_ng_template_20_div_0_tr_13_Template, 13, 15, "tr", 33);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var row_r18 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().row;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", row_r18.subReportingForDate);
+        }
+      }
+
+      function SolexBcComponent_ng_template_20_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 34);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -30011,39 +30999,57 @@
         }
       }
 
-      function SolexBcComponent_ng_template_23_Template(rf, ctx) {
+      function SolexBcComponent_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
-          var _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, SolexBcComponent_ng_template_20_div_0_Template, 14, 1, "div", 29);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_ng_template_20_div_1_Template, 6, 0, "div", 30);
+        }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function SolexBcComponent_ng_template_23_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r24);
+        if (rf & 2) {
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-            var row_r21 = ctx.row;
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType === "publisher");
 
-            var ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            return ctx_r23.toggleExpandRow(row_r21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType !== "publisher");
+        }
+      }
+
+      function SolexBcComponent_ng_template_22_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 35);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function SolexBcComponent_ng_template_22_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r28);
+
+            var row_r25 = ctx.row;
+
+            var ctx_r27 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r27.toggleExpandRow(row_r25);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r22 = ctx.expanded;
+          var expanded_r26 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r22)("datatable-icon-down", expanded_r22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r26)("datatable-icon-down", expanded_r26);
         }
       }
 
-      function SolexBcComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_23_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function SolexBcComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_23_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -30055,21 +31061,21 @@
         }
 
         if (rf & 2) {
-          var value_r28 = ctx.value;
+          var value_r32 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r28));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r32));
         }
       }
 
-      function SolexBcComponent_ngx_datatable_column_24_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_23_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 32);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 36);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_ngx_datatable_column_23_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SolexBcComponent_ngx_datatable_column_24_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SolexBcComponent_ngx_datatable_column_23_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -30079,49 +31085,13 @@
         }
       }
 
-      function SolexBcComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
         }
       }
 
-      function SolexBcComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r32 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r32);
-        }
-      }
-
-      function SolexBcComponent_ngx_datatable_column_25_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 33);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 24);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SolexBcComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-      }
-
-      function SolexBcComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
-        }
-      }
-
-      function SolexBcComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -30139,35 +31109,29 @@
         }
       }
 
-      function SolexBcComponent_ngx_datatable_column_26_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_24_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 34);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 37);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SolexBcComponent_ngx_datatable_column_26_ng_template_2_Template, 2, 1, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SolexBcComponent_ngx_datatable_column_24_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
-
-        if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
-        }
       }
 
-      function SolexBcComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
-      function SolexBcComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -30177,29 +31141,33 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r40));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r40);
         }
       }
 
-      function SolexBcComponent_ngx_datatable_column_27_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_25_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 35);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 38);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SolexBcComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SolexBcComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
-      }
 
-      function SolexBcComponent_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
         }
       }
 
-      function SolexBcComponent_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+        }
+      }
+
+      function SolexBcComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -30219,25 +31187,63 @@
         }
       }
 
-      function SolexBcComponent_ngx_datatable_column_28_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 36);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 39);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 24);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 23);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SolexBcComponent_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SolexBcComponent_ngx_datatable_column_26_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function SolexBcComponent_ng_template_30_Template(rf, ctx) {
+      function SolexBcComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+        }
+      }
+
+      function SolexBcComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r48 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r48));
+        }
+      }
+
+      function SolexBcComponent_ngx_datatable_column_27_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 40);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, SolexBcComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, SolexBcComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function SolexBcComponent_ng_template_29_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
         }
       }
 
-      function SolexBcComponent_ng_template_31_Template(rf, ctx) {
+      function SolexBcComponent_ng_template_30_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -30251,73 +31257,21 @@
         }
 
         if (rf & 2) {
-          var value_r46 = ctx.value;
+          var value_r50 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r46) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r50) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
         }
       }
 
-      function SolexBcComponent_ng_template_33_Template(rf, ctx) {
+      function SolexBcComponent_ng_template_32_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
         }
       }
 
-      function SolexBcComponent_ng_template_34_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r48 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r48, "USD"));
-        }
-      }
-
-      function SolexBcComponent_ng_template_36_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
-        }
-      }
-
-      function SolexBcComponent_ng_template_37_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r50 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r50, "USD"));
-        }
-      }
-
-      function SolexBcComponent_ng_template_39_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
-        }
-      }
-
-      function SolexBcComponent_ng_template_40_Template(rf, ctx) {
+      function SolexBcComponent_ng_template_33_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -30334,6 +31288,58 @@
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r52, "USD"));
+        }
+      }
+
+      function SolexBcComponent_ng_template_35_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
+        }
+      }
+
+      function SolexBcComponent_ng_template_36_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r54 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r54, "USD"));
+        }
+      }
+
+      function SolexBcComponent_ng_template_38_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function SolexBcComponent_ng_template_39_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r56 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r56, "USD"));
         }
       }
 
@@ -30355,6 +31361,7 @@
           this.groupPublishFlag = false;
           this.groupDateShowFlag = false;
           this.groupSubidShowFlag = false;
+          this.groupType = '';
           this.selectedCompany = this.getSelectedCompanyStored();
         }
 
@@ -30422,9 +31429,12 @@
                     case 9:
                       this.summaryMetrics = _context44.sent;
                       this.groupPublishFlag = false;
+                      this.groupDateShowFlag = false;
+                      this.groupSubidShowFlag = false;
+                      this.groupType = '';
                       this.refreshTable();
 
-                    case 12:
+                    case 15:
                     case "end":
                       return _context44.stop();
                   }
@@ -30443,6 +31453,17 @@
           value: function toggleExpandRow(row) {
             console.log('Toggled Expand Row!', row);
             this.table.rowDetail.toggleExpandRow(row);
+          }
+        }, {
+          key: "getDetailRowHeight",
+          value: function getDetailRowHeight(row, index) {
+            var height;
+
+            if (row) {
+              height = row.detailHeight;
+            }
+
+            return height;
           }
         }, {
           key: "onDetailToggle",
@@ -30469,20 +31490,20 @@
                 resStat.tagname = "No Tag";
               });
 
-              var _iterator63 = _createForOfIteratorHelper(_this8.tagList),
-                  _step63;
+              var _iterator67 = _createForOfIteratorHelper(_this8.tagList),
+                  _step67;
 
               try {
-                for (_iterator63.s(); !(_step63 = _iterator63.n()).done;) {
-                  var tagL = _step63.value;
+                for (_iterator67.s(); !(_step67 = _iterator67.n()).done;) {
+                  var tagL = _step67.value;
 
                   if (tagL.tag.advertiser == "solex-bc") {
-                    var _iterator64 = _createForOfIteratorHelper(tagL.tag.subids),
-                        _step64;
+                    var _iterator68 = _createForOfIteratorHelper(tagL.tag.subids),
+                        _step68;
 
                     try {
-                      for (_iterator64.s(); !(_step64 = _iterator64.n()).done;) {
-                        var tagSub = _step64.value;
+                      for (_iterator68.s(); !(_step68 = _iterator68.n()).done;) {
+                        var tagSub = _step68.value;
 
                         if (tagSub.filterTag == "Contains") {
                           _this8.allStats.map(function (stat) {
@@ -30515,16 +31536,16 @@
                         }
                       }
                     } catch (err) {
-                      _iterator64.e(err);
+                      _iterator68.e(err);
                     } finally {
-                      _iterator64.f();
+                      _iterator68.f();
                     }
                   }
                 }
               } catch (err) {
-                _iterator63.e(err);
+                _iterator67.e(err);
               } finally {
-                _iterator63.f();
+                _iterator67.f();
               }
 
               return _this8.allStats;
@@ -30555,18 +31576,18 @@
               return r;
             }, []);
 
-            var _iterator65 = _createForOfIteratorHelper(groupData),
-                _step65;
+            var _iterator69 = _createForOfIteratorHelper(groupData),
+                _step69;
 
             try {
-              for (_iterator65.s(); !(_step65 = _iterator65.n()).done;) {
-                var group = _step65.value;
+              for (_iterator69.s(); !(_step69 = _iterator69.n()).done;) {
+                var group = _step69.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator65.e(err);
+              _iterator69.e(err);
             } finally {
-              _iterator65.f();
+              _iterator69.f();
             }
 
             this.rows = groupData;
@@ -30600,18 +31621,18 @@
               return r;
             }, []);
 
-            var _iterator66 = _createForOfIteratorHelper(groupData),
-                _step66;
+            var _iterator70 = _createForOfIteratorHelper(groupData),
+                _step70;
 
             try {
-              for (_iterator66.s(); !(_step66 = _iterator66.n()).done;) {
-                var group = _step66.value;
+              for (_iterator70.s(); !(_step70 = _iterator70.n()).done;) {
+                var group = _step70.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator66.e(err);
+              _iterator70.e(err);
             } finally {
-              _iterator66.f();
+              _iterator70.f();
             }
 
             this.rows = groupData;
@@ -30645,18 +31666,20 @@
               return r;
             }, []);
 
-            var _iterator67 = _createForOfIteratorHelper(groupData),
-                _step67;
+            var _iterator71 = _createForOfIteratorHelper(groupData),
+                _step71;
 
             try {
-              for (_iterator67.s(); !(_step67 = _iterator67.n()).done;) {
-                var group = _step67.value;
+              for (_iterator71.s(); !(_step71 = _iterator71.n()).done;) {
+                var group = _step71.value;
                 group.split = group.split / group.counter;
+                group.subReportingForDate = this.groupDateForPublisher(group);
+                group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
             } catch (err) {
-              _iterator67.e(err);
+              _iterator71.e(err);
             } finally {
-              _iterator67.f();
+              _iterator71.f();
             }
 
             this.rows = groupData;
@@ -30675,8 +31698,59 @@
             this.cdr.markForCheck();
           }
         }, {
+          key: "groupDateForPublisher",
+          value: function groupDateForPublisher(group) {
+            var helperSummary = {};
+            var groupData = this.allStats.filter(function (oStat) {
+              return oStat.publisher === group.publisher;
+            }).reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
+                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator72 = _createForOfIteratorHelper(groupData),
+                _step72;
+
+            try {
+              for (_iterator72.s(); !(_step72 = _iterator72.n()).done;) {
+                var group = _step72.value;
+                group.split = group.split / group.counter;
+                group.followon = group.followon / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator72.e(err);
+            } finally {
+              _iterator72.f();
+            }
+
+            return groupData;
+          }
+        }, {
           key: "groupHandle",
           value: function groupHandle(event) {
+            this.groupType = event.value;
+
             if (event.value == "date") {
               this.groupDate();
             } else if (event.value == "publisher") {
@@ -30701,7 +31775,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee45() {
-              var response, _iterator68, _step68, tagL, _iterator71, _step71, tagSub, sorted, _multiGroupBy5, groupedItems, _reformattedArray10, item, elm, obj, pulisherArr, _i8, _reformattedArray11, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator69, _step69, resVal, _stackedArr5, _iterator70, _step70, _loop11;
+              var response, _iterator73, _step73, tagL, _iterator76, _step76, tagSub, sorted, _multiGroupBy5, groupedItems, _reformattedArray10, item, elm, obj, pulisherArr, _i8, _reformattedArray11, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator74, _step74, resVal, _stackedArr5, _iterator75, _step75, _loop11;
 
               return regeneratorRuntime.wrap(function _callee45$(_context45) {
                 while (1) {
@@ -30718,18 +31792,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator68 = _createForOfIteratorHelper(this.tagList);
+                      _iterator73 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator68.s(); !(_step68 = _iterator68.n()).done;) {
-                          tagL = _step68.value;
+                        for (_iterator73.s(); !(_step73 = _iterator73.n()).done;) {
+                          tagL = _step73.value;
 
                           if (tagL.tag.advertiser == "solex-bc") {
-                            _iterator71 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator76 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator71.s(); !(_step71 = _iterator71.n()).done;) {
-                                tagSub = _step71.value;
+                              for (_iterator76.s(); !(_step76 = _iterator76.n()).done;) {
+                                tagSub = _step76.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -30762,16 +31836,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator71.e(err);
+                              _iterator76.e(err);
                             } finally {
-                              _iterator71.f();
+                              _iterator76.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator68.e(err);
+                        _iterator73.e(err);
                       } finally {
-                        _iterator68.f();
+                        _iterator73.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -30842,34 +31916,34 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator69 = _createForOfIteratorHelper(resultChart);
+                      _iterator74 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator69.s(); !(_step69 = _iterator69.n()).done;) {
-                          resVal = _step69.value;
+                        for (_iterator74.s(); !(_step74 = _iterator74.n()).done;) {
+                          resVal = _step74.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator69.e(err);
+                        _iterator74.e(err);
                       } finally {
-                        _iterator69.f();
+                        _iterator74.f();
                       }
 
                       _stackedArr5 = [];
-                      _iterator70 = _createForOfIteratorHelper(unique);
+                      _iterator75 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop11 = function _loop11() {
-                          var u = _step70.value;
+                          var u = _step75.value;
                           var subStackedArr = [];
 
-                          var _iterator72 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step72;
+                          var _iterator77 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step77;
 
                           try {
                             var _loop12 = function _loop12() {
-                              var date = _step72.value;
+                              var date = _step77.value;
 
                               var filterLen = _reformattedArray10.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
@@ -30882,13 +31956,13 @@
                               }
                             };
 
-                            for (_iterator72.s(); !(_step72 = _iterator72.n()).done;) {
+                            for (_iterator77.s(); !(_step77 = _iterator77.n()).done;) {
                               _loop12();
                             }
                           } catch (err) {
-                            _iterator72.e(err);
+                            _iterator77.e(err);
                           } finally {
-                            _iterator72.f();
+                            _iterator77.f();
                           }
 
                           var obj = {};
@@ -30897,13 +31971,13 @@
                           _stackedArr5.push(obj);
                         };
 
-                        for (_iterator70.s(); !(_step70 = _iterator70.n()).done;) {
+                        for (_iterator75.s(); !(_step75 = _iterator75.n()).done;) {
                           _loop11();
                         }
                       } catch (err) {
-                        _iterator70.e(err);
+                        _iterator75.e(err);
                       } finally {
-                        _iterator70.f();
+                        _iterator75.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr5;
@@ -30989,9 +32063,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 41,
-        vars: 21,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "selectionChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "split", 3, "minWidth"], ["ngx-datatable-header-template", ""], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "searches"], ["name", "clicks"]],
+        decls: 40,
+        vars: 22,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "ngModel", "selectionChange", "ngModelChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "split", 3, "minWidth"], ["ngx-datatable-header-template", ""], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], ["class", "table-responsive", "style", "padding-left: 36px;", 4, "ngIf"], ["style", "padding-left: 35px", 4, "ngIf"], [1, "table-responsive", 2, "padding-left", "36px"], [1, "table", "table-hover"], [4, "ngFor", "ngForOf"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "searches"], ["name", "clicks"]],
         template: function SolexBcComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -31022,6 +32096,8 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("selectionChange", function SolexBcComponent_Template_mat_select_selectionChange_8_listener($event) {
               return ctx.groupHandle($event);
+            })("ngModelChange", function SolexBcComponent_Template_mat_select_ngModelChange_8_listener($event) {
+              return ctx.groupType = $event;
             });
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "mat-option", 7);
@@ -31058,61 +32134,61 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable", 11, 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13, 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function SolexBcComponent_Template_ngx_datatable_row_detail_toggle_19_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, SolexBcComponent_ng_template_21_Template, 6, 0, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, SolexBcComponent_ng_template_20_Template, 2, 2, "ng-template", 14);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, SolexBcComponent_ng_template_23_Template, 1, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, SolexBcComponent_ng_template_22_Template, 1, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, SolexBcComponent_ngx_datatable_column_24_Template, 3, 1, "ngx-datatable-column", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, SolexBcComponent_ngx_datatable_column_23_Template, 3, 1, "ngx-datatable-column", 17);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, SolexBcComponent_ngx_datatable_column_25_Template, 3, 0, "ngx-datatable-column", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, SolexBcComponent_ngx_datatable_column_24_Template, 3, 0, "ngx-datatable-column", 18);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, SolexBcComponent_ngx_datatable_column_26_Template, 3, 1, "ngx-datatable-column", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, SolexBcComponent_ngx_datatable_column_25_Template, 3, 1, "ngx-datatable-column", 19);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, SolexBcComponent_ngx_datatable_column_26_Template, 3, 0, "ngx-datatable-column", 20);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, SolexBcComponent_ngx_datatable_column_27_Template, 3, 0, "ngx-datatable-column", 21);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, SolexBcComponent_ngx_datatable_column_28_Template, 3, 0, "ngx-datatable-column", 22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "ngx-datatable-column", 22);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](29, "ngx-datatable-column", 23);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, SolexBcComponent_ng_template_29_Template, 1, 0, "ng-template", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, SolexBcComponent_ng_template_30_Template, 1, 0, "ng-template", 24);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, SolexBcComponent_ng_template_31_Template, 4, 6, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, SolexBcComponent_ng_template_30_Template, 4, 6, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](32, "ngx-datatable-column", 25);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "ngx-datatable-column", 24);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, SolexBcComponent_ng_template_33_Template, 1, 0, "ng-template", 24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, SolexBcComponent_ng_template_32_Template, 1, 0, "ng-template", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, SolexBcComponent_ng_template_34_Template, 3, 4, "ng-template", 17);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "ngx-datatable-column", 26);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, SolexBcComponent_ng_template_36_Template, 1, 0, "ng-template", 24);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, SolexBcComponent_ng_template_37_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, SolexBcComponent_ng_template_33_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "ngx-datatable-column", 27);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "ngx-datatable-column", 25);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, SolexBcComponent_ng_template_39_Template, 1, 0, "ng-template", 24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, SolexBcComponent_ng_template_35_Template, 1, 0, "ng-template", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, SolexBcComponent_ng_template_40_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, SolexBcComponent_ng_template_36_Template, 3, 4, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "ngx-datatable-column", 26);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, SolexBcComponent_ng_template_38_Template, 1, 0, "ng-template", 23);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, SolexBcComponent_ng_template_39_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -31128,15 +32204,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.groupType);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", ctx.groupType === "publisher" ? ctx.getDetailRowHeight : 130);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 30)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
 
@@ -31165,8 +32245,8 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 35);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__["SummaryMetricsComponent"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_material_core__WEBPACK_IMPORTED_MODULE_11__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__["SummaryMetricsComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL3NvbGV4LWJjL3NvbGV4LWJjLmNvbXBvbmVudC5zY3NzIn0= */"]
       });
       /*@__PURE__*/
@@ -31286,25 +32366,31 @@
       /* harmony import */
 
 
-      var _angular_material_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/material/core */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
       "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
       /* harmony import */
 
 
-      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
       "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
 
@@ -31312,7 +32398,7 @@
 
       function System1Component_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 29);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 28);
         }
 
         if (rf & 2) {
@@ -31324,7 +32410,7 @@
 
       function System1Component_app_summary_metrics_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 30);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 29);
         }
 
         if (rf & 2) {
@@ -31334,9 +32420,127 @@
         }
       }
 
-      function System1Component_ng_template_21_Template(rf, ctx) {
+      function System1Component_ng_template_20_div_0_tr_13_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](6, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](9, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](12, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var subDateData_r24 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](3, 4, subDateData_r24.date));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](6, 6, subDateData_r24.publisherNet, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](9, 9, subDateData_r24.profit, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](12, 12, subDateData_r24.revenue, "USD"));
+        }
+      }
+
+      function System1Component_ng_template_20_div_0_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 32);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "table", 33);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "thead");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Publisher Net");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Profit");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "Revenue");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "tbody");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, System1Component_ng_template_20_div_0_tr_13_Template, 13, 15, "tr", 34);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var row_r19 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().row;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", row_r19.subReportingForDate);
+        }
+      }
+
+      function System1Component_ng_template_20_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 35);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -31358,39 +32562,57 @@
         }
       }
 
-      function System1Component_ng_template_23_Template(rf, ctx) {
+      function System1Component_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
-          var _r25 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, System1Component_ng_template_20_div_0_Template, 14, 1, "div", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 32);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ng_template_20_div_1_Template, 6, 0, "div", 31);
+        }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function System1Component_ng_template_23_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r25);
+        if (rf & 2) {
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-            var row_r22 = ctx.row;
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType === "publisher");
 
-            var ctx_r24 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            return ctx_r24.toggleExpandRow(row_r22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType !== "publisher");
+        }
+      }
+
+      function System1Component_ng_template_22_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r29 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 36);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function System1Component_ng_template_22_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r29);
+
+            var row_r26 = ctx.row;
+
+            var ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r28.toggleExpandRow(row_r26);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r23 = ctx.expanded;
+          var expanded_r27 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r23)("datatable-icon-down", expanded_r23);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r27)("datatable-icon-down", expanded_r27);
         }
       }
 
-      function System1Component_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_23_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function System1Component_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_23_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31402,21 +32624,21 @@
         }
 
         if (rf & 2) {
-          var value_r29 = ctx.value;
+          var value_r33 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r29));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r33));
         }
       }
 
-      function System1Component_ngx_datatable_column_24_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_23_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 33);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 37);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_23_ng_template_1_Template, 1, 0, "ng-template", 24);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_24_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_23_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -31426,49 +32648,13 @@
         }
       }
 
-      function System1Component_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
         }
       }
 
-      function System1Component_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r33 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r33);
-        }
-      }
-
-      function System1Component_ngx_datatable_column_25_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 34);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 25);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-      }
-
-      function System1Component_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
-        }
-      }
-
-      function System1Component_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31486,29 +32672,25 @@
         }
       }
 
-      function System1Component_ngx_datatable_column_26_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_24_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 35);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 38);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 24);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_26_ng_template_2_Template, 2, 1, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_24_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
-
-        if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
-        }
       }
 
-      function System1Component_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Device ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
-      function System1Component_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31526,13 +32708,13 @@
         }
       }
 
-      function System1Component_ngx_datatable_column_27_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_25_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 36);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 39);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 24);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_27_ng_template_2_Template, 2, 1, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -31542,19 +32724,17 @@
         }
       }
 
-      function System1Component_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Device ");
         }
       }
 
-      function System1Component_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -31564,29 +32744,33 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r45));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r45);
         }
       }
 
-      function System1Component_ngx_datatable_column_28_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 37);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 40);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 24);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_26_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
-      }
 
-      function System1Component_ngx_datatable_column_29_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
         }
       }
 
-      function System1Component_ngx_datatable_column_29_ng_template_2_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+        }
+      }
+
+      function System1Component_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31606,25 +32790,63 @@
         }
       }
 
-      function System1Component_ngx_datatable_column_29_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_27_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 38);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 41);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_29_ng_template_1_Template, 1, 0, "ng-template", 25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 24);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_29_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function System1Component_ng_template_31_Template(rf, ctx) {
+      function System1Component_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+        }
+      }
+
+      function System1Component_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r53 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r53));
+        }
+      }
+
+      function System1Component_ngx_datatable_column_28_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 42);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, System1Component_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 24);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, System1Component_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function System1Component_ng_template_30_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
         }
       }
 
-      function System1Component_ng_template_32_Template(rf, ctx) {
+      function System1Component_ng_template_31_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31638,73 +32860,21 @@
         }
 
         if (rf & 2) {
-          var value_r51 = ctx.value;
+          var value_r55 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r51) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r55) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
         }
       }
 
-      function System1Component_ng_template_34_Template(rf, ctx) {
+      function System1Component_ng_template_33_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
         }
       }
 
-      function System1Component_ng_template_35_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r53 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r53, "USD"));
-        }
-      }
-
-      function System1Component_ng_template_37_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
-        }
-      }
-
-      function System1Component_ng_template_38_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r55 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r55, "USD"));
-        }
-      }
-
-      function System1Component_ng_template_40_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
-        }
-      }
-
-      function System1Component_ng_template_41_Template(rf, ctx) {
+      function System1Component_ng_template_34_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -31721,6 +32891,58 @@
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r57, "USD"));
+        }
+      }
+
+      function System1Component_ng_template_36_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
+        }
+      }
+
+      function System1Component_ng_template_37_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r59 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r59, "USD"));
+        }
+      }
+
+      function System1Component_ng_template_39_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function System1Component_ng_template_40_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r61 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r61, "USD"));
         }
       }
 
@@ -31742,6 +32964,7 @@
           this.groupSubidShowFlag = false;
           this.expanded = {};
           this.tagList = [];
+          this.groupType = '';
           this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
         }
 
@@ -31811,9 +33034,10 @@
                       this.groupPublishFlag = false;
                       this.groupDateShowFlag = false;
                       this.groupSubidShowFlag = false;
+                      this.groupType = '';
                       this.refreshTable();
 
-                    case 14:
+                    case 15:
                     case "end":
                       return _context47.stop();
                   }
@@ -31825,7 +33049,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee48() {
-              var response, _iterator73, _step73, tagL, _iterator76, _step76, tagSub, sorted, _multiGroupBy6, groupedItems, _reformattedArray12, item, elm, obj, pulisherArr, _i9, _reformattedArray13, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator74, _step74, resVal, _stackedArr6, _iterator75, _step75, _loop13;
+              var response, _iterator78, _step78, tagL, _iterator81, _step81, tagSub, sorted, _multiGroupBy6, groupedItems, _reformattedArray12, item, elm, obj, pulisherArr, _i9, _reformattedArray13, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator79, _step79, resVal, _stackedArr6, _iterator80, _step80, _loop13;
 
               return regeneratorRuntime.wrap(function _callee48$(_context48) {
                 while (1) {
@@ -31843,18 +33067,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator73 = _createForOfIteratorHelper(this.tagList);
+                      _iterator78 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator73.s(); !(_step73 = _iterator73.n()).done;) {
-                          tagL = _step73.value;
+                        for (_iterator78.s(); !(_step78 = _iterator78.n()).done;) {
+                          tagL = _step78.value;
 
                           if (tagL.tag.advertiser == "system1") {
-                            _iterator76 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator81 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator76.s(); !(_step76 = _iterator76.n()).done;) {
-                                tagSub = _step76.value;
+                              for (_iterator81.s(); !(_step81 = _iterator81.n()).done;) {
+                                tagSub = _step81.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -31887,16 +33111,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator76.e(err);
+                              _iterator81.e(err);
                             } finally {
-                              _iterator76.f();
+                              _iterator81.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator73.e(err);
+                        _iterator78.e(err);
                       } finally {
-                        _iterator73.f();
+                        _iterator78.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -31967,34 +33191,34 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator74 = _createForOfIteratorHelper(resultChart);
+                      _iterator79 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator74.s(); !(_step74 = _iterator74.n()).done;) {
-                          resVal = _step74.value;
+                        for (_iterator79.s(); !(_step79 = _iterator79.n()).done;) {
+                          resVal = _step79.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator74.e(err);
+                        _iterator79.e(err);
                       } finally {
-                        _iterator74.f();
+                        _iterator79.f();
                       }
 
                       _stackedArr6 = [];
-                      _iterator75 = _createForOfIteratorHelper(unique);
+                      _iterator80 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop13 = function _loop13() {
-                          var u = _step75.value;
+                          var u = _step80.value;
                           var subStackedArr = [];
 
-                          var _iterator77 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step77;
+                          var _iterator82 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step82;
 
                           try {
                             var _loop14 = function _loop14() {
-                              var date = _step77.value;
+                              var date = _step82.value;
 
                               var filterLen = _reformattedArray12.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
@@ -32007,13 +33231,13 @@
                               }
                             };
 
-                            for (_iterator77.s(); !(_step77 = _iterator77.n()).done;) {
+                            for (_iterator82.s(); !(_step82 = _iterator82.n()).done;) {
                               _loop14();
                             }
                           } catch (err) {
-                            _iterator77.e(err);
+                            _iterator82.e(err);
                           } finally {
-                            _iterator77.f();
+                            _iterator82.f();
                           }
 
                           var obj = {};
@@ -32022,13 +33246,13 @@
                           _stackedArr6.push(obj);
                         };
 
-                        for (_iterator75.s(); !(_step75 = _iterator75.n()).done;) {
+                        for (_iterator80.s(); !(_step80 = _iterator80.n()).done;) {
                           _loop13();
                         }
                       } catch (err) {
-                        _iterator75.e(err);
+                        _iterator80.e(err);
                       } finally {
-                        _iterator75.f();
+                        _iterator80.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr6;
@@ -32055,7 +33279,7 @@
           key: "getAllSystem1Stats",
           value: function getAllSystem1Stats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee49() {
-              var response, _iterator78, _step78, tagL, _iterator79, _step79, tagSub;
+              var response, _iterator83, _step83, tagL, _iterator84, _step84, tagSub;
 
               return regeneratorRuntime.wrap(function _callee49$(_context49) {
                 while (1) {
@@ -32072,18 +33296,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator78 = _createForOfIteratorHelper(this.tagList);
+                      _iterator83 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator78.s(); !(_step78 = _iterator78.n()).done;) {
-                          tagL = _step78.value;
+                        for (_iterator83.s(); !(_step83 = _iterator83.n()).done;) {
+                          tagL = _step83.value;
 
                           if (tagL.tag.advertiser == "system1") {
-                            _iterator79 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator84 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator79.s(); !(_step79 = _iterator79.n()).done;) {
-                                tagSub = _step79.value;
+                              for (_iterator84.s(); !(_step84 = _iterator84.n()).done;) {
+                                tagSub = _step84.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -32116,16 +33340,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator79.e(err);
+                              _iterator84.e(err);
                             } finally {
-                              _iterator79.f();
+                              _iterator84.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator78.e(err);
+                        _iterator83.e(err);
                       } finally {
-                        _iterator78.f();
+                        _iterator83.f();
                       }
 
                       return _context49.abrupt("return", this.allStats);
@@ -32188,6 +33412,8 @@
         }, {
           key: "groupHandle",
           value: function groupHandle(event) {
+            this.groupType = event.value;
+
             if (event.value == "date") {
               this.groupDate();
             } else if (event.value == "publisher") {
@@ -32232,18 +33458,18 @@
               return r;
             }, []);
 
-            var _iterator80 = _createForOfIteratorHelper(groupData),
-                _step80;
+            var _iterator85 = _createForOfIteratorHelper(groupData),
+                _step85;
 
             try {
-              for (_iterator80.s(); !(_step80 = _iterator80.n()).done;) {
-                var group = _step80.value;
+              for (_iterator85.s(); !(_step85 = _iterator85.n()).done;) {
+                var group = _step85.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator80.e(err);
+              _iterator85.e(err);
             } finally {
-              _iterator80.f();
+              _iterator85.f();
             }
 
             this.rows = groupData;
@@ -32277,18 +33503,18 @@
               return r;
             }, []);
 
-            var _iterator81 = _createForOfIteratorHelper(groupData),
-                _step81;
+            var _iterator86 = _createForOfIteratorHelper(groupData),
+                _step86;
 
             try {
-              for (_iterator81.s(); !(_step81 = _iterator81.n()).done;) {
-                var group = _step81.value;
+              for (_iterator86.s(); !(_step86 = _iterator86.n()).done;) {
+                var group = _step86.value;
                 group.split = group.split / group.counter;
               }
             } catch (err) {
-              _iterator81.e(err);
+              _iterator86.e(err);
             } finally {
-              _iterator81.f();
+              _iterator86.f();
             }
 
             this.rows = groupData;
@@ -32322,18 +33548,20 @@
               return r;
             }, []);
 
-            var _iterator82 = _createForOfIteratorHelper(groupData),
-                _step82;
+            var _iterator87 = _createForOfIteratorHelper(groupData),
+                _step87;
 
             try {
-              for (_iterator82.s(); !(_step82 = _iterator82.n()).done;) {
-                var group = _step82.value;
+              for (_iterator87.s(); !(_step87 = _iterator87.n()).done;) {
+                var group = _step87.value;
                 group.split = group.split / group.counter;
+                group.subReportingForDate = this.groupDateForPublisher(group);
+                group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
             } catch (err) {
-              _iterator82.e(err);
+              _iterator87.e(err);
             } finally {
-              _iterator82.f();
+              _iterator87.f();
             }
 
             this.rows = groupData;
@@ -32341,6 +33569,66 @@
             this.groupDateShowFlag = false;
             this.groupSubidShowFlag = false;
             this.cdr.markForCheck();
+          }
+        }, {
+          key: "getDetailRowHeight",
+          value: function getDetailRowHeight(row, index) {
+            var height;
+
+            if (row) {
+              height = row.detailHeight;
+            }
+
+            return height;
+          }
+        }, {
+          key: "groupDateForPublisher",
+          value: function groupDateForPublisher(group) {
+            var helperSummary = {};
+            var groupData = this.allStats.filter(function (oStat) {
+              return oStat.publisher === group.publisher;
+            }).reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
+                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator88 = _createForOfIteratorHelper(groupData),
+                _step88;
+
+            try {
+              for (_iterator88.s(); !(_step88 = _iterator88.n()).done;) {
+                var group = _step88.value;
+                group.split = group.split / group.counter;
+                group.followon = group.followon / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator88.e(err);
+            } finally {
+              _iterator88.f();
+            }
+
+            return groupData;
           }
         }, {
           key: "toggleExpandRow",
@@ -32419,9 +33707,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 42,
-        vars: 22,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "selectionChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "device", 3, "minWidth", 4, "ngIf"], ["name", "Searches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "split", 3, "minWidth"], ["ngx-datatable-header-template", ""], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "device", 3, "minWidth"], ["name", "Searches"], ["name", "clicks"]],
+        decls: 41,
+        vars: 23,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "ngModel", "selectionChange", "ngModelChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "30px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "device", 3, "minWidth", 4, "ngIf"], ["name", "Searches", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "split", 3, "minWidth"], ["ngx-datatable-header-template", ""], ["name", "publisherNet"], ["name", "profit"], ["name", "revenue"], [3, "chartData"], [3, "summaryMetricsData"], ["class", "table-responsive", "style", "padding-left: 36px;", 4, "ngIf"], ["style", "padding-left: 35px", 4, "ngIf"], [1, "table-responsive", 2, "padding-left", "36px"], [1, "table", "table-hover"], [4, "ngFor", "ngForOf"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "device", 3, "minWidth"], ["name", "Searches"], ["name", "clicks"]],
         template: function System1Component_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -32452,6 +33740,8 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("selectionChange", function System1Component_Template_mat_select_selectionChange_8_listener($event) {
               return ctx.groupHandle($event);
+            })("ngModelChange", function System1Component_Template_mat_select_ngModelChange_8_listener($event) {
+              return ctx.groupType = $event;
             });
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "mat-option", 7);
@@ -32488,63 +33778,63 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable", 11, 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13, 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function System1Component_Template_ngx_datatable_row_detail_toggle_19_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, System1Component_ng_template_21_Template, 6, 0, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, System1Component_ng_template_20_Template, 2, 2, "ng-template", 14);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, System1Component_ng_template_23_Template, 1, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, System1Component_ng_template_22_Template, 1, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, System1Component_ngx_datatable_column_24_Template, 3, 1, "ngx-datatable-column", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, System1Component_ngx_datatable_column_23_Template, 3, 1, "ngx-datatable-column", 17);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, System1Component_ngx_datatable_column_25_Template, 3, 0, "ngx-datatable-column", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, System1Component_ngx_datatable_column_24_Template, 3, 0, "ngx-datatable-column", 18);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, System1Component_ngx_datatable_column_25_Template, 3, 1, "ngx-datatable-column", 19);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, System1Component_ngx_datatable_column_26_Template, 3, 1, "ngx-datatable-column", 20);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, System1Component_ngx_datatable_column_27_Template, 3, 1, "ngx-datatable-column", 21);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, System1Component_ngx_datatable_column_27_Template, 3, 0, "ngx-datatable-column", 21);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, System1Component_ngx_datatable_column_28_Template, 3, 0, "ngx-datatable-column", 22);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, System1Component_ngx_datatable_column_29_Template, 3, 0, "ngx-datatable-column", 23);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](29, "ngx-datatable-column", 23);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](30, "ngx-datatable-column", 24);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, System1Component_ng_template_30_Template, 1, 0, "ng-template", 24);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, System1Component_ng_template_31_Template, 1, 0, "ng-template", 25);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, System1Component_ng_template_32_Template, 4, 6, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, System1Component_ng_template_31_Template, 4, 6, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](33, "ngx-datatable-column", 26);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](32, "ngx-datatable-column", 25);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, System1Component_ng_template_34_Template, 1, 0, "ng-template", 25);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, System1Component_ng_template_33_Template, 1, 0, "ng-template", 24);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, System1Component_ng_template_35_Template, 3, 4, "ng-template", 17);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "ngx-datatable-column", 27);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, System1Component_ng_template_37_Template, 1, 0, "ng-template", 25);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, System1Component_ng_template_38_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, System1Component_ng_template_34_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](39, "ngx-datatable-column", 28);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "ngx-datatable-column", 26);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, System1Component_ng_template_40_Template, 1, 0, "ng-template", 25);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, System1Component_ng_template_36_Template, 1, 0, "ng-template", 24);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](41, System1Component_ng_template_41_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, System1Component_ng_template_37_Template, 3, 4, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "ngx-datatable-column", 27);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, System1Component_ng_template_39_Template, 1, 0, "ng-template", 24);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, System1Component_ng_template_40_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -32560,15 +33850,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.groupType);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", ctx.groupType === "publisher" ? ctx.getDetailRowHeight : 130);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 30)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
 
@@ -32601,8 +33895,8 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 35);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__["SummaryMetricsComponent"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_material_core__WEBPACK_IMPORTED_MODULE_11__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__["SummaryMetricsComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL3N5c3RlbTEvc3lzdGVtMS5jb21wb25lbnQuc2NzcyJ9 */"]
       });
       /*@__PURE__*/
@@ -33310,25 +34604,31 @@
       /* harmony import */
 
 
-      var _angular_material_core__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/material/core */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
       "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
       /* harmony import */
 
 
-      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
       "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
 
@@ -33336,7 +34636,7 @@
 
       function VerizonDirectComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 35);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 34);
         }
 
         if (rf & 2) {
@@ -33348,7 +34648,7 @@
 
       function VerizonDirectComponent_app_summary_metrics_2_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 36);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 35);
         }
 
         if (rf & 2) {
@@ -33358,9 +34658,127 @@
         }
       }
 
-      function VerizonDirectComponent_ng_template_21_Template(rf, ctx) {
+      function VerizonDirectComponent_ng_template_20_div_0_tr_13_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 37);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](6, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](9, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](12, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var subDateData_r30 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](3, 4, subDateData_r30.date));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](6, 6, subDateData_r30.publisherNet, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](9, 9, subDateData_r30.profit, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](12, 12, subDateData_r30.revenue, "USD"));
+        }
+      }
+
+      function VerizonDirectComponent_ng_template_20_div_0_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 38);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "table", 39);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "thead");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Publisher Net");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Profit");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "Revenue");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "tbody");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, VerizonDirectComponent_ng_template_20_div_0_tr_13_Template, 13, 15, "tr", 40);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var row_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().row;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](13);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", row_r25.subReportingForDate);
+        }
+      }
+
+      function VerizonDirectComponent_ng_template_20_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 41);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
 
@@ -33382,39 +34800,57 @@
         }
       }
 
-      function VerizonDirectComponent_ng_template_23_Template(rf, ctx) {
+      function VerizonDirectComponent_ng_template_20_Template(rf, ctx) {
         if (rf & 1) {
-          var _r31 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, VerizonDirectComponent_ng_template_20_div_0_Template, 14, 1, "div", 36);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 38);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ng_template_20_div_1_Template, 6, 0, "div", 37);
+        }
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VerizonDirectComponent_ng_template_23_Template_a_click_0_listener() {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r31);
+        if (rf & 2) {
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
 
-            var row_r28 = ctx.row;
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType === "publisher");
 
-            var ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-            return ctx_r30.toggleExpandRow(row_r28);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType !== "publisher");
+        }
+      }
+
+      function VerizonDirectComponent_ng_template_22_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r35 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 42);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VerizonDirectComponent_ng_template_22_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r35);
+
+            var row_r32 = ctx.row;
+
+            var ctx_r34 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r34.toggleExpandRow(row_r32);
           });
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
-          var expanded_r29 = ctx.expanded;
+          var expanded_r33 = ctx.expanded;
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r29)("datatable-icon-down", expanded_r29);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r33)("datatable-icon-down", expanded_r33);
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_23_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_23_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33426,21 +34862,21 @@
         }
 
         if (rf & 2) {
-          var value_r35 = ctx.value;
+          var value_r39 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r35));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r39));
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_24_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_23_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 39);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 43);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_23_ng_template_1_Template, 1, 0, "ng-template", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_24_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_23_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -33450,49 +34886,13 @@
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r39 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r39);
-        }
-      }
-
-      function VerizonDirectComponent_ngx_datatable_column_25_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 40);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 31);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 17);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-      }
-
-      function VerizonDirectComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
-        }
-      }
-
-      function VerizonDirectComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33510,35 +34910,29 @@
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_26_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_24_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 41);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 44);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_26_ng_template_2_Template, 2, 1, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_24_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
-
-        if (rf & 2) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
-        }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -33548,29 +34942,33 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r47));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r47);
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_27_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_25_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 42);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 45);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
-      }
 
-      function VerizonDirectComponent_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Bid Searches ");
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+        }
+      }
+
+      function VerizonDirectComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33590,25 +34988,25 @@
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_28_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_26_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 43);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 46);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_26_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_29_ng_template_1_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Bid Searches Result ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Bid Searches ");
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_29_ng_template_2_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33628,25 +35026,25 @@
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_29_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_27_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 44);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 47);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_29_ng_template_1_Template, 1, 0, "ng-template", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_29_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_30_ng_template_1_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Bid Searches Result ");
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_30_ng_template_2_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33666,25 +35064,25 @@
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_30_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_28_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 45);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 48);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_30_ng_template_1_Template, 1, 0, "ng-template", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_30_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_31_ng_template_1_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_29_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Coverage ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_31_ng_template_2_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_29_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33704,25 +35102,25 @@
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_31_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_29_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 46);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 49);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_31_ng_template_1_Template, 1, 0, "ng-template", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_29_ng_template_1_Template, 1, 0, "ng-template", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_31_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_29_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_32_ng_template_1_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_30_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Coverage ");
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_32_ng_template_2_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_30_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33742,25 +35140,25 @@
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_32_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_30_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 47);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 50);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_32_ng_template_1_Template, 1, 0, "ng-template", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_30_ng_template_1_Template, 1, 0, "ng-template", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_32_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_30_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_33_ng_template_1_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_31_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_33_ng_template_2_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_31_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33780,25 +35178,25 @@
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_33_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_31_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 48);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 51);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_33_ng_template_1_Template, 1, 0, "ng-template", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_31_ng_template_1_Template, 1, 0, "ng-template", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_33_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_31_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_34_ng_template_1_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_32_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " RN ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_34_ng_template_2_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_32_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33818,25 +35216,25 @@
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_34_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_32_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 49);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 52);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_34_ng_template_1_Template, 1, 0, "ng-template", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_32_ng_template_1_Template, 1, 0, "ng-template", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_34_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_32_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_35_ng_template_1_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_33_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " TqScore ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " RN ");
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_35_ng_template_2_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_33_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33856,57 +35254,31 @@
         }
       }
 
-      function VerizonDirectComponent_ngx_datatable_column_35_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_33_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 50);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 53);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_35_ng_template_1_Template, 1, 0, "ng-template", 31);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_33_ng_template_1_Template, 1, 0, "ng-template", 30);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_35_ng_template_2_Template, 3, 3, "ng-template", 17);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_33_ng_template_2_Template, 3, 3, "ng-template", 16);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function VerizonDirectComponent_ng_template_37_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_34_ng_template_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " TqScore ");
         }
       }
 
-      function VerizonDirectComponent_ng_template_38_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_34_ng_template_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        }
-
-        if (rf & 2) {
-          var value_r81 = ctx.value;
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r81, "USD"));
-        }
-      }
-
-      function VerizonDirectComponent_ng_template_40_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
-        }
-      }
-
-      function VerizonDirectComponent_ng_template_41_Template(rf, ctx) {
-        if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -33916,17 +35288,29 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r83, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r83));
         }
       }
 
-      function VerizonDirectComponent_ng_template_43_Template(rf, ctx) {
+      function VerizonDirectComponent_ngx_datatable_column_34_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 54);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectComponent_ngx_datatable_column_34_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectComponent_ngx_datatable_column_34_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
       }
 
-      function VerizonDirectComponent_ng_template_44_Template(rf, ctx) {
+      function VerizonDirectComponent_ng_template_36_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
+        }
+      }
+
+      function VerizonDirectComponent_ng_template_37_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33946,13 +35330,65 @@
         }
       }
 
-      function VerizonDirectComponent_ng_template_46_Template(rf, ctx) {
+      function VerizonDirectComponent_ng_template_39_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
+        }
+      }
+
+      function VerizonDirectComponent_ng_template_40_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r87 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r87, "USD"));
+        }
+      }
+
+      function VerizonDirectComponent_ng_template_42_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function VerizonDirectComponent_ng_template_43_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r89 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r89, "USD"));
+        }
+      }
+
+      function VerizonDirectComponent_ng_template_45_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
         }
       }
 
-      function VerizonDirectComponent_ng_template_47_Template(rf, ctx) {
+      function VerizonDirectComponent_ng_template_46_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
 
@@ -33966,11 +35402,11 @@
         }
 
         if (rf & 2) {
-          var value_r87 = ctx.value;
+          var value_r91 = ctx.value;
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r87) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r91) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
         }
       }
 
@@ -33991,6 +35427,7 @@
           this.groupPublishFlag = false;
           this.groupDateShowFlag = false;
           this.groupSubidShowFlag = false;
+          this.groupType = '';
           this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
         }
 
@@ -34064,6 +35501,17 @@
                 }
               }, _callee53, this, [[1, 8]]);
             }));
+          }
+        }, {
+          key: "getDetailRowHeight",
+          value: function getDetailRowHeight(row, index) {
+            var height;
+
+            if (row) {
+              height = row.detailHeight;
+            }
+
+            return height;
           } //Gets the Selected Company from Local Storage
 
         }, {
@@ -34096,9 +35544,13 @@
 
                     case 9:
                       this.summaryMetrics = _context54.sent;
+                      this.groupPublishFlag = false;
+                      this.groupDateShowFlag = false;
+                      this.groupSubidShowFlag = false;
+                      this.groupType = '';
                       this.refreshTable();
 
-                    case 11:
+                    case 15:
                     case "end":
                       return _context54.stop();
                   }
@@ -34142,19 +35594,19 @@
               return r;
             }, []);
 
-            var _iterator83 = _createForOfIteratorHelper(groupData),
-                _step83;
+            var _iterator89 = _createForOfIteratorHelper(groupData),
+                _step89;
 
             try {
-              for (_iterator83.s(); !(_step83 = _iterator83.n()).done;) {
-                var group = _step83.value;
+              for (_iterator89.s(); !(_step89 = _iterator89.n()).done;) {
+                var group = _step89.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator83.e(err);
+              _iterator89.e(err);
             } finally {
-              _iterator83.f();
+              _iterator89.f();
             }
 
             this.rows = groupData;
@@ -34194,19 +35646,19 @@
               return r;
             }, []);
 
-            var _iterator84 = _createForOfIteratorHelper(groupData),
-                _step84;
+            var _iterator90 = _createForOfIteratorHelper(groupData),
+                _step90;
 
             try {
-              for (_iterator84.s(); !(_step84 = _iterator84.n()).done;) {
-                var group = _step84.value;
+              for (_iterator90.s(); !(_step90 = _iterator90.n()).done;) {
+                var group = _step90.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator84.e(err);
+              _iterator90.e(err);
             } finally {
-              _iterator84.f();
+              _iterator90.f();
             }
 
             this.rows = groupData;
@@ -34246,19 +35698,21 @@
               return r;
             }, []);
 
-            var _iterator85 = _createForOfIteratorHelper(groupData),
-                _step85;
+            var _iterator91 = _createForOfIteratorHelper(groupData),
+                _step91;
 
             try {
-              for (_iterator85.s(); !(_step85 = _iterator85.n()).done;) {
-                var group = _step85.value;
+              for (_iterator91.s(); !(_step91 = _iterator91.n()).done;) {
+                var group = _step91.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
+                group.subReportingForDate = this.groupDateForPublisher(group);
+                group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
             } catch (err) {
-              _iterator85.e(err);
+              _iterator91.e(err);
             } finally {
-              _iterator85.f();
+              _iterator91.f();
             }
 
             this.rows = groupData;
@@ -34266,6 +35720,55 @@
             this.groupDateShowFlag = false;
             this.groupSubidShowFlag = false;
             this.cdr.markForCheck();
+          }
+        }, {
+          key: "groupDateForPublisher",
+          value: function groupDateForPublisher(group) {
+            var helperSummary = {};
+            var groupData = this.allStats.filter(function (oStat) {
+              return oStat.publisher === group.publisher;
+            }).reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
+                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator92 = _createForOfIteratorHelper(groupData),
+                _step92;
+
+            try {
+              for (_iterator92.s(); !(_step92 = _iterator92.n()).done;) {
+                var group = _step92.value;
+                group.split = group.split / group.counter;
+                group.followon = group.followon / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator92.e(err);
+            } finally {
+              _iterator92.f();
+            }
+
+            return groupData;
           }
         }, {
           key: "backGroup",
@@ -34300,6 +35803,8 @@
         }, {
           key: "groupHandle",
           value: function groupHandle(event) {
+            this.groupType = event.value;
+
             if (event.value == "date") {
               this.groupDate();
             } else if (event.value == "publisher") {
@@ -34314,7 +35819,7 @@
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee55() {
-              var _iterator86, _step86, tagL, _iterator89, _step89, tagSub, sorted, _multiGroupBy7, groupedItems, _reformattedArray14, item, elm, obj, pulisherArr, _i10, _reformattedArray15, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator87, _step87, resVal, _stackedArr7, _iterator88, _step88, _loop15;
+              var _iterator93, _step93, tagL, _iterator96, _step96, tagSub, sorted, _multiGroupBy7, groupedItems, _reformattedArray14, item, elm, obj, pulisherArr, _i10, _reformattedArray15, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator94, _step94, resVal, _stackedArr7, _iterator95, _step95, _loop15;
 
               return regeneratorRuntime.wrap(function _callee55$(_context55) {
                 while (1) {
@@ -34328,18 +35833,18 @@
                       //   resStat.tagname = "No Tag";
                       // });
                       this.allChartStat = this.allStats;
-                      _iterator86 = _createForOfIteratorHelper(this.tagList);
+                      _iterator93 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator86.s(); !(_step86 = _iterator86.n()).done;) {
-                          tagL = _step86.value;
+                        for (_iterator93.s(); !(_step93 = _iterator93.n()).done;) {
+                          tagL = _step93.value;
 
                           if (tagL.tag.advertiser == "verizon-direct") {
-                            _iterator89 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator96 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator89.s(); !(_step89 = _iterator89.n()).done;) {
-                                tagSub = _step89.value;
+                              for (_iterator96.s(); !(_step96 = _iterator96.n()).done;) {
+                                tagSub = _step96.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -34372,16 +35877,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator89.e(err);
+                              _iterator96.e(err);
                             } finally {
-                              _iterator89.f();
+                              _iterator96.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator86.e(err);
+                        _iterator93.e(err);
                       } finally {
-                        _iterator86.f();
+                        _iterator93.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -34454,34 +35959,34 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator87 = _createForOfIteratorHelper(resultChart);
+                      _iterator94 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator87.s(); !(_step87 = _iterator87.n()).done;) {
-                          resVal = _step87.value;
+                        for (_iterator94.s(); !(_step94 = _iterator94.n()).done;) {
+                          resVal = _step94.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator87.e(err);
+                        _iterator94.e(err);
                       } finally {
-                        _iterator87.f();
+                        _iterator94.f();
                       }
 
                       _stackedArr7 = [];
-                      _iterator88 = _createForOfIteratorHelper(unique);
+                      _iterator95 = _createForOfIteratorHelper(unique);
 
                       try {
                         _loop15 = function _loop15() {
-                          var u = _step88.value;
+                          var u = _step95.value;
                           var subStackedArr = [];
 
-                          var _iterator90 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step90;
+                          var _iterator97 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step97;
 
                           try {
                             var _loop16 = function _loop16() {
-                              var date = _step90.value;
+                              var date = _step97.value;
 
                               var filterLen = _reformattedArray14.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
@@ -34494,13 +35999,13 @@
                               }
                             };
 
-                            for (_iterator90.s(); !(_step90 = _iterator90.n()).done;) {
+                            for (_iterator97.s(); !(_step97 = _iterator97.n()).done;) {
                               _loop16();
                             }
                           } catch (err) {
-                            _iterator90.e(err);
+                            _iterator97.e(err);
                           } finally {
-                            _iterator90.f();
+                            _iterator97.f();
                           }
 
                           var obj = {};
@@ -34509,13 +36014,13 @@
                           _stackedArr7.push(obj);
                         };
 
-                        for (_iterator88.s(); !(_step88 = _iterator88.n()).done;) {
+                        for (_iterator95.s(); !(_step95 = _iterator95.n()).done;) {
                           _loop15();
                         }
                       } catch (err) {
-                        _iterator88.e(err);
+                        _iterator95.e(err);
                       } finally {
-                        _iterator88.f();
+                        _iterator95.f();
                       }
 
                       chartDataValue['revenuePerDay'] = _stackedArr7;
@@ -34541,7 +36046,7 @@
           key: "getAllVerizonStats",
           value: function getAllVerizonStats(company, startDate, endDate) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee56() {
-              var response, _iterator91, _step91, tagL, _iterator92, _step92, tagSub;
+              var response, _iterator98, _step98, tagL, _iterator99, _step99, tagSub;
 
               return regeneratorRuntime.wrap(function _callee56$(_context56) {
                 while (1) {
@@ -34559,18 +36064,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator91 = _createForOfIteratorHelper(this.tagList);
+                      _iterator98 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator91.s(); !(_step91 = _iterator91.n()).done;) {
-                          tagL = _step91.value;
+                        for (_iterator98.s(); !(_step98 = _iterator98.n()).done;) {
+                          tagL = _step98.value;
 
                           if (tagL.tag.advertiser == "verizon-direct") {
-                            _iterator92 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator99 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator92.s(); !(_step92 = _iterator92.n()).done;) {
-                                tagSub = _step92.value;
+                              for (_iterator99.s(); !(_step99 = _iterator99.n()).done;) {
+                                tagSub = _step99.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -34603,16 +36108,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator92.e(err);
+                              _iterator99.e(err);
                             } finally {
-                              _iterator92.f();
+                              _iterator99.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator91.e(err);
+                        _iterator98.e(err);
                       } finally {
-                        _iterator91.f();
+                        _iterator98.f();
                       }
 
                       return _context56.abrupt("return", this.allStats);
@@ -34695,9 +36200,9 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
           }
         },
-        decls: 48,
-        vars: 28,
-        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "selectionChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["myDetailRow", ""], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "biddedSearches", 4, "ngIf"], ["name", "biddedResults", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "coverage", 4, "ngIf"], ["name", "cpc", 4, "ngIf"], ["name", "ctr", 4, "ngIf"], ["name", "rn", 4, "ngIf"], ["name", "tqScore", 4, "ngIf"], ["name", "publisherNet"], ["ngx-datatable-header-template", ""], ["name", "profit"], ["name", "revenue"], ["name", "split", 3, "minWidth"], [3, "chartData"], [3, "summaryMetricsData"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "searches"], ["name", "biddedSearches"], ["name", "biddedResults"], ["name", "clicks"], ["name", "coverage"], ["name", "cpc"], ["name", "ctr"], ["name", "rn"], ["name", "tqScore"]],
+        decls: 47,
+        vars: 29,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "ngModel", "selectionChange", "ngModelChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "biddedSearches", 4, "ngIf"], ["name", "biddedResults", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "coverage", 4, "ngIf"], ["name", "cpc", 4, "ngIf"], ["name", "ctr", 4, "ngIf"], ["name", "rn", 4, "ngIf"], ["name", "tqScore", 4, "ngIf"], ["name", "publisherNet"], ["ngx-datatable-header-template", ""], ["name", "profit"], ["name", "revenue"], ["name", "split", 3, "minWidth"], [3, "chartData"], [3, "summaryMetricsData"], ["class", "table-responsive", "style", "padding-left: 36px;", 4, "ngIf"], ["style", "padding-left: 35px", 4, "ngIf"], [1, "table-responsive", 2, "padding-left", "36px"], [1, "table", "table-hover"], [4, "ngFor", "ngForOf"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "searches"], ["name", "biddedSearches"], ["name", "biddedResults"], ["name", "clicks"], ["name", "coverage"], ["name", "cpc"], ["name", "ctr"], ["name", "rn"], ["name", "tqScore"]],
         template: function VerizonDirectComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
@@ -34728,6 +36233,8 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("selectionChange", function VerizonDirectComponent_Template_mat_select_selectionChange_8_listener($event) {
               return ctx.groupHandle($event);
+            })("ngModelChange", function VerizonDirectComponent_Template_mat_select_ngModelChange_8_listener($event) {
+              return ctx.groupType = $event;
             });
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "mat-option", 7);
@@ -34764,27 +36271,29 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable", 11, 12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13, 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function VerizonDirectComponent_Template_ngx_datatable_row_detail_toggle_19_listener($event) {
               return ctx.onDetailToggle($event);
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, VerizonDirectComponent_ng_template_21_Template, 6, 0, "ng-template", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, VerizonDirectComponent_ng_template_20_Template, 2, 2, "ng-template", 14);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "ngx-datatable-column", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, VerizonDirectComponent_ng_template_23_Template, 1, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, VerizonDirectComponent_ng_template_22_Template, 1, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, VerizonDirectComponent_ngx_datatable_column_24_Template, 3, 1, "ngx-datatable-column", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, VerizonDirectComponent_ngx_datatable_column_23_Template, 3, 1, "ngx-datatable-column", 17);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, VerizonDirectComponent_ngx_datatable_column_25_Template, 3, 0, "ngx-datatable-column", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, VerizonDirectComponent_ngx_datatable_column_24_Template, 3, 0, "ngx-datatable-column", 18);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, VerizonDirectComponent_ngx_datatable_column_26_Template, 3, 1, "ngx-datatable-column", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, VerizonDirectComponent_ngx_datatable_column_25_Template, 3, 1, "ngx-datatable-column", 19);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, VerizonDirectComponent_ngx_datatable_column_26_Template, 3, 0, "ngx-datatable-column", 20);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, VerizonDirectComponent_ngx_datatable_column_27_Template, 3, 0, "ngx-datatable-column", 21);
 
@@ -34802,37 +36311,35 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, VerizonDirectComponent_ngx_datatable_column_34_Template, 3, 0, "ngx-datatable-column", 28);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](35, VerizonDirectComponent_ngx_datatable_column_35_Template, 3, 0, "ngx-datatable-column", 29);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "ngx-datatable-column", 29);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "ngx-datatable-column", 30);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, VerizonDirectComponent_ng_template_36_Template, 1, 0, "ng-template", 30);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, VerizonDirectComponent_ng_template_37_Template, 1, 0, "ng-template", 31);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](38, VerizonDirectComponent_ng_template_38_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, VerizonDirectComponent_ng_template_37_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](39, "ngx-datatable-column", 32);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "ngx-datatable-column", 31);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, VerizonDirectComponent_ng_template_40_Template, 1, 0, "ng-template", 31);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, VerizonDirectComponent_ng_template_39_Template, 1, 0, "ng-template", 30);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](41, VerizonDirectComponent_ng_template_41_Template, 3, 4, "ng-template", 17);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](42, "ngx-datatable-column", 33);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](43, VerizonDirectComponent_ng_template_43_Template, 1, 0, "ng-template", 31);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](44, VerizonDirectComponent_ng_template_44_Template, 3, 4, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, VerizonDirectComponent_ng_template_40_Template, 3, 4, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](45, "ngx-datatable-column", 34);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](41, "ngx-datatable-column", 32);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](46, VerizonDirectComponent_ng_template_46_Template, 1, 0, "ng-template", 31);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](42, VerizonDirectComponent_ng_template_42_Template, 1, 0, "ng-template", 30);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](47, VerizonDirectComponent_ng_template_47_Template, 4, 6, "ng-template", 17);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](43, VerizonDirectComponent_ng_template_43_Template, 3, 4, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](44, "ngx-datatable-column", 33);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](45, VerizonDirectComponent_ng_template_45_Template, 1, 0, "ng-template", 30);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](46, VerizonDirectComponent_ng_template_46_Template, 4, 6, "ng-template", 16);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -34848,15 +36355,19 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.groupType);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](9);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", 100);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", ctx.groupType === "publisher" ? ctx.getDetailRowHeight : 130);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 30)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
 
@@ -34913,8 +36424,8 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 35);
           }
         },
-        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_material_core__WEBPACK_IMPORTED_MODULE_10__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_12__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_13__["SummaryMetricsComponent"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"]],
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_material_core__WEBPACK_IMPORTED_MODULE_11__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__["SummaryMetricsComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL3Zlcml6b24tZGlyZWN0L3Zlcml6b24tZGlyZWN0LmNvbXBvbmVudC5zY3NzIn0= */"]
       });
       /*@__PURE__*/
