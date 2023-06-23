@@ -49402,7 +49402,7 @@
             this.extrasQuickPanelDisplay = this.layout.getProp('extras.quickPanel.display');
             this.getSuperadminNotifications();
             this.getPublisherNotifications();
-            this.notificationSendService.getMessage().subscribe(function (notifications) {
+            this.messageSubscription = this.notificationSendService.getMessage().subscribe(function (notifications) {
               var myNotifications = notifications.notifications.filter(function (res) {
                 return res.receiver == _this133.currentUser._id;
               });
@@ -49418,8 +49418,6 @@
                   _this133.cdr.detectChanges();
                 }
               }
-
-              console.log(notifications, _this133.unreadCounter, _this133.currentUser, 'ddddd');
             });
           }
         }, {
@@ -49430,6 +49428,13 @@
             } else {
               this.getPublisherNotifications();
             }
+          }
+        }, {
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            console.log("========"); // Unsubscribe from all subscriptions when the component is destroyed
+
+            this.messageSubscription.unsubscribe();
           }
         }, {
           key: "getPublisherNotifications",
@@ -51149,6 +51154,16 @@
                 observer.next(notifications);
               });
             });
+          }
+        }, {
+          key: "disconnect",
+          value: function disconnect() {
+            this.socket.disconnect();
+          }
+        }, {
+          key: "ngOnDestroy",
+          value: function ngOnDestroy() {
+            this.disconnect();
           }
         }, {
           key: "sendNotitication",

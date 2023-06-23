@@ -29594,7 +29594,7 @@ class TopbarComponent {
         this.extrasQuickPanelDisplay = this.layout.getProp('extras.quickPanel.display');
         this.getSuperadminNotifications();
         this.getPublisherNotifications();
-        this.notificationSendService.getMessage().subscribe((notifications) => {
+        this.messageSubscription = this.notificationSendService.getMessage().subscribe((notifications) => {
             const myNotifications = notifications.notifications.filter(res => res.receiver == this.currentUser._id);
             if (myNotifications.length) {
                 if (this.currentUser.role !== 1) {
@@ -29606,7 +29606,6 @@ class TopbarComponent {
                     this.cdr.detectChanges();
                 }
             }
-            console.log(notifications, this.unreadCounter, this.currentUser, 'ddddd');
         });
     }
     handleNotification() {
@@ -29616,6 +29615,11 @@ class TopbarComponent {
         else {
             this.getPublisherNotifications();
         }
+    }
+    ngOnDestroy() {
+        console.log("========");
+        // Unsubscribe from all subscriptions when the component is destroyed
+        this.messageSubscription.unsubscribe();
     }
     getPublisherNotifications() {
         let notificationArr = [];
@@ -30528,6 +30532,12 @@ class NotificationSendService {
                 observer.next(notifications);
             });
         });
+    }
+    disconnect() {
+        this.socket.disconnect();
+    }
+    ngOnDestroy() {
+        this.disconnect();
     }
     sendNotitication(notiData) {
         return this.http.post(`${API_NOTIFICATION_URL}/new-notification`, notiData);
