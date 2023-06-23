@@ -30989,18 +30989,25 @@
       var src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/shared/service/tags.service */
       "./src/app/shared/service/tags.service.ts");
+      /* harmony import */
+
+
+      var src_app_modules_google_sheet_reporting_google_sheet_reporting_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! src/app/modules/google-sheet-reporting/google-sheet-reporting.service */
+      "./src/app/modules/google-sheet-reporting/google-sheet-reporting.service.ts");
 
       var emptyMenuConfig = {
         items: []
       };
 
       var DynamicAsideMenuService = /*#__PURE__*/function () {
-        function DynamicAsideMenuService(authService, userService, tagService) {
+        function DynamicAsideMenuService(authService, userService, tagService, googleSheetReportingService) {
           _classCallCheck(this, DynamicAsideMenuService);
 
           this.authService = authService;
           this.userService = userService;
           this.tagService = tagService;
+          this.googleSheetReportingService = googleSheetReportingService;
           this.menuConfigSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](emptyMenuConfig);
           this.tagList = [];
           this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
@@ -31025,7 +31032,7 @@
           key: "setMenu",
           value: function setMenu(menuConfig) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-              var tagsIdList, submenuList, apiDocumentationMenu, publisherMenu;
+              var tagsIdList, submenuList, sheetList, apiDocumentationMenu, publisherMenu, googlesheetReprotingMenu, googlesheetSubmenuList;
               return regeneratorRuntime.wrap(function _callee$(_context) {
                 while (1) {
                   switch (_context.prev = _context.next) {
@@ -31043,6 +31050,11 @@
                           page: "/publisher-reporting/".concat(tag._key)
                         });
                       });
+                      _context.next = 8;
+                      return this.googleSheetReportingService.getSheetList().toPromise();
+
+                    case 8:
+                      sheetList = _context.sent;
                       apiDocumentationMenu = {
                         title: 'API Documentation',
                         root: true,
@@ -31067,8 +31079,38 @@
                         page: '/publisher-reporting',
                         bullet: 'dot',
                         permissionName: "publisherReportingManage"
+                      }; //Google Sheet Reporting
+
+                      googlesheetReprotingMenu = {
+                        title: 'Google Sheet Reporting',
+                        root: true,
+                        bullet: 'dot',
+                        icon: 'flaticon2-mail-1',
+                        svg: './assets/media/svg/icons/Devices/CPU1.svg',
+                        page: '/google-sheet-reporting',
+                        permissionName: "googlesheetReportingManage"
                       };
+                      googlesheetSubmenuList = [];
+                      googlesheetSubmenuList.push({
+                        title: 'All Google Sheets',
+                        page: '/google-sheet-reporting/all-sheets'
+                      });
+                      googlesheetSubmenuList.push({
+                        title: 'New Sheet Reporting',
+                        page: '/google-sheet-reporting/new-sheet'
+                      });
+                      sheetList.map(function (sheet) {
+                        googlesheetSubmenuList.push({
+                          title: "".concat(sheet.sheetName ? sheet.sheetName : sheet.sheetName),
+                          page: "/google-sheet-reporting/sheet/".concat(sheet._key)
+                        });
+                      });
+                      googlesheetReprotingMenu['submenu'] = googlesheetSubmenuList;
                       publisherMenu['submenu'] = submenuList;
+                      menuConfig.items.push({
+                        section: 'Google Sheet Reporting'
+                      });
+                      menuConfig.items.push(googlesheetReprotingMenu);
                       menuConfig.items.push({
                         section: 'Publisher Reporting'
                       });
@@ -31079,7 +31121,7 @@
                       menuConfig.items.push(apiDocumentationMenu);
                       this.menuConfigSubject.next(menuConfig);
 
-                    case 14:
+                    case 25:
                     case "end":
                       return _context.stop();
                   }
@@ -31098,7 +31140,7 @@
       }();
 
       DynamicAsideMenuService.ɵfac = function DynamicAsideMenuService_Factory(t) {
-        return new (t || DynamicAsideMenuService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_6__["TagsService"]));
+        return new (t || DynamicAsideMenuService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_4__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_6__["TagsService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](src_app_modules_google_sheet_reporting_google_sheet_reporting_service__WEBPACK_IMPORTED_MODULE_7__["GoogleSheetReportingService"]));
       };
 
       DynamicAsideMenuService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjectable"]({
@@ -31121,6 +31163,8 @@
             type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]
           }, {
             type: src_app_shared_service_tags_service__WEBPACK_IMPORTED_MODULE_6__["TagsService"]
+          }, {
+            type: src_app_modules_google_sheet_reporting_google_sheet_reporting_service__WEBPACK_IMPORTED_MODULE_7__["GoogleSheetReportingService"]
           }];
         }, null);
       })();
@@ -42085,6 +42129,107 @@
     },
 
     /***/
+    "./src/app/modules/google-sheet-reporting/google-sheet-reporting.service.ts":
+    /*!**********************************************************************************!*\
+      !*** ./src/app/modules/google-sheet-reporting/google-sheet-reporting.service.ts ***!
+      \**********************************************************************************/
+
+    /*! exports provided: GoogleSheetReportingService */
+
+    /***/
+    function srcAppModulesGoogleSheetReportingGoogleSheetReportingServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "GoogleSheetReportingService", function () {
+        return GoogleSheetReportingService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_app_shared_service_sheet_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/app/shared/service/sheet.service */
+      "./src/app/shared/service/sheet.service.ts");
+
+      var GoogleSheetReportingService = /*#__PURE__*/function () {
+        function GoogleSheetReportingService(sheetService) {
+          _classCallCheck(this, GoogleSheetReportingService);
+
+          this.sheetService = sheetService;
+        }
+
+        _createClass(GoogleSheetReportingService, [{
+          key: "addSheet",
+          value: function addSheet(sheet) {
+            return this.sheetService.add(sheet);
+          }
+        }, {
+          key: "getSheetList",
+          value: function getSheetList() {
+            return this.sheetService.getSheets();
+          }
+        }, {
+          key: "getOneSheet",
+          value: function getOneSheet(sheet) {
+            return this.sheetService.getOneSheet(sheet);
+          }
+        }, {
+          key: "updateSheet",
+          value: function updateSheet(sheet) {
+            return this.sheetService.updateSheet(sheet);
+          }
+        }, {
+          key: "deleteSheet",
+          value: function deleteSheet(sheetId) {
+            return this.sheetService.deleteSheet(sheetId);
+          }
+        }, {
+          key: "getSheetData",
+          value: function getSheetData(sheetId, startDate, endDate) {
+            return this.sheetService.getSheetData(sheetId, startDate, endDate);
+          }
+        }]);
+
+        return GoogleSheetReportingService;
+      }();
+
+      GoogleSheetReportingService.ɵfac = function GoogleSheetReportingService_Factory(t) {
+        return new (t || GoogleSheetReportingService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](src_app_shared_service_sheet_service__WEBPACK_IMPORTED_MODULE_1__["SheetService"]));
+      };
+
+      GoogleSheetReportingService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: GoogleSheetReportingService,
+        factory: GoogleSheetReportingService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](GoogleSheetReportingService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: src_app_shared_service_sheet_service__WEBPACK_IMPORTED_MODULE_1__["SheetService"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/pages/_layout/components/aside-dynamic/aside-dynamic.component.ts":
     /*!***********************************************************************************!*\
       !*** ./src/app/pages/_layout/components/aside-dynamic/aside-dynamic.component.ts ***!
@@ -42843,7 +42988,7 @@
         }, {
           key: "showSubMenuItem",
           value: function showSubMenuItem(item) {
-            if (item.page.includes("reporting")) {
+            if (item.page.includes("reporting") && !item.page.includes("google-sheet-reporting")) {
               var itemPath = item.page.split("/")[2];
 
               if (this.reportingProviderList.includes(itemPath)) {
@@ -50551,7 +50696,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | dashboard-dashboard-module */
-            [__webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-material-m~039ec6da"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("common"), __webpack_require__.e("dashboard-dashboard-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~228a9b30"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("common"), __webpack_require__.e("dashboard-dashboard-module")]).then(__webpack_require__.bind(null,
             /*! ./dashboard/dashboard.module */
             "./src/app/pages/dashboard/dashboard.module.ts")).then(function (m) {
               return m.DashboardModule;
@@ -50593,7 +50738,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-tag-management-tag-management-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~e74f88b8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~24e99785"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("common"), __webpack_require__.e("modules-tag-management-tag-management-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("common"), __webpack_require__.e("modules-tag-management-tag-management-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/tag-management/tag-management.module */
             "./src/app/modules/tag-management/tag-management.module.ts")).then(function (m) {
               return m.TagManagementModule;
@@ -50623,7 +50768,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-company-management-company-management-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~e74f88b8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~24e99785"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("common"), __webpack_require__.e("modules-company-management-company-management-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("common"), __webpack_require__.e("modules-company-management-company-management-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/company-management/company-management.module */
             "./src/app/modules/company-management/company-management.module.ts")).then(function (m) {
               return m.CompanyManagementModule;
@@ -50638,7 +50783,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-admin-reporting-admin-reporting-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~e74f88b8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~24e99785"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-material-m~039ec6da"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~37a1be1f"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~2fe1a6ce"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-publisher-reporting-publisher-reporting-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-admin-reporting-admin-reporting-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~228a9b30"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~b726f585"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~7284c7f0"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~775aa1ee"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("common"), __webpack_require__.e("modules-admin-reporting-admin-reporting-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/admin-reporting/admin-reporting.module */
             "./src/app/modules/admin-reporting/admin-reporting.module.ts")).then(function (m) {
               return m.AdminReportingModule;
@@ -50648,12 +50793,27 @@
             permission: 'reportManage'
           }
         }, {
+          path: 'google-sheet-reporting',
+          canActivate: [_modules_auth_services_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]],
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | modules-google-sheet-reporting-google-sheet-reporting-module */
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~228a9b30"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~b726f585"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~7284c7f0"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~775aa1ee"), __webpack_require__.e("common"), __webpack_require__.e("modules-google-sheet-reporting-google-sheet-reporting-module")]).then(__webpack_require__.bind(null,
+            /*! ../modules/google-sheet-reporting/google-sheet-reporting.module */
+            "./src/app/modules/google-sheet-reporting/google-sheet-reporting.module.ts")).then(function (m) {
+              return m.GoogleSheetReportingModule;
+            });
+          },
+          data: {
+            permission: 'googlesheetReportingManage'
+          }
+        }, {
           path: 'publisher-reporting',
           canActivate: [_modules_auth_services_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]],
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-publisher-reporting-publisher-reporting-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~e74f88b8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~24e99785"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-material-m~039ec6da"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~37a1be1f"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~2fe1a6ce"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-publisher-reporting-publisher-reporting-module"), __webpack_require__.e("modules-publisher-reporting-publisher-reporting-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~228a9b30"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~b726f585"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~7284c7f0"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~775aa1ee"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("modules-publisher-reporting-publisher-reporting-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/publisher-reporting/publisher-reporting.module */
             "./src/app/modules/publisher-reporting/publisher-reporting.module.ts")).then(function (m) {
               return m.PublisherReportingModule;
@@ -50668,7 +50828,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-live-traffic-live-traffic-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~e74f88b8"), __webpack_require__.e("modules-live-traffic-live-traffic-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("modules-live-traffic-live-traffic-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/live-traffic/live-traffic.module */
             "./src/app/modules/live-traffic/live-traffic.module.ts")).then(function (m) {
               return m.LiveTrafficModule;
@@ -50683,7 +50843,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-user-management-user-management-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~e74f88b8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~24e99785"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~37a1be1f"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-user-management-user-management-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~b726f585"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-user-management-user-management-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/user-management/user-management.module */
             "./src/app/modules/user-management/user-management.module.ts")).then(function (m) {
               return m.UserManagementModule;
@@ -50698,7 +50858,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-notification-notification-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~e74f88b8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~24e99785"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-notification-notification-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-notification-notification-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/notification/notification.module */
             "./src/app/modules/notification/notification.module.ts")).then(function (m) {
               return m.NotificationModule;
@@ -50728,7 +50888,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-material-material-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~24e99785"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~782165ac"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-material-m~039ec6da"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~37a1be1f"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-material-material-module~modules-publ~2fe1a6ce"), __webpack_require__.e("default~builder-builder-module~modules-material-material-module~modules-ngbootstrap-ngbootstrap-module"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module"), __webpack_require__.e("modules-material-material-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~228a9b30"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~b726f585"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~7284c7f0"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~builder-builder-module~modules-material-material-module~modules-ngbootstrap-ngbootstrap-module"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module"), __webpack_require__.e("modules-material-material-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/material/material.module */
             "./src/app/modules/material/material.module.ts")).then(function (m) {
               return m.MaterialModule;
@@ -51047,6 +51207,120 @@
             type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]
           }, {
             type: ngx_socket_io__WEBPACK_IMPORTED_MODULE_4__["Socket"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
+    "./src/app/shared/service/sheet.service.ts":
+    /*!*************************************************!*\
+      !*** ./src/app/shared/service/sheet.service.ts ***!
+      \*************************************************/
+
+    /*! exports provided: SheetService */
+
+    /***/
+    function srcAppSharedServiceSheetServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "SheetService", function () {
+        return SheetService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! src/environments/environment */
+      "./src/environments/environment.ts");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+      var API_SHEET_REPORTING_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/google-sheet-reporting");
+
+      var SheetService = /*#__PURE__*/function () {
+        function SheetService(http) {
+          _classCallCheck(this, SheetService);
+
+          this.http = http;
+        }
+
+        _createClass(SheetService, [{
+          key: "add",
+          value: function add(sheet) {
+            return this.http.post("".concat(API_SHEET_REPORTING_URL, "/create"), sheet);
+          }
+        }, {
+          key: "getSheets",
+          value: function getSheets() {
+            return this.http.get("".concat(API_SHEET_REPORTING_URL, "/all-sheets"));
+          }
+        }, {
+          key: "getSheetData",
+          value: function getSheetData(sheetId, startDate, endDate) {
+            return this.http.get("".concat(API_SHEET_REPORTING_URL, "/googlesheet-data/").concat(sheetId), {
+              params: {
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getOneSheet",
+          value: function getOneSheet(sheet) {
+            return this.http.get(API_SHEET_REPORTING_URL + "/get-sheet/".concat(sheet));
+          }
+        }, {
+          key: "updateSheet",
+          value: function updateSheet(sheet) {
+            return this.http.put("".concat(API_SHEET_REPORTING_URL, "/update/").concat(sheet._key), sheet);
+          }
+        }, {
+          key: "deleteSheet",
+          value: function deleteSheet(sheetId) {
+            return this.http["delete"](API_SHEET_REPORTING_URL + "/delete/".concat(sheetId));
+          }
+        }]);
+
+        return SheetService;
+      }();
+
+      SheetService.ɵfac = function SheetService_Factory(t) {
+        return new (t || SheetService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+      };
+
+      SheetService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: SheetService,
+        factory: SheetService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](SheetService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
           }];
         }, null);
       })();
