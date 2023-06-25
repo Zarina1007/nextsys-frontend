@@ -828,7 +828,9 @@
 
       var config = {
         url: src_environments_environment__WEBPACK_IMPORTED_MODULE_22__["environment"].apiUrl,
-        options: {}
+        options: {
+          transports: ['websocket']
+        }
       };
 
       function appInitializer(authService) {

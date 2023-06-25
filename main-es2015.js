@@ -377,7 +377,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const config = { url: src_environments_environment__WEBPACK_IMPORTED_MODULE_22__["environment"].apiUrl, options: {} };
+const config = {
+    url: src_environments_environment__WEBPACK_IMPORTED_MODULE_22__["environment"].apiUrl,
+    options: {
+        transports: ['websocket']
+    }
+};
 function appInitializer(authService) {
     return () => {
         return new Promise((resolve) => {
