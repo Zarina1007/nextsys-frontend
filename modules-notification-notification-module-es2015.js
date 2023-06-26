@@ -780,7 +780,7 @@ MatSelectSearchComponent = MatSelectSearchComponent_1 = Object(tslib__WEBPACK_IM
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-const MatSelectSearchVersion = '3.3.2';
+const MatSelectSearchVersion = '3.3.3';
 let NgxMatSelectSearchModule = class NgxMatSelectSearchModule {
 };
 NgxMatSelectSearchModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: NgxMatSelectSearchModule });

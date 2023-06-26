@@ -29594,19 +29594,18 @@ class TopbarComponent {
         this.extrasQuickPanelDisplay = this.layout.getProp('extras.quickPanel.display');
         this.getSuperadminNotifications();
         this.getPublisherNotifications();
-        this.messageSubscription = this.notificationSendService.getMessage().subscribe((notifications) => {
-            const myNotifications = notifications.notifications.filter(res => res.receiver == this.currentUser._id);
-            if (myNotifications.length) {
-                if (this.currentUser.role !== 1) {
-                    this.unreadCounter = this.unreadCounter + myNotifications.length;
-                    this.cdr.detectChanges();
-                }
-                else {
-                    this.unreadSuperCounter = this.unreadSuperCounter + myNotifications.length;
-                    this.cdr.detectChanges();
-                }
-            }
-        });
+        // this.messageSubscription = this.notificationSendService.getMessage().subscribe((notifications:any)=> {
+        //   const myNotifications = notifications.notifications.filter(res => res.receiver == this.currentUser._id)
+        //   if (myNotifications.length) {
+        //     if (this.currentUser.role !== 1) {
+        //       this.unreadCounter = this.unreadCounter + myNotifications.length;
+        //       this.cdr.detectChanges();
+        //     } else {
+        //       this.unreadSuperCounter = this.unreadSuperCounter + myNotifications.length;
+        //       this.cdr.detectChanges();
+        //     }
+        //   }  
+        // })
     }
     handleNotification() {
         if (this.currentUser.role == 1) {
@@ -29616,11 +29615,11 @@ class TopbarComponent {
             this.getPublisherNotifications();
         }
     }
-    ngOnDestroy() {
-        console.log("========");
-        // Unsubscribe from all subscriptions when the component is destroyed
-        this.messageSubscription.unsubscribe();
-    }
+    // ngOnDestroy() {
+    //   console.log("========")
+    //   // Unsubscribe from all subscriptions when the component is destroyed
+    //   this.messageSubscription.unsubscribe();
+    // }
     getPublisherNotifications() {
         let notificationArr = [];
         this.unreadCounter = 0;
@@ -30510,35 +30509,30 @@ CompanyService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineIn
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationSendService", function() { return NotificationSendService; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
-/* harmony import */ var ngx_socket_io__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ngx-socket-io */ "./node_modules/ngx-socket-io/__ivy_ngcc__/fesm2015/ngx-socket-io.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
 
 
 
 
-
-
-const API_NOTIFICATION_URL = `${src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl}/notifications`;
+const API_NOTIFICATION_URL = `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/notifications`;
 class NotificationSendService {
-    constructor(http, socket) {
+    constructor(http) {
         this.http = http;
-        this.socket = socket;
     }
     getMessage() {
-        return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"]((observer) => {
-            this.socket.on('notifications', (notifications) => {
-                observer.next(notifications);
-            });
-        });
+        // return new Observable((observer: Observer<any>) => {
+        //     this.socket.on('notifications', (notifications: string) => {
+        //         observer.next(notifications)
+        //     })
+        // })
     }
-    disconnect() {
-        this.socket.disconnect();
-    }
-    ngOnDestroy() {
-        this.disconnect();
-    }
+    // disconnect() {
+    //     this.socket.disconnect();
+    // }
+    // ngOnDestroy() {
+    //     this.disconnect();
+    // }
     sendNotitication(notiData) {
         return this.http.post(`${API_NOTIFICATION_URL}/new-notification`, notiData);
     }
@@ -30558,14 +30552,14 @@ class NotificationSendService {
         return this.http.get(`${API_NOTIFICATION_URL}/detail/${notificationId}`);
     }
 }
-NotificationSendService.ɵfac = function NotificationSendService_Factory(t) { return new (t || NotificationSendService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ngx_socket_io__WEBPACK_IMPORTED_MODULE_4__["Socket"])); };
+NotificationSendService.ɵfac = function NotificationSendService_Factory(t) { return new (t || NotificationSendService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
 NotificationSendService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: NotificationSendService, factory: NotificationSendService.ɵfac, providedIn: 'root' });
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NotificationSendService, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
         args: [{
                 providedIn: 'root'
             }]
-    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }, { type: ngx_socket_io__WEBPACK_IMPORTED_MODULE_4__["Socket"] }]; }, null); })();
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),

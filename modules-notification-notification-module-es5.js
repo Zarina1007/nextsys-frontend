@@ -1156,7 +1156,7 @@
        * found in the LICENSE file at https://angular.io/license
        */
 
-      var MatSelectSearchVersion = '3.3.2';
+      var MatSelectSearchVersion = '3.3.3';
 
       var NgxMatSelectSearchModule = function NgxMatSelectSearchModule() {
         _classCallCheck(this, NgxMatSelectSearchModule);

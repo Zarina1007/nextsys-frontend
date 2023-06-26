@@ -49384,8 +49384,6 @@
         _createClass(TopbarComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this133 = this;
-
             this.currentUser = this.auth.currentUserValue; // topbar extras
 
             this.extraSearchDisplay = this.layout.getProp('extras.search.display');
@@ -49401,24 +49399,18 @@
             this.extrasUserLayout = this.layout.getProp('extras.user.layout');
             this.extrasQuickPanelDisplay = this.layout.getProp('extras.quickPanel.display');
             this.getSuperadminNotifications();
-            this.getPublisherNotifications();
-            this.messageSubscription = this.notificationSendService.getMessage().subscribe(function (notifications) {
-              var myNotifications = notifications.notifications.filter(function (res) {
-                return res.receiver == _this133.currentUser._id;
-              });
-
-              if (myNotifications.length) {
-                if (_this133.currentUser.role !== 1) {
-                  _this133.unreadCounter = _this133.unreadCounter + myNotifications.length;
-
-                  _this133.cdr.detectChanges();
-                } else {
-                  _this133.unreadSuperCounter = _this133.unreadSuperCounter + myNotifications.length;
-
-                  _this133.cdr.detectChanges();
-                }
-              }
-            });
+            this.getPublisherNotifications(); // this.messageSubscription = this.notificationSendService.getMessage().subscribe((notifications:any)=> {
+            //   const myNotifications = notifications.notifications.filter(res => res.receiver == this.currentUser._id)
+            //   if (myNotifications.length) {
+            //     if (this.currentUser.role !== 1) {
+            //       this.unreadCounter = this.unreadCounter + myNotifications.length;
+            //       this.cdr.detectChanges();
+            //     } else {
+            //       this.unreadSuperCounter = this.unreadSuperCounter + myNotifications.length;
+            //       this.cdr.detectChanges();
+            //     }
+            //   }  
+            // })
           }
         }, {
           key: "handleNotification",
@@ -49428,18 +49420,16 @@
             } else {
               this.getPublisherNotifications();
             }
-          }
-        }, {
-          key: "ngOnDestroy",
-          value: function ngOnDestroy() {
-            console.log("========"); // Unsubscribe from all subscriptions when the component is destroyed
+          } // ngOnDestroy() {
+          //   console.log("========")
+          //   // Unsubscribe from all subscriptions when the component is destroyed
+          //   this.messageSubscription.unsubscribe();
+          // }
 
-            this.messageSubscription.unsubscribe();
-          }
         }, {
           key: "getPublisherNotifications",
           value: function getPublisherNotifications() {
-            var _this134 = this;
+            var _this133 = this;
 
             var notificationArr = [];
             this.unreadCounter = 0;
@@ -49457,12 +49447,12 @@
                   });
 
                   if (!d.status) {
-                    _this134.unreadCounter++;
+                    _this133.unreadCounter++;
                   }
                 });
-                _this134.publisherRows = notificationArr;
+                _this133.publisherRows = notificationArr;
 
-                _this134.cdr.detectChanges();
+                _this133.cdr.detectChanges();
               },
               error: function error(e) {
                 console.log(e.error);
@@ -49472,7 +49462,7 @@
         }, {
           key: "getSuperadminNotifications",
           value: function getSuperadminNotifications() {
-            var _this135 = this;
+            var _this134 = this;
 
             var supernotificationArr = [];
             this.unreadSuperCounter = 0;
@@ -49490,12 +49480,12 @@
                   });
 
                   if (typeof d.status === 'boolean' && !d.status) {
-                    _this135.unreadSuperCounter++;
+                    _this134.unreadSuperCounter++;
                   }
                 });
-                _this135.superAdminRows = supernotificationArr;
+                _this134.superAdminRows = supernotificationArr;
 
-                _this135.cdr.detectChanges();
+                _this134.cdr.detectChanges();
               },
               error: function error(e) {
                 console.log(e.error);
@@ -49505,36 +49495,36 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this136 = this;
+            var _this135 = this;
 
             _assets_js_components_util__WEBPACK_IMPORTED_MODULE_8__["KTUtil"].ready(function () {
               // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
               // Add 'implements AfterViewInit' to the class.
-              if (_this136.extraSearchDisplay && _this136.extrasSearchLayout === 'offcanvas') {
+              if (_this135.extraSearchDisplay && _this135.extrasSearchLayout === 'offcanvas') {
                 _assets_js_layout_extended_quick_search__WEBPACK_IMPORTED_MODULE_1__["default"].init('kt_quick_search');
               }
 
-              if (_this136.extrasNotificationsDisplay && _this136.extrasNotificationsLayout === 'offcanvas') {
+              if (_this135.extrasNotificationsDisplay && _this135.extrasNotificationsLayout === 'offcanvas') {
                 // Init Quick Notifications Offcanvas Panel
                 _assets_js_layout_extended_quick_notifications__WEBPACK_IMPORTED_MODULE_2__["default"].init('kt_quick_notifications');
               }
 
-              if (_this136.extrasQuickActionsDisplay && _this136.extrasQuickActionsLayout === 'offcanvas') {
+              if (_this135.extrasQuickActionsDisplay && _this135.extrasQuickActionsLayout === 'offcanvas') {
                 // Init Quick Actions Offcanvas Panel
                 _assets_js_layout_extended_quick_actions__WEBPACK_IMPORTED_MODULE_3__["default"].init('kt_quick_actions');
               }
 
-              if (_this136.extrasCartDisplay && _this136.extrasCartLayout === 'offcanvas') {
+              if (_this135.extrasCartDisplay && _this135.extrasCartLayout === 'offcanvas') {
                 // Init Quick Cart Panel
                 _assets_js_layout_extended_quick_cart__WEBPACK_IMPORTED_MODULE_4__["default"].init('kt_quick_cart');
               }
 
-              if (_this136.extrasQuickPanelDisplay) {
+              if (_this135.extrasQuickPanelDisplay) {
                 // Init Quick Offcanvas Panel
                 _assets_js_layout_extended_quick_panel__WEBPACK_IMPORTED_MODULE_5__["default"].init('kt_quick_panel');
               }
 
-              if (_this136.extrasUserDisplay && _this136.extrasUserLayout === 'offcanvas') {
+              if (_this135.extrasUserDisplay && _this135.extrasUserLayout === 'offcanvas') {
                 // Init Quick User Panel
                 _assets_js_layout_extended_quick_user__WEBPACK_IMPORTED_MODULE_6__["default"].init('kt_quick_user');
               } // Init Header Topbar For Mobile Mode
@@ -49699,7 +49689,7 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this137 = this;
+            var _this136 = this;
 
             _assets_js_components_util__WEBPACK_IMPORTED_MODULE_1__["KTUtil"].ready(function () {
               // Init Brand Panel For Logo
@@ -49711,7 +49701,7 @@
 
               _assets_js_layout_base_aside_menu__WEBPACK_IMPORTED_MODULE_7__["default"].init('kt_aside_menu');
 
-              if (_this137.asideSelfMinimizeToggle) {
+              if (_this136.asideSelfMinimizeToggle) {
                 // Init Aside Menu Toggle
                 _assets_js_layout_base_aside_toggle__WEBPACK_IMPORTED_MODULE_2__["default"].init('kt_aside_toggle');
               } // Init Sticky Card
@@ -50289,12 +50279,12 @@
         }, {
           key: "getReportingProviderList",
           value: function getReportingProviderList() {
-            var _this138 = this;
+            var _this137 = this;
 
             if (this.companySelected) {
               this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
                 res.reportingProviders.map(function (report) {
-                  _this138.companyList.push(report.reportingProvider);
+                  _this137.companyList.push(report.reportingProvider);
                 });
               });
             }
@@ -50302,11 +50292,11 @@
         }, {
           key: "getAdvertiserList",
           value: function getAdvertiserList() {
-            var _this139 = this;
+            var _this138 = this;
 
             if (this.companySelected) {
               this.tagService.getTagAdvertiser(this.companySelected.split('/')[1]).subscribe(function (res) {
-                _this139.advertiserList.push("all");
+                _this138.advertiserList.push("all");
 
                 var _iterator6 = _createForOfIteratorHelper(res),
                     _step6;
@@ -50315,7 +50305,7 @@
                   for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
                     var resAdvertiser = _step6.value;
 
-                    _this139.advertiserList.push(resAdvertiser.advertiser);
+                    _this138.advertiserList.push(resAdvertiser.advertiser);
                   }
                 } catch (err) {
                   _iterator6.e(err);
@@ -51112,59 +51102,39 @@
       /* harmony import */
 
 
-      var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! rxjs */
-      "./node_modules/rxjs/_esm2015/index.js");
-      /* harmony import */
-
-
-      var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! src/environments/environment */
       "./src/environments/environment.ts");
       /* harmony import */
 
 
-      var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/common/http */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
-      /* harmony import */
 
-
-      var ngx_socket_io__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! ngx-socket-io */
-      "./node_modules/ngx-socket-io/__ivy_ngcc__/fesm2015/ngx-socket-io.js");
-
-      var API_NOTIFICATION_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl, "/notifications");
+      var API_NOTIFICATION_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/notifications");
 
       var NotificationSendService = /*#__PURE__*/function () {
-        function NotificationSendService(http, socket) {
+        function NotificationSendService(http) {
           _classCallCheck(this, NotificationSendService);
 
           this.http = http;
-          this.socket = socket;
         }
 
         _createClass(NotificationSendService, [{
           key: "getMessage",
-          value: function getMessage() {
-            var _this140 = this;
+          value: function getMessage() {// return new Observable((observer: Observer<any>) => {
+            //     this.socket.on('notifications', (notifications: string) => {
+            //         observer.next(notifications)
+            //     })
+            // })
+          } // disconnect() {
+          //     this.socket.disconnect();
+          // }
+          // ngOnDestroy() {
+          //     this.disconnect();
+          // }
 
-            return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](function (observer) {
-              _this140.socket.on('notifications', function (notifications) {
-                observer.next(notifications);
-              });
-            });
-          }
-        }, {
-          key: "disconnect",
-          value: function disconnect() {
-            this.socket.disconnect();
-          }
-        }, {
-          key: "ngOnDestroy",
-          value: function ngOnDestroy() {
-            this.disconnect();
-          }
         }, {
           key: "sendNotitication",
           value: function sendNotitication(notiData) {
@@ -51201,7 +51171,7 @@
       }();
 
       NotificationSendService.ɵfac = function NotificationSendService_Factory(t) {
-        return new (t || NotificationSendService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](ngx_socket_io__WEBPACK_IMPORTED_MODULE_4__["Socket"]));
+        return new (t || NotificationSendService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
       };
 
       NotificationSendService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
@@ -51219,9 +51189,7 @@
           }]
         }], function () {
           return [{
-            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]
-          }, {
-            type: ngx_socket_io__WEBPACK_IMPORTED_MODULE_4__["Socket"]
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
           }];
         }, null);
       })();
