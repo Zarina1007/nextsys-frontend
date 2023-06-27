@@ -33089,43 +33089,39 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](12, "percent");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](13, "percent");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](12, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "td");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "td");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](15);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](16, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](17, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](15, "number");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "td");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "td");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](19);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](17);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](20, "currency");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "td");
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](22);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](23, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](18, "currency");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](24, "td");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "td");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](20);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](26, "currency");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](21, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](24, "currency");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -33149,23 +33145,23 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](12, 14, subDateData_r24.ctr, "2.2-2") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](13, 17, 0, "2.2-2"));
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](16, 20, subDateData_r24.cpc, "USD") || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](17, 23, 0, "USD"));
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](20, 26, subDateData_r24.publisherNet, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](12, 14, subDateData_r24.ctr));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](23, 29, subDateData_r24.profit, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](15, 16, subDateData_r24.cpc));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](26, 32, subDateData_r24.revenue, "USD"));
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](18, 18, subDateData_r24.publisherNet, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](21, 21, subDateData_r24.profit, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](24, 24, subDateData_r24.revenue, "USD"));
         }
       }
 
@@ -33233,7 +33229,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "tbody");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, System1Component_ng_template_20_div_0_tr_21_Template, 27, 35, "tr", 34);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, System1Component_ng_template_20_div_0_tr_21_Template, 25, 27, "tr", 34);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
@@ -34159,9 +34155,11 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
-                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].clicks += o.clicks ? parseFloat(o.clicks) : 0;
+                helperSummary[key].searches += o.searches ? parseFloat(o.searches) : 0;
+                helperSummary[key].cpc += o.cpc ? parseFloat(o.cpc) : 0;
+                helperSummary[key].ctr += o.ctr ? parseFloat(o.ctr) : 0;
+                helperSummary[key].revenue += o.revenue ? parseFloat(o.revenue) : 0;
                 helperSummary[key].split += parseFloat(o.split);
                 helperSummary[key].profit += parseFloat(o.profit);
                 helperSummary[key].publisherNet += parseFloat(o.publisherNet);
@@ -34178,6 +34176,7 @@
               for (_iterator90.s(); !(_step90 = _iterator90.n()).done;) {
                 var group = _step90.value;
                 group.split = group.split / group.counter;
+                group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
               _iterator90.e(err);
@@ -34204,9 +34203,11 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
-                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].clicks += o.clicks ? parseFloat(o.clicks) : 0;
+                helperSummary[key].searches += o.searches ? parseFloat(o.searches) : 0;
+                helperSummary[key].cpc += o.cpc ? parseFloat(o.cpc) : 0;
+                helperSummary[key].ctr += o.ctr ? parseFloat(o.ctr) : 0;
+                helperSummary[key].revenue += o.revenue ? parseFloat(o.revenue) : 0;
                 helperSummary[key].split += parseFloat(o.split);
                 helperSummary[key].profit += parseFloat(o.profit);
                 helperSummary[key].publisherNet += parseFloat(o.publisherNet);
@@ -34252,9 +34253,11 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
-                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].clicks += o.clicks ? parseFloat(o.clicks) : 0;
+                helperSummary[key].searches += o.searches ? parseFloat(o.searches) : 0;
+                helperSummary[key].cpc += o.cpc ? parseFloat(o.cpc) : 0;
+                helperSummary[key].ctr += o.ctr ? parseFloat(o.ctr) : 0;
+                helperSummary[key].revenue += o.revenue ? parseFloat(o.revenue) : 0;
                 helperSummary[key].split += parseFloat(o.split);
                 helperSummary[key].profit += parseFloat(o.profit);
                 helperSummary[key].publisherNet += parseFloat(o.publisherNet);
@@ -34271,7 +34274,8 @@
               for (_iterator92.s(); !(_step92 = _iterator92.n()).done;) {
                 var group = _step92.value;
                 group.split = group.split / group.counter;
-                group.subReportingForDate = this.groupDateForPublisher(group);
+                group.ctr = group.ctr / group.counter;
+                group.subReportingForDate = this.groupDateForPublisher(group.publisher);
                 group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
             } catch (err) {
@@ -34299,44 +34303,41 @@
           }
         }, {
           key: "groupDateForPublisher",
-          value: function groupDateForPublisher(group) {
-            var helperSummary = {};
-            var groupData = this.allStats.filter(function (oStat) {
-              return oStat.publisher === group.publisher;
+          value: function groupDateForPublisher(publisher) {
+            var helperSummary1 = {};
+            var groupSubData = this.allStats.filter(function (oStat) {
+              return oStat.publisher === publisher;
             }).reduce(function (r, o) {
               var key = o.date;
 
-              if (!helperSummary[key]) {
-                helperSummary[key] = Object.assign({}, o); // create a copy of o
+              if (!helperSummary1[key]) {
+                helperSummary1[key] = Object.assign({}, o); // create a copy of o
 
-                helperSummary[key].counter = 1;
-                r.push(helperSummary[key]);
+                helperSummary1[key].counter = 1;
+                r.push(helperSummary1[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
-                helperSummary[key].revenue += parseFloat(o.revenue);
-                helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
-                helperSummary[key].counter++;
+                helperSummary1[key].clicks += o.clicks ? parseFloat(o.clicks) : 0;
+                helperSummary1[key].searches += o.searches ? parseFloat(o.searches) : 0;
+                helperSummary1[key].cpc += o.cpc ? parseFloat(o.cpc) : 0;
+                helperSummary1[key].ctr += o.ctr ? parseFloat(o.ctr) : 0;
+                helperSummary1[key].revenue += o.revenue ? parseFloat(o.revenue) : 0;
+                helperSummary1[key].split += parseFloat(o.split);
+                helperSummary1[key].profit += parseFloat(o.profit);
+                helperSummary1[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary1[key].counter++;
               }
 
               return r;
             }, []);
+            console.log(groupSubData);
 
-            var _iterator93 = _createForOfIteratorHelper(groupData),
+            var _iterator93 = _createForOfIteratorHelper(groupSubData),
                 _step93;
 
             try {
               for (_iterator93.s(); !(_step93 = _iterator93.n()).done;) {
-                var group = _step93.value;
-                group.split = group.split / group.counter;
-                group.followon = group.followon / group.counter;
-                group.ctr = group.ctr / group.counter;
+                var groupSub = _step93.value;
+                groupSub.split = groupSub.split / groupSub.counter; // groupSub.ctr = groupSub.ctr / groupSub.counter;
               }
             } catch (err) {
               _iterator93.e(err);
@@ -34344,7 +34345,7 @@
               _iterator93.f();
             }
 
-            return groupData;
+            return groupSubData;
           }
         }, {
           key: "groupDateForSubid",
@@ -34361,16 +34362,14 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].clicks += o.clicks ? parseFloat(o.clicks) : 0;
+                helperSummary[key].searches += o.searches ? parseFloat(o.searches) : 0;
+                helperSummary[key].cpc += o.cpc ? parseFloat(o.cpc) : 0;
+                helperSummary[key].ctr += o.ctr ? parseFloat(o.ctr) : 0;
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
               }
 
@@ -34384,7 +34383,6 @@
               for (_iterator94.s(); !(_step94 = _iterator94.n()).done;) {
                 var group = _step94.value;
                 group.split = group.split / group.counter;
-                group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
@@ -34661,7 +34659,7 @@
           }
         },
         directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_material_core__WEBPACK_IMPORTED_MODULE_11__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__["SummaryMetricsComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["PercentPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL3N5c3RlbTEvc3lzdGVtMS5jb21wb25lbnQuc2NzcyJ9 */"]
       });
       /*@__PURE__*/
@@ -36578,13 +36576,15 @@
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
                 helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].rn += parseFloat(o.rn ? o.rn : 0);
+                helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
+                helperSummary[key].biddedResults += parseFloat(o.biddedResults ? o.biddedResults : 0);
                 helperSummary[key].profit += parseFloat(o.profit);
                 helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
                 helperSummary[key].counter++;
               }
 
@@ -36627,13 +36627,15 @@
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
                 helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].rn += parseFloat(o.rn ? o.rn : 0);
+                helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
+                helperSummary[key].biddedResults += parseFloat(o.biddedResults ? o.biddedResults : 0);
                 helperSummary[key].profit += parseFloat(o.profit);
                 helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
                 helperSummary[key].counter++;
               }
 
