@@ -30637,6 +30637,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const API_TAGS_URL = `${src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl}/tags`;
 const API_TEMPLATES_URL = `${src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl}/templates`;
+const API_PUBLISHER_TAG_URL = `${src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl}/users/update-publisher-tag`;
 class TagsService {
     constructor(http) {
         this.http = http;
@@ -30646,6 +30647,14 @@ class TagsService {
     }
     add(tag) {
         return this.http.post(API_TAGS_URL, tag);
+    }
+    addPublisherTag(tagId, companyId, publisherId) {
+        const data = {
+            tagId: tagId,
+            companyId: companyId,
+            publisherId: publisherId
+        };
+        return this.http.post(API_PUBLISHER_TAG_URL, data);
     }
     getChrome() {
         return this.http.get(API_TAGS_URL + "/chrome/browser");

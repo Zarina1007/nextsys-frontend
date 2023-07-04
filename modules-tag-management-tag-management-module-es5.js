@@ -5579,85 +5579,91 @@
       /* harmony import */
 
 
-      var _tag_management_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _publisher_tag_publisher_tag_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! ../publisher-tag/publisher-tag.component */
+      "./src/app/modules/tag-management/publisher-tag/publisher-tag.component.ts");
+      /* harmony import */
+
+
+      var _tag_management_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! ../tag-management.service */
       "./src/app/modules/tag-management/tag-management.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! src/app/shared/service/snackbar.service */
       "./src/app/shared/service/snackbar.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_companies_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var src_app_shared_service_companies_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! src/app/shared/service/companies.service */
       "./src/app/shared/service/companies.service.ts");
       /* harmony import */
 
 
-      var src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! src/app/modules/auth/_services/auth.service */
       "./src/app/modules/auth/_services/auth.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! src/app/shared/service/users.service */
       "./src/app/shared/service/users.service.ts");
       /* harmony import */
 
 
-      var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
       /*! @angular/material/dialog */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
       /* harmony import */
 
 
-      var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! src/app/shared/service/notification.service */
       "./src/app/shared/service/notification.service.ts");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! @angular/material/form-field */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
       /* harmony import */
 
 
-      var _angular_material_select__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var _angular_material_select__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! @angular/material/select */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
       /* harmony import */
 
 
-      var _angular_material_input__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var _angular_material_input__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! @angular/material/input */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/input.js");
       /* harmony import */
 
 
-      var _angular_material_core__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! @angular/material/core */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
       /* harmony import */
 
 
-      var _angular_material_button__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! @angular/material/button */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
       /* harmony import */
 
 
-      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
       /*! ng-inline-svg */
       "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
 
@@ -7632,13 +7638,27 @@
             var _this30 = this;
 
             //this.newTagFG.markAllAsTouched();
+            var companyTemp = this.companySelected;
+
             if (this.newTagFG.valid) {
               this.tagManagementService.addTag(this.newTagFG.value).subscribe(function (res) {
                 _this30._snackBarService.info('Added a new tag');
 
-                _this30.newTagFG.reset();
+                var dialogRef = _this30.dialog.open(_publisher_tag_publisher_tag_component__WEBPACK_IMPORTED_MODULE_3__["PublisherTagComponent"], {
+                  width: '300px',
+                  data: {
+                    tagData: res,
+                    companyId: _this30.companySelected
+                  }
+                }); // this.newTagFG.reset();
+
 
                 _this30.formGroupDirective.resetForm();
+
+                _this30.newTagFG.patchValue({
+                  company: companyTemp,
+                  initialURL: "http://3.227.27.140/search"
+                });
 
                 _this30.url = 'https://google.com/search';
                 _this30.adserverURL = new URL('http://3.227.27.140/search');
@@ -7650,6 +7670,8 @@
                     initialURL: _this30.adserverURL
                   });
                 });
+
+                _this30.changeDetectorRefs.detectChanges();
               }, function (err) {
                 _this30._snackBarService.info(err.error);
               });
@@ -8934,7 +8956,7 @@
       }();
 
       NewTagComponent.ɵfac = function NewTagComponent_Factory(t) {
-        return new (t || NewTagComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_4__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_companies_service__WEBPACK_IMPORTED_MODULE_5__["CompanyService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_6__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_7__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_9__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]));
+        return new (t || NewTagComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_5__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_companies_service__WEBPACK_IMPORTED_MODULE_6__["CompanyService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_7__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_8__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_9__["MatDialog"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_10__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]));
       };
 
       NewTagComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -8969,8 +8991,8 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.hidden);
           }
         },
-        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_11__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_11__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_12__["MatSelect"], _angular_common__WEBPACK_IMPORTED_MODULE_10__["NgForOf"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroupDirective"], _angular_material_input__WEBPACK_IMPORTED_MODULE_13__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControlName"], _angular_material_core__WEBPACK_IMPORTED_MODULE_14__["MatOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormArrayName"], _angular_material_button__WEBPACK_IMPORTED_MODULE_15__["MatButton"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_11__["MatError"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroupName"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_16__["InlineSVGDirective"]],
-        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_10__["JsonPipe"]],
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_13__["MatSelect"], _angular_common__WEBPACK_IMPORTED_MODULE_11__["NgForOf"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroupDirective"], _angular_material_input__WEBPACK_IMPORTED_MODULE_14__["MatInput"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControlName"], _angular_material_core__WEBPACK_IMPORTED_MODULE_15__["MatOption"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormArrayName"], _angular_material_button__WEBPACK_IMPORTED_MODULE_16__["MatButton"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_12__["MatError"], _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroupName"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_17__["InlineSVGDirective"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_11__["JsonPipe"]],
         styles: [".params[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.params[_ngcontent-%COMP%]   mat-form-field[_ngcontent-%COMP%] {\n  max-width: 25%;\n}\n.subid-header[_ngcontent-%COMP%] {\n  padding: 0.5rem 0.25rem;\n  margin-bottom: 0;\n  background-color: #ffffff;\n  border-bottom: 1px solid #EBEDF3;\n}\n.numeric-title[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy90YWctbWFuYWdlbWVudC9uZXctdGFnL25ldy10YWcuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtBQUNGO0FBQ0U7RUFDRSxjQUFBO0FBQ0o7QUFFQTtFQUNFLHVCQUFBO0VBQ0EsZ0JBQUE7RUFDQSx5QkFBQTtFQUNBLGdDQUFBO0FBQ0Y7QUFFQTtFQUNFLGFBQUE7RUFDQSw4QkFBQTtFQUNBLG1CQUFBO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL3RhZy1tYW5hZ2VtZW50L25ldy10YWcvbmV3LXRhZy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5wYXJhbXMge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuXHJcbiAgbWF0LWZvcm0tZmllbGQge1xyXG4gICAgbWF4LXdpZHRoOiAyNSU7XHJcbiAgfVxyXG59XHJcbi5zdWJpZC1oZWFkZXIge1xyXG4gIHBhZGRpbmc6IDAuNXJlbSAwLjI1cmVtO1xyXG4gIG1hcmdpbi1ib3R0b206IDA7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmZmZjtcclxuICBib3JkZXItYm90dG9tOiAxcHggc29saWQgI0VCRURGMztcclxufVxyXG5cclxuLm51bWVyaWMtdGl0bGUge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbn0iXX0= */"]
       });
       /*@__PURE__*/
@@ -8985,21 +9007,21 @@
           }]
         }], function () {
           return [{
-            type: _tag_management_service__WEBPACK_IMPORTED_MODULE_3__["TagManagementService"]
+            type: _tag_management_service__WEBPACK_IMPORTED_MODULE_4__["TagManagementService"]
           }, {
             type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
           }, {
-            type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_4__["SnackbarService"]
+            type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_5__["SnackbarService"]
           }, {
-            type: src_app_shared_service_companies_service__WEBPACK_IMPORTED_MODULE_5__["CompanyService"]
+            type: src_app_shared_service_companies_service__WEBPACK_IMPORTED_MODULE_6__["CompanyService"]
           }, {
-            type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_6__["AuthService"]
+            type: src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_7__["AuthService"]
           }, {
-            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_7__["UsersService"]
+            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_8__["UsersService"]
           }, {
-            type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_8__["MatDialog"]
+            type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_9__["MatDialog"]
           }, {
-            type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_9__["NotificationService"]
+            type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_10__["NotificationService"]
           }, {
             type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
           }];
@@ -9673,6 +9695,178 @@
     },
 
     /***/
+    "./src/app/modules/tag-management/publisher-tag/publisher-tag.component.ts":
+    /*!*********************************************************************************!*\
+      !*** ./src/app/modules/tag-management/publisher-tag/publisher-tag.component.ts ***!
+      \*********************************************************************************/
+
+    /*! exports provided: PublisherTagComponent */
+
+    /***/
+    function srcAppModulesTagManagementPublisherTagPublisherTagComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "PublisherTagComponent", function () {
+        return PublisherTagComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/material/dialog */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
+      /* harmony import */
+
+
+      var _tag_management_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ../tag-management.service */
+      "./src/app/modules/tag-management/tag-management.service.ts");
+      /* harmony import */
+
+
+      var src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/shared/service/snackbar.service */
+      "./src/app/shared/service/snackbar.service.ts");
+      /* harmony import */
+
+
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @angular/material/button */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
+
+      var PublisherTagComponent = /*#__PURE__*/function () {
+        function PublisherTagComponent(dialogRef, data, tagManagementService, _snackBarService) {
+          _classCallCheck(this, PublisherTagComponent);
+
+          this.dialogRef = dialogRef;
+          this.data = data;
+          this.tagManagementService = tagManagementService;
+          this._snackBarService = _snackBarService;
+        }
+
+        _createClass(PublisherTagComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {
+            console.log(this.data);
+          }
+        }, {
+          key: "onNoClick",
+          value: function onNoClick() {
+            this.dialogRef.close();
+          }
+        }, {
+          key: "store",
+          value: function store() {
+            var _this41 = this;
+
+            this.tagManagementService.addPublisherTag(this.data.tagData._id, this.data.companyId, this.data.tagData.publisher).subscribe(function (res) {
+              _this41.dialogRef.close();
+
+              _this41._snackBarService.info('Added a new tag into the publisher account');
+            });
+          }
+        }]);
+
+        return PublisherTagComponent;
+      }();
+
+      PublisherTagComponent.ɵfac = function PublisherTagComponent_Factory(t) {
+        return new (t || PublisherTagComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]));
+      };
+
+      PublisherTagComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+        type: PublisherTagComponent,
+        selectors: [["app-publisher-tag"]],
+        decls: 10,
+        vars: 0,
+        consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], ["mat-dialog-actions", "", 2, "justify-content", "end"], ["mat-raised-button", "", "color", "secondary", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click"]],
+        template: function PublisherTagComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h1", 0);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "Pulisher Tag");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "p");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4, "Would you like to add this tag to publisher account?");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "button", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PublisherTagComponent_Template_button_click_6_listener() {
+              return ctx.onNoClick();
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, "No");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "button", 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PublisherTagComponent_Template_button_click_8_listener() {
+              return ctx.store();
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Yes");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          }
+        },
+        directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogTitle"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogContent"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_4__["MatButton"]],
+        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvdGFnLW1hbmFnZW1lbnQvcHVibGlzaGVyLXRhZy9wdWJsaXNoZXItdGFnLmNvbXBvbmVudC5zY3NzIn0= */"]
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PublisherTagComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+          args: [{
+            selector: 'app-publisher-tag',
+            templateUrl: './publisher-tag.component.html',
+            styleUrls: ['./publisher-tag.component.scss']
+          }]
+        }], function () {
+          return [{
+            type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]
+          }, {
+            type: undefined,
+            decorators: [{
+              type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+              args: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]]
+            }]
+          }, {
+            type: _tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]
+          }, {
+            type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/modules/tag-management/rubi-tag/rubi-tag.component.ts":
     /*!***********************************************************************!*\
       !*** ./src/app/modules/tag-management/rubi-tag/rubi-tag.component.ts ***!
@@ -10172,34 +10366,34 @@
         }, {
           key: "getRubiTags",
           value: function getRubiTags() {
-            var _this41 = this;
+            var _this42 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this41.tagList = x;
-              _this41.rows = _this41.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this41.localStorageCompany && tag.advertiser == "rubi";
+              _this42.tagList = x;
+              _this42.rows = _this42.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this42.localStorageCompany && tag.advertiser == "rubi";
               });
-              _this41.loadingIndicator = false;
+              _this42.loadingIndicator = false;
 
-              _this41.cdr.detectChanges();
+              _this42.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherRubi",
           value: function getPublisherRubi() {
-            var _this42 = this;
+            var _this43 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this42.localStorageCompany) {
-                _this42.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this42.localStorageCompany);
+              if (_this43.localStorageCompany) {
+                _this43.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this43.localStorageCompany);
                 });
               } else {
-                _this42.publishertempList = data;
+                _this43.publishertempList = data;
               }
 
-              _this42.publishertempList.map(function (publisher) {
-                _this42.publisherList.push({
+              _this43.publishertempList.map(function (publisher) {
+                _this43.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -10214,13 +10408,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this43 = this;
+            var _this44 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this43.getRubiTags();
+                _this44.getRubiTags();
 
-                _this43._snackBarService.info('Deleted a tag');
+                _this44._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -10232,11 +10426,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this44 = this;
+            var _this45 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this44.localStorageCompany && tag.advertiser == "rubi";
+              return tag.company[0]['_id'] == _this45.localStorageCompany && tag.advertiser == "rubi";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -10249,17 +10443,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this45 = this;
+            var _this46 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this45.localStorageCompany && tag.publisher[0]['_key'] == _this45.publisherValue && tag.advertiser == "rubi";
+                return tag.company[0]['_id'] == _this46.localStorageCompany && tag.publisher[0]['_key'] == _this46.publisherValue && tag.advertiser == "rubi";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this45.localStorageCompany && tag.advertiser == "rubi";
+                return tag.company[0]['_id'] == _this46.localStorageCompany && tag.advertiser == "rubi";
               });
             }
 
@@ -10830,34 +11024,34 @@
         }, {
           key: "getSolexBCTags",
           value: function getSolexBCTags() {
-            var _this46 = this;
+            var _this47 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this46.tagList = x;
-              _this46.rows = _this46.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this46.localStorageCompany && tag.advertiser == "solex-bc";
+              _this47.tagList = x;
+              _this47.rows = _this47.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this47.localStorageCompany && tag.advertiser == "solex-bc";
               });
-              _this46.loadingIndicator = false;
+              _this47.loadingIndicator = false;
 
-              _this46.cdr.detectChanges();
+              _this47.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherSolexBC",
           value: function getPublisherSolexBC() {
-            var _this47 = this;
+            var _this48 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this47.localStorageCompany) {
-                _this47.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this47.localStorageCompany);
+              if (_this48.localStorageCompany) {
+                _this48.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this48.localStorageCompany);
                 });
               } else {
-                _this47.publishertempList = data;
+                _this48.publishertempList = data;
               }
 
-              _this47.publishertempList.map(function (publisher) {
-                _this47.publisherList.push({
+              _this48.publishertempList.map(function (publisher) {
+                _this48.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -10872,13 +11066,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this48 = this;
+            var _this49 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this48.getSolexBCTags();
+                _this49.getSolexBCTags();
 
-                _this48._snackBarService.info('Deleted a tag');
+                _this49._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -10890,11 +11084,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this49 = this;
+            var _this50 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this49.localStorageCompany && tag.advertiser == "solex-bc";
+              return tag.company[0]['_id'] == _this50.localStorageCompany && tag.advertiser == "solex-bc";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -10907,17 +11101,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this50 = this;
+            var _this51 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this50.localStorageCompany && tag.publisher[0]['_key'] == _this50.publisherValue && tag.advertiser == "solex-bc";
+                return tag.company[0]['_id'] == _this51.localStorageCompany && tag.publisher[0]['_key'] == _this51.publisherValue && tag.advertiser == "solex-bc";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this50.localStorageCompany && tag.advertiser == "solex-bc";
+                return tag.company[0]['_id'] == _this51.localStorageCompany && tag.advertiser == "solex-bc";
               });
             }
 
@@ -11488,34 +11682,34 @@
         }, {
           key: "getSystem1Tags",
           value: function getSystem1Tags() {
-            var _this51 = this;
+            var _this52 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this51.tagList = x;
-              _this51.rows = _this51.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this51.localStorageCompany && tag.advertiser == "system1";
+              _this52.tagList = x;
+              _this52.rows = _this52.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this52.localStorageCompany && tag.advertiser == "system1";
               });
-              _this51.loadingIndicator = false;
+              _this52.loadingIndicator = false;
 
-              _this51.cdr.detectChanges();
+              _this52.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherSystem1",
           value: function getPublisherSystem1() {
-            var _this52 = this;
+            var _this53 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this52.localStorageCompany) {
-                _this52.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this52.localStorageCompany);
+              if (_this53.localStorageCompany) {
+                _this53.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this53.localStorageCompany);
                 });
               } else {
-                _this52.publishertempList = data;
+                _this53.publishertempList = data;
               }
 
-              _this52.publishertempList.map(function (publisher) {
-                _this52.publisherList.push({
+              _this53.publishertempList.map(function (publisher) {
+                _this53.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -11530,13 +11724,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this53 = this;
+            var _this54 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this53.getSystem1Tags();
+                _this54.getSystem1Tags();
 
-                _this53._snackBarService.info('Deleted a tag');
+                _this54._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -11548,11 +11742,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this54 = this;
+            var _this55 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this54.localStorageCompany && tag.advertiser == "system1";
+              return tag.company[0]['_id'] == _this55.localStorageCompany && tag.advertiser == "system1";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -11565,17 +11759,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this55 = this;
+            var _this56 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this55.localStorageCompany && tag.publisher[0]['_key'] == _this55.publisherValue && tag.advertiser == "system1";
+                return tag.company[0]['_id'] == _this56.localStorageCompany && tag.publisher[0]['_key'] == _this56.publisherValue && tag.advertiser == "system1";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this55.localStorageCompany && tag.advertiser == "system1";
+                return tag.company[0]['_id'] == _this56.localStorageCompany && tag.advertiser == "system1";
               });
             }
 
@@ -12122,6 +12316,12 @@
       var _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
       /*! ./hopkin-tag/hopkin-tag.component */
       "./src/app/modules/tag-management/hopkin-tag/hopkin-tag.component.ts");
+      /* harmony import */
+
+
+      var _publisher_tag_publisher_tag_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
+      /*! ./publisher-tag/publisher-tag.component */
+      "./src/app/modules/tag-management/publisher-tag/publisher-tag.component.ts");
 
       var TagManagementModule = function TagManagementModule() {
         _classCallCheck(this, TagManagementModule);
@@ -12140,7 +12340,7 @@
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](TagManagementModule, {
-          declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"], _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__["HopkinTagComponent"]],
+          declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"], _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__["HopkinTagComponent"], _publisher_tag_publisher_tag_component__WEBPACK_IMPORTED_MODULE_30__["PublisherTagComponent"]],
           imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _tag_management_routing_module__WEBPACK_IMPORTED_MODULE_2__["TagManagementRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_5__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButtonModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelectModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_10__["MatCheckboxModule"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_12__["MatSnackBarModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["NgxDatatableModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialogModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_20__["InlineSVGModule"]]
         });
       })();
@@ -12151,7 +12351,7 @@
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TagManagementModule, [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
-            declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"], _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__["HopkinTagComponent"]],
+            declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"], _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__["HopkinTagComponent"], _publisher_tag_publisher_tag_component__WEBPACK_IMPORTED_MODULE_30__["PublisherTagComponent"]],
             imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _tag_management_routing_module__WEBPACK_IMPORTED_MODULE_2__["TagManagementRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_5__["MatFormFieldModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_7__["MatInputModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_8__["MatButtonModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelectModule"], _angular_material_checkbox__WEBPACK_IMPORTED_MODULE_10__["MatCheckboxModule"], _angular_material_snack_bar__WEBPACK_IMPORTED_MODULE_12__["MatSnackBarModule"], _angular_material_icon__WEBPACK_IMPORTED_MODULE_14__["MatIconModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_13__["NgxDatatableModule"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialogModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_20__["InlineSVGModule"]],
             providers: [src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_11__["SnackbarService"]],
             entryComponents: [_new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"]]
@@ -12217,6 +12417,11 @@
           key: "addTag",
           value: function addTag(tag) {
             return this.tagsService.add(tag);
+          }
+        }, {
+          key: "addPublisherTag",
+          value: function addPublisherTag(tagId, companyId, publisherId) {
+            return this.tagsService.addPublisherTag(tagId, companyId, publisherId);
           }
         }, {
           key: "getAllTags",
@@ -12939,20 +13144,20 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this56 = this;
+            var _this57 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this56.getAllTags();
+                _this57.getAllTags();
 
-                _this56._snackBarService.info('Deleted a tag');
+                _this57._snackBarService.info('Deleted a tag');
               });
             }
           }
         }, {
           key: "getAdvertiserList",
           value: function getAdvertiserList() {
-            var _this57 = this;
+            var _this58 = this;
 
             if (this.localStorageCompany) {
               this.tagFilterService.getTagAdvertiser(this.localStorageCompany.split('/')[1]).subscribe(function (res) {
@@ -12971,7 +13176,7 @@
                       viewValue = adverValue.charAt(0).toUpperCase() + adverValue.slice(1);
                     }
 
-                    _this57.reportingProviderList.push({
+                    _this58.reportingProviderList.push({
                       value: adverValue,
                       viewValue: viewValue
                     });
@@ -12987,20 +13192,20 @@
         }, {
           key: "getPublisherAll",
           value: function getPublisherAll() {
-            var _this58 = this;
+            var _this59 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
               // console.log(data);
-              if (_this58.localStorageCompany) {
-                _this58.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this58.localStorageCompany);
+              if (_this59.localStorageCompany) {
+                _this59.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this59.localStorageCompany);
                 });
               } else {
-                _this58.publishertempList = data;
+                _this59.publishertempList = data;
               }
 
-              _this58.publishertempList.map(function (publisher) {
-                _this58.publisherList.push({
+              _this59.publishertempList.map(function (publisher) {
+                _this59.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -13010,40 +13215,17 @@
         }, {
           key: "handleChangeProvider",
           value: function handleChangeProvider(event) {
-            var _this59 = this;
+            var _this60 = this;
 
             this.advertiserValue = event;
 
             if (this.advertiserValue && this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this59.localStorageCompany && tag.advertiser == _this59.advertiserValue && tag.publisher[0]['_key'] == _this59.publisherValue;
+                return tag.company[0]['_id'] == _this60.localStorageCompany && tag.advertiser == _this60.advertiserValue && tag.publisher[0]['_key'] == _this60.publisherValue;
               });
             } else if (this.advertiserValue && !this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this59.localStorageCompany && tag.advertiser == _this59.advertiserValue;
-              });
-            } else {
-              this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this59.localStorageCompany;
-              });
-            }
-
-            this.cdr.detectChanges();
-          }
-        }, {
-          key: "handleChangePublisher",
-          value: function handleChangePublisher(event) {
-            var _this60 = this;
-
-            this.publisherValue = event;
-
-            if (this.advertiserValue && this.publisherValue) {
-              this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this60.localStorageCompany && tag.publisher[0]['_key'] == _this60.publisherValue && tag.advertiser == _this60.advertiserValue;
-              });
-            } else if (!this.advertiserValue && this.publisherValue) {
-              this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this60.localStorageCompany && tag.publisher[0]['_key'] == _this60.publisherValue;
+                return tag.company[0]['_id'] == _this60.localStorageCompany && tag.advertiser == _this60.advertiserValue;
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
@@ -13054,18 +13236,41 @@
             this.cdr.detectChanges();
           }
         }, {
-          key: "getAllTags",
-          value: function getAllTags() {
+          key: "handleChangePublisher",
+          value: function handleChangePublisher(event) {
             var _this61 = this;
 
-            this.tagService.getAllTags().subscribe(function (x) {
-              _this61.tagList = x;
-              _this61.rows = _this61.tagList.filter(function (tag) {
+            this.publisherValue = event;
+
+            if (this.advertiserValue && this.publisherValue) {
+              this.rows = this.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this61.localStorageCompany && tag.publisher[0]['_key'] == _this61.publisherValue && tag.advertiser == _this61.advertiserValue;
+              });
+            } else if (!this.advertiserValue && this.publisherValue) {
+              this.rows = this.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this61.localStorageCompany && tag.publisher[0]['_key'] == _this61.publisherValue;
+              });
+            } else {
+              this.rows = this.tagList.filter(function (tag) {
                 return tag.company[0]['_id'] == _this61.localStorageCompany;
               });
-              _this61.loadingIndicator = false;
+            }
 
-              _this61.cdr.detectChanges();
+            this.cdr.detectChanges();
+          }
+        }, {
+          key: "getAllTags",
+          value: function getAllTags() {
+            var _this62 = this;
+
+            this.tagService.getAllTags().subscribe(function (x) {
+              _this62.tagList = x;
+              _this62.rows = _this62.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this62.localStorageCompany;
+              });
+              _this62.loadingIndicator = false;
+
+              _this62.cdr.detectChanges();
             });
           } //Gets the Selected Company from Local Storage
 
@@ -13082,12 +13287,12 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this62 = this;
+            var _this63 = this;
 
             this.publisherValue = "";
             this.advertiserValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this62.localStorageCompany;
+              return tag.company[0]['_id'] == _this63.localStorageCompany;
             });
             this.cdr.detectChanges();
           }
@@ -13861,30 +14066,30 @@
         }, {
           key: "deleteTemplate",
           value: function deleteTemplate(id) {
-            var _this63 = this;
+            var _this64 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTemplate(id).subscribe(function (res) {
-                _this63.getAllTemplates();
+                _this64.getAllTemplates();
 
-                _this63._snackBarService.info('Deleted a Template');
+                _this64._snackBarService.info('Deleted a Template');
               });
             }
           }
         }, {
           key: "getAllTemplates",
           value: function getAllTemplates() {
-            var _this64 = this;
+            var _this65 = this;
 
             this.tagService.getAllTemplates().subscribe(function (x) {
-              _this64.templateList = x;
+              _this65.templateList = x;
               console.log(x);
-              _this64.rows = _this64.templateList.filter(function (template) {
-                return template.company[0]['_id'] == _this64.localStorageCompany;
+              _this65.rows = _this65.templateList.filter(function (template) {
+                return template.company[0]['_id'] == _this65.localStorageCompany;
               });
-              _this64.loadingIndicator = false;
+              _this65.loadingIndicator = false;
 
-              _this64.cdr.detectChanges();
+              _this65.cdr.detectChanges();
             });
           } //Gets the Selected Company from Local Storage
 
@@ -14456,34 +14661,34 @@
         }, {
           key: "getVerizonDirectTags",
           value: function getVerizonDirectTags() {
-            var _this65 = this;
+            var _this66 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this65.tagList = x;
-              _this65.rows = _this65.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this65.localStorageCompany && tag.advertiser == "verizon-direct";
+              _this66.tagList = x;
+              _this66.rows = _this66.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this66.localStorageCompany && tag.advertiser == "verizon-direct";
               });
-              _this65.loadingIndicator = false;
+              _this66.loadingIndicator = false;
 
-              _this65.cdr.detectChanges();
+              _this66.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherVerizonDirect",
           value: function getPublisherVerizonDirect() {
-            var _this66 = this;
+            var _this67 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this66.localStorageCompany) {
-                _this66.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this66.localStorageCompany);
+              if (_this67.localStorageCompany) {
+                _this67.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this67.localStorageCompany);
                 });
               } else {
-                _this66.publishertempList = data;
+                _this67.publishertempList = data;
               }
 
-              _this66.publishertempList.map(function (publisher) {
-                _this66.publisherList.push({
+              _this67.publishertempList.map(function (publisher) {
+                _this67.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -14498,13 +14703,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this67 = this;
+            var _this68 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this67.getVerizonDirectTags();
+                _this68.getVerizonDirectTags();
 
-                _this67._snackBarService.info('Deleted a tag');
+                _this68._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -14516,11 +14721,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this68 = this;
+            var _this69 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this68.localStorageCompany && tag.advertiser == "verizon-direct";
+              return tag.company[0]['_id'] == _this69.localStorageCompany && tag.advertiser == "verizon-direct";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -14533,17 +14738,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this69 = this;
+            var _this70 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this69.localStorageCompany && tag.publisher[0]['_key'] == _this69.publisherValue && tag.advertiser == "verizon-direct";
+                return tag.company[0]['_id'] == _this70.localStorageCompany && tag.publisher[0]['_key'] == _this70.publisherValue && tag.advertiser == "verizon-direct";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this69.localStorageCompany && tag.advertiser == "verizon-direct";
+                return tag.company[0]['_id'] == _this70.localStorageCompany && tag.advertiser == "verizon-direct";
               });
             }
 

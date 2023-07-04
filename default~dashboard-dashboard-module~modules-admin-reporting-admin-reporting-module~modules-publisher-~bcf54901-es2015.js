@@ -30,6 +30,9 @@ class TagManagementService {
     addTag(tag) {
         return this.tagsService.add(tag);
     }
+    addPublisherTag(tagId, companyId, publisherId) {
+        return this.tagsService.addPublisherTag(tagId, companyId, publisherId);
+    }
     getAllTags() {
         return this.tagsService.getAllTags();
     }

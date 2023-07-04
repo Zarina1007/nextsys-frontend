@@ -63,6 +63,11 @@
             return this.tagsService.add(tag);
           }
         }, {
+          key: "addPublisherTag",
+          value: function addPublisherTag(tagId, companyId, publisherId) {
+            return this.tagsService.addPublisherTag(tagId, companyId, publisherId);
+          }
+        }, {
           key: "getAllTags",
           value: function getAllTags() {
             return this.tagsService.getAllTags();

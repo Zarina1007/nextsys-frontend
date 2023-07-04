@@ -51351,6 +51351,7 @@
 
       var API_TAGS_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl, "/tags");
       var API_TEMPLATES_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl, "/templates");
+      var API_PUBLISHER_TAG_URL = "".concat(src_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].apiUrl, "/users/update-publisher-tag");
 
       var TagsService = /*#__PURE__*/function () {
         function TagsService(http) {
@@ -51368,6 +51369,16 @@
           key: "add",
           value: function add(tag) {
             return this.http.post(API_TAGS_URL, tag);
+          }
+        }, {
+          key: "addPublisherTag",
+          value: function addPublisherTag(tagId, companyId, publisherId) {
+            var data = {
+              tagId: tagId,
+              companyId: companyId,
+              publisherId: publisherId
+            };
+            return this.http.post(API_PUBLISHER_TAG_URL, data);
           }
         }, {
           key: "getChrome",
