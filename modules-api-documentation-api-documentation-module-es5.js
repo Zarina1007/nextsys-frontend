@@ -535,7 +535,7 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "span", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "http://api.nextsys.io/api/publisher/reporting/api?apiKey=APIKEY&tag=TAGID&startDate=MM-DD-YYYY&endDate=MM-DD-YYYY");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "http://api.nextsys.io/api/publisher/reporting/api?apiKey=PUBLISHER_API_KEY&tag=TAG_ID&startDate=MM-DD-YYYY&endDate=MM-DD-YYYY");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
