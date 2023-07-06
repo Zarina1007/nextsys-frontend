@@ -223,10 +223,8 @@ class PublisherDocumentationComponent {
     }
     ngOnInit() {
         this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
-        console.log(this.selectedCompany);
         this.currentUser = this.authService.currentUserValue;
         this.userApiKey = this.currentUser.apiKey;
-        console.log(this.currentUser);
         if (this.currentUser.tagsId[this.selectedCompany]) {
             this.tagIds = this.currentUser.tagsId[this.selectedCompany].map((tagId) => {
                 const tagKey = tagId.split("/")[1];
