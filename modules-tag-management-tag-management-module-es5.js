@@ -9746,12 +9746,56 @@
       /* harmony import */
 
 
-      var _angular_material_button__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ngx-clipboard */
+      "./node_modules/ngx-clipboard/__ivy_ngcc__/fesm2015/ngx-clipboard.js");
+      /* harmony import */
+
+
+      var _angular_material_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/material/button */
       "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/button.js");
+      /* harmony import */
+
+
+      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! ng-inline-svg */
+      "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+
+      function PublisherTagComponent_span_9_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "span", 10);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PublisherTagComponent_span_9_Template_span_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r3);
+
+            var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+
+            return ctx_r2.openClipBoard();
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/General/Clipboard.svg");
+        }
+      }
+
+      function PublisherTagComponent_span_10_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "span", 11);
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/General/Clip.svg");
+        }
+      }
 
       var PublisherTagComponent = /*#__PURE__*/function () {
-        function PublisherTagComponent(dialogRef, data, tagManagementService, _snackBarService, datePipe) {
+        function PublisherTagComponent(dialogRef, data, tagManagementService, _snackBarService, datePipe, clipboardService, cdr) {
           _classCallCheck(this, PublisherTagComponent);
 
           this.dialogRef = dialogRef;
@@ -9759,6 +9803,9 @@
           this.tagManagementService = tagManagementService;
           this._snackBarService = _snackBarService;
           this.datePipe = datePipe;
+          this.clipboardService = clipboardService;
+          this.cdr = cdr;
+          this.copied = false;
           var today = new Date();
           var previousDate = new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000);
           this.currentDate = this.datePipe.transform(today, 'MM-dd-yyyy');
@@ -9769,7 +9816,9 @@
           key: "ngOnInit",
           value: function ngOnInit() {
             // console.log(this.data)
-            this.reportingUrl = "http://api.nextsys.io/api/publisher/reporting/api?apiKey=".concat(this.data.tagData.publisher.apiKey, "&tag=").concat(this.data.tagData.tag._key, "&startDate=").concat(this.beforeDate, "&endDate=").concat(this.currentDate, "&reportType=csv");
+            this.publisherApikey = this.data.tagData.publisher.apiKey;
+            this.tagKey = this.data.tagData.tag._key;
+            this.reportingUrl = "http://api.nextsys.io/api/publisher/reporting/api?apiKey=".concat(this.publisherApikey, "&tag=").concat(this.tagKey, "&startDate=").concat(this.beforeDate, "&endDate=").concat(this.currentDate, "&reportType=csv");
           }
         }, {
           key: "onNoClick",
@@ -9787,21 +9836,36 @@
               _this41._snackBarService.info('Added a new tag into the publisher account');
             });
           }
+        }, {
+          key: "openClipBoard",
+          value: function openClipBoard() {
+            var _this42 = this;
+
+            this.copied = !this.copied;
+            var reportApi = "http://api.nextsys.io/api/publisher/reporting/api?apiKey=".concat(this.publisherApikey, "&tag=").concat(this.tagKey, "&startDate=").concat(this.beforeDate, "&endDate=").concat(this.currentDate, "&reportType=csv");
+            this.clipboardService.copyFromContent(reportApi);
+            setTimeout(function () {
+              _this42.copied = !_this42.copied;
+
+              _this42.cdr.detectChanges();
+            }, 3000);
+            this.cdr.detectChanges();
+          }
         }]);
 
         return PublisherTagComponent;
       }();
 
       PublisherTagComponent.ɵfac = function PublisherTagComponent_Factory(t) {
-        return new (t || PublisherTagComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_4__["DatePipe"]));
+        return new (t || PublisherTagComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MAT_DIALOG_DATA"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_service__WEBPACK_IMPORTED_MODULE_2__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_4__["DatePipe"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__["ClipboardService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]));
       };
 
       PublisherTagComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: PublisherTagComponent,
         selectors: [["app-publisher-tag"]],
-        decls: 12,
-        vars: 1,
-        consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], [2, "word-break", "break-word"], ["mat-dialog-actions", "", 2, "justify-content", "end"], ["mat-raised-button", "", "color", "secondary", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click"]],
+        decls: 16,
+        vars: 3,
+        consts: [["mat-dialog-title", ""], ["mat-dialog-content", ""], [1, "reporting-api"], [2, "word-break", "break-word"], ["title", "Copy API", 1, "btn", "btn-sm"], ["cacheSVG", "true", "class", "svg-icon svg-icon-md svg-icon-primary", 3, "inlineSVG", "click", 4, "ngIf"], ["cacheSVG", "true", "class", "svg-icon svg-icon-md svg-icon-primary", 3, "inlineSVG", 4, "ngIf"], ["mat-dialog-actions", "", 2, "justify-content", "end"], ["mat-raised-button", "", "color", "secondary", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click"], ["cacheSVG", "true", 1, "svg-icon", "svg-icon-md", "svg-icon-primary", 3, "inlineSVG", "click"], ["cacheSVG", "true", 1, "svg-icon", "svg-icon-md", "svg-icon-primary", 3, "inlineSVG"]],
         template: function PublisherTagComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "h1", 0);
@@ -9818,33 +9882,45 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "p", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "div", 2);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "a", 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](9, PublisherTagComponent_span_9_Template, 1, 1, "span", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](10, PublisherTagComponent_span_10_Template, 1, 1, "span", 6);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "button", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PublisherTagComponent_Template_button_click_8_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "button", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PublisherTagComponent_Template_button_click_12_listener() {
               return ctx.onNoClick();
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "No");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "No");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "button", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "button", 9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PublisherTagComponent_Template_button_click_10_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function PublisherTagComponent_Template_button_click_14_listener() {
               return ctx.store();
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Yes");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](15, "Yes");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -9852,13 +9928,21 @@
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Reporting Url: ", ctx.reportingUrl, "");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.copied);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.copied);
           }
         },
-        directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogTitle"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogContent"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_5__["MatButton"]],
-        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvdGFnLW1hbmFnZW1lbnQvcHVibGlzaGVyLXRhZy9wdWJsaXNoZXItdGFnLmNvbXBvbmVudC5zY3NzIn0= */"]
+        directives: [_angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogTitle"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogContent"], _angular_common__WEBPACK_IMPORTED_MODULE_4__["NgIf"], _angular_material_dialog__WEBPACK_IMPORTED_MODULE_1__["MatDialogActions"], _angular_material_button__WEBPACK_IMPORTED_MODULE_6__["MatButton"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGDirective"]],
+        styles: [".reporting-api[_ngcontent-%COMP%] {\n  display: flex;\n  margin: 2px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy90YWctbWFuYWdlbWVudC9wdWJsaXNoZXItdGFnL3B1Ymxpc2hlci10YWcuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxhQUFBO0VBQ0EsV0FBQTtBQUNKIiwiZmlsZSI6InNyYy9hcHAvbW9kdWxlcy90YWctbWFuYWdlbWVudC9wdWJsaXNoZXItdGFnL3B1Ymxpc2hlci10YWcuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucmVwb3J0aW5nLWFwaSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgbWFyZ2luOiAycHg7XHJcbn0iXX0= */"]
       });
       /*@__PURE__*/
 
@@ -9885,6 +9969,10 @@
             type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]
           }, {
             type: _angular_common__WEBPACK_IMPORTED_MODULE_4__["DatePipe"]
+          }, {
+            type: ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__["ClipboardService"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
           }];
         }, null);
       })();
@@ -10392,34 +10480,34 @@
         }, {
           key: "getRubiTags",
           value: function getRubiTags() {
-            var _this42 = this;
+            var _this43 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this42.tagList = x;
-              _this42.rows = _this42.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this42.localStorageCompany && tag.advertiser == "rubi";
+              _this43.tagList = x;
+              _this43.rows = _this43.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this43.localStorageCompany && tag.advertiser == "rubi";
               });
-              _this42.loadingIndicator = false;
+              _this43.loadingIndicator = false;
 
-              _this42.cdr.detectChanges();
+              _this43.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherRubi",
           value: function getPublisherRubi() {
-            var _this43 = this;
+            var _this44 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this43.localStorageCompany) {
-                _this43.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this43.localStorageCompany);
+              if (_this44.localStorageCompany) {
+                _this44.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this44.localStorageCompany);
                 });
               } else {
-                _this43.publishertempList = data;
+                _this44.publishertempList = data;
               }
 
-              _this43.publishertempList.map(function (publisher) {
-                _this43.publisherList.push({
+              _this44.publishertempList.map(function (publisher) {
+                _this44.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -10434,13 +10522,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this44 = this;
+            var _this45 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this44.getRubiTags();
+                _this45.getRubiTags();
 
-                _this44._snackBarService.info('Deleted a tag');
+                _this45._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -10452,11 +10540,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this45 = this;
+            var _this46 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this45.localStorageCompany && tag.advertiser == "rubi";
+              return tag.company[0]['_id'] == _this46.localStorageCompany && tag.advertiser == "rubi";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -10469,17 +10557,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this46 = this;
+            var _this47 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this46.localStorageCompany && tag.publisher[0]['_key'] == _this46.publisherValue && tag.advertiser == "rubi";
+                return tag.company[0]['_id'] == _this47.localStorageCompany && tag.publisher[0]['_key'] == _this47.publisherValue && tag.advertiser == "rubi";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this46.localStorageCompany && tag.advertiser == "rubi";
+                return tag.company[0]['_id'] == _this47.localStorageCompany && tag.advertiser == "rubi";
               });
             }
 
@@ -11050,34 +11138,34 @@
         }, {
           key: "getSolexBCTags",
           value: function getSolexBCTags() {
-            var _this47 = this;
+            var _this48 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this47.tagList = x;
-              _this47.rows = _this47.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this47.localStorageCompany && tag.advertiser == "solex-bc";
+              _this48.tagList = x;
+              _this48.rows = _this48.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this48.localStorageCompany && tag.advertiser == "solex-bc";
               });
-              _this47.loadingIndicator = false;
+              _this48.loadingIndicator = false;
 
-              _this47.cdr.detectChanges();
+              _this48.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherSolexBC",
           value: function getPublisherSolexBC() {
-            var _this48 = this;
+            var _this49 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this48.localStorageCompany) {
-                _this48.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this48.localStorageCompany);
+              if (_this49.localStorageCompany) {
+                _this49.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this49.localStorageCompany);
                 });
               } else {
-                _this48.publishertempList = data;
+                _this49.publishertempList = data;
               }
 
-              _this48.publishertempList.map(function (publisher) {
-                _this48.publisherList.push({
+              _this49.publishertempList.map(function (publisher) {
+                _this49.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -11092,13 +11180,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this49 = this;
+            var _this50 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this49.getSolexBCTags();
+                _this50.getSolexBCTags();
 
-                _this49._snackBarService.info('Deleted a tag');
+                _this50._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -11110,11 +11198,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this50 = this;
+            var _this51 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this50.localStorageCompany && tag.advertiser == "solex-bc";
+              return tag.company[0]['_id'] == _this51.localStorageCompany && tag.advertiser == "solex-bc";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -11127,17 +11215,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this51 = this;
+            var _this52 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this51.localStorageCompany && tag.publisher[0]['_key'] == _this51.publisherValue && tag.advertiser == "solex-bc";
+                return tag.company[0]['_id'] == _this52.localStorageCompany && tag.publisher[0]['_key'] == _this52.publisherValue && tag.advertiser == "solex-bc";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this51.localStorageCompany && tag.advertiser == "solex-bc";
+                return tag.company[0]['_id'] == _this52.localStorageCompany && tag.advertiser == "solex-bc";
               });
             }
 
@@ -11708,34 +11796,34 @@
         }, {
           key: "getSystem1Tags",
           value: function getSystem1Tags() {
-            var _this52 = this;
+            var _this53 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this52.tagList = x;
-              _this52.rows = _this52.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this52.localStorageCompany && tag.advertiser == "system1";
+              _this53.tagList = x;
+              _this53.rows = _this53.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this53.localStorageCompany && tag.advertiser == "system1";
               });
-              _this52.loadingIndicator = false;
+              _this53.loadingIndicator = false;
 
-              _this52.cdr.detectChanges();
+              _this53.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherSystem1",
           value: function getPublisherSystem1() {
-            var _this53 = this;
+            var _this54 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this53.localStorageCompany) {
-                _this53.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this53.localStorageCompany);
+              if (_this54.localStorageCompany) {
+                _this54.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this54.localStorageCompany);
                 });
               } else {
-                _this53.publishertempList = data;
+                _this54.publishertempList = data;
               }
 
-              _this53.publishertempList.map(function (publisher) {
-                _this53.publisherList.push({
+              _this54.publishertempList.map(function (publisher) {
+                _this54.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -11750,13 +11838,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this54 = this;
+            var _this55 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this54.getSystem1Tags();
+                _this55.getSystem1Tags();
 
-                _this54._snackBarService.info('Deleted a tag');
+                _this55._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -11768,11 +11856,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this55 = this;
+            var _this56 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this55.localStorageCompany && tag.advertiser == "system1";
+              return tag.company[0]['_id'] == _this56.localStorageCompany && tag.advertiser == "system1";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -11785,17 +11873,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this56 = this;
+            var _this57 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this56.localStorageCompany && tag.publisher[0]['_key'] == _this56.publisherValue && tag.advertiser == "system1";
+                return tag.company[0]['_id'] == _this57.localStorageCompany && tag.publisher[0]['_key'] == _this57.publisherValue && tag.advertiser == "system1";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this56.localStorageCompany && tag.advertiser == "system1";
+                return tag.company[0]['_id'] == _this57.localStorageCompany && tag.advertiser == "system1";
               });
             }
 
@@ -13170,20 +13258,20 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this57 = this;
+            var _this58 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this57.getAllTags();
+                _this58.getAllTags();
 
-                _this57._snackBarService.info('Deleted a tag');
+                _this58._snackBarService.info('Deleted a tag');
               });
             }
           }
         }, {
           key: "getAdvertiserList",
           value: function getAdvertiserList() {
-            var _this58 = this;
+            var _this59 = this;
 
             if (this.localStorageCompany) {
               this.tagFilterService.getTagAdvertiser(this.localStorageCompany.split('/')[1]).subscribe(function (res) {
@@ -13202,7 +13290,7 @@
                       viewValue = adverValue.charAt(0).toUpperCase() + adverValue.slice(1);
                     }
 
-                    _this58.reportingProviderList.push({
+                    _this59.reportingProviderList.push({
                       value: adverValue,
                       viewValue: viewValue
                     });
@@ -13218,20 +13306,20 @@
         }, {
           key: "getPublisherAll",
           value: function getPublisherAll() {
-            var _this59 = this;
+            var _this60 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
               // console.log(data);
-              if (_this59.localStorageCompany) {
-                _this59.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this59.localStorageCompany);
+              if (_this60.localStorageCompany) {
+                _this60.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this60.localStorageCompany);
                 });
               } else {
-                _this59.publishertempList = data;
+                _this60.publishertempList = data;
               }
 
-              _this59.publishertempList.map(function (publisher) {
-                _this59.publisherList.push({
+              _this60.publishertempList.map(function (publisher) {
+                _this60.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -13241,40 +13329,17 @@
         }, {
           key: "handleChangeProvider",
           value: function handleChangeProvider(event) {
-            var _this60 = this;
+            var _this61 = this;
 
             this.advertiserValue = event;
 
             if (this.advertiserValue && this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this60.localStorageCompany && tag.advertiser == _this60.advertiserValue && tag.publisher[0]['_key'] == _this60.publisherValue;
+                return tag.company[0]['_id'] == _this61.localStorageCompany && tag.advertiser == _this61.advertiserValue && tag.publisher[0]['_key'] == _this61.publisherValue;
               });
             } else if (this.advertiserValue && !this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this60.localStorageCompany && tag.advertiser == _this60.advertiserValue;
-              });
-            } else {
-              this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this60.localStorageCompany;
-              });
-            }
-
-            this.cdr.detectChanges();
-          }
-        }, {
-          key: "handleChangePublisher",
-          value: function handleChangePublisher(event) {
-            var _this61 = this;
-
-            this.publisherValue = event;
-
-            if (this.advertiserValue && this.publisherValue) {
-              this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this61.localStorageCompany && tag.publisher[0]['_key'] == _this61.publisherValue && tag.advertiser == _this61.advertiserValue;
-              });
-            } else if (!this.advertiserValue && this.publisherValue) {
-              this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this61.localStorageCompany && tag.publisher[0]['_key'] == _this61.publisherValue;
+                return tag.company[0]['_id'] == _this61.localStorageCompany && tag.advertiser == _this61.advertiserValue;
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
@@ -13285,18 +13350,41 @@
             this.cdr.detectChanges();
           }
         }, {
-          key: "getAllTags",
-          value: function getAllTags() {
+          key: "handleChangePublisher",
+          value: function handleChangePublisher(event) {
             var _this62 = this;
 
-            this.tagService.getAllTags().subscribe(function (x) {
-              _this62.tagList = x;
-              _this62.rows = _this62.tagList.filter(function (tag) {
+            this.publisherValue = event;
+
+            if (this.advertiserValue && this.publisherValue) {
+              this.rows = this.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this62.localStorageCompany && tag.publisher[0]['_key'] == _this62.publisherValue && tag.advertiser == _this62.advertiserValue;
+              });
+            } else if (!this.advertiserValue && this.publisherValue) {
+              this.rows = this.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this62.localStorageCompany && tag.publisher[0]['_key'] == _this62.publisherValue;
+              });
+            } else {
+              this.rows = this.tagList.filter(function (tag) {
                 return tag.company[0]['_id'] == _this62.localStorageCompany;
               });
-              _this62.loadingIndicator = false;
+            }
 
-              _this62.cdr.detectChanges();
+            this.cdr.detectChanges();
+          }
+        }, {
+          key: "getAllTags",
+          value: function getAllTags() {
+            var _this63 = this;
+
+            this.tagService.getAllTags().subscribe(function (x) {
+              _this63.tagList = x;
+              _this63.rows = _this63.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this63.localStorageCompany;
+              });
+              _this63.loadingIndicator = false;
+
+              _this63.cdr.detectChanges();
             });
           } //Gets the Selected Company from Local Storage
 
@@ -13313,12 +13401,12 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this63 = this;
+            var _this64 = this;
 
             this.publisherValue = "";
             this.advertiserValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this63.localStorageCompany;
+              return tag.company[0]['_id'] == _this64.localStorageCompany;
             });
             this.cdr.detectChanges();
           }
@@ -14092,30 +14180,30 @@
         }, {
           key: "deleteTemplate",
           value: function deleteTemplate(id) {
-            var _this64 = this;
+            var _this65 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTemplate(id).subscribe(function (res) {
-                _this64.getAllTemplates();
+                _this65.getAllTemplates();
 
-                _this64._snackBarService.info('Deleted a Template');
+                _this65._snackBarService.info('Deleted a Template');
               });
             }
           }
         }, {
           key: "getAllTemplates",
           value: function getAllTemplates() {
-            var _this65 = this;
+            var _this66 = this;
 
             this.tagService.getAllTemplates().subscribe(function (x) {
-              _this65.templateList = x;
+              _this66.templateList = x;
               console.log(x);
-              _this65.rows = _this65.templateList.filter(function (template) {
-                return template.company[0]['_id'] == _this65.localStorageCompany;
+              _this66.rows = _this66.templateList.filter(function (template) {
+                return template.company[0]['_id'] == _this66.localStorageCompany;
               });
-              _this65.loadingIndicator = false;
+              _this66.loadingIndicator = false;
 
-              _this65.cdr.detectChanges();
+              _this66.cdr.detectChanges();
             });
           } //Gets the Selected Company from Local Storage
 
@@ -14687,34 +14775,34 @@
         }, {
           key: "getVerizonDirectTags",
           value: function getVerizonDirectTags() {
-            var _this66 = this;
+            var _this67 = this;
 
             this.tagService.getAllTags().subscribe(function (x) {
-              _this66.tagList = x;
-              _this66.rows = _this66.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this66.localStorageCompany && tag.advertiser == "verizon-direct";
+              _this67.tagList = x;
+              _this67.rows = _this67.tagList.filter(function (tag) {
+                return tag.company[0]['_id'] == _this67.localStorageCompany && tag.advertiser == "verizon-direct";
               });
-              _this66.loadingIndicator = false;
+              _this67.loadingIndicator = false;
 
-              _this66.cdr.detectChanges();
+              _this67.cdr.detectChanges();
             });
           }
         }, {
           key: "getPublisherVerizonDirect",
           value: function getPublisherVerizonDirect() {
-            var _this67 = this;
+            var _this68 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              if (_this67.localStorageCompany) {
-                _this67.publishertempList = data.filter(function (userData) {
-                  return userData.companies.includes(_this67.localStorageCompany);
+              if (_this68.localStorageCompany) {
+                _this68.publishertempList = data.filter(function (userData) {
+                  return userData.companies.includes(_this68.localStorageCompany);
                 });
               } else {
-                _this67.publishertempList = data;
+                _this68.publishertempList = data;
               }
 
-              _this67.publishertempList.map(function (publisher) {
-                _this67.publisherList.push({
+              _this68.publishertempList.map(function (publisher) {
+                _this68.publisherList.push({
                   value: publisher._key,
                   viewValue: publisher.fullname
                 });
@@ -14729,13 +14817,13 @@
         }, {
           key: "deleteTag",
           value: function deleteTag(id) {
-            var _this68 = this;
+            var _this69 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.tagService.deleteTag(id).subscribe(function (res) {
-                _this68.getVerizonDirectTags();
+                _this69.getVerizonDirectTags();
 
-                _this68._snackBarService.info('Deleted a tag');
+                _this69._snackBarService.info('Deleted a tag');
               });
             }
           }
@@ -14747,11 +14835,11 @@
         }, {
           key: "handleReset",
           value: function handleReset() {
-            var _this69 = this;
+            var _this70 = this;
 
             this.publisherValue = "";
             this.rows = this.tagList.filter(function (tag) {
-              return tag.company[0]['_id'] == _this69.localStorageCompany && tag.advertiser == "verizon-direct";
+              return tag.company[0]['_id'] == _this70.localStorageCompany && tag.advertiser == "verizon-direct";
             });
             this.cdr.detectChanges();
           } //Gets the Selected Company from Local Storage
@@ -14764,17 +14852,17 @@
         }, {
           key: "handleChangePublisher",
           value: function handleChangePublisher(event) {
-            var _this70 = this;
+            var _this71 = this;
 
             this.publisherValue = event;
 
             if (this.publisherValue) {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this70.localStorageCompany && tag.publisher[0]['_key'] == _this70.publisherValue && tag.advertiser == "verizon-direct";
+                return tag.company[0]['_id'] == _this71.localStorageCompany && tag.publisher[0]['_key'] == _this71.publisherValue && tag.advertiser == "verizon-direct";
               });
             } else {
               this.rows = this.tagList.filter(function (tag) {
-                return tag.company[0]['_id'] == _this70.localStorageCompany && tag.advertiser == "verizon-direct";
+                return tag.company[0]['_id'] == _this71.localStorageCompany && tag.advertiser == "verizon-direct";
               });
             }
 
