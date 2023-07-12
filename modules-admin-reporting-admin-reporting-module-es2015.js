@@ -25900,7 +25900,7 @@ class System1Component {
                 helperSummary[key].clicks += o.clicks ? parseFloat(o.clicks) : 0;
                 helperSummary[key].searches += o.searches ? parseFloat(o.searches) : 0;
                 // helperSummary[key].cpc += o.cpc ? parseFloat(o.cpc) : 0;
-                helperSummary[key].ctr += o.ctr ? parseFloat(o.ctr) : 0;
+                // helperSummary[key].ctr += o.ctr ? parseFloat(o.ctr) : 0;
                 helperSummary[key].revenue += o.revenue ? parseFloat(o.revenue) : 0;
                 helperSummary[key].split += parseFloat(o.split);
                 helperSummary[key].profit += parseFloat(o.profit);
@@ -25942,7 +25942,7 @@ class System1Component {
                 helperSummary1[key].clicks += o.clicks ? parseFloat(o.clicks) : 0;
                 helperSummary1[key].searches += o.searches ? parseFloat(o.searches) : 0;
                 // helperSummary1[key].cpc += o.cpc ? parseFloat(o.cpc) : 0;
-                helperSummary1[key].ctr += o.ctr ? parseFloat(o.ctr) : 0;
+                // helperSummary1[key].ctr += o.ctr ? parseFloat(o.ctr) : 0;
                 helperSummary1[key].revenue += o.revenue ? parseFloat(o.revenue) : 0;
                 helperSummary1[key].split += parseFloat(o.split);
                 helperSummary1[key].profit += parseFloat(o.profit);
@@ -25954,7 +25954,7 @@ class System1Component {
         console.log(groupSubData);
         for (var groupSub of groupSubData) {
             groupSub.split = groupSub.split / groupSub.counter;
-            // groupSub.ctr = groupSub.ctr / groupSub.counter;
+            groupSub.ctr = groupSub.clicks / groupSub.searches;
             groupSub.cpc = groupSub.revenue / groupSub.clicks;
         }
         return groupSubData;
@@ -25972,7 +25972,7 @@ class System1Component {
                 helperSummary[key].clicks += o.clicks ? parseFloat(o.clicks) : 0;
                 helperSummary[key].searches += o.searches ? parseFloat(o.searches) : 0;
                 // helperSummary[key].cpc += o.cpc ? parseFloat(o.cpc) : 0;
-                helperSummary[key].ctr += o.ctr ? parseFloat(o.ctr) : 0;
+                // helperSummary[key].ctr += o.ctr ? parseFloat(o.ctr) : 0;
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
                 helperSummary[key].profit += parseFloat(o.profit);
@@ -25983,7 +25983,7 @@ class System1Component {
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
         }
         return groupData;
@@ -27134,7 +27134,7 @@ class VerizonDirectArbComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].rn += parseFloat(o.rn ? o.rn : 0);
                 helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -27150,7 +27150,7 @@ class VerizonDirectArbComponent {
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
         }
         return groupData;
@@ -27167,7 +27167,7 @@ class VerizonDirectArbComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].rn += parseFloat(o.rn ? o.rn : 0);
                 helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -27184,7 +27184,7 @@ class VerizonDirectArbComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.cpc = group.revenue / group.clicks;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
         }
         return groupData;
     }
@@ -28239,7 +28239,7 @@ class VerizonDirectComponent {
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
         }
         return groupData;
@@ -28256,7 +28256,7 @@ class VerizonDirectComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].rn += parseFloat(o.rn ? o.rn : 0);
                 helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -28273,7 +28273,7 @@ class VerizonDirectComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.cpc = group.revenue / group.clicks;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
         }
         return groupData;
     }
