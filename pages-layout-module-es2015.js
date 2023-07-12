@@ -19462,6 +19462,10 @@ const DynamicAsideMenuConfig = {
                     page: '/reporting/verizon-direct',
                 },
                 {
+                    title: 'Verizon Direct Arb Stats',
+                    page: '/reporting/verizon-direct-arb',
+                },
+                {
                     title: 'Third Party Sheet',
                     page: '/reporting/third-party',
                 },

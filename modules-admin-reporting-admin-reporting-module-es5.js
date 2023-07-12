@@ -19755,6 +19755,12 @@
       var _accounting_accounting_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
       /*! ./accounting/accounting.component */
       "./src/app/modules/admin-reporting/accounting/accounting.component.ts");
+      /* harmony import */
+
+
+      var _verizon_direct_arb_verizon_direct_arb_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
+      /*! ./verizon-direct-arb/verizon-direct-arb.component */
+      "./src/app/modules/admin-reporting/verizon-direct-arb/verizon-direct-arb.component.ts");
 
       var routes = [{
         path: '',
@@ -19792,6 +19798,9 @@
         }, {
           path: 'verizon-direct',
           component: _verizon_direct_verizon_direct_component__WEBPACK_IMPORTED_MODULE_12__["VerizonDirectComponent"]
+        }, {
+          path: 'verizon-direct-arb',
+          component: _verizon_direct_arb_verizon_direct_arb_component__WEBPACK_IMPORTED_MODULE_18__["VerizonDirectArbComponent"]
         }, {
           path: 'third-party',
           component: _third_party_third_party_component__WEBPACK_IMPORTED_MODULE_8__["ThirdPartyComponent"]
@@ -20056,6 +20065,12 @@
       var _accounting_accounting_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
       /*! ./accounting/accounting.component */
       "./src/app/modules/admin-reporting/accounting/accounting.component.ts");
+      /* harmony import */
+
+
+      var _verizon_direct_arb_verizon_direct_arb_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(
+      /*! ./verizon-direct-arb/verizon-direct-arb.component */
+      "./src/app/modules/admin-reporting/verizon-direct-arb/verizon-direct-arb.component.ts");
 
       var AdminReportingModule = function AdminReportingModule() {
         _classCallCheck(this, AdminReportingModule);
@@ -20073,7 +20088,7 @@
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AdminReportingModule, {
-          declarations: [_perion_perion_component__WEBPACK_IMPORTED_MODULE_4__["PerionComponent"], _imgage_advantage_imgage_advantage_component__WEBPACK_IMPORTED_MODULE_5__["ImgageAdvantageComponent"], _hopkins_hopkins_component__WEBPACK_IMPORTED_MODULE_6__["HopkinsComponent"], _apptitude_apptitude_component__WEBPACK_IMPORTED_MODULE_7__["ApptitudeComponent"], _all_reporting_all_reporting_component__WEBPACK_IMPORTED_MODULE_8__["AllReportingComponent"], _media_net_media_net_component__WEBPACK_IMPORTED_MODULE_9__["MediaNetComponent"], _third_party_third_party_component__WEBPACK_IMPORTED_MODULE_10__["ThirdPartyComponent"], _bing_direct_bing_direct_component__WEBPACK_IMPORTED_MODULE_19__["BingDirectComponent"], _lyons_lyons_component__WEBPACK_IMPORTED_MODULE_20__["LyonsComponent"], _rubi_rubi_component__WEBPACK_IMPORTED_MODULE_21__["RubiComponent"], _verizon_direct_verizon_direct_component__WEBPACK_IMPORTED_MODULE_22__["VerizonDirectComponent"], _manual_update_manual_update_component__WEBPACK_IMPORTED_MODULE_23__["ManualUpdateComponent"], _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_27__["ManualSplitUpdateComponent"], _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__["System1Component"], _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_29__["SolexBcComponent"], _accounting_accounting_component__WEBPACK_IMPORTED_MODULE_30__["AccountingComponent"]],
+          declarations: [_perion_perion_component__WEBPACK_IMPORTED_MODULE_4__["PerionComponent"], _imgage_advantage_imgage_advantage_component__WEBPACK_IMPORTED_MODULE_5__["ImgageAdvantageComponent"], _hopkins_hopkins_component__WEBPACK_IMPORTED_MODULE_6__["HopkinsComponent"], _apptitude_apptitude_component__WEBPACK_IMPORTED_MODULE_7__["ApptitudeComponent"], _all_reporting_all_reporting_component__WEBPACK_IMPORTED_MODULE_8__["AllReportingComponent"], _media_net_media_net_component__WEBPACK_IMPORTED_MODULE_9__["MediaNetComponent"], _third_party_third_party_component__WEBPACK_IMPORTED_MODULE_10__["ThirdPartyComponent"], _bing_direct_bing_direct_component__WEBPACK_IMPORTED_MODULE_19__["BingDirectComponent"], _lyons_lyons_component__WEBPACK_IMPORTED_MODULE_20__["LyonsComponent"], _rubi_rubi_component__WEBPACK_IMPORTED_MODULE_21__["RubiComponent"], _verizon_direct_verizon_direct_component__WEBPACK_IMPORTED_MODULE_22__["VerizonDirectComponent"], _manual_update_manual_update_component__WEBPACK_IMPORTED_MODULE_23__["ManualUpdateComponent"], _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_27__["ManualSplitUpdateComponent"], _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__["System1Component"], _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_29__["SolexBcComponent"], _accounting_accounting_component__WEBPACK_IMPORTED_MODULE_30__["AccountingComponent"], _verizon_direct_arb_verizon_direct_arb_component__WEBPACK_IMPORTED_MODULE_31__["VerizonDirectArbComponent"]],
           imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _admin_reporting_routing_module__WEBPACK_IMPORTED_MODULE_2__["AdminReportingRoutingModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["NgxDatatableModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_12__["MatListModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__["MatFormFieldModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_15__["MatNativeDateModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_18__["SharedModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_15__["MatOptionModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_24__["MatInputModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_25__["MatButtonModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_26__["InlineSVGModule"]]
         });
       })();
@@ -20084,7 +20099,7 @@
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](AdminReportingModule, [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
           args: [{
-            declarations: [_perion_perion_component__WEBPACK_IMPORTED_MODULE_4__["PerionComponent"], _imgage_advantage_imgage_advantage_component__WEBPACK_IMPORTED_MODULE_5__["ImgageAdvantageComponent"], _hopkins_hopkins_component__WEBPACK_IMPORTED_MODULE_6__["HopkinsComponent"], _apptitude_apptitude_component__WEBPACK_IMPORTED_MODULE_7__["ApptitudeComponent"], _all_reporting_all_reporting_component__WEBPACK_IMPORTED_MODULE_8__["AllReportingComponent"], _media_net_media_net_component__WEBPACK_IMPORTED_MODULE_9__["MediaNetComponent"], _third_party_third_party_component__WEBPACK_IMPORTED_MODULE_10__["ThirdPartyComponent"], _bing_direct_bing_direct_component__WEBPACK_IMPORTED_MODULE_19__["BingDirectComponent"], _lyons_lyons_component__WEBPACK_IMPORTED_MODULE_20__["LyonsComponent"], _rubi_rubi_component__WEBPACK_IMPORTED_MODULE_21__["RubiComponent"], _verizon_direct_verizon_direct_component__WEBPACK_IMPORTED_MODULE_22__["VerizonDirectComponent"], _manual_update_manual_update_component__WEBPACK_IMPORTED_MODULE_23__["ManualUpdateComponent"], _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_27__["ManualSplitUpdateComponent"], _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__["System1Component"], _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_29__["SolexBcComponent"], _accounting_accounting_component__WEBPACK_IMPORTED_MODULE_30__["AccountingComponent"]],
+            declarations: [_perion_perion_component__WEBPACK_IMPORTED_MODULE_4__["PerionComponent"], _imgage_advantage_imgage_advantage_component__WEBPACK_IMPORTED_MODULE_5__["ImgageAdvantageComponent"], _hopkins_hopkins_component__WEBPACK_IMPORTED_MODULE_6__["HopkinsComponent"], _apptitude_apptitude_component__WEBPACK_IMPORTED_MODULE_7__["ApptitudeComponent"], _all_reporting_all_reporting_component__WEBPACK_IMPORTED_MODULE_8__["AllReportingComponent"], _media_net_media_net_component__WEBPACK_IMPORTED_MODULE_9__["MediaNetComponent"], _third_party_third_party_component__WEBPACK_IMPORTED_MODULE_10__["ThirdPartyComponent"], _bing_direct_bing_direct_component__WEBPACK_IMPORTED_MODULE_19__["BingDirectComponent"], _lyons_lyons_component__WEBPACK_IMPORTED_MODULE_20__["LyonsComponent"], _rubi_rubi_component__WEBPACK_IMPORTED_MODULE_21__["RubiComponent"], _verizon_direct_verizon_direct_component__WEBPACK_IMPORTED_MODULE_22__["VerizonDirectComponent"], _manual_update_manual_update_component__WEBPACK_IMPORTED_MODULE_23__["ManualUpdateComponent"], _manual_split_update_manual_split_update_component__WEBPACK_IMPORTED_MODULE_27__["ManualSplitUpdateComponent"], _system1_system1_component__WEBPACK_IMPORTED_MODULE_28__["System1Component"], _solex_bc_solex_bc_component__WEBPACK_IMPORTED_MODULE_29__["SolexBcComponent"], _accounting_accounting_component__WEBPACK_IMPORTED_MODULE_30__["AccountingComponent"], _verizon_direct_arb_verizon_direct_arb_component__WEBPACK_IMPORTED_MODULE_31__["VerizonDirectArbComponent"]],
             imports: [_angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"], _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"], _admin_reporting_routing_module__WEBPACK_IMPORTED_MODULE_2__["AdminReportingRoutingModule"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["NgxDatatableModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["ReactiveFormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"], _angular_material_list__WEBPACK_IMPORTED_MODULE_12__["MatListModule"], _angular_material_datepicker__WEBPACK_IMPORTED_MODULE_13__["MatDatepickerModule"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_14__["MatFormFieldModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_15__["MatNativeDateModule"], _angular_material_select__WEBPACK_IMPORTED_MODULE_17__["MatSelectModule"], src_app_shared_modules_shared_module__WEBPACK_IMPORTED_MODULE_18__["SharedModule"], _angular_material_core__WEBPACK_IMPORTED_MODULE_15__["MatOptionModule"], _angular_material_input__WEBPACK_IMPORTED_MODULE_24__["MatInputModule"], _angular_material_button__WEBPACK_IMPORTED_MODULE_25__["MatButtonModule"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_26__["InlineSVGModule"]],
             entryComponents: []
           }]
@@ -35282,6 +35297,2074 @@
     },
 
     /***/
+    "./src/app/modules/admin-reporting/verizon-direct-arb/verizon-direct-arb.component.ts":
+    /*!********************************************************************************************!*\
+      !*** ./src/app/modules/admin-reporting/verizon-direct-arb/verizon-direct-arb.component.ts ***!
+      \********************************************************************************************/
+
+    /*! exports provided: VerizonDirectArbComponent */
+
+    /***/
+    function srcAppModulesAdminReportingVerizonDirectArbVerizonDirectArbComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "VerizonDirectArbComponent", function () {
+        return VerizonDirectArbComponent;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "./node_modules/tslib/tslib.es6.js");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! lodash */
+      "./node_modules/lodash/lodash.js");
+      /* harmony import */
+
+
+      var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
+      /* harmony import */
+
+
+      var src_app_shared_service_admin_stats_verizon_arb_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! src/app/shared/service/admin-stats/verizon-arb.service */
+      "./src/app/shared/service/admin-stats/verizon-arb.service.ts");
+      /* harmony import */
+
+
+      var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! src/app/shared/service/users.service */
+      "./src/app/shared/service/users.service.ts");
+      /* harmony import */
+
+
+      var _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ../../tag-management/tag-management.service */
+      "./src/app/modules/tag-management/tag-management.service.ts");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ../../../shared/modules/reporting-filtering/reporting-filtering.component */
+      "./src/app/shared/modules/reporting-filtering/reporting-filtering.component.ts");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @angular/common */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+      /* harmony import */
+
+
+      var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! @angular/material/form-field */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
+      /* harmony import */
+
+
+      var _angular_material_select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! @angular/material/select */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      /*! @angular/forms */
+      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+      /* harmony import */
+
+
+      var _angular_material_core__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      /*! @angular/material/core */
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      /*! @swimlane/ngx-datatable */
+      "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
+      /* harmony import */
+
+
+      var _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      /*! ../../../shared/modules/reporting-revenue-chart/reporting-revenue-chart.component */
+      "./src/app/shared/modules/reporting-revenue-chart/reporting-revenue-chart.component.ts");
+      /* harmony import */
+
+
+      var _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      /*! ../../../shared/modules/summary-metrics/summary-metrics.component */
+      "./src/app/shared/modules/summary-metrics/summary-metrics.component.ts");
+
+      var _c0 = ["expandableTable"];
+
+      function VerizonDirectArbComponent_app_reporting_revenue_chart_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-reporting-revenue-chart", 34);
+        }
+
+        if (rf & 2) {
+          var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("chartData", ctx_r0.chartData);
+        }
+      }
+
+      function VerizonDirectArbComponent_app_summary_metrics_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "app-summary-metrics", 35);
+        }
+
+        if (rf & 2) {
+          var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("summaryMetricsData", ctx_r1.summaryMetrics);
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_20_div_0_tr_21_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](6, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](9, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](12, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](15, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](17);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](18, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](21, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "td");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](23);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](24, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var subDateData_r30 = ctx.$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](3, 8, subDateData_r30.date));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](6, 10, subDateData_r30.searches));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](9, 12, subDateData_r30.clicks));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](12, 14, subDateData_r30.ctr));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](15, 16, subDateData_r30.cpc));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](18, 18, subDateData_r30.publisherNet, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](21, 21, subDateData_r30.profit, "USD"));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](24, 24, subDateData_r30.revenue, "USD"));
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_20_div_0_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 38);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "table", 39);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "thead");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "tr");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Searches");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Clicks");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "CTR");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](13, "CPC");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](15, "Publisher Net");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](17, "Profit");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](18, "th");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](19, "Revenue");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "tbody");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](21, VerizonDirectArbComponent_ng_template_20_div_0_tr_21_Template, 25, 27, "tr", 40);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var row_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().row;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](21);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", row_r25.subReportingForDate);
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_20_div_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 41);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3, "Address");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Test");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_20_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](0, VerizonDirectArbComponent_ng_template_20_div_0_Template, 22, 1, "div", 36);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ng_template_20_div_1_Template, 6, 0, "div", 37);
+        }
+
+        if (rf & 2) {
+          var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType === "publisher" || ctx_r3.groupType === "subid");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r3.groupType !== "publisher" && ctx_r3.groupType !== "subid");
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_22_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r35 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 42);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function VerizonDirectArbComponent_ng_template_22_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r35);
+
+            var row_r32 = ctx.row;
+
+            var ctx_r34 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+
+            return ctx_r34.toggleExpandRow(row_r32);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var expanded_r33 = ctx.expanded;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵclassProp"]("datatable-icon-right", !expanded_r33)("datatable-icon-down", expanded_r33);
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_23_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Date ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_23_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "date");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r39 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r39));
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_23_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 43);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_23_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_23_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_24_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Subid ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_24_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r43 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r43);
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_24_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 44);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_24_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_24_ng_template_2_Template, 2, 1, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_25_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_25_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r47 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](value_r47);
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_25_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 45);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_25_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_25_ng_template_2_Template, 2, 1, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 100);
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_26_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Searches ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_26_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r51 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r51));
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_26_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 46);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_26_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_26_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_27_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Bid Searches ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_27_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r55 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r55));
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_27_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 47);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_27_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_27_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_28_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Bid Searches Result ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_28_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r59 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r59));
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_28_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 48);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_28_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_28_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_29_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Clicks ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_29_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r63 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r63));
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_29_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 49);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_29_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_29_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_30_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Coverage ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_30_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r67 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r67));
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_30_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 50);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_30_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_30_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_31_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CPC ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_31_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r71 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r71));
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_31_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 51);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_31_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_31_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_32_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " CTR ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_32_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r75 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r75));
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_32_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 52);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_32_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_32_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_33_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " RN ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_33_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r79 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r79));
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_33_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 53);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_33_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_33_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_34_ng_template_1_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " TqScore ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_34_ng_template_2_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r83 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r83));
+        }
+      }
+
+      function VerizonDirectArbComponent_ngx_datatable_column_34_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ngx-datatable-column", 54);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_ngx_datatable_column_34_ng_template_1_Template, 1, 0, "ng-template", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_ngx_datatable_column_34_ng_template_2_Template, 3, 3, "ng-template", 16);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_36_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Publisher Net ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_37_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r85 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r85, "USD"));
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_39_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Profit ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_40_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r87 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r87, "USD"));
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_42_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Revenue ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_43_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "currency");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r89 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](2, 1, value_r89, "USD"));
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_45_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " Split ");
+        }
+      }
+
+      function VerizonDirectArbComponent_ng_template_46_Template(rf, ctx) {
+        if (rf & 1) {
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](3, "number");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var value_r91 = ctx.value;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](2, 1, value_r91) || _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](3, 3, 0, "1.0-0"));
+        }
+      }
+
+      var VerizonDirectArbComponent = /*#__PURE__*/function () {
+        function VerizonDirectArbComponent(verizonarbService, cdr, userService, tagService) {
+          _classCallCheck(this, VerizonDirectArbComponent);
+
+          this.verizonarbService = verizonarbService;
+          this.cdr = cdr;
+          this.userService = userService;
+          this.tagService = tagService;
+          this.range = {
+            startDate: '',
+            endDate: ''
+          };
+          this.loadingIndicator = true;
+          this.tagList = [];
+          this.groupPublishFlag = false;
+          this.groupDateShowFlag = false;
+          this.groupSubidShowFlag = false;
+          this.groupType = '';
+          this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
+        }
+
+        _createClass(VerizonDirectArbComponent, [{
+          key: "ngAfterViewInit",
+          value: function ngAfterViewInit() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee52() {
+              return regeneratorRuntime.wrap(function _callee52$(_context52) {
+                while (1) {
+                  switch (_context52.prev = _context52.next) {
+                    case 0:
+                      _context52.next = 2;
+                      return this.getCompanyTags(this.selectedCompany);
+
+                    case 2:
+                      this.tagList = _context52.sent;
+                      this.rows = [];
+                      _context52.next = 6;
+                      return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 6:
+                      this.rows = _context52.sent;
+                      _context52.next = 9;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 9:
+                      this.chartData = _context52.sent;
+                      _context52.next = 12;
+                      return this.getSummaryMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 12:
+                      this.summaryMetrics = _context52.sent;
+                      this.refreshTable();
+
+                    case 14:
+                    case "end":
+                      return _context52.stop();
+                  }
+                }
+              }, _callee52, this);
+            }));
+          } //get Tags with selected company
+
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(selectedCompany) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee53() {
+              var companyId, response;
+              return regeneratorRuntime.wrap(function _callee53$(_context53) {
+                while (1) {
+                  switch (_context53.prev = _context53.next) {
+                    case 0:
+                      companyId = selectedCompany.split("/")[1];
+                      _context53.prev = 1;
+                      _context53.next = 4;
+                      return this.tagService.getCompanyTags(companyId).toPromise();
+
+                    case 4:
+                      response = _context53.sent;
+                      return _context53.abrupt("return", response);
+
+                    case 8:
+                      _context53.prev = 8;
+                      _context53.t0 = _context53["catch"](1);
+                      return _context53.abrupt("return", _context53.t0);
+
+                    case 11:
+                    case "end":
+                      return _context53.stop();
+                  }
+                }
+              }, _callee53, this, [[1, 8]]);
+            }));
+          }
+        }, {
+          key: "getDetailRowHeight",
+          value: function getDetailRowHeight(row, index) {
+            var height;
+
+            if (row) {
+              height = row.detailHeight;
+            }
+
+            return height;
+          } //Gets the Selected Company from Local Storage
+
+        }, {
+          key: "getSelectedCompanyFromLocalStorage",
+          value: function getSelectedCompanyFromLocalStorage() {
+            return this.userService.getSelectedCompanyFromLocalStorage();
+          }
+        }, {
+          key: "updateReportingFiltering",
+          value: function updateReportingFiltering(range) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee54() {
+              return regeneratorRuntime.wrap(function _callee54$(_context54) {
+                while (1) {
+                  switch (_context54.prev = _context54.next) {
+                    case 0:
+                      // console.log('Update report filtering....');
+                      this.range = range;
+                      _context54.next = 3;
+                      return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 3:
+                      this.rows = _context54.sent;
+                      _context54.next = 6;
+                      return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 6:
+                      this.chartData = _context54.sent;
+                      _context54.next = 9;
+                      return this.getSummaryMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
+
+                    case 9:
+                      this.summaryMetrics = _context54.sent;
+                      this.groupPublishFlag = false;
+                      this.groupDateShowFlag = false;
+                      this.groupSubidShowFlag = false;
+                      this.groupType = '';
+                      this.refreshTable();
+
+                    case 15:
+                    case "end":
+                      return _context54.stop();
+                  }
+                }
+              }, _callee54, this);
+            }));
+          }
+        }, {
+          key: "refreshTable",
+          value: function refreshTable() {
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "groupDate",
+          value: function groupDate() {
+            var helperSummary = {};
+            var groupData = this.allStats.reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].rn += parseFloat(o.rn ? o.rn : 0);
+                helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
+                helperSummary[key].biddedResults += parseFloat(o.biddedResults ? o.biddedResults : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator95 = _createForOfIteratorHelper(groupData),
+                _step95;
+
+            try {
+              for (_iterator95.s(); !(_step95 = _iterator95.n()).done;) {
+                var group = _step95.value;
+                group.split = group.split / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator95.e(err);
+            } finally {
+              _iterator95.f();
+            }
+
+            this.rows = groupData;
+            this.groupPublishFlag = false;
+            this.groupDateShowFlag = true;
+            this.groupSubidShowFlag = false;
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "groupSubid",
+          value: function groupSubid() {
+            var helperSummary = {};
+            var groupData = this.allStats.reduce(function (r, o) {
+              var key = o.subid;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].rn += parseFloat(o.rn ? o.rn : 0);
+                helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
+                helperSummary[key].biddedResults += parseFloat(o.biddedResults ? o.biddedResults : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator96 = _createForOfIteratorHelper(groupData),
+                _step96;
+
+            try {
+              for (_iterator96.s(); !(_step96 = _iterator96.n()).done;) {
+                var group = _step96.value;
+                group.split = group.split / group.counter;
+                group.ctr = group.ctr / group.counter;
+                group.subReportingForDate = this.groupDateForSubid(group);
+                group.detailHeight = (group.subReportingForDate.length + 1) * 50;
+              }
+            } catch (err) {
+              _iterator96.e(err);
+            } finally {
+              _iterator96.f();
+            }
+
+            this.rows = groupData;
+            this.groupPublishFlag = false;
+            this.groupDateShowFlag = false;
+            this.groupSubidShowFlag = true;
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "groupProvider",
+          value: function groupProvider() {
+            var helperSummary = {};
+            var groupData = this.allStats.reduce(function (r, o) {
+              var key = o.publisher;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].rn += parseFloat(o.rn ? o.rn : 0);
+                helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
+                helperSummary[key].biddedResults += parseFloat(o.biddedResults ? o.biddedResults : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator97 = _createForOfIteratorHelper(groupData),
+                _step97;
+
+            try {
+              for (_iterator97.s(); !(_step97 = _iterator97.n()).done;) {
+                var group = _step97.value;
+                group.split = group.split / group.counter;
+                group.ctr = group.ctr / group.counter;
+                group.subReportingForDate = this.groupDateForPublisher(group);
+                group.detailHeight = (group.subReportingForDate.length + 1) * 50;
+              }
+            } catch (err) {
+              _iterator97.e(err);
+            } finally {
+              _iterator97.f();
+            }
+
+            this.rows = groupData;
+            this.groupPublishFlag = true;
+            this.groupDateShowFlag = false;
+            this.groupSubidShowFlag = false;
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "groupDateForPublisher",
+          value: function groupDateForPublisher(group) {
+            var helperSummary = {};
+            var groupData = this.allStats.filter(function (oStat) {
+              return oStat.publisher === group.publisher;
+            }).reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].rn += parseFloat(o.rn ? o.rn : 0);
+                helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
+                helperSummary[key].biddedResults += parseFloat(o.biddedResults ? o.biddedResults : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator98 = _createForOfIteratorHelper(groupData),
+                _step98;
+
+            try {
+              for (_iterator98.s(); !(_step98 = _iterator98.n()).done;) {
+                var group = _step98.value;
+                group.split = group.split / group.counter;
+                group.followon = group.followon / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator98.e(err);
+            } finally {
+              _iterator98.f();
+            }
+
+            return groupData;
+          }
+        }, {
+          key: "groupDateForSubid",
+          value: function groupDateForSubid(group) {
+            var helperSummary = {};
+            var groupData = this.allStats.filter(function (oStat) {
+              return oStat.subid === group.subid;
+            }).reduce(function (r, o) {
+              var key = o.date;
+
+              if (!helperSummary[key]) {
+                helperSummary[key] = Object.assign({}, o); // create a copy of o
+
+                helperSummary[key].counter = 1;
+                r.push(helperSummary[key]);
+              } else {
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].rn += parseFloat(o.rn ? o.rn : 0);
+                helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
+                helperSummary[key].biddedResults += parseFloat(o.biddedResults ? o.biddedResults : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].revenue += parseFloat(o.revenue);
+                helperSummary[key].split += parseFloat(o.split);
+                helperSummary[key].counter++;
+              }
+
+              return r;
+            }, []);
+
+            var _iterator99 = _createForOfIteratorHelper(groupData),
+                _step99;
+
+            try {
+              for (_iterator99.s(); !(_step99 = _iterator99.n()).done;) {
+                var group = _step99.value;
+                group.split = group.split / group.counter;
+                group.followon = group.followon / group.counter;
+                group.ctr = group.ctr / group.counter;
+              }
+            } catch (err) {
+              _iterator99.e(err);
+            } finally {
+              _iterator99.f();
+            }
+
+            return groupData;
+          }
+        }, {
+          key: "backGroup",
+          value: function backGroup() {
+            this.rows = this.allStats;
+            this.groupPublishFlag = false;
+            this.groupDateShowFlag = false;
+            this.groupSubidShowFlag = false;
+            this.cdr.markForCheck();
+          }
+        }, {
+          key: "toggleExpandRow",
+          value: function toggleExpandRow(row) {
+            console.log('Toggled Expand Row!', row);
+            this.table.rowDetail.toggleExpandRow(row);
+          }
+        }, {
+          key: "onDetailToggle",
+          value: function onDetailToggle(event) {
+            console.log('Detail Toggled', event);
+          }
+        }, {
+          key: "remove_element",
+          value: function remove_element(array, item) {
+            for (var i = 0; i < array.length; ++i) {
+              if (array[i] === item) {
+                array.splice(i, 1);
+                return;
+              }
+            }
+          }
+        }, {
+          key: "groupHandle",
+          value: function groupHandle(event) {
+            this.groupType = event.value;
+
+            if (event.value == "date") {
+              this.groupDate();
+            } else if (event.value == "publisher") {
+              this.groupProvider();
+            } else if (event.value == "subid") {
+              this.groupSubid();
+            } else {
+              this.backGroup();
+            }
+          }
+        }, {
+          key: "getChartMetrics",
+          value: function getChartMetrics(company, startDate, endDate) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee55() {
+              var _iterator100, _step100, tagL, _iterator103, _step103, tagSub, sorted, _multiGroupBy7, groupedItems, _reformattedArray14, item, elm, obj, pulisherArr, _i10, _reformattedArray15, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator101, _step101, resVal, _stackedArr7, _iterator102, _step102, _loop15;
+
+              return regeneratorRuntime.wrap(function _callee55$(_context55) {
+                while (1) {
+                  switch (_context55.prev = _context55.next) {
+                    case 0:
+                      _context55.prev = 0;
+                      // const response = await this.verizonarbService.getAllVerizonStats(company, startDate, endDate).toPromise();
+                      // this.allChartStat = response.stats;
+                      // this.allChartStat.map(function (resStat: { publisher: string; tagname: string; }) {
+                      //   resStat.publisher = "No Publisher";
+                      //   resStat.tagname = "No Tag";
+                      // });
+                      this.allChartStat = this.allStats;
+                      _iterator100 = _createForOfIteratorHelper(this.tagList);
+
+                      try {
+                        for (_iterator100.s(); !(_step100 = _iterator100.n()).done;) {
+                          tagL = _step100.value;
+
+                          if (tagL.tag.advertiser == "verizon-direct-arb") {
+                            _iterator103 = _createForOfIteratorHelper(tagL.tag.subids);
+
+                            try {
+                              for (_iterator103.s(); !(_step103 = _iterator103.n()).done;) {
+                                tagSub = _step103.value;
+
+                                if (tagSub.filterTag == "Contains") {
+                                  this.allChartStat.map(function (stat) {
+                                    if (stat.subid.includes(tagSub.subid)) {
+                                      stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "StartsWith") {
+                                  this.allChartStat.map(function (stat_1) {
+                                    if (stat_1.subid.startsWith(tagSub.subid)) {
+                                      stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_1.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "EndsWith") {
+                                  this.allChartStat.map(function (stat_2) {
+                                    if (stat_2.subid.endsWith(tagSub.subid)) {
+                                      stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_2.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "ExactValue") {
+                                  this.allChartStat.map(function (stat_3) {
+                                    if (stat_3.subid == tagSub.subid) {
+                                      stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_3.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                }
+                              }
+                            } catch (err) {
+                              _iterator103.e(err);
+                            } finally {
+                              _iterator103.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator100.e(err);
+                      } finally {
+                        _iterator100.f();
+                      }
+
+                      sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
+                        return d.date;
+                      }).sortBy(function (d) {
+                        return d.publisher;
+                      }).value();
+
+                      _multiGroupBy7 = function _multiGroupBy7(seq, keys) {
+                        if (!keys.length) return seq;
+                        var first = keys[0];
+                        var rest = keys.slice(1);
+                        return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
+                          return _multiGroupBy7(value, rest);
+                        });
+                      };
+
+                      groupedItems = _multiGroupBy7(sorted, ["date", "publisher"]);
+                      _reformattedArray14 = [];
+
+                      for (item in groupedItems) {
+                        if (groupedItems.hasOwnProperty(item)) {
+                          for (elm in groupedItems[item]) {
+                            obj = {
+                              date: groupedItems[item][elm][0].date,
+                              publisher: groupedItems[item][elm][0].publisher,
+                              revenue: lodash__WEBPACK_IMPORTED_MODULE_2__["reduce"](groupedItems[item][elm], function (s, x) {
+                                return s + x.revenue;
+                              }, 0)
+                            };
+
+                            _reformattedArray14.push(obj);
+                          }
+                        }
+                      }
+
+                      pulisherArr = [];
+
+                      for (_i10 = 0, _reformattedArray15 = _reformattedArray14; _i10 < _reformattedArray15.length; _i10++) {
+                        reformatData = _reformattedArray15[_i10];
+                        pulisherArr.push(reformatData.publisher);
+                      }
+
+                      unique = pulisherArr.filter(function (elem, index, self) {
+                        return index === self.indexOf(elem);
+                      }); // this.remove_element(unique, "No Publisher");
+                      // console.log(unique);
+
+                      this.allChartStat = this.allChartStat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      helperChart = {};
+                      resultChart = this.allChartStat.reduce(function (r, o) {
+                        var key = o.date;
+
+                        if (!helperChart[key]) {
+                          helperChart[key] = Object.assign({}, o); // create a copy of o
+
+                          r.push(helperChart[key]);
+                        } else {
+                          helperChart[key].searches += parseInt(o.searches);
+
+                          if (o.revenue) {
+                            helperChart[key].revenue += o.revenue;
+                          }
+                        }
+
+                        return r;
+                      }, []);
+                      datesOfRevenueVal = [];
+                      searchesPerDayVal = [];
+                      chartDataValue = {};
+                      _iterator101 = _createForOfIteratorHelper(resultChart);
+
+                      try {
+                        for (_iterator101.s(); !(_step101 = _iterator101.n()).done;) {
+                          resVal = _step101.value;
+                          datesOfRevenueVal.push(resVal.date);
+                          searchesPerDayVal.push(resVal.searches);
+                        }
+                      } catch (err) {
+                        _iterator101.e(err);
+                      } finally {
+                        _iterator101.f();
+                      }
+
+                      _stackedArr7 = [];
+                      _iterator102 = _createForOfIteratorHelper(unique);
+
+                      try {
+                        _loop15 = function _loop15() {
+                          var u = _step102.value;
+                          var subStackedArr = [];
+
+                          var _iterator104 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step104;
+
+                          try {
+                            var _loop16 = function _loop16() {
+                              var date = _step104.value;
+
+                              var filterLen = _reformattedArray14.filter(function (reformatted) {
+                                return reformatted.date == date && reformatted.publisher == u;
+                              });
+
+                              if (filterLen.length > 0) {
+                                subStackedArr.push(filterLen[0].revenue);
+                              } else {
+                                subStackedArr.push(0);
+                              }
+                            };
+
+                            for (_iterator104.s(); !(_step104 = _iterator104.n()).done;) {
+                              _loop16();
+                            }
+                          } catch (err) {
+                            _iterator104.e(err);
+                          } finally {
+                            _iterator104.f();
+                          }
+
+                          var obj = {};
+                          obj[u] = subStackedArr;
+
+                          _stackedArr7.push(obj);
+                        };
+
+                        for (_iterator102.s(); !(_step102 = _iterator102.n()).done;) {
+                          _loop15();
+                        }
+                      } catch (err) {
+                        _iterator102.e(err);
+                      } finally {
+                        _iterator102.f();
+                      }
+
+                      chartDataValue['revenuePerDay'] = _stackedArr7;
+                      chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartDataValue['searchesPerDay'] = searchesPerDayVal;
+                      chartDataValue['publisherName'] = unique;
+                      return _context55.abrupt("return", chartDataValue);
+
+                    case 30:
+                      _context55.prev = 30;
+                      _context55.t0 = _context55["catch"](0);
+                      return _context55.abrupt("return", _context55.t0);
+
+                    case 33:
+                    case "end":
+                      return _context55.stop();
+                  }
+                }
+              }, _callee55, this, [[0, 30]]);
+            }));
+          }
+        }, {
+          key: "getAllVerizonStats",
+          value: function getAllVerizonStats(company, startDate, endDate) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee56() {
+              var response, _iterator105, _step105, tagL, _iterator106, _step106, tagSub;
+
+              return regeneratorRuntime.wrap(function _callee56$(_context56) {
+                while (1) {
+                  switch (_context56.prev = _context56.next) {
+                    case 0:
+                      _context56.next = 2;
+                      return this.verizonarbService.getAllVerizonArbStats(company, startDate, endDate).toPromise();
+
+                    case 2:
+                      response = _context56.sent;
+                      console.log('getAllVerizonStats() response:', response);
+                      this.loadingIndicator = false;
+                      this.allStats = response.stats;
+                      this.allStats.map(function (resStat) {
+                        resStat.publisher = "No Publisher";
+                        resStat.tagname = "No Tag";
+                      });
+                      _iterator105 = _createForOfIteratorHelper(this.tagList);
+
+                      try {
+                        for (_iterator105.s(); !(_step105 = _iterator105.n()).done;) {
+                          tagL = _step105.value;
+
+                          if (tagL.tag.advertiser == "verizon-direct-arb") {
+                            _iterator106 = _createForOfIteratorHelper(tagL.tag.subids);
+
+                            try {
+                              for (_iterator106.s(); !(_step106 = _iterator106.n()).done;) {
+                                tagSub = _step106.value;
+
+                                if (tagSub.filterTag == "Contains") {
+                                  this.allStats.map(function (stat) {
+                                    if (stat.subid.includes(tagSub.subid)) {
+                                      stat.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "StartsWith") {
+                                  this.allStats.map(function (stat_1) {
+                                    if (stat_1.subid.startsWith(tagSub.subid)) {
+                                      stat_1.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_1.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "EndsWith") {
+                                  this.allStats.map(function (stat_2) {
+                                    if (stat_2.subid.endsWith(tagSub.subid)) {
+                                      stat_2.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_2.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                } else if (tagSub.filterTag == "ExactValue") {
+                                  this.allStats.map(function (stat_3) {
+                                    if (stat_3.subid == tagSub.subid) {
+                                      stat_3.publisher = tagL.user.length ? tagL.user[0].fullname : "No Publisher";
+                                      stat_3.tagname = tagL.tag.name;
+                                    }
+                                  });
+                                }
+                              }
+                            } catch (err) {
+                              _iterator106.e(err);
+                            } finally {
+                              _iterator106.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator105.e(err);
+                      } finally {
+                        _iterator105.f();
+                      }
+
+                      return _context56.abrupt("return", this.allStats);
+
+                    case 10:
+                    case "end":
+                      return _context56.stop();
+                  }
+                }
+              }, _callee56, this);
+            }));
+          }
+        }, {
+          key: "getSummaryMetrics",
+          value: function getSummaryMetrics(company, startDate, endDate) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee57() {
+              var response, allSummary, currentPercentPace, lastPercentPace, selectedPercentPace;
+              return regeneratorRuntime.wrap(function _callee57$(_context57) {
+                while (1) {
+                  switch (_context57.prev = _context57.next) {
+                    case 0:
+                      _context57.next = 2;
+                      return this.verizonarbService.getSummaryMetrics(company, startDate, endDate).toPromise();
+
+                    case 2:
+                      response = _context57.sent;
+                      allSummary = {};
+                      currentPercentPace = 0;
+                      lastPercentPace = 0;
+                      selectedPercentPace = 0;
+
+                      if (response.summary[0].lastMonthStat[0].profitPace != 0) {
+                        currentPercentPace = (response.summary[0].summaryMetrics[0].profitPace - response.summary[0].lastMonthStat[0].profitPace) / response.summary[0].lastMonthStat[0].profitPace * 100;
+                      }
+
+                      if (response.summary[0].twoLastMonthStat[0].profitPace != 0) {
+                        lastPercentPace = (response.summary[0].lastMonthStat[0].profitPace - response.summary[0].twoLastMonthStat[0].profitPace) / response.summary[0].twoLastMonthStat[0].profitPace * 100;
+                      }
+
+                      if (response.summary[0].prevSelectedStat[0].profitPace != 0) {
+                        selectedPercentPace = (response.summary[0].selectedStat[0].profitPace - response.summary[0].prevSelectedStat[0].profitPace) / response.summary[0].prevSelectedStat[0].profitPace * 100;
+                      }
+
+                      response.summary[0].summaryMetrics[0].percentPace = currentPercentPace;
+                      response.summary[0].lastMonthStat[0].percentPace = lastPercentPace;
+                      response.summary[0].selectedStat[0].percentPace = selectedPercentPace;
+                      response.summary[0].selectedStat[0].selectedStartDate = startDate;
+                      response.summary[0].selectedStat[0].selectedEndDate = endDate;
+                      allSummary['summary'] = response.summary;
+                      return _context57.abrupt("return", allSummary);
+
+                    case 17:
+                    case "end":
+                      return _context57.stop();
+                  }
+                }
+              }, _callee57, this);
+            }));
+          }
+        }]);
+
+        return VerizonDirectArbComponent;
+      }();
+
+      VerizonDirectArbComponent.ɵfac = function VerizonDirectArbComponent_Factory(t) {
+        return new (t || VerizonDirectArbComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_arb_service__WEBPACK_IMPORTED_MODULE_3__["VerizonArbService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_5__["TagManagementService"]));
+      };
+
+      VerizonDirectArbComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
+        type: VerizonDirectArbComponent,
+        selectors: [["app-verizon-direct-arb"]],
+        viewQuery: function VerizonDirectArbComponent_Query(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵviewQuery"](_c0, true);
+          }
+
+          if (rf & 2) {
+            var _t;
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵloadQuery"]()) && (ctx.table = _t.first);
+          }
+        },
+        decls: 47,
+        vars: 29,
+        consts: [[3, "onDatesPicked"], [3, "chartData", 4, "ngIf"], [3, "summaryMetricsData", 4, "ngIf"], [1, "row"], [1, "col-xl-4"], ["appearance", "fill"], [3, "ngModel", "selectionChange", "ngModelChange"], ["value", "date"], ["value", "publisher"], ["value", "subid"], ["value", "reset"], [1, "material", "fullscreen", "expandable", 2, "top", "10px", "height", "500px", 3, "columnMode", "headerHeight", "footerHeight", "rowHeight", "scrollbarV", "rows", "loadingIndicator"], ["expandableTable", ""], [3, "rowHeight", "toggle"], ["ngx-datatable-row-detail-template", ""], [3, "width", "resizeable", "sortable", "draggable", "canAutoResize"], ["ngx-datatable-cell-template", ""], ["name", "date", 3, "minWidth", 4, "ngIf"], ["name", "subid", 4, "ngIf"], ["name", "publisher", 3, "minWidth", 4, "ngIf"], ["name", "searches", 4, "ngIf"], ["name", "biddedSearches", 4, "ngIf"], ["name", "biddedResults", 4, "ngIf"], ["name", "clicks", 4, "ngIf"], ["name", "coverage", 4, "ngIf"], ["name", "cpc", 4, "ngIf"], ["name", "ctr", 4, "ngIf"], ["name", "rn", 4, "ngIf"], ["name", "tqScore", 4, "ngIf"], ["name", "publisherNet"], ["ngx-datatable-header-template", ""], ["name", "profit"], ["name", "revenue"], ["name", "split", 3, "minWidth"], [3, "chartData"], [3, "summaryMetricsData"], ["class", "table-responsive", "style", "padding-left: 36px;", 4, "ngIf"], ["style", "padding-left: 35px", 4, "ngIf"], [1, "table-responsive", 2, "padding-left", "36px"], [1, "table", "table-hover"], [4, "ngFor", "ngForOf"], [2, "padding-left", "35px"], ["href", "javascript:void(0)", "title", "Expand/Collapse Row", 3, "click"], ["name", "date", 3, "minWidth"], ["name", "subid"], ["name", "publisher", 3, "minWidth"], ["name", "searches"], ["name", "biddedSearches"], ["name", "biddedResults"], ["name", "clicks"], ["name", "coverage"], ["name", "cpc"], ["name", "ctr"], ["name", "rn"], ["name", "tqScore"]],
+        template: function VerizonDirectArbComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "app-reporting-filtering", 0);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("onDatesPicked", function VerizonDirectArbComponent_Template_app_reporting_filtering_onDatesPicked_0_listener($event) {
+              return ctx.updateReportingFiltering($event);
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, VerizonDirectArbComponent_app_reporting_revenue_chart_1_Template, 1, 1, "app-reporting-revenue-chart", 1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, VerizonDirectArbComponent_app_summary_metrics_2_Template, 1, 1, "app-summary-metrics", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "div", 3);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "mat-form-field", 5);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "mat-label");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Choose an Group By");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "mat-select", 6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("selectionChange", function VerizonDirectArbComponent_Template_mat_select_selectionChange_8_listener($event) {
+              return ctx.groupHandle($event);
+            })("ngModelChange", function VerizonDirectArbComponent_Template_mat_select_ngModelChange_8_listener($event) {
+              return ctx.groupType = $event;
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "mat-option", 7);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "Date");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "mat-option", 8);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, "Publisher");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "mat-option", 9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14, "Subid");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "mat-option", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, "Reset");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "ngx-datatable", 11, 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "ngx-datatable-row-detail", 13);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("toggle", function VerizonDirectArbComponent_Template_ngx_datatable_row_detail_toggle_19_listener($event) {
+              return ctx.onDetailToggle($event);
+            });
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](20, VerizonDirectArbComponent_ng_template_20_Template, 2, 2, "ng-template", 14);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ngx-datatable-column", 15);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](22, VerizonDirectArbComponent_ng_template_22_Template, 1, 4, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](23, VerizonDirectArbComponent_ngx_datatable_column_23_Template, 3, 1, "ngx-datatable-column", 17);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](24, VerizonDirectArbComponent_ngx_datatable_column_24_Template, 3, 0, "ngx-datatable-column", 18);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](25, VerizonDirectArbComponent_ngx_datatable_column_25_Template, 3, 1, "ngx-datatable-column", 19);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](26, VerizonDirectArbComponent_ngx_datatable_column_26_Template, 3, 0, "ngx-datatable-column", 20);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](27, VerizonDirectArbComponent_ngx_datatable_column_27_Template, 3, 0, "ngx-datatable-column", 21);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](28, VerizonDirectArbComponent_ngx_datatable_column_28_Template, 3, 0, "ngx-datatable-column", 22);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](29, VerizonDirectArbComponent_ngx_datatable_column_29_Template, 3, 0, "ngx-datatable-column", 23);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](30, VerizonDirectArbComponent_ngx_datatable_column_30_Template, 3, 0, "ngx-datatable-column", 24);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](31, VerizonDirectArbComponent_ngx_datatable_column_31_Template, 3, 0, "ngx-datatable-column", 25);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](32, VerizonDirectArbComponent_ngx_datatable_column_32_Template, 3, 0, "ngx-datatable-column", 26);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](33, VerizonDirectArbComponent_ngx_datatable_column_33_Template, 3, 0, "ngx-datatable-column", 27);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](34, VerizonDirectArbComponent_ngx_datatable_column_34_Template, 3, 0, "ngx-datatable-column", 28);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](35, "ngx-datatable-column", 29);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](36, VerizonDirectArbComponent_ng_template_36_Template, 1, 0, "ng-template", 30);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](37, VerizonDirectArbComponent_ng_template_37_Template, 3, 4, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "ngx-datatable-column", 31);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](39, VerizonDirectArbComponent_ng_template_39_Template, 1, 0, "ng-template", 30);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](40, VerizonDirectArbComponent_ng_template_40_Template, 3, 4, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](41, "ngx-datatable-column", 32);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](42, VerizonDirectArbComponent_ng_template_42_Template, 1, 0, "ng-template", 30);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](43, VerizonDirectArbComponent_ng_template_43_Template, 3, 4, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](44, "ngx-datatable-column", 33);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](45, VerizonDirectArbComponent_ng_template_45_Template, 1, 0, "ng-template", 30);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](46, VerizonDirectArbComponent_ng_template_46_Template, 4, 6, "ng-template", 16);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+          }
+
+          if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.chartData);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.summaryMetrics);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](6);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx.groupType);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](9);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("columnMode", "force")("headerHeight", 50)("footerHeight", 0)("rowHeight", 50)("scrollbarV", true)("rows", ctx.rows)("loadingIndicator", ctx.loadingIndicator);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("rowHeight", ctx.groupType === "publisher" || ctx.groupType === "subid" ? ctx.getDetailRowHeight : 130);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("width", 30)("resizeable", false)("sortable", false)("draggable", false)("canAutoResize", false);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.groupPublishFlag && !ctx.groupDateShowFlag && !ctx.groupSubidShowFlag);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("minWidth", 35);
+          }
+        },
+        directives: [_shared_modules_reporting_filtering_reporting_filtering_component__WEBPACK_IMPORTED_MODULE_6__["ReportingFilteringComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_material_core__WEBPACK_IMPORTED_MODULE_11__["MatOption"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DatatableRowDetailTemplateDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnCellDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_12__["DataTableColumnHeaderDirective"], _shared_modules_reporting_revenue_chart_reporting_revenue_chart_component__WEBPACK_IMPORTED_MODULE_13__["ReportingRevenueChartComponent"], _shared_modules_summary_metrics_summary_metrics_component__WEBPACK_IMPORTED_MODULE_14__["SummaryMetricsComponent"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"]],
+        pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["DecimalPipe"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["CurrencyPipe"]],
+        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvYWRtaW4tcmVwb3J0aW5nL3Zlcml6b24tZGlyZWN0LWFyYi92ZXJpem9uLWRpcmVjdC1hcmIuY29tcG9uZW50LnNjc3MifQ== */"]
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](VerizonDirectArbComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+          args: [{
+            selector: 'app-verizon-direct-arb',
+            templateUrl: './verizon-direct-arb.component.html',
+            styleUrls: ['./verizon-direct-arb.component.scss']
+          }]
+        }], function () {
+          return [{
+            type: src_app_shared_service_admin_stats_verizon_arb_service__WEBPACK_IMPORTED_MODULE_3__["VerizonArbService"]
+          }, {
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]
+          }, {
+            type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]
+          }, {
+            type: _tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_5__["TagManagementService"]
+          }];
+        }, {
+          table: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"],
+            args: ['expandableTable']
+          }]
+        });
+      })();
+      /***/
+
+    },
+
+    /***/
     "./src/app/modules/admin-reporting/verizon-direct/verizon-direct.component.ts":
     /*!************************************************************************************!*\
       !*** ./src/app/modules/admin-reporting/verizon-direct/verizon-direct.component.ts ***!
@@ -36269,72 +38352,72 @@
         _createClass(VerizonDirectComponent, [{
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee52() {
-              return regeneratorRuntime.wrap(function _callee52$(_context52) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee58() {
+              return regeneratorRuntime.wrap(function _callee58$(_context58) {
                 while (1) {
-                  switch (_context52.prev = _context52.next) {
+                  switch (_context58.prev = _context58.next) {
                     case 0:
-                      _context52.next = 2;
+                      _context58.next = 2;
                       return this.getCompanyTags(this.selectedCompany);
 
                     case 2:
-                      this.tagList = _context52.sent;
+                      this.tagList = _context58.sent;
                       this.rows = [];
-                      _context52.next = 6;
+                      _context58.next = 6;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.rows = _context52.sent;
-                      _context52.next = 9;
+                      this.rows = _context58.sent;
+                      _context58.next = 9;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.chartData = _context52.sent;
-                      _context52.next = 12;
+                      this.chartData = _context58.sent;
+                      _context58.next = 12;
                       return this.getSummaryMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 12:
-                      this.summaryMetrics = _context52.sent;
+                      this.summaryMetrics = _context58.sent;
                       this.refreshTable();
 
                     case 14:
                     case "end":
-                      return _context52.stop();
+                      return _context58.stop();
                   }
                 }
-              }, _callee52, this);
+              }, _callee58, this);
             }));
           } //get Tags with selected company
 
         }, {
           key: "getCompanyTags",
           value: function getCompanyTags(selectedCompany) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee53() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee59() {
               var companyId, response;
-              return regeneratorRuntime.wrap(function _callee53$(_context53) {
+              return regeneratorRuntime.wrap(function _callee59$(_context59) {
                 while (1) {
-                  switch (_context53.prev = _context53.next) {
+                  switch (_context59.prev = _context59.next) {
                     case 0:
                       companyId = selectedCompany.split("/")[1];
-                      _context53.prev = 1;
-                      _context53.next = 4;
+                      _context59.prev = 1;
+                      _context59.next = 4;
                       return this.tagService.getCompanyTags(companyId).toPromise();
 
                     case 4:
-                      response = _context53.sent;
-                      return _context53.abrupt("return", response);
+                      response = _context59.sent;
+                      return _context59.abrupt("return", response);
 
                     case 8:
-                      _context53.prev = 8;
-                      _context53.t0 = _context53["catch"](1);
-                      return _context53.abrupt("return", _context53.t0);
+                      _context59.prev = 8;
+                      _context59.t0 = _context59["catch"](1);
+                      return _context59.abrupt("return", _context59.t0);
 
                     case 11:
                     case "end":
-                      return _context53.stop();
+                      return _context59.stop();
                   }
                 }
-              }, _callee53, this, [[1, 8]]);
+              }, _callee59, this, [[1, 8]]);
             }));
           }
         }, {
@@ -36357,28 +38440,28 @@
         }, {
           key: "updateReportingFiltering",
           value: function updateReportingFiltering(range) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee54() {
-              return regeneratorRuntime.wrap(function _callee54$(_context54) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee60() {
+              return regeneratorRuntime.wrap(function _callee60$(_context60) {
                 while (1) {
-                  switch (_context54.prev = _context54.next) {
+                  switch (_context60.prev = _context60.next) {
                     case 0:
                       // console.log('Update report filtering....');
                       this.range = range;
-                      _context54.next = 3;
+                      _context60.next = 3;
                       return this.getAllVerizonStats(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 3:
-                      this.rows = _context54.sent;
-                      _context54.next = 6;
+                      this.rows = _context60.sent;
+                      _context60.next = 6;
                       return this.getChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 6:
-                      this.chartData = _context54.sent;
-                      _context54.next = 9;
+                      this.chartData = _context60.sent;
+                      _context60.next = 9;
                       return this.getSummaryMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
                     case 9:
-                      this.summaryMetrics = _context54.sent;
+                      this.summaryMetrics = _context60.sent;
                       this.groupPublishFlag = false;
                       this.groupDateShowFlag = false;
                       this.groupSubidShowFlag = false;
@@ -36387,10 +38470,10 @@
 
                     case 15:
                     case "end":
-                      return _context54.stop();
+                      return _context60.stop();
                   }
                 }
-              }, _callee54, this);
+              }, _callee60, this);
             }));
           }
         }, {
@@ -36429,19 +38512,19 @@
               return r;
             }, []);
 
-            var _iterator95 = _createForOfIteratorHelper(groupData),
-                _step95;
+            var _iterator107 = _createForOfIteratorHelper(groupData),
+                _step107;
 
             try {
-              for (_iterator95.s(); !(_step95 = _iterator95.n()).done;) {
-                var group = _step95.value;
+              for (_iterator107.s(); !(_step107 = _iterator107.n()).done;) {
+                var group = _step107.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator95.e(err);
+              _iterator107.e(err);
             } finally {
-              _iterator95.f();
+              _iterator107.f();
             }
 
             this.rows = groupData;
@@ -36481,21 +38564,21 @@
               return r;
             }, []);
 
-            var _iterator96 = _createForOfIteratorHelper(groupData),
-                _step96;
+            var _iterator108 = _createForOfIteratorHelper(groupData),
+                _step108;
 
             try {
-              for (_iterator96.s(); !(_step96 = _iterator96.n()).done;) {
-                var group = _step96.value;
+              for (_iterator108.s(); !(_step108 = _iterator108.n()).done;) {
+                var group = _step108.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
                 group.subReportingForDate = this.groupDateForSubid(group);
                 group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
             } catch (err) {
-              _iterator96.e(err);
+              _iterator108.e(err);
             } finally {
-              _iterator96.f();
+              _iterator108.f();
             }
 
             this.rows = groupData;
@@ -36535,21 +38618,21 @@
               return r;
             }, []);
 
-            var _iterator97 = _createForOfIteratorHelper(groupData),
-                _step97;
+            var _iterator109 = _createForOfIteratorHelper(groupData),
+                _step109;
 
             try {
-              for (_iterator97.s(); !(_step97 = _iterator97.n()).done;) {
-                var group = _step97.value;
+              for (_iterator109.s(); !(_step109 = _iterator109.n()).done;) {
+                var group = _step109.value;
                 group.split = group.split / group.counter;
                 group.ctr = group.ctr / group.counter;
                 group.subReportingForDate = this.groupDateForPublisher(group);
                 group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
             } catch (err) {
-              _iterator97.e(err);
+              _iterator109.e(err);
             } finally {
-              _iterator97.f();
+              _iterator109.f();
             }
 
             this.rows = groupData;
@@ -36591,20 +38674,20 @@
               return r;
             }, []);
 
-            var _iterator98 = _createForOfIteratorHelper(groupData),
-                _step98;
+            var _iterator110 = _createForOfIteratorHelper(groupData),
+                _step110;
 
             try {
-              for (_iterator98.s(); !(_step98 = _iterator98.n()).done;) {
-                var group = _step98.value;
+              for (_iterator110.s(); !(_step110 = _iterator110.n()).done;) {
+                var group = _step110.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator98.e(err);
+              _iterator110.e(err);
             } finally {
-              _iterator98.f();
+              _iterator110.f();
             }
 
             return groupData;
@@ -36642,20 +38725,20 @@
               return r;
             }, []);
 
-            var _iterator99 = _createForOfIteratorHelper(groupData),
-                _step99;
+            var _iterator111 = _createForOfIteratorHelper(groupData),
+                _step111;
 
             try {
-              for (_iterator99.s(); !(_step99 = _iterator99.n()).done;) {
-                var group = _step99.value;
+              for (_iterator111.s(); !(_step111 = _iterator111.n()).done;) {
+                var group = _step111.value;
                 group.split = group.split / group.counter;
                 group.followon = group.followon / group.counter;
                 group.ctr = group.ctr / group.counter;
               }
             } catch (err) {
-              _iterator99.e(err);
+              _iterator111.e(err);
             } finally {
-              _iterator99.f();
+              _iterator111.f();
             }
 
             return groupData;
@@ -36708,14 +38791,14 @@
         }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee55() {
-              var _iterator100, _step100, tagL, _iterator103, _step103, tagSub, sorted, _multiGroupBy7, groupedItems, _reformattedArray14, item, elm, obj, pulisherArr, _i10, _reformattedArray15, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator101, _step101, resVal, _stackedArr7, _iterator102, _step102, _loop15;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee61() {
+              var _iterator112, _step112, tagL, _iterator115, _step115, tagSub, sorted, _multiGroupBy8, groupedItems, _reformattedArray16, item, elm, obj, pulisherArr, _i11, _reformattedArray17, reformatData, unique, helperChart, resultChart, datesOfRevenueVal, searchesPerDayVal, chartDataValue, _iterator113, _step113, resVal, _stackedArr8, _iterator114, _step114, _loop17;
 
-              return regeneratorRuntime.wrap(function _callee55$(_context55) {
+              return regeneratorRuntime.wrap(function _callee61$(_context61) {
                 while (1) {
-                  switch (_context55.prev = _context55.next) {
+                  switch (_context61.prev = _context61.next) {
                     case 0:
-                      _context55.prev = 0;
+                      _context61.prev = 0;
                       // const response = await this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
                       // this.allChartStat = response.stats;
                       // this.allChartStat.map(function (resStat: { publisher: string; tagname: string; }) {
@@ -36723,18 +38806,18 @@
                       //   resStat.tagname = "No Tag";
                       // });
                       this.allChartStat = this.allStats;
-                      _iterator100 = _createForOfIteratorHelper(this.tagList);
+                      _iterator112 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator100.s(); !(_step100 = _iterator100.n()).done;) {
-                          tagL = _step100.value;
+                        for (_iterator112.s(); !(_step112 = _iterator112.n()).done;) {
+                          tagL = _step112.value;
 
                           if (tagL.tag.advertiser == "verizon-direct") {
-                            _iterator103 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator115 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator103.s(); !(_step103 = _iterator103.n()).done;) {
-                                tagSub = _step103.value;
+                              for (_iterator115.s(); !(_step115 = _iterator115.n()).done;) {
+                                tagSub = _step115.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allChartStat.map(function (stat) {
@@ -36767,16 +38850,16 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator103.e(err);
+                              _iterator115.e(err);
                             } finally {
-                              _iterator103.f();
+                              _iterator115.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator100.e(err);
+                        _iterator112.e(err);
                       } finally {
-                        _iterator100.f();
+                        _iterator112.f();
                       }
 
                       sorted = lodash__WEBPACK_IMPORTED_MODULE_2__["chain"](this.allChartStat).sortBy(function (d) {
@@ -36785,17 +38868,17 @@
                         return d.publisher;
                       }).value();
 
-                      _multiGroupBy7 = function _multiGroupBy7(seq, keys) {
+                      _multiGroupBy8 = function _multiGroupBy8(seq, keys) {
                         if (!keys.length) return seq;
                         var first = keys[0];
                         var rest = keys.slice(1);
                         return lodash__WEBPACK_IMPORTED_MODULE_2__["mapValues"](lodash__WEBPACK_IMPORTED_MODULE_2__["groupBy"](seq, first), function (value) {
-                          return _multiGroupBy7(value, rest);
+                          return _multiGroupBy8(value, rest);
                         });
                       };
 
-                      groupedItems = _multiGroupBy7(sorted, ["date", "publisher"]);
-                      _reformattedArray14 = [];
+                      groupedItems = _multiGroupBy8(sorted, ["date", "publisher"]);
+                      _reformattedArray16 = [];
 
                       for (item in groupedItems) {
                         if (groupedItems.hasOwnProperty(item)) {
@@ -36808,15 +38891,15 @@
                               }, 0)
                             };
 
-                            _reformattedArray14.push(obj);
+                            _reformattedArray16.push(obj);
                           }
                         }
                       }
 
                       pulisherArr = [];
 
-                      for (_i10 = 0, _reformattedArray15 = _reformattedArray14; _i10 < _reformattedArray15.length; _i10++) {
-                        reformatData = _reformattedArray15[_i10];
+                      for (_i11 = 0, _reformattedArray17 = _reformattedArray16; _i11 < _reformattedArray17.length; _i11++) {
+                        reformatData = _reformattedArray17[_i11];
                         pulisherArr.push(reformatData.publisher);
                       }
 
@@ -36849,36 +38932,36 @@
                       datesOfRevenueVal = [];
                       searchesPerDayVal = [];
                       chartDataValue = {};
-                      _iterator101 = _createForOfIteratorHelper(resultChart);
+                      _iterator113 = _createForOfIteratorHelper(resultChart);
 
                       try {
-                        for (_iterator101.s(); !(_step101 = _iterator101.n()).done;) {
-                          resVal = _step101.value;
+                        for (_iterator113.s(); !(_step113 = _iterator113.n()).done;) {
+                          resVal = _step113.value;
                           datesOfRevenueVal.push(resVal.date);
                           searchesPerDayVal.push(resVal.searches);
                         }
                       } catch (err) {
-                        _iterator101.e(err);
+                        _iterator113.e(err);
                       } finally {
-                        _iterator101.f();
+                        _iterator113.f();
                       }
 
-                      _stackedArr7 = [];
-                      _iterator102 = _createForOfIteratorHelper(unique);
+                      _stackedArr8 = [];
+                      _iterator114 = _createForOfIteratorHelper(unique);
 
                       try {
-                        _loop15 = function _loop15() {
-                          var u = _step102.value;
+                        _loop17 = function _loop17() {
+                          var u = _step114.value;
                           var subStackedArr = [];
 
-                          var _iterator104 = _createForOfIteratorHelper(datesOfRevenueVal),
-                              _step104;
+                          var _iterator116 = _createForOfIteratorHelper(datesOfRevenueVal),
+                              _step116;
 
                           try {
-                            var _loop16 = function _loop16() {
-                              var date = _step104.value;
+                            var _loop18 = function _loop18() {
+                              var date = _step116.value;
 
-                              var filterLen = _reformattedArray14.filter(function (reformatted) {
+                              var filterLen = _reformattedArray16.filter(function (reformatted) {
                                 return reformatted.date == date && reformatted.publisher == u;
                               });
 
@@ -36889,64 +38972,64 @@
                               }
                             };
 
-                            for (_iterator104.s(); !(_step104 = _iterator104.n()).done;) {
-                              _loop16();
+                            for (_iterator116.s(); !(_step116 = _iterator116.n()).done;) {
+                              _loop18();
                             }
                           } catch (err) {
-                            _iterator104.e(err);
+                            _iterator116.e(err);
                           } finally {
-                            _iterator104.f();
+                            _iterator116.f();
                           }
 
                           var obj = {};
                           obj[u] = subStackedArr;
 
-                          _stackedArr7.push(obj);
+                          _stackedArr8.push(obj);
                         };
 
-                        for (_iterator102.s(); !(_step102 = _iterator102.n()).done;) {
-                          _loop15();
+                        for (_iterator114.s(); !(_step114 = _iterator114.n()).done;) {
+                          _loop17();
                         }
                       } catch (err) {
-                        _iterator102.e(err);
+                        _iterator114.e(err);
                       } finally {
-                        _iterator102.f();
+                        _iterator114.f();
                       }
 
-                      chartDataValue['revenuePerDay'] = _stackedArr7;
+                      chartDataValue['revenuePerDay'] = _stackedArr8;
                       chartDataValue['datesOfRevenue'] = datesOfRevenueVal;
                       chartDataValue['searchesPerDay'] = searchesPerDayVal;
                       chartDataValue['publisherName'] = unique;
-                      return _context55.abrupt("return", chartDataValue);
+                      return _context61.abrupt("return", chartDataValue);
 
                     case 30:
-                      _context55.prev = 30;
-                      _context55.t0 = _context55["catch"](0);
-                      return _context55.abrupt("return", _context55.t0);
+                      _context61.prev = 30;
+                      _context61.t0 = _context61["catch"](0);
+                      return _context61.abrupt("return", _context61.t0);
 
                     case 33:
                     case "end":
-                      return _context55.stop();
+                      return _context61.stop();
                   }
                 }
-              }, _callee55, this, [[0, 30]]);
+              }, _callee61, this, [[0, 30]]);
             }));
           }
         }, {
           key: "getAllVerizonStats",
           value: function getAllVerizonStats(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee56() {
-              var response, _iterator105, _step105, tagL, _iterator106, _step106, tagSub;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee62() {
+              var response, _iterator117, _step117, tagL, _iterator118, _step118, tagSub;
 
-              return regeneratorRuntime.wrap(function _callee56$(_context56) {
+              return regeneratorRuntime.wrap(function _callee62$(_context62) {
                 while (1) {
-                  switch (_context56.prev = _context56.next) {
+                  switch (_context62.prev = _context62.next) {
                     case 0:
-                      _context56.next = 2;
+                      _context62.next = 2;
                       return this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
 
                     case 2:
-                      response = _context56.sent;
+                      response = _context62.sent;
                       console.log('getAllVerizonStats() response:', response);
                       this.loadingIndicator = false;
                       this.allStats = response.stats;
@@ -36954,18 +39037,18 @@
                         resStat.publisher = "No Publisher";
                         resStat.tagname = "No Tag";
                       });
-                      _iterator105 = _createForOfIteratorHelper(this.tagList);
+                      _iterator117 = _createForOfIteratorHelper(this.tagList);
 
                       try {
-                        for (_iterator105.s(); !(_step105 = _iterator105.n()).done;) {
-                          tagL = _step105.value;
+                        for (_iterator117.s(); !(_step117 = _iterator117.n()).done;) {
+                          tagL = _step117.value;
 
                           if (tagL.tag.advertiser == "verizon-direct") {
-                            _iterator106 = _createForOfIteratorHelper(tagL.tag.subids);
+                            _iterator118 = _createForOfIteratorHelper(tagL.tag.subids);
 
                             try {
-                              for (_iterator106.s(); !(_step106 = _iterator106.n()).done;) {
-                                tagSub = _step106.value;
+                              for (_iterator118.s(); !(_step118 = _iterator118.n()).done;) {
+                                tagSub = _step118.value;
 
                                 if (tagSub.filterTag == "Contains") {
                                   this.allStats.map(function (stat) {
@@ -36998,42 +39081,42 @@
                                 }
                               }
                             } catch (err) {
-                              _iterator106.e(err);
+                              _iterator118.e(err);
                             } finally {
-                              _iterator106.f();
+                              _iterator118.f();
                             }
                           }
                         }
                       } catch (err) {
-                        _iterator105.e(err);
+                        _iterator117.e(err);
                       } finally {
-                        _iterator105.f();
+                        _iterator117.f();
                       }
 
-                      return _context56.abrupt("return", this.allStats);
+                      return _context62.abrupt("return", this.allStats);
 
                     case 10:
                     case "end":
-                      return _context56.stop();
+                      return _context62.stop();
                   }
                 }
-              }, _callee56, this);
+              }, _callee62, this);
             }));
           }
         }, {
           key: "getSummaryMetrics",
           value: function getSummaryMetrics(company, startDate, endDate) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee57() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee63() {
               var response, allSummary, currentPercentPace, lastPercentPace, selectedPercentPace;
-              return regeneratorRuntime.wrap(function _callee57$(_context57) {
+              return regeneratorRuntime.wrap(function _callee63$(_context63) {
                 while (1) {
-                  switch (_context57.prev = _context57.next) {
+                  switch (_context63.prev = _context63.next) {
                     case 0:
-                      _context57.next = 2;
+                      _context63.next = 2;
                       return this.verizonService.getSummaryMetrics(company, startDate, endDate).toPromise();
 
                     case 2:
-                      response = _context57.sent;
+                      response = _context63.sent;
                       allSummary = {};
                       currentPercentPace = 0;
                       lastPercentPace = 0;
@@ -37057,14 +39140,14 @@
                       response.summary[0].selectedStat[0].selectedStartDate = startDate;
                       response.summary[0].selectedStat[0].selectedEndDate = endDate;
                       allSummary['summary'] = response.summary;
-                      return _context57.abrupt("return", allSummary);
+                      return _context63.abrupt("return", allSummary);
 
                     case 17:
                     case "end":
-                      return _context57.stop();
+                      return _context63.stop();
                   }
                 }
-              }, _callee57, this);
+              }, _callee63, this);
             }));
           }
         }]);
@@ -37619,6 +39702,144 @@
         }], function () {
           return [{
             type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]
+          }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
+    "./src/app/shared/service/admin-stats/verizon-arb.service.ts":
+    /*!*******************************************************************!*\
+      !*** ./src/app/shared/service/admin-stats/verizon-arb.service.ts ***!
+      \*******************************************************************/
+
+    /*! exports provided: VerizonArbService */
+
+    /***/
+    function srcAppSharedServiceAdminStatsVerizonArbServiceTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "VerizonArbService", function () {
+        return VerizonArbService;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      /* harmony import */
+
+
+      var _environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! ../../../../environments/environment */
+      "./src/environments/environment.ts");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common/http */
+      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+
+      var API_VERIZON_ARB_URL = "".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/verizon-arb");
+
+      var VerizonArbService = /*#__PURE__*/function () {
+        function VerizonArbService(http) {
+          _classCallCheck(this, VerizonArbService);
+
+          this.http = http;
+        }
+
+        _createClass(VerizonArbService, [{
+          key: "getChartMetrics",
+          value: function getChartMetrics(company, startDate, endDate) {
+            return this.http.get(API_VERIZON_ARB_URL + '/chart_metrics', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getAllVerizonArbStats",
+          value: function getAllVerizonArbStats(company, startDate, endDate) {
+            return this.http.get(API_VERIZON_ARB_URL + '/', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getAllPublisherVerizonArbStats",
+          value: function getAllPublisherVerizonArbStats(company, startDate, endDate) {
+            return this.http.get(API_VERIZON_ARB_URL + '/all-publishers', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "getSummaryMetrics",
+          value: function getSummaryMetrics(company, startDate, endDate) {
+            return this.http.get(API_VERIZON_ARB_URL + '/summary_metrics', {
+              params: {
+                company: company,
+                startDate: startDate,
+                endDate: endDate
+              }
+            });
+          }
+        }, {
+          key: "updateAllPerionStats",
+          value: function updateAllPerionStats(company, startDate, endDate) {
+            var data = {
+              "company": company,
+              'startDate': startDate,
+              'endDate': endDate
+            };
+            return this.http.put(API_VERIZON_ARB_URL + '/', data);
+          }
+        }, {
+          key: "getAllDashboardStats",
+          value: function getAllDashboardStats() {
+            return this.http.get(API_VERIZON_ARB_URL + '/all-stat');
+          }
+        }]);
+
+        return VerizonArbService;
+      }();
+
+      VerizonArbService.ɵfac = function VerizonArbService_Factory(t) {
+        return new (t || VerizonArbService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]));
+      };
+
+      VerizonArbService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+        token: VerizonArbService,
+        factory: VerizonArbService.ɵfac,
+        providedIn: 'root'
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](VerizonArbService, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+          args: [{
+            providedIn: 'root'
+          }]
+        }], function () {
+          return [{
+            type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
           }];
         }, null);
       })();

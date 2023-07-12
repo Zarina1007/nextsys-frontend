@@ -713,7 +713,7 @@ class EditCompanyComponent {
             { value: "perion", viewValue: "Perion" },
             { value: "rubi", viewValue: "Rubi" },
             { value: "system1", viewValue: "System1" },
-            { value: "solex-bc", viewValue: "Solex BC" },
+            // { value : "solex-bc", viewValue: "Solex BC"},
             { value: "verizon-direct", viewValue: "Verizon Direct" },
         ];
         this.reportingProviderHandleList = [];
@@ -745,6 +745,9 @@ class EditCompanyComponent {
                 if (this.company['name'] == "BrandClick") {
                     this.reportingProviderHandleList.push({
                         value: "solex-bc", viewValue: "Solex BC",
+                    });
+                    this.reportingProviderHandleList.push({
+                        value: "verizon-direct-arb", viewValue: "Verizon Direct Arb",
                     });
                 }
                 res['adServerUrls'].map((item) => {
@@ -1177,6 +1180,7 @@ class NewCompanyComponent {
             { value: "system1", viewValue: "System1" },
             { value: "solex-bc", viewValue: "Solex BC" },
             { value: "verizon-direct", viewValue: "Verizon Direct" },
+            { value: "verizon-direct-arb", viewValue: "Verizon Direct Arb" },
         ];
         this.reportingProviderHandleList = [];
         this.localStorageCompany = this.getSelectedCompanyFromLocalStorage();

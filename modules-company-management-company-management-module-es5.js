@@ -1486,10 +1486,8 @@
           }, {
             value: "system1",
             viewValue: "System1"
-          }, {
-            value: "solex-bc",
-            viewValue: "Solex BC"
-          }, {
+          }, // { value : "solex-bc", viewValue: "Solex BC"},
+          {
             value: "verizon-direct",
             viewValue: "Verizon Direct"
           }];
@@ -1530,6 +1528,11 @@
                   _this2.reportingProviderHandleList.push({
                     value: "solex-bc",
                     viewValue: "Solex BC"
+                  });
+
+                  _this2.reportingProviderHandleList.push({
+                    value: "verizon-direct-arb",
+                    viewValue: "Verizon Direct Arb"
                   });
                 }
 
@@ -2416,6 +2419,9 @@
           }, {
             value: "verizon-direct",
             viewValue: "Verizon Direct"
+          }, {
+            value: "verizon-direct-arb",
+            viewValue: "Verizon Direct Arb"
           }];
           this.reportingProviderHandleList = [];
           this.localStorageCompany = this.getSelectedCompanyFromLocalStorage();
