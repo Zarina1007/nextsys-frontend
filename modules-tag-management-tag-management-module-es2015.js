@@ -5691,6 +5691,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./solex-bc-tag/solex-bc-tag.component */ "./src/app/modules/tag-management/solex-bc-tag/solex-bc-tag.component.ts");
 /* harmony import */ var _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./system1-tag/system1-tag.component */ "./src/app/modules/tag-management/system1-tag/system1-tag.component.ts");
 /* harmony import */ var _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./hopkin-tag/hopkin-tag.component */ "./src/app/modules/tag-management/hopkin-tag/hopkin-tag.component.ts");
+/* harmony import */ var _verizon_direct_arb_tag_verizon_direct_arb_tag_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./verizon-direct-arb-tag/verizon-direct-arb-tag.component */ "./src/app/modules/tag-management/verizon-direct-arb-tag/verizon-direct-arb-tag.component.ts");
+
 
 
 
@@ -5740,6 +5742,10 @@ const routes = [
             {
                 path: 'verizon-direct',
                 component: _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_11__["VerizonDirectTagComponent"]
+            },
+            {
+                path: 'verizon-direct-arb',
+                component: _verizon_direct_arb_tag_verizon_direct_arb_tag_component__WEBPACK_IMPORTED_MODULE_15__["VerizonDirectArbTagComponent"]
             },
             {
                 path: 'solex-bc',
@@ -5860,6 +5866,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./system1-tag/system1-tag.component */ "./src/app/modules/tag-management/system1-tag/system1-tag.component.ts");
 /* harmony import */ var _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./hopkin-tag/hopkin-tag.component */ "./src/app/modules/tag-management/hopkin-tag/hopkin-tag.component.ts");
 /* harmony import */ var _publisher_tag_publisher_tag_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./publisher-tag/publisher-tag.component */ "./src/app/modules/tag-management/publisher-tag/publisher-tag.component.ts");
+/* harmony import */ var _verizon_direct_arb_tag_verizon_direct_arb_tag_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./verizon-direct-arb-tag/verizon-direct-arb-tag.component */ "./src/app/modules/tag-management/verizon-direct-arb-tag/verizon-direct-arb-tag.component.ts");
+
 
 
 
@@ -5911,7 +5919,7 @@ TagManagementModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
             _angular_material_dialog__WEBPACK_IMPORTED_MODULE_18__["MatDialogModule"],
             ng_inline_svg__WEBPACK_IMPORTED_MODULE_20__["InlineSVGModule"],
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](TagManagementModule, { declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"], _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__["HopkinTagComponent"], _publisher_tag_publisher_tag_component__WEBPACK_IMPORTED_MODULE_30__["PublisherTagComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](TagManagementModule, { declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"], _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__["HopkinTagComponent"], _publisher_tag_publisher_tag_component__WEBPACK_IMPORTED_MODULE_30__["PublisherTagComponent"], _verizon_direct_arb_tag_verizon_direct_arb_tag_component__WEBPACK_IMPORTED_MODULE_31__["VerizonDirectArbTagComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
         _tag_management_routing_module__WEBPACK_IMPORTED_MODULE_2__["TagManagementRoutingModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_6__["FormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_6__["ReactiveFormsModule"],
@@ -5928,7 +5936,7 @@ TagManagementModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TagManagementModule, [{
         type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
         args: [{
-                declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"], _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__["HopkinTagComponent"], _publisher_tag_publisher_tag_component__WEBPACK_IMPORTED_MODULE_30__["PublisherTagComponent"]],
+                declarations: [_tag_management_component__WEBPACK_IMPORTED_MODULE_3__["TagManagementComponent"], _new_tag_new_tag_component__WEBPACK_IMPORTED_MODULE_4__["NewTagComponent"], _tags_tags_component__WEBPACK_IMPORTED_MODULE_15__["TagsComponent"], _edit_tag_edit_tag_component__WEBPACK_IMPORTED_MODULE_16__["EditTagComponent"], _template_name_template_name_component__WEBPACK_IMPORTED_MODULE_17__["TemplateNameComponent"], _template_template_component__WEBPACK_IMPORTED_MODULE_19__["TemplateComponent"], _copy_adserver_copy_adserver_component__WEBPACK_IMPORTED_MODULE_21__["CopyAdserverComponent"], _perion_tag_perion_tag_component__WEBPACK_IMPORTED_MODULE_22__["PerionTagComponent"], _lyons_tag_lyons_tag_component__WEBPACK_IMPORTED_MODULE_23__["LyonsTagComponent"], _rubi_tag_rubi_tag_component__WEBPACK_IMPORTED_MODULE_24__["RubiTagComponent"], _apptitude_tag_apptitude_tag_component__WEBPACK_IMPORTED_MODULE_25__["ApptitudeTagComponent"], _verizon_direct_tag_verizon_direct_tag_component__WEBPACK_IMPORTED_MODULE_26__["VerizonDirectTagComponent"], _solex_bc_tag_solex_bc_tag_component__WEBPACK_IMPORTED_MODULE_27__["SolexBcTagComponent"], _system1_tag_system1_tag_component__WEBPACK_IMPORTED_MODULE_28__["System1TagComponent"], _hopkin_tag_hopkin_tag_component__WEBPACK_IMPORTED_MODULE_29__["HopkinTagComponent"], _publisher_tag_publisher_tag_component__WEBPACK_IMPORTED_MODULE_30__["PublisherTagComponent"], _verizon_direct_arb_tag_verizon_direct_arb_tag_component__WEBPACK_IMPORTED_MODULE_31__["VerizonDirectArbTagComponent"]],
                 imports: [
                     _angular_common__WEBPACK_IMPORTED_MODULE_1__["CommonModule"],
                     _tag_management_routing_module__WEBPACK_IMPORTED_MODULE_2__["TagManagementRoutingModule"],
@@ -6819,6 +6827,313 @@ TemplateComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
                 styleUrls: ['./template.component.scss']
             }]
     }], function () { return [{ type: _tag_management_service__WEBPACK_IMPORTED_MODULE_1__["TagManagementService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }, { type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"] }, { type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"] }, { type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__["NotificationService"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/tag-management/verizon-direct-arb-tag/verizon-direct-arb-tag.component.ts":
+/*!***************************************************************************************************!*\
+  !*** ./src/app/modules/tag-management/verizon-direct-arb-tag/verizon-direct-arb-tag.component.ts ***!
+  \***************************************************************************************************/
+/*! exports provided: VerizonDirectArbTagComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerizonDirectArbTagComponent", function() { return VerizonDirectArbTagComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _tag_management_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../tag-management.service */ "./src/app/modules/tag-management/tag-management.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+/* harmony import */ var src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/shared/service/snackbar.service */ "./src/app/shared/service/snackbar.service.ts");
+/* harmony import */ var src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/shared/service/users.service */ "./src/app/shared/service/users.service.ts");
+/* harmony import */ var src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/shared/service/notification.service */ "./src/app/shared/service/notification.service.ts");
+/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/dialog.js");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material/form-field */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/form-field.js");
+/* harmony import */ var _angular_material_select__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/material/select */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/select.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+/* harmony import */ var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @swimlane/ngx-datatable */ "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
+/* harmony import */ var _angular_material_core__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/material/core */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var ng_inline_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ng-inline-svg */ "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function VerizonDirectArbTagComponent_div_0_mat_option_16_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "mat-option", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const publisherItem_r13 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("value", publisherItem_r13.value);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", publisherItem_r13.viewValue, " ");
+} }
+function VerizonDirectArbTagComponent_div_0_ng_template_25_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Name ");
+} }
+function VerizonDirectArbTagComponent_div_0_ng_template_26_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+} if (rf & 2) {
+    const value_r15 = ctx.value;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r15, " ");
+} }
+function VerizonDirectArbTagComponent_div_0_ng_template_28_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Company ");
+} }
+function VerizonDirectArbTagComponent_div_0_ng_template_29_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+} if (rf & 2) {
+    const value_r17 = ctx.value;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r17 ? value_r17[0].name : "", " ");
+} }
+function VerizonDirectArbTagComponent_div_0_ng_template_31_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Advertiser ");
+} }
+function VerizonDirectArbTagComponent_div_0_ng_template_32_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+} if (rf & 2) {
+    const value_r19 = ctx.value;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r19, " ");
+} }
+function VerizonDirectArbTagComponent_div_0_ng_template_34_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, " Publisher ");
+} }
+function VerizonDirectArbTagComponent_div_0_ng_template_35_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0);
+} if (rf & 2) {
+    const value_r21 = ctx.value;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", value_r21.length ? value_r21[0].fullname : "", " ");
+} }
+function VerizonDirectArbTagComponent_div_0_ng_template_37_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](0, "Action");
+} }
+function VerizonDirectArbTagComponent_div_0_ng_template_38_Template(rf, ctx) { if (rf & 1) {
+    const _r24 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "a", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function VerizonDirectArbTagComponent_div_0_ng_template_38_Template_a_click_0_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r24); const row_r22 = ctx.row; const ctx_r23 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r23.editTag(row_r22._key); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function VerizonDirectArbTagComponent_div_0_ng_template_38_Template_a_click_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r24); const row_r22 = ctx.row; const ctx_r25 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2); return ctx_r25.deleteTag(row_r22._key); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "span", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/Communication/Write.svg");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/General/Trash.svg");
+} }
+function VerizonDirectArbTagComponent_div_0_Template(rf, ctx) { if (rf & 1) {
+    const _r27 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "div", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "h3", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Verizon Direct Arb Tags");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 9);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-form-field");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "mat-label");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "Publisher");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "mat-select", 12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("selectionChange", function VerizonDirectArbTagComponent_div_0_Template_mat_select_selectionChange_15_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r27); const ctx_r26 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r26.handleChangePublisher($event.value); })("ngModelChange", function VerizonDirectArbTagComponent_div_0_Template_mat_select_ngModelChange_15_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r27); const ctx_r28 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r28.publisherValue = $event; });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, VerizonDirectArbTagComponent_div_0_mat_option_16_Template, 2, 2, "mat-option", 13);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "button", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function VerizonDirectArbTagComponent_div_0_Template_button_click_18_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r27); const ctx_r29 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r29.handleReset(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, " Reset ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "button", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function VerizonDirectArbTagComponent_div_0_Template_button_click_21_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r27); const ctx_r30 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r30.handleAddTag(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, " Add Tag ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "ngx-datatable", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "ngx-datatable-column", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](25, VerizonDirectArbTagComponent_div_0_ng_template_25_Template, 1, 0, "ng-template", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](26, VerizonDirectArbTagComponent_div_0_ng_template_26_Template, 1, 1, "ng-template", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "ngx-datatable-column", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](28, VerizonDirectArbTagComponent_div_0_ng_template_28_Template, 1, 0, "ng-template", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](29, VerizonDirectArbTagComponent_div_0_ng_template_29_Template, 1, 1, "ng-template", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "ngx-datatable-column", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](31, VerizonDirectArbTagComponent_div_0_ng_template_31_Template, 1, 0, "ng-template", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](32, VerizonDirectArbTagComponent_div_0_ng_template_32_Template, 1, 1, "ng-template", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "ngx-datatable-column", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](34, VerizonDirectArbTagComponent_div_0_ng_template_34_Template, 1, 0, "ng-template", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](35, VerizonDirectArbTagComponent_div_0_ng_template_35_Template, 1, 1, "ng-template", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "ngx-datatable-column", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](37, VerizonDirectArbTagComponent_div_0_ng_template_37_Template, 1, 0, "ng-template", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](38, VerizonDirectArbTagComponent_div_0_ng_template_38_Template, 4, 2, "ng-template", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngModel", ctx_r0.publisherValue);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.publisherList);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("rows", ctx_r0.rows)("columnMode", "force")("loadingIndicator", ctx_r0.loadingIndicator)("footerHeight", 50)("rowHeight", 50)("scrollbarH", true)("headerHeight", 50)("limit", 10);
+} }
+function VerizonDirectArbTagComponent_div_1_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " How did you get here ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " Sorry you can't access the page you're looking for. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " There may be a misspelling in the URL entered,");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "br");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "or the page you are looking for may no longer exist. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} }
+class VerizonDirectArbTagComponent {
+    constructor(tagService, cdr, router, _snackBarService, userService, notification, dialog) {
+        this.tagService = tagService;
+        this.cdr = cdr;
+        this.router = router;
+        this._snackBarService = _snackBarService;
+        this.userService = userService;
+        this.notification = notification;
+        this.dialog = dialog;
+        this.loadingIndicator = true;
+        this.hidden = false;
+        this.publishertempList = [];
+        this.publisherList = [];
+        this.publisherValue = "";
+        this.tagList = [];
+    }
+    ngOnInit() {
+        this.localStorageCompany = this.getSelectedCompanyFromLocalStorage();
+        //access page part
+        if (!this.localStorageCompany) {
+            this.hidden = true;
+            this.notification.showError("Please select your Company!", "");
+        }
+        else {
+            this.hidden = false;
+        }
+        this.getVerizonDirectArbTags();
+        this.getPublisherVerizonDirectArb();
+        this.cdr.detectChanges();
+    }
+    getVerizonDirectArbTags() {
+        this.tagService.getAllTags().subscribe((x) => {
+            this.tagList = x;
+            this.rows = this.tagList.filter(tag => tag.company[0]['_id'] == this.localStorageCompany && tag.advertiser == "verizon-direct-arb");
+            this.loadingIndicator = false;
+            this.cdr.detectChanges();
+        });
+    }
+    getPublisherVerizonDirectArb() {
+        this.userService.getPublisherAll().subscribe(data => {
+            if (this.localStorageCompany) {
+                this.publishertempList = data.filter(userData => userData.companies.includes(this.localStorageCompany));
+            }
+            else {
+                this.publishertempList = data;
+            }
+            this.publishertempList.map(publisher => {
+                this.publisherList.push({
+                    value: publisher._key,
+                    viewValue: publisher.fullname
+                });
+            });
+        });
+    }
+    editTag(tagID) {
+        this.router.navigateByUrl('/tag-management/edit/' + tagID);
+    }
+    deleteTag(id) {
+        if (window.confirm('Do you want to go ahead?')) {
+            this.tagService.deleteTag(id).subscribe((res) => {
+                this.getVerizonDirectArbTags();
+                this._snackBarService.info('Deleted a tag');
+            });
+        }
+    }
+    handleAddTag() {
+        this.router.navigateByUrl('/tag-management/new');
+    }
+    handleReset() {
+        this.publisherValue = "";
+        this.rows = this.tagList.filter(tag => tag.company[0]['_id'] == this.localStorageCompany && tag.advertiser == "verizon-direct-arb");
+        this.cdr.detectChanges();
+    }
+    //Gets the Selected Company from Local Storage
+    getSelectedCompanyFromLocalStorage() {
+        return this.userService.getSelectedCompanyFromLocalStorage();
+    }
+    handleChangePublisher(event) {
+        this.publisherValue = event;
+        if (this.publisherValue) {
+            this.rows = this.tagList.filter(tag => tag.company[0]['_id'] == this.localStorageCompany && tag.publisher[0]['_key'] == this.publisherValue && tag.advertiser == "verizon-direct-arb");
+        }
+        else {
+            this.rows = this.tagList.filter(tag => tag.company[0]['_id'] == this.localStorageCompany && tag.advertiser == "verizon-direct-arb");
+        }
+        this.cdr.detectChanges();
+    }
+}
+VerizonDirectArbTagComponent.ɵfac = function VerizonDirectArbTagComponent_Factory(t) { return new (t || VerizonDirectArbTagComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_tag_management_service__WEBPACK_IMPORTED_MODULE_1__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"])); };
+VerizonDirectArbTagComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: VerizonDirectArbTagComponent, selectors: [["app-verizon-direct-arb-tag"]], decls: 2, vars: 2, consts: [["class", "row", 4, "ngIf"], ["class", "error error-3 d-flex flex-row-fluid bgi-size-cover bgi-position-center", "style", "background-image: url('./assets/media/error/bg3.jpg'); height: 100%;zoom: 1;\n    display: block;\n    min-height: 80vh;\n    font-size: 14px;\n    line-height: 1.4;\n    color: #0e1724;", 4, "ngIf"], [1, "row"], [1, "col-xl-12"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], [1, "row", "pb-3", 2, "justify-content", "space-between", "padding", "0 10px"], [1, "col-xl-6"], [1, "col-xl-4"], ["matNativeControl", "", 3, "ngModel", "selectionChange", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [1, "col-xl-4", "align-self-center"], ["type", "button", 1, "btn", "btn-sm", "btn-success", 3, "click"], [1, "tag-btn", "align-self-center", "d-flex"], ["type", "button", 1, "btn", "btn-sm", "btn-primary", 3, "click"], [1, "material", "fullscreen", 3, "rows", "columnMode", "loadingIndicator", "footerHeight", "rowHeight", "scrollbarH", "headerHeight", "limit"], ["name", "Name"], ["ngx-datatable-header-template", ""], ["ngx-datatable-cell-template", ""], ["name", "Company"], ["name", "Advertiser"], ["name", "Publisher"], ["name", "id"], [3, "value"], ["title", "Edit Tag", 1, "btn", "btn-icon", "btn-light", "btn-hover-primary", "btn-sm", "mx-3", 3, "click"], ["cacheSVG", "true", 1, "svg-icon", "svg-icon-md", "svg-icon-primary", 3, "inlineSVG"], ["title", "Delete Tag", 1, "btn", "btn-icon", "btn-light", "btn-hover-danger", "btn-sm", 3, "click"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-danger", 3, "inlineSVG"], [1, "error", "error-3", "d-flex", "flex-row-fluid", "bgi-size-cover", "bgi-position-center", 2, "background-image", "url('./assets/media/error/bg3.jpg')", "height", "100%", "zoom", "1", "display", "block", "min-height", "80vh", "font-size", "14px", "line-height", "1.4", "color", "#0e1724"], [1, "px-10", "px-md-30", "py-10", "py-md-0", "d-flex", "flex-column", "justify-content-md-center"], [1, "display-4", "font-weight-boldest", "text-white", "mb-12"], [1, "font-size-h1", "font-weight-boldest", "text-dark-75"], [1, "font-size-h4", "line-height-md"]], template: function VerizonDirectArbTagComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, VerizonDirectArbTagComponent_div_0_Template, 39, 10, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, VerizonDirectArbTagComponent_div_1_Template, 10, 0, "div", 1);
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.hidden);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.hidden);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_7__["NgIf"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatFormField"], _angular_material_form_field__WEBPACK_IMPORTED_MODULE_8__["MatLabel"], _angular_material_select__WEBPACK_IMPORTED_MODULE_9__["MatSelect"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["NgModel"], _angular_common__WEBPACK_IMPORTED_MODULE_7__["NgForOf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnHeaderDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_11__["DataTableColumnCellDirective"], _angular_material_core__WEBPACK_IMPORTED_MODULE_12__["MatOption"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_13__["InlineSVGDirective"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvdGFnLW1hbmFnZW1lbnQvdmVyaXpvbi1kaXJlY3QtYXJiLXRhZy92ZXJpem9uLWRpcmVjdC1hcmItdGFnLmNvbXBvbmVudC5zY3NzIn0= */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](VerizonDirectArbTagComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-verizon-direct-arb-tag',
+                templateUrl: './verizon-direct-arb-tag.component.html',
+                styleUrls: ['./verizon-direct-arb-tag.component.scss']
+            }]
+    }], function () { return [{ type: _tag_management_service__WEBPACK_IMPORTED_MODULE_1__["TagManagementService"] }, { type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }, { type: src_app_shared_service_snackbar_service__WEBPACK_IMPORTED_MODULE_3__["SnackbarService"] }, { type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_4__["UsersService"] }, { type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_5__["NotificationService"] }, { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_6__["MatDialog"] }]; }, null); })();
 
 
 /***/ }),

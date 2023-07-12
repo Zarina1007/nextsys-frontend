@@ -19330,6 +19330,10 @@ const DynamicAsideMenuConfig = {
                     page: '/tag-management/verizon-direct',
                 },
                 {
+                    title: 'Verizon Direct Arb Tags',
+                    page: '/tag-management/verizon-direct-arb',
+                },
+                {
                     title: 'Solex BC Tags',
                     page: '/tag-management/solex-bc',
                 },
