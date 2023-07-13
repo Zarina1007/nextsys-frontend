@@ -22863,7 +22863,7 @@ class PerionComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
                 helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
                 helperSummary[key].profit += parseFloat(o.profit);
@@ -22878,7 +22878,7 @@ class PerionComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.followon = group.followon / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
         }
         this.rows = groupData;
@@ -22899,7 +22899,7 @@ class PerionComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
                 helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
                 helperSummary[key].profit += parseFloat(o.profit);
@@ -22914,7 +22914,7 @@ class PerionComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.followon = group.followon / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
             group.subReportingForDate = this.groupDateForSubid(group);
             group.detailHeight = (group.subReportingForDate.length + 1) * 50;
@@ -22937,7 +22937,7 @@ class PerionComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
                 helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
                 helperSummary[key].profit += parseFloat(o.profit);
@@ -22952,7 +22952,7 @@ class PerionComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.followon = group.followon / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
             group.subReportingForDate = this.groupDateForPublisher(group);
             group.detailHeight = (group.subReportingForDate.length + 1) * 50;
@@ -22982,7 +22982,7 @@ class PerionComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
                 helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
                 helperSummary[key].profit += parseFloat(o.profit);
@@ -22997,7 +22997,7 @@ class PerionComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.followon = group.followon / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
         }
         return groupData;
@@ -23014,7 +23014,7 @@ class PerionComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
                 helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
                 helperSummary[key].profit += parseFloat(o.profit);
@@ -23029,7 +23029,7 @@ class PerionComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.followon = group.followon / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
         }
         return groupData;
