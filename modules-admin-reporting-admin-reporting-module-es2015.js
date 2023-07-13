@@ -22878,7 +22878,7 @@ class PerionComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.followon = group.followon / group.counter;
-            group.ctr = group.clicks / group.searches;
+            group.ctr = group.clicks / group.impressions;
             group.cpc = group.revenue / group.clicks;
         }
         this.rows = groupData;
@@ -22914,7 +22914,7 @@ class PerionComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.followon = group.followon / group.counter;
-            group.ctr = group.clicks / group.searches;
+            group.ctr = group.clicks / group.impressions;
             group.cpc = group.revenue / group.clicks;
             group.subReportingForDate = this.groupDateForSubid(group);
             group.detailHeight = (group.subReportingForDate.length + 1) * 50;
@@ -22952,7 +22952,7 @@ class PerionComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.followon = group.followon / group.counter;
-            group.ctr = group.clicks / group.searches;
+            group.ctr = group.clicks / group.impressions;
             group.cpc = group.revenue / group.clicks;
             group.subReportingForDate = this.groupDateForPublisher(group);
             group.detailHeight = (group.subReportingForDate.length + 1) * 50;
@@ -22997,7 +22997,7 @@ class PerionComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.followon = group.followon / group.counter;
-            group.ctr = group.clicks / group.searches;
+            group.ctr = group.clicks / group.impressions;
             group.cpc = group.revenue / group.clicks;
         }
         return groupData;
@@ -23029,7 +23029,7 @@ class PerionComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.followon = group.followon / group.counter;
-            group.ctr = group.clicks / group.searches;
+            group.ctr = group.clicks / group.impressions;
             group.cpc = group.revenue / group.clicks;
         }
         return groupData;
