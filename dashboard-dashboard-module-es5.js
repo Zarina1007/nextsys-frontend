@@ -18291,49 +18291,55 @@
       /* harmony import */
 
 
-      var src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_verizon_arb_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! src/app/shared/service/admin-stats/verizon-arb.service */
+      "./src/app/shared/service/admin-stats/verizon-arb.service.ts");
+      /* harmony import */
+
+
+      var src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
       /*! src/app/modules/tag-management/tag-management.service */
       "./src/app/modules/tag-management/tag-management.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/system1.service */
       "./src/app/shared/service/admin-stats/system1.service.ts");
       /* harmony import */
 
 
-      var src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+      var src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
       /*! src/app/modules/company-management/company-management.service */
       "./src/app/modules/company-management/company-management.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/solexbc.service */
       "./src/app/shared/service/admin-stats/solexbc.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/apptitude.service */
       "./src/app/shared/service/admin-stats/apptitude.service.ts");
       /* harmony import */
 
 
-      var src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+      var src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
       /*! src/app/shared/service/admin-stats/hopkin.service */
       "./src/app/shared/service/admin-stats/hopkin.service.ts");
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+      var _angular_common__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+      var _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
       /*! ../../widgets/mixed/mixed-widget1/mixed-widget1.component */
       "./src/app/_metronic/partials/content/widgets/mixed/mixed-widget1/mixed-widget1.component.ts");
 
@@ -18384,7 +18390,7 @@
       }
 
       var Dashboard1Component = /*#__PURE__*/function () {
-        function Dashboard1Component(authService, perionService, userService, cdr, lyonService, rubiService, verizonService, tagService, system1Service, companyService, solexbcService, apptitudeService, hopkinService) {
+        function Dashboard1Component(authService, perionService, userService, cdr, lyonService, rubiService, verizonService, verizonArbService, tagService, system1Service, companyService, solexbcService, apptitudeService, hopkinService) {
           _classCallCheck(this, Dashboard1Component);
 
           this.authService = authService;
@@ -18394,6 +18400,7 @@
           this.lyonService = lyonService;
           this.rubiService = rubiService;
           this.verizonService = verizonService;
+          this.verizonArbService = verizonArbService;
           this.tagService = tagService;
           this.system1Service = system1Service;
           this.companyService = companyService;
@@ -18421,7 +18428,7 @@
                       dashboardPermission = currentUser.permission[0]["dashboard"];
 
                       if (!(dashboardPermission && currentUser.permission[0]['role'] != '3')) {
-                        _context.next = 47;
+                        _context.next = 51;
                         break;
                       }
 
@@ -18459,24 +18466,29 @@
                     case 23:
                       this.verizonChartData = _context.sent;
                       _context.next = 26;
-                      return this.getSystem1Chart(this.selectedCompany);
+                      return this.getVerizonArbChart(this.selectedCompany);
 
                     case 26:
-                      this.system1ChartData = _context.sent;
+                      this.verizonArbChartData = _context.sent;
                       _context.next = 29;
-                      return this.getSolexBCChart(this.selectedCompany);
+                      return this.getSystem1Chart(this.selectedCompany);
 
                     case 29:
-                      this.solexbcChartData = _context.sent;
+                      this.system1ChartData = _context.sent;
                       _context.next = 32;
-                      return this.getApptitudeChart(this.selectedCompany);
+                      return this.getSolexBCChart(this.selectedCompany);
 
                     case 32:
-                      this.apptitudeChartData = _context.sent;
+                      this.solexbcChartData = _context.sent;
                       _context.next = 35;
-                      return this.getHopkinChart(this.selectedCompany);
+                      return this.getApptitudeChart(this.selectedCompany);
 
                     case 35:
+                      this.apptitudeChartData = _context.sent;
+                      _context.next = 38;
+                      return this.getHopkinChart(this.selectedCompany);
+
+                    case 38:
                       this.hopkinChartData = _context.sent;
 
                       if (this.reportTypeData.includes('perion')) {
@@ -18493,6 +18505,10 @@
 
                       if (this.reportTypeData.includes('verizon-direct')) {
                         this.tempChartData = this.tempChartData.concat(this.verizonChartData);
+                      }
+
+                      if (this.reportTypeData.includes('verizon-direct-arb')) {
+                        this.tempChartData = this.tempChartData.concat(this.verizonArbChartData);
                       }
 
                       if (this.reportTypeData.includes('system1')) {
@@ -18512,16 +18528,16 @@
                       }
 
                       this.ChartData = this.tempChartData;
-                      _context.next = 48;
+                      _context.next = 52;
                       break;
 
-                    case 47:
+                    case 51:
                       this.pagePermission = false;
 
-                    case 48:
+                    case 52:
                       this.cdr.markForCheck();
 
-                    case 49:
+                    case 53:
                     case "end":
                       return _context.stop();
                   }
@@ -19351,76 +19367,39 @@
                 }
               }, _callee8, this, [[0, 33]]);
             }));
-          } //get Tags with selected company
+          } //get Verizon Direct chart
 
         }, {
-          key: "getCompanyTags",
-          value: function getCompanyTags(selectedCompany) {
+          key: "getVerizonArbChart",
+          value: function getVerizonArbChart(company) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee9() {
-              var companyId, response;
+              var response, chartVerizonArbMetric, chartAllVerizonArbStat, chartAllBeforeVerizonArbStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartVerizonArbDataValue, revenueCurrentSum, revenueBeforeSum, _iterator19, _step19, dayData, checkExistDay, _iterator21, _step21, resVal, _iterator20, _step20, resBeforeVal;
+
               return regeneratorRuntime.wrap(function _callee9$(_context9) {
                 while (1) {
                   switch (_context9.prev = _context9.next) {
                     case 0:
-                      if (selectedCompany) {
-                        companyId = selectedCompany.split("/")[1];
-                      } else {
-                        companyId = null;
-                      }
-
-                      _context9.prev = 1;
-                      _context9.next = 4;
-                      return this.tagService.getCompanyTags(companyId).toPromise();
-
-                    case 4:
-                      response = _context9.sent;
-                      return _context9.abrupt("return", response);
-
-                    case 8:
-                      _context9.prev = 8;
-                      _context9.t0 = _context9["catch"](1);
-                      return _context9.abrupt("return", _context9.t0);
-
-                    case 11:
-                    case "end":
-                      return _context9.stop();
-                  }
-                }
-              }, _callee9, this, [[1, 8]]);
-            }));
-          } //Get Solex Bc
-
-        }, {
-          key: "getSolexBCChart",
-          value: function getSolexBCChart(company) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
-              var response, chartSolexBCMetric, chartAllSolexBCStat, chartAllBeforeSolexBCStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartSolexBCDataValue, revenueCurrentSum, revenueBeforeSum, _iterator19, _step19, dayData, checkExistDay, _iterator21, _step21, resVal, _iterator20, _step20, resBeforeVal;
-
-              return regeneratorRuntime.wrap(function _callee10$(_context10) {
-                while (1) {
-                  switch (_context10.prev = _context10.next) {
-                    case 0:
-                      _context10.prev = 0;
-                      _context10.next = 3;
-                      return this.solexbcService.getAllDashboardStats().toPromise();
+                      _context9.prev = 0;
+                      _context9.next = 3;
+                      return this.verizonArbService.getAllDashboardStats().toPromise();
 
                     case 3:
-                      response = _context10.sent;
-                      this.allSolexBCChart = response[0];
-                      chartSolexBCMetric = [];
-                      chartAllSolexBCStat = this.allSolexBCChart.currentStat;
-                      chartAllBeforeSolexBCStat = this.allSolexBCChart.beforeStat;
-                      chartAllSolexBCStat = chartAllSolexBCStat.slice().sort(function (a, b) {
+                      response = _context9.sent;
+                      this.allVerizonArbChart = response[0];
+                      chartVerizonArbMetric = [];
+                      chartAllVerizonArbStat = this.allVerizonArbChart.currentStat;
+                      chartAllBeforeVerizonArbStat = this.allVerizonArbChart.beforeStat;
+                      chartAllVerizonArbStat = chartAllVerizonArbStat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
-                      chartAllBeforeSolexBCStat = chartAllBeforeSolexBCStat.slice().sort(function (a_1, b_1) {
+                      chartAllBeforeVerizonArbStat = chartAllBeforeVerizonArbStat.slice().sort(function (a_1, b_1) {
                         return a_1.date - b_1.date;
                       });
                       revenuePerDayVal = [];
                       datesOfRevenueVal = [];
                       revenuePerDayBeforeVal = [];
                       datesOfRevenueBeforeVal = [];
-                      chartSolexBCDataValue = {};
+                      chartVerizonArbDataValue = {};
                       revenueCurrentSum = 0;
                       revenueBeforeSum = 0;
                       _iterator19 = _createForOfIteratorHelper(this.allDaysList);
@@ -19428,7 +19407,7 @@
                       try {
                         for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
                           dayData = _step19.value;
-                          checkExistDay = chartAllSolexBCStat.filter(function (result_1) {
+                          checkExistDay = chartAllVerizonArbStat.filter(function (result_1) {
                             return result_1.date == dayData;
                           });
 
@@ -19458,7 +19437,7 @@
                         _iterator19.f();
                       }
 
-                      _iterator20 = _createForOfIteratorHelper(chartAllBeforeSolexBCStat);
+                      _iterator20 = _createForOfIteratorHelper(chartAllBeforeVerizonArbStat);
 
                       try {
                         for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
@@ -19473,36 +19452,73 @@
                         _iterator20.f();
                       }
 
-                      chartSolexBCDataValue['revenuePerDay'] = revenuePerDayVal;
-                      chartSolexBCDataValue['datesOfRevenue'] = datesOfRevenueVal;
-                      chartSolexBCDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-                      chartSolexBCDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-                      chartSolexBCDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-                      chartSolexBCDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-                      chartSolexBCDataValue['statType'] = "SolexBC";
-                      chartSolexBCDataValue['redirectUri'] = "/reporting/solex-bc";
-                      chartSolexBCMetric.push(chartSolexBCDataValue);
-                      return _context10.abrupt("return", chartSolexBCMetric);
+                      chartVerizonArbDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartVerizonArbDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartVerizonArbDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartVerizonArbDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartVerizonArbDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartVerizonArbDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartVerizonArbDataValue['statType'] = "Verizon Direct Arb";
+                      chartVerizonArbDataValue['redirectUri'] = "/reporting/verizon-direct-arb";
+                      chartVerizonArbMetric.push(chartVerizonArbDataValue);
+                      return _context9.abrupt("return", chartVerizonArbMetric);
 
                     case 33:
-                      _context10.prev = 33;
-                      _context10.t0 = _context10["catch"](0);
-                      return _context10.abrupt("return", _context10.t0);
+                      _context9.prev = 33;
+                      _context9.t0 = _context9["catch"](0);
+                      return _context9.abrupt("return", _context9.t0);
 
                     case 36:
+                    case "end":
+                      return _context9.stop();
+                  }
+                }
+              }, _callee9, this, [[0, 33]]);
+            }));
+          } //get Tags with selected company
+
+        }, {
+          key: "getCompanyTags",
+          value: function getCompanyTags(selectedCompany) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee10() {
+              var companyId, response;
+              return regeneratorRuntime.wrap(function _callee10$(_context10) {
+                while (1) {
+                  switch (_context10.prev = _context10.next) {
+                    case 0:
+                      if (selectedCompany) {
+                        companyId = selectedCompany.split("/")[1];
+                      } else {
+                        companyId = null;
+                      }
+
+                      _context10.prev = 1;
+                      _context10.next = 4;
+                      return this.tagService.getCompanyTags(companyId).toPromise();
+
+                    case 4:
+                      response = _context10.sent;
+                      return _context10.abrupt("return", response);
+
+                    case 8:
+                      _context10.prev = 8;
+                      _context10.t0 = _context10["catch"](1);
+                      return _context10.abrupt("return", _context10.t0);
+
+                    case 11:
                     case "end":
                       return _context10.stop();
                   }
                 }
-              }, _callee10, this, [[0, 33]]);
+              }, _callee10, this, [[1, 8]]);
             }));
-          } //Get Apptitude
+          } //Get Solex Bc
 
         }, {
-          key: "getApptitudeChart",
-          value: function getApptitudeChart(company) {
+          key: "getSolexBCChart",
+          value: function getSolexBCChart(company) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee11() {
-              var response, chartRubiMetric, chartAllApptitudeStat, chartAllBeforeApptitudeStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartApptitudeDataValue, revenueCurrentSum, revenueBeforeSum, _iterator22, _step22, dayData, checkExistDay, _iterator24, _step24, resVal, _iterator23, _step23, resBeforeVal;
+              var response, chartSolexBCMetric, chartAllSolexBCStat, chartAllBeforeSolexBCStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartSolexBCDataValue, revenueCurrentSum, revenueBeforeSum, _iterator22, _step22, dayData, checkExistDay, _iterator24, _step24, resVal, _iterator23, _step23, resBeforeVal;
 
               return regeneratorRuntime.wrap(function _callee11$(_context11) {
                 while (1) {
@@ -19510,25 +19526,25 @@
                     case 0:
                       _context11.prev = 0;
                       _context11.next = 3;
-                      return this.apptitudeService.getAllDashboardStats().toPromise();
+                      return this.solexbcService.getAllDashboardStats().toPromise();
 
                     case 3:
                       response = _context11.sent;
-                      this.allApptitudeChart = response[0];
-                      chartRubiMetric = [];
-                      chartAllApptitudeStat = this.allApptitudeChart.currentStat;
-                      chartAllBeforeApptitudeStat = this.allApptitudeChart.beforeStat;
-                      chartAllApptitudeStat = chartAllApptitudeStat.slice().sort(function (a, b) {
+                      this.allSolexBCChart = response[0];
+                      chartSolexBCMetric = [];
+                      chartAllSolexBCStat = this.allSolexBCChart.currentStat;
+                      chartAllBeforeSolexBCStat = this.allSolexBCChart.beforeStat;
+                      chartAllSolexBCStat = chartAllSolexBCStat.slice().sort(function (a, b) {
                         return a.date - b.date;
                       });
-                      chartAllBeforeApptitudeStat = chartAllBeforeApptitudeStat.slice().sort(function (a_1, b_1) {
+                      chartAllBeforeSolexBCStat = chartAllBeforeSolexBCStat.slice().sort(function (a_1, b_1) {
                         return a_1.date - b_1.date;
                       });
                       revenuePerDayVal = [];
                       datesOfRevenueVal = [];
                       revenuePerDayBeforeVal = [];
                       datesOfRevenueBeforeVal = [];
-                      chartApptitudeDataValue = {};
+                      chartSolexBCDataValue = {};
                       revenueCurrentSum = 0;
                       revenueBeforeSum = 0;
                       _iterator22 = _createForOfIteratorHelper(this.allDaysList);
@@ -19536,7 +19552,7 @@
                       try {
                         for (_iterator22.s(); !(_step22 = _iterator22.n()).done;) {
                           dayData = _step22.value;
-                          checkExistDay = chartAllApptitudeStat.filter(function (result_1) {
+                          checkExistDay = chartAllSolexBCStat.filter(function (result_1) {
                             return result_1.date == dayData;
                           });
 
@@ -19566,7 +19582,7 @@
                         _iterator22.f();
                       }
 
-                      _iterator23 = _createForOfIteratorHelper(chartAllBeforeApptitudeStat);
+                      _iterator23 = _createForOfIteratorHelper(chartAllBeforeSolexBCStat);
 
                       try {
                         for (_iterator23.s(); !(_step23 = _iterator23.n()).done;) {
@@ -19581,16 +19597,16 @@
                         _iterator23.f();
                       }
 
-                      chartApptitudeDataValue['revenuePerDay'] = revenuePerDayVal;
-                      chartApptitudeDataValue['datesOfRevenue'] = datesOfRevenueVal;
-                      chartApptitudeDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
-                      chartApptitudeDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
-                      chartApptitudeDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
-                      chartApptitudeDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
-                      chartApptitudeDataValue['statType'] = "Monarch Apptitude";
-                      chartApptitudeDataValue['redirectUri'] = "/reporting/apptitude";
-                      chartRubiMetric.push(chartApptitudeDataValue);
-                      return _context11.abrupt("return", chartRubiMetric);
+                      chartSolexBCDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartSolexBCDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartSolexBCDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartSolexBCDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartSolexBCDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartSolexBCDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartSolexBCDataValue['statType'] = "SolexBC";
+                      chartSolexBCDataValue['redirectUri'] = "/reporting/solex-bc";
+                      chartSolexBCMetric.push(chartSolexBCDataValue);
+                      return _context11.abrupt("return", chartSolexBCMetric);
 
                     case 33:
                       _context11.prev = 33;
@@ -19603,6 +19619,114 @@
                   }
                 }
               }, _callee11, this, [[0, 33]]);
+            }));
+          } //Get Apptitude
+
+        }, {
+          key: "getApptitudeChart",
+          value: function getApptitudeChart(company) {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee12() {
+              var response, chartRubiMetric, chartAllApptitudeStat, chartAllBeforeApptitudeStat, revenuePerDayVal, datesOfRevenueVal, revenuePerDayBeforeVal, datesOfRevenueBeforeVal, chartApptitudeDataValue, revenueCurrentSum, revenueBeforeSum, _iterator25, _step25, dayData, checkExistDay, _iterator27, _step27, resVal, _iterator26, _step26, resBeforeVal;
+
+              return regeneratorRuntime.wrap(function _callee12$(_context12) {
+                while (1) {
+                  switch (_context12.prev = _context12.next) {
+                    case 0:
+                      _context12.prev = 0;
+                      _context12.next = 3;
+                      return this.apptitudeService.getAllDashboardStats().toPromise();
+
+                    case 3:
+                      response = _context12.sent;
+                      this.allApptitudeChart = response[0];
+                      chartRubiMetric = [];
+                      chartAllApptitudeStat = this.allApptitudeChart.currentStat;
+                      chartAllBeforeApptitudeStat = this.allApptitudeChart.beforeStat;
+                      chartAllApptitudeStat = chartAllApptitudeStat.slice().sort(function (a, b) {
+                        return a.date - b.date;
+                      });
+                      chartAllBeforeApptitudeStat = chartAllBeforeApptitudeStat.slice().sort(function (a_1, b_1) {
+                        return a_1.date - b_1.date;
+                      });
+                      revenuePerDayVal = [];
+                      datesOfRevenueVal = [];
+                      revenuePerDayBeforeVal = [];
+                      datesOfRevenueBeforeVal = [];
+                      chartApptitudeDataValue = {};
+                      revenueCurrentSum = 0;
+                      revenueBeforeSum = 0;
+                      _iterator25 = _createForOfIteratorHelper(this.allDaysList);
+
+                      try {
+                        for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
+                          dayData = _step25.value;
+                          checkExistDay = chartAllApptitudeStat.filter(function (result_1) {
+                            return result_1.date == dayData;
+                          });
+
+                          if (checkExistDay.length == 0) {
+                            revenuePerDayVal.push(0);
+                            datesOfRevenueVal.push(dayData);
+                          } else {
+                            _iterator27 = _createForOfIteratorHelper(checkExistDay);
+
+                            try {
+                              for (_iterator27.s(); !(_step27 = _iterator27.n()).done;) {
+                                resVal = _step27.value;
+                                revenueCurrentSum += resVal.revenue;
+                                revenuePerDayVal.push(resVal.revenue);
+                                datesOfRevenueVal.push(resVal.date);
+                              }
+                            } catch (err) {
+                              _iterator27.e(err);
+                            } finally {
+                              _iterator27.f();
+                            }
+                          }
+                        }
+                      } catch (err) {
+                        _iterator25.e(err);
+                      } finally {
+                        _iterator25.f();
+                      }
+
+                      _iterator26 = _createForOfIteratorHelper(chartAllBeforeApptitudeStat);
+
+                      try {
+                        for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
+                          resBeforeVal = _step26.value;
+                          revenueBeforeSum += resBeforeVal.revenue;
+                          revenuePerDayBeforeVal.push(resBeforeVal.revenue);
+                          datesOfRevenueBeforeVal.push(resBeforeVal.date);
+                        }
+                      } catch (err) {
+                        _iterator26.e(err);
+                      } finally {
+                        _iterator26.f();
+                      }
+
+                      chartApptitudeDataValue['revenuePerDay'] = revenuePerDayVal;
+                      chartApptitudeDataValue['datesOfRevenue'] = datesOfRevenueVal;
+                      chartApptitudeDataValue['revenueBeforePerDay'] = revenuePerDayBeforeVal;
+                      chartApptitudeDataValue['datesOfRevenueBefore'] = datesOfRevenueBeforeVal;
+                      chartApptitudeDataValue['revenueCurrentSum'] = Number.parseFloat(revenueCurrentSum.toFixed(2));
+                      chartApptitudeDataValue['revenueBeforeSum'] = Number.parseFloat(revenueBeforeSum.toFixed(2));
+                      chartApptitudeDataValue['statType'] = "Monarch Apptitude";
+                      chartApptitudeDataValue['redirectUri'] = "/reporting/apptitude";
+                      chartRubiMetric.push(chartApptitudeDataValue);
+                      return _context12.abrupt("return", chartRubiMetric);
+
+                    case 33:
+                      _context12.prev = 33;
+                      _context12.t0 = _context12["catch"](0);
+                      return _context12.abrupt("return", _context12.t0);
+
+                    case 36:
+                    case "end":
+                      return _context12.stop();
+                  }
+                }
+              }, _callee12, this, [[0, 33]]);
             }));
           }
         }, {
@@ -19620,7 +19744,7 @@
       }();
 
       Dashboard1Component.ɵfac = function Dashboard1Component_Factory(t) {
-        return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__["ApptitudeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_14__["HopkinService"]));
+        return new (t || Dashboard1Component)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_auth_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_perion_service__WEBPACK_IMPORTED_MODULE_4__["PerionService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_5__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_1__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_lyon_service__WEBPACK_IMPORTED_MODULE_6__["LyonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_rubi_service__WEBPACK_IMPORTED_MODULE_7__["RubiService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__["VerizonService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_verizon_arb_service__WEBPACK_IMPORTED_MODULE_9__["VerizonArbService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_10__["TagManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_11__["System1Service"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_12__["CompanyManagementService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_13__["SolexBCService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_14__["ApptitudeService"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_15__["HopkinService"]));
       };
 
       Dashboard1Component.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({
@@ -19654,7 +19778,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.pagePermission);
           }
         },
-        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_15__["NgIf"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_16__["MixedWidget1Component"]],
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_16__["NgIf"], _widgets_mixed_mixed_widget1_mixed_widget1_component__WEBPACK_IMPORTED_MODULE_17__["MixedWidget1Component"]],
         encapsulation: 2
       });
       /*@__PURE__*/
@@ -19682,17 +19806,19 @@
           }, {
             type: src_app_shared_service_admin_stats_verizon_service__WEBPACK_IMPORTED_MODULE_8__["VerizonService"]
           }, {
-            type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_9__["TagManagementService"]
+            type: src_app_shared_service_admin_stats_verizon_arb_service__WEBPACK_IMPORTED_MODULE_9__["VerizonArbService"]
           }, {
-            type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_10__["System1Service"]
+            type: src_app_modules_tag_management_tag_management_service__WEBPACK_IMPORTED_MODULE_10__["TagManagementService"]
           }, {
-            type: src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_11__["CompanyManagementService"]
+            type: src_app_shared_service_admin_stats_system1_service__WEBPACK_IMPORTED_MODULE_11__["System1Service"]
           }, {
-            type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_12__["SolexBCService"]
+            type: src_app_modules_company_management_company_management_service__WEBPACK_IMPORTED_MODULE_12__["CompanyManagementService"]
           }, {
-            type: src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_13__["ApptitudeService"]
+            type: src_app_shared_service_admin_stats_solexbc_service__WEBPACK_IMPORTED_MODULE_13__["SolexBCService"]
           }, {
-            type: src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_14__["HopkinService"]
+            type: src_app_shared_service_admin_stats_apptitude_service__WEBPACK_IMPORTED_MODULE_14__["ApptitudeService"]
+          }, {
+            type: src_app_shared_service_admin_stats_hopkin_service__WEBPACK_IMPORTED_MODULE_15__["HopkinService"]
           }];
         }, null);
       })();
@@ -23256,12 +23382,12 @@
             var tempCurSum = 0;
             var tempPreSum = 0;
 
-            var _iterator25 = _createForOfIteratorHelper(this.ChartData),
-                _step25;
+            var _iterator28 = _createForOfIteratorHelper(this.ChartData),
+                _step28;
 
             try {
-              for (_iterator25.s(); !(_step25 = _iterator25.n()).done;) {
-                var chart = _step25.value;
+              for (_iterator28.s(); !(_step28 = _iterator28.n()).done;) {
+                var chart = _step28.value;
                 this.chartSeries.push({
                   name: chart.statType,
                   data: chart.revenuePerDay
@@ -23270,27 +23396,27 @@
                 tempPreSum = tempPreSum + chart.revenueBeforeSum;
               }
             } catch (err) {
-              _iterator25.e(err);
+              _iterator28.e(err);
             } finally {
-              _iterator25.f();
+              _iterator28.f();
             }
 
             this.currentMonthSum = tempCurSum;
             this.previousMonthSum = tempPreSum;
             this.chartOptions = this.getChartOptions(this.chartSeries);
 
-            var _iterator26 = _createForOfIteratorHelper(this.ChartData),
-                _step26;
+            var _iterator29 = _createForOfIteratorHelper(this.ChartData),
+                _step29;
 
             try {
-              for (_iterator26.s(); !(_step26 = _iterator26.n()).done;) {
-                var subChart = _step26.value;
+              for (_iterator29.s(); !(_step29 = _iterator29.n()).done;) {
+                var subChart = _step29.value;
                 this.chartSubOptions.push(this.getSubChartOptions(subChart));
               }
             } catch (err) {
-              _iterator26.e(err);
+              _iterator29.e(err);
             } finally {
-              _iterator26.f();
+              _iterator29.f();
             }
           }
         }, {
