@@ -18933,8 +18933,8 @@ class ApptitudeComponent {
             }
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
                 helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -18948,8 +18948,8 @@ class ApptitudeComponent {
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.cpc = group.cpc / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.cpc = group.revenue / group.clicks;
+            group.ctr = group.clicks / group.searches;
             group.subReportingForDate = this.groupDateForSubid(group);
             group.detailHeight = (group.subReportingForDate.length + 1) * 50;
         }
@@ -18970,8 +18970,8 @@ class ApptitudeComponent {
             }
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
                 helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -18985,8 +18985,8 @@ class ApptitudeComponent {
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.cpc = group.cpc / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.cpc = group.revenue / group.clicks;
+            group.ctr = group.clicks / group.searches;
         }
         this.rows = groupData;
         this.groupPublishFlag = false;
@@ -19005,8 +19005,8 @@ class ApptitudeComponent {
             }
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
                 helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -19020,8 +19020,8 @@ class ApptitudeComponent {
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.cpc = group.cpc / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.cpc = group.revenue / group.clicks;
+            group.ctr = group.clicks / group.searches;
             group.subReportingForDate = this.groupDateForPublisher(group);
             group.detailHeight = (group.subReportingForDate.length + 1) * 50;
         }
@@ -19049,23 +19049,23 @@ class ApptitudeComponent {
             }
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
             }
             return r;
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.followon = group.followon / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.cpc = group.revenue / group.clicks;
+            group.ctr = group.clicks / group.searches;
         }
         return groupData;
     }
@@ -19080,23 +19080,23 @@ class ApptitudeComponent {
             }
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
             }
             return r;
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.followon = group.followon / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.cpc = group.revenue / group.clicks;
+            group.ctr = group.clicks / group.searches;
         }
         return groupData;
     }
@@ -20951,7 +20951,7 @@ class LyonsComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].biddedCtr += parseFloat(o.biddedCtr ? o.biddedCtr : 0);
                 helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -20966,7 +20966,7 @@ class LyonsComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.biddedCtr = group.biddedCtr / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
         }
         this.rows = groupData;
@@ -20987,7 +20987,7 @@ class LyonsComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].biddedCtr += parseFloat(o.biddedCtr ? o.biddedCtr : 0);
                 helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -21002,7 +21002,7 @@ class LyonsComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.biddedCtr = group.biddedCtr / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
             group.subReportingForDate = this.groupDateForSubid(group);
             group.detailHeight = (group.subReportingForDate.length + 1) * 50;
@@ -21025,7 +21025,7 @@ class LyonsComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].biddedCtr += parseFloat(o.biddedCtr ? o.biddedCtr : 0);
                 helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -21040,7 +21040,7 @@ class LyonsComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.biddedCtr = group.biddedCtr / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
             group.subReportingForDate = this.groupDateForPublisher(group);
             group.detailHeight = (group.subReportingForDate.length + 1) * 50;
@@ -21278,23 +21278,24 @@ class LyonsComponent {
             }
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].biddedCtr += parseFloat(o.biddedCtr ? o.biddedCtr : 0);
+                helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].profit += parseFloat(o.profit);
                 helperSummary[key].publisherNet += parseFloat(o.publisherNet);
-                helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
                 helperSummary[key].counter++;
             }
             return r;
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.followon = group.followon / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.biddedCtr = group.biddedCtr / group.counter;
+            group.ctr = group.clicks / group.searches;
+            group.cpc = group.revenue / group.clicks;
         }
         return groupData;
     }
@@ -21311,21 +21312,22 @@ class LyonsComponent {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
                 helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].biddedCtr += parseFloat(o.biddedCtr ? o.biddedCtr : 0);
+                helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].profit += parseFloat(o.profit);
                 helperSummary[key].publisherNet += parseFloat(o.publisherNet);
-                helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
                 helperSummary[key].counter++;
             }
             return r;
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.followon = group.followon / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.biddedCtr = group.biddedCtr / group.counter;
+            group.ctr = group.clicks / group.searches;
+            group.cpc = group.revenue / group.clicks;
         }
         return groupData;
     }
@@ -23933,22 +23935,19 @@ class RubiComponent {
             }
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
-                // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].monetized_searches += parseFloat(o.monetized_searches ? o.monetized_searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
             }
             return r;
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
         }
         return groupData;
@@ -23964,15 +23963,12 @@ class RubiComponent {
             }
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
-                // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].monetized_searches += parseFloat(o.monetized_searches ? o.monetized_searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
             }
             return r;
@@ -23980,7 +23976,7 @@ class RubiComponent {
         for (var group of groupData) {
             group.split = group.split / group.counter;
             group.cpc = group.revenue / group.clicks;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
         }
         return groupData;
     }
@@ -24845,23 +24841,18 @@ class SolexBcComponent {
             }
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
-                // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
             }
             return r;
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.followon = group.followon / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.ctr = group.clicks / group.searches;
             group.cpc = group.revenue / group.clicks;
         }
         return groupData;
@@ -24877,23 +24868,19 @@ class SolexBcComponent {
             }
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
             }
             return r;
         }, []);
         for (var group of groupData) {
             group.split = group.split / group.counter;
-            group.followon = group.followon / group.counter;
-            group.ctr = group.ctr / group.counter;
+            group.cpc = group.revenue / group.clicks;
+            group.ctr = group.clicks / group.searches;
         }
         return groupData;
     }
@@ -25951,7 +25938,6 @@ class System1Component {
             }
             return r;
         }, []);
-        console.log(groupSubData);
         for (var groupSub of groupSubData) {
             groupSub.split = groupSub.split / groupSub.counter;
             groupSub.ctr = groupSub.clicks / groupSub.searches;

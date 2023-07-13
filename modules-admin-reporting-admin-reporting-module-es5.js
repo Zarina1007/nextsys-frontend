@@ -21245,9 +21245,9 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
                 helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -21268,8 +21268,8 @@
               for (_iterator17.s(); !(_step17 = _iterator17.n()).done;) {
                 var group = _step17.value;
                 group.split = group.split / group.counter;
-                group.cpc = group.cpc / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.cpc = group.revenue / group.clicks;
+                group.ctr = group.clicks / group.searches;
                 group.subReportingForDate = this.groupDateForSubid(group);
                 group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
@@ -21298,9 +21298,9 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
                 helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -21321,8 +21321,8 @@
               for (_iterator18.s(); !(_step18 = _iterator18.n()).done;) {
                 var group = _step18.value;
                 group.split = group.split / group.counter;
-                group.cpc = group.cpc / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.cpc = group.revenue / group.clicks;
+                group.ctr = group.clicks / group.searches;
               }
             } catch (err) {
               _iterator18.e(err);
@@ -21349,9 +21349,9 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
                 helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -21372,8 +21372,8 @@
               for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
                 var group = _step19.value;
                 group.split = group.split / group.counter;
-                group.cpc = group.cpc / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.cpc = group.revenue / group.clicks;
+                group.ctr = group.clicks / group.searches;
                 group.subReportingForDate = this.groupDateForPublisher(group);
                 group.detailHeight = (group.subReportingForDate.length + 1) * 50;
               }
@@ -21413,16 +21413,16 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
               }
 
@@ -21436,8 +21436,8 @@
               for (_iterator20.s(); !(_step20 = _iterator20.n()).done;) {
                 var group = _step20.value;
                 group.split = group.split / group.counter;
-                group.followon = group.followon / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.cpc = group.revenue / group.clicks;
+                group.ctr = group.clicks / group.searches;
               }
             } catch (err) {
               _iterator20.e(err);
@@ -21462,16 +21462,16 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+
                 helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].filtering += parseFloat(o.filtering ? o.filtering : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
               }
 
@@ -21485,8 +21485,8 @@
               for (_iterator21.s(); !(_step21 = _iterator21.n()).done;) {
                 var group = _step21.value;
                 group.split = group.split / group.counter;
-                group.followon = group.followon / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.cpc = group.revenue / group.clicks;
+                group.ctr = group.clicks / group.searches;
               }
             } catch (err) {
               _iterator21.e(err);
@@ -25193,8 +25193,8 @@
                 r.push(helperSummary[key]);
               } else {
                 helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
 
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].biddedCtr += parseFloat(o.biddedCtr ? o.biddedCtr : 0);
                 helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -25216,7 +25216,7 @@
                 var group = _step37.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.ctr = group.clicks / group.searches;
                 group.cpc = group.revenue / group.clicks;
               }
             } catch (err) {
@@ -25245,8 +25245,8 @@
                 r.push(helperSummary[key]);
               } else {
                 helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
 
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].biddedCtr += parseFloat(o.biddedCtr ? o.biddedCtr : 0);
                 helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -25268,7 +25268,7 @@
                 var group = _step38.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.ctr = group.clicks / group.searches;
                 group.cpc = group.revenue / group.clicks;
                 group.subReportingForDate = this.groupDateForSubid(group);
                 group.detailHeight = (group.subReportingForDate.length + 1) * 50;
@@ -25299,8 +25299,8 @@
                 r.push(helperSummary[key]);
               } else {
                 helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
 
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].biddedCtr += parseFloat(o.biddedCtr ? o.biddedCtr : 0);
                 helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
@@ -25322,7 +25322,7 @@
                 var group = _step39.value;
                 group.split = group.split / group.counter;
                 group.biddedCtr = group.biddedCtr / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.ctr = group.clicks / group.searches;
                 group.cpc = group.revenue / group.clicks;
                 group.subReportingForDate = this.groupDateForPublisher(group);
                 group.detailHeight = (group.subReportingForDate.length + 1) * 50;
@@ -25720,16 +25720,16 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+
+                helperSummary[key].biddedCtr += parseFloat(o.biddedCtr ? o.biddedCtr : 0);
+                helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].profit += parseFloat(o.profit);
                 helperSummary[key].publisherNet += parseFloat(o.publisherNet);
-                helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
                 helperSummary[key].counter++;
               }
 
@@ -25743,8 +25743,9 @@
               for (_iterator45.s(); !(_step45 = _iterator45.n()).done;) {
                 var group = _step45.value;
                 group.split = group.split / group.counter;
-                group.followon = group.followon / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.biddedCtr = group.biddedCtr / group.counter;
+                group.ctr = group.clicks / group.searches;
+                group.cpc = group.revenue / group.clicks;
               }
             } catch (err) {
               _iterator45.e(err);
@@ -25772,13 +25773,13 @@
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
                 helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
+                helperSummary[key].biddedCtr += parseFloat(o.biddedCtr ? o.biddedCtr : 0);
+                helperSummary[key].biddedSearches += parseFloat(o.biddedSearches ? o.biddedSearches : 0);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].profit += parseFloat(o.profit);
                 helperSummary[key].publisherNet += parseFloat(o.publisherNet);
-                helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
                 helperSummary[key].counter++;
               }
 
@@ -25792,8 +25793,9 @@
               for (_iterator46.s(); !(_step46 = _iterator46.n()).done;) {
                 var group = _step46.value;
                 group.split = group.split / group.counter;
-                group.followon = group.followon / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.biddedCtr = group.biddedCtr / group.counter;
+                group.ctr = group.clicks / group.searches;
+                group.cpc = group.revenue / group.clicks;
               }
             } catch (err) {
               _iterator46.e(err);
@@ -30595,16 +30597,13 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].monetized_searches += parseFloat(o.monetized_searches ? o.monetized_searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
               }
 
@@ -30618,7 +30617,7 @@
               for (_iterator64.s(); !(_step64 = _iterator64.n()).done;) {
                 var group = _step64.value;
                 group.split = group.split / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.ctr = group.clicks / group.searches;
                 group.cpc = group.revenue / group.clicks;
               }
             } catch (err) {
@@ -30644,16 +30643,13 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
+                helperSummary[key].monetized_searches += parseFloat(o.monetized_searches ? o.monetized_searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
               }
 
@@ -30668,7 +30664,7 @@
                 var group = _step65.value;
                 group.split = group.split / group.counter;
                 group.cpc = group.revenue / group.clicks;
-                group.ctr = group.ctr / group.counter;
+                group.ctr = group.clicks / group.searches;
               }
             } catch (err) {
               _iterator65.e(err);
@@ -32328,16 +32324,12 @@
                 helperSummary[key].counter = 1;
                 r.push(helperSummary[key]);
               } else {
-                helperSummary[key].clicks += parseFloat(o.clicks); // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].clicks += parseFloat(o.clicks);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
               }
 
@@ -32351,8 +32343,7 @@
               for (_iterator76.s(); !(_step76 = _iterator76.n()).done;) {
                 var group = _step76.value;
                 group.split = group.split / group.counter;
-                group.followon = group.followon / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.ctr = group.clicks / group.searches;
                 group.cpc = group.revenue / group.clicks;
               }
             } catch (err) {
@@ -32379,15 +32370,11 @@
                 r.push(helperSummary[key]);
               } else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
-                helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
-                helperSummary[key].impressions += parseFloat(o.impressions ? o.impressions : 0);
-                helperSummary[key].totalsearches += parseFloat(o.totalsearches ? o.totalsearches : 0);
-                helperSummary[key].profit += parseFloat(o.profit);
-                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
+                helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);
                 helperSummary[key].revenue += parseFloat(o.revenue);
                 helperSummary[key].split += parseFloat(o.split);
-                helperSummary[key].followon += parseFloat(o.followon ? o.followon : 0);
+                helperSummary[key].profit += parseFloat(o.profit);
+                helperSummary[key].publisherNet += parseFloat(o.publisherNet);
                 helperSummary[key].counter++;
               }
 
@@ -32401,8 +32388,8 @@
               for (_iterator77.s(); !(_step77 = _iterator77.n()).done;) {
                 var group = _step77.value;
                 group.split = group.split / group.counter;
-                group.followon = group.followon / group.counter;
-                group.ctr = group.ctr / group.counter;
+                group.cpc = group.revenue / group.clicks;
+                group.ctr = group.clicks / group.searches;
               }
             } catch (err) {
               _iterator77.e(err);
@@ -34361,7 +34348,6 @@
 
               return r;
             }, []);
-            console.log(groupSubData);
 
             var _iterator93 = _createForOfIteratorHelper(groupSubData),
                 _step93;
