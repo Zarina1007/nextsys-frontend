@@ -1481,8 +1481,8 @@
                 _this5.notification.showSuccess('Successfully added a new Sheet.', "");
 
                 _this5.router.navigate(['/google-sheet-reporting/all-sheets']);
-              }, function (err) {
-                _this5.notification.showError(err.error.text, "");
+              }, function (error) {
+                _this5.notification.showError(JSON.stringify(error.error), "");
               });
             }
           } //Gets the Selected Company from Local Storage

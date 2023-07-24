@@ -745,8 +745,8 @@ class NewSheetComponent {
             this.googleSheetReportingServie.addSheet(this.sheetFG.value).subscribe(res => {
                 this.notification.showSuccess('Successfully added a new Sheet.', "");
                 this.router.navigate(['/google-sheet-reporting/all-sheets']);
-            }, (err) => {
-                this.notification.showError(err.error.text, "");
+            }, (error) => {
+                this.notification.showError(JSON.stringify(error.error), "");
             });
         }
     }
