@@ -28240,7 +28240,7 @@ class VerizonDirectComponent {
             else {
                 helperSummary[key].clicks += parseFloat(o.clicks);
                 // helperSummary[key].cpc += parseFloat(o.cpc ? o.cpc : 0);
-                helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
+                // helperSummary[key].ctr += parseFloat(o.ctr ? o.ctr : 0);
                 helperSummary[key].rn += parseFloat(o.rn ? o.rn : 0);
                 helperSummary[key].coverage += parseFloat(o.coverage ? o.coverage : 0);
                 helperSummary[key].searches += parseFloat(o.searches ? o.searches : 0);

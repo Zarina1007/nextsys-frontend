@@ -1482,7 +1482,7 @@
 
                 _this5.router.navigate(['/google-sheet-reporting/all-sheets']);
               }, function (err) {
-                _this5.notification.showError(err.error, "");
+                _this5.notification.showError(err.error.text, "");
               });
             }
           } //Gets the Selected Company from Local Storage

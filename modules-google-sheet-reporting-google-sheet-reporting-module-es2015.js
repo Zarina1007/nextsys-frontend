@@ -746,7 +746,7 @@ class NewSheetComponent {
                 this.notification.showSuccess('Successfully added a new Sheet.', "");
                 this.router.navigate(['/google-sheet-reporting/all-sheets']);
             }, (err) => {
-                this.notification.showError(err.error, "");
+                this.notification.showError(err.error.text, "");
             });
         }
     }
