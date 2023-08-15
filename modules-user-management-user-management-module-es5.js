@@ -930,7 +930,6 @@
             }
 
             this.subscritions.push(this.usersServie.getAdminAll().subscribe(function (data) {
-              // console.log(data);
               _this2.originalData = data;
 
               if (_this2.localStorageCompany) {
@@ -970,7 +969,6 @@
             if (window.confirm('Do you want to go ahead?')) {
               this.usersServie.deleteUser(id).subscribe(function (res) {
                 _this3.usersServie.getAdminAll().subscribe(function (data) {
-                  // console.log(data);
                   if (_this3.companyUser) {
                     _this3.admins.data = data;
                   } else {
@@ -1625,7 +1623,6 @@
             }
 
             this.subscritions.push(this.usersServie.getAdvertiserAll().subscribe(function (data) {
-              // console.log(data);
               _this5.originalData = data;
 
               if (_this5.localStorageCompany) {
@@ -1665,7 +1662,6 @@
             if (window.confirm('Do you want to go ahead?')) {
               this.usersServie.deleteUser(id).subscribe(function (res) {
                 _this6.usersServie.getAdvertiserAll().subscribe(function (data) {
-                  // console.log(data);
                   if (_this6.companyUser) {
                     _this6.advertisers.data = data;
                   } else {
@@ -1887,7 +1883,6 @@
             var _this8 = this;
 
             this.companyService.getAllCompanies().subscribe(function (response) {
-              console.log(response);
               _this8.loadingIndicator = false;
               _this8.allCompanies = response;
 
@@ -2945,7 +2940,6 @@
           value: function openAddCompanyDialog() {
             var _this13 = this;
 
-            console.log(this.user);
             var dialogRef = this.dialog.open(_add_company_add_company_component__WEBPACK_IMPORTED_MODULE_5__["AddCompanyComponent"], {
               height: 'auto',
               width: '600px',
@@ -2953,8 +2947,7 @@
             }).afterClosed().subscribe(function (response) {
               //If user hits save
               if (response) {
-                console.log(response); //New variable readability -- all user data
-
+                //New variable readability -- all user data
                 _this13.user = response.user; //Updates current user with new company selection.
 
                 _this13.userManagementService.updateUser(_this13.user, _this13.selectedCompany).subscribe(function (x) {

@@ -459,7 +459,6 @@ class AdminsComponent {
             this.hidden = false;
         }
         this.subscritions.push(this.usersServie.getAdminAll().subscribe(data => {
-            // console.log(data);
             this.originalData = data;
             if (this.localStorageCompany) {
                 this.admins.data = data.filter(userData => userData.companies.includes(this.localStorageCompany));
@@ -484,7 +483,6 @@ class AdminsComponent {
         if (window.confirm('Do you want to go ahead?')) {
             this.usersServie.deleteUser(id).subscribe((res) => {
                 this.usersServie.getAdminAll().subscribe(data => {
-                    // console.log(data);
                     if (this.companyUser) {
                         this.admins.data = data;
                     }
@@ -797,7 +795,6 @@ class AdvertisersComponent {
             this.hidden = false;
         }
         this.subscritions.push(this.usersServie.getAdvertiserAll().subscribe(data => {
-            // console.log(data);
             this.originalData = data;
             if (this.localStorageCompany) {
                 this.advertisers.data = data.filter(userData => userData.companies.includes(this.localStorageCompany));
@@ -822,7 +819,6 @@ class AdvertisersComponent {
         if (window.confirm('Do you want to go ahead?')) {
             this.usersServie.deleteUser(id).subscribe((res) => {
                 this.usersServie.getAdvertiserAll().subscribe(data => {
-                    // console.log(data);
                     if (this.companyUser) {
                         this.advertisers.data = data;
                     }
@@ -937,7 +933,6 @@ class AddCompanyComponent {
      */
     getAllCompanies() {
         this.companyService.getAllCompanies().subscribe((response) => {
-            console.log(response);
             this.loadingIndicator = false;
             this.allCompanies = response;
             this.cdr.detectChanges();
@@ -1473,7 +1468,6 @@ class EditUsersComponent {
     }
     //Add/Edit Companies to a user profile
     openAddCompanyDialog() {
-        console.log(this.user);
         let dialogRef = this.dialog
             .open(_add_company_add_company_component__WEBPACK_IMPORTED_MODULE_5__["AddCompanyComponent"], {
             height: 'auto',
@@ -1484,7 +1478,6 @@ class EditUsersComponent {
             .subscribe((response) => {
             //If user hits save
             if (response) {
-                console.log(response);
                 //New variable readability -- all user data
                 this.user = response.user;
                 //Updates current user with new company selection.

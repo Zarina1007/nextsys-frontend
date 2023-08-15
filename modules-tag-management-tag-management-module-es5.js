@@ -749,7 +749,6 @@
         _createClass(CopyAdserverComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            console.log(this.data);
             this.tagKey = this.data;
             this.getTagData(this.tagKey);
           }
@@ -760,7 +759,6 @@
 
             this.tagManagementService.getOneTag(tagKey).subscribe(function (response) {
               _this6.loadingIndicator = false;
-              console.log(response);
               _this6.adServerUrl = response.initialURL;
 
               _this6.cdr.detectChanges();
@@ -2971,8 +2969,6 @@
         }, {
           key: "updateInitialParams",
           value: function updateInitialParams(param, tagIndex, index) {
-            console.log('Updating Initial Params');
-
             if (param.value === 'static') {
               console.log('static!', tagIndex, index);
               this.tagUrlParams(tagIndex).controls[index].get('initialParam').setValue(this.tagUrlParams(tagIndex).controls[index].get('value').value);
@@ -7417,7 +7413,6 @@
               }
             });
             dialogRef.afterClosed().subscribe(function (result) {
-              console.log('The dialog was closed');
               _this26.templateName = result;
             });
           } //Gets the Selected Company from Local Storage
@@ -7480,7 +7475,6 @@
             var _this28 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              // console.log(data);
               if (_this28.companySelected) {
                 _this28.publishertempList = data.filter(function (userData) {
                   return userData.companies.includes(_this28.companySelected);
@@ -7549,10 +7543,9 @@
         }, {
           key: "updateInitialParams",
           value: function updateInitialParams(param, tagIndex, index) {
-            console.log('Updating Initial Params');
-
+            // console.log('Updating Initial Params');
             if (param.value === 'static') {
-              console.log('static!', tagIndex, index);
+              // console.log('static!', tagIndex, index);
               this.tagUrlParams(tagIndex).controls[index].get('initialParam').setValue(this.tagUrlParams(tagIndex).controls[index].get('value').value);
               this.createInitialURL(tagIndex);
             } else {
@@ -7575,7 +7568,6 @@
 
             var _a;
 
-            console.log('Updating URL');
             var subInitialURL = new URL((_a = this.newTagFG.get("initialURL")) === null || _a === void 0 ? void 0 : _a.value);
             this.tagUrlParams(tagIndex).controls.forEach(function (element, index) {
               if (element.value.paramType === 'dynamic') {
@@ -7749,8 +7741,6 @@
                 }
               });
               dialogRef.afterClosed().subscribe(function (result) {
-                console.log('dialog closed!');
-
                 if (result && result.templateName) {
                   _this32.templateName = result.templateName;
 
@@ -9815,7 +9805,6 @@
         _createClass(PublisherTagComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            // console.log(this.data)
             this.publisherApikey = this.data.tagData.publisher.apiKey;
             this.tagKey = this.data.tagData.tag._key;
             this.reportingUrl = "http://api.nextsys.io/api/publisher/reporting/api?apiKey=".concat(this.publisherApikey, "&tag=").concat(this.tagKey, "&startDate=").concat(this.beforeDate, "&endDate=").concat(this.currentDate, "&reportType=csv");
@@ -13324,7 +13313,6 @@
             var _this60 = this;
 
             this.userService.getPublisherAll().subscribe(function (data) {
-              // console.log(data);
               if (_this60.localStorageCompany) {
                 _this60.publishertempList = data.filter(function (userData) {
                   return userData.companies.includes(_this60.localStorageCompany);
@@ -13433,8 +13421,7 @@
               width: '650px',
               data: tagKey
             }).afterClosed().subscribe(function (response) {
-              if (response) {
-                console.log(response);
+              if (response) {// console.log(response)
               }
             });
           }
@@ -14212,7 +14199,6 @@
 
             this.tagService.getAllTemplates().subscribe(function (x) {
               _this66.templateList = x;
-              console.log(x);
               _this66.rows = _this66.templateList.filter(function (template) {
                 return template.company[0]['_id'] == _this66.localStorageCompany;
               });

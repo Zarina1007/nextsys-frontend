@@ -26426,7 +26426,6 @@ class AsideDynamicComponent {
     getReportingProviderList() {
         if (this.companySelected) {
             this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(res => {
-                console.log("resese", res);
                 res.reportingProviders.map(report => {
                     this.reportingProviderList.push(report.reportingProvider);
                 });
@@ -29624,7 +29623,6 @@ class TopbarComponent {
         }
     }
     // ngOnDestroy() {
-    //   console.log("========")
     //   // Unsubscribe from all subscriptions when the component is destroyed
     //   this.messageSubscription.unsubscribe();
     // }

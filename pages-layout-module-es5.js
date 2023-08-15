@@ -43084,7 +43084,6 @@
 
             if (this.companySelected) {
               this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
-                console.log("resese", res);
                 res.reportingProviders.map(function (report) {
                   _this125.reportingProviderList.push(report.reportingProvider);
                 });
@@ -49427,7 +49426,6 @@
               this.getPublisherNotifications();
             }
           } // ngOnDestroy() {
-          //   console.log("========")
           //   // Unsubscribe from all subscriptions when the component is destroyed
           //   this.messageSubscription.unsubscribe();
           // }

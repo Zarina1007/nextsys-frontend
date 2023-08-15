@@ -1506,7 +1506,6 @@ class NewNotificationComponent {
     }
     getReceiver() {
         this.userService.getReceiverAll().subscribe(data => {
-            console.log(data);
             data.map((d) => {
                 this.receiverData.push({
                     id: d._id,

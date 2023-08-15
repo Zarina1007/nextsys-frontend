@@ -752,172 +752,157 @@
                 while (1) {
                   switch (_context2.prev = _context2.next) {
                     case 0:
-                      this.users = [{
-                        id: 1,
-                        firstName: 'Mark',
-                        lastName: 'Otto',
-                        handle: '@mdo'
-                      }, {
-                        id: 2,
-                        firstName: 'Jacob',
-                        lastName: 'Thornton',
-                        handle: '@fat'
-                      }, {
-                        id: 3,
-                        firstName: 'Larry',
-                        lastName: 'the Bird',
-                        handle: '@twitter'
-                      }];
                       this.route.params.subscribe(function (routeParams) {
                         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
                           return regeneratorRuntime.wrap(function _callee$(_context) {
                             while (1) {
                               switch (_context.prev = _context.next) {
                                 case 0:
+                                  this.paramTagId = routeParams.tagId;
                                   this.statData = [];
-                                  _context.next = 3;
+                                  _context.next = 4;
                                   return this.getTagInformation(routeParams.tagId);
 
-                                case 3:
+                                case 4:
                                   this.tagRows = _context.sent;
                                   this.selectedAdvertiser = this.tagRows.advertiser;
                                   this.selectedCompany = this.tagRows.company;
 
                                   if (!(this.selectedAdvertiser == "lyons")) {
-                                    _context.next = 15;
+                                    _context.next = 16;
                                     break;
                                   }
 
-                                  _context.next = 9;
+                                  _context.next = 10;
                                   return this.getLyonChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                                case 9:
+                                case 10:
                                   this.chartData = _context.sent;
-                                  _context.next = 12;
+                                  _context.next = 13;
                                   return this.getAllLyonStats(this.range.startDate, this.range.endDate, this.tagRows);
 
-                                case 12:
+                                case 13:
                                   this.statData = _context.sent;
-                                  _context.next = 67;
+                                  _context.next = 68;
                                   break;
 
-                                case 15:
+                                case 16:
                                   if (!(this.selectedAdvertiser == "perion")) {
-                                    _context.next = 24;
+                                    _context.next = 25;
                                     break;
                                   }
 
-                                  _context.next = 18;
+                                  _context.next = 19;
                                   return this.getPerionChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                                case 18:
+                                case 19:
                                   this.chartData = _context.sent;
-                                  _context.next = 21;
+                                  _context.next = 22;
                                   return this.getAllPerionStats(this.range.startDate, this.range.endDate, this.tagRows);
 
-                                case 21:
+                                case 22:
                                   this.statData = _context.sent;
-                                  _context.next = 67;
+                                  _context.next = 68;
                                   break;
 
-                                case 24:
+                                case 25:
                                   if (!(this.selectedAdvertiser == "verizon-direct")) {
-                                    _context.next = 33;
+                                    _context.next = 34;
                                     break;
                                   }
 
-                                  _context.next = 27;
+                                  _context.next = 28;
                                   return this.getVerizonChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                                case 27:
+                                case 28:
                                   this.chartData = _context.sent;
-                                  _context.next = 30;
+                                  _context.next = 31;
                                   return this.getAllVerizonStats(this.range.startDate, this.range.endDate, this.tagRows);
 
-                                case 30:
+                                case 31:
                                   this.statData = _context.sent;
-                                  _context.next = 67;
+                                  _context.next = 68;
                                   break;
 
-                                case 33:
+                                case 34:
                                   if (!(this.selectedAdvertiser == "rubi")) {
-                                    _context.next = 42;
+                                    _context.next = 43;
                                     break;
                                   }
 
-                                  _context.next = 36;
+                                  _context.next = 37;
                                   return this.getRubiChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                                case 36:
+                                case 37:
                                   this.chartData = _context.sent;
-                                  _context.next = 39;
+                                  _context.next = 40;
                                   return this.getRubiAllStats(this.range.startDate, this.range.endDate, this.tagRows);
 
-                                case 39:
+                                case 40:
                                   this.statData = _context.sent;
-                                  _context.next = 67;
+                                  _context.next = 68;
                                   break;
 
-                                case 42:
+                                case 43:
                                   if (!(this.selectedAdvertiser == "solex-bc")) {
-                                    _context.next = 51;
+                                    _context.next = 52;
                                     break;
                                   }
 
-                                  _context.next = 45;
+                                  _context.next = 46;
                                   return this.getSolexBCChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                                case 45:
+                                case 46:
                                   this.chartData = _context.sent;
-                                  _context.next = 48;
+                                  _context.next = 49;
                                   return this.getSolexBCAllStats(this.range.startDate, this.range.endDate, this.tagRows);
 
-                                case 48:
+                                case 49:
                                   this.statData = _context.sent;
-                                  _context.next = 67;
+                                  _context.next = 68;
                                   break;
 
-                                case 51:
+                                case 52:
                                   if (!(this.selectedAdvertiser == "system1")) {
-                                    _context.next = 60;
+                                    _context.next = 61;
                                     break;
                                   }
 
-                                  _context.next = 54;
+                                  _context.next = 55;
                                   return this.getSystem1ChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                                case 54:
+                                case 55:
                                   this.chartData = _context.sent;
-                                  _context.next = 57;
+                                  _context.next = 58;
                                   return this.getSystem1AllStats(this.range.startDate, this.range.endDate, this.tagRows);
 
-                                case 57:
+                                case 58:
                                   this.statData = _context.sent;
-                                  _context.next = 67;
+                                  _context.next = 68;
                                   break;
 
-                                case 60:
+                                case 61:
                                   if (!(this.selectedAdvertiser == "apptitude")) {
-                                    _context.next = 67;
+                                    _context.next = 68;
                                     break;
                                   }
 
-                                  _context.next = 63;
+                                  _context.next = 64;
                                   return this.getApptitudeChartMetrics(this.selectedCompany, this.range.startDate, this.range.endDate);
 
-                                case 63:
+                                case 64:
                                   this.chartData = _context.sent;
-                                  _context.next = 66;
+                                  _context.next = 67;
                                   return this.getApptitudePublisherStats(this.range.startDate, this.range.endDate, this.tagRows);
 
-                                case 66:
+                                case 67:
                                   this.statData = _context.sent;
 
-                                case 67:
+                                case 68:
                                   this.loadingIndicator = false;
                                   this.refreshTable();
 
-                                case 69:
+                                case 70:
                                 case "end":
                                   return _context.stop();
                               }
@@ -926,7 +911,7 @@
                         }));
                       });
 
-                    case 2:
+                    case 1:
                     case "end":
                       return _context2.stop();
                   }
@@ -943,13 +928,12 @@
         }, {
           key: "toggleExpandRow",
           value: function toggleExpandRow(row) {
-            console.log('Toggled Expand Row!', row);
+            // console.log('Toggled Expand Row!', row);
             this.table.rowDetail.toggleExpandRow(row);
           }
         }, {
           key: "onDetailToggle",
-          value: function onDetailToggle(event) {
-            console.log('Detail Toggled', event);
+          value: function onDetailToggle(event) {// console.log('Detail Toggled', event);
           }
         }, {
           key: "getTagInformation",

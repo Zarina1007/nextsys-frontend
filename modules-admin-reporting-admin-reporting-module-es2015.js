@@ -17448,33 +17448,6 @@ class AccountingComponent {
                 this.tempUpdateStatData = this.tempUpdateStatData.concat(system1UpData);
             }
             const result = [];
-            // var sorted = _.chain(this.tempUpdateStatData)
-            //   .sortBy(function (d) { return d.reporting })
-            //   .sortBy(function (d) { return d.publisher })
-            //   .value()
-            // const multiGroupBy = (seq: any, keys: string | any[]) => {
-            //   if (!keys.length) return seq;
-            //   var first = keys[0];
-            //   var rest = keys.slice(1);
-            //   return _.mapValues(_.groupBy(seq, first), function (value: any) {
-            //     return multiGroupBy(value, rest);
-            //   });
-            // };
-            // const groupedItems = multiGroupBy(sorted, ["reporting", "publisher"]);
-            // const reformattedArray = [];
-            // for (const item in groupedItems) {
-            //   if (groupedItems.hasOwnProperty(item)) {
-            //     for (const elm in groupedItems[item]) {
-            //       const obj = {
-            //         reporting: groupedItems[item][elm][0].reporting,
-            //         publisher: groupedItems[item][elm][0].publisher,
-            //         revenue: _.reduce(groupedItems[item][elm], (s: any, x: { revenue: any; }) => s + x.revenue, 0),
-            //       };
-            //       reformattedArray.push(obj);
-            //     }
-            //   }
-            // }
-            // console.log(reformattedArray, 'dddd')
             this.tempUpdateStatData.forEach((object) => {
                 const existing = result.filter((item) => item.publisher == object.publisher);
                 if (existing.length) {
@@ -21062,7 +21035,7 @@ class LyonsComponent {
         this.lyonService
             .updateAllLyonStats(company, startDate, endDate)
             .subscribe((response) => {
-            console.log(response);
+            // console.log(response);
         }),
             (err) => {
                 console.log(err);
@@ -21122,16 +21095,6 @@ class LyonsComponent {
             }
         });
     }
-    // async getChartMetrics(company: any, startDate: string, endDate: string) {
-    //   try {
-    //     const response = await this.lyonService
-    //       .getChartMetrics(company, startDate, endDate)
-    //       .toPromise();
-    //     return response;
-    //   } catch (error) {
-    //     return error;
-    //   }
-    // }
     getChartMetrics(company, startDate, endDate) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
@@ -22786,22 +22749,11 @@ class PerionComponent {
         }
         return height;
     }
-    routeTester() {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            console.log('Testing Route');
-            this.perionService.testingRoute().subscribe((response) => {
-                console.log(response);
-            }),
-                (err) => {
-                    console.log(err);
-                };
-        });
-    }
     updateAllPerionStats(company, startDate, endDate) {
         this.perionService
             .updateAllPerionStats(company, startDate, endDate)
             .subscribe((response) => {
-            console.log(response);
+            // console.log(response);
         }),
             (err) => {
                 console.log(err);
@@ -23111,16 +23063,6 @@ class PerionComponent {
             }
         });
     }
-    // async getChartMetrics(company: any, startDate: string, endDate: string) {
-    //   try {
-    //     const response = await this.perionService
-    //       .getChartMetrics(company, startDate, endDate)
-    //       .toPromise();
-    //     return response;
-    //   } catch (error) {
-    //     return error;
-    //   }
-    // }
     getChartMetrics(company, startDate, endDate) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
@@ -24711,7 +24653,6 @@ class SolexBcComponent {
     }
     getAllSolexBCStats(company, startDate, endDate) {
         return this.solexBCService.getSolexBCStats(company, startDate, endDate).toPromise().then((response) => {
-            console.log('getSolexBCStats() response:', response);
             this.loadingIndicator = false;
             this.allStats = response.stats;
             this.allStats.map(function (resStat) {
@@ -26884,7 +26825,7 @@ function VerizonDirectArbComponent_ngx_datatable_column_33_Template(rf, ctx) { i
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } }
 function VerizonDirectArbComponent_ngx_datatable_column_34_ng_template_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " TqScore ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " TQ ");
 } }
 function VerizonDirectArbComponent_ngx_datatable_column_34_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
@@ -27245,12 +27186,6 @@ class VerizonDirectArbComponent {
     getChartMetrics(company, startDate, endDate) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
-                // const response = await this.verizonarbService.getAllVerizonStats(company, startDate, endDate).toPromise();
-                // this.allChartStat = response.stats;
-                // this.allChartStat.map(function (resStat: { publisher: string; tagname: string; }) {
-                //   resStat.publisher = "No Publisher";
-                //   resStat.tagname = "No Tag";
-                // });
                 this.allChartStat = this.allStats;
                 for (var tagL of this.tagList) {
                     if (tagL.tag.advertiser == "verizon-direct-arb") {
@@ -27973,7 +27908,7 @@ function VerizonDirectComponent_ngx_datatable_column_33_Template(rf, ctx) { if (
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } }
 function VerizonDirectComponent_ngx_datatable_column_34_ng_template_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " TqScore ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](0, " TQ ");
 } }
 function VerizonDirectComponent_ngx_datatable_column_34_ng_template_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "strong");
@@ -28302,11 +28237,10 @@ class VerizonDirectComponent {
         this.cdr.markForCheck();
     }
     toggleExpandRow(row) {
-        console.log('Toggled Expand Row!', row);
         this.table.rowDetail.toggleExpandRow(row);
     }
     onDetailToggle(event) {
-        console.log('Detail Toggled', event);
+        // console.log('Detail Toggled', event);
     }
     remove_element(array, item) {
         for (var i = 0; i < array.length; ++i) {
@@ -28334,12 +28268,6 @@ class VerizonDirectComponent {
     getChartMetrics(company, startDate, endDate) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             try {
-                // const response = await this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
-                // this.allChartStat = response.stats;
-                // this.allChartStat.map(function (resStat: { publisher: string; tagname: string; }) {
-                //   resStat.publisher = "No Publisher";
-                //   resStat.tagname = "No Tag";
-                // });
                 this.allChartStat = this.allStats;
                 for (var tagL of this.tagList) {
                     if (tagL.tag.advertiser == "verizon-direct") {
@@ -28468,7 +28396,6 @@ class VerizonDirectComponent {
     getAllVerizonStats(company, startDate, endDate) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             const response = yield this.verizonService.getAllVerizonStats(company, startDate, endDate).toPromise();
-            console.log('getAllVerizonStats() response:', response);
             this.loadingIndicator = false;
             this.allStats = response.stats;
             this.allStats.map(function (resStat) {

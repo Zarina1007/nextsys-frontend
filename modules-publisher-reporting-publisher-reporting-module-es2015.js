@@ -337,27 +337,8 @@ class PublisherComponent {
     }
     ngAfterViewInit() {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            this.users = [
-                {
-                    id: 1,
-                    firstName: 'Mark',
-                    lastName: 'Otto',
-                    handle: '@mdo'
-                },
-                {
-                    id: 2,
-                    firstName: 'Jacob',
-                    lastName: 'Thornton',
-                    handle: '@fat'
-                },
-                {
-                    id: 3,
-                    firstName: 'Larry',
-                    lastName: 'the Bird',
-                    handle: '@twitter'
-                },
-            ];
             this.route.params.subscribe((routeParams) => Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+                this.paramTagId = routeParams.tagId;
                 this.statData = [];
                 this.tagRows = yield this.getTagInformation(routeParams.tagId);
                 this.selectedAdvertiser = this.tagRows.advertiser;
@@ -400,11 +381,11 @@ class PublisherComponent {
         return this.userService.getSelectedCompanyFromLocalStorage();
     }
     toggleExpandRow(row) {
-        console.log('Toggled Expand Row!', row);
+        // console.log('Toggled Expand Row!', row);
         this.table.rowDetail.toggleExpandRow(row);
     }
     onDetailToggle(event) {
-        console.log('Detail Toggled', event);
+        // console.log('Detail Toggled', event);
     }
     getTagInformation(id) {
         return this.tagManagementService.getOneTag(id).toPromise().then((response) => {

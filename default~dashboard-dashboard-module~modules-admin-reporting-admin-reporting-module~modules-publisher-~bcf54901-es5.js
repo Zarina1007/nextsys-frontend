@@ -612,13 +612,6 @@
         }
 
         _createClass(RubiService, [{
-          key: "testingRoute",
-          value: function testingRoute() {
-            console.log('being tested');
-            console.log(API_RUBI_URL);
-            return this.http.get("".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/rubi/test"));
-          }
-        }, {
           key: "getChartMetrics",
           value: function getChartMetrics(company, startDate, endDate) {
             return this.http.get(API_RUBI_URL + '/chart_metrics', {

@@ -2672,7 +2672,6 @@
             var _this8 = this;
 
             this.userService.getReceiverAll().subscribe(function (data) {
-              console.log(data);
               data.map(function (d) {
                 _this8.receiverData.push({
                   id: d._id,

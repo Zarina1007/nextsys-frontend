@@ -437,7 +437,6 @@ class ViewQueriesComponent {
     }
     getAllTrafficQuery() {
         this.trafficService.getAllTrafficQueries().subscribe((x) => {
-            console.log(x);
             this.rows = x;
             this.loadingIndicator = false;
             this.cdr.detectChanges();

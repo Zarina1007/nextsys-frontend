@@ -667,8 +667,6 @@ class AuthService {
     }
     // need create new user then login
     registration(user) {
-        console.log('registration');
-        console.log(user);
         this.isLoadingSubject.next(true);
         return this.authHttpService.createUser(user).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(() => {
             this.isLoadingSubject.next(false);

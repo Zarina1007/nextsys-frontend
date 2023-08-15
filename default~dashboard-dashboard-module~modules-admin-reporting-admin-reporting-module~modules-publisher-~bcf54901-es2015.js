@@ -295,11 +295,6 @@ class RubiService {
     constructor(http) {
         this.http = http;
     }
-    testingRoute() {
-        console.log('being tested');
-        console.log(API_RUBI_URL);
-        return this.http.get(`${_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/stats/admin/rubi/test`);
-    }
     getChartMetrics(company, startDate, endDate) {
         return this.http.get(API_RUBI_URL + '/chart_metrics', {
             params: { company: company, startDate: startDate, endDate: endDate },

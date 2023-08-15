@@ -869,75 +869,8 @@ class Dashboard1Component {
                 var chartPerionMetric = [];
                 var chartAllPerionStat = this.allPerionChart.currentStat;
                 var chartAllBeforePerionStat = this.allPerionChart.beforeStat;
-                // for (var tagL of this.tagList) {
-                //   var chartAllPerionStat = [];
-                //   var chartAllBeforePerionStat = [];
-                //   if(tagL.tag.advertiser == 'perion') {
-                //     for(var tagSub of tagL.tag.subids) {
-                //       if(tagSub['filterTag'] =="Contains") {   
-                //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-                //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-                //       } else if (tagSub['filterTag'] =="StartsWith") {
-                //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-                //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-                //       } else if (tagSub['filterTag'] =="EndsWith") {
-                //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-                //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-                //       } else if (tagSub['filterTag'] =="ExactValue") {
-                //         chartAllPerionStat = chartAllPerionStat.concat(this.allPerionChart.currentStat.filter(stat => stat.subid == tagSub['subid'] ))
-                //         chartAllBeforePerionStat = chartAllBeforePerionStat.concat(this.allPerionChart.beforeStat.filter(stat => stat.subid == tagSub['subid'] ))
-                //       }
-                //     }
-                //   }
-                // }
-                //duplicated remove
-                // let filter_data = chartAllPerionStat.filter((obj, pos, arr) => {
-                //   return arr
-                //     .map(mapObj => mapObj._id)
-                //     .indexOf(obj._id) == pos;
-                // });
                 chartAllPerionStat = chartAllPerionStat.slice().sort((a, b) => a.date - b.date);
                 chartAllBeforePerionStat = chartAllBeforePerionStat.slice().sort((a_1, b_1) => a_1.date - b_1.date);
-                // var helperChart = {};
-                // chartAllPerionStat.map(f =>{
-                //   f.revenue = parseFloat(f.revenue);
-                // })
-                // var resultChart = chartAllPerionStat.reduce(function(r, o) {
-                //   var key = o.date;
-                //   if(!helperChart[key]) {
-                //     helperChart[key] = Object.assign({}, o); // create a copy of o
-                //     r.push(helperChart[key]);
-                //   } else {
-                //     helperChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-                //     if(o.revenue) {
-                //       helperChart[key].revenue += o.revenue;
-                //     }
-                //   } 
-                //   return r;
-                // }, []);
-                //duplicated remove Before Month Data
-                // let filter_before_data = chartAllBeforePerionStat.filter((obj, pos, arr) => {
-                //   return arr
-                //     .map(mapObj => mapObj._id)
-                //     .indexOf(obj._id) == pos;
-                // });
-                // var helperBeforeChart = {};
-                // chartAllBeforePerionStat.map(f =>{
-                //   f.revenue = parseFloat(f.revenue);
-                // })
-                // var resultBeforeChart = chartAllBeforePerionStat.reduce(function(r, o) {
-                //   var key = o.date;
-                //   if(!helperBeforeChart[key]) {
-                //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-                //     r.push(helperBeforeChart[key]);
-                //   } else {
-                //     helperBeforeChart[key].bing_searches_initial += parseInt(o.bing_searches_initial);
-                //     if(o.revenue) {
-                //       helperBeforeChart[key].revenue += o.revenue;
-                //     }
-                //   } 
-                //   return r;
-                // }, []);
                 var revenuePerDayVal = [];
                 var datesOfRevenueVal = [];
                 var revenuePerDayBeforeVal = [];
@@ -985,71 +918,11 @@ class Dashboard1Component {
             try {
                 const response = yield this.lyonService.getAllDashboardStats().toPromise();
                 this.allLyonChart = response[0];
-                // console.log("=======dddd======", this.allLyonChart)
                 var chartLyonMetric = [];
                 var chartAllLyonStat = this.allLyonChart.currentStat;
                 var chartAllBeforeLyonStat = this.allLyonChart.beforeStat;
-                // for (var tagL of this.tagList) {
-                //   if(tagL.tag.advertiser == 'lyons') {
-                //     for(var tagSub of tagL.tag.subids) {
-                //       if(tagSub['filterTag'] =="Contains") {   
-                //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-                //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.includes(tagSub['subid'])))
-                //       } else if (tagSub['filterTag'] =="StartsWith") {
-                //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-                //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.startsWith(tagSub['subid'])))
-                //       } else if (tagSub['filterTag'] =="EndsWith") {
-                //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-                //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid.endsWith(tagSub['subid'])))
-                //       } else if (tagSub['filterTag'] =="ExactValue") {
-                //         chartAllLyonStat = chartAllLyonStat.concat(this.allLyonChart.currentStat.filter(stat => stat.subid == tagSub['subid'] ))
-                //         chartAllBeforeLyonStat = chartAllBeforeLyonStat.concat(this.allLyonChart.beforeStat.filter(stat => stat.subid == tagSub['subid'] ))
-                //       }
-                //     }
-                //   }
-                // }
-                // //duplicated remove
-                // let filter_data = chartAllLyonStat.filter((obj, pos, arr) => {
-                //   return arr
-                //     .map(mapObj => mapObj._id)
-                //     .indexOf(obj._id) == pos;
-                // });
                 chartAllLyonStat = chartAllLyonStat.slice().sort((a, b) => a.date - b.date);
                 chartAllBeforeLyonStat = chartAllBeforeLyonStat.slice().sort((a_1, b_1) => a_1.date - b_1.date);
-                // var helperChart = {};
-                // var resultChart = chartAllLyonStat.reduce(function(r, o) {
-                //   var key = o.date;
-                //   if(!helperChart[key]) {
-                //     helperChart[key] = Object.assign({}, o); // create a copy of o
-                //     r.push(helperChart[key]);
-                //   } else {
-                //     helperChart[key].searches += parseInt(o.searches);
-                //     if(o.revenue) {
-                //       helperChart[key].revenue += o.revenue;
-                //     }
-                //   } 
-                //   return r;
-                // }, []);
-                //duplicated remove Before Month Data
-                // let filter_before_data = chartAllBeforeLyonStat.filter((obj, pos, arr) => {
-                //   return arr
-                //     .map(mapObj => mapObj._id)
-                //     .indexOf(obj._id) == pos;
-                // });
-                // var helperBeforeChart = {};
-                // var resultBeforeChart = chartAllBeforeLyonStat.reduce(function(r, o) {
-                //   var key = o.date;
-                //   if(!helperBeforeChart[key]) {
-                //     helperBeforeChart[key] = Object.assign({}, o); // create a copy of o
-                //     r.push(helperBeforeChart[key]);
-                //   } else {
-                //     helperBeforeChart[key].searches += parseInt(o.searches);
-                //     if(o.revenue) {
-                //       helperBeforeChart[key].revenue += o.revenue;
-                //     }
-                //   } 
-                //   return r;
-                // }, []);
                 var revenuePerDayVal = [];
                 var datesOfRevenueVal = [];
                 var revenuePerDayBeforeVal = [];

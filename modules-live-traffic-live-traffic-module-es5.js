@@ -893,7 +893,6 @@
             var _this = this;
 
             this.trafficService.getAllTrafficQueries().subscribe(function (x) {
-              console.log(x);
               _this.rows = x;
               _this.loadingIndicator = false;
 

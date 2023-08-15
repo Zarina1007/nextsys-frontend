@@ -1267,8 +1267,6 @@
           value: function registration(user) {
             var _this5 = this;
 
-            console.log('registration');
-            console.log(user);
             this.isLoadingSubject.next(true);
             return this.authHttpService.createUser(user).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(function () {
               _this5.isLoadingSubject.next(false);

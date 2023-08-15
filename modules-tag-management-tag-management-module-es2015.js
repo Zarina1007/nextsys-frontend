@@ -345,14 +345,12 @@ class CopyAdserverComponent {
         this.loadingIndicator = true;
     }
     ngOnInit() {
-        console.log(this.data);
         this.tagKey = this.data;
         this.getTagData(this.tagKey);
     }
     getTagData(tagKey) {
         this.tagManagementService.getOneTag(tagKey).subscribe((response) => {
             this.loadingIndicator = false;
-            console.log(response);
             this.adServerUrl = response.initialURL;
             this.cdr.detectChanges();
         });
@@ -1452,7 +1450,6 @@ class EditTagComponent {
     //Updates the original parameters that will be received and sent on the first server request
     //Example: domain.com/search?subid={{dynamic}}&q={{dynamic}}&search=[bing]
     updateInitialParams(param, tagIndex, index) {
-        console.log('Updating Initial Params');
         if (param.value === 'static') {
             console.log('static!', tagIndex, index);
             this.tagUrlParams(tagIndex).controls[index]
@@ -3524,7 +3521,6 @@ class NewTagComponent {
             data: { name: this.templateName },
         });
         dialogRef.afterClosed().subscribe(result => {
-            console.log('The dialog was closed');
             this.templateName = result;
         });
     }
@@ -3561,7 +3557,6 @@ class NewTagComponent {
     }
     getPublisherAll() {
         this.userService.getPublisherAll().subscribe(data => {
-            // console.log(data);
             if (this.companySelected) {
                 this.publishertempList = data.filter(userData => userData.companies.includes(this.companySelected));
             }
@@ -3618,9 +3613,9 @@ class NewTagComponent {
     //Updates the original parameters that will be received and sent on the first server request
     //Example: domain.com/search?subid={{dynamic}}&q={{dynamic}}&search=[bing]
     updateInitialParams(param, tagIndex, index) {
-        console.log('Updating Initial Params');
+        // console.log('Updating Initial Params');
         if (param.value === 'static') {
-            console.log('static!', tagIndex, index);
+            // console.log('static!', tagIndex, index);
             this.tagUrlParams(tagIndex).controls[index]
                 .get('initialParam')
                 .setValue(this.tagUrlParams(tagIndex).controls[index].get('value').value);
@@ -3641,7 +3636,6 @@ class NewTagComponent {
     //Builds the initial URL from the paramaters
     createInitialURL(tagIndex) {
         var _a;
-        console.log('Updating URL');
         let subInitialURL = new URL((_a = this.newTagFG.get("initialURL")) === null || _a === void 0 ? void 0 : _a.value);
         this.tagUrlParams(tagIndex).controls.forEach((element, index) => {
             if (element.value.paramType === 'dynamic') {
@@ -3758,7 +3752,6 @@ class NewTagComponent {
                 data: { templateName: this.templateName },
             });
             dialogRef.afterClosed().subscribe(result => {
-                console.log('dialog closed!');
                 if (result && result.templateName) {
                     this.templateName = result.templateName;
                     this.newTagFG.addControl('templateName', new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('', _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required));
@@ -4668,7 +4661,6 @@ class PublisherTagComponent {
         this.beforeDate = this.datePipe.transform(previousDate, 'MM-dd-yyyy');
     }
     ngOnInit() {
-        // console.log(this.data)
         this.publisherApikey = this.data.tagData.publisher.apiKey;
         this.tagKey = this.data.tagData.tag._key;
         this.reportingUrl = `http://api.nextsys.io/api/publisher/reporting/api?apiKey=${this.publisherApikey}&tag=${this.tagKey}&startDate=${this.beforeDate}&endDate=${this.currentDate}&reportType=csv`;
@@ -6356,7 +6348,6 @@ class TagsComponent {
     }
     getPublisherAll() {
         this.userService.getPublisherAll().subscribe(data => {
-            // console.log(data);
             if (this.localStorageCompany) {
                 this.publishertempList = data.filter(userData => userData.companies.includes(this.localStorageCompany));
             }
@@ -6428,7 +6419,7 @@ class TagsComponent {
             .afterClosed()
             .subscribe((response) => {
             if (response) {
-                console.log(response);
+                // console.log(response)
             }
         });
     }
@@ -6799,7 +6790,6 @@ class TemplateComponent {
     getAllTemplates() {
         this.tagService.getAllTemplates().subscribe((x) => {
             this.templateList = x;
-            console.log(x);
             this.rows = this.templateList.filter(template => template.company[0]['_id'] == this.localStorageCompany);
             this.loadingIndicator = false;
             this.cdr.detectChanges();
