@@ -20217,7 +20217,7 @@ class DynamicAsideMenuService {
                 });
             });
             let publisherAPIMenuList = [];
-            let publisherListForCompany = this.publisherList.filter((user) => user.companies.includes(this.selectedCompany));
+            const publisherListForCompany = this.publisherList.filter((user) => user.companies.includes(this.selectedCompany) && user.tags.some((tag) => tag.company === this.selectedCompany));
             publisherListForCompany.map((publisher) => {
                 let submenu = [];
                 let submenuParent = {

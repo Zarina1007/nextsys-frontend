@@ -31066,7 +31066,9 @@
                       });
                       publisherAPIMenuList = [];
                       publisherListForCompany = this.publisherList.filter(function (user) {
-                        return user.companies.includes(_this114.selectedCompany);
+                        return user.companies.includes(_this114.selectedCompany) && user.tags.some(function (tag) {
+                          return tag.company === _this114.selectedCompany;
+                        });
                       });
                       publisherListForCompany.map(function (publisher) {
                         var submenu = [];
