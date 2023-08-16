@@ -454,13 +454,6 @@
         }
 
         _createClass(PerionService, [{
-          key: "testingRoute",
-          value: function testingRoute() {
-            console.log('being tested');
-            console.log(API_PERION_URL);
-            return this.http.get("".concat(_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl, "/stats/admin/perion/asd"));
-          }
-        }, {
           key: "getAllPerionStats",
           value: function getAllPerionStats(company, startDate, endDate) {
             return this.http.get(API_PERION_URL + '/', {

@@ -219,11 +219,6 @@ class PerionService {
     constructor(http) {
         this.http = http;
     }
-    testingRoute() {
-        console.log('being tested');
-        console.log(API_PERION_URL);
-        return this.http.get(`${_environments_environment__WEBPACK_IMPORTED_MODULE_1__["environment"].apiUrl}/stats/admin/perion/asd`);
-    }
     getAllPerionStats(company, startDate, endDate) {
         return this.http.get(API_PERION_URL + '/', {
             params: { company: company, startDate: startDate, endDate: endDate },

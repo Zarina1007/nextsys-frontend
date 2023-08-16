@@ -31016,6 +31016,7 @@
           this.googleSheetReportingService = googleSheetReportingService;
           this.menuConfigSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](emptyMenuConfig);
           this.tagList = [];
+          this.publisherList = [];
           this.selectedCompany = this.getSelectedCompanyFromLocalStorage();
           this.menuConfig$ = this.menuConfigSubject.asObservable();
           this.currentUser = this.authService.currentUserValue;
@@ -31038,7 +31039,9 @@
           key: "setMenu",
           value: function setMenu(menuConfig) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-              var tagsIdList, submenuList, sheetList, apiDocumentationMenu, publisherMenu, googlesheetReprotingMenu, googlesheetSubmenuList;
+              var _this114 = this;
+
+              var tagsIdList, submenuList, publisherAPIMenuList, publisherListForCompany, sheetList, apiDocumentationMenu, publisherMenu, googlesheetReprotingMenu, googlesheetSubmenuList, publisherAPIMenu;
               return regeneratorRuntime.wrap(function _callee$(_context) {
                 while (1) {
                   switch (_context.prev = _context.next) {
@@ -31049,6 +31052,11 @@
 
                     case 3:
                       this.tagList = _context.sent;
+                      _context.next = 6;
+                      return this.userService.getPublisherAll().toPromise();
+
+                    case 6:
+                      this.publisherList = _context.sent;
                       submenuList = [];
                       this.tagList.map(function (tag) {
                         submenuList.push({
@@ -31056,10 +31064,32 @@
                           page: "/publisher-reporting/".concat(tag._key)
                         });
                       });
-                      _context.next = 8;
+                      publisherAPIMenuList = [];
+                      publisherListForCompany = this.publisherList.filter(function (user) {
+                        return user.companies.includes(_this114.selectedCompany);
+                      });
+                      publisherListForCompany.map(function (publisher) {
+                        var submenu = [];
+                        var submenuParent = {
+                          title: "".concat(publisher.fullname ? publisher.fullname : ''),
+                          bullet: 'dot',
+                          page: "/publisher-api/".concat(publisher.fullname)
+                        };
+                        publisher.tags.map(function (tag) {
+                          if (tag.company == _this114.selectedCompany) {
+                            submenu.push({
+                              title: "".concat(tag.name),
+                              page: "/publisher-api/".concat(publisher.fullname, "/").concat(publisher.apiKey, "/").concat(tag._key)
+                            });
+                          }
+                        });
+                        submenuParent['submenu'] = submenu;
+                        publisherAPIMenuList.push(submenuParent);
+                      });
+                      _context.next = 14;
                       return this.googleSheetReportingService.getSheetList().toPromise();
 
-                    case 8:
+                    case 14:
                       sheetList = _context.sent;
                       apiDocumentationMenu = {
                         title: 'API Documentation',
@@ -31111,6 +31141,16 @@
                           page: "/google-sheet-reporting/sheet/".concat(sheet._key)
                         });
                       });
+                      publisherAPIMenu = {
+                        title: 'Publisher API',
+                        root: true,
+                        icon: 'flaticon2-architecture-and-city',
+                        svg: './assets/media/svg/icons/Code/CMD.svg',
+                        page: '/publisher-api',
+                        bullet: 'dot',
+                        permissionName: "publisherAPIManage"
+                      };
+                      publisherAPIMenu['submenu'] = publisherAPIMenuList;
                       googlesheetReprotingMenu['submenu'] = googlesheetSubmenuList;
                       publisherMenu['submenu'] = submenuList;
                       menuConfig.items.push({
@@ -31125,9 +31165,13 @@
                         section: 'API Documentation'
                       });
                       menuConfig.items.push(apiDocumentationMenu);
+                      menuConfig.items.push({
+                        section: 'Publisher API'
+                      });
+                      menuConfig.items.push(publisherAPIMenu);
                       this.menuConfigSubject.next(menuConfig);
 
-                    case 25:
+                    case 35:
                     case "end":
                       return _context.stop();
                   }
@@ -31730,7 +31774,7 @@
         }, {
           key: "setCSSClass",
           value: function setCSSClass(path, classesInStr) {
-            var _this114 = this;
+            var _this115 = this;
 
             var cssClasses = this.classes[path];
 
@@ -31739,7 +31783,7 @@
             }
 
             classesInStr.split(' ').forEach(function (cssClass) {
-              return _this114.classes[path].push(cssClass);
+              return _this115.classes[path].push(cssClass);
             });
           }
         }, {
@@ -33636,10 +33680,10 @@
         }, {
           key: "viewNotification",
           value: function viewNotification(notificationID) {
-            var _this115 = this;
+            var _this116 = this;
 
             this.route.params.subscribe(function (routeParams) {
-              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this115, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+              return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this116, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
                 return regeneratorRuntime.wrap(function _callee2$(_context2) {
                   while (1) {
                     switch (_context2.prev = _context2.next) {
@@ -33664,14 +33708,14 @@
         }, {
           key: "clearSuperNotification",
           value: function clearSuperNotification(notificationID) {
-            var _this116 = this;
+            var _this117 = this;
 
             this.notificationSendService.clearSuperNotification(notificationID).subscribe({
               next: function next(res) {
-                if (_this116.currentUser.role == 1) {
-                  _this116.getSuperadminNotifications();
+                if (_this117.currentUser.role == 1) {
+                  _this117.getSuperadminNotifications();
                 } else {
-                  _this116.getPublisherNotifications();
+                  _this117.getPublisherNotifications();
                 }
               },
               error: function error(e) {
@@ -33682,14 +33726,14 @@
         }, {
           key: "clearNotification",
           value: function clearNotification(notificationID) {
-            var _this117 = this;
+            var _this118 = this;
 
             this.notificationSendService.clearNotification(notificationID).subscribe({
               next: function next(res) {
-                if (_this117.currentUser.role == 1) {
-                  _this117.getSuperadminNotifications();
+                if (_this118.currentUser.role == 1) {
+                  _this118.getSuperadminNotifications();
                 } else {
-                  _this117.getPublisherNotifications();
+                  _this118.getPublisherNotifications();
                 }
               },
               error: function error(e) {
@@ -33709,12 +33753,12 @@
         }, {
           key: "getPublisherNotifications",
           value: function getPublisherNotifications() {
-            var _this118 = this;
+            var _this119 = this;
 
             var notificationArr = [];
             this.notificationSendService.publisherNotificatoins().subscribe({
               next: function next(res) {
-                _this118.unreadCounter = 0;
+                _this119.unreadCounter = 0;
                 res.map(function (d) {
                   notificationArr.push({
                     _key: d._key,
@@ -33727,12 +33771,12 @@
                   });
 
                   if (!d.status) {
-                    _this118.unreadCounter++;
+                    _this119.unreadCounter++;
                   }
                 });
-                _this118.publisherRows = notificationArr;
+                _this119.publisherRows = notificationArr;
 
-                _this118.cdr.detectChanges();
+                _this119.cdr.detectChanges();
               },
               error: function error(e) {
                 console.log(e.error);
@@ -33742,7 +33786,7 @@
         }, {
           key: "getSuperadminNotifications",
           value: function getSuperadminNotifications() {
-            var _this119 = this;
+            var _this120 = this;
 
             var supernotificationArr = [];
             this.unreadSuperCounter = 0;
@@ -33760,12 +33804,12 @@
                   });
 
                   if (typeof d.status === 'boolean' && !d.status) {
-                    _this119.unreadSuperCounter++;
+                    _this120.unreadSuperCounter++;
                   }
                 });
-                _this119.superAdminRows = supernotificationArr;
+                _this120.superAdminRows = supernotificationArr;
 
-                _this119.cdr.detectChanges();
+                _this120.cdr.detectChanges();
               },
               error: function error(e) {
                 console.log(e.error);
@@ -34300,7 +34344,7 @@
         }, {
           key: "search",
           value: function search(e) {
-            var _this120 = this;
+            var _this121 = this;
 
             this.data = null;
 
@@ -34310,10 +34354,10 @@
               setTimeout(function () {
                 // Uncomment this. Right now it's just mock
                 // this.data = this.searchInData(e.target.value);
-                _this120.data = [documents, members, files];
-                _this120.loading = false;
+                _this121.data = [documents, members, files];
+                _this121.loading = false;
 
-                _this120.cdr.markForCheck();
+                _this121.cdr.markForCheck();
               }, 500);
             }
           }
@@ -34332,10 +34376,10 @@
         }, {
           key: "openChange",
           value: function openChange() {
-            var _this121 = this;
+            var _this122 = this;
 
             setTimeout(function () {
-              return _this121.searchInput.nativeElement.focus();
+              return _this122.searchInput.nativeElement.focus();
             });
           }
         }, {
@@ -39704,7 +39748,7 @@
 
       var SubheaderWrapperComponent = /*#__PURE__*/function () {
         function SubheaderWrapperComponent(subheader, router) {
-          var _this122 = this;
+          var _this123 = this;
 
           _classCallCheck(this, SubheaderWrapperComponent);
 
@@ -39715,7 +39759,7 @@
 
           var initSubheader = function initSubheader() {
             setTimeout(function () {
-              _this122.subheader.updateAfterRouteChanges(_this122.router.url);
+              _this123.subheader.updateAfterRouteChanges(_this123.router.url);
             }, 0);
           };
 
@@ -40141,7 +40185,7 @@
         _createClass(Subheader1Component, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this123 = this;
+            var _this124 = this;
 
             this.title$ = this.subheader.titleSubject.asObservable();
             this.breadcrumbs$ = this.subheader.breadCrumbsSubject.asObservable();
@@ -40152,13 +40196,13 @@
             this.subheaderDisplayDesc = this.layout.getProp('subheader.displayDesc');
             this.subheaderDisplayDaterangepicker = this.layout.getProp('subheader.displayDaterangepicker');
             this.breadcrumbs$.subscribe(function (res) {
-              _this123.breadcrumbs = res;
+              _this124.breadcrumbs = res;
 
               if (res && res[res.length - 1]) {
-                _this123.linkPath = res[res.length - 1]['linkPath'];
+                _this124.linkPath = res[res.length - 1]['linkPath'];
               }
 
-              _this123.cdr.detectChanges();
+              _this124.cdr.detectChanges();
             });
           }
         }]);
@@ -42829,7 +42873,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", item_r29.submenu);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", item_r29.submenu && ctx_r6.showNextSubMenuItem(item_r29));
         }
       }
 
@@ -42939,7 +42983,7 @@
         _createClass(AsideDynamicComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this124 = this;
+            var _this125 = this;
 
             this.companySelected = this.getSelectedCompanyFromLocalStorage();
             this.reportingProviderList = this.getCompanyList(this.companyList);
@@ -42959,16 +43003,16 @@
             var routerSubscr = this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
               return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"];
             })).subscribe(function (event) {
-              _this124.currentUrl = event.url;
+              _this125.currentUrl = event.url;
 
-              _this124.cdr.detectChanges();
+              _this125.cdr.detectChanges();
             });
             this.subscriptions.push(routerSubscr); // menu load
 
             var menuSubscr = this.menu.menuConfig$.subscribe(function (res) {
-              _this124.menuConfig = res;
+              _this125.menuConfig = res;
 
-              _this124.cdr.detectChanges();
+              _this125.cdr.detectChanges();
             });
             this.subscriptions.push(menuSubscr);
           }
@@ -43053,6 +43097,11 @@
             return true;
           }
         }, {
+          key: "showNextSubMenuItem",
+          value: function showNextSubMenuItem(item) {
+            return true;
+          }
+        }, {
           key: "isMenuItemActive",
           value: function isMenuItemActive(path) {
             if (!this.currentUrl || !path) {
@@ -43080,12 +43129,12 @@
         }, {
           key: "getReportingProviderList",
           value: function getReportingProviderList() {
-            var _this125 = this;
+            var _this126 = this;
 
             if (this.companySelected) {
               this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
                 res.reportingProviders.map(function (report) {
-                  _this125.reportingProviderList.push(report.reportingProvider);
+                  _this126.reportingProviderList.push(report.reportingProvider);
                 });
               });
               if (this.reportingProviderList.length > 0) return;
@@ -46094,7 +46143,7 @@
         _createClass(HeaderMenuDynamicComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this126 = this;
+            var _this127 = this;
 
             this.ulCSSClasses = this.layout.getStringCSSClasses('header_menu_nav');
             this.rootArrowEnabled = this.layout.getProp('header.menu.self.rootArrow');
@@ -46104,16 +46153,16 @@
             var routerSubscr = this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
               return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"];
             })).subscribe(function (event) {
-              _this126.currentUrl = event.url;
+              _this127.currentUrl = event.url;
 
-              _this126.cdr.detectChanges();
+              _this127.cdr.detectChanges();
             });
             this.subscriptions.push(routerSubscr); // menu load
 
             var menuSubscr = this.menu.menuConfig$.subscribe(function (res) {
-              _this126.menuConfig = res;
+              _this127.menuConfig = res;
 
-              _this126.cdr.detectChanges();
+              _this127.cdr.detectChanges();
             });
             this.subscriptions.push(menuSubscr);
           }
@@ -48114,7 +48163,7 @@
 
       var HeaderComponent = /*#__PURE__*/function () {
         function HeaderComponent(layout, router) {
-          var _this127 = this;
+          var _this128 = this;
 
           _classCallCheck(this, HeaderComponent);
 
@@ -48129,27 +48178,27 @@
           var routerSubscription = this.router.events.subscribe(function (event) {
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"]) {
               // set page progress bar loading to start on NavigationStart event router
-              _this127.loaderSubject.next(10);
+              _this128.loaderSubject.next(10);
             }
 
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouteConfigLoadStart"]) {
-              _this127.loaderSubject.next(65);
+              _this128.loaderSubject.next(65);
             }
 
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["RouteConfigLoadEnd"]) {
-              _this127.loaderSubject.next(90);
+              _this128.loaderSubject.next(90);
             }
 
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationEnd"] || event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationCancel"]) {
               // set page progress bar loading to end on NavigationEnd event router
-              _this127.loaderSubject.next(100);
+              _this128.loaderSubject.next(100);
 
-              if (_this127.routerLoaderTimout) {
-                clearTimeout(_this127.routerLoaderTimout);
+              if (_this128.routerLoaderTimout) {
+                clearTimeout(_this128.routerLoaderTimout);
               }
 
-              _this127.routerLoaderTimout = setTimeout(function () {
-                _this127.loaderSubject.next(0);
+              _this128.routerLoaderTimout = setTimeout(function () {
+                _this128.loaderSubject.next(0);
               }, 300);
             }
           });
@@ -48452,7 +48501,7 @@
 
       var CompanySelectorComponent = /*#__PURE__*/function () {
         function CompanySelectorComponent(router, auth, companyService, userService, changeDetectorRefs) {
-          var _this128 = this;
+          var _this129 = this;
 
           _classCallCheck(this, CompanySelectorComponent);
 
@@ -48464,49 +48513,49 @@
           this.localStorageCompany = this.getSelectedCompanyFromLocalStorage();
           var currentUserInfo = this.auth.currentUserValue;
           this.companyService.getUserCompanies(currentUserInfo.companies).subscribe(function (companyResult) {
-            _this128.userCompanies = companyResult; //Gets the company saved to local storage
+            _this129.userCompanies = companyResult; //Gets the company saved to local storage
             //Checks to see if the user is part of at least one company
 
-            if (_this128.userCompanies.length > 0) {
+            if (_this129.userCompanies.length > 0) {
               //If company was stored in local storage, checks to ensure the user has this company stored on their profile in the database. Otherwise, returns null.
-              if (_this128.localStorageCompany) {
-                var checkStorageCompany = _this128.userCompanies.filter(function (userCom) {
-                  return userCom._id == _this128.localStorageCompany;
+              if (_this129.localStorageCompany) {
+                var checkStorageCompany = _this129.userCompanies.filter(function (userCom) {
+                  return userCom._id == _this129.localStorageCompany;
                 });
 
                 if (checkStorageCompany.length > 0) {
-                  _this128.selectedCompany = checkStorageCompany[0];
+                  _this129.selectedCompany = checkStorageCompany[0];
 
-                  _this128.setCompanyToLocalStorage(checkStorageCompany[0]._id);
+                  _this129.setCompanyToLocalStorage(checkStorageCompany[0]._id);
                 } else {
                   localStorage.removeItem('company');
-                  _this128.selectedCompany = null;
+                  _this129.selectedCompany = null;
                 }
               } //User did not have a company saved to local storage
               else {
-                  _this128.setCompanyToLocalStorage(_this128.userCompanies[0]._id);
+                  _this129.setCompanyToLocalStorage(_this129.userCompanies[0]._id);
 
-                  _this128.selectedCompany = _this128.userCompanies[0];
+                  _this129.selectedCompany = _this129.userCompanies[0];
                 }
             } else {
               localStorage.removeItem('company');
-              _this128.selectedCompany = null;
+              _this129.selectedCompany = null;
             }
 
-            _this128.changeDetectorRefs.detectChanges();
+            _this129.changeDetectorRefs.detectChanges();
           });
         }
 
         _createClass(CompanySelectorComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this129 = this;
+            var _this130 = this;
 
             this.setSelectedCompany();
             this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
               return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"];
             })).subscribe(function (event) {
-              _this129.setSelectedCompany();
+              _this130.setSelectedCompany();
             });
           } //On button click/select sets company to local storage then refreshes
 
@@ -48525,13 +48574,13 @@
         }, {
           key: "setCompanyToLocalStorage",
           value: function setCompanyToLocalStorage(companyId) {
-            var _this130 = this;
+            var _this131 = this;
 
             if (this.userCompanies) {
               this.userCompanies.forEach(function (selectedCompany) {
                 if (selectedCompany._id === companyId) {
                   selectedCompany.active = true;
-                  _this130.selectedCompany = selectedCompany;
+                  _this131.selectedCompany = selectedCompany;
                 } else {
                   selectedCompany.active = false;
                 }
@@ -48806,13 +48855,13 @@
         _createClass(LanguageSelectorComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this131 = this;
+            var _this132 = this;
 
             this.setSelectedLanguage();
             this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(function (event) {
               return event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_1__["NavigationStart"];
             })).subscribe(function (event) {
-              _this131.setSelectedLanguage();
+              _this132.setSelectedLanguage();
             });
           }
         }, {
@@ -48824,12 +48873,12 @@
         }, {
           key: "setLanguage",
           value: function setLanguage(lang) {
-            var _this132 = this;
+            var _this133 = this;
 
             this.languages.forEach(function (language) {
               if (language.lang === lang) {
                 language.active = true;
-                _this132.language = language;
+                _this133.language = language;
               } else {
                 language.active = false;
               }
@@ -49433,7 +49482,7 @@
         }, {
           key: "getPublisherNotifications",
           value: function getPublisherNotifications() {
-            var _this133 = this;
+            var _this134 = this;
 
             var notificationArr = [];
             this.unreadCounter = 0;
@@ -49451,12 +49500,12 @@
                   });
 
                   if (!d.status) {
-                    _this133.unreadCounter++;
+                    _this134.unreadCounter++;
                   }
                 });
-                _this133.publisherRows = notificationArr;
+                _this134.publisherRows = notificationArr;
 
-                _this133.cdr.detectChanges();
+                _this134.cdr.detectChanges();
               },
               error: function error(e) {
                 console.log(e.error);
@@ -49466,7 +49515,7 @@
         }, {
           key: "getSuperadminNotifications",
           value: function getSuperadminNotifications() {
-            var _this134 = this;
+            var _this135 = this;
 
             var supernotificationArr = [];
             this.unreadSuperCounter = 0;
@@ -49484,12 +49533,12 @@
                   });
 
                   if (typeof d.status === 'boolean' && !d.status) {
-                    _this134.unreadSuperCounter++;
+                    _this135.unreadSuperCounter++;
                   }
                 });
-                _this134.superAdminRows = supernotificationArr;
+                _this135.superAdminRows = supernotificationArr;
 
-                _this134.cdr.detectChanges();
+                _this135.cdr.detectChanges();
               },
               error: function error(e) {
                 console.log(e.error);
@@ -49499,36 +49548,36 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this135 = this;
+            var _this136 = this;
 
             _assets_js_components_util__WEBPACK_IMPORTED_MODULE_8__["KTUtil"].ready(function () {
               // Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
               // Add 'implements AfterViewInit' to the class.
-              if (_this135.extraSearchDisplay && _this135.extrasSearchLayout === 'offcanvas') {
+              if (_this136.extraSearchDisplay && _this136.extrasSearchLayout === 'offcanvas') {
                 _assets_js_layout_extended_quick_search__WEBPACK_IMPORTED_MODULE_1__["default"].init('kt_quick_search');
               }
 
-              if (_this135.extrasNotificationsDisplay && _this135.extrasNotificationsLayout === 'offcanvas') {
+              if (_this136.extrasNotificationsDisplay && _this136.extrasNotificationsLayout === 'offcanvas') {
                 // Init Quick Notifications Offcanvas Panel
                 _assets_js_layout_extended_quick_notifications__WEBPACK_IMPORTED_MODULE_2__["default"].init('kt_quick_notifications');
               }
 
-              if (_this135.extrasQuickActionsDisplay && _this135.extrasQuickActionsLayout === 'offcanvas') {
+              if (_this136.extrasQuickActionsDisplay && _this136.extrasQuickActionsLayout === 'offcanvas') {
                 // Init Quick Actions Offcanvas Panel
                 _assets_js_layout_extended_quick_actions__WEBPACK_IMPORTED_MODULE_3__["default"].init('kt_quick_actions');
               }
 
-              if (_this135.extrasCartDisplay && _this135.extrasCartLayout === 'offcanvas') {
+              if (_this136.extrasCartDisplay && _this136.extrasCartLayout === 'offcanvas') {
                 // Init Quick Cart Panel
                 _assets_js_layout_extended_quick_cart__WEBPACK_IMPORTED_MODULE_4__["default"].init('kt_quick_cart');
               }
 
-              if (_this135.extrasQuickPanelDisplay) {
+              if (_this136.extrasQuickPanelDisplay) {
                 // Init Quick Offcanvas Panel
                 _assets_js_layout_extended_quick_panel__WEBPACK_IMPORTED_MODULE_5__["default"].init('kt_quick_panel');
               }
 
-              if (_this135.extrasUserDisplay && _this135.extrasUserLayout === 'offcanvas') {
+              if (_this136.extrasUserDisplay && _this136.extrasUserLayout === 'offcanvas') {
                 // Init Quick User Panel
                 _assets_js_layout_extended_quick_user__WEBPACK_IMPORTED_MODULE_6__["default"].init('kt_quick_user');
               } // Init Header Topbar For Mobile Mode
@@ -49693,7 +49742,7 @@
         }, {
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
-            var _this136 = this;
+            var _this137 = this;
 
             _assets_js_components_util__WEBPACK_IMPORTED_MODULE_1__["KTUtil"].ready(function () {
               // Init Brand Panel For Logo
@@ -49705,7 +49754,7 @@
 
               _assets_js_layout_base_aside_menu__WEBPACK_IMPORTED_MODULE_7__["default"].init('kt_aside_menu');
 
-              if (_this136.asideSelfMinimizeToggle) {
+              if (_this137.asideSelfMinimizeToggle) {
                 // Init Aside Menu Toggle
                 _assets_js_layout_base_aside_toggle__WEBPACK_IMPORTED_MODULE_2__["default"].init('kt_aside_toggle');
               } // Init Sticky Card
@@ -50283,12 +50332,12 @@
         }, {
           key: "getReportingProviderList",
           value: function getReportingProviderList() {
-            var _this137 = this;
+            var _this138 = this;
 
             if (this.companySelected) {
               this.companyService.getReportCompany(this.companySelected.split('/')[1]).subscribe(function (res) {
                 res.reportingProviders.map(function (report) {
-                  _this137.companyList.push(report.reportingProvider);
+                  _this138.companyList.push(report.reportingProvider);
                 });
               });
             }
@@ -50296,11 +50345,11 @@
         }, {
           key: "getAdvertiserList",
           value: function getAdvertiserList() {
-            var _this138 = this;
+            var _this139 = this;
 
             if (this.companySelected) {
               this.tagService.getTagAdvertiser(this.companySelected.split('/')[1]).subscribe(function (res) {
-                _this138.advertiserList.push("all");
+                _this139.advertiserList.push("all");
 
                 var _iterator6 = _createForOfIteratorHelper(res),
                     _step6;
@@ -50309,7 +50358,7 @@
                   for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
                     var resAdvertiser = _step6.value;
 
-                    _this138.advertiserList.push(resAdvertiser.advertiser);
+                    _this139.advertiserList.push(resAdvertiser.advertiser);
                   }
                 } catch (err) {
                   _iterator6.e(err);
@@ -50695,7 +50744,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | dashboard-dashboard-module */
-            [__webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~228a9b30"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("common"), __webpack_require__.e("dashboard-dashboard-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~b4f50f0f"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("common"), __webpack_require__.e("dashboard-dashboard-module")]).then(__webpack_require__.bind(null,
             /*! ./dashboard/dashboard.module */
             "./src/app/pages/dashboard/dashboard.module.ts")).then(function (m) {
               return m.DashboardModule;
@@ -50737,7 +50786,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-tag-management-tag-management-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("common"), __webpack_require__.e("modules-tag-management-tag-management-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~a84a0356"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~6942b5f8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~933778a0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("common"), __webpack_require__.e("modules-tag-management-tag-management-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/tag-management/tag-management.module */
             "./src/app/modules/tag-management/tag-management.module.ts")).then(function (m) {
               return m.TagManagementModule;
@@ -50767,7 +50816,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-company-management-company-management-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("common"), __webpack_require__.e("modules-company-management-company-management-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~a84a0356"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~6942b5f8"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("common"), __webpack_require__.e("modules-company-management-company-management-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/company-management/company-management.module */
             "./src/app/modules/company-management/company-management.module.ts")).then(function (m) {
               return m.CompanyManagementModule;
@@ -50782,7 +50831,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-admin-reporting-admin-reporting-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~228a9b30"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~b726f585"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~7284c7f0"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~775aa1ee"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("common"), __webpack_require__.e("modules-admin-reporting-admin-reporting-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~a84a0356"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~6942b5f8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~933778a0"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~b4f50f0f"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~3c1dcaa9"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~bb3d21a2"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~57653707"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("common"), __webpack_require__.e("modules-admin-reporting-admin-reporting-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/admin-reporting/admin-reporting.module */
             "./src/app/modules/admin-reporting/admin-reporting.module.ts")).then(function (m) {
               return m.AdminReportingModule;
@@ -50797,7 +50846,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-google-sheet-reporting-google-sheet-reporting-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~228a9b30"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~b726f585"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~7284c7f0"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~775aa1ee"), __webpack_require__.e("common"), __webpack_require__.e("modules-google-sheet-reporting-google-sheet-reporting-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~a84a0356"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~6942b5f8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~933778a0"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~b4f50f0f"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~3c1dcaa9"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~bb3d21a2"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~57653707"), __webpack_require__.e("common"), __webpack_require__.e("modules-google-sheet-reporting-google-sheet-reporting-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/google-sheet-reporting/google-sheet-reporting.module */
             "./src/app/modules/google-sheet-reporting/google-sheet-reporting.module.ts")).then(function (m) {
               return m.GoogleSheetReportingModule;
@@ -50812,7 +50861,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-publisher-reporting-publisher-reporting-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~228a9b30"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~b726f585"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~7284c7f0"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~775aa1ee"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("modules-publisher-reporting-publisher-reporting-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~a84a0356"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~6942b5f8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~933778a0"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~b4f50f0f"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~3c1dcaa9"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~bb3d21a2"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~57653707"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-publisher-~bcf54901"), __webpack_require__.e("common"), __webpack_require__.e("modules-publisher-reporting-publisher-reporting-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/publisher-reporting/publisher-reporting.module */
             "./src/app/modules/publisher-reporting/publisher-reporting.module.ts")).then(function (m) {
               return m.PublisherReportingModule;
@@ -50822,12 +50871,27 @@
             permission: 'publisherReportingManage'
           }
         }, {
+          path: 'publisher-api',
+          canActivate: [_modules_auth_services_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]],
+          loadChildren: function loadChildren() {
+            return Promise.all(
+            /*! import() | modules-publisher-api-publisher-api-module */
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~a84a0356"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~6942b5f8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~933778a0"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~b4f50f0f"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~3c1dcaa9"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~bb3d21a2"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~57653707"), __webpack_require__.e("common"), __webpack_require__.e("modules-publisher-api-publisher-api-module")]).then(__webpack_require__.bind(null,
+            /*! ../modules/publisher-api/publisher-api.module */
+            "./src/app/modules/publisher-api/publisher-api.module.ts")).then(function (m) {
+              return m.PublisherApiModule;
+            });
+          },
+          data: {
+            permission: 'publisherAPIManage'
+          }
+        }, {
           path: 'live-traffic',
           canActivate: [_modules_auth_services_auth_guard__WEBPACK_IMPORTED_MODULE_3__["AuthGuard"]],
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-live-traffic-live-traffic-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("modules-live-traffic-live-traffic-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~a84a0356"), __webpack_require__.e("modules-live-traffic-live-traffic-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/live-traffic/live-traffic.module */
             "./src/app/modules/live-traffic/live-traffic.module.ts")).then(function (m) {
               return m.LiveTrafficModule;
@@ -50842,7 +50906,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-user-management-user-management-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~b726f585"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-user-management-user-management-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~a84a0356"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~6942b5f8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~933778a0"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~3c1dcaa9"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-user-management-user-management-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/user-management/user-management.module */
             "./src/app/modules/user-management/user-management.module.ts")).then(function (m) {
               return m.UserManagementModule;
@@ -50857,7 +50921,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-notification-notification-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~8b6580ab"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-notification-notification-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~a84a0356"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~6942b5f8"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module"), __webpack_require__.e("common"), __webpack_require__.e("modules-notification-notification-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/notification/notification.module */
             "./src/app/modules/notification/notification.module.ts")).then(function (m) {
               return m.NotificationModule;
@@ -50887,7 +50951,7 @@
           loadChildren: function loadChildren() {
             return Promise.all(
             /*! import() | modules-material-material-module */
-            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~441e53b5"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~2be44478"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~228a9b30"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~b726f585"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~7284c7f0"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~builder-builder-module~modules-material-material-module~modules-ngbootstrap-ngbootstrap-module"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module"), __webpack_require__.e("modules-material-material-module")]).then(__webpack_require__.bind(null,
+            [__webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-company-management-company-management~6942b5f8"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~933778a0"), __webpack_require__.e("default~dashboard-dashboard-module~modules-admin-reporting-admin-reporting-module~modules-google-she~b4f50f0f"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~3c1dcaa9"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-google-sheet-reporting-google-s~5c60327e"), __webpack_require__.e("default~modules-admin-reporting-admin-reporting-module~modules-google-sheet-reporting-google-sheet-r~bb3d21a2"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~8ae1e443"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module~modules-tag-manage~25f840e0"), __webpack_require__.e("default~modules-company-management-company-management-module~modules-material-material-module~module~06e81428"), __webpack_require__.e("default~builder-builder-module~modules-material-material-module~modules-ngbootstrap-ngbootstrap-module"), __webpack_require__.e("default~modules-material-material-module~modules-user-management-user-management-module"), __webpack_require__.e("default~modules-material-material-module~modules-notification-notification-module"), __webpack_require__.e("modules-material-material-module")]).then(__webpack_require__.bind(null,
             /*! ../modules/material/material.module */
             "./src/app/modules/material/material.module.ts")).then(function (m) {
               return m.MaterialModule;
