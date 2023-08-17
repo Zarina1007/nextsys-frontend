@@ -1,4 +1,6 @@
 (function () {
+  function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
   function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
   function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -2269,7 +2271,7 @@
                 tempTags.push({
                   _id: res._id,
                   tagName: res.name,
-                  publisher: res.publisher[0]["fullname"],
+                  publisher: res.publisher && res.publisher.length > 0 ? res.publisher[0]["fullname"] : '',
                   advertiser: res.advertiser,
                   checked: _this9.userTags.includes(res._id)
                 });
@@ -2724,6 +2726,36 @@
         }
       }
 
+      function EditUsersComponent_mat_list_80_mat_list_item_2_a_7_Template(rf, ctx) {
+        if (rf & 1) {
+          var _r14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 30);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function EditUsersComponent_mat_list_80_mat_list_item_2_a_7_Template_a_click_0_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r14);
+
+            var tag_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().$implicit;
+
+            var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
+
+            return ctx_r12.copyToPublisherAPIClipboard(tag_r10);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "span", 22);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        }
+
+        if (rf & 2) {
+          var tag_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().$implicit;
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("inlineSVG", tag_r10.copy ? "./assets/media/svg/icons/General/copied.svg" : "./assets/media/svg/icons/General/Clipboard.svg");
+        }
+      }
+
       function EditUsersComponent_mat_list_80_mat_list_item_2_Template(rf, ctx) {
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "mat-list-item");
@@ -2738,13 +2770,19 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "span", 28);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](7, EditUsersComponent_mat_list_80_mat_list_item_2_a_7_Template, 2, 1, "a", 29);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "mat-divider");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](8, "mat-divider");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -2752,13 +2790,19 @@
         if (rf & 2) {
           var tag_r10 = ctx.$implicit;
 
+          var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
+
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", tag_r10.name, " ");
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", tag_r10._key, " ");
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](tag_r10._key);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r9.user.role == 3);
         }
       }
 
@@ -2766,7 +2810,7 @@
         if (rf & 1) {
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "mat-list", null, 26);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, EditUsersComponent_mat_list_80_mat_list_item_2_Template, 7, 2, "mat-list-item", 25);
+          _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, EditUsersComponent_mat_list_80_mat_list_item_2_Template, 9, 3, "mat-list-item", 25);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         }
@@ -2829,6 +2873,8 @@
           key: "getUserData",
           value: function getUserData(id) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              var temUserTags, _iterator, _step, tempUserTag;
+
               return regeneratorRuntime.wrap(function _callee$(_context) {
                 while (1) {
                   switch (_context.prev = _context.next) {
@@ -2853,21 +2899,36 @@
 
                     case 8:
                       if (!this.user.tagsId[this.selectedCompany]) {
-                        _context.next = 12;
+                        _context.next = 16;
                         break;
                       }
 
-                      _context.next = 11;
+                      temUserTags = [];
+                      _context.next = 12;
                       return this.tagService.getUserTags(this.user.tagsId[this.selectedCompany]).toPromise();
 
-                    case 11:
-                      this.userTags = _context.sent;
-
                     case 12:
+                      temUserTags = _context.sent;
+                      _iterator = _createForOfIteratorHelper(temUserTags);
+
+                      try {
+                        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                          tempUserTag = _step.value;
+                          tempUserTag.copy = false;
+                        }
+                      } catch (err) {
+                        _iterator.e(err);
+                      } finally {
+                        _iterator.f();
+                      }
+
+                      this.userTags = temUserTags;
+
+                    case 16:
                       //Patches value into FormGroup
                       this.userProfileFG.patchValue(this.user);
 
-                    case 13:
+                    case 17:
                     case "end":
                       return _context.stop();
                   }
@@ -2933,12 +2994,26 @@
                 });
               }
             });
+          }
+        }, {
+          key: "copyToPublisherAPIClipboard",
+          value: function copyToPublisherAPIClipboard(tag) {
+            var _this13 = this;
+
+            tag.copy = true;
+            var publisherAPILink = "http://api.nextsys.io/api/publisher/reporting/api?apiKey=".concat(this.apiKey, "&tag=").concat(tag._key, "&startDate=MM-DD-YYYY&endDate=MM-DD-YYYY");
+            this.clipboardService.copyFromContent(publisherAPILink);
+            setTimeout(function () {
+              tag.copy = false;
+
+              _this13.cdr.detectChanges();
+            }, 3000);
           } //Add/Edit Companies to a user profile
 
         }, {
           key: "openAddCompanyDialog",
           value: function openAddCompanyDialog() {
-            var _this13 = this;
+            var _this14 = this;
 
             var dialogRef = this.dialog.open(_add_company_add_company_component__WEBPACK_IMPORTED_MODULE_5__["AddCompanyComponent"], {
               height: 'auto',
@@ -2948,13 +3023,13 @@
               //If user hits save
               if (response) {
                 //New variable readability -- all user data
-                _this13.user = response.user; //Updates current user with new company selection.
+                _this14.user = response.user; //Updates current user with new company selection.
 
-                _this13.userManagementService.updateUser(_this13.user, _this13.selectedCompany).subscribe(function (x) {
+                _this14.userManagementService.updateUser(_this14.user, _this14.selectedCompany).subscribe(function (x) {
                   //
-                  _this13.getUserData(_this13.user._key);
+                  _this14.getUserData(_this14.user._key);
 
-                  _this13.snackBarService.info("Updated  ".concat(_this13.user.fullname, "'s companies."));
+                  _this14.snackBarService.info("Updated  ".concat(_this14.user.fullname, "'s companies."));
                 });
               }
             });
@@ -2973,7 +3048,7 @@
         selectors: [["app-edit-users"]],
         decls: 81,
         vars: 12,
-        consts: [[1, "row"], [1, "col-xl-6"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], ["mat-button", "", "color", "primary", "type", "button", 3, "click"], [1, "card-body"], [1, "example-container", 3, "formGroup", "submit"], [1, "col-md-12"], ["matInput", "", "formControlName", "fullname", "placeholder", "Full Name"], [4, "ngIf"], ["matInput", "", "formControlName", "email", "placeholder", "Email"], ["formControlName", "role", "placeholder", "Role"], [3, "value"], [1, "row", "updateProfile"], ["mat-raised-button", "", "color", "primary", "type", "submit"], [1, "card", "card-custom", "example", "example-compact", "gutter-b", 2, "min-height", "315px"], [1, "col-xl-12"], [1, "d-flex", "justify-content-between", "w-100", 2, "align-items", "center"], [1, "text-dark", 2, "font-size", "1.25rem"], ["title", "Copy APIKEY", 1, "btn", "btn-icon", "btn-light", "btn-hover-info", "btn-sm", 3, "click"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-info", 3, "inlineSVG"], ["mat-button", "", "color", "primary", 3, "click"], ["company", ""], [4, "ngFor", "ngForOf"], ["tag", ""], [2, "display", "flex", "justify-content", "space-between", "width", "100%"]],
+        consts: [[1, "row"], [1, "col-xl-6"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], ["mat-button", "", "color", "primary", "type", "button", 3, "click"], [1, "card-body"], [1, "example-container", 3, "formGroup", "submit"], [1, "col-md-12"], ["matInput", "", "formControlName", "fullname", "placeholder", "Full Name"], [4, "ngIf"], ["matInput", "", "formControlName", "email", "placeholder", "Email"], ["formControlName", "role", "placeholder", "Role"], [3, "value"], [1, "row", "updateProfile"], ["mat-raised-button", "", "color", "primary", "type", "submit"], [1, "card", "card-custom", "example", "example-compact", "gutter-b", 2, "min-height", "315px"], [1, "col-xl-12"], [1, "d-flex", "justify-content-between", "w-100", 2, "align-items", "center"], [1, "text-dark", 2, "font-size", "1.25rem"], ["title", "Copy APIKEY", 1, "btn", "btn-icon", "btn-light", "btn-hover-info", "btn-sm", 3, "click"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-info", 3, "inlineSVG"], ["mat-button", "", "color", "primary", 3, "click"], ["company", ""], [4, "ngFor", "ngForOf"], ["tag", ""], [2, "display", "flex", "justify-content", "space-between", "width", "100%"], [1, "mx-5"], ["title", "Copy PUBLISHER API", "class", "btn btn-icon btn-light btn-hover-info btn-sm", 3, "click", 4, "ngIf"], ["title", "Copy PUBLISHER API", 1, "btn", "btn-icon", "btn-light", "btn-hover-info", "btn-sm", 3, "click"]],
         template: function EditUsersComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
@@ -3499,7 +3574,7 @@
         }, {
           key: "handleSubmit",
           value: function handleSubmit() {
-            var _this14 = this;
+            var _this15 = this;
 
             this.passwordFG.markAllAsTouched();
 
@@ -3507,9 +3582,9 @@
               var password = this.passwordFG.value.password;
               var id = this.data.id;
               this.userManagementService.resetPassword(id, password).subscribe(function (x) {
-                _this14.sS.info('password has been reset');
+                _this15.sS.info('password has been reset');
 
-                _this14.activeModal.close();
+                _this15.activeModal.close();
               });
             }
           }
@@ -4053,7 +4128,7 @@
         }, {
           key: "newUserProfile",
           value: function newUserProfile($event) {
-            var _this15 = this;
+            var _this16 = this;
 
             this.userProfileFG.patchValue({
               role: 2,
@@ -4068,13 +4143,13 @@
                   if (x['status']) {
                     var userName = x['data'];
 
-                    _this15.sS.info("New Admin ".concat(userName, " profile created"));
+                    _this16.sS.info("New Admin ".concat(userName, " profile created"));
 
-                    _this15.userProfileFG.reset();
+                    _this16.userProfileFG.reset();
 
-                    _this15.formGroupDirective.resetForm();
+                    _this16.formGroupDirective.resetForm();
                   } else {
-                    _this15.sS.info("".concat(x['data']));
+                    _this16.sS.info("".concat(x['data']));
                   }
                 });
               } else {
@@ -4547,7 +4622,7 @@
         }, {
           key: "newUserProfile",
           value: function newUserProfile($event) {
-            var _this16 = this;
+            var _this17 = this;
 
             this.userProfileFG.patchValue({
               role: 4,
@@ -4562,13 +4637,13 @@
                   if (x['status']) {
                     var userName = x['data'];
 
-                    _this16.sS.info("New Advertiser ".concat(userName, " profile created"));
+                    _this17.sS.info("New Advertiser ".concat(userName, " profile created"));
 
-                    _this16.userProfileFG.reset();
+                    _this17.userProfileFG.reset();
 
-                    _this16.formGroupDirective.resetForm();
+                    _this17.formGroupDirective.resetForm();
                   } else {
-                    _this16.sS.info("".concat(x['data']));
+                    _this17.sS.info("".concat(x['data']));
                   }
                 });
               } else {
@@ -5041,7 +5116,7 @@
         }, {
           key: "newUserProfile",
           value: function newUserProfile($event) {
-            var _this17 = this;
+            var _this18 = this;
 
             this.userProfileFG.patchValue({
               role: 1,
@@ -5056,13 +5131,13 @@
                   if (x['status']) {
                     var userName = x['data'];
 
-                    _this17.sS.info("New Super Admin ".concat(userName, " profile created"));
+                    _this18.sS.info("New Super Admin ".concat(userName, " profile created"));
 
-                    _this17.userProfileFG.reset();
+                    _this18.userProfileFG.reset();
 
-                    _this17.formGroupDirective.resetForm();
+                    _this18.formGroupDirective.resetForm();
                   } else {
-                    _this17.sS.info("".concat(x['data']));
+                    _this18.sS.info("".concat(x['data']));
                   }
                 });
               } else {
@@ -5535,7 +5610,7 @@
         }, {
           key: "newUserProfile",
           value: function newUserProfile($event) {
-            var _this18 = this;
+            var _this19 = this;
 
             this.userProfileFG.patchValue({
               role: 3,
@@ -5550,13 +5625,13 @@
                   if (x['status']) {
                     var userName = x['data'];
 
-                    _this18.sS.info("New Publisher ".concat(userName, " profile created"));
+                    _this19.sS.info("New Publisher ".concat(userName, " profile created"));
 
-                    _this18.userProfileFG.reset();
+                    _this19.userProfileFG.reset();
 
-                    _this18.formGroupDirective.resetForm();
+                    _this19.formGroupDirective.resetForm();
                   } else {
-                    _this18.sS.info("".concat(x['data']));
+                    _this19.sS.info("".concat(x['data']));
                   }
                 });
               } else {
@@ -5751,21 +5826,21 @@
         _createClass(PermissionComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this19 = this;
+            var _this20 = this;
 
             //Get the current company to edit
             if (this.data['id']) {
               this.userManagementService.getOnePermission(this.data['id']).subscribe(function (x) {
-                _this19.permission = x;
+                _this20.permission = x;
 
-                _this19.permissionFG.patchValue(x);
+                _this20.permissionFG.patchValue(x);
 
                 if (x['companyManage'] == true && x['eCommerce'] == true && x['dashboard'] == true && x['googleMaterial'] == true && x['layoutBuilder'] == true && x['liveTraffic'] == true && x['ngBootstrap'] == true && x['notifications'] == true && x['protectedMedia'] == true && x['reportManage'] == true && x['tagManage'] == true && x['userManage'] == true && x['publisherReportingManage'] == true && x['apiDocumentationManage'] == true && x['googlesheetReportingManage'] == true && x['publisherAPIManage'] == true) {
-                  _this19.allChecked = true;
-                  _this19.isIndeterminate = false;
+                  _this20.allChecked = true;
+                  _this20.isIndeterminate = false;
                 } else {
-                  _this19.allChecked = false;
-                  _this19.isIndeterminate = false;
+                  _this20.allChecked = false;
+                  _this20.isIndeterminate = false;
                 }
               });
             } else {}
@@ -5862,18 +5937,18 @@
         }, {
           key: "handleSubmit",
           value: function handleSubmit() {
-            var _this20 = this;
+            var _this21 = this;
 
             this.permissionFG.markAllAsTouched();
 
             if (this.permissionFG.valid) {
               this.permission = Object.assign(Object.assign({}, this.permission), this.permissionFG.value);
               this.userManagementService.updateOnePermission(this.permission).subscribe(function (x) {
-                _this20.snackService.info('Successfully updated permission.');
+                _this21.snackService.info('Successfully updated permission.');
 
-                _this20.activeModal.close(x);
+                _this21.activeModal.close(x);
               }, function (err) {
-                _this20.snackService.info("Error updating permission: ".concat(err.statusText));
+                _this21.snackService.info("Error updating permission: ".concat(err.statusText));
               });
             }
           }
@@ -7262,7 +7337,7 @@
         _createClass(SuperadminsComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this21 = this;
+            var _this22 = this;
 
             this.localStorageCompany = this.getSelectedCompanyFromLocalStorage(); //access page part
 
@@ -7274,17 +7349,17 @@
             }
 
             this.subscritions.push(this.userService.getSuperAdminAll().subscribe(function (data) {
-              _this21.originalData = data;
+              _this22.originalData = data;
 
-              if (_this21.localStorageCompany) {
-                _this21.superadmins.data = data.filter(function (userData) {
-                  return userData.companies.includes(_this21.localStorageCompany);
+              if (_this22.localStorageCompany) {
+                _this22.superadmins.data = data.filter(function (userData) {
+                  return userData.companies.includes(_this22.localStorageCompany);
                 });
               } else {
-                _this21.superadmins.data = data;
+                _this22.superadmins.data = data;
               }
 
-              _this21.cdr.detectChanges();
+              _this22.cdr.detectChanges();
             }));
           }
         }, {
@@ -7306,7 +7381,7 @@
         }, {
           key: "onChangeSuperAdmin",
           value: function onChangeSuperAdmin(event) {
-            var _this22 = this;
+            var _this23 = this;
 
             this.companyUser = event.checked;
 
@@ -7315,7 +7390,7 @@
             } else {
               if (this.localStorageCompany) {
                 this.superadmins.data = this.originalData.filter(function (userData) {
-                  return userData.companies.includes(_this22.localStorageCompany);
+                  return userData.companies.includes(_this23.localStorageCompany);
                 });
               } else {
                 this.superadmins.data = this.originalData;
@@ -8557,7 +8632,7 @@
         _createClass(UsersComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this23 = this;
+            var _this24 = this;
 
             this.localStorageCompany = this.getSelectedCompanyFromLocalStorage(); //access page part
 
@@ -8569,19 +8644,19 @@
             }
 
             this.subscritions.push(this.usersServie.getPublisherAll().subscribe(function (data) {
-              _this23.originalData = data;
+              _this24.originalData = data;
 
-              if (_this23.localStorageCompany) {
-                _this23.users.data = data.filter(function (userData) {
-                  return userData.companies.includes(_this23.localStorageCompany);
+              if (_this24.localStorageCompany) {
+                _this24.users.data = data.filter(function (userData) {
+                  return userData.companies.includes(_this24.localStorageCompany);
                 });
               } else {
-                _this23.users.data = data.filter(function (userData) {
+                _this24.users.data = data.filter(function (userData) {
                   return userData.companies.length == 0;
                 });
               }
 
-              _this23.cdr.detectChanges();
+              _this24.cdr.detectChanges();
             }));
           }
         }, {
@@ -8603,37 +8678,37 @@
         }, {
           key: "deletePublisher",
           value: function deletePublisher(id) {
-            var _this24 = this;
+            var _this25 = this;
 
             if (window.confirm('Do you want to go ahead?')) {
               this.usersServie.deleteUser(id).subscribe(function (res) {
-                _this24.usersServie.getPublisherAll().subscribe(function (data) {
+                _this25.usersServie.getPublisherAll().subscribe(function (data) {
                   // console.log(data);
-                  if (_this24.companyUser) {
-                    _this24.users.data = data;
+                  if (_this25.companyUser) {
+                    _this25.users.data = data;
                   } else {
-                    if (_this24.localStorageCompany) {
-                      _this24.users.data = data.filter(function (userData) {
-                        return userData.companies.includes(_this24.localStorageCompany);
+                    if (_this25.localStorageCompany) {
+                      _this25.users.data = data.filter(function (userData) {
+                        return userData.companies.includes(_this25.localStorageCompany);
                       });
                     } else {
-                      _this24.users.data = data.filter(function (userData) {
+                      _this25.users.data = data.filter(function (userData) {
                         return userData.companies.length == 0;
                       });
                     }
                   }
 
-                  _this24.cdr.detectChanges();
+                  _this25.cdr.detectChanges();
                 });
 
-                _this24.notification.showWarning('Deleted a User', "");
+                _this25.notification.showWarning('Deleted a User', "");
               });
             }
           }
         }, {
           key: "onChangePublisher",
           value: function onChangePublisher(event) {
-            var _this25 = this;
+            var _this26 = this;
 
             this.companyUser = event.checked;
 
@@ -8642,7 +8717,7 @@
             } else {
               if (this.localStorageCompany) {
                 this.users.data = this.originalData.filter(function (userData) {
-                  return userData.companies.includes(_this25.localStorageCompany);
+                  return userData.companies.includes(_this26.localStorageCompany);
                 });
               } else {
                 this.users.data = this.originalData;
