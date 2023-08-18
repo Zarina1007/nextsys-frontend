@@ -647,33 +647,6 @@ class PublisherComponent {
             }
             //duplicated remove
             let filtered_data = allLyonStat.filter((thing, index, self) => index === self.findIndex((t) => (t.date === thing.date && t.subid === thing.subid)));
-            // var helper = {};
-            // filtered_data.map(f =>{
-            //   f.revenue = parseFloat(f.revenue) * parseFloat(f.split)/100;
-            // })
-            // var resultAll = filtered_data.reduce(function(prev, current) {
-            //   var key = (current.rptDate).toString() + '-' + current.subid;
-            //   if(!helper[key]) {
-            //     helper[key] = Object.assign({}, current); // create a copy of o
-            //     prev.push(helper[key]);
-            //   } else {
-            //     helper[key].clicks += parseInt(current.clicks);
-            //     helper[key].searches += parseInt(current.searches);
-            //     if(current.biddedCtr) {
-            //       helper[key].biddedCtr += current.biddedCtr;
-            //     }
-            //     if(current.ctr) {
-            //       helper[key].ctr += current.ctr;
-            //     }
-            //     if(current.revenue) {
-            //       helper[key].revenue += current.revenue;
-            //     }
-            //     helper[key].biddedSearches += parseInt(current.biddedSearches);
-            //     helper[key].split += parseInt(current.split);
-            //   }
-            //   return prev;
-            // }, []);
-            //return resultAll.slice().sort((a, b) => b.rptDate - a.rptDate);
             return filtered_data.slice().sort((a, b) => b.date - a.date);
         })
             .catch((error) => {

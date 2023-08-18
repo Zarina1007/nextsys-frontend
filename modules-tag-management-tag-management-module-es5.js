@@ -2970,7 +2970,7 @@
           key: "updateInitialParams",
           value: function updateInitialParams(param, tagIndex, index) {
             if (param.value === 'static') {
-              console.log('static!', tagIndex, index);
+              // console.log('static!', tagIndex, index);
               this.tagUrlParams(tagIndex).controls[index].get('initialParam').setValue(this.tagUrlParams(tagIndex).controls[index].get('value').value);
               this.createInitialURL(tagIndex);
             } else {

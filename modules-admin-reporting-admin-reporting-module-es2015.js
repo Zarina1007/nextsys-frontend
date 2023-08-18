@@ -19714,7 +19714,7 @@ class HopkinsComponent {
     getAllHopkinStats(company, startDate, endDate) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             const response = yield this.hopkinService.getHopkinStats(company, startDate, endDate).toPromise();
-            console.log('response:', response);
+            // console.log('response:', response);
             this.loadingIndicator = false;
             this.allStats = response.stats;
             this.allStats.map(function (resStat) {
@@ -23738,7 +23738,6 @@ class RubiComponent {
     getAllRubiStats(company, startDate, endDate) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             const response = yield this.rubiService.getRubiStats(company, startDate, endDate).toPromise();
-            console.log('getRubiStats() response:', response);
             this.loadingIndicator = false;
             this.allStats = response.stats;
             this.allStats.map(function (resStat) {
@@ -27314,7 +27313,6 @@ class VerizonDirectArbComponent {
     getAllVerizonStats(company, startDate, endDate) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
             const response = yield this.verizonarbService.getAllVerizonArbStats(company, startDate, endDate).toPromise();
-            console.log('getAllVerizonStats() response:', response);
             this.loadingIndicator = false;
             this.allStats = response.stats;
             this.allStats.map(function (resStat) {

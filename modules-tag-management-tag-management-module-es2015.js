@@ -1451,7 +1451,7 @@ class EditTagComponent {
     //Example: domain.com/search?subid={{dynamic}}&q={{dynamic}}&search=[bing]
     updateInitialParams(param, tagIndex, index) {
         if (param.value === 'static') {
-            console.log('static!', tagIndex, index);
+            // console.log('static!', tagIndex, index);
             this.tagUrlParams(tagIndex).controls[index]
                 .get('initialParam')
                 .setValue(this.tagUrlParams(tagIndex).controls[index].get('value').value);

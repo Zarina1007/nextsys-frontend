@@ -22770,7 +22770,7 @@
 
                     case 2:
                       response = _context19.sent;
-                      console.log('response:', response);
+                      // console.log('response:', response);
                       this.loadingIndicator = false;
                       this.allStats = response.stats;
                       this.allStats.map(function (resStat) {
@@ -22835,7 +22835,7 @@
 
                       return _context19.abrupt("return", this.allStats);
 
-                    case 10:
+                    case 9:
                     case "end":
                       return _context19.stop();
                   }
@@ -30334,7 +30334,6 @@
 
                     case 2:
                       response = _context38.sent;
-                      console.log('getRubiStats() response:', response);
                       this.loadingIndicator = false;
                       this.allStats = response.stats;
                       this.allStats.map(function (resStat) {
@@ -30399,7 +30398,7 @@
 
                       return _context38.abrupt("return", this.allStats);
 
-                    case 10:
+                    case 9:
                     case "end":
                       return _context38.stop();
                   }
@@ -36954,7 +36953,6 @@
 
                     case 2:
                       response = _context55.sent;
-                      console.log('getAllVerizonStats() response:', response);
                       this.loadingIndicator = false;
                       this.allStats = response.stats;
                       this.allStats.map(function (resStat) {
@@ -37019,7 +37017,7 @@
 
                       return _context55.abrupt("return", this.allStats);
 
-                    case 10:
+                    case 9:
                     case "end":
                       return _context55.stop();
                   }
