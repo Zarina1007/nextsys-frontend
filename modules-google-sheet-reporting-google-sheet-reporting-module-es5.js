@@ -58,19 +58,25 @@
       /* harmony import */
 
 
-      var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      var ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ngx-clipboard */
+      "./node_modules/ngx-clipboard/__ivy_ngcc__/fesm2015/ngx-clipboard.js");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common */
       "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
       /* harmony import */
 
 
-      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      var _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! @swimlane/ngx-datatable */
       "./node_modules/@swimlane/ngx-datatable/__ivy_ngcc__/fesm2015/swimlane-ngx-datatable.js");
       /* harmony import */
 
 
-      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      var ng_inline_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
       /*! ng-inline-svg */
       "./node_modules/ng-inline-svg/__ivy_ngcc__/lib_esmodule/index.js");
 
@@ -151,9 +157,27 @@
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](3, "span", 18);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "a", 19);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AllSheetsComponent_div_0_ng_template_17_Template_a_click_4_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r14);
+
+            var row_r12 = ctx.row;
+
+            var ctx_r16 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
+
+            return ctx_r16.copyToGoogleSheetAPIClipboard(row_r12);
+          });
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "span", 20);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
 
         if (rf & 2) {
+          var row_r12 = ctx.row;
+
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/Communication/Write.svg");
@@ -161,6 +185,10 @@
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", "./assets/media/svg/icons/General/Trash.svg");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("inlineSVG", row_r12.copy ? "./assets/media/svg/icons/General/copied.svg" : "./assets/media/svg/icons/General/Clipboard.svg");
         }
       }
 
@@ -210,7 +238,7 @@
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](16, AllSheetsComponent_div_0_ng_template_16_Template, 1, 0, "ng-template", 11);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, AllSheetsComponent_div_0_ng_template_17_Template, 4, 2, "ng-template", 12);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, AllSheetsComponent_div_0_ng_template_17_Template, 6, 3, "ng-template", 12);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -244,23 +272,23 @@
 
       function AllSheetsComponent_div_1_Template(rf, ctx) {
         if (rf & 1) {
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 19);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 21);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 20);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 22);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p", 21);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "p", 23);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](3, " How did you get here ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p", 22);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "p", 24);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " Sorry you can't access the page you're looking for. ");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p", 23);
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "p", 25);
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](7, " There may be a misspelling in the URL entered,");
 
@@ -277,7 +305,7 @@
       }
 
       var AllSheetsComponent = /*#__PURE__*/function () {
-        function AllSheetsComponent(googlesheetService, cdr, router, userService, notification) {
+        function AllSheetsComponent(googlesheetService, cdr, router, userService, notification, clipboardService) {
           _classCallCheck(this, AllSheetsComponent);
 
           this.googlesheetService = googlesheetService;
@@ -285,6 +313,7 @@
           this.router = router;
           this.userService = userService;
           this.notification = notification;
+          this.clipboardService = clipboardService;
           this.loadingIndicator = true;
           this.hidden = false;
         }
@@ -342,13 +371,28 @@
               });
             }
           }
+        }, {
+          key: "copyToGoogleSheetAPIClipboard",
+          value: function copyToGoogleSheetAPIClipboard(row) {
+            var _this3 = this;
+
+            var sheetId = row.sheetUrl.split('/') && row.sheetUrl.split('/')[5] ? row.sheetUrl.split('/')[5] : '';
+            row.copy = true;
+            var googleSheetAPILink = "http://api.nextsys.io/api/googlesheet/".concat(sheetId, "/stats?startDate=MM/DD/YYYY&endDate=MM/DD/YYYY");
+            this.clipboardService.copyFromContent(googleSheetAPILink);
+            setTimeout(function () {
+              row.copy = false;
+
+              _this3.cdr.detectChanges();
+            }, 3000);
+          }
         }]);
 
         return AllSheetsComponent;
       }();
 
       AllSheetsComponent.ɵfac = function AllSheetsComponent_Factory(t) {
-        return new (t || AllSheetsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_google_sheet_reporting_service__WEBPACK_IMPORTED_MODULE_1__["GoogleSheetReportingService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_4__["NotificationService"]));
+        return new (t || AllSheetsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_google_sheet_reporting_service__WEBPACK_IMPORTED_MODULE_1__["GoogleSheetReportingService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_4__["NotificationService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__["ClipboardService"]));
       };
 
       AllSheetsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
@@ -356,7 +400,7 @@
         selectors: [["app-all-sheets"]],
         decls: 2,
         vars: 2,
-        consts: [["class", "row", 4, "ngIf"], ["class", "error error-3 d-flex flex-row-fluid bgi-size-cover bgi-position-center", "style", "background-image: url('./assets/media/error/bg3.jpg'); height: 100%;zoom: 1;\n    display: block;\n    min-height: 80vh;\n    font-size: 14px;\n    line-height: 1.4;\n    color: #0e1724;", 4, "ngIf"], [1, "row"], [1, "col-xl-12"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], [1, "material", "fullscreen", 3, "rows", "columnMode", "loadingIndicator", "footerHeight", "rowHeight", "scrollbarH", "headerHeight", "limit"], ["name", "SheetName", 3, "width"], ["ngx-datatable-header-template", ""], ["ngx-datatable-cell-template", ""], ["name", "SheetUrl"], ["name", "id", 3, "width"], ["title", "Edit Sheet", 1, "btn", "btn-icon", "btn-light", "btn-hover-primary", "btn-sm", "mx-3", 3, "click"], ["cacheSVG", "true", 1, "svg-icon", "svg-icon-md", "svg-icon-primary", 3, "inlineSVG"], ["title", "Delete Sheet", 1, "btn", "btn-icon", "btn-light", "btn-hover-danger", "btn-sm", 3, "click"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-danger", 3, "inlineSVG"], [1, "error", "error-3", "d-flex", "flex-row-fluid", "bgi-size-cover", "bgi-position-center", 2, "background-image", "url('./assets/media/error/bg3.jpg')", "height", "100%", "zoom", "1", "display", "block", "min-height", "80vh", "font-size", "14px", "line-height", "1.4", "color", "#0e1724"], [1, "px-10", "px-md-30", "py-10", "py-md-0", "d-flex", "flex-column", "justify-content-md-center"], [1, "display-4", "font-weight-boldest", "text-white", "mb-12"], [1, "font-size-h1", "font-weight-boldest", "text-dark-75"], [1, "font-size-h4", "line-height-md"]],
+        consts: [["class", "row", 4, "ngIf"], ["class", "error error-3 d-flex flex-row-fluid bgi-size-cover bgi-position-center", "style", "background-image: url('./assets/media/error/bg3.jpg'); height: 100%;zoom: 1;\n    display: block;\n    min-height: 80vh;\n    font-size: 14px;\n    line-height: 1.4;\n    color: #0e1724;", 4, "ngIf"], [1, "row"], [1, "col-xl-12"], [1, "card", "card-custom", "example", "example-compact", "gutter-b"], [1, "card-header"], [1, "card-title"], [1, "card-label"], [1, "card-body"], [1, "material", "fullscreen", 3, "rows", "columnMode", "loadingIndicator", "footerHeight", "rowHeight", "scrollbarH", "headerHeight", "limit"], ["name", "SheetName", 3, "width"], ["ngx-datatable-header-template", ""], ["ngx-datatable-cell-template", ""], ["name", "SheetUrl"], ["name", "id", 3, "width"], ["title", "Edit Sheet", 1, "btn", "btn-icon", "btn-light", "btn-hover-primary", "btn-sm", "mx-2", 3, "click"], ["cacheSVG", "true", 1, "svg-icon", "svg-icon-md", "svg-icon-primary", 3, "inlineSVG"], ["title", "Delete Sheet", 1, "btn", "btn-icon", "btn-light", "btn-hover-danger", "btn-sm", "mx-2", 3, "click"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-danger", 3, "inlineSVG"], ["title", "COPY GOOGLE SHEET API", 1, "btn", "btn-icon", "btn-light", "btn-hover-info", "btn-sm", "mx-2", 3, "click"], ["cacheSVG", "false", 1, "svg-icon", "svg-icon-md", "svg-icon-info", 3, "inlineSVG"], [1, "error", "error-3", "d-flex", "flex-row-fluid", "bgi-size-cover", "bgi-position-center", 2, "background-image", "url('./assets/media/error/bg3.jpg')", "height", "100%", "zoom", "1", "display", "block", "min-height", "80vh", "font-size", "14px", "line-height", "1.4", "color", "#0e1724"], [1, "px-10", "px-md-30", "py-10", "py-md-0", "d-flex", "flex-column", "justify-content-md-center"], [1, "display-4", "font-weight-boldest", "text-white", "mb-12"], [1, "font-size-h1", "font-weight-boldest", "text-dark-75"], [1, "font-size-h4", "line-height-md"]],
         template: function AllSheetsComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](0, AllSheetsComponent_div_0_Template, 18, 10, "div", 0);
@@ -372,7 +416,7 @@
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.hidden);
           }
         },
-        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_5__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__["DataTableColumnHeaderDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_6__["DataTableColumnCellDirective"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_7__["InlineSVGDirective"]],
+        directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DatatableComponent"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnHeaderDirective"], _swimlane_ngx_datatable__WEBPACK_IMPORTED_MODULE_7__["DataTableColumnCellDirective"], ng_inline_svg__WEBPACK_IMPORTED_MODULE_8__["InlineSVGDirective"]],
         styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvZ29vZ2xlLXNoZWV0LXJlcG9ydGluZy9hbGwtc2hlZXRzL2FsbC1zaGVldHMuY29tcG9uZW50LnNjc3MifQ== */"]
       });
       /*@__PURE__*/
@@ -396,6 +440,8 @@
             type: src_app_shared_service_users_service__WEBPACK_IMPORTED_MODULE_3__["UsersService"]
           }, {
             type: src_app_shared_service_notification_service__WEBPACK_IMPORTED_MODULE_4__["NotificationService"]
+          }, {
+            type: ngx_clipboard__WEBPACK_IMPORTED_MODULE_5__["ClipboardService"]
           }];
         }, null);
       })();
@@ -684,7 +730,7 @@
         _createClass(EditSheetComponent, [{
           key: "ngOnInit",
           value: function ngOnInit() {
-            var _this3 = this;
+            var _this4 = this;
 
             //access page part
             if (!this.localStorageCompany) {
@@ -701,9 +747,9 @@
 
             if (this.route.snapshot.params.id) {
               this.googleSheetReportingServie.getOneSheet(this.route.snapshot.params.id).subscribe(function (res) {
-                _this3.sheet = res;
+                _this4.sheet = res;
 
-                _this3.editSheetFG.setValue({
+                _this4.editSheetFG.setValue({
                   sheetName: res['sheetName'],
                   sheetUrl: res['sheetUrl']
                 });
@@ -719,16 +765,16 @@
         }, {
           key: "submitHandle",
           value: function submitHandle() {
-            var _this4 = this;
+            var _this5 = this;
 
             this.editSheetFG.markAllAsTouched();
 
             if (this.editSheetFG.valid) {
               this.sheet = Object.assign(Object.assign({}, this.sheet), this.editSheetFG.value);
               this.googleSheetReportingServie.updateSheet(this.sheet).subscribe(function (res) {
-                _this4.notification.showSuccess('Successfully updated the Sheet.', "");
+                _this5.notification.showSuccess('Successfully updated the Sheet.', "");
               }, function (err) {
-                _this4.notification.showError("Error updating sheet: ".concat(err.statusText), "");
+                _this5.notification.showError("Error updating sheet: ".concat(err.statusText), "");
               });
             }
           }
@@ -1472,17 +1518,17 @@
         }, {
           key: "submitHandle",
           value: function submitHandle() {
-            var _this5 = this;
+            var _this6 = this;
 
             this.sheetFG.markAllAsTouched();
 
             if (this.sheetFG.valid) {
               this.googleSheetReportingServie.addSheet(this.sheetFG.value).subscribe(function (res) {
-                _this5.notification.showSuccess('Successfully added a new Sheet.', "");
+                _this6.notification.showSuccess('Successfully added a new Sheet.', "");
 
-                _this5.router.navigate(['/google-sheet-reporting/all-sheets']);
+                _this6.router.navigate(['/google-sheet-reporting/all-sheets']);
               }, function (error) {
-                _this5.notification.showError(JSON.stringify(error.error), "");
+                _this6.notification.showError(JSON.stringify(error.error), "");
               });
             }
           } //Gets the Selected Company from Local Storage
@@ -1836,7 +1882,7 @@
           key: "ngAfterViewInit",
           value: function ngAfterViewInit() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-              var _this6 = this;
+              var _this7 = this;
 
               return regeneratorRuntime.wrap(function _callee2$(_context2) {
                 while (1) {
@@ -1844,7 +1890,7 @@
                     case 0:
                       this.loadingIndicator = true;
                       this.route.params.subscribe(function (routeParams) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this6, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this7, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
                           return regeneratorRuntime.wrap(function _callee$(_context) {
                             while (1) {
                               switch (_context.prev = _context.next) {
@@ -1885,7 +1931,7 @@
           key: "sheetFiltering",
           value: function sheetFiltering(range) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
-              var _this7 = this;
+              var _this8 = this;
 
               return regeneratorRuntime.wrap(function _callee4$(_context4) {
                 while (1) {
@@ -1895,7 +1941,7 @@
                       this.range = range;
                       this.sheetData = [];
                       this.route.params.subscribe(function (routeParams) {
-                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this7, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+                        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(_this8, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
                           return regeneratorRuntime.wrap(function _callee3$(_context3) {
                             while (1) {
                               switch (_context3.prev = _context3.next) {
@@ -1928,11 +1974,11 @@
         }, {
           key: "getSheetInformation",
           value: function getSheetInformation(googlesheetId, startDate, endDate) {
-            var _this8 = this;
+            var _this9 = this;
 
             this.loadingIndicator = true;
             return this.googleSheetReportingService.getSheetData(googlesheetId, startDate, endDate).toPromise().then(function (res) {
-              _this8.loadingIndicator = false;
+              _this9.loadingIndicator = false;
               return res;
             })["catch"](function (error) {
               return error;
