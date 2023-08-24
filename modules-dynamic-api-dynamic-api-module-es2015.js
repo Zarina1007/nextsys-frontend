@@ -381,7 +381,7 @@ class DynamicApiCreateComponent {
         if (this.dynamicAPIFG.valid) {
             this.dynamicAPIService.createDynamicAPI(this.dynamicAPIFG.value).subscribe(res => {
                 this.notification.showSuccess('Successfully added a new Dynamic API.', "");
-                this.router.navigate(['/dynamicAPI/all']);
+                this.router.navigate(['/dynamicAPI/all-dynamic-api']);
             }, (error) => {
                 this.notification.showError(JSON.stringify(error.error), "");
             });

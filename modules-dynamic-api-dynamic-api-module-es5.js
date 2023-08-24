@@ -801,7 +801,7 @@
               this.dynamicAPIService.createDynamicAPI(this.dynamicAPIFG.value).subscribe(function (res) {
                 _this4.notification.showSuccess('Successfully added a new Dynamic API.', "");
 
-                _this4.router.navigate(['/dynamicAPI/all']);
+                _this4.router.navigate(['/dynamicAPI/all-dynamic-api']);
               }, function (error) {
                 _this4.notification.showError(JSON.stringify(error.error), "");
               });

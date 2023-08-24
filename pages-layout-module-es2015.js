@@ -19418,7 +19418,7 @@ const DynamicAsideMenuConfig = {
         { section: 'DynamicAPI Management' },
         {
             title: 'DynamicAPI Management',
-            page: '/reporting/dynamicAPI',
+            page: '/dynamicAPI',
             root: true,
             bullet: 'dot',
             icon: 'flaticon2-user-outline-symbol',
