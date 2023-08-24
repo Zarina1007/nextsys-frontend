@@ -346,6 +346,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/company-management/company-management.component */ "./src/app/modules/company-management/company-management.component.ts");
 /* harmony import */ var _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/admin-reporting/admin-reporting.component */ "./src/app/modules/admin-reporting/admin-reporting.component.ts");
 /* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ngx-toastr */ "./node_modules/ngx-toastr/__ivy_ngcc__/fesm2015/ngx-toastr.js");
+/* harmony import */ var _modules_dynamic_api_dynamic_api_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/dynamic-api/dynamic-api.component */ "./src/app/modules/dynamic-api/dynamic-api.component.ts");
 
 
 
@@ -358,6 +359,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // Highlight JS
+
 
 
 
@@ -427,7 +429,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
         _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_18__["CompanyManagementComponent"],
-        _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__["AdminReportingComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+        _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__["AdminReportingComponent"],
+        _modules_dynamic_api_dynamic_api_component__WEBPACK_IMPORTED_MODULE_21__["DynamicAPIComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
         _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"],
         _metronic_partials_layout_splash_screen_splash_screen_module__WEBPACK_IMPORTED_MODULE_16__["SplashScreenModule"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_5__["TranslateModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
         ngx_highlightjs__WEBPACK_IMPORTED_MODULE_11__["HighlightModule"],
@@ -440,6 +443,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector
                     _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
                     _modules_company_management_company_management_component__WEBPACK_IMPORTED_MODULE_18__["CompanyManagementComponent"],
                     _modules_admin_reporting_admin_reporting_component__WEBPACK_IMPORTED_MODULE_19__["AdminReportingComponent"],
+                    _modules_dynamic_api_dynamic_api_component__WEBPACK_IMPORTED_MODULE_21__["DynamicAPIComponent"],
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -746,6 +750,42 @@ CompanyManagementComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["�
                 selector: 'app-company-management',
                 templateUrl: './company-management.component.html',
                 styleUrls: ['./company-management.component.scss']
+            }]
+    }], function () { return []; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/modules/dynamic-api/dynamic-api.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/modules/dynamic-api/dynamic-api.component.ts ***!
+  \**************************************************************/
+/*! exports provided: DynamicAPIComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DynamicAPIComponent", function() { return DynamicAPIComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+
+
+
+class DynamicAPIComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+DynamicAPIComponent.ɵfac = function DynamicAPIComponent_Factory(t) { return new (t || DynamicAPIComponent)(); };
+DynamicAPIComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DynamicAPIComponent, selectors: [["app-dynamic-api"]], decls: 1, vars: 0, template: function DynamicAPIComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "router-outlet");
+    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterOutlet"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL21vZHVsZXMvZHluYW1pYy1hcGkvZHluYW1pYy1hcGkuY29tcG9uZW50LnNjc3MifQ== */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](DynamicAPIComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-dynamic-api',
+                templateUrl: './dynamic-api.component.html',
+                styleUrls: ['./dynamic-api.component.scss']
             }]
     }], function () { return []; }, null); })();
 
