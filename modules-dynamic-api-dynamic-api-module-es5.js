@@ -780,7 +780,7 @@
             }
 
             this.dynamicAPIFG = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
-              dynamicApiUri: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern('^(https?://)?([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&=]*)?$')]),
+              dynamicApiUri: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern(/^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/)]),
               responseFields: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('')
             });
           } //Gets the Selected Company from Local Storage
@@ -801,7 +801,7 @@
               this.dynamicAPIService.createDynamicAPI(this.dynamicAPIFG.value).subscribe(function (res) {
                 _this4.notification.showSuccess('Successfully added a new Dynamic API.', "");
 
-                _this4.router.navigate(['/dynamicAPI/all-dynamic-api']);
+                _this4.router.navigate(['/dynamicAPI/all']);
               }, function (error) {
                 _this4.notification.showError(JSON.stringify(error.error), "");
               });
@@ -1301,7 +1301,7 @@
             }
 
             this.dynamicAPIEditFG = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
-              dynamicApiUri: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern('^(https?://)?([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&=]*)?$')]),
+              dynamicApiUri: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern(/^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/)]),
               responseFields: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('')
             });
 

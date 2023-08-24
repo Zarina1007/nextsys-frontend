@@ -368,7 +368,7 @@ class DynamicApiCreateComponent {
             this.hidden = false;
         }
         this.dynamicAPIFG = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
-            dynamicApiUri: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern('^(https?://)?([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&=]*)?$')]),
+            dynamicApiUri: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern(/^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/)]),
             responseFields: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](''),
         });
     }
@@ -381,7 +381,7 @@ class DynamicApiCreateComponent {
         if (this.dynamicAPIFG.valid) {
             this.dynamicAPIService.createDynamicAPI(this.dynamicAPIFG.value).subscribe(res => {
                 this.notification.showSuccess('Successfully added a new Dynamic API.', "");
-                this.router.navigate(['/dynamicAPI/all-dynamic-api']);
+                this.router.navigate(['/dynamicAPI/all']);
             }, (error) => {
                 this.notification.showError(JSON.stringify(error.error), "");
             });
@@ -626,7 +626,7 @@ class DynamicApiUpdateComponent {
             this.hidden = false;
         }
         this.dynamicAPIEditFG = new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormGroup"]({
-            dynamicApiUri: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern('^(https?://)?([\\w-]+\\.)+[\\w-]+(/[\\w-./?%&=]*)?$')]),
+            dynamicApiUri: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('', [_angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_1__["Validators"].pattern(/^(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/)]),
             responseFields: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](''),
         });
         if (this.route.snapshot.params.id) {
