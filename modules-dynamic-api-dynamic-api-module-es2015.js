@@ -816,7 +816,7 @@ class DynamicApiUpdateComponent {
                     subidKey: res['subidKey'] !== 'never' ? res['subidKey'] : '',
                 });
                 const subidKeyControl = this.dynamicAPIEditFG.get('subidKey');
-                if (res['subid']) {
+                if (res['subid'] !== "never") {
                     subidKeyControl.enable();
                 }
                 else {

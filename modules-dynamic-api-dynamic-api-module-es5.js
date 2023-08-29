@@ -1641,7 +1641,7 @@
 
                 var subidKeyControl = _this5.dynamicAPIEditFG.get('subidKey');
 
-                if (res['subid']) {
+                if (res['subid'] !== "never") {
                   subidKeyControl.enable();
                 } else {
                   subidKeyControl.disable();
