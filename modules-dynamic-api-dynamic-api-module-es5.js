@@ -2403,7 +2403,7 @@
             if (this.dynamicAPIEditFG.valid) {
               this.dyanmicAPIData = Object.assign(Object.assign({}, this.dyanmicAPIData), this.dynamicAPIEditFG.value);
               this.dynamicAPIService.updateDynamicAPI(this.dyanmicAPIData).subscribe(function (res) {
-                _this7.notification.showSuccess('Successfully updated a new Dynamic API.', "");
+                _this7.notification.showSuccess('Successfully updated a Dynamic API.', "");
 
                 _this7.router.navigate(['/dynamicAPI/all-dynamic-api']);
               }, function (error) {

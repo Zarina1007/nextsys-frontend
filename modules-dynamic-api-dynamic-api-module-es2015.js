@@ -1204,7 +1204,7 @@ class DynamicApiUpdateComponent {
         if (this.dynamicAPIEditFG.valid) {
             this.dyanmicAPIData = Object.assign(Object.assign({}, this.dyanmicAPIData), this.dynamicAPIEditFG.value);
             this.dynamicAPIService.updateDynamicAPI(this.dyanmicAPIData).subscribe(res => {
-                this.notification.showSuccess('Successfully updated a new Dynamic API.', "");
+                this.notification.showSuccess('Successfully updated a Dynamic API.', "");
                 this.router.navigate(['/dynamicAPI/all-dynamic-api']);
             }, (error) => {
                 this.notification.showError(JSON.stringify(error.error), "");
