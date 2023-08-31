@@ -2309,7 +2309,6 @@
                 disabled: true
               }),
               split: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](''),
-              subidField: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](''),
               reportFormat: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]('')
             });
 

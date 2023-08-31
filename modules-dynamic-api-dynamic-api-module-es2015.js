@@ -1126,7 +1126,6 @@ class DynamicApiUpdateComponent {
             filteredCondition: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](''),
             subid: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"]({ value: '', disabled: true }),
             split: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](''),
-            subidField: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](''),
             reportFormat: new _angular_forms__WEBPACK_IMPORTED_MODULE_1__["FormControl"](''),
         });
         if (this.route.snapshot.params.id) {
